@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="initial-scale=1" />
+	<meta http-equiv="ClearType" content="true" />
+
+	<title>Responsive Foundation Style Guide</title>
+	<link type="text/css" rel="stylesheet" href="vendor/prism.css" >
+	<link type="text/css" rel="stylesheet" href="css/docs.css" >
+	<script type="application/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="application/javascript" src="vendor/prism.js"></script>
+
+	<!-- TODO: Theme should look decent without these -->
+	<style type="text/css">
+		/* heading colors */
+		h1,h2,h3,h4,h5,h6,
+		#right-content-area h1,
+		#right-content-area h1 a {
+			color: #000000;
+		}
+		/* accent text colors */
+		strong,
+		#right-content-area h3,
+		#right-content-area h3 a,
+		#right-content-area a .day,
+		#bottom-content-area h3,
+		#bottom-content-area h3 a,
+		ul > li:before,
+		ol > li:before {
+			color: #4a97a7;
+		}
+		.default .date {
+			background-color: #4a97a7;
+		}
+		/* general text colors */
+		body, p, li,
+		#right-content-area a,
+		#bottom-content-area a {
+			color: #606060;
+		}
+
+		/* anchor colors */
+		a,
+		.comment-counter a strong {
+			color: #cc0000;
+		}
+		/* page background color */
+		#page_wrapper {
+			background-color: #ffffff;
+		}
+		</style>
+</head>
+<body class="f1">
+
+	<header role="banner">
+
+		<nav class="mainNav" role="navigation">
+			<div class="navToggle">
+				<svg id="navIcon" viewBox="0 0 612 792">
+					<title>Navigation Menu Icon</title>
+					<desc>This is the navigation menu icon</desc>
+					<g>
+						<rect class="r1"
+							y="117.6"
+							width="612"
+							height="110.6"
+							/>
+						<rect class="r2"
+							y="340.6"
+							width="612"
+							height="110.6"
+							/>
+						<rect class="r3"
+							y="563.6"
+							width="612"
+							height="110.6"
+							/>
+					</g>
+				</svg>
+			</div>
+			<ul id="nav">
+				<li class="page_item"><a href="index.html" class="level_1">Home</a></li>
+				<li class="page_item current_page_item"><a href="base.html" class="level_1 active">Base</a></li>
+			</ul>
+			<nav id="utility" role="utility">
+				<div class="menu-global-site-nav-container">
+					<ul id="menu-global-site-nav" class="menu">
+						<li class="menu-item"><a href="https://github.com/bu-ist/coding-standards/">Coding Standards</a></li>
+					</ul>
+				</div>
+			</nav>
+		</nav>
+		<div id="brand">
+			<a id="siteName" href="#" title="" rel="home" class="logo">Responsive Foundation <small>Style Guide</small></a>
+
+			<nav id="utility" role="utility">
+				<div class="menu-global-site-nav-container">
+					<ul id="menu-global-site-nav-1" class="menu">
+						<li class="menu-item"><a href="https://github.com/bu-ist/coding-standards/">Coding Standards</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<div id="page_wrapper">
+		<div class="container">
+			<article id="content" role="main">
+				<h2>Base Styles</h2>
+				<p>
+					Make sure that the `sass` directory is on your Sass load path and include the following in your project's main Sass file:
+					<pre><code class="language-scss">
+@import 'burf';
+					</code></pre>
+				</p>
+				<h3 id="reset">Reset</h3>
+				<p>Based on <a href="https://github.com/murtaugh/HTML5-Reset">https://github.com/murtaugh/HTML5-Reset</a></p>
+				<h3 id="grid">Responsive Grid</h3>
+				<p>A simple responsive grid.</p>
+				<p><code>TODO: Examples</code></p>
+				<h3 id="fonts">Fonts</h3>
+				<div class="font-capita">
+					<div class="col-md-3 font-weight-300">Capita 300</div>
+					<div class="col-md-3 font-weight-400">Capita 400</div>
+					<div class="col-md-3 font-weight-700">Capita 700</div>
+					<div class="col-md-3 font-weight-900">Capita 900</div>
+				</div>
+				<div class="font-benton">
+					<div class="col-md-3 font-weight-300">Benton 300</div>
+					<div class="col-md-3 font-weight-400">Benton 400</div>
+					<div class="col-md-3 font-weight-700">Benton 700</div>
+					<div class="col-md-3 font-weight-900">Benton 900</div>
+				</div>
+				<div class="font-pressura">
+					<div class="col-md-3 font-weight-300">Pressura 300</div>
+					<div class="col-md-3 font-weight-400">Pressura 400</div>
+					<div class="col-md-3 font-weight-700">Pressura 700</div>
+					<div class="col-md-3 font-weight-900">Pressura 900</div>
+				</div>
+			</article>
+		</div><!-- .container -->
+	</div><!-- #page_wrapper -->
+
+	<script type="application/javascript" src="js/docs.js"></script>
+</body>
+</html>
