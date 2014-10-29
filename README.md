@@ -51,4 +51,4 @@ These lines assume that the [responsive-foundation/css-dev](css-dev) directory i
 
 Both the base and theme layers support customization with Sass variables.
 
-TODO: Reference visual style guide for usage docs.
+Full usage documentation can be found in the [visual style guide](https://bu-ist.github.io/responsive-foundation/).
