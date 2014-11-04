@@ -1,6 +1,36 @@
 /* grid
 ----------------------------------------------------------------- */
 
+.container {
+	padding: $grid-containerPadding;
+	width: 100%;
+	margin: 0 auto;
+	@include clearfix;
+}
+
+.row {
+	margin: $grid-rowMargin;
+}
+.row [class*="col-"] {
+	padding: $grid-columnPadding;
+	background-color: rgba(255, 255, 255, .35);
+	@include rgba-color('background-color', rgba($grayScale-f, .35), $grayScale-f);
+	border: 1px solid rgba(0, 0, 0, .15);
+	@include rgba-color('border-color', rgba($grayScale-0, .11), $grayScale-7);
+	@include border-radius(0);
+}
+.row:before,
+.row:after {
+display: table;
+content: " ";
+}
+.row:after {
+clear: both;
+}
+.row .row:nth-last-of-type(1) {
+margin-bottom: 0;
+}
+
 /* default (mobile) */
 .col-xs-1,
 .col-xs-2,
@@ -106,8 +136,8 @@
 /* small screens */
 @include breakpoint(small) {
 	.container,
-	#bottom-content-area div {
-		max-width: $container_S;
+	.footbar div {
+		max-width: $container-S;
 	}
 	.col-sm-1,
 	.col-sm-2,
@@ -163,8 +193,8 @@
 /* medium screens */
 @include breakpoint(medium) {
 	.container,
-	#bottom-content-area div {
-		max-width: $container_M;
+	.footbar div {
+		max-width: $container-M;
 	}
 	.col-md-1,
 	.col-md-2,
@@ -219,9 +249,8 @@
 
 /* large screens */
 @include breakpoint(large) {
-	.container,
-	#bottom-content-area div {
-		max-width: $container_L;
+	.container {
+		max-width: $container-L;
 	}
 	.col-lg-1,
 	.col-lg-2,

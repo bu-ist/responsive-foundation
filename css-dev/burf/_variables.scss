@@ -1,30 +1,45 @@
 /* variables
 ----------------------------------------------------------------- */
 
-// branding typography
-$font-branding: 'Whitney SSm A', 'Whitney SSm B' !default;
+// typography
+$font-branding: "Whitney SSm A", "Whitney SSm B" !default;
 
 // colors
-$black:           #000000 !default;
-$white:           #ffffff !default;
-$gray_darkest:    #151515 !default;
-$gray_darker:     #222222 !default;
-$gray_dark:       #333333 !default;
-$gray_light:      #7a7a7a !default;
-$gray_lighter:    #9f9f9f !default;
+$grayScale-0:     #000000 !default;
+$grayScale-1:     #151515 !default;
+$grayScale-2:     #222222 !default;
+$grayScale-3:     #333333 !default;
+$grayScale-7:     #7a7a7a !default;
+$grayScale-9:     #9f9f9f !default;
+$grayScale-f:     #ffffff !default;
 
-
-// grid
+// grid breakpoints
 $XS:              500px !default;
 $S:               768px !default;
 $M:               992px !default;
 $L:              1200px !default;
 
+// grid .container widths
+$container-S:     750px !default;
+$container-M:     970px !default;
+$container-L:    1170px !default;
 
-// .container widths
-$container_S:     750px !default;
-$container_M:     970px !default;
-$container_L:    1170px !default;
+// grid spacing
+$grid-containerPadding: 28px 20px !default;
+$grid-rowMargin: 0 0 32px !default;
+$grid-columnPadding: 20px !default;
 
 // media queries
 $MQs: true !default;
+
+// z-index scale  (private vars)
+$zIndex-1:        100;
+$zIndex-2:        200;
+$zIndex-3:        300;
+$zIndex-4:        400;
+$zIndex-5:        500;
+$zIndex-6:        600;
+$zIndex-7:        700;
+$zIndex-8:        800;
+$zIndex-9:        900;
+$zIndex-10:      1000;
