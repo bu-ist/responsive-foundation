@@ -1,15 +1,7 @@
-/* START: benton
------------------------------------------------------------------ 
-100 - Thin
-200 - Extra Light (Ultra Light)
-300 - Light
-400 - Normal
-500 - Medium
-600 - Semi Bold (Demi Bold)
-700 - Bold
-800 - Extra Bold (Ultra Bold)
-900 - Black (Heavy)
-*/
+/* fonts
+----------------------------------------------------------------- */
+
+/* Benton */
 
 @font-face { 
     font-family: "Benton";
@@ -20,7 +12,6 @@
     font-style: normal;
     font-weight: 400;
 }
-
 @font-face { 
     font-family: "Benton";
     src: url("http://www.bu.edu/cdn/fonts/Benton-Sans-Regular-Italic/3295fa07-2a3f-4cd1-ba86-e06161453a51-2.eot");
@@ -30,7 +21,6 @@
     font-style: italic;
     font-weight: 400;
 }
-
 @font-face { 
     font-family: "Benton";
     src: url("http://www.bu.edu/cdn/fonts/Benton-Sans-Medium/8e221891-e89b-4eae-95ca-6346d9a41d20-2.eot");
@@ -40,7 +30,6 @@
     font-style: normal;
     font-weight: 500;
 }
-
 @font-face { 
     font-family: "Benton";
     src: url("http://www.bu.edu/cdn/fonts/Benton-Sans-Medium-Italic/289d6a90-eab9-4614-9e7d-c0df14839178-2.eot");
@@ -50,7 +39,6 @@
     font-style: italic;
     font-weight: 500;
 }
-
 @font-face { 
     font-family: "Benton";
     src: url("http://www.bu.edu/cdn/fonts/Benton-Sans-Bold/d4a4a960-2cf2-430e-8b13-cbf6f261ddb9-2.eot");
@@ -60,7 +48,6 @@
     font-style: normal;
     font-weight: 700;
 }
-
 @font-face { 
     font-family: "Benton";
     src: url("http://www.bu.edu/cdn/fonts/Benton-Sans-Bold-Italic/f037bfb1-69d7-4441-8d43-3b8c2c6e77d3-2.eot");
@@ -70,7 +57,6 @@
     font-style: italic;
     font-weight: 700;
 }
-
 @font-face { 
     font-family: "Benton";
     src: url("http://www.bu.edu/cdn/fonts/Benton-Sans-Black/bc06c909-a731-43ae-a772-ea42520c81b9-2.eot");
@@ -80,7 +66,6 @@
     font-style: normal;
     font-weight: 900;
 }
-
 @font-face { 
     font-family: "Benton";
     src: url("http://www.bu.edu/cdn/fonts/Benton-Sans-Black-Italic/9afa6c31-8572-45ee-8575-c3c541f31e3f-2.eot");
@@ -91,19 +76,7 @@
     font-weight: 900;
 }
 
-
-/* START: benton compressed
------------------------------------------------------------------ 
-100 - Thin
-200 - Extra Light (Ultra Light)
-300 - Light
-400 - Normal
-500 - Medium
-600 - Semi Bold (Demi Bold)
-700 - Bold
-800 - Extra Bold (Ultra Bold)
-900 - Black (Heavy)
-*/
+/* Benton Compressed */
 
 @font-face {
   font-family: "BentonComp";
@@ -114,7 +87,6 @@
   font-style: normal;
   font-weight: 700;
 }
-
 @font-face {
   font-family: "BentonComp";
   src: url("http://www.bu.edu/cdn/fonts/BentonSansComp-Bold-Italic/c881d891-c9fe-443f-9067-4fd904cc7ec7-2.eot");
@@ -124,7 +96,6 @@
   font-style: italic;
   font-weight: 700;
 }
-
 @font-face {
   font-family: "BentonComp";
   src: url("http://www.bu.edu/cdn/fonts/BentonSansComp-Black/3207ad65-d574-4dc0-8ddc-cfbe21c91dd1-2.eot");
@@ -134,7 +105,6 @@
   font-style: normal;
   font-weight: 900;
 }
-
 @font-face {
   font-family: "BentonComp";
   src: url("http://www.bu.edu/cdn/fonts/BentonSansComp-Black-Italic/31575122-efa9-4080-a2c0-264add7bf098-2.eot");
@@ -145,19 +115,7 @@
   font-weight: 900;
 }
 
-
-/* START: capita
------------------------------------------------------------------ 
-100 - Thin
-200 - Extra Light (Ultra Light)
-300 - Light
-400 - Normal
-500 - Medium
-600 - Semi Bold (Demi Bold)
-700 - Bold
-800 - Extra Bold (Ultra Bold)
-900 - Black (Heavy)
-*/
+/* Capita */
 
 @font-face {
   font-family: "Capita";
@@ -168,7 +126,6 @@
   font-style: normal;
   font-weight: 200;
 }
-
 @font-face {
   font-family: "Capita";
   src: url("http://www.bu.edu/cdn/fonts/Capita-Extra-Light-Italic/Capita-Extra-Light-Italic.eot");
@@ -178,7 +135,6 @@
   font-style: italic;
   font-weight: 200;
 }
-
 @font-face {
   font-family: "Capita";
   src: url("http://www.bu.edu/cdn/fonts/Capita-Light/Capita-Light.eot");
@@ -188,7 +144,6 @@
   font-style: normal;
   font-weight: 300;
 }
-
 @font-face {
   font-family: "Capita";
   src: url("http://www.bu.edu/cdn/fonts/Capita-Light-Italic/Capita-Light-Italic.eot");
@@ -198,7 +153,6 @@
   font-style: italic;
   font-weight: 300;
 }
-
 @font-face {
   font-family: "Capita";
   src: url("http://www.bu.edu/cdn/fonts/Capita-Regular/Capita-Regular.eot");
@@ -208,7 +162,6 @@
   font-style: normal;
   font-weight: 400;
 }
-
 @font-face {
   font-family: "Capita";
   src: url("http://www.bu.edu/cdn/fonts/Capita-Italic/Capita-Italic.eot");
@@ -218,7 +171,6 @@
   font-style: italic;
   font-weight: 400;
 }
-
 @font-face {
   font-family: "Capita";
   src: url("http://www.bu.edu/cdn/fonts/Capita-Medium/Capita-Medium.eot");
@@ -228,7 +180,6 @@
   font-style: normal;
   font-weight: 500;
 }
-
 @font-face {
   font-family: "Capita";
   src: url("http://www.bu.edu/cdn/fonts/Capita-Medium-Italic/Capita-Medium-Italic.eot");
@@ -238,7 +189,6 @@
   font-style: italic;
   font-weight: 500;
 }
-
 @font-face {
   font-family: "Capita";
   src: url("http://www.bu.edu/cdn/fonts/Capita-Bold/Capita-Bold.eot");
@@ -248,7 +198,6 @@
   font-style: normal;
   font-weight: 700;
 }
-
 @font-face {
   font-family: "Capita";
   src: url("http://www.bu.edu/cdn/fonts/Capita-Bold-Italic/Capita-Bold-Italic.eot");
@@ -258,7 +207,6 @@
   font-style: italic;
   font-weight: 700;
 }
-
 @font-face {
   font-family: "Capita";
   src: url("http://www.bu.edu/cdn/fonts/Capita-Extra-Bold/Capita-Extra-Bold.eot");
@@ -268,7 +216,6 @@
   font-style: normal;
   font-weight: 800;
 }
-
 @font-face {
   font-family: "Capita";
   src: url("http://www.bu.edu/cdn/fonts/Capita-Extra-Bold-Italic/Capita-Extra-Bold-Italic.eot");
@@ -279,19 +226,7 @@
   font-weight: 800;
 }
 
-
-/* START: pressura
------------------------------------------------------------------ 
-100 - Thin
-200 - Extra Light (Ultra Light)
-300 - Light
-400 - Normal
-500 - Medium
-600 - Semi Bold (Demi Bold)
-700 - Bold
-800 - Extra Bold (Ultra Bold)
-900 - Black (Heavy)
-*/
+/* Pressura */
 
 @font-face {
   font-family: "Pressura";
@@ -302,7 +237,6 @@
   font-style: normal;
   font-weight: 300;
 }
-
 @font-face {
   font-family: "Pressura";
   src: url("http://www.bu.edu/cdn/fonts/Pressura-Light-Italic/Pressura-Light-Italic.eot");
@@ -312,7 +246,6 @@
   font-style: italic;
   font-weight: 300;
 }
-
 @font-face {
   font-family: "Pressura";
   src: url("http://www.bu.edu/cdn/fonts/Pressura-Regular/Pressura-Regular.eot");
@@ -322,7 +255,6 @@
   font-style: normal;
   font-weight: 400;
 }
-
 @font-face {
   font-family: "Pressura";
   src: url("http://www.bu.edu/cdn/fonts/Pressura-Regular-Italic/Pressura-Regular-Italic.eot");
@@ -332,7 +264,6 @@
   font-style: italic;
   font-weight: 400;
 }
-
 @font-face {
   font-family: "Pressura";
   src: url("http://www.bu.edu/cdn/fonts/Pressura-Bold/Pressura-Bold.eot");
@@ -342,7 +273,6 @@
   font-style: normal;
   font-weight: 700;
 }
-
 @font-face {
   font-family: "Pressura";
   src: url("http://www.bu.edu/cdn/fonts/Pressura-Bold-Italic/Pressura-Bold-Italic.eot");
@@ -353,19 +283,7 @@
   font-weight: 700;
 }
 
-
-/* START: pressura mono
------------------------------------------------------------------ 
-100 - Thin
-200 - Extra Light (Ultra Light)
-300 - Light
-400 - Normal
-500 - Medium
-600 - Semi Bold (Demi Bold)
-700 - Bold
-800 - Extra Bold (Ultra Bold)
-900 - Black (Heavy)
-*/
+/* Pressura Mono */
 
 @font-face {
   font-family: "PressuraMono";
@@ -376,7 +294,6 @@
   font-style: normal;
   font-weight: 300;
 }
-
 @font-face {
   font-family: "PressuraMono";
   src: url("http://www.bu.edu/cdn/fonts/Pressura-Mono-Light-Italic/Pressura-Mono-Light-Italic.eot");
@@ -386,7 +303,6 @@
   font-style: italic;
   font-weight: 300;
 }
-
 @font-face {
   font-family: "PressuraMono";
   src: url("http://www.bu.edu/cdn/fonts/Pressura-Mono-Regular/Pressura-Mono-Regular.eot");
@@ -396,7 +312,6 @@
   font-style: normal;
   font-weight: 400;
 }
-
 @font-face {
   font-family: "PressuraMono";
   src: url("http://www.bu.edu/cdn/fonts/Pressura-Mono-Regular-Italic/Pressura-Mono-Regular-Italic.eot");
@@ -406,7 +321,6 @@
   font-style: italic;
   font-weight: 400;
 }
-
 @font-face {
   font-family: "PressuraMono";
   src: url("http://www.bu.edu/cdn/fonts/Pressura-Mono-Bold/Pressura-Mono-Bold.eot");
@@ -416,7 +330,6 @@
   font-style: normal;
   font-weight: 700;
 }
-
 @font-face {
   font-family: "PressuraMono";
   src: url("http://www.bu.edu/cdn/fonts/Pressura-Mono-Bold-Italic/Pressura-Mono-Bold-Italic.eot");
@@ -427,19 +340,7 @@
   font-weight: 700;
 }
 
-
-/* START: stag
------------------------------------------------------------------ 
-100 - Thin
-200 - Extra Light (Ultra Light)
-300 - Light
-400 - Normal
-500 - Medium
-600 - Semi Bold (Demi Bold)
-700 - Bold
-800 - Extra Bold (Ultra Bold)
-900 - Black (Heavy)
-*/
+/* Stag */
 
 @font-face {
   font-family: "Stag";
@@ -450,7 +351,6 @@
   font-style: normal;
   font-weight: 100;
 }
-
 @font-face {
   font-family: "Stag";
   src: url("http://www.bu.edu/cdn/fonts/Stag-Web-Thin-Italic/78288915-6179-4e0f-99c1-0d003d636fb5-2.eot");
@@ -460,7 +360,6 @@
   font-style: italic;
   font-weight: 100;
 }
-
 @font-face {
   font-family: "Stag";
   src: url("http://www.bu.edu/cdn/fonts/Stag-Web-Light/4c685d8e-b622-4304-b8f3-c0c6e81d4750-2.eot");
@@ -470,7 +369,6 @@
   font-style: normal;
   font-weight: 300;
 }
-
 @font-face {
   font-family: "Stag";
   src: url("http://www.bu.edu/cdn/fonts/Stag-Web-Light-Italic/ddd2bc1c-93d4-40cb-b47d-afad034fb12b-2.eot");
@@ -480,7 +378,6 @@
   font-style: italic;
   font-weight: 300;
 }
-
 @font-face {
   font-family: "Stag";
   src: url("http://www.bu.edu/cdn/fonts/Stag-Web-Book/e231c7bb-a060-43ff-ac6b-54f124485a2e-2.eot");
@@ -490,7 +387,6 @@
   font-style: normal;
   font-weight: 400;
 }
-
 @font-face {
   font-family: "Stag";
   src: url("http://www.bu.edu/cdn/fonts/Stag-Web-Book-Italic/beee6fd9-a50d-4ba0-94ba-a43343228c68-2.eot");
@@ -500,7 +396,6 @@
   font-style: italic;
   font-weight: 400;
 }
-
 @font-face {
   font-family: "Stag";
   src: url("http://www.bu.edu/cdn/fonts/Stag-Web-Medium/ab63aa86-e0fc-44ec-a3a1-c5187c3e7f8e-2.eot");
@@ -510,7 +405,6 @@
   font-style: normal;
   font-weight: 500;
 }
-
 @font-face {
   font-family: "Stag";
   src: url("http://www.bu.edu/cdn/fonts/Stag-Web-Medium-Italic/c7c3b71e-e032-4e4f-802b-520c35386c5a-2.eot");
@@ -520,7 +414,6 @@
   font-style: italic;
   font-weight: 500;
 }
-
 @font-face {
   font-family: "Stag";
   src: url("http://www.bu.edu/cdn/fonts/Stag-Web-Semibold/28c2c0ff-576b-4d17-9282-83281eeb1cb9-2.eot");
@@ -530,7 +423,6 @@
   font-style: normal;
   font-weight: 600;
 }
-
 @font-face {
   font-family: "Stag";
   src: url("http://www.bu.edu/cdn/fonts/Stag-Web-Semibold-Italic/e11d588e-b323-4303-b7dd-8f4c1b6609e9-2.eot");
@@ -540,7 +432,6 @@
   font-style: italic;
   font-weight: 600;
 }
-
 @font-face {
   font-family: "Stag";
   src: url("http://www.bu.edu/cdn/fonts/Stag-Web-Bold/ddc19d8c-6185-431d-851d-ddb13263a7b1-2.eot");
@@ -550,7 +441,6 @@
   font-style: normal;
   font-weight: 700;
 }
-
 @font-face {
   font-family: "Stag";
   src: url("http://www.bu.edu/cdn/fonts/Stag-Web-Bold-Italic/3359a2c4-8376-4095-98bd-d78a3ae7845b-2.eot");
@@ -560,7 +450,6 @@
   font-style: italic;
   font-weight: 700;
 }
-
 @font-face {
   font-family: "Stag";
   src: url("http://www.bu.edu/cdn/fonts/Stag-Web-Black/d1a630bb-d5b9-4b87-b71b-a5e84100d931-2.eot");
@@ -570,7 +459,6 @@
   font-style: normal;
   font-weight: 900;
 }
-
 @font-face {
   font-family: "Stag";
   src: url("http://www.bu.edu/cdn/fonts/Stag-Web-Black-Italic/2be84cf9-a743-4190-b720-ce532d0f39c6-2.eot");
@@ -581,19 +469,7 @@
   font-weight: 900;
 }
 
-
-/* START: unicod
------------------------------------------------------------------ 
-100 - Thin
-200 - Extra Light (Ultra Light)
-300 - Light
-400 - Normal
-500 - Medium
-600 - Semi Bold (Demi Bold)
-700 - Bold
-800 - Extra Bold (Ultra Bold)
-900 - Black (Heavy)
-*/
+/* Unicod */
 
 @font-face {
   font-family: "Unicod";
@@ -604,7 +480,6 @@
   font-style: normal;
   font-weight: 300;
 }
-
 @font-face {
   font-family: "Unicod";
   src: url("http://www.bu.edu/cdn/fonts/Unicod-Light-Italic/21FD57_8_0.eot");
@@ -614,7 +489,6 @@
   font-style: italic;
   font-weight: 300;
 }
-
 @font-face {
   font-family: "Unicod";
   src: url("http://www.bu.edu/cdn/fonts/Unicod/21FD57_3_0.eot");
@@ -624,7 +498,6 @@
   font-style: normal;
   font-weight: 400;
 }
-
 @font-face {
   font-family: "Unicod";
   src: url("http://www.bu.edu/cdn/fonts/Unicod-Italic/21FD57_4_0.eot");
@@ -634,7 +507,6 @@
   font-style: italic;
   font-weight: 400;
 }
-
 @font-face {
   font-family: "Unicod";
   src: url("http://www.bu.edu/cdn/fonts/Unicod-Medium/21FD57_7_0.eot");
@@ -644,7 +516,6 @@
   font-style: normal;
   font-weight: 500;
 }
-
 @font-face {
   font-family: "Unicod";
   src: url("http://www.bu.edu/cdn/fonts/Unicod-Medium-Italic/21FD57_5_0.eot");
@@ -654,7 +525,6 @@
   font-style: italic;
   font-weight: 500;
 }
-
 @font-face {
   font-family: "Unicod";
   src: url("http://www.bu.edu/cdn/fonts/Unicod-Bold/21FD57_9_0.eot");
@@ -664,7 +534,6 @@
   font-style: normal;
   font-weight: 700;
 }
-
 @font-face {
   font-family: "Unicod";
   src: url("http://www.bu.edu/cdn/fonts/Unicod-Bold-Italic/21FD57_2_0.eot");

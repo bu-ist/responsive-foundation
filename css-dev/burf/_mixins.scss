@@ -1,103 +1,72 @@
-/* START:mixins
+/* mixins
 ----------------------------------------------------------------- */
 
-
 @mixin border-radius($radius) {
-	-ms-border-radius: $radius;
-	-moz-border-radius: $radius;
 	-webkit-border-radius: $radius;
-	border-radius: $radius;
+	   -moz-border-radius: $radius;
+	    -ms-border-radius: $radius;
+	        border-radius: $radius;
 }
-
-
 @mixin transition($transition-property, $transition-time, $method, $transition-delays) {
-	-ms-transition: $transition-property $transition-time $method $transition-delays;
-	-o-transition: $transition-property $transition-time $method $transition-delays;
-	-moz-transition: $transition-property $transition-time $method $transition-delays;
 	-webkit-transition: $transition-property $transition-time $method $transition-delays;
-	transition: $transition-property $transition-time $method $transition-delays;
+	   -moz-transition: $transition-property $transition-time $method $transition-delays;
+	    -ms-transition: $transition-property $transition-time $method $transition-delays;
+	     -o-transition: $transition-property $transition-time $method $transition-delays;
+	        transition: $transition-property $transition-time $method $transition-delays;
 }
-
-
 @mixin transform($transforms) {
-	-ms-transform: $transforms;
-	-o-transform: $transforms;
-	-moz-transform: $transforms;
 	-webkit-transform: $transforms;
-	transform: $transforms;
+	   -moz-transform: $transforms;
+	    -ms-transform: $transforms;
+	     -o-transform: $transforms;
+	        transform: $transforms;
 }
-
 
 // rotate
 @mixin rotate($deg) {
 	@include transform(rotate(#{$deg}deg));
 }
- 
- 
+
 // scale
 @mixin scale($scale) {
 	@include transform(scale($scale));
-} 
-
+}
 
 // translate
 @mixin translate($x, $y) {
 	@include transform(translate($x, $y));
 }
-
-
 @mixin transform-origin($origin) {
-	-ms-transform-origin: $origin;
-	-o-transform-origin: $origin;
-	-moz-transform-origin: $origin;
 	-webkit-transform-origin: $origin;
-	transform-origin: $origin;
+	   -moz-transform-origin: $origin;
+	    -ms-transform-origin: $origin;
+	     -o-transform-origin: $origin;
+	        transform-origin: $origin;
 }
-
-
 @mixin keyframes($animation-name) {
-  @-webkit-keyframes $animation-name {
-    @content;
-  }
-  @-moz-keyframes $animation-name {
-    @content;
-  }  
-  @-ms-keyframes $animation-name {
-    @content;
-  }
-  @-o-keyframes $animation-name {
-    @content;
-  }  
-  @keyframes $animation-name {
-    @content;
-  }
+	@-webkit-keyframes $animation-name {
+		@content;
+	}
+	@-moz-keyframes $animation-name {
+		@content;
+	}
+	@-ms-keyframes $animation-name {
+		@content;
+	}
+	@-o-keyframes $animation-name {
+		@content;
+	}
+	@keyframes $animation-name {
+		@content;
+	}
 }
-
-
 @mixin animation($str) {
-  -ms-animation: #{$str};
-  -o-animation: #{$str};
-  -moz-animation: #{$str};
-  -webkit-animation: #{$str};
-  animation: #{$str};      
+	-webkit-animation: #{$str};
+	   -moz-animation: #{$str};
+	    -ms-animation: #{$str};
+	     -o-animation: #{$str};
+	        animation: #{$str};      
 }
-
-
-/* usage:
-@include keyframes(slide-down) {
-  0% { opacity: 1; }
-  90% { opacity: 0; }
-}
-
-.element {
-  width: 100px;
-  height: 100px;
-  background: black;
-  @include animation('slide-down 5s 3');
-}
-*/
-
-
 @mixin vertical-center-child {
     .lt-ie9 & {
 	    display:table;
@@ -112,27 +81,22 @@
         position: relative;
         top: 50%;
         -webkit-transform: translateY(-50%);
-		-moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
+		   -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
     }
 }
-
-
 @mixin vertical-center {
-   
     position: relative;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
     .lt-ie9 & {
         top:auto;
     }
 }
-
-
 @mixin clearfix {
 	&:after {
 		content: "";
@@ -141,9 +105,7 @@
 	}
 }
 
-
-/* If primary stylesheet indicates media query support (e.g. style.scss), output media queries.
-   If not (e.g. ie.scss), output the block WITHOUT @media wrapper. */
+// If primary stylesheet indicates media query support (e.g. style.scss), output media queries. If not (e.g. ie.scss), output the block WITHOUT @media wrapper.
 @mixin breakpoint($point) {
 	@if ($MQs) {
 		@if ($point == extra_small) {
@@ -169,7 +131,7 @@
 	}
 	@else {
 		@if ($point == large) {
-			//ie8 and large desktop output nothing
+			// ie8 and large desktop output nothing
 		}
 		@else {
 			@content;
@@ -177,12 +139,9 @@
 	}
 }
 
-
-/* Same as @mixin mq($point), except allows a longer string of media query conditions
-   e.g. min-width and max-width, or multiple DPI checkers */
+// Same as @mixin mq($point), except allows a longer string of media query conditions, e.g. min-width and max-width, or multiple DPI checkers
 @mixin breakpoint-multiple($points) {
-    /* If primary stylesheet indicates media query support (e.g. style.scss), output media queries.
-       If not (e.g. ie.scss), output the block WITHOUT @media wrapper. */
+    // If primary stylesheet indicates media query support (e.g. style.scss), output media queries. If not (e.g. ie.scss), output the block WITHOUT @media wrapper.
     @if ($MQs) {
          @media only screen and #{$points} {
              @content;
@@ -192,13 +151,12 @@
     }
 }
 
-
-/* Mixin to generate RGBA colors for any style with a fallback for non-rgba browsers such as IE8
-   Usage: @include rgba-color('background-color', rgba(black, 0.5), white); */
+// Mixin to generate RGBA colors for any style with a fallback for non-rgba browsers such as IE8.
+// Usage: @include rgba-color('background-color', rgba(black, 0.5), white);
 @mixin rgba-color($attribute, $color, $background) {
-  $percent: alpha($color) * 100%;
-  $opaque: opacify($color, 1);
-  $solid-color: mix($opaque, $background, $percent);
-  #{$attribute}: $solid-color;
-  #{$attribute}: $color;
+	$percent: alpha($color) * 100%;
+	$opaque: opacify($color, 1);
+	$solid-color: mix($opaque, $background, $percent);
+	#{$attribute}: $solid-color;
+	#{$attribute}: $color;
 }
