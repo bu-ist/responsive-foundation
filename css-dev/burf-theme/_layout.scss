@@ -661,9 +661,7 @@ div.aligncenter img {
 	border-style: solid;
 }
 .sidebar .widget h3 {
-	@include rgba-color('border-color', rgba($grayScale-0, .11), $grayScale-7);
-	border-bottom-width: 1px;
-	border-style: solid;
+	@include border(1px, solid, rgba(0, 0, 0, 0.15), #c00);
 }
 .sidebar .post {
 	@include rgba-color('border-color', rgba($grayScale-0, .11), $grayScale-7);
