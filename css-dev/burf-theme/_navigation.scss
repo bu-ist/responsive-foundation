@@ -4,11 +4,6 @@
 /* .searchToggle appears only when header is small and above, otherwise it's hidden */
 #brand .searchToggle {
 	display: none;
-	/*
-@include breakpoint(small) {
-		padding: 40px;
-	}
-	*/
 }
 #brand .desc {
 	float: left;
@@ -40,13 +35,13 @@
 	display: block;
 }
 #q {
-	@include rgba-color('border-color', rgba($grayScale-f, .11), $grayScale-7);
 	width: 100%;
 	padding: 10px 0;
-	border: none;
-	border-style: solid;
-	border-top-width: 1px;
-	border-bottom-width: 1px;
+	border:none;
+	border-top:1px solid $nav-borderFallback-f;
+	border-top:1px solid $nav-border-f;
+	border-bottom:1px solid $nav-borderFallback-f;
+	border-bottom:1px solid $nav-border-f;
 	color: $grayScale-f;
 	background: none;
 
@@ -149,11 +144,10 @@
 
 /* .primaryNav */
 .primaryNav {
-	@include rgba-color('border-color', rgba($grayScale-f, .11), $grayScale-7);
+	display:none;
 	margin: 0;
-	display: none;
-	border-bottom-width: 1px;
-	border-style: solid;
+	border-bottom:1px solid $nav-borderFallback-f;
+	border-bottom:1px solid $nav-border-f;
 
 	@include breakpoint(small) {
 		display: inline;
@@ -161,11 +155,10 @@
 	}
 }
 .primaryNav li {
-	@include rgba-color('border-color', rgba($grayScale-f, .11), $grayScale-7);
 	zoom: 1;
 	display: block;
-	border-top-width: 1px;
-	border-style: solid;
+	border-top:1px solid $nav-borderFallback-f;
+	border-top:1px solid $nav-border-f;
 
 	@include breakpoint(small) {
 		display: inline-block;
@@ -247,7 +240,27 @@ li.current_page_ancestor a {
 		width:50px;
 	}
 }
-.l-sidenav .primaryNav,
+.l-sidenav .primaryNav {
+	@include breakpoint(small) {	
+		display:none;
+	}
+	@include breakpoint(large) {	
+		display:block;
+	}
+}
+.l-sidenav #quicksearch {
+	@include breakpoint(small) {
+		background: #fff;
+	}
+}
+.l-sidenav #q {
+	@include breakpoint(small) {
+		border-top:1px solid $nav-borderFallback;
+		border-top:1px solid $nav-border;
+		border-bottom:1px solid $nav-borderFallback;
+		border-bottom:1px solid $nav-border;
+	}
+}
 .l-sidenav .navContainer .searchToggle {
 	@include breakpoint(small) {	
 		display:none;
@@ -286,9 +299,8 @@ li.current_page_ancestor a {
 	}
 }
 .l-nonav #brand #q {
-	@include rgba-color('border-color', rgba($grayScale-0, .11), $grayScale-7);
-	border-top-width: 1px;
-	border-style: solid;
+	border-top:1px solid $nav-borderFallback-f;
+	border-top:1px solid $nav-border-f;
 	margin-top: 20px;
 	color:#999;
 }

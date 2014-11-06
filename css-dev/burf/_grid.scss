@@ -13,10 +13,16 @@
 }
 .row [class*="col-"] {
 	padding: $grid-columnPadding;
-	background-color: rgba(255, 255, 255, .35);
+	/*
+background-color: rgba(255, 255, 255, .35);
 	@include rgba-color('background-color', rgba($grayScale-f, .35), $grayScale-f);
 	border: 1px solid rgba(0, 0, 0, .15);
 	@include rgba-color('border-color', rgba($grayScale-0, .11), $grayScale-7);
+*/
+	border:1px solid $content-borderFallback;
+	border:1px solid $content-border;
+	background: $content-bgFallback;
+	background: $content-bg;
 	@include border-radius(0);
 }
 .row:before,

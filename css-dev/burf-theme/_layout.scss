@@ -5,10 +5,10 @@ body {
 	background: $grayScale-0;
 }
 .wrapper {
-	
+	overflow:hidden;
 }
 .contentWrapper {
-	
+	position:relative;
 }
 
 /* components
@@ -52,45 +52,6 @@ h4.bu_collapsible,
 h5.bu_collapsible,
 h6.bu_collapsible {
 	margin-bottom: 0;
-}
-
-/* lists */
-article ul,
-article ol {
-	counter-reset: li;
-	margin-bottom: 24px;
-	margin-left: 20px;
-}
-article ul > li,
-article ol > li {
-	list-style-type: none;
-	position: relative;
-	margin-left: 20px;
-	padding: 2px 0;
-}
-article ul > li:before,
-article ol > li:before {
-	content: counter(li);
-	counter-increment: li;
-	position: absolute;
-	top: -3px;
-	left: -2em;
-	width: 2em;
-	margin-right: 8px;
-	padding: 4px;
-	text-align: center;
-	font-size: 24px;
-	font-weight: 700;
-}
-article li ul,
-article li ol {
-	margin: 6px 0 0 0;
-	counter-reset: li;
-}
-article ul > li:before {
-	content: "+";
-	font-size: 30px;
-	font-weight: 400;
 }
 
 /* tables */
@@ -184,6 +145,45 @@ article header {
 article footer {
 	background: none;
 	border: none;
+}
+
+/* lists */
+article ul,
+article ol {
+	counter-reset: li;
+	margin-bottom: 24px;
+	margin-left: 20px;
+}
+article ul > li,
+article ol > li {
+	list-style-type: none;
+	position: relative;
+	margin-left: 20px;
+	padding: 2px 0;
+}
+article ul > li:before,
+article ol > li:before {
+	content: counter(li);
+	counter-increment: li;
+	position: absolute;
+	top: -3px;
+	left: -2em;
+	width: 2em;
+	margin-right: 8px;
+	padding: 4px;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 700;
+}
+article li ul,
+article li ol {
+	margin: 6px 0 0 0;
+	counter-reset: li;
+}
+article ul > li:before {
+	content: "+";
+	font-size: 30px;
+	font-weight: 400;
 }
 
 /* inline images (use WordPress class names) */
@@ -352,11 +352,10 @@ div.aligncenter img {
 	color: #000;
 }
 .widget-bu-calendar .default li {
-	@include rgba-color('border-color', rgba($grayScale-0, .11), $grayScale-7);
+	border-top:1px solid $sidebar-borderFallback;
+	border-top:1px solid $sidebar-border;
 	margin-top: 20px;
 	padding-top: 20px;
-	border-top-width: 1px;
-	border-style: solid;
 }
 .widget-bu-calendar .default li:first-child {
 	border: none;
@@ -370,9 +369,8 @@ div.aligncenter img {
 	font-style: italic;
 }
 .widget-bu-calendar .full-date li {
-	@include rgba-color('border-color', rgba($grayScale-0, .11), $grayScale-7);
-	border-top-width: 1px;
-	border-style: solid;
+	border-top:1px solid $sidebar-borderFallback;
+	border-top:1px solid $sidebar-border;
 	padding: 10px 0;
 
 	&:first-child {
@@ -416,15 +414,15 @@ div.aligncenter img {
 	border: none;
 	margin: 0;
 }
-#contentnav li {
-	@include rgba-color('border-color', rgba($grayScale-0, .11), $grayScale-7);
-	border-top-width: 1px;
-	border-style: solid;
+#contentnav li a {
+	display:block;
+	border-bottom:1px solid $sidebar-borderFallback;
+	border-bottom:1px solid $sidebar-border;
 	margin: 0;
 	padding: 14px 0;
 }
-#contentnav li:last-child {
-	padding-bottom: 0;
+#contentnav li:last-child a {
+	border:none;
 }
 #contentnav li a:hover,
 #contentnav li a:focus {
@@ -439,38 +437,39 @@ div.aligncenter img {
 	padding: 5px 0 5px 20px;
 }
 .sidebar .widget_bu_pages {
-	padding: 20px 20px 10px 20px !important;
+	padding: 0 20px;
 }
 .sidebar .widget {
-	@include rgba-color('border-color', rgba($grayScale-0, .11), $grayScale-7);
-	border-width: 1px;
-	border-style: solid;
+	border:1px solid $sidebar-borderFallback;
+	border:1px solid $sidebar-border;
+	background: $sidebar-bgFallback;
+	background: $sidebar-bg
 }
 .sidebar .widget h3 {
-	@include border(1px, solid, rgba(0, 0, 0, 0.15), #c00);
+	border-bottom:1px solid $sidebar-borderFallback;
+	border-bottom:1px solid $sidebar-border;
 }
 .sidebar .post {
-	@include rgba-color('border-color', rgba($grayScale-0, .11), $grayScale-7);
-	border-bottom-width: 1px;
-	border-style: solid;
+	border-bottom:1px solid $sidebar-borderFallback;
+	border-bottom:1px solid $sidebar-border;
 }
 .sidebar .post:nth-last-of-type(1) {
 	border-bottom: none;
 }
 .sidebar .graphic .date {
-	@include rgba-color('border-color', rgba($grayScale-0, .11), $grayScale-7);
-	border-right-width: 3px;
-	border-style: solid;
+	border-right:3px solid $sidebar-borderFallback;
+	border-right:3px solid $sidebar-border;
 }
 .sidebar .comment-counter {
-	@include rgba-color('border-color', rgba($grayScale-0, .11), $grayScale-7);
-	border-left-width: 1px;
-	border-style: solid;
+	border-left:1px solid $sidebar-borderFallback;
+	border-left:1px solid $sidebar-border;
 }
+/*
 .sidebar .date, 
 .sidebar .widget p {
 	@include rgba-color('color', rgba($grayScale-0, .5), $grayScale-0);
 }
+*/
 
 /* .footbar
 ----------------------------------------------------------------- */
@@ -494,26 +493,23 @@ div.aligncenter img {
 	}
 }
 .footbar .widget {
-	@include rgba-color('border-color', rgba($grayScale-f, .35), $grayScale-f);
-	border-top-width: 3px;
-	border-style: solid;
+	border-top:3px solid $footbar-borderFallback;
+	border-top:3px solid $footbar-border;
 	padding: 20px;
 	
 	@include breakpoint(medium) {
-		@include rgba-color('border-color', rgba($grayScale-f, .11), $grayScale-f);
 		float: left;
 		width: 33.333%;
-		border: none;
-		border-right-width: 1px;
-		border-style: solid;
+		border:none;
+		border-right:1px solid $footbar-borderFallback;
+		border-right:1px solid $footbar-border;
 		padding: 0 20px 1000px 20px;
 		margin-bottom: -1000px;
 	}
 }
 .footbar .widget h3 {
-	@include rgba-color('border-color', rgba($grayScale-f, .11), $grayScale-f);
-	border-bottom-width: 1px;
-	border-style: solid;
+	border-bottom:1px solid $footbar-borderFallback;
+	border-bottom:1px solid $footbar-border;
 }
 .footbar .textwidget {
 	padding: 0;
@@ -522,16 +518,13 @@ div.aligncenter img {
 	border-top: none;
 
 	@include breakpoint(medium) {
-		@include rgba-color('border-color', rgba($grayScale-f, .11), $grayScale-f);
-		border-left-width: 1px;
-		border-style: solid;
+		border-left:1px solid $footbar-borderFallback;
+		border-left:1px solid $footbar-border;
 	}
 }
 .footbar .post {
-	@include rgba-color('border-color', rgba($grayScale-f, .11), $grayScale-f);
-	border-bottom-width: 1px;
-	border-style: solid;
-	
+	border-bottom:1px solid $footbar-borderFallback;
+	border-bottom:1px solid $footbar-border;	
 }
 .footbar .post h1 {
 	color: $grayScale-f;
@@ -540,13 +533,13 @@ div.aligncenter img {
 	color: $grayScale-f;
 }
 .footbar .date {
-	@include rgba-color('border-color', rgba($grayScale-f, .11), $grayScale-f);
-	border-right-width: 3px;
-	border-style: solid;
+	border-right:1px solid $footbar-borderFallback;
+	border-right:1px solid $footbar-border;
 }
 .footbar .day {
 	color: $grayScale-f;
 }
+/*
 .footbar .comment-counter {
 	@include rgba-color('border-color', rgba($grayScale-f, .11), $grayScale-f);
 }
@@ -554,15 +547,15 @@ div.aligncenter img {
 .footbar .widget p {
 	@include rgba-color('color', rgba($grayScale-f, .5), $grayScale-f);
 }
+*/
 
 /* footer
 ----------------------------------------------------------------- */
 
 footer {
-	@include rgba-color('border-color', rgba($grayScale-0, .11), $grayScale-0);
 	background: $grayScale-0;
-	border-top-width: 1px;
-	border-style: solid;
+	border-top:1px solid $footbar-borderFallback;
+	border-top:1px solid $footbar-border;
 	padding: 20px;
 	display: block;
 	clear: both;

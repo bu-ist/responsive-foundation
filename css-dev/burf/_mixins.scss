@@ -160,15 +160,3 @@
 	#{$attribute}: $solid-color;
 	#{$attribute}: $color;
 }
-
-// borders
-@mixin border($size, $style, $color, $fallbackColor:false) {
-	@if $fallbackColor {
-		border: $size $style $fallbackColor;
-	}
-	border: $size $style $color;
-}
-
-
-
-
