@@ -1,20 +1,23 @@
 /* basic framework elements
 ----------------------------------------------------------------- */
 
-// reset
-@import 'burf/reset';
-
-// fonts
-@import 'burf/fonts';
-
 // variables
 @import 'burf/variables';
 
 // mixins
 @import 'burf/mixins';
 
-// type options
-@import 'burf/typography';
+// reset
+@import 'burf/reset';
 
 // grid
 @import 'burf/grid';
+
+// fonts
+@import 'burf/fonts';
+
+// base
+@import 'burf/base';
+
+// forms
+@import 'burf/forms';

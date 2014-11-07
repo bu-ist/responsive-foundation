@@ -248,9 +248,12 @@ li.current_page_ancestor a {
 		display:block;
 	}
 }
+.primaryNav li {
+	padding-left: 0;
+}
 .l-sidenav #quicksearch {
 	@include breakpoint(small) {
-		background: #fff;
+		background: $grayScale-f;
 	}
 }
 .l-sidenav #q {
@@ -302,5 +305,5 @@ li.current_page_ancestor a {
 	border-top:1px solid $nav-borderFallback-f;
 	border-top:1px solid $nav-border-f;
 	margin-top: 20px;
-	color:#999;
+	color:$grayScale-7;
 }

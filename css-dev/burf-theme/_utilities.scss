@@ -1,0 +1,50 @@
+/* components
+----------------------------------------------------------------- */
+
+/* .responsiveVideo */
+.responsiveVideo {
+	margin-bottom: 14px;
+	padding-bottom: 56.25%;
+	padding-top: 45px;
+	position: relative;
+}
+.responsiveVideo div,
+.responsiveVideo embed,
+.responsiveVideo object,
+.responsiveVideo iframe {
+	height: 100% !important;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100% !important;
+}
+
+/* collapsibles (class name requires underscore due to dependency on front-end library) */
+h1.bu_collapsible,
+h2.bu_collapsible,
+h3.bu_collapsible,
+h4.bu_collapsible,
+h5.bu_collapsible,
+h6.bu_collapsible {
+	margin-bottom: 0;
+}
+
+/* tables */
+table {
+	width: 100%;
+	table-layout: fixed;
+}
+th,
+td {
+	text-align: left;
+	padding: 20px;
+}
+table col[class*="col-"] {
+	display: table-column;
+	float: none;
+}
+table td[class*="col-"],
+table th[class*="col-"] {
+	display: table-cell;
+	float: none;
+}

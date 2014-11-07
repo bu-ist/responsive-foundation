@@ -1,0 +1,126 @@
+/* widgets shared styles
+----------------------------------------------------------------- */
+
+/* .widget */
+.widget {
+	padding: 20px;
+	margin-bottom: 20px;
+	color: rgba(0, 0, 0, 0.5);
+}
+.widgetnav {
+	margin-bottom: 20px;
+}
+.widget h3 {
+	margin-bottom: 20px;
+	padding-bottom: 15px;
+}
+.widget-bu-posts {
+	padding: 20px 20px 0 20px;
+}
+.widget-bu-calendar {
+	padding-bottom: 0;
+}
+.widget-bu-posts .post {
+	padding: 0 0 20px 0;
+	margin-bottom: 20px;
+	@include clearfix;
+	
+	&:last-child {
+		border-bottom: none;
+		margin-bottom: 0;
+	}
+}
+.widget-bu-posts .post h1,
+.widget-bu-posts .post h2,
+.widget-bu-posts .post h3,
+.widget-bu-posts .post h4,
+.widget-bu-posts .post h5,
+.widget-bu-posts .post h6 {
+	font-size: 18px;
+	line-height: 21px;
+	margin-bottom: 0;
+}
+.widget-bu-posts .post p {
+	margin: 0;
+}
+.widget-bu-posts .thumb {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+.widget-bu-posts .published {
+	font-style: italic;
+}
+.widget-bu-posts .meta {
+	font-size: 12px;
+	font-style: italic;
+}
+.widget-bu-posts .comment-counter {
+	margin-left: 4px;
+	padding-left: 8px;
+}
+
+/* calendar styles: .default */
+.widget-bu-calendar .default .date {
+	@include border-radius(3px);
+	margin-right: 10px;
+	display: block;
+	width: 3em;
+	float: left;
+	text-align: center;
+	border: none;
+	font-weight: 700;
+	color: $grayScale-f !important;
+}
+.widget-bu-calendar .default a .date {
+	color: $grayScale-0;
+}
+.widget-bu-calendar .default li {
+	border-top:1px solid $sidebar-borderFallback;
+	border-top:1px solid $sidebar-border;
+	margin-top: 20px;
+	padding-top: 20px;
+}
+.widget-bu-calendar .default li:first-child {
+	border: none;
+	padding: 0;
+}
+
+/* calendar styles: .full-date */
+.widget-bu-calendar .full-date .date {
+	display: block;
+	font-size: 12px;
+	font-style: italic;
+}
+.widget-bu-calendar .full-date li {
+	border-top:1px solid $sidebar-borderFallback;
+	border-top:1px solid $sidebar-border;
+	padding: 10px 0;
+
+	&:first-child {
+	border: none;
+	margin-top: -20px;
+	}
+}
+
+/* calendar styles: .graphic */
+.widget-bu-calendar .graphic .date {
+	float: left;
+	width: 3em;
+	margin: 0 10px 20px 0;
+	padding-right: 10px;
+	text-align: center;
+}
+.widget-bu-calendar .graphic .day {
+	display: block;
+	font-weight: 700;
+	padding-top: 5px;
+	font-size: 24px;
+	margin-bottom: -5px;
+}
+.widget-bu-calendar .graphic .month {
+	text-transform: uppercase;
+	font-size: 12px;
+}
+.widget-bu-calendar .graphic li {
+	@include clearfix;
+}
