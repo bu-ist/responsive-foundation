@@ -13,54 +13,31 @@
 	<script type="application/javascript" src="vendor/prism.js"></script>
 </head>
 <body class="f1">
-
 	<header role="banner">
-
-		<nav class="mainNav" role="navigation">
-			<div class="navToggle">
-				<svg id="navIcon" viewBox="0 0 612 792">
-					<title>Navigation Menu Icon</title>
-					<desc>This is the navigation menu icon</desc>
-					<g>
-						<rect class="r1"
-							y="117.6"
-							width="612"
-							height="110.6"
-							/>
-						<rect class="r2"
-							y="340.6"
-							width="612"
-							height="110.6"
-							/>
-						<rect class="r3"
-							y="563.6"
-							width="612"
-							height="110.6"
-							/>
-					</g>
-				</svg>
-			</div>
-			<ul id="nav">
+		<nav class="navContainer" role="navigation">
+			<div class="navToggle"><span>Menu</span></div>
+			<ul id="nav" class="primaryNav">
 				<li class="page_item"><a href="index.html" class="level_1">Home</a></li>
 				<li class="page_item"><a href="base.html" class="level_1">Sass: Base</a></li>
 				<li class="page_item"><a href="theme.html" class="level_1">Sass: Theme</a></li>
 				<li class="page_item current_page_item"><a href="javascript.html" class="level_1 active">Javascript</a></li>
 			</ul>
 		</nav>
+
 		<div id="brand">
 			<a id="siteName" href="#" title="" rel="home" class="logo">Responsive Foundation <small>Style Guide</small></a>
 		</div>
 	</header>
 
-	<div id="page_wrapper">
-		<div class="container">
+	<div class="wrapper">
+		<div class="contentWrapper">
+			<div class="container">
+				<article id="content" role="main" class="col-md-8">
+					<h2>Javascript</h2>
 
-			<article id="content" role="main" class="col-md-8">
-				<h2>Javascript</h2>
-
-				<h3>Toggle <small>| toggle.js</small></h3>
-				<p>Adds responsive navigation menu for small screens, expandable search form.</p>
-				<p>Markup for responsive navigation menu:</p>
+					<h3>Toggle <small>| toggle.js</small></h3>
+					<p>Adds responsive navigation menu for small screens, expandable search form.</p>
+					<p>Markup for responsive navigation menu:</p>
 <pre><code class="language-markup">&lt;button class="navToggle"&gt;Toggle Navigation&lt;/button&gt;
 
 &lt;nav class="mainNav" role="navigation"&gt;
@@ -70,7 +47,7 @@
 	&lt;/ul&gt;
 &lt;nav&gt;
 </code></pre>
-				<p>Markup for expandable search form:</p>
+					<p>Markup for expandable search form:</p>
 <pre><code class="language-markup">&lt;button class="searchToggle"&gt;Toggle Search&lt;/button&gt;
 
 &lt;form id="quicksearch" method="get" action=""&gt;
@@ -78,23 +55,24 @@
 	&lt;input class="button" type="submit" name="do_search" value="Search" &gt;
 &lt;form&gt;
 </code></pre>
-				<p>Styles for this functionality live in the <code>burf-theme</code>.</p>
-			</article><!-- #content -->
+					<p>Styles for this functionality live in the <code>burf-theme</code>.</p>
+				</article><!-- #content -->
 
-			<aside id="right-content-area" class="col-md-4">
-				<div class="widget">
-					<h3>Resources</h3>
-					<ul>
-						<li><a href="https://github.com/bu-ist/coding-standards/">BU Coding Standards</a></li>
-					</ul>
-				</div>
-			</aside><!-- #right-content-area -->
+				<aside class="col-md-4 sidebar">
+					<div class="widget">
+						<h3>Resources</h3>
+						<ul>
+							<li><a href="https://github.com/bu-ist/coding-standards/">BU Coding Standards</a></li>
+						</ul>
+					</div>
+				</aside><!-- .sidebar -->
 
-		</div><!-- .container -->
-	</div><!-- #page_wrapper -->
+			</div><!-- .container -->
+		</div><!-- .contentWrapper -->
+	</div><!-- .wrapper -->
 
-	<aside id="bottom-content-area">
-		<div>
+	<aside class="footbar">
+		<div class="footbar-container">
 			<div class="widget">
 				<h3>Code</h3>
 				<ul>
@@ -103,7 +81,11 @@
 				</ul>
 			</div>
 		</div>
-	</aside><!-- #bottom-content-area -->
+	</aside>
+
+	<footer role="contentinfo">
+		<a href="#top" title="Jump back to top">&#8593;</a>
+	</footer>
 
 	<script type="application/javascript" src="js/docs.js"></script>
 </body>
