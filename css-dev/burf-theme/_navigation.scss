@@ -120,7 +120,7 @@
 .is-open .utilityNav {
 	display: block;
 	clear: left;
-	padding-top: 10px;
+	// padding-top: 10px;
 }
 
 /* nav above and below masthead
@@ -145,7 +145,7 @@
 /* .primaryNav */
 .primaryNav {
 	display:none;
-	margin: 0;
+	margin:40px 0 20px 0;
 	border-bottom:1px solid $nav-borderFallback-f;
 	border-bottom:1px solid $nav-border-f;
 
@@ -157,9 +157,6 @@
 .primaryNav li {
 	zoom: 1;
 	display: block;
-	border-top:1px solid $nav-borderFallback-f;
-	border-top:1px solid $nav-border-f;
-
 	@include breakpoint(small) {
 		display: inline-block;
 		*display: inline;
@@ -177,6 +174,11 @@
 	padding: 10px 0;
 	text-decoration: none;
 	color: $grayScale-7;
+	border-top:1px solid $nav-borderFallback-f;
+	border-top:1px solid $nav-border-f;
+	@include breakpoint(small) {
+		border:none;
+	}
 }
 .primaryNav a:hover {
 	color: $grayScale-f;
@@ -233,23 +235,35 @@ li.current_page_ancestor a {
 		margin-left:300px;
 	}
 }
-.l-sidenav .navContainer  {
+.l-sidenav .navContainer  {	
 	@include breakpoint(small) {	
 		background: none;
 		position:absolute;
-		width:50px;
+		width:300px;
+	}
+	@include breakpoint(large) {	
+		display:block;
+		padding:20px;
 	}
 }
 .l-sidenav .primaryNav {
+	border-bottom:1px solid $nav-borderFallback-f;
+	border-bottom:1px solid $nav-border-f;
 	@include breakpoint(small) {	
 		display:none;
 	}
 	@include breakpoint(large) {	
 		display:block;
+		margin-top:0;
 	}
 }
-.primaryNav li {
-	padding-left: 0;
+.l-sidenav .primaryNav li {
+	display:block;
+	padding: 0;
+}
+.l-sidenav .primaryNav a {
+	border-top:1px solid $nav-borderFallback-f;
+	border-top:1px solid $nav-border-f;
 }
 .l-sidenav #quicksearch {
 	@include breakpoint(small) {
@@ -283,6 +297,32 @@ li.current_page_ancestor a {
 		display: none;
 	}
 }
+.l-sidenav .utilityNav {
+	@include breakpoint(large) {
+		display:block;
+		float:none;
+	}
+}
+.l-sidenav .utilityNav a:hover {
+	color: $grayScale-f;
+}
+.l-sidenav .utilityNav li {
+	display:block;
+	padding-left: 0;
+}
+.l-sidenav.nav-open .contentWrapper {
+	@include breakpoint(small) {
+		left:240px;
+	}
+	@include breakpoint(large) {
+		left:0;
+	}
+}
+.l-sidenav.nav-open .primaryNav,
+.l-sidenav.nav-open .utilityNav {
+	display:block;
+	float: none;
+}
 
 /* no nav
 ----------------------------------------------------------------- */
@@ -301,9 +341,16 @@ li.current_page_ancestor a {
 		margin-top:40px;
 	}
 }
-.l-nonav #brand #q {
+.l-nonav #q {
 	border-top:1px solid $nav-borderFallback-f;
 	border-top:1px solid $nav-border-f;
 	margin-top: 20px;
 	color:$grayScale-7;
+	
+	@include breakpoint(small) {
+		border-top:1px solid $nav-borderFallback;
+		border-top:1px solid $nav-border;
+		border-bottom:1px solid $nav-borderFallback;
+		border-bottom:1px solid $nav-border;
+	}
 }
