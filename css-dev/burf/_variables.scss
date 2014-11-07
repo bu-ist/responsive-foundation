@@ -1,44 +1,71 @@
-/* START: variables
+/* variables
 ----------------------------------------------------------------- */
 
-/* branding typography
------------------------- */
+// typography
+$font-branding: "Whitney SSm A", "Whitney SSm B" !default;
 
-$font-branding: 'Whitney SSm A', 'Whitney SSm B' !default;
+// colors
+$grayScale-0:             #000000 !default;
+$grayScale-1:             #151515 !default;
+$grayScale-2:             #222222 !default;
+$grayScale-3:             #333333 !default;
+$grayScale-7:             #7a7a7a !default;
+$grayScale-9:             #9f9f9f !default;
+$grayScale-f:             #ffffff !default;
 
+// sidebar widget border colors
+$sidebar-border:   		  rgba(0, 0, 0, .15);
+$sidebar-borderFallback:  rgb(0, 0, 0);
 
+// sidebar widget background colors
+$sidebar-bg:              rgba(255, 255, 255, .1);
+$sidebar-bgFallback:      rgb(255, 255, 255);
 
+// page grid border colors
+$content-border:          rgba(0, 0, 0, .15);
+$content-borderFallback:  rgb(0, 0, 0);
 
+// page grid background colors
+$content-bg:              rgba(255, 255, 255, .15);
+$content-bgFallback:      rgb(255, 255, 255);
 
-/* colors
------------------------- */
+// footbar widget border colors
+$footbar-border:   		  rgba(255, 255, 255, .15);
+$footbar-borderFallback:  rgb(255, 255, 255);
 
-$black: #000000 !default;
-$white: #ffffff !default;
-$gray_darkest: #151515 !default;
-$gray_darker: #222222 !default;
-$gray_dark: #333333 !default;
-$gray_light: #7a7a7a !default;
-$gray_lighter: #9f9f9f !default;
+// nav border colors
+$nav-border:   		      rgba(0, 0, 0, .15);
+$nav-borderFallback:      rgb(0, 0, 0);
+$nav-border-f:   		  rgba(255, 255, 255, .15);
+$nav-borderFallback-f:    rgb(255, 255, 255);
 
+// grid breakpoints
+$XS:                      500px !default;
+$S:                       768px !default;
+$M:                       992px !default;
+$L:                       1200px !default;
 
+// grid .container widths
+$container-S:             750px !default;
+$container-M:             970px !default;
+$container-L:             1170px !default;
 
+// grid spacing
+$grid-containerPadding:   28px 20px !default;
+$grid-rowMargin:          0 0 32px !default;
+$grid-columnPadding:      20px !default;
 
-
-/* grid
------------------------- */
-
-$XS: 500px !default;
-$S: 768px !default;
-$M: 992px !default;
-$L: 1200px !default;
-
-/* .container,
-#bottom-content-area div
-widths  */
-
-$container_S: 750px !default;
-$container_M: 970px !default;
-$container_L: 1170px !default;
-
+// media queries
 $MQs: true !default;
+
+// z-index scale  (private vars)
+$zIndex-1:                100;
+$zIndex-2:                200;
+$zIndex-3:                300;
+$zIndex-4:                400;
+$zIndex-5:                500;
+$zIndex-6:                600;
+$zIndex-7:                700;
+$zIndex-8:                800;
+$zIndex-9:                900;
+$zIndex-10:               1000;

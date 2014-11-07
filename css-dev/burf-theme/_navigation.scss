@@ -1,0 +1,306 @@
+/* common
+----------------------------------------------------------------- */
+
+/* .searchToggle appears only when header is small and above, otherwise it's hidden */
+#brand .searchToggle {
+	display: none;
+}
+#brand .desc {
+	float: left;
+	width: auto;
+}
+
+/* #quicksearch (use WordPress plugin class name) */
+#quicksearch {
+	position: relative;
+	display: none;
+	padding: 0 15px 20px 15px;
+	margin: 0;
+	background: $grayScale-1;
+
+	@include breakpoint(small) {
+		padding: 0 20px 20px 20px;
+	}
+}
+#quicksearch fieldset {
+	margin: 0;
+}
+#quicksearch label {
+	display: none;
+}
+#quicksearch select {
+	display: none;
+}
+#quicksearch.is-open {
+	display: block;
+}
+#q {
+	width: 100%;
+	padding: 10px 0;
+	border:none;
+	border-top:1px solid $nav-borderFallback-f;
+	border-top:1px solid $nav-border-f;
+	border-bottom:1px solid $nav-borderFallback-f;
+	border-bottom:1px solid $nav-border-f;
+	color: $grayScale-f;
+	background: none;
+
+	@include breakpoint(large) {
+		padding: 15px 0;
+	}
+}
+
+/* nav menu */
+.navToggle {
+	float: left;
+	height: 30px;
+	width: 30px;
+	text-indent: -1000px;
+	position: relative;
+	cursor: pointer;
+
+	@include breakpoint(small) {
+		display: none;
+	}
+}
+.navToggle span,
+.navToggle span:before,
+.navToggle span:after {
+	position: absolute;
+	top: 10px;
+	display: block;
+	height: 4px;
+	width: 30px;
+	background: white;
+	cursor: pointer;
+	content: '';
+}
+.navToggle span:before {
+	top: -10px;
+}
+.navToggle span:after {
+	bottom: -10px;
+}
+.navToggle span,
+.navToggle span:before,
+.navToggle span:after {
+	@include transition(all, 250ms, ease-in-out, 0s);
+}
+.navToggle.is-open span {
+	background-color: transparent;
+}
+.navToggle.is-open span:before,
+.navToggle.is-open span:after {
+	top: 0;
+}
+.navToggle.is-open span:before {
+	@include rotate (45);
+}
+.navToggle.is-open span:after {
+	@include rotate (-45);
+}
+
+/* search icon */
+.searchToggle {
+	float: right;
+	width: 30px;
+	height: 30px;
+	margin-top: -3px;
+	text-indent: -5000px;
+	cursor: pointer;
+	background: transparent url(images/search.png) no-repeat 0 0;
+
+	@include breakpoint(small) {
+		margin-top: 5px;
+	}
+}
+
+/* when nav or search are opened */
+.is-open .primaryNav,
+.is-open .utilityNav {
+	display: block;
+	clear: left;
+	padding-top: 10px;
+}
+
+/* nav above and below masthead
+----------------------------------------------------------------- */
+
+/* .mainNav */
+.navContainer {
+	@include clearfix;
+	background: $grayScale-1;
+	display: block;
+	padding: 15px 20px 10px 15px;
+}
+.navContainer .utilityNav {
+	@include breakpoint(small) {
+		display: none;	
+	}	
+}
+.navContainer.is-open {
+	height: auto;
+}
+
+/* .primaryNav */
+.primaryNav {
+	display:none;
+	margin: 0;
+	border-bottom:1px solid $nav-borderFallback-f;
+	border-bottom:1px solid $nav-border-f;
+
+	@include breakpoint(small) {
+		display: inline;
+		border: none;
+	}
+}
+.primaryNav li {
+	zoom: 1;
+	display: block;
+	border-top:1px solid $nav-borderFallback-f;
+	border-top:1px solid $nav-border-f;
+
+	@include breakpoint(small) {
+		display: inline-block;
+		*display: inline;
+		border: none;
+		padding: 0 10px;
+	}
+}
+.primaryNav li:first-child {
+	@include breakpoint(small) {
+		padding-left: 5px;
+	}
+}
+.primaryNav a {
+	display: block;
+	padding: 10px 0;
+	text-decoration: none;
+	color: $grayScale-7;
+}
+.primaryNav a:hover {
+	color: $grayScale-f;
+}
+li.current_page_item a,
+li.current_page_parent a,
+li.current_page_ancestor a {
+	color: $grayScale-f;
+}
+
+/* .utilityNav */
+.utilityNav {
+	border: none;
+	display: none;
+
+	@include breakpoint(small) {
+		display: inline;
+		border: none;
+		float: right;
+	}
+}
+.utilityNav li {
+	border: none;
+	padding: 0;
+
+	@include breakpoint(small) {
+		display: inline-block;
+		*display: inline;
+		border: none;
+		padding-left: 10px;
+	}
+}
+.utilityNav a {
+	text-decoration: none;
+	color: $grayScale-7;
+}
+.utilityNav a:hover {
+	color: $grayScale-f;
+
+	@include breakpoint(small) {
+		color: $grayScale-0;
+	}
+}
+
+/* nav on left
+----------------------------------------------------------------- */
+
+.l-sidenav .contentWrapper {
+	@include transition(all, .1s, ease-in-out, 0s);
+	@include breakpoint(small) {	
+		margin-left:60px;
+	}
+	@include breakpoint(large) {	
+		margin-left:300px;
+	}
+}
+.l-sidenav .navContainer  {
+	@include breakpoint(small) {	
+		background: none;
+		position:absolute;
+		width:50px;
+	}
+}
+.l-sidenav .primaryNav {
+	@include breakpoint(small) {	
+		display:none;
+	}
+	@include breakpoint(large) {	
+		display:block;
+	}
+}
+.l-sidenav #quicksearch {
+	@include breakpoint(small) {
+		background: #fff;
+	}
+}
+.l-sidenav #q {
+	@include breakpoint(small) {
+		border-top:1px solid $nav-borderFallback;
+		border-top:1px solid $nav-border;
+		border-bottom:1px solid $nav-borderFallback;
+		border-bottom:1px solid $nav-border;
+	}
+}
+.l-sidenav .navContainer .searchToggle {
+	@include breakpoint(small) {	
+		display:none;
+	}
+}
+.l-sidenav #brand .searchToggle {
+	@include breakpoint(small) {
+		display: block;
+		margin-top:-5px;
+		background-position: 100% 0;
+	}
+}
+.l-sidenav .navToggle {
+	display: block;
+	
+	@include breakpoint(large) {
+		display: none;
+	}
+}
+
+/* no nav
+----------------------------------------------------------------- */
+
+.l-nonav #brand .searchToggle {
+	display: block;
+	margin-top:-5px;
+	background-position: 100% 0;
+}
+.l-nonav #brand #quicksearch {
+	background: $grayScale-f;
+	padding: 0;
+	margin-top:20px;
+	
+	@include breakpoint(small) { 
+		margin-top:40px;
+	}
+}
+.l-nonav #brand #q {
+	border-top:1px solid $nav-borderFallback-f;
+	border-top:1px solid $nav-border-f;
+	margin-top: 20px;
+	color:#999;
+}
