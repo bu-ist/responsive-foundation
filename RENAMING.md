@@ -39,6 +39,15 @@ Based on newly defined coding standards established in October 2014 by the BU We
 ## Additions
 
 * z-index scale in _variables.scss
+* sidebar widget border colors, sidebar widget background colors, page grid border colors, page grid background colors, footbar widget border colors in _variables.scss
+
+// nav border colors
+
+## Restructuring
+
+* header.php: added <div class="wrapper">, <div class="contentWrapper"> before bu_content_banner function (line 113, 114)
+* footer-no-sidebar.php, footer.php: added </div><!-- .contentWrapper -->, </div><!-- .wrapper --> after <?php wp_footer(); ?>
+* separated navigation styles in to their own partial: _navigation.scss (in burf-theme)
 
 ### Grid variables
 
