@@ -9,17 +9,17 @@ TODO: Set sensible defaults in Foundation so these aren't required.
 
 /* heading colors */
 h1,h2,h3,h4,h5,h6,
-#right-content-area h1,
-#right-content-area h1 a {
+.sidebar h1,
+.sidebar h1 a {
 	color: #000000;
 }
 /* accent text colors */
 strong,
-#right-content-area h3,
-#right-content-area h3 a,
-#right-content-area a .day,
-#bottom-content-area h3,
-#bottom-content-area h3 a,
+.sidebar h3,
+.sidebar h3 a,
+.sidebar a .day,
+.footbar h3,
+.footbar h3 a,
 ul > li:before,
 ol > li:before {
 	color: #4a97a7;
@@ -29,18 +29,17 @@ ol > li:before {
 }
 /* general text colors */
 body, p, li,
-#right-content-area a,
-#bottom-content-area a {
+.sidebar a,
+.footbar a {
 	color: #606060;
 }
-
 /* anchor colors */
 a,
 .comment-counter a strong {
 	color: #cc0000;
 }
 /* page background color */
-#page_wrapper {
+.wrapper {
 	background-color: #ffffff;
 }
 
