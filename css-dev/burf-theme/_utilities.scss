@@ -28,23 +28,3 @@ h5.bu_collapsible,
 h6.bu_collapsible {
 	margin-bottom: 0;
 }
-
-/* tables */
-table {
-	width: 100%;
-	table-layout: fixed;
-}
-th,
-td {
-	text-align: left;
-	padding: 20px;
-}
-table col[class*="col-"] {
-	display: table-column;
-	float: none;
-}
-table td[class*="col-"],
-table th[class*="col-"] {
-	display: table-cell;
-	float: none;
-}
