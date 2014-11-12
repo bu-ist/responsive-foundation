@@ -209,8 +209,8 @@ div.aligncenter img {
 }
 #contentnav li a {
 	display:block;
-	border-bottom:1px solid $sidebar-borderFallback;
-	border-bottom:1px solid $sidebar-border;
+	border-bottom:1px solid $color-sidebar-borderFallback;
+	border-bottom:1px solid $color-sidebar-border;
 	margin: 0;
 	padding: 14px 0;
 }
@@ -233,29 +233,29 @@ div.aligncenter img {
 	padding: 0 20px;
 }
 .sidebar .widget {
-	border:1px solid $sidebar-borderFallback;
-	border:1px solid $sidebar-border;
-	background: $sidebar-bgFallback;
-	background: $sidebar-bg
+	border:1px solid $color-sidebar-borderFallback;
+	border:1px solid $color-sidebar-border;
+	background: $color-sidebar-bgFallback;
+	background: $color-sidebar-bg
 }
 .sidebar .widget h3 {
-	border-bottom:1px solid $sidebar-borderFallback;
-	border-bottom:1px solid $sidebar-border;
+	border-bottom:1px solid $color-sidebar-borderFallback;
+	border-bottom:1px solid $color-sidebar-border;
 }
 .sidebar .post {
-	border-bottom:1px solid $sidebar-borderFallback;
-	border-bottom:1px solid $sidebar-border;
+	border-bottom:1px solid $color-sidebar-borderFallback;
+	border-bottom:1px solid $color-sidebar-border;
 }
 .sidebar .post:nth-last-of-type(1) {
 	border-bottom: none;
 }
 .sidebar .graphic .date {
-	border-right:3px solid $sidebar-borderFallback;
-	border-right:3px solid $sidebar-border;
+	border-right:3px solid $color-sidebar-borderFallback;
+	border-right:3px solid $color-sidebar-border;
 }
 .sidebar .comment-counter {
-	border-left:1px solid $sidebar-borderFallback;
-	border-left:1px solid $sidebar-border;
+	border-left:1px solid $color-sidebar-borderFallback;
+	border-left:1px solid $color-sidebar-border;
 }
 /*
 .sidebar .date, 
@@ -286,23 +286,23 @@ div.aligncenter img {
 	}
 }
 .footbar .widget {
-	border-top:3px solid $footbar-borderFallback;
-	border-top:3px solid $footbar-border;
+	border-top:3px solid $color-footbar-borderFallback;
+	border-top:3px solid $color-footbar-border;
 	padding: 20px;
 	
 	@include breakpoint(medium) {
 		float: left;
 		width: 33.333%;
 		border:none;
-		border-right:1px solid $footbar-borderFallback;
-		border-right:1px solid $footbar-border;
+		border-right:1px solid $color-footbar-borderFallback;
+		border-right:1px solid $color-footbar-border;
 		padding: 0 20px 1000px 20px;
 		margin-bottom: -1000px;
 	}
 }
 .footbar .widget h3 {
-	border-bottom:1px solid $footbar-borderFallback;
-	border-bottom:1px solid $footbar-border;
+	border-bottom:1px solid $color-footbar-borderFallback;
+	border-bottom:1px solid $color-footbar-border;
 }
 .footbar .textwidget {
 	padding: 0;
@@ -311,13 +311,13 @@ div.aligncenter img {
 	border-top: none;
 
 	@include breakpoint(medium) {
-		border-left:1px solid $footbar-borderFallback;
-		border-left:1px solid $footbar-border;
+		border-left:1px solid $color-footbar-borderFallback;
+		border-left:1px solid $color-footbar-border;
 	}
 }
 .footbar .post {
-	border-bottom:1px solid $footbar-borderFallback;
-	border-bottom:1px solid $footbar-border;	
+	border-bottom:1px solid $color-footbar-borderFallback;
+	border-bottom:1px solid $color-footbar-border;	
 }
 .footbar .post h1 {
 	color: $color-grayScale-f;
@@ -326,8 +326,8 @@ div.aligncenter img {
 	color: $color-grayScale-f;
 }
 .footbar .date {
-	border-right:1px solid $footbar-borderFallback;
-	border-right:1px solid $footbar-border;
+	border-right:1px solid $color-footbar-borderFallback;
+	border-right:1px solid $color-footbar-border;
 }
 .footbar .day {
 	color: $color-grayScale-f;
@@ -338,8 +338,8 @@ div.aligncenter img {
 
 footer {
 	background: $color-grayScale-0;
-	border-top:1px solid $footbar-borderFallback;
-	border-top:1px solid $footbar-border;
+	border-top:1px solid $color-footbar-borderFallback;
+	border-top:1px solid $color-footbar-border;
 	padding: 20px;
 	display: block;
 	clear: both;

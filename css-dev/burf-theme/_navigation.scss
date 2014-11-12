@@ -38,10 +38,6 @@
 	width: 100%;
 	padding: 10px 0;
 	border:none;
-	border-top:1px solid $nav-borderFallback-f;
-	border-top:1px solid $nav-border-f;
-	border-bottom:1px solid $nav-borderFallback-f;
-	border-bottom:1px solid $nav-border-f;
 	color: $color-grayScale-f;
 	background: none;
 
@@ -146,8 +142,6 @@
 .primaryNav {
 	display:none;
 	margin:40px 0 20px 0;
-	border-bottom:1px solid $nav-borderFallback-f;
-	border-bottom:1px solid $nav-border-f;
 
 	@include breakpoint(small) {
 		display: inline;
@@ -174,8 +168,7 @@
 	padding: 10px 0;
 	text-decoration: none;
 	color: $color-grayScale-7;
-	border-top:1px solid $nav-borderFallback-f;
-	border-top:1px solid $nav-border-f;
+	border-top:1px solid $color-grayScale-3;
 	@include breakpoint(small) {
 		border:none;
 	}
@@ -247,8 +240,8 @@ li.current_page_ancestor a {
 	}
 }
 .l-sidenav .primaryNav {
-	border-bottom:1px solid $nav-borderFallback-f;
-	border-bottom:1px solid $nav-border-f;
+	border-bottom:1px solid $color-grayScale-3;
+	border-bottom:1px solid $color-grayScale-3;
 	@include breakpoint(small) {	
 		display:none;
 	}
@@ -262,8 +255,8 @@ li.current_page_ancestor a {
 	padding: 0;
 }
 .l-sidenav .primaryNav a {
-	border-top:1px solid $nav-borderFallback-f;
-	border-top:1px solid $nav-border-f;
+	border-top:1px solid $color-grayScale-3;
+	border-top:1px solid $color-grayScale-3;
 }
 .l-sidenav #quicksearch {
 	background: $color-grayScale-f;
@@ -277,10 +270,10 @@ li.current_page_ancestor a {
 }
 .l-sidenav #q {
 	@include breakpoint(small) {
-		border-top:1px solid $nav-borderFallback;
-		border-top:1px solid $nav-border;
-		border-bottom:1px solid $nav-borderFallback;
-		border-bottom:1px solid $nav-border;
+		border-top:1px solid $color-grayScale-3;
+		border-top:1px solid $color-grayScale-3;
+		border-bottom:1px solid $color-grayScale-3;
+		border-bottom:1px solid $color-grayScale-3;
 	}
 }
 .l-sidenav .navContainer .searchToggle {
@@ -347,15 +340,15 @@ li.current_page_ancestor a {
 	}
 }
 .l-nonav #q {
-	border-top:1px solid $nav-borderFallback-f;
-	border-top:1px solid $nav-border-f;
+	border-top:1px solid $color-grayScale-3;
+	border-top:1px solid $color-grayScale-3;
 	margin-top: 20px;
 	color:$color-grayScale-7;
 	
 	@include breakpoint(small) {
-		border-top:1px solid $nav-borderFallback;
-		border-top:1px solid $nav-border;
-		border-bottom:1px solid $nav-borderFallback;
-		border-bottom:1px solid $nav-border;
+		border-top:1px solid $color-grayScale-3;
+		border-top:1px solid $color-grayScale-3;
+		border-bottom:1px solid $color-grayScale-3;
+		border-bottom:1px solid $color-grayScale-3;
 	}
 }

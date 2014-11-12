@@ -75,8 +75,8 @@
 	color: $color-grayScale-0;
 }
 .widget-bu-calendar .default li {
-	border-top:1px solid $sidebar-borderFallback;
-	border-top:1px solid $sidebar-border;
+	border-top:1px solid $color-sidebar-borderFallback;
+	border-top:1px solid $color-sidebar-border;
 	margin-top: 20px;
 	padding-top: 20px;
 }
@@ -92,8 +92,8 @@
 	font-style: italic;
 }
 .widget-bu-calendar .full-date li {
-	border-top:1px solid $sidebar-borderFallback;
-	border-top:1px solid $sidebar-border;
+	border-top:1px solid $color-sidebar-borderFallback;
+	border-top:1px solid $color-sidebar-border;
 	padding: 10px 0;
 
 	&:first-child {

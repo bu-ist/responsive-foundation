@@ -30,6 +30,34 @@ $color-table-th-border:   $color-grayScale-c !default;
 $color-table-td-border:   $color-grayScale-c !default;
 $color-table-stripes:     #f6f9fc !default;
 
+// TODO: set values to reference generic color variables
+// sidebar widget border colors
+$color-sidebar-border:   		  rgba(0, 0, 0, .15);
+$color-sidebar-borderFallback:    rgb(0, 0, 0);
+
+// sidebar widget background colors
+$color-sidebar-bg:                rgba(255, 255, 255, .1);
+$color-sidebar-bgFallback:        rgb(255, 255, 255);
+
+// page grid border colors
+$color-content-border:            rgba(0, 0, 0, .15);
+$color-content-borderFallback:    rgb(0, 0, 0);
+
+// page grid background colors
+$color-content-bg:                rgba(255, 255, 255, .15);
+$color-content-bgFallback:        rgb(255, 255, 255);
+
+// footbar widget border colors
+$color-footbar-border:   		  rgba(255, 255, 255, .15);
+$color-footbar-borderFallback:    rgb(255, 255, 255);
+
+// nav border colors
+$color-nav-border:   		      rgba(0, 0, 0, .15);
+$color-nav-borderFallback:        rgb(0, 0, 0);
+$color-nav-borderBottom:   		  rgba(255, 255, 255, .15);
+$color-nav-borderBottomFallback:  rgb(255, 255, 255);
+
+
 
 // typography & vertical whitespace
 // -----------------------------------------------------------------
@@ -141,36 +169,6 @@ $container-L:    1170px !default;
 
 // media queries
 $MQs: true !default;
-
-
-// layout
-// -----------------------------------------------------------------
-
-// sidebar widget border colors
-$sidebar-border:   		  rgba(0, 0, 0, .15);
-$sidebar-borderFallback:  rgb(0, 0, 0);
-
-// sidebar widget background colors
-$sidebar-bg:              rgba(255, 255, 255, .1);
-$sidebar-bgFallback:      rgb(255, 255, 255);
-
-// page grid border colors
-$content-border:          rgba(0, 0, 0, .15);
-$content-borderFallback:  rgb(0, 0, 0);
-
-// page grid background colors
-$content-bg:              rgba(255, 255, 255, .15);
-$content-bgFallback:      rgb(255, 255, 255);
-
-// footbar widget border colors
-$footbar-border:   		  rgba(255, 255, 255, .15);
-$footbar-borderFallback:  rgb(255, 255, 255);
-
-// nav border colors
-$nav-border:   		      rgba(0, 0, 0, .15);
-$nav-borderFallback:      rgb(0, 0, 0);
-$nav-border-f:   		  rgba(255, 255, 255, .15);
-$nav-borderFallback-f:    rgb(255, 255, 255);
 
 
 // z-index
