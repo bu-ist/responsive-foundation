@@ -1,14 +1,14 @@
-/* theme-specific elements
------------------------------------------------------------------ */
+// theme-specific elements
+// -----------------------------------------------------------------
+
+// variables
+@import 'burf-theme/variables';
 
 // layout
 @import 'burf-theme/layout';
 
 // fonts
 @import 'burf-theme/fonts';
-
-// typography
-@import 'burf-theme/typography';
 
 // navigation
 @import 'burf-theme/navigation';
@@ -21,3 +21,6 @@
 
 // widgets
 @import 'burf-theme/widgets';
+
+// customizer options
+@import 'burf-theme/customizer';

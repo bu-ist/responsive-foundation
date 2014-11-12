@@ -16,7 +16,6 @@ $color-grayScale-f:       #ffffff !default;
  
 // applications
 $color-base:              $color-grayScale-4 !default;
-$color-body-bg:           $color-grayScale-0 !default;
 $color-link:              rgb(0, 0, 238) !default;
 $color-link-visited:      rgb(85, 26, 139) !default;
 $color-heading:           $color-grayScale-0 !default;
@@ -31,32 +30,8 @@ $color-table-th-border:   $color-grayScale-c !default;
 $color-table-td-border:   $color-grayScale-c !default;
 $color-table-stripes:     #f6f9fc !default;
 
-// TODO: set values to reference generic color variables
-// sidebar widget border colors
-$color-sidebar-border:   		  rgba(0, 0, 0, .15);
-$color-sidebar-borderFallback:    rgb(0, 0, 0);
 
-// sidebar widget background colors
-$color-sidebar-bg:                rgba(255, 255, 255, .1);
-$color-sidebar-bgFallback:        rgb(255, 255, 255);
 
-// page grid border colors
-$color-content-border:            rgba(0, 0, 0, .15);
-$color-content-borderFallback:    rgb(0, 0, 0);
-
-// page grid background colors
-$color-content-bg:                rgba(255, 255, 255, .15);
-$color-content-bgFallback:        rgb(255, 255, 255);
-
-// footbar widget border colors
-$color-footbar-border:   		  rgba(255, 255, 255, .15);
-$color-footbar-borderFallback:    rgb(255, 255, 255);
-
-// nav border colors
-$color-nav-border:   		      rgba(0, 0, 0, .15);
-$color-nav-borderFallback:        rgb(0, 0, 0);
-$color-nav-borderBottom:   		  rgba(255, 255, 255, .15);
-$color-nav-borderBottomFallback:  rgb(255, 255, 255);
 
 
 
@@ -155,7 +130,7 @@ $form-fieldset-padding:        20px !default;
 
 // grid spacing
 $grid-container-padding: 28px 20px !default;
-$grid-row-margin:        0 0 32px !default;
+$grid-row-margin:        0 -20px !default;
 $grid-column-padding:    0 20px !default;
 
 // breakpoints

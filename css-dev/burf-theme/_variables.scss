@@ -2,7 +2,42 @@
 
 
 // colors
+$color-body-bg:           $color-grayScale-0 !default;
+$color-masthead-bg:       $color-grayScale-f !default;
+$color-branding:          $color-grayScale-0 !default;
+$color-bannerContainer:   $color-grayScale-2 !default;
+$color-contentWrapper-bg: $color-grayScale-f !default;
 
+
+// customizer options
+// TODO: consider naming variables like $color-custRed-body-bg...
+
+
+// sidebar widget border colors TODO: set values to reference generic color variables
+$color-sidebar-border:   		  rgba(0, 0, 0, .15);
+$color-sidebar-borderFallback:    rgb(0, 0, 0);
+
+// sidebar widget background colors
+$color-sidebar-bg:                rgba(255, 255, 255, .1);
+$color-sidebar-bgFallback:        rgb(255, 255, 255);
+
+// page grid border colors
+$color-content-border:            rgba(0, 0, 0, .15);
+$color-content-borderFallback:    rgb(0, 0, 0);
+
+// page grid background colors
+$color-content-bg:                rgba(255, 255, 255, .15);
+$color-content-bgFallback:        rgb(255, 255, 255);
+
+// footbar widget border colors
+$color-footbar-border:   		  rgba(255, 255, 255, .15);
+$color-footbar-borderFallback:    rgb(255, 255, 255);
+
+// nav border colors
+$color-nav-border:   		      rgba(0, 0, 0, .15);
+$color-nav-borderFallback:        rgb(0, 0, 0);
+$color-nav-borderBottom:   		  rgba(255, 255, 255, .15);
+$color-nav-borderBottomFallback:  rgb(255, 255, 255);
 
 
 // widgets

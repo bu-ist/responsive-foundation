@@ -1,11 +1,6 @@
-/* widgets shared styles
------------------------------------------------------------------ */
-
 /* .widget */
 .widget {
-	padding: 20px;
-	margin-bottom: 20px;
-	color: rgba(0, 0, 0, 0.5);
+	margin-bottom: 30px;
 }
 .widgetnav {
 	margin-bottom: 20px;
@@ -21,9 +16,9 @@
 	padding-bottom: 0;
 }
 .widget-bu-posts .post {
+	@include clearfix;
 	padding: 0 0 20px 0;
 	margin-bottom: 20px;
-	@include clearfix;
 	
 	&:last-child {
 		border-bottom: none;

@@ -1,13 +1,18 @@
 /* grid
 ----------------------------------------------------------------- */
 
+.wrapper {
+	overflow:hidden;
+}
+.contentWrapper {
+	position:relative;
+}
 .container {
 	@include clearfix;
 	padding: $grid-container-padding;
 	width: 100%;
 	margin: 0 auto;
 }
-
 .row {
 	margin: $grid-row-margin;
 }
@@ -26,9 +31,9 @@ clear: both;
 margin-bottom: 0;
 }
 // experimental... TODO: evaluate effects of removing top margin from first child type
-[class*="col-"] *:first-child {
-	margin-top: 0;
-}
+// [class*="col-"] *:first-child {
+// 	margin-top: 0;
+// }
 
 /* default (mobile) */
 .col-xs-1,

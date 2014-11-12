@@ -4,9 +4,9 @@
 a {
 	color: $color-link;
 }
-a:visited {
-	color: $color-link-visited;
-}
+// a:visited {
+// 	color: $color-link-visited;
+// }
 /* Address `outline` inconsistency between Chrome and other browsers. */
 a:focus {
 	outline: thin dotted;
@@ -209,6 +209,7 @@ nav ul,
 nav ol {
 	list-style: none;
 	list-style-image: none;
+	margin: 0;
 }
 /* remove margin from nested lists */
 ul ul,
