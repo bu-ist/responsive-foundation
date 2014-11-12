@@ -41,6 +41,16 @@ table thead {
     text-align: left;
     vertical-align: bottom;
 }
+/* tables that use grid width classes */
+table col[class*="col-"] {
+    display: table-column;
+    float: none;
+}
+table td[class*="col-"],
+table th[class*="col-"] {
+    display: table-cell;
+    float: none;
+}
 
 /* Striped tables
 ----------------------------------------------------------------- */
