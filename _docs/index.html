@@ -44,7 +44,7 @@
 					Assumming you have <a href="http://nodejs.org/">Node.js</a> installed, fire up your terminal and run the following from within your project directory.
 					</p>
 
-<pre><code data-language="bash"># Move into your project directory
+<pre class="code"><code data-language="bash"># Move into your project directory
 cd your-project
 
 # Install Bower globally using NPM
@@ -66,7 +66,7 @@ bower install git@github.com:bu-ist/responsive-foundation.git#0.1.0
 					</ul>
 					<p>In your project's main SCSS file:</p>
 
-<pre><code data-language="scss">// your-project/css-dev/style.scss:
+<pre class="code"><code data-language="css">// your-project/css-dev/style.scss:
 
 // Import base components
 @import "burf";
@@ -77,7 +77,7 @@ bower install git@github.com:bu-ist/responsive-foundation.git#0.1.0
 
 					<p>Example Grunt configuration using the <a href="https://github.com/gruntjs/grunt-contrib-sass">grunt-contrib-sass</a> plugin:</p>
 
-<pre><code data-language="javascript">// your-project/Gruntfile.js:
+<pre class="code"><code data-language="javascript">// your-project/Gruntfile.js:
 sass: {
 	options: {
 		loadPath: "bower_components/responsive-foundation/css-dev"
@@ -91,7 +91,7 @@ sass: {
 					<p>Foundation also provides a small collection of <a href="javascript.html">Javascript files</a>.</p>
 					<p>We recommend that you include these files as needed with Grunt using the <a href="https://github.com/gruntjs/grunt-contrib-concat">grunt-contrib-concat</a> and <a href="https://github.com/gruntjs/grunt-contrib-uglify">grunt-contrib-uglify</a> plugins.</p>
 
-<pre><code data-language="javascript">// your-project/Gruntfile.js:
+<pre class="code"><code data-language="javascript">// your-project/Gruntfile.js:
 
 // Concatenate all scripts in responsive-foundation/js-dev
 // into your project as js/burf.js
