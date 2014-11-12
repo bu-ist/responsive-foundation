@@ -2,7 +2,7 @@
 ----------------------------------------------------------------- */
 
 body {
-	background: $grayScale-1;
+	background: $color-grayScale-1;
 }
 .wrapper {
 	overflow:hidden;
@@ -17,7 +17,7 @@ body {
 /* header */
 header {
 	padding: 0;
-	background: $grayScale-f;
+	background: $color-grayScale-f;
 	@include clearfix;
 }
 
@@ -28,14 +28,14 @@ header {
 }
 #siteName {
 	float: left;
-	font-family: $font-branding;
+	font-family: $fontFamily-branding;
 	font-weight: 600;
 	font-style: normal;
 	text-decoration: none;
-	color: $grayScale-0;
+	color: $color-grayScale-0;
 }
 #siteName span {
-	font-family: $font-branding;
+	font-family: $fontFamily-branding;
 	font-weight: 400;
 	font-style: normal;
 }
@@ -53,7 +53,7 @@ header {
 }
 .bannerContainer-windowWidth {
 	@include breakpoint(large) {
-		background: $grayScale-3;
+		background: $color-grayScale-3;
 		padding: 20px;
 	}
 }
@@ -62,7 +62,7 @@ header {
 }
 .bannerContainer-pageWidth img {
 	@include breakpoint(medium) {
-		background: $grayScale-3;
+		background: $color-grayScale-3;
 		width: 100%;
 	}
 }
@@ -131,7 +131,7 @@ img.alignright {
 div.alignright {
 	float: right;
 	margin: 0 0 10px 10px;
-	background: $grayScale-f;
+	background: $color-grayScale-f;
 	width: auto !important;
 	padding: 10px;
 	max-width: 100%;
@@ -149,7 +149,7 @@ img.alignleft {
 div.alignleft {
 	float: left;
 	margin: 0 10px 10px 0;
-	background: $grayScale-f;
+	background: $color-grayScale-f;
 	width: auto !important;
 	padding: 10px;
 	max-width: 100%;
@@ -166,7 +166,7 @@ img.aligncenter {
 }
 div.aligncenter {
 	margin: 0 auto;
-	background: $grayScale-f;
+	background: $color-grayScale-f;
 	padding: 10px;
 	max-width: 100%;
 }
@@ -179,7 +179,7 @@ div.aligncenter img {
 
 /* inline images (use WordPress class names) */
 .wp-caption p {
-	color: $grayScale-9;
+	color: $color-grayScale-9;
 	clear: both;
 	font-size: 12px;
 	line-height: 16px;
@@ -219,7 +219,7 @@ div.aligncenter img {
 }
 #contentnav li a:hover,
 #contentnav li a:focus {
-	color: $grayScale-0;
+	color: $color-grayScale-0;
 	text-decoration: none;
 }
 #contentnav li ul {
@@ -260,7 +260,7 @@ div.aligncenter img {
 /*
 .sidebar .date, 
 .sidebar .widget p {
-	@include rgba-color('color', rgba($grayScale-0, .5), $grayScale-0);
+	@include rgba-color('color', rgba($color-grayScale-0, .5), $color-grayScale-0);
 }
 */
 
@@ -269,7 +269,7 @@ div.aligncenter img {
 
 .footbar {
 	@include clearfix;
-	background: $grayScale-2;
+	background: $color-grayScale-2;
 	clear: left;
 	width: 100%;
 
@@ -320,24 +320,24 @@ div.aligncenter img {
 	border-bottom:1px solid $footbar-border;	
 }
 .footbar .post h1 {
-	color: $grayScale-f;
+	color: $color-grayScale-f;
 }
 .footbar .post h1 a {
-	color: $grayScale-f;
+	color: $color-grayScale-f;
 }
 .footbar .date {
 	border-right:1px solid $footbar-borderFallback;
 	border-right:1px solid $footbar-border;
 }
 .footbar .day {
-	color: $grayScale-f;
+	color: $color-grayScale-f;
 }
 
 /* footer
 ----------------------------------------------------------------- */
 
 footer {
-	background: $grayScale-0;
+	background: $color-grayScale-0;
 	border-top:1px solid $footbar-borderFallback;
 	border-top:1px solid $footbar-border;
 	padding: 20px;
@@ -349,5 +349,5 @@ footer {
 }
 footer p {
 	margin: 0;
-	color: $grayScale-f;
+	color: $color-grayScale-f;
 }
