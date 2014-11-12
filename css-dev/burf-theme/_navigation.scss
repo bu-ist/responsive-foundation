@@ -16,7 +16,7 @@
 	display: none;
 	padding: 0 15px 20px 15px;
 	margin: 0;
-	background: $grayScale-1;
+	background: $color-grayScale-1;
 
 	@include breakpoint(small) {
 		padding: 0 20px 20px 20px;
@@ -38,11 +38,7 @@
 	width: 100%;
 	padding: 10px 0;
 	border:none;
-	border-top:1px solid $nav-borderFallback-f;
-	border-top:1px solid $nav-border-f;
-	border-bottom:1px solid $nav-borderFallback-f;
-	border-bottom:1px solid $nav-border-f;
-	color: $grayScale-f;
+	color: $color-grayScale-f;
 	background: none;
 
 	@include breakpoint(large) {
@@ -129,7 +125,7 @@
 /* .mainNav */
 .navContainer {
 	@include clearfix;
-	background: $grayScale-1;
+	background: $color-grayScale-1;
 	display: block;
 	padding: 15px 20px 10px 15px;
 }
@@ -146,8 +142,6 @@
 .primaryNav {
 	display:none;
 	margin:40px 0 20px 0;
-	border-bottom:1px solid $nav-borderFallback-f;
-	border-bottom:1px solid $nav-border-f;
 
 	@include breakpoint(small) {
 		display: inline;
@@ -173,20 +167,19 @@
 	display: block;
 	padding: 10px 0;
 	text-decoration: none;
-	color: $grayScale-7;
-	border-top:1px solid $nav-borderFallback-f;
-	border-top:1px solid $nav-border-f;
+	color: $color-grayScale-7;
+	border-top:1px solid $color-grayScale-3;
 	@include breakpoint(small) {
 		border:none;
 	}
 }
 .primaryNav a:hover {
-	color: $grayScale-f;
+	color: $color-grayScale-f;
 }
 li.current_page_item a,
 li.current_page_parent a,
 li.current_page_ancestor a {
-	color: $grayScale-f;
+	color: $color-grayScale-f;
 }
 
 /* .utilityNav */
@@ -213,13 +206,13 @@ li.current_page_ancestor a {
 }
 .utilityNav a {
 	text-decoration: none;
-	color: $grayScale-7;
+	color: $color-grayScale-7;
 }
 .utilityNav a:hover {
-	color: $grayScale-f;
+	color: $color-grayScale-f;
 
 	@include breakpoint(small) {
-		color: $grayScale-0;
+		color: $color-grayScale-0;
 	}
 }
 
@@ -247,8 +240,8 @@ li.current_page_ancestor a {
 	}
 }
 .l-sidenav .primaryNav {
-	border-bottom:1px solid $nav-borderFallback-f;
-	border-bottom:1px solid $nav-border-f;
+	border-bottom:1px solid $color-grayScale-3;
+	border-bottom:1px solid $color-grayScale-3;
 	@include breakpoint(small) {	
 		display:none;
 	}
@@ -262,20 +255,25 @@ li.current_page_ancestor a {
 	padding: 0;
 }
 .l-sidenav .primaryNav a {
-	border-top:1px solid $nav-borderFallback-f;
-	border-top:1px solid $nav-border-f;
+	border-top:1px solid $color-grayScale-3;
+	border-top:1px solid $color-grayScale-3;
 }
 .l-sidenav #quicksearch {
+	background: $color-grayScale-f;
+	padding: 0;
+	margin-top:20px;
+	
 	@include breakpoint(small) {
-		background: $grayScale-f;
+		margin-top:60px;
+		background: $color-grayScale-f;
 	}
 }
 .l-sidenav #q {
 	@include breakpoint(small) {
-		border-top:1px solid $nav-borderFallback;
-		border-top:1px solid $nav-border;
-		border-bottom:1px solid $nav-borderFallback;
-		border-bottom:1px solid $nav-border;
+		border-top:1px solid $color-grayScale-3;
+		border-top:1px solid $color-grayScale-3;
+		border-bottom:1px solid $color-grayScale-3;
+		border-bottom:1px solid $color-grayScale-3;
 	}
 }
 .l-sidenav .navContainer .searchToggle {
@@ -304,7 +302,7 @@ li.current_page_ancestor a {
 	}
 }
 .l-sidenav .utilityNav a:hover {
-	color: $grayScale-f;
+	color: $color-grayScale-f;
 }
 .l-sidenav .utilityNav li {
 	display:block;
@@ -333,7 +331,7 @@ li.current_page_ancestor a {
 	background-position: 100% 0;
 }
 .l-nonav #brand #quicksearch {
-	background: $grayScale-f;
+	background: $color-grayScale-f;
 	padding: 0;
 	margin-top:20px;
 	
@@ -342,15 +340,15 @@ li.current_page_ancestor a {
 	}
 }
 .l-nonav #q {
-	border-top:1px solid $nav-borderFallback-f;
-	border-top:1px solid $nav-border-f;
+	border-top:1px solid $color-grayScale-3;
+	border-top:1px solid $color-grayScale-3;
 	margin-top: 20px;
-	color:$grayScale-7;
+	color:$color-grayScale-7;
 	
 	@include breakpoint(small) {
-		border-top:1px solid $nav-borderFallback;
-		border-top:1px solid $nav-border;
-		border-bottom:1px solid $nav-borderFallback;
-		border-bottom:1px solid $nav-border;
+		border-top:1px solid $color-grayScale-3;
+		border-top:1px solid $color-grayScale-3;
+		border-bottom:1px solid $color-grayScale-3;
+		border-bottom:1px solid $color-grayScale-3;
 	}
 }

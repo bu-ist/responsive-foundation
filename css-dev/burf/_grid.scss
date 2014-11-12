@@ -2,33 +2,32 @@
 ----------------------------------------------------------------- */
 
 .container {
-	padding: $grid-containerPadding;
+	@include clearfix;
+	padding: $grid-container-padding;
 	width: 100%;
 	margin: 0 auto;
-	@include clearfix;
 }
 
 .row {
-	margin: $grid-rowMargin;
+	margin: $grid-row-margin;
 }
 .row [class*="col-"] {
-	padding: $grid-columnPadding;
-	border:1px solid $content-borderFallback;
-	border:1px solid $content-border;
-	background: $content-bgFallback;
-	background: $content-bg;
-	@include border-radius(0);
+	padding: $grid-column-padding;
 }
 .row:before,
 .row:after {
-	display: table;
-	content: " ";
+display: table;
+content: " ";
 }
 .row:after {
-	clear: both;
+clear: both;
 }
 .row .row:nth-last-of-type(1) {
-	margin-bottom: 0;
+margin-bottom: 0;
+}
+// experimental... TODO: evaluate effects of removing top margin from first child type
+[class*="col-"] *:first-child {
+	margin-top: 0;
 }
 
 /* default (mobile) */

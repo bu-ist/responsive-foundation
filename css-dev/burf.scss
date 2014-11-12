@@ -7,14 +7,15 @@
 // mixins
 @import 'burf/mixins';
 
-// reset
-@import 'burf/reset';
+// fonts
+// TODO: figure out a better way to import default fonts, not from the theme directory
+@import 'burf-theme/fonts';
 
 // grid
 @import 'burf/grid';
 
-// base
-@import 'burf/base';
-
-// forms
-@import 'burf/forms';
+// base styles
+@import 'burf/base-global';
+@import 'burf/base-typography';
+@import 'burf/base-tables';
+@import 'burf/base-forms';
