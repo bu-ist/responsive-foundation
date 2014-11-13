@@ -15,6 +15,7 @@ a:focus {
 a:active,
 a:hover {
 	outline: 0;
+	text-decoration: none;
 }
 
 /* Typography
@@ -210,6 +211,7 @@ nav ol {
 	list-style: none;
 	list-style-image: none;
 	margin: 0;
+	padding: 0;
 }
 /* remove margin from nested lists */
 ul ul,
