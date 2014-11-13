@@ -2,59 +2,80 @@
 
 
 // colors
-$color-body-bg:           $color-grayScale-0 !default;
-$color-masthead-bg:       $color-grayScale-f !default;
-$color-branding:          $color-grayScale-0 !default;
-$color-bannerContainer:   $color-grayScale-2 !default;
-$color-contentWrapper-bg: $color-grayScale-f !default;
-
+$color-body-bg:                       $color-grayScale-0 !default;
+$color-masthead-bg:                   $color-grayScale-f !default;
+$color-branding:                      $color-grayScale-0 !default;
+$color-bannerContainer:               $color-grayScale-2 !default;
+$color-contentWrapper-bg:             $color-grayScale-f !default;
+$color-widget-calendarDate:           $color-grayScale-0 !default;
+$color-widget-calendarDateDay:        $color-grayScale-0 !default;
+$color-widget-calendarDateMonth:      $color-grayScale-0 !default;
+$color-widget-contentnav:             $color-link !default;
+$color-widget-contentnavHover:        $color-link !default;
 
 // customizer options
 // TODO: consider naming variables like $color-custRed-body-bg...
 
 
 // sidebar widget border colors TODO: set values to reference generic color variables
-$color-sidebar-border:   		  rgba(0, 0, 0, .15);
-$color-sidebar-borderFallback:    rgb(0, 0, 0);
+$color-sidebar-border:   		      rgba(0, 0, 0, .15);
+$color-sidebar-borderFallback:        rgb(0, 0, 0);
 
 // sidebar widget background colors
-$color-sidebar-bg:                rgba(255, 255, 255, .1);
-$color-sidebar-bgFallback:        rgb(255, 255, 255);
+$color-sidebar-bg:                    rgba(255, 255, 255, .1);
+$color-sidebar-bgFallback:            rgb(255, 255, 255);
 
 // page grid border colors
-$color-content-border:            rgba(0, 0, 0, .15);
-$color-content-borderFallback:    rgb(0, 0, 0);
+$color-content-border:                rgba(0, 0, 0, .15);
+$color-content-borderFallback:        rgb(0, 0, 0);
 
 // page grid background colors
-$color-content-bg:                rgba(255, 255, 255, .15);
-$color-content-bgFallback:        rgb(255, 255, 255);
+$color-content-bg:                    rgba(255, 255, 255, .15);
+$color-content-bgFallback:            rgb(255, 255, 255);
 
 // footbar widget border colors
-$color-footbar-border:   		  rgba(255, 255, 255, .15);
-$color-footbar-borderFallback:    rgb(255, 255, 255);
+$color-footbar-border:   		      rgba(255, 255, 255, .15);
+$color-footbar-borderFallback:        rgb(255, 255, 255);
 
 // nav border colors
-$color-nav-border:   		      rgba(0, 0, 0, .15);
-$color-nav-borderFallback:        rgb(0, 0, 0);
-$color-nav-borderBottom:   		  rgba(255, 255, 255, .15);
-$color-nav-borderBottomFallback:  rgb(255, 255, 255);
+$color-nav-border:   		          rgba(0, 0, 0, .15);
+$color-nav-borderFallback:            rgb(0, 0, 0);
+$color-nav-borderBottom:   		      rgba(255, 255, 255, .15);
+$color-nav-borderBottomFallback:      rgb(255, 255, 255);
 
 
 // widgets
+
+$border-widgetTitle:                  4px solid $color-grayScale-0 !default;
+$borderWidth-widgetTitle:             0 0 4px 0 !default;
+
+$border-widgetList:                   1px solid $color-grayScale-c !default;
+$borderWidth-widgetList:              1px 0 0 0 !default;
+
+$border-widget-contentnav:            1px solid $color-grayScale-c !default;
+$borderWidth-widget-contentnav:       1px 0 !default;
 
 // navigation
 
 // fonts
 
-$fontSize-widgetTitle:            $fontSize-medium !default;
-$fontSize-widget-postHeadline:    $fontSize-medium !default;
-$fontSize-widget-postDate:        $fontSize-smallest !default;
-$fontSize-widget-postMeta:        $fontSize-smallest !default;
+$fontSize-widgetTitle:                $fontSize-medium !default;
+$fontSize-widget-contentnavA:         $fontSize-medium !default;
+$fontSize-widget-contentnavAA:        $fontSize-small !default;
+$fontSize-widget-postHeadline:        $fontSize-medium !default;
+$fontSize-widget-postExcerpt:         $fontSize-medium !default;
+$fontSize-widget-postDate:            $fontSize-smallest !default;
+$fontSize-widget-postMeta:            $fontSize-smallest !default;
+$fontSize-widget-calendarDate:        $fontSize-smallest !default;
+$fontSize-widget-calendarDateDay:     $fontSize-large !default;
+$fontSize-widget-calendarDateMonth:   $fontSize-smaller !default;
 
+$lineHeight-widgetTitle:              $lineHeight-large !default;
+$lineHeight-widget-postHeadline:      $lineHeight-medium !default;
+$lineHeight-widget-postExcerpt:       $lineHeight-medium !default;
+$lineHeight-widget-postExcerpt:       $lineHeight-medium !default;
+$lineHeight-widget-calendarDate:      $lineHeight-jumbo !default;
 
-$lineHeight-widgetTitle:          $lineHeight-large !default;
-$lineHeight-widget-postHeadline:  $lineHeight-medium !default;
-
-$fontFamily-widgetTitle:          $fontFamily-large !default;
+$fontFamily-widgetTitle:              $fontFamily-large !default;
 
 

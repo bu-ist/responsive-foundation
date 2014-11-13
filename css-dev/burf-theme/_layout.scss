@@ -63,7 +63,7 @@ body {
 .bannerContainer-contentWidth {
 	background: none;
 	padding: 0;
-	margin-bottom: 35px;
+	margin: 25px 0 35px;
 }
 
 /* sidebar
@@ -81,47 +81,18 @@ body {
 .footbar {
 	@include clearfix;
 	background: $color-grayScale-f5;
-	clear: left;
 	width: 100%;
 
 	@include breakpoint(medium) {
-		padding: 40px 0;
+		padding: 35px 0;
 	}
 }
 .footbar .footbar-container {
 	@extend .container;
 
 	@include breakpoint(medium) {
-		padding: 0 20px;
-		overflow: hidden;
+		padding: 0;
 	}
-}
-.footbar .widget {
-	//padding: 0 20px;
-
-	@include breakpoint(medium) {
-		float: left;
-		width: 33.333%;
-		padding: 0 20px 1000px 20px;
-		margin-bottom: -1000px;
-	}
-}
-.footbar .post {
-	border-bottom:1px solid $color-footbar-borderFallback;
-	border-bottom:1px solid $color-footbar-border;	
-}
-.footbar .post h1 {
-	color: $color-grayScale-f;
-}
-.footbar .post h1 a {
-	color: $color-grayScale-f;
-}
-.footbar .date {
-	border-right:1px solid $color-footbar-borderFallback;
-	border-right:1px solid $color-footbar-border;
-}
-.footbar .day {
-	color: $color-grayScale-f;
 }
 
 /* footer
