@@ -11,7 +11,8 @@ $color-widget-calendarDate:           $color-grayScale-0 !default;
 $color-widget-calendarDateDay:        $color-grayScale-0 !default;
 $color-widget-calendarDateMonth:      $color-grayScale-0 !default;
 $color-widget-contentnav:             $color-link !default;
-$color-widget-contentnavHover:        $color-link !default;
+$color-widget-contentnav-hover:       $color-link !default;
+$color-widget-contentnav-active:      $color-link-active !default;
 
 // customizer options
 // TODO: consider naming variables like $color-custRed-body-bg...
@@ -61,7 +62,7 @@ $borderWidth-widget-contentnav:       1px 0 !default;
 
 $fontSize-widgetTitle:                $fontSize-medium !default;
 $fontSize-widget-contentnavA:         $fontSize-medium !default;
-$fontSize-widget-contentnavAA:        $fontSize-small !default;
+$fontSize-widget-contentnavAA:        $fontSize-medium !default;
 $fontSize-widget-postHeadline:        $fontSize-medium !default;
 $fontSize-widget-postExcerpt:         $fontSize-medium !default;
 $fontSize-widget-postDate:            $fontSize-smallest !default;

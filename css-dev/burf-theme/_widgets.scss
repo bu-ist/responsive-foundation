@@ -94,11 +94,18 @@
 }
 #contentnav li a:hover,
 #contentnav li a:focus {
-	color: $color-widget-contentnavHover;
+	color: $color-widget-contentnav-hover;
 	text-decoration: none;
+}
+#contentnav .current_page_item a {
+	 color: $color-widget-contentnav-active;
+}
+#contentnav .current_page_item li a {
+	color: $color-widget-contentnav;
 }
 #contentnav li ul {
 	margin: 0;
+	border: none;
 }
 #contentnav li ul li {
 	border: none;
