@@ -4,9 +4,9 @@
 a {
 	color: $color-link;
 }
-// a:visited {
-// 	color: $color-link-visited;
-// }
+a:visited {
+	color: $color-link-visited;
+}
 /* Address `outline` inconsistency between Chrome and other browsers. */
 a:focus {
 	outline: thin dotted;

@@ -71,34 +71,8 @@ body {
 
 .sidebar {
 	@include breakpoint(medium) {
-		padding: 0 0 0 20px;
+		padding: 0 0 0 60px;
 	}
-}
-#contentnav h3 {
-	border: none;
-	margin: 0;
-}
-#contentnav li a {
-	display:block;
-	border-bottom:1px solid $color-sidebar-borderFallback;
-	border-bottom:1px solid $color-sidebar-border;
-	margin: 0;
-	padding: 14px 0;
-}
-#contentnav li:last-child a {
-	border:none;
-}
-#contentnav li a:hover,
-#contentnav li a:focus {
-	color: $color-grayScale-0;
-	text-decoration: none;
-}
-#contentnav li ul {
-	margin-top: 5px;
-}
-#contentnav li ul li {
-	border: none;
-	padding: 5px 0 5px 20px;
 }
 
 /* .footbar
@@ -123,33 +97,13 @@ body {
 	}
 }
 .footbar .widget {
-	border-top:3px solid $color-footbar-borderFallback;
-	border-top:3px solid $color-footbar-border;
-	padding: 20px;
-	
+	//padding: 0 20px;
+
 	@include breakpoint(medium) {
 		float: left;
 		width: 33.333%;
-		border:none;
-		border-right:1px solid $color-footbar-borderFallback;
-		border-right:1px solid $color-footbar-border;
 		padding: 0 20px 1000px 20px;
 		margin-bottom: -1000px;
-	}
-}
-.footbar .widget h3 {
-	border-bottom:1px solid $color-footbar-borderFallback;
-	border-bottom:1px solid $color-footbar-border;
-}
-.footbar .textwidget {
-	padding: 0;
-}
-.footbar .widget-first {
-	border-top: none;
-
-	@include breakpoint(medium) {
-		border-left:1px solid $color-footbar-borderFallback;
-		border-left:1px solid $color-footbar-border;
 	}
 }
 .footbar .post {
