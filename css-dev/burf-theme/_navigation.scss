@@ -219,7 +219,7 @@ li.current_page_ancestor a {
 /* nav on left
 ----------------------------------------------------------------- */
 
-.l-sidenav .contentWrapper {
+.l-sideNav .contentWrapper {
 	@include transition(all, .1s, ease-in-out, 0s);
 	@include breakpoint(small) {	
 		margin-left:60px;
@@ -228,7 +228,7 @@ li.current_page_ancestor a {
 		margin-left:300px;
 	}
 }
-.l-sidenav .navContainer  {	
+.l-sideNav .navContainer  {	
 	@include breakpoint(small) {	
 		background: none;
 		position:absolute;
@@ -239,7 +239,7 @@ li.current_page_ancestor a {
 		padding:20px;
 	}
 }
-.l-sidenav .primaryNav {
+.l-sideNav .primaryNav {
 	border-bottom:1px solid $color-grayScale-3;
 	border-bottom:1px solid $color-grayScale-3;
 	@include breakpoint(small) {	
@@ -250,15 +250,15 @@ li.current_page_ancestor a {
 		margin-top:0;
 	}
 }
-.l-sidenav .primaryNav li {
+.l-sideNav .primaryNav li {
 	display:block;
 	padding: 0;
 }
-.l-sidenav .primaryNav a {
+.l-sideNav .primaryNav a {
 	border-top:1px solid $color-grayScale-3;
 	border-top:1px solid $color-grayScale-3;
 }
-.l-sidenav #quicksearch {
+.l-sideNav #quicksearch {
 	background: $color-grayScale-f;
 	padding: 0;
 	margin-top:20px;
@@ -268,7 +268,7 @@ li.current_page_ancestor a {
 		background: $color-grayScale-f;
 	}
 }
-.l-sidenav #q {
+.l-sideNav #q {
 	@include breakpoint(small) {
 		border-top:1px solid $color-grayScale-3;
 		border-top:1px solid $color-grayScale-3;
@@ -276,39 +276,39 @@ li.current_page_ancestor a {
 		border-bottom:1px solid $color-grayScale-3;
 	}
 }
-.l-sidenav .navContainer .searchToggle {
+.l-sideNav .navContainer .searchToggle {
 	@include breakpoint(small) {	
 		display:none;
 	}
 }
-.l-sidenav .brand .searchToggle {
+.l-sideNav .brand .searchToggle {
 	@include breakpoint(small) {
 		display: block;
 		margin-top:-5px;
 		background-position: 100% 0;
 	}
 }
-.l-sidenav .navToggle {
+.l-sideNav .navToggle {
 	display: block;
 	
 	@include breakpoint(large) {
 		display: none;
 	}
 }
-.l-sidenav .utilityNav {
+.l-sideNav .utilityNav {
 	@include breakpoint(large) {
 		display:block;
 		float:none;
 	}
 }
-.l-sidenav .utilityNav a:hover {
+.l-sideNav .utilityNav a:hover {
 	color: $color-grayScale-f;
 }
-.l-sidenav .utilityNav li {
+.l-sideNav .utilityNav li {
 	display:block;
 	padding-left: 0;
 }
-.l-sidenav.nav-open .contentWrapper {
+.l-sideNav.nav-open .contentWrapper {
 	@include breakpoint(small) {
 		left:240px;
 	}
@@ -316,8 +316,8 @@ li.current_page_ancestor a {
 		left:0;
 	}
 }
-.l-sidenav.nav-open .primaryNav,
-.l-sidenav.nav-open .utilityNav {
+.l-sideNav.nav-open .primaryNav,
+.l-sideNav.nav-open .utilityNav {
 	display:block;
 	float: none;
 }
@@ -325,12 +325,12 @@ li.current_page_ancestor a {
 /* no nav
 ----------------------------------------------------------------- */
 
-.l-nonav .brand .searchToggle {
+.l-noNav .brand .searchToggle {
 	display: block;
 	margin-top:-5px;
 	background-position: 100% 0;
 }
-.l-nonav .brand #quicksearch {
+.l-noNav .brand #quicksearch {
 	background: $color-grayScale-f;
 	padding: 0;
 	margin-top:20px;
@@ -339,7 +339,7 @@ li.current_page_ancestor a {
 		margin-top:40px;
 	}
 }
-.l-nonav #q {
+.l-noNav #q {
 	border-top:1px solid $color-grayScale-3;
 	border-top:1px solid $color-grayScale-3;
 	margin-top: 20px;
