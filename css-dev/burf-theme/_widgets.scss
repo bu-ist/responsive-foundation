@@ -89,7 +89,7 @@
 #contentnav li a {
 	display: block;
 	padding: 10px 0;
-	font-size: $fontSize-widget-contentnavA;
+	font-size: $fontSize-widget-contentnav-link;
 	color: $color-widget-contentnav;
 }
 #contentnav li a:hover,
@@ -112,7 +112,7 @@
 	padding: 0 0 0 20px;
 }
 #contentnav li li a {
-	font-size: $fontSize-widget-contentnavAA;
+	font-size: $fontSize-widget-contentnav-nestedLink;
 }
 
 /* calendar */

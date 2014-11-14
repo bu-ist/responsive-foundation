@@ -25,9 +25,7 @@
 #quicksearch fieldset {
 	margin: 0;
 }
-#quicksearch label {
-	display: none;
-}
+#quicksearch label,
 #quicksearch select {
 	display: none;
 }
@@ -37,7 +35,7 @@
 #q {
 	width: 100%;
 	padding: 10px 0;
-	border:none;
+	border: none;
 	color: $color-grayScale-f;
 	background: none;
 
@@ -48,10 +46,10 @@
 
 /* nav menu */
 .navToggle {
+	@extend .hide-text;
 	float: left;
-	height: 30px;
-	width: 30px;
-	text-indent: -1000px;
+	height: 60px;
+	width: 60px;
 	position: relative;
 	cursor: pointer;
 
@@ -63,7 +61,8 @@
 .navToggle span:before,
 .navToggle span:after {
 	position: absolute;
-	top: 10px;
+	top: 28px;
+	left: 15px;
 	display: block;
 	height: 4px;
 	width: 30px;
@@ -73,9 +72,11 @@
 }
 .navToggle span:before {
 	top: -10px;
+	left: 0;
 }
 .navToggle span:after {
-	bottom: -10px;
+	top: 10px;
+	left: 0;
 }
 .navToggle span,
 .navToggle span:before,
@@ -98,13 +99,12 @@
 
 /* search icon */
 .searchToggle {
+	@extend .hide-text;
 	float: right;
-	width: 30px;
-	height: 30px;
-	margin-top: -3px;
-	text-indent: -5000px;
+	width: 60px;
+	height: 60px;
 	cursor: pointer;
-	background: transparent url(images/search.png) no-repeat 0 0;
+	background: transparent url(images/search.png) no-repeat 15px 13px;
 
 	@include breakpoint(small) {
 		margin-top: 5px;
@@ -127,7 +127,11 @@
 	@include clearfix;
 	background: $color-grayScale-1;
 	display: block;
-	padding: 15px 20px 10px 15px;
+	padding: 0 10px;
+
+	@include breakpoint(small) {
+		padding: 0 10px 0 20px;
+	}
 }
 .navContainer .utilityNav {
 	@include breakpoint(small) {
@@ -140,12 +144,14 @@
 
 /* .primaryNav */
 .primaryNav {
-	display:none;
-	margin:40px 0 20px 0;
+	display: none;
+	margin: 40px 10px 20px 10px;
+	border-bottom: 1px solid $color-nav-border;
 
 	@include breakpoint(small) {
 		display: inline;
 		border: none;
+		margin: 0;
 	}
 }
 .primaryNav li {
@@ -155,42 +161,75 @@
 		display: inline-block;
 		*display: inline;
 		border: none;
-		padding: 0 10px;
-	}
-}
-.primaryNav li:first-child {
-	@include breakpoint(small) {
-		padding-left: 5px;
 	}
 }
 .primaryNav a {
 	display: block;
 	padding: 10px 0;
 	text-decoration: none;
-	color: $color-grayScale-7;
-	border-top:1px solid $color-grayScale-3;
+	color: $color-nav-link;
+	border-top: 1px solid $color-nav-border;
+	
+	&:hover,
+	&:focus {
+		color: $color-nav-link-hover;
+	}
 	@include breakpoint(small) {
 		border:none;
+		line-height: 70px;
+		padding: 0 10px;
 	}
 }
-.primaryNav a:hover {
+.l-default .primaryNav li:first-child a,
+.l-topNav .primaryNav li:first-child a {
+	@include breakpoint(small) {
+		padding: 0 10px 0 0;
+	}	
+}
+.primaryNav li.current_page_item a,
+.primaryNav li.current_page_parent a,
+.primaryNav li.current_page_ancestor a {
 	color: $color-grayScale-f;
 }
-li.current_page_item a,
-li.current_page_parent a,
-li.current_page_ancestor a {
-	color: $color-grayScale-f;
+.primaryNav ul {
+	display: none;
+	@include breakpoint(small) {
+		display: block;
+		position: absolute;
+		left: -9999px;
+		z-index: 2;
+		background: $color-nav-dropdown-bg;
+		width: 240px;
+	}
+}
+.primaryNav li:hover ul,
+.primaryNav li:focus ul {
+	left: auto;
+}
+.primaryNav li li {
+	display: block;
+	padding: 0 10px;
+}
+.primaryNav li li a {
+	line-height: $lineHeight-base;
+	padding: 10px 0;
+}
+.primaryNav li li:first-child a,
+.primaryNav li:first-child li a {
+	padding: 10px 0;
 }
 
 /* .utilityNav */
 .utilityNav {
 	border: none;
 	display: none;
+	margin: 0 10px 20px;
 
 	@include breakpoint(small) {
 		display: inline;
 		border: none;
 		float: right;
+		margin: 0;
 	}
 }
 .utilityNav li {
@@ -206,13 +245,15 @@ li.current_page_ancestor a {
 }
 .utilityNav a {
 	text-decoration: none;
-	color: $color-grayScale-7;
-}
-.utilityNav a:hover {
-	color: $color-grayScale-f;
+	color: $color-utilityNav-link;
+	
+	&:hover,
+	&:focus {
+		color: $color-nav-link-hover;
 
-	@include breakpoint(small) {
-		color: $color-grayScale-0;
+		@include breakpoint(small) {
+			color: $color-utilityNav-link-hover;
+		}
 	}
 }
 
@@ -220,7 +261,6 @@ li.current_page_ancestor a {
 ----------------------------------------------------------------- */
 
 .l-sideNav .contentWrapper {
-	@include transition(all, .1s, ease-in-out, 0s);
 	@include breakpoint(small) {	
 		margin-left:60px;
 	}
@@ -229,63 +269,74 @@ li.current_page_ancestor a {
 	}
 }
 .l-sideNav .navContainer  {	
+	padding: 0;
+	
 	@include breakpoint(small) {	
 		background: none;
-		position:absolute;
-		width:300px;
+		position: absolute;
+		width: 300px;
 	}
 	@include breakpoint(large) {	
-		display:block;
-		padding:20px;
+		display: block;
+		padding: 20px;
 	}
 }
 .l-sideNav .primaryNav {
-	border-bottom:1px solid $color-grayScale-3;
-	border-bottom:1px solid $color-grayScale-3;
+	border-bottom: 1px solid $color-nav-border;
+
 	@include breakpoint(small) {	
-		display:none;
+		display: none;
 	}
 	@include breakpoint(large) {	
-		display:block;
-		margin-top:0;
+		display: block;
+		margin: 0 0 20px;
 	}
 }
 .l-sideNav .primaryNav li {
-	display:block;
+	display: block;
 	padding: 0;
 }
 .l-sideNav .primaryNav a {
-	border-top:1px solid $color-grayScale-3;
-	border-top:1px solid $color-grayScale-3;
+	border-top: 1px solid $color-nav-border;
+	padding: 10px 0;
+	line-height: $lineHeight-base;
+}
+.l-sideNav .primaryNav ul {
+	display: none;
+}
+.l-sideNav .is-open .primaryNav,
+.l-sideNav .is-open .utilityNav {
+	margin: 0 10px 20px;
 }
 .l-sideNav #quicksearch {
 	background: $color-grayScale-f;
 	padding: 0;
-	margin-top:20px;
+	margin-top: 20px;
 	
 	@include breakpoint(small) {
-		margin-top:60px;
+		margin-top: 60px;
 		background: $color-grayScale-f;
 	}
 }
 .l-sideNav #q {
 	@include breakpoint(small) {
-		border-top:1px solid $color-grayScale-3;
-		border-top:1px solid $color-grayScale-3;
-		border-bottom:1px solid $color-grayScale-3;
-		border-bottom:1px solid $color-grayScale-3;
+		border-top: 1px solid $color-nav-border;
+		border-bottom: 1px solid $color-nav-border;
 	}
 }
 .l-sideNav .navContainer .searchToggle {
 	@include breakpoint(small) {	
-		display:none;
+		display: none;
 	}
 }
 .l-sideNav .brand .searchToggle {
 	@include breakpoint(small) {
 		display: block;
-		margin-top:-5px;
-		background-position: 100% 0;
+		background-position: -45px 15px;
+		margin: 0;
+		position: absolute;
+		right: 10px;
+		top: 22px;
 	}
 }
 .l-sideNav .navToggle {
@@ -297,8 +348,8 @@ li.current_page_ancestor a {
 }
 .l-sideNav .utilityNav {
 	@include breakpoint(large) {
-		display:block;
-		float:none;
+		display: block;
+		float: none;
 	}
 }
 .l-sideNav .utilityNav a:hover {
@@ -310,10 +361,10 @@ li.current_page_ancestor a {
 }
 .l-sideNav.nav-open .contentWrapper {
 	@include breakpoint(small) {
-		left:240px;
+		left: 240px;
 	}
 	@include breakpoint(large) {
-		left:0;
+		left: 0;
 	}
 }
 .l-sideNav.nav-open .primaryNav,
@@ -327,28 +378,25 @@ li.current_page_ancestor a {
 
 .l-noNav .brand .searchToggle {
 	display: block;
-	margin-top:-5px;
+	margin-top: -5px;
 	background-position: 100% 0;
 }
 .l-noNav .brand #quicksearch {
 	background: $color-grayScale-f;
 	padding: 0;
-	margin-top:20px;
+	margin-top: 20px;
 	
 	@include breakpoint(small) { 
-		margin-top:40px;
+		margin-top: 40px;
 	}
 }
 .l-noNav #q {
-	border-top:1px solid $color-grayScale-3;
-	border-top:1px solid $color-grayScale-3;
+	border-top: 1px solid $color-nav-border;
 	margin-top: 20px;
-	color:$color-grayScale-7;
+	color: $color-grayScale-7;
 	
 	@include breakpoint(small) {
-		border-top:1px solid $color-grayScale-3;
-		border-top:1px solid $color-grayScale-3;
-		border-bottom:1px solid $color-grayScale-3;
-		border-bottom:1px solid $color-grayScale-3;
+		border-top: 1px solid $color-nav-border;
+		border-bottom: 1px solid $color-nav-border;
 	}
 }

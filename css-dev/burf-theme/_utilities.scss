@@ -1,6 +1,13 @@
 /* components
 ----------------------------------------------------------------- */
 
+/* hide text */
+.hide-text {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
 /* .responsiveVideo */
 .responsiveVideo {
 	margin-bottom: 14px;

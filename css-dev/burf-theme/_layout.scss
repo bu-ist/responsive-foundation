@@ -10,6 +10,7 @@ body {
 
 .masthead {
 	background: $color-masthead-bg;
+	position: relative;
 	@include clearfix;
 }
 .brand {
@@ -80,7 +81,7 @@ body {
 
 .footbar {
 	@include clearfix;
-	background: $color-grayScale-f5;
+	background: $color-footbar-bg;
 	width: 100%;
 
 	@include breakpoint(medium) {
@@ -99,9 +100,8 @@ body {
 ----------------------------------------------------------------- */
 
 .siteFooter {
-	background: $color-grayScale-0;
-	border-top:1px solid $color-footbar-borderFallback;
-	border-top:1px solid $color-footbar-border;
+	background: $color-siteFooter-bg;
+	border-top: 1px solid $color-footbar-border;
 	padding: 20px;
 	display: block;
 	clear: both;
