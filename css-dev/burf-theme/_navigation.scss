@@ -5,7 +5,7 @@
 .brand .searchToggle {
 	display: none;
 }
-.brand .desc {
+.brand .siteDescription {
 	float: left;
 	width: auto;
 }
@@ -16,7 +16,7 @@
 	display: none;
 	padding: 0 15px 20px 15px;
 	margin: 0;
-	background: $color-grayScale-1;
+	background: $color-search-bg;
 
 	@include breakpoint(small) {
 		padding: 0 20px 20px 20px;
@@ -36,7 +36,7 @@
 	width: 100%;
 	padding: 10px 0;
 	border: none;
-	color: $color-grayScale-f;
+	color: $color-search-text;
 	background: none;
 
 	@include breakpoint(large) {
@@ -214,8 +214,10 @@
 	line-height: $lineHeight-base;
 	padding: 10px 0;
 }
-.primaryNav li li:first-child a,
-.primaryNav li:first-child li a {
+.l-default .primaryNav li li:first-child a,
+.l-default .primaryNav li:first-child li a,
+.l-topNav .primaryNav li li:first-child a,
+.l-topNav .primaryNav li:first-child li a, {
 	padding: 10px 0;
 }
 
@@ -309,19 +311,19 @@
 	margin: 0 10px 20px;
 }
 .l-sideNav #quicksearch {
-	background: $color-grayScale-f;
+	background: $color-searchLight-bg;
 	padding: 0;
 	margin-top: 20px;
 	
 	@include breakpoint(small) {
 		margin-top: 60px;
-		background: $color-grayScale-f;
+		background: $color-searchLight-bg;
 	}
 }
 .l-sideNav #q {
+	color: $color-searchLight-text;
+
 	@include breakpoint(small) {
-		border-top: 1px solid $color-nav-border;
-		border-bottom: 1px solid $color-nav-border;
 	}
 }
 .l-sideNav .navContainer .searchToggle {
@@ -375,28 +377,34 @@
 
 /* no nav
 ----------------------------------------------------------------- */
-
+.l-noNav .brand {
+	padding: 40px 80px 40px 20px;
+}
+.l-noNav .siteName {
+	float: none;
+}
 .l-noNav .brand .searchToggle {
 	display: block;
-	margin-top: -5px;
-	background-position: 100% 0;
+	background-position: -45px 15px;
+	margin: 0;
+	position: absolute;
+	right: 10px;
+	top: 22px;
 }
 .l-noNav .brand #quicksearch {
-	background: $color-grayScale-f;
+	background: $color-searchLight-bg;
 	padding: 0;
 	margin-top: 20px;
+	margin-right: -60px;
 	
 	@include breakpoint(small) { 
 		margin-top: 40px;
 	}
 }
 .l-noNav #q {
-	border-top: 1px solid $color-nav-border;
 	margin-top: 20px;
-	color: $color-grayScale-7;
+	color: $color-searchLight-text;
 	
 	@include breakpoint(small) {
-		border-top: 1px solid $color-nav-border;
-		border-bottom: 1px solid $color-nav-border;
 	}
 }
