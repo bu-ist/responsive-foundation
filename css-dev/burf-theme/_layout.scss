@@ -11,6 +11,8 @@ body {
 .masthead {
 	background: $color-masthead-bg;
 	position: relative;
+	border: $border-masthead;
+	border-width: $borderWidth-masthead;
 	@include clearfix;
 }
 .brand {

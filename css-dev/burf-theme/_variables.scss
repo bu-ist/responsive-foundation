@@ -5,7 +5,7 @@ $color-body-bg:                            $color-grayScale-0 !default;
 $color-masthead-bg:                        $color-grayScale-f !default;
 $color-branding:                           $color-grayScale-0 !default;
 $color-search-bg:                          $color-grayScale-1 !default;
-$color-search-text:                        $color-base !default;
+$color-search-text:                        $color-grayScale-f !default;
 $color-searchLight-bg:                     $color-grayScale-f !default;
 $color-searchLight-text:                   $color-base !default;
 $color-nav-dropdown-bg:                    $color-grayScale-0 !default;
@@ -26,7 +26,10 @@ $color-footbar-bg:                         $color-grayScale-f5 !default;
 $color-footbar-border:                     $color-grayScale-c !default;
 $color-siteFooter-bg:                      $color-grayScale-0 !default;
 
-// widgets
+// borders
+
+$border-masthead:                          1px solid $color-grayScale-c !default;
+$borderWidth-masthead:                     0 0 1px 0 !default;
 
 $border-widgetTitle:                       4px solid $color-grayScale-0 !default;
 $borderWidth-widgetTitle:                  0 0 4px 0 !default;
@@ -36,8 +39,6 @@ $borderWidth-widgetList:                   1px 0 0 0 !default;
 
 $border-widget-contentnav:                 1px solid $color-grayScale-c !default;
 $borderWidth-widget-contentnav:            1px 0 !default;
-
-// navigation
 
 // fonts
 
