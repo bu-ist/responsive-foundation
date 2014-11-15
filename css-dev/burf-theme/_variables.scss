@@ -16,12 +16,14 @@ $color-utilityNav-link:                    $color-grayScale-7 !default;
 $color-utilityNav-link-hover:              $color-grayScale-0 !default;
 $color-bannerContainer:                    $color-grayScale-f0 !default;
 $color-contentWrapper-bg:                  $color-grayScale-f !default;
+$color-widgetTitle:                        $color-grayScale-0 !default;
 $color-widget-calendarDate:                $color-grayScale-0 !default;
 $color-widget-calendarDateDay:             $color-grayScale-0 !default;
 $color-widget-calendarDateMonth:           $color-grayScale-0 !default;
 $color-widget-contentnav:                  $color-link !default;
 $color-widget-contentnav-hover:            $color-link !default;
 $color-widget-contentnav-active:           $color-link-active !default;
+$color-widget-postMeta:                    $color-grayScale-a;
 $color-footbar-bg:                         $color-grayScale-f5 !default;
 $color-footbar-border:                     $color-grayScale-c !default;
 $color-siteFooter-bg:                      $color-grayScale-0 !default;
@@ -30,13 +32,10 @@ $color-siteFooter-bg:                      $color-grayScale-0 !default;
 
 $border-masthead:                          1px solid $color-grayScale-c !default;
 $borderWidth-masthead:                     0 0 1px 0 !default;
-
 $border-widgetTitle:                       4px solid $color-grayScale-0 !default;
 $borderWidth-widgetTitle:                  0 0 4px 0 !default;
-
 $border-widgetList:                        1px solid $color-grayScale-c !default;
 $borderWidth-widgetList:                   1px 0 0 0 !default;
-
 $border-widget-contentnav:                 1px solid $color-grayScale-c !default;
 $borderWidth-widget-contentnav:            1px 0 !default;
 
@@ -47,9 +46,9 @@ $fontSize-widget-contentnav-link:          $fontSize-medium !default;
 $fontSize-widget-contentnav-nestedLink:    $fontSize-medium !default;
 $fontSize-widget-postHeadline:             $fontSize-medium !default;
 $fontSize-widget-postExcerpt:              $fontSize-medium !default;
-$fontSize-widget-postDate:                 $fontSize-smallest !default;
-$fontSize-widget-postMeta:                 $fontSize-smallest !default;
-$fontSize-widget-calendarDate:             $fontSize-smallest !default;
+$fontSize-widget-postDate:                 $fontSize-smaller !default;
+$fontSize-widget-postMeta:                 $fontSize-smaller !default;
+$fontSize-widget-calendarDate:             $fontSize-smaller !default;
 $fontSize-widget-calendarDateDay:          $fontSize-large !default;
 $fontSize-widget-calendarDateMonth:        $fontSize-smaller !default;
 

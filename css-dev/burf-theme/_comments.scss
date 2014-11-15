@@ -1,2 +1,111 @@
-/* widgets
+/* comments
 ----------------------------------------------------------------- */
+
+.comments-area {
+	color: #666;
+}
+.comments-area ol {
+	padding: 0;
+	margin: 0;
+}
+.comments-area li {
+	list-style: none;
+}
+.comments-list {
+	font-size: $fontSize-small;
+}
+.comments-list li li article  {
+	padding-left: 30px;
+}
+.comments-list li li li article  {
+	padding-left: 60px;
+}
+.comments-list li li li li article  {
+	padding-left: 90px;
+}
+.comments-list li li li li li article  {
+	padding-left: 120px;
+}
+.comments-list article {
+	position: relative;
+	border-top: 1px solid #ccc;
+	margin: 15px 0;
+	padding: 15px 0 0;
+}
+.reply a {
+	color: #aaa;
+}
+.comment-author {
+	color: #aaa;
+}
+// TODO: probably shouldn't be outputting gravatar markup and hiding here...
+.comment-author img {
+	display:none;
+}
+.comment-author .fn {
+	font-size: $fontSize-medium;
+	color: #000;
+}
+// TODO: change markup, then style
+.comment-metadata time {
+	display: none;
+}
+.comment-content p {
+	margin: 12px 0;
+}
+.comment-content p:first-child {
+	margin-top: 1px;
+}
+/* comment form */
+.comment-respond {
+	@include border-radius(5px);
+	margin: 15px 0 20px;
+	padding: 20px;
+	background: #f6f6f7;
+	border: 3px solid #eee;
+}
+.comment-respond-title {
+	margin: 0 0 20px;
+	font-size: $fontSize-medium;
+}
+.comment-respond fieldset {
+	border: 0;
+	padding: 0;
+}
+.comment-respond .form-row {
+	margin: 0 0 10px;
+}
+.comment-respond .comment-form-submit {
+	margin-bottom: 0;
+}
+.comment-respond fieldset .form-tip {
+	display:block;
+	font-size: $fontSize-smaller;
+}
+.comment-respond fieldset .form-tip,
+.comment-respond fieldset .form-tip a {
+	color: #aaa;
+}
+.comment-respond label {
+	float:left;
+	width: 25%;
+	padding-right: 10px;
+}
+.comment-respond .cancel-comment-reply {
+	display: inline-block;
+	margin-left: 20px;
+	float: right;
+	font-size: $fontSize-smaller;
+}
+.comment-form .button {
+	margin-left: 25%;
+}
+.comment-form textarea {
+	@include transition(height, 5ms, ease-in-out, 0s);
+	width: 75%;
+	height: 6em;
+}
+
+
+
+

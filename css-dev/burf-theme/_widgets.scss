@@ -13,9 +13,25 @@
 	font-size: $fontSize-widgetTitle;
 	line-height: $lineHeight-widgetTitle;
 	font-family: $fontFamily-widgetTitle;
+	color: $color-widgetTitle;
 	border: $border-widgetTitle;
 	border-width: $borderWidth-widgetTitle;
 	padding: 0 0 4px 0;
+}
+.widgetTitle a {
+	color: $color-widgetTitle;
+	text-decoration: none;
+
+	&:after {
+		content: " →";
+		color: #aaa;
+	}
+}
+.widgetTitle a:hover {
+
+	&:after {
+		color: #000;
+	}
 }
 .widget ul {
 	list-style: none;
@@ -45,7 +61,7 @@
 .widget-bu-posts .excerpt {
 	font-size: $fontSize-widget-postExcerpt;
 	line-height: $lineHeight-widget-postExcerpt;
-	margin: 5px 0 0;
+	margin: 8px 0 0;
 }
 .widget-bu-posts .thumb {
 	display: block;
@@ -58,7 +74,8 @@
 }
 .widget-bu-posts .meta {
 	font-size: $fontSize-widget-postMeta;
-	margin: 5px 0 0;
+	margin: 0;
+	color: $color-widget-postMeta;
 }
 .widget-bu-posts .comment-counter {
 	// margin-left: 4px;
