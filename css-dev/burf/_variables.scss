@@ -32,6 +32,7 @@ $color-table-caption:     $color-grayScale-9 !default;
 $color-table-th-border:   $color-grayScale-c !default;
 $color-table-td-border:   $color-grayScale-c !default;
 $color-table-stripes:     #f6f9fc !default;
+$color-input-focusBorder: #129fea !default;
 
 
 
@@ -62,6 +63,7 @@ $fontSize-largest:        37px !default;
 $fontSize-jumbo:          49px !default;
 //applications
 $fontSize-table-caption:  $fontSize-small !default;
+$fontSize-legend:         $fontSize-large !default;
 
 // line-height
 $lineHeight-base:         1.5 !default;
@@ -123,9 +125,22 @@ $table-caption-padding:      0 0 10px !default;
 // forms
 // -----------------------------------------------------------------
 
-$form-fieldset-border:         1px solid #ccc !default;
-$form-fieldset-margin:         0 !default;
-$form-fieldset-padding:        20px !default;
+$form-margin:                  0 !default;
+$form-legend-border:           1px solid #e5e5e5 !default;
+$form-legend-borderWidth:      0 0 1px 0 !default; 
+$form-legend-margin:           0 0 20px !default;
+$form-legend-padding:          0 0 4px !default;
+$form-fieldset-border:         0 !default;
+$form-fieldset-margin:         30px 0 !default;
+$form-fieldset-padding:        0 !default;
+$form-label-margin:         0.5em 0 0.2em !default;
+$form-row-margin:              0 0 10px !default;
+$form-input-margin:            0.25em 0 !default;
+$form-input-padding:           0.5em 0.6em !default;
+$form-input-border:            1px solid #ccc !default;
+$form-input-shadow:            inset 0 1px 3px #eee !default;
+$form-input-borderRadius:      0 !default;
+$form-input-focusShadow:       0 0 4px 0 rgba(18 ,159 ,234 ,0.2) !default;
 
 
 // grid & responsive layout
@@ -135,18 +150,15 @@ $form-fieldset-padding:        20px !default;
 $grid-container-padding: 35px 20px !default;
 $grid-row-margin:        0 -20px !default;
 $grid-column-padding:    0 20px !default;
-
 // breakpoints
 $XS:              500px !default;
 $S:               768px !default;
 $M:               992px !default;
 $L:              1200px !default;
-
 // grid .container widths
 $container-S:     750px !default;
 $container-M:     970px !default;
 $container-L:    1170px !default;
-
 // media queries
 $MQs: true !default;
 

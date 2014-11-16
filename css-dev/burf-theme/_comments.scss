@@ -12,7 +12,7 @@
 	list-style: none;
 }
 .comments-list {
-	font-size: $fontSize-small;
+	border-bottom: 1px solid #ddd;
 }
 .comments-list li li article  {
 	padding-left: 30px;
@@ -28,9 +28,10 @@
 }
 .comments-list article {
 	position: relative;
-	border-top: 1px solid #ccc;
+	border-top: 1px solid #ddd;
 	margin: 15px 0;
 	padding: 15px 0 0;
+	font-size: $fontSize-small;
 }
 .reply a {
 	color: #aaa;
@@ -59,6 +60,7 @@
 /* comment form */
 .comment-respond {
 	@include border-radius(5px);
+	position: relative;
 	margin: 15px 0 20px;
 	padding: 20px;
 	background: #f6f6f7;
@@ -70,40 +72,54 @@
 }
 .comment-respond fieldset {
 	border: 0;
+	margin: 0;
 	padding: 0;
 }
-.comment-respond .form-row {
-	margin: 0 0 10px;
-}
 .comment-respond .comment-form-submit {
-	margin-bottom: 0;
+	margin: 15px 0 0;
 }
 .comment-respond fieldset .form-tip {
-	display:block;
 	font-size: $fontSize-smaller;
+
+	@include breakpoint(small) {
+		display:block;
+	}
 }
 .comment-respond fieldset .form-tip,
 .comment-respond fieldset .form-tip a {
 	color: #aaa;
 }
 .comment-respond label {
-	float:left;
-	width: 25%;
-	padding-right: 10px;
+	display: block;
+	margin: 0 0 2px;
+
+	@include breakpoint(small) {
+		float:left;
+		width: 25%;
+		margin: $form-label-margin;
+		padding-right: 10px;
+	}
+}
+.comment-form .button {
+	@include breakpoint(small) {
+		margin-left: 25%;
+	}
+}
+.comment-form textarea {
+	@include transition(height, 5ms, ease-in-out, 0s); // TODO: expand height on focus, but don't shrink if it contains content
+	height: 6em;
+	width: 100%;
+
+	@include breakpoint(small) {
+		width: 75%;
+	}
 }
 .comment-respond .cancel-comment-reply {
 	display: inline-block;
-	margin-left: 20px;
-	float: right;
+	position: absolute;
+	top: 20px;
+	right: 20px;
 	font-size: $fontSize-smaller;
-}
-.comment-form .button {
-	margin-left: 25%;
-}
-.comment-form textarea {
-	@include transition(height, 5ms, ease-in-out, 0s);
-	width: 75%;
-	height: 6em;
 }
 
 
