@@ -61,7 +61,7 @@
 .widget-bu-posts .excerpt {
 	font-size: $fontSize-widget-postExcerpt;
 	line-height: $lineHeight-widget-postExcerpt;
-	margin: 8px 0 0;
+	margin: 4px 0 0;
 }
 .widget-bu-posts .thumb {
 	display: block;
@@ -74,7 +74,7 @@
 }
 .widget-bu-posts .meta {
 	font-size: $fontSize-widget-postMeta;
-	margin: 0;
+	margin: 5px 0 0;
 	color: $color-widget-postMeta;
 }
 .widget-bu-posts .comment-counter {

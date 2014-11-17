@@ -1,6 +1,10 @@
 /* common
 ----------------------------------------------------------------- */
 
+nav {
+	font-family: $fontFamily-navigation;
+}
+
 /* .searchToggle appears only when header is small and above, otherwise it's hidden */
 .brand .searchToggle {
 	display: none;
@@ -104,7 +108,7 @@
 	width: 60px;
 	height: 60px;
 	cursor: pointer;
-	background: transparent url(images/search.png) no-repeat 15px 13px;
+	background: $image-searchToggle-bg;
 
 	@include breakpoint(small) {
 		margin-top: 5px;
