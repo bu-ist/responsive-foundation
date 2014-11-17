@@ -108,7 +108,7 @@ nav {
 	width: 60px;
 	height: 60px;
 	cursor: pointer;
-	background: $image-searchToggle-bg;
+	background: transparent url($image-searchToggle-sprite) no-repeat 15px 13px;
 
 	@include breakpoint(small) {
 		margin-top: 5px;
