@@ -4,6 +4,7 @@
 /* 1. Correct margin displayed oddly in IE 6/7. */
 form {
 	margin: $form-margin; /* 1 */
+	font-family: $fontFamily-form;
 }
 /* Define consistent border, margin, and padding. */
 fieldset {

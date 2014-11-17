@@ -1,6 +1,10 @@
 /* common
 ----------------------------------------------------------------- */
 
+nav {
+	font-family: $fontFamily-navigation;
+}
+
 /* .searchToggle appears only when header is small and above, otherwise it's hidden */
 .brand .searchToggle {
 	display: none;
