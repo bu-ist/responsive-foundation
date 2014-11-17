@@ -98,6 +98,7 @@
 #contentnav li {
 	border: $border-widgetList;
 	border-width: $borderWidth-widgetList;
+	font-family: $fontFamily-widget-contentnav;
 
 	&:first-child {
 		border: none;
