@@ -133,9 +133,11 @@ nav {
 	display: block;
 	padding: 0 10px;
 
+/*
 	@include breakpoint(small) {
 		padding: 0 10px 0 20px;
 	}
+*/
 }
 .navContainer .utilityNav {
 	@include breakpoint(small) {
@@ -184,12 +186,14 @@ nav {
 		padding: 0 10px;
 	}
 }
+/*
 .l-default .primaryNav li:first-child a,
 .l-topNav .primaryNav li:first-child a {
 	@include breakpoint(small) {
 		padding: 0 10px 0 0;
 	}	
 }
+*/
 .primaryNav li.current_page_item a,
 .primaryNav li.current_page_parent a,
 .primaryNav li.current_page_ancestor a {
@@ -216,14 +220,17 @@ nav {
 }
 .primaryNav li li a {
 	line-height: $lineHeight-base;
+	color: $color-nav-link;
 	padding: 10px 0;
 }
+/*
 .l-default .primaryNav li li:first-child a,
 .l-default .primaryNav li:first-child li a,
 .l-topNav .primaryNav li li:first-child a,
 .l-topNav .primaryNav li:first-child li a, {
 	padding: 10px 0;
 }
+*/
 
 /* .utilityNav */
 .utilityNav {

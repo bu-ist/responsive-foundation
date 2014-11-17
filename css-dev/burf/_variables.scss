@@ -73,7 +73,7 @@ $lineHeight-largest:      1.22 !default;
 $lineHeight-jumbo:        1.15 !default;
 
 // margin/padding
-$fontMargin-base:         25px 0 !default;
+$fontMargin-base:         0 0 25px 0 !default;
 $fontMargin-micro:        $fontMargin-base !default;
 $fontMargin-smallest:     $fontMargin-base !default;
 $fontMargin-smaller:      $fontMargin-base !default;
@@ -81,8 +81,8 @@ $fontMargin-small:        $fontMargin-base !default;
 $fontMargin-medium:       $fontMargin-base !default;
 $fontMargin-large:        $fontMargin-base !default;
 $fontMargin-larger:       $fontMargin-base !default;
-$fontMargin-largest:      27px 0 !default;
-$fontMargin-jumbo:        25px 0 !default;
+$fontMargin-largest:      0 0 27px 0 !default;
+$fontMargin-jumbo:        0 0 25px 0 !default;
 // applications
 $fontMargin-blockquote:   1em 40px !default;
 $fontMargin-hgroup:       $fontMargin-base !default;
@@ -121,7 +121,7 @@ $form-legend-padding:          0 0 4px !default;
 $form-fieldset-border:         0 !default;
 $form-fieldset-margin:         30px 0 !default;
 $form-fieldset-padding:        0 !default;
-$form-label-margin:         0.5em 0 0.2em !default;
+$form-label-margin:            0.5em 0 0.2em !default;
 $form-row-margin:              0 0 10px !default;
 $form-input-margin:            0.25em 0 !default;
 $form-input-padding:           0.5em 0.6em !default;
