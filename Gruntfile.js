@@ -73,7 +73,7 @@ module.exports = function(grunt) {
 			styles: {
 				files: [
 					'_docs/css-dev/*.scss',
-					'css-dev/*.scss'
+					'css-dev/**/*.scss'
 				],
 				tasks: ['sass']
 			},
@@ -94,8 +94,8 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('build', ['sass', 'concat', 'copy']);
 	grunt.registerTask('deploy', ['build', 'gh-pages']);
-	grunt.registerTask('serve', ['browserSync', 'watch']);
+	grunt.registerTask('serve', ['build', 'browserSync', 'watch']);
 
-	grunt.registerTask('default', ['build']);
+	grunt.registerTask('default', ['serve']);
 
 };
