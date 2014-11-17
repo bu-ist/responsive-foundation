@@ -55,7 +55,7 @@ body {
 	}
 }
 .bannerContainer-pageWidth {
-	margin-bottom: 20px;
+	margin-bottom: 60px;
 }
 .bannerContainer-pageWidth img {
 	@include breakpoint(medium) {
@@ -96,14 +96,14 @@ article[role=main] {
 	width: 100%;
 
 	@include breakpoint(medium) {
-		padding: 35px 0;
+		padding: 60px 0 20px;
 	}
 }
 .footbar .footbar-container {
 	@extend .container;
 
 	@include breakpoint(medium) {
-		padding: 0;
+		padding: 0 20px;
 	}
 }
 
