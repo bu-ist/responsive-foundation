@@ -45,6 +45,9 @@
 .news-posts nav .screen-reader-text {
 	display: none;
 }
+.news-posts nav a {
+	@extend .button;
+}
 .news-posts nav .nav-previous {
 	float: left;
 }
@@ -59,4 +62,27 @@
 }
 .single-post .sidebar {
 	display: none;
+}
+.single .meta {
+	background-color: $color-single-meta-bg;
+	border: $border-single-meta;
+	border-width: $borderWidth-single-meta;
+	border-left-color: $borderLeftColor-single-meta;
+	padding: 20px;
+	font-size: $fontSize-single-meta;
+}
+.single .meta .post-title {
+	margin-bottom: 10px;
+}
+.single .meta .byline {
+	font-size: $fontSize-single-meta;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+.single .meta p {
+	font-family: $fontFamily-news-meta;
+	margin-bottom: 0;
+}
+.single .meta em {
+	color: $color-news-metaEm;
 }

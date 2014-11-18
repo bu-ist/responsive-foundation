@@ -20,6 +20,7 @@ $color-bannerContainer:                    $color-grayScale-f0 !default;
 $color-contentWrapper-bg:                  $color-grayScale-f !default;
 $color-news-metaEm:                        $color-grayScale-7 !default;
 $color-news-metaBefore:                    $color-grayScale-a !default;
+$color-single-meta-bg:                     $color-grayScale-f0 !default;
 $color-widgetTitle:                        $color-grayScale-0 !default;
 $color-widget-calendarDate:                $color-grayScale-0 !default;
 $color-widget-calendarDateDay:             $color-grayScale-0 !default;
@@ -42,7 +43,9 @@ $color-commentForm-bg:                     $color-grayScale-f5 !default;
 // -----------------------------------------------------------------
 
 // font-size
-$fontSize-news-meta:                       $fontSize-small !default;
+$fontSize-news-meta:                       $fontSize-smaller !default;
+$fontSize-single-meta:                     $fontSize-small !default;
+$fontSize-widget:                          $fontSize-small !default;
 $fontSize-widgetTitle:                     $fontSize-medium !default;
 $fontSize-widget-contentnav-link:          $fontSize-medium !default;
 $fontSize-widget-contentnav-nestedLink:    $fontSize-medium !default;
@@ -59,14 +62,18 @@ $lineHeight-widgetTitle:                   $lineHeight-large !default;
 $lineHeight-widget-postHeadline:           1.4 !default;
 $lineHeight-widget-postExcerpt:            $lineHeight-medium !default;
 $lineHeight-widget-postExcerpt:            $lineHeight-medium !default;
-$lineHeight-widget-calendarDate:           $lineHeight-jumbo !default;
+$lineHeight-widget-calendarDate:           $lineHeight-large !default;
+
 
 // font-family
-$fontFamily-navigation:                    "Benton", Helvetica, sans-serif !default;
-$fontFamily-news-meta:                     "Benton", Helvetica, sans-serif !default;
-$fontFamily-widgetTitle:                   $fontFamily-heading !default;
-$fontFamily-widget-contentnav:             "Benton", Helvetica, sans-serif !default;
-$fontFamily-comment:                       "Benton", Helvetica, sans-serif !default;
+$fontFamily-serif:                         "TiemposText", Georgia, serif !default;
+$fontFamily-sansSerif:                     "Benton", sans-serif !default;
+$fontFamily-navigation:                    $fontFamily-sansSerif !default;
+$fontFamily-news-meta:                     $fontFamily-sansSerif !default;
+$fontFamily-widgetTitle:                   $fontFamily-sansSerif !default;
+$fontFamily-widget-contentnav:             $fontFamily-sansSerif !default;
+$fontFamily-widget-calendar-date:          $fontFamily-sansSerif !default;
+$fontFamily-comment:                       $fontFamily-sansSerif !default;
 
 // margin/padding
 $comment-margin:                           15px 0 !default;
@@ -80,6 +87,9 @@ $border-masthead:                          1px solid $color-grayScale-c !default
 $borderWidth-masthead:                     0 0 1px 0 !default;
 $border-news-post:                         1px solid $color-grayScale-d;
 $borderWidth-news-post:                    1px 0 0 0;
+$border-single-meta:                       1px solid $color-grayScale-d;
+$borderWidth-single-meta:                  1px 1px 1px 6px;
+$borderLeftColor-single-meta:              $color-grayScale-0;
 $border-widgetTitle:                       4px solid $color-grayScale-0 !default;
 $borderWidth-widgetTitle:                  0 0 4px 0 !default;
 $border-widgetList:                        1px solid $color-grayScale-c !default;

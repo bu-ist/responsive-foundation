@@ -1,6 +1,7 @@
 /* widget */
 .widget {
 	margin-bottom: 40px;
+	font-size: $fontSize-widget;
 }
 .footbar-container .widget {
 	@extend .col-md-4;
@@ -138,6 +139,9 @@
 /* calendar */
 .widget-bu-calendar {
 
+}
+.widget-bu-calendar .date {
+	font-family: $fontFamily-widget-calendar-date;
 }
 .widget-bu-calendar .default .date {
 	font-weight: 700;
