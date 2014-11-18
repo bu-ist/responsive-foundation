@@ -5,6 +5,7 @@ $color-grayScale-1:       #151515 !default;
 $color-grayScale-2:       #222222 !default;
 $color-grayScale-3:       #333333 !default;
 $color-grayScale-4:       #444444 !default;
+$color-grayScale-5:       #555555 !default;
 $color-grayScale-7:       #7a7a7a !default;
 $color-grayScale-9:       #9f9f9f !default;
 $color-grayScale-a:       #aaaaaa !default;
@@ -17,7 +18,7 @@ $color-grayScale-f0:      #f0f0f0 !default;
 $color-grayScale-f:       #ffffff !default;
  
 // applications
-$color-base:              $color-grayScale-4 !default;
+$color-base:              $color-grayScale-5 !default;
 $color-link:              #0f69d7 !default;
 $color-link-visited:      #7337af !default;
 $color-link-active:       $color-grayScale-0 !default;
@@ -59,7 +60,9 @@ $fontSize-largest:        37px !default;
 $fontSize-jumbo:          49px !default;
 //applications
 $fontSize-table-caption:  $fontSize-small !default;
+$fontSize-form:           $fontSize-small !default;
 $fontSize-legend:         $fontSize-large !default;
+$fontSize-button:         $fontSize-small !default;
 
 // line-height
 $lineHeight-base:         1.6 !default;
@@ -95,14 +98,15 @@ $fontMargin-code:         30px 0 !default;
 
 //font-family
 $fontFamily-base:         "TiemposText", Georgia, serif !default;
-$fontFamily-sanSerif:     "Benton", Helvetica, sans-serif !default;
+$fontFamily-sansSerif:     "Benton", Helvetica, sans-serif !default;
 $fontFamily-monospace:    Consolas, "Liberation Mono", Courier, monospace !default;
 // applications
-$fontFamily-heading:      $fontFamily-sanSerif !default;
-$fontFamily-form:         $fontFamily-sanSerif !default;
+$fontFamily-heading:      $fontFamily-sansSerif !default;
+$fontFamily-form:         $fontFamily-sansSerif !default;
 $fontFamily-brand:        "Whitney SSm A", "Whitney SSm B" !default;
 $fontFamily-brand-sponsored: $fontFamily-brand !default;
-$fontFamily-brand-unbranded: $fontFamily-sanSerif !default;
+$fontFamily-brand-unbranded: $fontFamily-sansSerif !default;
+$fontFamily-button:       $fontFamily-sansSerif !default;
 
 
 // tables
