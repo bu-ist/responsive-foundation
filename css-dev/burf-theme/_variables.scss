@@ -18,9 +18,13 @@ $color-utilityNav-link:                    $color-grayScale-7 !default;
 $color-utilityNav-link-hover:              $color-grayScale-0 !default;
 $color-bannerContainer:                    $color-grayScale-f0 !default;
 $color-contentWrapper-bg:                  $color-grayScale-f !default;
+$color-message-bg:                         $color-grayScale-f0 !default;
 $color-news-metaEm:                        $color-grayScale-7 !default;
 $color-news-metaBefore:                    $color-grayScale-a !default;
 $color-single-meta-bg:                     $color-grayScale-f0 !default;
+$color-calendar-headingDateRange:          $color-grayScale-9;
+$color-calendar-eventLink:                 $color-link !default;
+$color-calendar-eventLink-hover:           $color-link !default;
 $color-widgetTitle:                        $color-grayScale-0 !default;
 $color-widget-calendarDate:                $color-grayScale-0 !default;
 $color-widget-calendarDateDay:             $color-grayScale-0 !default;
@@ -45,8 +49,11 @@ $color-commentForm-bg:                     $color-grayScale-f5 !default;
 // font-size
 $fontSize-navigation:                      $fontSize-small !default;
 $fontSize-utilityNav:                      $fontSize-smaller !default;
+$fontSize-message:                         $fontSize-small !default;
 $fontSize-news-meta:                       $fontSize-smaller !default;
 $fontSize-single-meta:                     $fontSize-small !default;
+$fontSize-calendar-topic:                  $fontSize-large !default;
+$fontSize-calendar-eventDate:              $fontSize-medium !default;
 $fontSize-widget:                          $fontSize-small !default;
 $fontSize-widgetTitle:                     $fontSize-medium !default;
 $fontSize-widget-contentnav-link:          $fontSize-medium !default;
@@ -68,6 +75,7 @@ $lineHeight-widget-calendarDate:           $lineHeight-large !default;
 
 
 // font-family
+$fontFamily-base:                          "TiemposText", Georgia, serif !default;
 $fontFamily-serif:                         "TiemposText", Georgia, serif !default;
 $fontFamily-sansSerif:                     "Benton", sans-serif !default;
 $fontFamily-navigation:                    $fontFamily-sansSerif !default;
@@ -80,18 +88,25 @@ $fontFamily-comment:                       $fontFamily-sansSerif !default;
 // margin/padding
 $comment-margin:                           15px 0 !default;
 $comment-padding:                          15px 0 0 !default;
+$padding-message:                          20px !default;
+$padding-single-meta:                      20px !default;
 
 
 // borders
 // -----------------------------------------------------------------
 
 $border-masthead:                          1px solid $color-grayScale-c !default;
+$border-message:                           1px solid $color-grayScale-d;
+$borderWidth-message:                      1px 1px 1px 5px;
+$borderLeftColor-message:                  $color-grayScale-0;
+$borderRadius-message:                     3px;
 $borderWidth-masthead:                     0 0 1px 0 !default;
 $border-news-post:                         1px solid $color-grayScale-d;
 $borderWidth-news-post:                    1px 0 0 0;
-$border-single-meta:                       1px solid $color-grayScale-d;
-$borderWidth-single-meta:                  1px 1px 1px 6px;
-$borderLeftColor-single-meta:              $color-grayScale-0;
+$border-single-meta:                       $border-message;
+$borderWidth-single-meta:                  $borderWidth-message;
+$borderLeftColor-single-meta:              $borderLeftColor-message;
+$borderRadius-single-meta:                 $borderRadius-message;
 $border-widgetTitle:                       4px solid $color-grayScale-0 !default;
 $borderWidth-widgetTitle:                  0 0 4px 0 !default;
 $border-widgetList:                        1px solid $color-grayScale-c !default;
@@ -102,13 +117,4 @@ $border-comment:                           1px solid $color-grayScale-c !default
 $borderWidth-comment:                      1px 0 0 0 !default;
 $border-commentForm:                       1px solid $color-grayScale-e !default;
 $borderWidth-commentForm:                  3px !default;
-
-
-
-
-
-
-
-
-
 

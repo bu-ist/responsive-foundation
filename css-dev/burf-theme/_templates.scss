@@ -64,12 +64,14 @@
 	display: none;
 }
 .single .meta {
+	@extend .message;
+	@include border-radius($borderRadius-single-meta);
 	background-color: $color-single-meta-bg;
 	border: $border-single-meta;
 	border-width: $borderWidth-single-meta;
 	border-left-color: $borderLeftColor-single-meta;
-	padding: 20px;
 	font-size: $fontSize-single-meta;
+	padding: $padding-single-meta;
 }
 .single .meta .post-title {
 	margin-bottom: 10px;
@@ -85,4 +87,31 @@
 }
 .single .meta em {
 	color: $color-news-metaEm;
+}
+
+/* Calendar */
+.calendar-topic {
+	font-size: $fontSize-calendar-topic;
+}
+.calendar-topic .calendar-range {
+	color: $color-calendar-headingDateRange;
+}
+.event-list .event-date {
+	font-size: $fontSize-calendar-eventDate;
+}
+.event-list ul {
+	padding: 0;
+}
+.event-list li {
+	list-style: none;
+}
+.event-list .event-time {
+
+}
+.event-list .event-link a {
+	color: $color-calendar-eventLink;
+}
+.event-list .event-link a:hover,
+.event-list .event-link a:focus {
+	color: $color-calendar-eventLink-hover;
 }

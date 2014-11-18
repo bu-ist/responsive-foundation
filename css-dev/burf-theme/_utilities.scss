@@ -8,6 +8,17 @@
 	right: 0;
 }
 
+/* message */
+.message {
+	@include border-radius($borderRadius-message);
+	background-color: $color-message-bg;
+	border: $border-message;
+	border-width: $borderWidth-message;
+	border-left-color: $borderLeftColor-message;
+	font-size: $fontSize-message;
+	padding: $padding-message;
+}
+
 /* .responsiveVideo */
 .responsiveVideo {
 	margin-bottom: 14px;
