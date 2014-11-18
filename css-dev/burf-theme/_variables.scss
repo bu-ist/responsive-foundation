@@ -12,7 +12,7 @@ $color-searchLight-bg:                     $color-grayScale-f !default;
 $color-searchLight-text:                   $color-base !default;
 $color-nav-dropdown-bg:                    $color-grayScale-0 !default;
 $color-nav-border:                         $color-grayScale-3 !default;
-$color-nav-link:                           $color-grayScale-7 !default;
+$color-nav-link:                           $color-grayScale-9 !default;
 $color-nav-link-hover:                     $color-grayScale-f !default;
 $color-utilityNav-link:                    $color-grayScale-7 !default;
 $color-utilityNav-link-hover:              $color-grayScale-0 !default;
@@ -43,6 +43,8 @@ $color-commentForm-bg:                     $color-grayScale-f5 !default;
 // -----------------------------------------------------------------
 
 // font-size
+$fontSize-navigation:                      $fontSize-small !default;
+$fontSize-utilityNav:                      $fontSize-smaller !default;
 $fontSize-news-meta:                       $fontSize-smaller !default;
 $fontSize-single-meta:                     $fontSize-small !default;
 $fontSize-widget:                          $fontSize-small !default;

@@ -60,6 +60,7 @@ article[role=main] {
 
 .sidebar {
 	@extend .col-md-4;
+	font-size: $fontSize-small;
 
 	@include breakpoint(medium) {
 		padding: 0 0 0 60px;

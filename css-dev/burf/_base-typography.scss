@@ -267,7 +267,7 @@ code {
 	font-size: 18px;
 	line-height: 1.3;
 }
-.brand a {
+.brand [class*="brand-"] {
 	@include vertical-center;
 	display: block;
 	float: left;

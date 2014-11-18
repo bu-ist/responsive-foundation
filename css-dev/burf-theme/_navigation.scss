@@ -3,6 +3,7 @@
 
 nav {
 	font-family: $fontFamily-navigation;
+	font-size: $fontSize-navigation;
 }
 
 /* .searchToggle appears only when header is small and above, otherwise it's hidden */
@@ -212,15 +213,17 @@ nav {
 
 /* .utilityNav */
 .utilityNav {
+	@include vertical-center;
 	border: none;
 	display: none;
-	margin: 0 10px 20px;
+	margin: 10px 0 20px 10px;
+	font-size: $fontSize-utilityNav;
 
 	@include breakpoint(small) {
 		display: inline;
 		border: none;
 		float: right;
-		margin: 0;
+		margin: 0 20px;
 	}
 }
 .utilityNav li {
