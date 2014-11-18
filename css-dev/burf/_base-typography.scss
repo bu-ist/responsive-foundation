@@ -260,11 +260,12 @@ code {
 
 .brand {
 	@include vertical-center-child;
-	height: 100px;
+	height: 90px;
 	padding: 0 0 0 20px;
 	overflow: hidden;
-	font-family: $fontFamily-branding;
-	line-height: 1.4;
+	font-family: $fontFamily-brand;
+	font-size: 18px;
+	line-height: 1.3;
 }
 .brand a {
 	@include vertical-center;
@@ -272,18 +273,14 @@ code {
 	float: left;
 	font-weight: 400;
 	text-decoration: none;
-	color: $color-branding;
+	color: $color-brand;
 
 	&:visited {
-		color: $color-branding;
+		color: $color-brand;
 	}
 }
 .brand a strong {
 	font-weight: 600;
-}
-.brand .siteName {
-	display: block;
-	color: #c00;
 }
 .brand .siteDescription {
 	display: none;
@@ -291,18 +288,18 @@ code {
 	@include breakpoint(medium) {
 		@include vertical-center;
 		display: block;
-		margin: 0 0 0 20px;
 		color: $color-grayScale-9;
-		font-family: $fontFamily-base;	
-		font-style: italic;
+		font-size: $fontSize-small;
+		font-family: $fontFamily-base;
+		//font-style: italic;
 	}
 }
 
 /* Sub-brand signature */
 
 .brand-signature {
-	background: url($image-subBrand) no-repeat 0 50%;
-	padding: 9px 20px 7px 56px;
+	background: url($image-subBrand) no-repeat 0 49%;
+	padding: 6px 30px 6px 56px;
 
 	@include retina {
 		background-image: url($image-subBrand-retina);
@@ -317,6 +314,22 @@ code {
 
 
 /* Sponsored branding (sometimes called non-entity, but people don't like that) */
+
+.brand-non-entity {
+	font-size: 14px;
+}
+
+.brand-non-entity .siteName,
+.brand-unbranded .siteName {
+	display: block;
+	color: #c00;
+	font-family: $fontFamily-brand-sponsored;	
+	font-weight: 600;
+	font-size: 20px;
+}
+.brand-unbranded .siteName {
+	font-family: $fontFamily-brand-unbranded;
+}
 
 /* Master logo in footer */
 .brand-masterPlate {

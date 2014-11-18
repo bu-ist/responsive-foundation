@@ -73,6 +73,7 @@ textarea {
 /* Address margins handled incorrectly in IE 6/7. */
 body {
 	margin: 0;
+	font-size: $fontSize-base;
 	font-family: $fontFamily-base;
 	line-height: $lineHeight-base;
 	color: $color-base;

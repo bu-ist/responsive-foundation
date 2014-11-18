@@ -50,7 +50,7 @@ nav {
 
 /* nav menu */
 .navToggle {
-	@extend .hide-text;
+	@extend %hide-text;
 	float: left;
 	height: 60px;
 	width: 60px;
@@ -103,7 +103,7 @@ nav {
 
 /* search icon */
 .searchToggle {
-	@extend .hide-text;
+	@extend %hide-text;
 	float: right;
 	width: 60px;
 	height: 60px;
