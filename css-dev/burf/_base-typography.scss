@@ -255,3 +255,83 @@ code {
     background: none;
 }
 
+/* Branding
+----------------------------------------------------------------- */
+
+.brand {
+	@include vertical-center-child;
+	height: 100px;
+	padding: 0 0 0 20px;
+	overflow: hidden;
+	font-family: $fontFamily-branding;
+	line-height: 1.4;
+}
+.brand a {
+	@include vertical-center;
+	display: block;
+	float: left;
+	font-weight: 400;
+	text-decoration: none;
+	color: $color-branding;
+
+	&:visited {
+		color: $color-branding;
+	}
+}
+.brand a strong {
+	font-weight: 600;
+}
+.brand .siteName {
+	display: block;
+	color: #c00;
+}
+.brand .siteDescription {
+	display: none;
+
+	@include breakpoint(medium) {
+		@include vertical-center;
+		display: block;
+		margin: 0 0 0 20px;
+		color: $color-grayScale-9;
+		font-family: $fontFamily-base;	
+		font-style: italic;
+	}
+}
+
+/* Sub-brand signature */
+
+.brand-signature {
+	background: url($image-subBrand) no-repeat 0 50%;
+	padding: 9px 20px 7px 56px;
+
+	@include retina {
+		background-image: url($image-subBrand-retina);
+		background-size: 49px 35px;
+	}
+}
+.brand-signature strong {
+	display: none;
+}
+
+/* Logotype & master plate */
+
+
+/* Sponsored branding (sometimes called non-entity, but people don't like that) */
+
+/* Master logo in footer */
+.brand-masterPlate {
+	@extend %hide-text;
+	display: block;
+	background: url($image-masterPlate) no-repeat 0 0;
+	width: 112px;
+	height: 50px;
+
+	@include retina {
+		background-image: url($image-masterPlate-retina);
+		background-size: 112px 50px;
+	}
+
+}
+
+
+

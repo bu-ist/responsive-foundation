@@ -15,27 +15,6 @@ body {
 	border-width: $borderWidth-masthead;
 	@include clearfix;
 }
-.brand {
-	padding: 40px 20px;
-	overflow: hidden;
-}
-.siteName {
-	float: left;
-	font-family: $fontFamily-branding;
-	font-weight: 600;
-	text-decoration: none;
-	color: $color-branding;
-
-	&:visited {
-		color: $color-branding;
-	}
-}
-.siteName span {
-	font-weight: 400;
-}
-.siteDescription {
-	margin: 0;
-}
 
 /* .bannerContainer
 ----------------------------------------------------------------- */

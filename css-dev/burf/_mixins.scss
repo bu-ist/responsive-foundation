@@ -30,6 +30,14 @@
 			box-shadow: $shadow;
 }
 
+// hide text. Uses Sass placeholder selector (%).
+// Usage: @extend hide-text
+%hide-text {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
 // cross-browser opacity
 // Usage: @include opacity(0.5)
 @mixin opacity($opacity) {
