@@ -6,6 +6,7 @@
 
 $color-body-bg:                            $color-grayScale-0 !default;
 $color-masthead-bg:                        $color-grayScale-f !default;
+$color-brand:                              $color-grayScale-0 !default;
 $color-search-bg:                          $color-grayScale-1 !default;
 $color-search-text:                        $color-grayScale-f !default;
 $color-searchLight-bg:                     $color-grayScale-f !default;
@@ -55,16 +56,16 @@ $fontSize-single-meta:                     $fontSize-small !default;
 $fontSize-calendar-topic:                  $fontSize-large !default;
 $fontSize-calendar-eventDate:              $fontSize-medium !default;
 $fontSize-widget:                          $fontSize-small !default;
-$fontSize-widgetTitle:                     $fontSize-medium !default;
-$fontSize-widget-contentnav-link:          $fontSize-medium !default;
-$fontSize-widget-contentnav-nestedLink:    $fontSize-medium !default;
-$fontSize-widget-postHeadline:             $fontSize-medium !default;
-$fontSize-widget-postExcerpt:              $fontSize-medium !default;
-$fontSize-widget-postDate:                 $fontSize-smaller !default;
-$fontSize-widget-postMeta:                 $fontSize-smaller !default;
-$fontSize-widget-calendarDate:             $fontSize-smaller !default;
+$fontSize-widgetTitle:                     $fontSize-small !default;
+$fontSize-widget-contentnav-link:          $fontSize-small !default;
+$fontSize-widget-contentnav-nestedLink:    $fontSize-small !default;
+$fontSize-widget-postHeadline:             $fontSize-small !default;
+$fontSize-widget-postExcerpt:              $fontSize-small !default;
+$fontSize-widget-postDate:                 $fontSize-smallest !default;
+$fontSize-widget-postMeta:                 $fontSize-smallest !default;
+$fontSize-widget-calendarDate:             $fontSize-smallest !default;
 $fontSize-widget-calendarDateDay:          $fontSize-large !default;
-$fontSize-widget-calendarDateMonth:        $fontSize-smaller !default;
+$fontSize-widget-calendarDateMonth:        $fontSize-smallest !default;
 
 // line-height
 $lineHeight-widgetTitle:                   $lineHeight-large !default;
@@ -78,6 +79,9 @@ $lineHeight-widget-calendarDate:           $lineHeight-large !default;
 $fontFamily-base:                          "TiemposText", Georgia, serif !default;
 $fontFamily-serif:                         "TiemposText", Georgia, serif !default;
 $fontFamily-sansSerif:                     "Benton", sans-serif !default;
+$fontFamily-brand:                         "Whitney SSm A", "Whitney SSm B" !default;
+$fontFamily-brand-sponsored:               $fontFamily-brand !default;
+$fontFamily-brand-unbranded:               $fontFamily-sansSerif !default;
 $fontFamily-navigation:                    $fontFamily-sansSerif !default;
 $fontFamily-news-meta:                     $fontFamily-sansSerif !default;
 $fontFamily-widgetTitle:                   $fontFamily-sansSerif !default;
@@ -117,4 +121,13 @@ $border-comment:                           1px solid $color-grayScale-c !default
 $borderWidth-comment:                      1px 0 0 0 !default;
 $border-commentForm:                       1px solid $color-grayScale-e !default;
 $borderWidth-commentForm:                  3px !default;
+
+
+// images
+// -----------------------------------------------------------------
+$image-masterPlate:         "http://www.bu.edu/cdn/images/logos/masterplate112x50.png" !default;
+$image-masterPlate-retina:  "http://www.bu.edu/cdn/images/logos/masterplate112x50-retina.png" !default;
+$image-subBrand:            "http://www.bu.edu/cdn/images/logos/subbrand49x35.png" !default;
+$image-subBrand-retina:     "http://www.bu.edu/cdn/images/logos/subbrand49x35-retina.png" !default;
+$image-searchToggle-sprite: "images/search.png" !default;
 

@@ -34,7 +34,6 @@ $color-table-th-border:      $color-grayScale-c !default;
 $color-table-td-border:      $color-grayScale-c !default;
 $color-table-stripes:        #f6f9fc !default;
 $color-input-focusBorder:    #129fea !default;
-$color-brand:                $color-grayScale-0 !default;
 
 
 // typography & vertical whitespace
@@ -104,9 +103,6 @@ $fontFamily-monospace:       Consolas, "Liberation Mono", Courier, monospace !de
 // applications
 $fontFamily-heading:         $fontFamily-sansSerif !default;
 $fontFamily-form:            $fontFamily-sansSerif !default;
-$fontFamily-brand:           "Whitney SSm A", "Whitney SSm B" !default;
-$fontFamily-brand-sponsored: $fontFamily-brand !default;
-$fontFamily-brand-unbranded: $fontFamily-sansSerif !default;
 $fontFamily-button:          $fontFamily-sansSerif !default;
 
 
@@ -178,13 +174,6 @@ $zIndex-9:                   900;
 $zIndex-10:                  1000;
 
 
-// images
-// -----------------------------------------------------------------
-$image-masterPlate:         "http://www.bu.edu/cdn/images/logos/masterplate112x50.png" !default;
-$image-masterPlate-retina:  "http://www.bu.edu/cdn/images/logos/masterplate112x50-retina.png" !default;
-$image-subBrand:            "http://www.bu.edu/cdn/images/logos/subbrand49x35.png" !default;
-$image-subBrand-retina:     "http://www.bu.edu/cdn/images/logos/subbrand49x35-retina.png" !default;
-$image-searchToggle-sprite: "images/search.png" !default;
 
 
 

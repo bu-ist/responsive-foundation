@@ -109,11 +109,11 @@ nav {
 	width: 60px;
 	height: 60px;
 	cursor: pointer;
-	background: transparent url($image-searchToggle-sprite) no-repeat 15px 13px;
+	background: transparent url($image-searchToggle-sprite) no-repeat 15px 14px;
 
-	@include breakpoint(small) {
-		margin-top: 5px;
-	}
+	// @include breakpoint(small) {
+	// 	margin-top: 5px;
+	// }
 }
 
 /* when nav or search are opened */
@@ -147,7 +147,7 @@ nav {
 .primaryNav {
 	display: none;
 	margin: 40px 10px 20px 10px;
-	border-bottom: 1px solid $color-nav-border;
+	//border-bottom: 1px solid $color-nav-border;
 
 	@include breakpoint(small) {
 		display: inline;
@@ -177,7 +177,7 @@ nav {
 	}
 	@include breakpoint(small) {
 		border:none;
-		line-height: 70px;
+		line-height: 60px;
 		padding: 0 10px;
 	}
 }
@@ -326,7 +326,7 @@ nav {
 .l-sideNav .brand .searchToggle {
 	@include breakpoint(small) {
 		display: block;
-		background-position: -45px 15px;
+		background-position: -45px 14px;
 		margin: 0;
 		position: absolute;
 		right: 10px;
@@ -377,7 +377,7 @@ nav {
 }
 .l-noNav .brand .searchToggle {
 	display: block;
-	background-position: -45px 15px;
+	background-position: -45px 14px;
 	margin: 0;
 	position: absolute;
 	right: 10px;
