@@ -1,0 +1,66 @@
+/* Collapsible divs */
+.bu_collapsible {
+	padding-right: 30px;
+	position: relative;
+}
+.bu_collapsible:after {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -4px;
+	width: 0;
+	height: 0;
+	content: "";
+	border: 8px solid transparent;
+	border-top-color: $borderColor-collapsible-after;
+}
+.bu_collapsible_open .bu_collapsible:after {
+	border-top-color: transparent;
+	border-bottom-color: $borderColor-collapsible-after;
+	margin-top: -12px;
+}
+.bu_collapsible:hover:after,
+.bu_collapsible:focus:after {
+	border-top-color: $borderColor-collapsible-after-hover;
+}
+.bu_collapsible_open .bu_collapsible:hover:after,
+.bu_collapsible_open .bu_collapsible:focus:after {
+	border-top-color: transparent;
+	border-bottom-color: $borderColor-collapsible-after-hover;
+}
+/* Profiles */
+.profile-listing{
+}
+.profile-listing ul {
+	padding: 0;
+}
+.profile-listing li {
+	list-style: none;
+	position: relative;
+	margin-bottom: 25px;
+}
+.profile-listing .profile-name {
+	color: $color-profile-name;
+	font-family: $fontFamily-profile-name;
+}
+.profile-listing .profile-title {
+	color: $color-profile-title;
+	font-family: $fontFamily-profile-title;
+	display: block;
+}
+.profile-listing .basic {
+	border-top: $border-profiles;
+}
+.profile-listing .basic li {
+	border-bottom: $border-profiles;
+	min-height: 36px;
+	padding: 25px 51px 25px 0;
+	margin-bottom: 0;
+}
+.profile-listing .basic img {
+	position: absolute;
+	right: 0;
+}
+.profile-listing .basic li p {
+	margin-bottom: 0;
+}

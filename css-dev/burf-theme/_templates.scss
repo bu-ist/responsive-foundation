@@ -63,7 +63,7 @@
 .single-post .sidebar {
 	display: none;
 }
-.single .meta {
+.single article[role=main] .meta {
 	@extend .message;
 	@include border-radius($borderRadius-single-meta);
 	background-color: $color-single-meta-bg;
@@ -114,4 +114,96 @@
 .event-list .event-link a:hover,
 .event-list .event-link a:focus {
 	color: $color-calendar-eventLink-hover;
+}
+/* Calendar Sidebar */
+.monthCalendar {
+	width: 100%;
+}
+.monthCalendar caption {
+	font-style: normal;
+	font-family: $fontFamily-calendarMonth-caption;
+	font-size: $fontSize-calendarMonth-caption;
+	color: $color-calendarMonth-caption;
+}
+.monthCalendar th,
+.monthCalendar td {
+	font-family: $fontFamily-calendarMonth-cell;
+	width: 14.285714285%;
+	text-align: center;
+	padding: $padding-monthCalendar-cell;
+}
+.monthCalendar th {
+	background: $color-calendarMonth-th-bg;
+	color: $color-calendarMonth-th;
+}
+.monthCalendar td a {
+	color: $color-calendarMonth-cellLink;
+}
+.monthCalendar td a:hover,
+.monthCalendar td a:focus {
+	color: $color-calendarMonth-cellLink-hover;
+}
+.monthCalendar .out {
+	background: $color-calendarMonth-cellLinkOut-bg;
+}
+.monthCalendar .out a {
+	color: $color-calendarMonth-cellLinkOut;
+	text-decoration: none;
+}
+.monthCalendar .today {
+	background: $color-calendarMonth-cellLinkToday-bg;
+}
+.monthCalendar .today a {
+	color: $color-calendarMonth-cellLinkToday;
+	text-decoration: none;
+}
+.calendar-topics {
+}
+.calendar-topics ul {
+	padding-left: 20px;
+}
+/* Calendar Single */
+.singleEvent {
+}
+.singleEvent .label {
+	font-family: $fontFamily-singleEvent-label;
+	font-size: $fontSize-smaller;
+	font-weight: bold;
+}
+.singleEvent .dateSummary {
+	@extend .message;
+	margin: 0 0 20px 0;
+	
+	@include breakpoint(small) {
+		float: right;
+		width: 33.33333333333333%;
+		margin: 0 0 20px 20px;
+	}
+}
+.singleEvent .dateSummary ul {
+	margin: 0;
+	padding: 0;
+}
+.singleEvent .dateSummary li {
+	list-style: none;
+	margin-top: 10px;
+	
+	&:first-child {
+		margin-top: 0;
+	}
+}
+.singleEvent .dateSummary .label {
+	display: block;
+}
+.singleEvent .dateSummary li em {
+	display: none;
+}
+.singleEvent .dateSummary .time {
+	display: block;
+	color: #000;
+	font-size: $fontSize-medium;
+	font-weight: bold;
+}
+.singleEvent .description {
+	margin: $fontMargin-base;
 }
