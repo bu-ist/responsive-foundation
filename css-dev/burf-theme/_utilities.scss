@@ -100,13 +100,17 @@ div.aligncenter p {
 div.aligncenter img {
 	margin-bottom: 5px;
 }
-.wp-caption p {
+.wp-caption {
 	color: $color-grayScale-9;
+	font-size: $fontSize-smaller;
+	line-height: 1.4;
+	font-family: $fontFamily-sansSerif;
+}
+.wp-caption p {
 	clear: both;
-	font-size: 12px;
-	line-height: 16px;
 }
 .wp-caption img {
+	display: block;
 	margin-bottom: 10px;
 	margin-top: 0;
 }

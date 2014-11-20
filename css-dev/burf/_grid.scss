@@ -30,10 +30,6 @@ clear: both;
 .row .row:nth-last-of-type(1) {
 margin-bottom: 0;
 }
-// experimental... TODO: evaluate effects of removing top margin from first child type
-// [class*="col-"] *:first-child {
-// 	margin-top: 0;
-// }
 
 /* default (mobile) */
 .col-xs-1,

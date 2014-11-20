@@ -6,7 +6,9 @@ $color-grayScale-2:          #222222 !default;
 $color-grayScale-3:          #333333 !default;
 $color-grayScale-4:          #444444 !default;
 $color-grayScale-5:          #555555 !default;
+$color-grayScale-6:          #666666 !default;
 $color-grayScale-7:          #7a7a7a !default;
+$color-grayScale-8:          #888888 !default;
 $color-grayScale-9:          #9f9f9f !default;
 $color-grayScale-a:          #aaaaaa !default;
 $color-grayScale-b:          #bbbbbb !default;
@@ -110,7 +112,7 @@ $fontFamily-button:          $fontFamily-sansSerif !default;
 // -----------------------------------------------------------------
 
 $table-border:               1px solid $color-table-border !default;
-$table-margin:               30px 0 !default;
+$table-margin:               35px 0 !default;
 $table-padding:              0.5em 1em !default;
 $table-caption-padding:      0 0 10px !default;
 
@@ -140,7 +142,7 @@ $form-input-focusShadow:     0 0 4px 0 rgba(18 ,159 ,234 ,0.2) !default;
 // -----------------------------------------------------------------
 
 // grid spacing
-$grid-container-padding:     60px 20px !default;
+$grid-container-padding:     40px 20px !default;
 $grid-row-margin:            0 -20px !default;
 $grid-column-padding:        0 20px !default;
 

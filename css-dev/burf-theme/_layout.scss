@@ -45,7 +45,7 @@ body {
 .bannerContainer-contentWidth {
 	background: none;
 	padding: 0;
-	margin: 25px 0 35px;
+	margin: 0 0 35px;
 }
 
 /* content
@@ -91,16 +91,128 @@ article[role=main] {
 ----------------------------------------------------------------- */
 
 .siteFooter {
+	@include clearfix;
+	position:relative;
 	background: $color-siteFooter-bg;
 	border-top: 1px solid $color-footbar-border;
-	padding: 20px;
+	padding: 40px 20px 5px;
+	width: 100%;
 	display: block;
 	clear: both;
-	@include breakpoint(small) {
-		padding: 40px;
-	}
+	color: $color-grayScale-8;
+	font-size: $fontSize-small;
+	font-family: $fontFamily-sansSerif;
 }
-.siteFooter p {
-	margin: 0;
+.siteFooter h3 {
+	color: $color-grayScale-f;
+	font-size: $fontSize-small;
+	font-family: $fontFamily-sansSerif;
+	margin: 0 0 5px;
+}
+.siteFooter a {
+	color: $color-grayScale-8;
+}
+.siteFooter a:hover {
 	color: $color-grayScale-f;
 }
+.siteFooter li {
+	line-height: 1.4;
+	margin: 0 0 5px;
+
+	&:last-child {
+		margin: 0;
+	}
+}
+.siteFooter-brand {
+	width: 112px;
+	margin: 0 auto 30px;
+
+	@include breakpoint(small) {
+		position: absolute;
+		top: 40px;
+		left: 20px;
+		margin: 5px 0 0 0;
+	}
+}
+.siteFooter-content {
+	@include breakpoint(small) {
+		margin: 0 0 0 112px;
+	}
+}
+.siteFooter-info {
+	@extend .col-sm-6;
+	padding: 0 0 30px;
+
+	@include breakpoint(small) {
+		padding-left: 30px;
+	}
+}
+.siteFooter-links,
+.siteFooter-social {
+	@extend .col-sm-3;
+	padding: 0 0 30px;
+
+	@include breakpoint(small) {
+		padding-left: 30px;
+	}
+}
+/* utility class */
+.u-list-inlineLinks {
+	display: inline-block;
+	padding: 0;
+	margin-right: 20px;
+}
+
+/* Footer states */
+// .has-branding .siteFooter-wrapper {
+
+// 	@include breakpoint(small) {
+// 	min-height: 60px;
+// 	padding: 0 0 0 142px;
+// 	}	
+// }
+// .has-info .siteFooter-wrapper {
+// 	@extend .col-sm-12;
+// }
+// .has-links .siteFooter-links {
+// 	@extend .col-sm-12;
+// 	@extend .u-list-inlineLinks;
+// }
+// .has-links h3 {
+// 	display: none;
+// }
+// .has-links li {
+// 	@extend .u-list-inlineLinks;
+// }
+// .has-social {
+	
+// }
+// .has-info-links-social .siteFooter-links,
+// .has-info-links-social .siteFooter-social {
+
+	
+// }
+// .has-info-links {
+	
+// }
+// .has-info-social {
+	
+// }
+// .has-links-social .siteFooter-links,
+// .has-links-social .siteFooter-social {
+// 	@extend .col-sm-6;
+// }
+// .has-links-social .siteFooter-links li,
+// .has-links-social .siteFooter-social li {
+// 	@extend .u-list-inlineLinks;
+// }
+
+
+
+
+
+
+
+
+
+

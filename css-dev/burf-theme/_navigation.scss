@@ -5,6 +5,9 @@ nav {
 	font-family: $fontFamily-navigation;
 	font-size: $fontSize-navigation;
 }
+nav a {
+	text-decoration: none;
+}
 
 /* .searchToggle appears only when header is small and above, otherwise it's hidden */
 .brand .searchToggle {
