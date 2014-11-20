@@ -141,7 +141,6 @@ article[role=main] {
 }
 .siteFooter-info {
 	@extend .col-sm-6;
-	padding: 0 0 30px;
 
 	@include breakpoint(small) {
 		padding-left: 30px;
