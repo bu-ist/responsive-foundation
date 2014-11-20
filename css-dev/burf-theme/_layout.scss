@@ -101,19 +101,27 @@ article[role=main] {
 	clear: both;
 	color: $color-grayScale-8;
 	font-size: $fontSize-small;
+	line-height: $lineHeight-small;
 	font-family: $fontFamily-sansSerif;
 }
-.siteFooter h3 {
+.siteFooter h1,
+.siteFooter h2,
+.siteFooter h3,
+.siteFooter h4,
+.siteFooter h5,
+.siteFooter h6 {
 	color: $color-grayScale-f;
 	font-size: $fontSize-small;
+	line-height: $lineHeight-small;
 	font-family: $fontFamily-sansSerif;
-	margin: 0 0 5px;
+	margin: 0 0 3px;
 }
 .siteFooter a {
 	color: $color-grayScale-8;
-}
-.siteFooter a:hover {
-	color: $color-grayScale-f;
+
+	&:hover {
+		color: $color-grayScale-f;
+	}
 }
 .siteFooter li {
 	line-height: 1.4;
@@ -123,27 +131,11 @@ article[role=main] {
 		margin: 0;
 	}
 }
-.siteFooter-brand {
-	width: 112px;
-	margin: 0 auto 30px;
-
-	@include breakpoint(small) {
-		position: absolute;
-		top: 40px;
-		left: 20px;
-		margin: 5px 0 0 0;
-	}
-}
-.siteFooter-content {
-	@include breakpoint(small) {
-		margin: 0 0 0 112px;
-	}
-}
 .siteFooter-info {
 	@extend .col-sm-6;
 
 	@include breakpoint(small) {
-		padding-left: 30px;
+		padding: 0 0 10px 30px;
 	}
 }
 .siteFooter-links,
@@ -155,63 +147,78 @@ article[role=main] {
 		padding-left: 30px;
 	}
 }
-/* utility class */
+/* utility class for displaying lists of links inline. Use @extend */
 .u-list-inlineLinks {
 	display: inline-block;
 	padding: 0;
 	margin-right: 20px;
+
+	&:last-child {
+		margin-right: 0;
+	}
 }
+/* Add master logo if specified by theme */
+.has-branding {
+	min-height: 140px;
+}
+.has-branding .siteFooter-brand {
+	width: 112px;
+	margin: 6px auto 35px;
 
-/* Footer states */
-// .has-branding .siteFooter-wrapper {
-
-// 	@include breakpoint(small) {
-// 	min-height: 60px;
-// 	padding: 0 0 0 142px;
-// 	}	
-// }
-// .has-info .siteFooter-wrapper {
-// 	@extend .col-sm-12;
-// }
-// .has-links .siteFooter-links {
-// 	@extend .col-sm-12;
-// 	@extend .u-list-inlineLinks;
-// }
-// .has-links h3 {
-// 	display: none;
-// }
-// .has-links li {
-// 	@extend .u-list-inlineLinks;
-// }
-// .has-social {
-	
-// }
-// .has-info-links-social .siteFooter-links,
-// .has-info-links-social .siteFooter-social {
-
-	
-// }
-// .has-info-links {
-	
-// }
-// .has-info-social {
-	
-// }
-// .has-links-social .siteFooter-links,
-// .has-links-social .siteFooter-social {
-// 	@extend .col-sm-6;
-// }
-// .has-links-social .siteFooter-links li,
-// .has-links-social .siteFooter-social li {
-// 	@extend .u-list-inlineLinks;
-// }
-
-
-
-
-
-
-
-
-
-
+	@include breakpoint(small) {
+		position: absolute;
+		top: 40px;
+		left: 20px;
+	}
+}
+.has-branding .siteFooter-content {
+	@include breakpoint(small) {
+		margin: 0 0 0 112px;
+	}
+}
+/* Has only HTML info */
+.has-info .siteFooter-info {
+	@extend .col-sm-12;
+}
+/* Has only general links */
+.has-links .siteFooter-links {
+	@extend .col-sm-12;
+}
+.has-links .siteFooter-links li  {
+	@extend .u-list-inlineLinks;
+}
+/* Has general + social media links */
+.has-social .siteFooter-social {
+	@extend .col-sm-12;
+}
+.has-social .siteFooter-social li  {
+	@extend .u-list-inlineLinks;
+}
+.has-links-social .siteFooter-links,
+.has-links-social .siteFooter-social {
+	@extend .col-sm-6;
+}
+.has-links-social .siteFooter-links li,
+.has-links-social .siteFooter-social li  {
+	@extend .u-list-inlineLinks;
+}
+/* Has info + general links */
+.has-info-links .siteFooter-info {
+	@extend .col-sm-8;
+}
+.has-info-links .siteFooter-links {
+	@extend .col-sm-4;
+}
+.has-info-links .siteFooter-links li  {
+	@extend .u-list-inlineLinks;
+}
+/* Has info + social media links */
+.has-info-social .siteFooter-info {
+	@extend .col-sm-8;
+}
+.has-info-social .siteFooter-social {
+	@extend .col-sm-4;
+}
+.has-info-social .siteFooter-social li  {
+	@extend .u-list-inlineLinks;
+}
