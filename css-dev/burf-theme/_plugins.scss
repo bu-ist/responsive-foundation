@@ -1,18 +1,28 @@
+// PLugins
+
+/*
+
+	1. Collapsible divs
+	2. Profiles
+	3. Course feeds
+
+*/
+
 /* Collapsible divs */
 .bu_collapsible {
 	padding-right: 30px;
 	position: relative;
 }
 .bu_collapsible:after {
+	border: 8px solid transparent;
+	border-top-color: $borderColor-collapsible-after;
+	content: "";
 	position: absolute;
 	right: 0;
 	top: 50%;
 	margin-top: -4px;
 	width: 0;
 	height: 0;
-	content: "";
-	border: 8px solid transparent;
-	border-top-color: $borderColor-collapsible-after;
 }
 .bu_collapsible_open .bu_collapsible:after {
 	border-top-color: transparent;
@@ -29,23 +39,37 @@
 	border-bottom-color: $borderColor-collapsible-after-hover;
 }
 /* Profiles */
-.profile-listing{
+.profile-listing {
+	@include clearfix;
 }
 .profile-listing ul {
 	padding: 0;
 }
 .profile-listing li {
 	list-style: none;
-	position: relative;
 	margin-bottom: 25px;
+	position: relative;
 }
-.profile-listing .profile-name {
+.profile-listing a {
+	text-decoration: none;
+}
+.profile-listing figure {
+	line-height: 0;
+}
+.profile-listing a .profile-name {
 	color: $color-profile-name;
 	font-family: $fontFamily-profile-name;
+	font-size: $fontSize-profile-name;
+	text-decoration: underline;
+}
+.profile-listing a:hover .profile-name,
+.profile-listing a:focus .profile-name {
+	text-decoration: none;
 }
 .profile-listing .profile-title {
 	color: $color-profile-title;
 	font-family: $fontFamily-profile-title;
+	font-size: $fontSize-profile-title;
 	display: block;
 }
 .profile-listing .basic {
@@ -53,14 +77,111 @@
 }
 .profile-listing .basic li {
 	border-bottom: $border-profiles;
-	min-height: 36px;
-	padding: 25px 51px 25px 0;
+	min-height: 100px;
+	padding: 25px 65px 25px 0;
 	margin-bottom: 0;
 }
-.profile-listing .basic img {
+.profile-listing .basic figure {
+	@include border-radius($borderRadius-profile-figure);
 	position: absolute;
 	right: 0;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+}
+.profile-listing .basic figure img {
+	width: 100%;
 }
 .profile-listing .basic li p {
 	margin-bottom: 0;
+}
+.profile-listing .advanced {
+	@include clearfix;
+}
+.profile-listing .advanced li {
+	@extend .col-md-4;
+}
+.profile-listing .advanced li:nth-child(3n+1) {
+	clear: left;
+}
+.profile-listing .advanced li a {
+	text-align: center;
+	padding: 0 15px;
+	display: block;
+}
+.profile-listing .advanced li p {
+	margin-bottom: 0;
+}
+.profile-listing .advanced figure {
+	@include border-radius($borderRadius-profile-figure);
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	margin: 0 auto 15px;
+}
+.profile-listing .advanced figure img {
+	width: 100%;
+}
+.profile-listing .mini {
+	@include clearfix;
+	//border: 1px solid $borderColor-profile-mini;
+	//border-width: 1px 0 0 1px;
+}
+.profile-listing .mini li {
+	@extend .col-md-6;
+	//border: 1px solid $borderColor-profile-mini;
+	//border-width: 0 1px 1px 0;
+	margin: 0;
+	padding: 0 0 15px 75px;
+	min-height: 90px;
+
+	@include breakpoint(medium) {
+		padding: 0 0 15px 95px;
+		min-height: 110px;
+	}
+}
+.profile-listing .mini li:nth-child(2n+1) {
+	clear: left;
+	padding-right: 15px;
+}
+.profile-listing .mini li p {
+	margin-bottom: 0;
+}
+.profile-listing .mini li .name {
+	font-family: $fontFamily-profile-name;
+	font-size: $fontSize-profile-mini-name;
+}
+.profile-listing .mini li .email a {
+	font-size: $fontSize-profile-mini-email;
+	line-height: $lineHeight-profile-mini-email;
+	margin-top: 5px;
+	word-wrap: break-word;
+	text-decoration: underline;
+}
+.profile-listing .mini li .email a:hover,
+.profile-listing .mini li .email a:focus {
+	text-decoration: none;
+}
+.profile-listing .mini li .summary {
+	font-size: $fontSize-profile-mini-email;
+	line-height: $lineHeight-profile-mini-email;
+	margin-top: 5px;
+	word-wrap: break-word;
+}
+.profile-listing .mini figure {
+	@include border-radius($borderRadius-profile-figure);
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	@include breakpoint(medium) {
+		width: 80px;
+		height: 80px;
+	}
+}
+.profile-listing .advanced figure img {
+	width: 100%;
 }
