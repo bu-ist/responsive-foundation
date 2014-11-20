@@ -79,6 +79,10 @@ $fontSize-widget-postMeta:                 $fontSize-smallest !default;
 $fontSize-widget-calendarDate:             $fontSize-smallest !default;
 $fontSize-widget-calendarDateDay:          $fontSize-large !default;
 $fontSize-widget-calendarDateMonth:        $fontSize-smallest !default;
+$fontSize-profile-name:                    $fontSize-medium !default;
+$fontSize-profile-title:                   $fontSize-small !default;
+$fontSize-profile-mini-name:              $fontSize-small !default;
+$fontSize-profile-mini-email:               $fontSize-smaller !default;
 
 // line-height
 $lineHeight-widgetTitle:                   $lineHeight-large !default;
@@ -86,6 +90,7 @@ $lineHeight-widget-postHeadline:           1.4 !default;
 $lineHeight-widget-postExcerpt:            $lineHeight-medium !default;
 $lineHeight-widget-postExcerpt:            $lineHeight-medium !default;
 $lineHeight-widget-calendarDate:           $lineHeight-large !default;
+$lineHeight-profile-mini-email:            $lineHeight-medium !default;
 
 
 // font-family
@@ -143,6 +148,8 @@ $borderWidth-commentForm:                  3px !default;
 $borderColor-collapsible-after:            $color-grayScale-c !default;
 $borderColor-collapsible-after-hover:      $color-link !default;
 $border-profiles:                          1px solid $color-grayScale-c !default;
+$borderRadius-profile-figure:              50%;
+$borderColor-profile-mini:                 $color-grayScale-e !default;
 
 
 // images
