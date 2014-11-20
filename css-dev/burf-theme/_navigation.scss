@@ -184,10 +184,9 @@ nav a {
 		padding: 0 10px;
 	}
 }
-.primaryNav li.current_page_item a,
-.primaryNav li.current_page_parent a,
-.primaryNav li.current_page_ancestor a {
-	color: $color-grayScale-f;
+.primaryNav li a.active,
+.primaryNav li a.active_section {
+	color: $color-nav-link-current;
 }
 .primaryNav ul {
 	display: none;
@@ -353,7 +352,7 @@ nav a {
 	color: $color-grayScale-f;
 }
 .l-sideNav .utilityNav li {
-	display:block;
+	display: block;
 	padding-left: 0;
 }
 .l-sideNav.nav-open .contentWrapper {
@@ -366,7 +365,7 @@ nav a {
 }
 .l-sideNav.nav-open .primaryNav,
 .l-sideNav.nav-open .utilityNav {
-	display:block;
+	display: block;
 	float: none;
 }
 
