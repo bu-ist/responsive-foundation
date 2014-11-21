@@ -12,6 +12,10 @@
 	padding: $grid-container-padding;
 	width: 100%;
 	margin: 0 auto;
+
+	@include breakpoint(small) {
+		padding: $grid-container-padding-largeScreen;	
+	}
 }
 .row {
 	margin: $grid-row-margin;
