@@ -56,11 +56,13 @@ figure {
 ----------------------------------------------------------------- */
 
 /* 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using `em` units. 
-   2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+   2. Prevent iOS text size adjust after orientation change, without disabling user zoom. 
+   3. Normalize font rendering in Firefox */
 html {
 	font-size: 100%; /* 1 */
 	-ms-text-size-adjust: 100%; /* 2 */
 	-webkit-text-size-adjust: 100%; /* 2 */
+	-moz-osx-font-smoothing: grayscale; /* 3 */
 }
 /* Address `font-family` inconsistency between `textarea` and other form elements. */
 html,
