@@ -72,6 +72,7 @@
 	border-left-color: $borderLeftColor-single-meta;
 	font-size: $fontSize-single-meta;
 	padding: $padding-single-meta;
+	margin-bottom: 30px;
 }
 .single .meta .post-title {
 	margin-bottom: 10px;
@@ -87,6 +88,12 @@
 }
 .single .meta em {
 	color: $color-news-metaEm;
+}
+.single .archiveLink,
+.single-calendar .archiveLink {
+	@extend .button;
+	@extend .backLink;
+	width: 100%;
 }
 
 /* Calendar */

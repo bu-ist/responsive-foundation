@@ -1,18 +1,7 @@
 /* widget */
 .widget {
-	margin-bottom: 40px;
+	margin-bottom: $widget-marginBottom;
 	font-size: $fontSize-widget;
-}
-.footbar-container .widget {
-	@extend .col-md-4;
-
-	@include breakpoint(medium) {
-		padding: 0 0 0 60px;
-
-		&:first-child {
-			padding: 0;
-		}
-	}
 }
 .widgetTitle {
 	font-size: $fontSize-widgetTitle;

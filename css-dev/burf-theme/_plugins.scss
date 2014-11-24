@@ -185,3 +185,40 @@
 .profile-listing .advanced figure img {
 	width: 100%;
 }
+/* single profile */
+.single-profile {
+}
+.single-profile article[role=main] h1 {
+	text-align: center;
+	padding-top: 145px;
+}
+.single-profile figure {
+	@include border-radius($borderRadius-profile-figure);
+	width: 120px;
+	height: 120px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -60px;
+}
+.single-profile figure img {
+	width: 100%;
+}
+.single-profile .profile-info {
+	border: 1px solid #ccc;
+	border-width: 1px 0;
+	padding-top: 20px;
+	margin-bottom: 20px;
+}
+.single-profile .profile-info dt {
+	text-transform: uppercase;
+	font-family: $fontFamily-sansSerif;
+	font-size: $fontSize-smaller;
+	font-weight: 700;
+	color: $color-grayScale-a;
+}
+.single-profile .profile-info dd {
+	font-size: $fontSize-small;
+	margin: 0 0 20px 0;
+}

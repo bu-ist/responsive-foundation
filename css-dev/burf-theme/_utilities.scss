@@ -8,6 +8,14 @@
 	right: 0;
 }
 
+/* back link */
+.backLink {
+	&:before {
+		content: '← ';
+		color: #aaa;
+	}
+}
+
 /* message */
 .message {
 	@include border-radius($borderRadius-message);
