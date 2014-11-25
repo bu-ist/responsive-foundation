@@ -53,12 +53,12 @@
 	display: none;
 }
 
-/* Sponsored branding (sometimes called non-entity, but people don't like that) */
-.brand-non-entity {
+/* Sponsored branding */
+.brand-sponsored {
 	font-size: 14px;
 }
 
-.brand-non-entity .siteName,
+.brand-sponsored .siteName,
 .brand-unbranded .siteName {
 	display: block;
 	color: #c00;
