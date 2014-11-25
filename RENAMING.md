@@ -24,8 +24,6 @@ Based on newly defined coding standards established in October 2014 by the BU We
 
 * #page_wrapper --> .wrapper
 * #utility --> .utilityNav
-* .mainNav --> .navContainer
-* #nav --> .primaryNav
 * #right-content-area --> .sidebar
 * #bottom-content-area --> .footbar
 * .responsive-video --> .responsiveVideo
@@ -36,12 +34,20 @@ Based on newly defined coding standards established in October 2014 by the BU We
 * .open --> .is-open
 * .navopen --> .nav-open (also changed in toggle.js, and needs to be adjusted in cfa theme)
 
+#### Remanimg. Again.
+
+* #nav --> .primaryNav --> .primaryNav-menu
+* .mainNav --> .navContainer --> .primaryNav
+* .contentWrapper --> .content
+	* .container --> .content-container
+* .footbar .container --> .footbar .footbar-container
+
 ## Additions
 
 * z-index scale in _variables.scss
 * sidebar widget border colors, sidebar widget background colors, page grid border colors, page grid background colors, footbar widget border colors in _variables.scss
 
-// nav border colors
+
 
 ## Restructuring
 
