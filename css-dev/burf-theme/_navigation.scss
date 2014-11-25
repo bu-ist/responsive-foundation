@@ -134,7 +134,7 @@ nav a {
 }
 
 /* when nav or search are opened */
-.is-open .primaryNav,
+.is-open .primaryNav-menu,
 .is-open .utilityNav {
 	display: block;
 	clear: left;
@@ -144,23 +144,23 @@ nav a {
 ----------------------------------------------------------------- */
 
 /* .mainNav */
-.navContainer {
+.primaryNav {
 	@include clearfix;
 	background: $color-grayScale-1;
 	display: block;
 	padding: 0 10px;
 }
-.navContainer .utilityNav {
+.primaryNav .utilityNav {
 	@include breakpoint(small) {
 		display: none;	
 	}	
 }
-.navContainer.is-open {
+.primaryNav.is-open {
 	height: auto;
 }
 
-/* .primaryNav */
-.primaryNav {
+/* .primaryNav-menu */
+.primaryNav-menu {
 	display: none;
 	margin: 40px 10px 20px 10px;
 	//border-bottom: 1px solid $color-nav-border;
@@ -171,7 +171,7 @@ nav a {
 		margin: 0;
 	}
 }
-.primaryNav li {
+.primaryNav-menu li {
 	zoom: 1;
 	display: block;
 	@include breakpoint(small) {
@@ -180,7 +180,7 @@ nav a {
 		border: none;
 	}
 }
-.primaryNav a {
+.primaryNav-menu a {
 	display: block;
 	padding: 10px 0;
 	text-decoration: none;
@@ -197,11 +197,11 @@ nav a {
 		padding: 0 10px;
 	}
 }
-.primaryNav li a.active,
-.primaryNav li a.active_section {
+.primaryNav-menu li a.active,
+.primaryNav-menu li a.active_section {
 	color: $color-nav-link-current;
 }
-.primaryNav ul {
+.primaryNav-menu ul {
 	display: none;
 	@include breakpoint(small) {
 		display: block;
@@ -212,15 +212,15 @@ nav a {
 		width: 240px;
 	}
 }
-.primaryNav li:hover ul,
-.primaryNav li:focus ul {
+.primaryNav-menu li:hover ul,
+.primaryNav-menu li:focus ul {
 	left: auto;
 }
-.primaryNav li li {
+.primaryNav-menu li li {
 	display: block;
 	padding: 0 10px;
 }
-.primaryNav li li a {
+.primaryNav-menu li li a {
 	line-height: $lineHeight-base;
 	color: $color-nav-link;
 	padding: 10px 0;
@@ -269,7 +269,7 @@ nav a {
 /* nav on left
 ----------------------------------------------------------------- */
 
-.l-sideNav .contentWrapper {
+.l-sideNav .content {
 	@include breakpoint(small) {	
 		margin-left:60px;
 	}
@@ -277,7 +277,7 @@ nav a {
 		margin-left:300px;
 	}
 }
-.l-sideNav .navContainer  {	
+.l-sideNav .primaryNav  {	
 	padding: 0;
 	
 	@include breakpoint(small) {	
@@ -290,7 +290,7 @@ nav a {
 		padding: 20px;
 	}
 }
-.l-sideNav .primaryNav {
+.l-sideNav .primaryNav-menu {
 	border-bottom: 1px solid $color-nav-border;
 
 	@include breakpoint(small) {	
@@ -301,19 +301,19 @@ nav a {
 		margin: 0 0 20px;
 	}
 }
-.l-sideNav .primaryNav li {
+.l-sideNav .primaryNav-menu li {
 	display: block;
 	padding: 0;
 }
-.l-sideNav .primaryNav a {
+.l-sideNav .primaryNav-menu a {
 	border-top: 1px solid $color-nav-border;
 	padding: 10px 0;
 	line-height: $lineHeight-base;
 }
-.l-sideNav .primaryNav ul {
+.l-sideNav .primaryNav-menu ul {
 	display: none;
 }
-.l-sideNav .is-open .primaryNav,
+.l-sideNav .is-open .primaryNav-menu,
 .l-sideNav .is-open .utilityNav {
 	margin: 0 10px 20px;
 }
@@ -333,7 +333,7 @@ nav a {
 	@include breakpoint(small) {
 	}
 }
-.l-sideNav .navContainer .searchToggle {
+.l-sideNav .primaryNav .searchToggle {
 	@include breakpoint(small) {	
 		display: none;
 	}
@@ -368,7 +368,7 @@ nav a {
 	display: block;
 	padding-left: 0;
 }
-.l-sideNav.nav-open .contentWrapper {
+.l-sideNav.nav-open .content {
 	@include breakpoint(small) {
 		left: 240px;
 	}
@@ -376,7 +376,7 @@ nav a {
 		left: 0;
 	}
 }
-.l-sideNav.nav-open .primaryNav,
+.l-sideNav.nav-open .primaryNav-menu,
 .l-sideNav.nav-open .utilityNav {
 	display: block;
 	float: none;

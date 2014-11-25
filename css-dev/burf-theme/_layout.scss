@@ -1,8 +1,11 @@
 body {
 	background: $color-body-bg;
 }
-.contentWrapper {
-	background: $color-contentWrapper-bg;
+.content {
+	background: $color-content-bg;
+}
+.content-container {
+	@extend .container;
 }
 
 /* masthead

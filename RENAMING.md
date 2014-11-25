@@ -36,7 +36,7 @@ Based on newly defined coding standards established in October 2014 by the BU We
 
 #### Remanimg. Again.
 
-* #nav --> .primaryNav --> .primaryNav-menu
+* #nav --> .primaryNav-menu --> .primaryNav-menu-menu
 * .mainNav --> .navContainer --> .primaryNav
 * .contentWrapper --> .content
 	* .container --> .content-container
@@ -63,7 +63,7 @@ Based on newly defined coding standards established in October 2014 by the BU We
 ## TODO
 
 * Remove any instance of generic grid classes from template markup, e.g. `.col-md-8` and instead use `@extend`
-* Create global typography styles that work for all content, including widgets, without specifically having to target `<article>`. Overrides should be applied to all other areas, e.g. the `primaryNav`. 
+* Create global typography styles that work for all content, including widgets, without specifically having to target `<article>`. Overrides should be applied to all other areas, e.g. the `primaryNav-menu`. 
 * rgba colors are not consistently using mixin or don't have have solid fallback (e.g. in `.footbar`)
 
 
