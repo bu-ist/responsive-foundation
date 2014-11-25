@@ -107,16 +107,30 @@ nav a {
 
 /* search icon */
 .searchToggle {
-	@extend %hide-text;
+	@extend .icon;
+	@extend .icon-search;
+	@include transition(color, 200ms, ease-in-out, 0s);
 	float: right;
 	width: 60px;
 	height: 60px;
-	cursor: pointer;
-	background: transparent url($image-searchToggle-sprite) no-repeat 15px 14px;
+	font-size: 32px;
+	line-height: 60px;
+	color: $color-grayScale-9;
+	text-align: center;
 
-	// @include breakpoint(small) {
-	// 	margin-top: 5px;
-	// }
+	&:visited {
+		color: $color-grayScale-9;
+	}
+	&:hover {
+		color: $color-grayScale-f;
+	}
+}
+.searchToggle span {
+	display: none;
+}
+
+.searchToggle.is-open {
+	@extend .icon-close;
 }
 
 /* when nav or search are opened */
@@ -124,7 +138,6 @@ nav a {
 .is-open .utilityNav {
 	display: block;
 	clear: left;
-	// padding-top: 10px;
 }
 
 /* nav above and below masthead

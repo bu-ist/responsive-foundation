@@ -198,6 +198,15 @@ article[role=main] {
 		padding-left: 30px;
 	}
 }
+.siteFooter-social {
+	text-align: center;
+
+	@include breakpoint(small) {
+		text-align: left;
+	}
+}
+
+
 /* utility class for displaying lists of links inline. Use @extend */
 .u-list-inlineLinks {
 	display: inline-block;
