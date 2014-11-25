@@ -15,6 +15,8 @@ html:hover [class^="icon-"] {
 .icon,
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
+	display: inline-block;
+	vertical-align: bottom;
 	font-family: "bu-default-icons";
 	font-style: normal !important;
 	font-weight: normal !important;
@@ -115,7 +117,9 @@ html:hover [class^="icon-"] {
 .icon-wordpress {
 	content: "\F621"
 }
-
+.icon-youtube {
+	content: "\F630"
+}
 
 
 
@@ -559,14 +563,68 @@ html:hover [class^="icon-"] {
 
 /* Footer links */
 
-.siteFooter-social a[href*="facebook.com"]:before {
-	@extend .icon;
-	
-	font-size: $fontSize-large;
-	margin: 0 9px 0 0;
-	vertical-align: middle;
-	content: "\f61A";
+.siteFooter-social a {
+	@include transition(color, 200ms, ease-in-out, 0s);
 }
 
+.siteFooter-social a i {
+	@extend .icon;
+	font-size: $fontSize-large;
+}
+.siteFooter-social a[href*="facebook.com"] i:before {
+	@extend .icon-facebook-alt;
+}
+.siteFooter-social a[href*="flickr.com"] i:before {
+	@extend .icon-flickr;
+}
+.siteFooter-social a[href*="foursquare.com"] i:before {
+	@extend .icon-foursquare;
+}
+.siteFooter-social a[href*="github.com"] i:before {
+	@extend .icon-github;
+}
+.siteFooter-social a[href*="googleplus.com"] i:before {
+	@extend .icon-googleplus;
+}
+.siteFooter-social a[href*="instagram.com"] i:before {
+	@extend .icon-instagram;
+}
+.siteFooter-social a[href*="kickstarter.com"] i:before {
+	@extend .icon-kickstarter;
+}
+.siteFooter-social a[href*="linkedin.com"] i:before {
+	@extend .icon-linkedin;
+}
+.siteFooter-social a[href*="pinterest.com"] i:before {
+	@extend .icon-pinterest;
+}
+.siteFooter-social a[href*="tumblr.com"] i:before {
+	@extend .icon-tumblr;
+}
+.siteFooter-social a[href*="twitter.com"] i:before {
+	@extend .icon-twitter;
+}
+.siteFooter-social a[href*="youtube.com"] i:before {
+	@extend .icon-youtube;
+}
+.siteFooter-social a[href*="vimeo.com"] i:before {
+	@extend .icon-vimeo;
+}
+/* hide labels */
+.siteFooter-social a[href*="facebook.com"] span,
+.siteFooter-social a[href*="flickr.com"] span,
+.siteFooter-social a[href*="foursquare.com"] span,
+.siteFooter-social a[href*="github.com"] span,
+.siteFooter-social a[href*="googleplus.com"] span,
+.siteFooter-social a[href*="instagram.com"] span,
+.siteFooter-social a[href*="kickstarter.com"] span,
+.siteFooter-social a[href*="linkedin.com"] span,
+.siteFooter-social a[href*="pinterest.com"] span,
+.siteFooter-social a[href*="tumblr.com"] span,
+.siteFooter-social a[href*="twitter.com"] span,
+.siteFooter-social a[href*="youtube.com"] span,
+.siteFooter-social a[href*="vimeo.com"] span {
+	display: none;
+}
 
 
