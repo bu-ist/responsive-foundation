@@ -57,6 +57,19 @@ body {
 
 article[role=main] {
 	@extend .col-md-8;
+	padding-bottom: $column-paddingBottom;
+
+	@include breakpoint(small) {
+		padding-bottom: $column-paddingBottom-largeScreen;	
+	}
+}
+
+/* narrow content */
+
+.single-calendar article[role=main],
+.single-profile article[role=main] {
+	margin: 0 auto;
+	float: none;
 }
 
 /* sidebar
@@ -67,7 +80,29 @@ article[role=main] {
 	font-size: $fontSize-small;
 
 	@include breakpoint(medium) {
+		padding: $sidebar-padding;
+	}
+}
+
+/* narrow sidebar */
+
+.sidebarPosts,
+.sidebarProfiles {
+	@extend .col-md-8;
+	@include clearfix;
+	margin: 0 auto;
+	float: none;
+}
+.sidebarPosts .widget,
+.sidebarProfiles .widget {
+	@extend .col-md-6;
+
+	@include breakpoint(medium) {
 		padding: $grid-sidebar-padding;
+
+		&:first-child {
+			padding: 0;
+		}
 	}
 }
 
@@ -78,6 +113,7 @@ article[role=main] {
 	@include clearfix;
 	background: $color-footbar-bg;
 	width: 100%;
+	padding-bottom: $footbar-paddingBottom;
 
 	@include breakpoint(medium) {
 		padding: $grid-container-padding-largeScreen;
@@ -88,6 +124,17 @@ article[role=main] {
 
 	@include breakpoint(medium) {
 		padding: $grid-column-padding;
+	}
+}
+.footbar-container .widget {
+	@extend .col-md-4;
+
+	@include breakpoint(medium) {
+		padding: $grid-sidebar-padding;
+
+		&:first-child {
+			padding: 0;
+		}
 	}
 }
 

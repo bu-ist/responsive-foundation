@@ -81,8 +81,8 @@ $fontSize-widget-calendarDateDay:          $fontSize-large !default;
 $fontSize-widget-calendarDateMonth:        $fontSize-smallest !default;
 $fontSize-profile-name:                    $fontSize-medium !default;
 $fontSize-profile-title:                   $fontSize-small !default;
-$fontSize-profile-mini-name:              $fontSize-small !default;
-$fontSize-profile-mini-email:               $fontSize-smaller !default;
+$fontSize-profile-mini-name:               $fontSize-small !default;
+$fontSize-profile-mini-email:              $fontSize-smaller !default;
 
 // line-height
 $lineHeight-widgetTitle:                   $lineHeight-large !default;
@@ -94,7 +94,7 @@ $lineHeight-profile-mini-email:            $lineHeight-medium !default;
 
 
 // font-family
-$fontFamily-base:                          "TiemposText", Georgia, serif !default;
+$fontFamily-base:                          "Benton", sans-serif !default;
 $fontFamily-serif:                         "TiemposText", Georgia, serif !default;
 $fontFamily-sansSerif:                     "Benton", sans-serif !default;
 $fontFamily-brand:                         "Whitney SSm A", "Whitney SSm B" !default;
@@ -113,11 +113,16 @@ $fontFamily-profile-name:                  $fontFamily-sansSerif !default;
 $fontFamily-profile-title:                 $fontFamily-base !default;
 
 // margin/padding
+$column-paddingBottom:                     10px !default;
+$column-paddingBottom-largeScreen:         35px !default;
+$sidebar-padding:                          0 0 35px 60px !default;
 $comment-margin:                           15px 0 !default;
 $comment-padding:                          15px 0 0 !default;
 $padding-message:                          20px !default;
 $padding-single-meta:                      20px !default;
 $padding-monthCalendar-cell:               4px !default;
+$widget-marginBottom:                      40px !default;
+$footbar-paddingBottom:                    20px !default;
 
 
 // borders

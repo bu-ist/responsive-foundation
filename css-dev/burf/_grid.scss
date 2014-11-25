@@ -139,8 +139,7 @@ margin-bottom: 0;
 
 /* small screens */
 @include breakpoint(small) {
-	.container,
-	.footbar div {
+	.container {
 		max-width: $container-S;
 	}
 	.col-sm-1,
@@ -196,8 +195,7 @@ margin-bottom: 0;
 
 /* medium screens */
 @include breakpoint(medium) {
-	.container,
-	.footbar div {
+	.container {
 		max-width: $container-M;
 	}
 	.col-md-1,
