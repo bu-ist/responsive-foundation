@@ -1,14 +1,14 @@
-// PLugins
-
-/*
+/* Plugins contents:
 
 	1. Collapsible divs
 	2. Profiles
 	3. Course feeds
 
-*/
+----------------------------------------------------------------- */
 
-/* Collapsible divs */
+/* Collapsible Divs
+----------------------------------------------------------------- */
+
 .bu_collapsible {
 	padding-right: 30px;
 	position: relative;
@@ -38,7 +38,10 @@
 	border-top-color: transparent;
 	border-bottom-color: $borderColor-collapsible-after-hover;
 }
-/* Profiles */
+
+/* Profiles
+----------------------------------------------------------------- */
+
 .profile-listing {
 	@include clearfix;
 }
@@ -124,13 +127,9 @@
 }
 .profile-listing .mini {
 	@include clearfix;
-	//border: 1px solid $borderColor-profile-mini;
-	//border-width: 1px 0 0 1px;
 }
 .profile-listing .mini li {
 	@extend .col-md-6;
-	//border: 1px solid $borderColor-profile-mini;
-	//border-width: 0 1px 1px 0;
 	margin: 0;
 	padding: 0 0 15px 75px;
 	min-height: 90px;
@@ -191,6 +190,10 @@
 .single-profile article[role=main] h1 {
 	text-align: center;
 	padding-top: 145px;
+	margin-bottom: 0;
+}
+.single-profile article[role=main] h2 {
+	text-align: center;
 }
 .single-profile figure {
 	@include border-radius($borderRadius-profile-figure);
@@ -206,19 +209,36 @@
 	width: 100%;
 }
 .single-profile .profile-info {
-	border: 1px solid #ccc;
-	border-width: 1px 0;
-	padding-top: 20px;
-	margin-bottom: 20px;
+	@extend .message;
+	margin: 0 0 20px 0;
+	
+	@include breakpoint(small) {
+		float: right;
+		width: 33.33333333333333%;
+		margin: 0 0 20px 20px;
+	}
 }
-.single-profile .profile-info dt {
+.single-profile .profile-info ul {
+	margin: 0;
+	padding: 0;
+}
+.single-profile .profile-info li {
+	font-size: $fontSize-small;
+	list-style: none;
+	margin: 0 0 20px 0;
+	word-wrap: break-word;
+}
+.single-profile .profile-info .label {
 	text-transform: uppercase;
 	font-family: $fontFamily-sansSerif;
 	font-size: $fontSize-smaller;
 	font-weight: 700;
 	color: $color-grayScale-a;
+	display: block;
 }
-.single-profile .profile-info dd {
-	font-size: $fontSize-small;
-	margin: 0 0 20px 0;
+.single-profile .profile-bio {
 }
+
+/* Course Feeds
+----------------------------------------------------------------- */
+

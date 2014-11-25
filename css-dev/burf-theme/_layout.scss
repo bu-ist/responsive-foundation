@@ -67,13 +67,6 @@ article[role=main] {
 	}
 }
 
-/* narrow content */
-
-.single-calendar article[role=main],
-.single-profile article[role=main] {
-	margin: 0 auto;
-	float: none;
-}
 
 /* sidebar
 ----------------------------------------------------------------- */
@@ -84,28 +77,6 @@ article[role=main] {
 
 	@include breakpoint(medium) {
 		padding: $sidebar-padding;
-	}
-}
-
-/* narrow sidebar */
-
-.sidebarPosts,
-.sidebarProfiles {
-	@extend .col-md-8;
-	@include clearfix;
-	margin: 0 auto;
-	float: none;
-}
-.sidebarPosts .widget,
-.sidebarProfiles .widget {
-	@extend .col-md-6;
-
-	@include breakpoint(medium) {
-		padding: $grid-sidebar-padding;
-
-		&:first-child {
-			padding: 0;
-		}
 	}
 }
 

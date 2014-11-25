@@ -27,6 +27,7 @@ $color-single-meta-bg:                     $color-grayScale-f0 !default;
 $color-calendar-headingDateRange:          $color-grayScale-9 !default;
 $color-calendar-eventLink:                 $color-link !default;
 $color-calendar-eventLink-hover:           $color-link !default;
+$color-calendarSingle-label:               $color-grayScale-9 !default;
 $color-calendarMonth-caption:              $color-grayScale-7 !default;
 $color-calendarMonth-th-bg:                $color-grayScale-e !default;
 $color-calendarMonth-th:                   $color-grayScale-0 !default;
@@ -111,6 +112,9 @@ $fontFamily-widget-calendar-date:          $fontFamily-sansSerif !default;
 $fontFamily-comment:                       $fontFamily-sansSerif !default;
 $fontFamily-profile-name:                  $fontFamily-sansSerif !default;
 $fontFamily-profile-title:                 $fontFamily-base !default;
+
+//font-weight
+$fontWeight-calendar-label:                700;
 
 // margin/padding
 $column-paddingBottom:                     10px !default;
