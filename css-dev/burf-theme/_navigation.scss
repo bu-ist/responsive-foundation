@@ -18,41 +18,96 @@ nav a {
 	width: auto;
 }
 
-/* #quicksearch (use WordPress plugin class name) */
+/* quicksearch (use WordPress plugin class name)
+----------------------------------------------------------------- */
 #quicksearch {
 	position: relative;
 	display: none;
-	padding: 0 15px 20px 15px;
+	padding: 30px 20px;
 	margin: 0;
 	background: $color-search-bg;
-
-	@include breakpoint(small) {
-		padding: 0 20px 20px 20px;
-	}
 }
 #quicksearch fieldset {
 	margin: 0;
+
+	@include breakpoint(small) {
+		max-width: $container-S;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
 }
 #quicksearch label,
 #quicksearch select {
 	display: none;
 }
+#quicksearch .button {
+	@extend .button-primary;
+	@include border-radius(0 20px 20px 0);
+	width: 25%;
+	padding-left: 0;
+	padding-right: 0;
+
+	@include breakpoint(small) {
+		width: 15%;
+	}
+}
 #quicksearch.is-open {
 	display: block;
+	border-bottom: $border-search;
 }
 #q {
-	width: 100%;
-	padding: 10px 0;
-	border: none;
+	@include border-radius(20px 0 0 20px);
+	width: 75%;
+	padding-left: 10px;
+	padding-right: 10px;
 	color: $color-search-text;
-	background: none;
 
-	@include breakpoint(large) {
-		padding: 15px 0;
+	@include breakpoint(small) {
+		width: 85%;
 	}
 }
 
-/* nav menu */
+/* searchToggle
+----------------------------------------------------------------- */
+.searchToggle {
+	@extend .icon;
+	@extend .icon-search;
+	@include transition(color, 200ms, ease-in-out, 0s);
+	float: right;
+	width: 60px;
+	height: 60px;
+	font-size: 31px;
+	line-height: 60px;
+	padding: 0;
+	color: $color-navToggle;
+	text-align: center;
+
+	&:visited {
+		color: $color-navToggle;
+	}
+	&:hover {
+		color: $color-navToggle-hover;
+	}
+}
+.searchToggle span {
+	display: none;
+}
+
+.searchToggle.is-open {
+	@extend .icon-close;
+}
+
+/* when nav or search are opened */
+.is-open .primaryNav-menu,
+.is-open .utilityNav {
+	display: block;
+	clear: left;
+}
+
+
+/* navToggle
+----------------------------------------------------------------- */
+
 .navToggle {
 	@extend %hide-text;
 	float: left;
@@ -105,45 +160,9 @@ nav a {
 	@include rotate (-45);
 }
 
-/* search icon */
-.searchToggle {
-	@extend .icon;
-	@extend .icon-search;
-	@include transition(color, 200ms, ease-in-out, 0s);
-	float: right;
-	width: 60px;
-	height: 60px;
-	font-size: 32px;
-	line-height: 60px;
-	color: $color-grayScale-9;
-	text-align: center;
-
-	&:visited {
-		color: $color-grayScale-9;
-	}
-	&:hover {
-		color: $color-grayScale-f;
-	}
-}
-.searchToggle span {
-	display: none;
-}
-
-.searchToggle.is-open {
-	@extend .icon-close;
-}
-
-/* when nav or search are opened */
-.is-open .primaryNav-menu,
-.is-open .utilityNav {
-	display: block;
-	clear: left;
-}
-
-/* nav above and below masthead
+/* primaryNav and menu
 ----------------------------------------------------------------- */
 
-/* .mainNav */
 .primaryNav {
 	@include clearfix;
 	background: $color-grayScale-1;
@@ -157,12 +176,11 @@ nav a {
 }
 .primaryNav.is-open {
 	height: auto;
+	padding-bottom: 20px;
 }
-
-/* .primaryNav-menu */
 .primaryNav-menu {
 	display: none;
-	margin: 40px 10px 20px 10px;
+	margin: 40px 10px 0 10px;
 	//border-bottom: 1px solid $color-nav-border;
 
 	@include breakpoint(small) {
@@ -226,19 +244,24 @@ nav a {
 	padding: 10px 0;
 }
 
-/* .utilityNav */
-.utilityNav {
-	@include vertical-center;
-	border: none;
-	display: none;
-	margin: 10px 0 20px 10px;
-	font-size: $fontSize-utilityNav;
+/* utilityNav
+----------------------------------------------------------------- */
 
+.utilityNav {
+	display: none;
+	margin: 0 10px;
+	padding: 20px 0 0;
+	border-top: 1px solid $color-nav-border;
+	font-size: $fontSize-utilityNav;
+}
+.brand .utilityNav {
 	@include breakpoint(small) {
+		@include vertical-center;
 		display: inline;
-		border: none;
 		float: right;
-		margin: 0 20px;
+		border: none;
+		margin: 0 20px 0 0;
+		padding: 0;
 	}
 }
 .utilityNav li {
@@ -266,39 +289,48 @@ nav a {
 	}
 }
 
-/* nav on left
+/* sideNav
 ----------------------------------------------------------------- */
 
 .l-sideNav .content {
-	@include breakpoint(small) {	
+	@include breakpoint(small) {
 		margin-left:60px;
 	}
 	@include breakpoint(large) {	
-		margin-left:300px;
+		margin-left: 240px;
+	}
+}
+.l-sideNav .content-container,
+.l-sideNav .footbar-container {
+	@include breakpoint(small) {
+		padding-left: 60px;
+		padding-right: 60px;
 	}
 }
 .l-sideNav .primaryNav  {	
-	padding: 0;
-	
 	@include breakpoint(small) {	
 		background: none;
 		position: absolute;
-		width: 300px;
+		width: 240px;
 	}
 	@include breakpoint(large) {	
 		display: block;
-		padding: 20px;
+		padding: 20px 10px;
 	}
 }
+.l-sideNav .navToggle {
+	@include breakpoint(small) {
+		margin-left: -10px;
+	}
+} 
 .l-sideNav .primaryNav-menu {
-	border-bottom: 1px solid $color-nav-border;
 
 	@include breakpoint(small) {	
 		display: none;
+		margin: 0 10px;
 	}
 	@include breakpoint(large) {	
 		display: block;
-		margin: 0 0 20px;
 	}
 }
 .l-sideNav .primaryNav-menu li {
@@ -310,27 +342,24 @@ nav a {
 	padding: 10px 0;
 	line-height: $lineHeight-base;
 }
+.l-sideNav .primaryNav-menu li:first-child a {
+	@include breakpoint(large) {
+		border: 0;
+	}
+}
 .l-sideNav .primaryNav-menu ul {
 	display: none;
 }
-.l-sideNav .is-open .primaryNav-menu,
-.l-sideNav .is-open .utilityNav {
-	margin: 0 10px 20px;
-}
-.l-sideNav #quicksearch {
-	background: $color-searchLight-bg;
-	padding: 0;
-	margin-top: 20px;
-	
-	@include breakpoint(small) {
-		margin-top: 60px;
-		background: $color-searchLight-bg;
-	}
-}
-.l-sideNav #q {
-	color: $color-searchLight-text;
 
-	@include breakpoint(small) {
+
+
+
+
+
+
+.l-sideNav #quicksearch {
+	@include breakpoint(small) {	
+		border-top: 1px solid $color-grayScale-d;
 	}
 }
 .l-sideNav .primaryNav .searchToggle {
@@ -339,15 +368,30 @@ nav a {
 	}
 }
 .l-sideNav .brand .searchToggle {
+
+	color: $color-navToggle-sideNav;
+
+	&:visited {
+		color: $color-navToggle-sideNav;
+	}
+
+	&:hover {
+		color: $color-navToggle-sideNav-hover;
+	}
+
 	@include breakpoint(small) {
+		@include vertical-center;
 		display: block;
-		background-position: -45px 14px;
-		margin: 0;
-		position: absolute;
 		right: 10px;
-		top: 22px;
 	}
 }
+
+
+
+
+
+
+
 .l-sideNav .navToggle {
 	display: block;
 	
@@ -371,6 +415,7 @@ nav a {
 .l-sideNav.nav-open .content {
 	@include breakpoint(small) {
 		left: 240px;
+		margin-left: 0;
 	}
 	@include breakpoint(large) {
 		left: 0;
@@ -380,6 +425,13 @@ nav a {
 .l-sideNav.nav-open .utilityNav {
 	display: block;
 	float: none;
+}
+
+/* top nav
+----------------------------------------------------------------- */
+
+.l-topNav #quicksearch {
+	border-bottom: 1px solid $color-grayScale-d;
 }
 
 /* no nav
@@ -399,7 +451,6 @@ nav a {
 	top: 22px;
 }
 .l-noNav .brand #quicksearch {
-	background: $color-searchLight-bg;
 	padding: 0;
 	margin-top: 20px;
 	margin-right: -60px;
@@ -410,8 +461,4 @@ nav a {
 }
 .l-noNav #q {
 	margin-top: 20px;
-	color: $color-searchLight-text;
-	
-	@include breakpoint(small) {
-	}
 }

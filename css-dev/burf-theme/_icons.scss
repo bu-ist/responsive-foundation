@@ -16,7 +16,8 @@ html:hover [class^="icon-"] {
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
 	display: inline-block;
-	vertical-align: bottom;
+	vertical-align: middle;
+	padding-bottom: 0.2em; /* Accomodate for inline icons */
 	font-family: "bu-default-icons";
 	font-style: normal !important;
 	font-weight: normal !important;
@@ -30,6 +31,10 @@ html:hover [class^="icon-"] {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
+}
+[class^="icon-"] span,
+[class*=" icon-"] span {
+	display: none;
 }
 
 /* social icons */
