@@ -15,7 +15,7 @@
 }
 .bu_collapsible:after {
 	border: 8px solid transparent;
-	border-top-color: $borderColor-collapsible-after;
+	border-top-color: $color-collapsible-after-border;
 	content: "";
 	position: absolute;
 	right: 0;
@@ -26,17 +26,17 @@
 }
 .bu_collapsible_open .bu_collapsible:after {
 	border-top-color: transparent;
-	border-bottom-color: $borderColor-collapsible-after;
+	border-bottom-color: $color-collapsible-after-border;
 	margin-top: -12px;
 }
 .bu_collapsible:hover:after,
 .bu_collapsible:focus:after {
-	border-top-color: $borderColor-collapsible-after-hover;
+	border-top-color: $color-collapsible-after-border-hover;
 }
 .bu_collapsible_open .bu_collapsible:hover:after,
 .bu_collapsible_open .bu_collapsible:focus:after {
 	border-top-color: transparent;
-	border-bottom-color: $borderColor-collapsible-after-hover;
+	border-bottom-color: $color-collapsible-after-border-hover;
 }
 
 /* Profiles

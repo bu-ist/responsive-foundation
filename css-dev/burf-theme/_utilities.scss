@@ -22,7 +22,7 @@
 	background-color: $color-message-bg;
 	border: $border-message;
 	border-width: $borderWidth-message;
-	border-left-color: $borderLeftColor-message;
+	border-left-color: $color-message-borderLeft;
 	font-size: $fontSize-message;
 	padding: $padding-message;
 }

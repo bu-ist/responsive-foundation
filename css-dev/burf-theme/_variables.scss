@@ -9,23 +9,27 @@ $color-masthead-bg:                        $color-grayScale-f !default;
 $color-brand:                              $color-grayScale-0 !default;
 $color-search-bg:                          $color-grayScale-f5 !default;
 $color-search-text:                        $color-grayScale-0 !default;
-$color-navToggle-sideNav:                  $color-grayScale-9 !default;
-$color-navToggle-sideNav-hover:            $color-grayScale-0 !default;
-$color-nav-dropdown-bg:                    $color-grayScale-0 !default;
-$color-nav-border:                         $color-grayScale-3 !default;
-$color-nav-link:                           $color-grayScale-9 !default;
-$color-nav-link-hover:                     $color-grayScale-f !default;
-$color-nav-link-current:                   $color-grayScale-f !default;
+$color-quicksearch-border:                 $color-grayScale-d !default;
+$color-primaryNav-bg:                      $color-grayScale-0 !default;
+$color-primaryNav-dropdown-bg:             $color-grayScale-0 !default;
+$color-primaryNav-border:                  $color-grayScale-3 !default;
+$color-primaryNav-link:                    $color-grayScale-f !default;
+$color-primaryNav-link-hover:              $color-grayScale-a !default;
+$color-primaryNav-link-current:            $color-grayScale-9 !default;
 $color-navToggle:                          $color-grayScale-f !default;
-$color-navToggle-hover:                    $color-grayScale-f !default;
+$color-navToggle-hover:                    $color-grayScale-a !default;
+$color-navToggle-alt:                      $color-grayScale-9 !default;
+$color-navToggle-alt-hover:                $color-grayScale-0 !default;
 $color-utilityNav-link:                    $color-grayScale-7 !default;
 $color-utilityNav-link-hover:              $color-grayScale-0 !default;
 $color-bannerContainer:                    $color-grayScale-f0 !default;
 $color-content-bg:                         $color-grayScale-f !default;
 $color-message-bg:                         $color-grayScale-f0 !default;
+$color-message-borderLeft:                 $color-grayScale-0 !default;
 $color-news-metaEm:                        $color-grayScale-7 !default;
 $color-news-metaBefore:                    $color-grayScale-a !default;
 $color-single-meta-bg:                     $color-grayScale-f0 !default;
+$color-single-meta-borderLeft:             $color-message-borderLeft !default;
 $color-calendar-headingDateRange:          $color-grayScale-9 !default;
 $color-calendar-eventLink:                 $color-link !default;
 $color-calendar-eventLink-hover:           $color-link !default;
@@ -41,6 +45,7 @@ $color-calendarMonth-cellLinkToday-bg:     $color-grayScale-e !default;
 $color-calendarMonth-cellLinkToday:        $color-grayScale-0 !default;
 $color-profile-name:                       $color-link !default;
 $color-profile-title:                      $color-base !default;
+$color-profile-mini-border:                $color-grayScale-e !default;
 $color-widgetTitle:                        $color-grayScale-0 !default;
 $color-widget-calendarDate:                $color-grayScale-0 !default;
 $color-widget-calendarDateDay:             $color-grayScale-0 !default;
@@ -57,6 +62,9 @@ $color-comment-reply:                      $color-grayScale-a !default;
 $color-comment-author:                     $color-grayScale-a !default;
 $color-comment-authorName:                 $color-grayScale-0 !default;
 $color-commentForm-bg:                     $color-grayScale-f5 !default;
+$color-collapsible-after-border:           $color-grayScale-c !default;
+$color-collapsible-after-border-hover:     $color-link !default;
+
 
 
 // typography & vertical whitespace
@@ -135,17 +143,20 @@ $footbar-paddingBottom:                    20px !default;
 // -----------------------------------------------------------------
 
 $border-masthead:                          1px solid $color-grayScale-d !default;
+$borderWidth-masthead:                     0 0 1px 0 !default;
+$borderWidth-primaryNav:                   1px 0 0 0 !default;
+$borderWidth-utilityNav:                   1px 0 0 0 !default;
+$border-search:                            0 !default;
+$borderWidth-quicksearch:                  1px 0 0 0 !default;
+$borderRadius-quicksearch-input:           20px 0 0 20px !default;
+$borderRadius-quicksearch-button:          0 20px 20px 0 !default;
 $border-message:                           1px solid $color-grayScale-d;
 $borderWidth-message:                      1px 1px 1px 5px !default;
-$borderLeftColor-message:                  $color-grayScale-0 !default;
 $borderRadius-message:                     3px !default;
-$borderWidth-masthead:                     0 0 1px 0 !default;
-$border-search:                            0 !default;
 $border-news-post:                         1px solid $color-grayScale-d !default;
 $borderWidth-news-post:                    1px 0 0 0 !default;
 $border-single-meta:                       $border-message !default;
 $borderWidth-single-meta:                  $borderWidth-message !default;
-$borderLeftColor-single-meta:              $borderLeftColor-message !default;
 $borderRadius-single-meta:                 $borderRadius-message !default;
 $border-widgetTitle:                       4px solid $color-grayScale-0 !default;
 $borderWidth-widgetTitle:                  0 0 4px 0 !default;
@@ -157,11 +168,13 @@ $border-comment:                           1px solid $color-grayScale-c !default
 $borderWidth-comment:                      1px 0 0 0 !default;
 $border-commentForm:                       1px solid $color-grayScale-e !default;
 $borderWidth-commentForm:                  3px !default;
-$borderColor-collapsible-after:            $color-grayScale-c !default;
-$borderColor-collapsible-after-hover:      $color-link !default;
 $border-profiles:                          1px solid $color-grayScale-c !default;
 $borderRadius-profile-figure:              50%;
-$borderColor-profile-mini:                 $color-grayScale-e !default;
+
+// dimensions
+// -----------------------------------------------------------------
+
+$width-sideNav:                            240px !default;
 
 
 // images
