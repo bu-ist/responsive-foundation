@@ -153,6 +153,8 @@ $borderRadius-quicksearch-button:          0 20px 20px 0 !default;
 $border-message:                           1px solid $color-grayScale-d;
 $borderWidth-message:                      1px 1px 1px 5px !default;
 $borderRadius-message:                     3px !default;
+$borderColor-table:                        $color-grayScale-d !default;
+$borderColor-table-dark:                   $color-grayScale-9 !default;
 $border-news-post:                         1px solid $color-grayScale-d !default;
 $borderWidth-news-post:                    1px 0 0 0 !default;
 $border-single-meta:                       $border-message !default;
@@ -175,6 +177,8 @@ $borderRadius-profile-figure:              50%;
 // -----------------------------------------------------------------
 
 $width-sideNav:                            240px !default;
+
+$boxShadow-table:                          inset -20px 0px 20px -10px $color-grayScale-f0;
 
 
 // images
