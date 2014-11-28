@@ -4,7 +4,7 @@
 
 .brand {
 	@include vertical-center-child;
-	height: 120px;
+	height: $height-brand;
 	padding: 0 0 0 20px;
 	overflow: hidden;
 	font-family: $fontFamily-brand;

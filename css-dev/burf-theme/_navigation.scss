@@ -312,11 +312,17 @@ nav a {
 	@include breakpoint(small) {	
 		background: none;
 		position: absolute;
+		top: $height-brand;
 		width: $width-sideNav;
 	}
 	@include breakpoint(large) {	
 		display: block;
 		padding: 20px 10px;
+	}
+}
+.search-open.l-sideNav .primaryNav  {	
+	@include breakpoint(small) {
+		top: $height-brand + 98px; /* adds the height of the open search form */
 	}
 }
 .l-sideNav .navToggle {

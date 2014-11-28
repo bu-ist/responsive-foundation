@@ -139,7 +139,7 @@ $widget-marginBottom:                      40px !default;
 $footbar-paddingBottom:                    20px !default;
 
 
-// borders
+// borders & shadows
 // -----------------------------------------------------------------
 
 $border-masthead:                          1px solid $color-grayScale-d !default;
@@ -172,13 +172,13 @@ $border-commentForm:                       1px solid $color-grayScale-e !default
 $borderWidth-commentForm:                  3px !default;
 $border-profiles:                          1px solid $color-grayScale-c !default;
 $borderRadius-profile-figure:              50%;
+$boxShadow-table:                          inset -20px 0px 20px -10px $color-grayScale-f0;
 
 // dimensions
 // -----------------------------------------------------------------
 
+$height-brand:                             120px !default;
 $width-sideNav:                            240px !default;
-
-$boxShadow-table:                          inset -20px 0px 20px -10px $color-grayScale-f0;
 
 
 // images
