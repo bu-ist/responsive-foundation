@@ -177,6 +177,10 @@ nav a {
 .primaryNav.is-open {
 	height: auto;
 	padding-bottom: 20px;
+
+	@include breakpoint(small) {
+		padding-bottom: 0;
+	}
 }
 .primaryNav-menu {
 	display: none;
@@ -279,14 +283,16 @@ nav a {
 .utilityNav a {
 	text-decoration: none;
 	color: $color-utilityNav-link;
-	
-	&:hover,
-	&:focus {
-		color: $color-primaryNav-link-hover;
 
-		@include breakpoint(small) {
-			color: $color-utilityNav-link-hover;
-		}
+	&:hover {
+		color: $color-utilityNav-link-hover;
+	}
+}
+.primaryNav .utilityNav a {
+	color: $color-utilityNav-inPrimaryNav-link;
+
+	&:hover {
+		color: $color-utilityNav-inPrimaryNav-link-hover;
 	}
 }
 
