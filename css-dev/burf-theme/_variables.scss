@@ -26,6 +26,7 @@ $color-utilityNav-inPrimaryNav-link:       $color-grayScale-a !default;
 $color-utilityNav-inPrimaryNav-link-hover: $color-grayScale-f !default;
 $color-bannerContainer:                    $color-grayScale-f0 !default;
 $color-content-bg:                         $color-grayScale-f !default;
+$color-caption:                            $color-grayScale-9 !default;
 $color-message-bg:                         $color-grayScale-f0 !default;
 $color-message-borderLeft:                 $color-grayScale-0 !default;
 $color-news-metaEm:                        $color-grayScale-7 !default;
@@ -75,6 +76,7 @@ $color-collapsible-after-border-hover:     $color-link !default;
 // font-size
 $fontSize-navigation:                      $fontSize-small !default;
 $fontSize-utilityNav:                      $fontSize-smaller !default;
+$fontSize-caption:                         $fontSize-smaller !default;
 $fontSize-message:                         $fontSize-small !default;
 $fontSize-news-meta:                       $fontSize-smaller !default;
 $fontSize-single-meta:                     $fontSize-small !default;
@@ -114,6 +116,7 @@ $fontFamily-brand:                         "Whitney SSm A", "Whitney SSm B" !def
 $fontFamily-brand-sponsored:               $fontFamily-brand !default;
 $fontFamily-brand-unbranded:               $fontFamily-sansSerif !default;
 $fontFamily-navigation:                    $fontFamily-sansSerif !default;
+$fontFamily-caption:                       $fontFamily-sansSerif !default;
 $fontFamily-news-meta:                     $fontFamily-sansSerif !default;
 $fontFamily-calendarMonth-caption:         $fontFamily-sansSerif !default;
 $fontFamily-calendarMonth-cell:            $fontFamily-sansSerif !default;

@@ -63,9 +63,7 @@ img.alignright {
 div.alignright {
 	float: right;
 	margin: 0 0 10px 10px;
-	background: $color-grayScale-f;
 	width: auto !important;
-	padding: 10px;
 	max-width: 100%;
 }
 div.alignright p {
@@ -81,9 +79,7 @@ img.alignleft {
 div.alignleft {
 	float: left;
 	margin: 0 10px 10px 0;
-	background: $color-grayScale-f;
 	width: auto !important;
-	padding: 10px;
 	max-width: 100%;
 }
 div.alignleft p {
@@ -98,8 +94,6 @@ img.aligncenter {
 }
 div.aligncenter {
 	margin: 0 auto;
-	background: $color-grayScale-f;
-	padding: 10px;
 	max-width: 100%;
 }
 div.aligncenter p {
@@ -109,10 +103,10 @@ div.aligncenter img {
 	margin-bottom: 5px;
 }
 .wp-caption {
-	color: $color-grayScale-9;
-	font-size: $fontSize-smaller;
+	color: $color-caption;
+	font-size: $fontSize-caption;
 	line-height: 1.4;
-	font-family: $fontFamily-sansSerif;
+	font-family: $fontFamily-caption;
 }
 .wp-caption p {
 	clear: both;
