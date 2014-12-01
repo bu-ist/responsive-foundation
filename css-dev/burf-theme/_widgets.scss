@@ -1,4 +1,15 @@
-/* widget */
+/* widget contents:
+
+	1. Basic Widgets
+	2. BU Posts
+	3. Content Nav
+	4. Calendar
+
+----------------------------------------------------------------- */
+
+/* Basic Widgets
+----------------------------------------------------------------- */
+
 .widget {
 	margin-bottom: $widget-marginBottom;
 	font-size: $fontSize-widget;
@@ -34,7 +45,9 @@
 	padding: 0;
 }
 
-/* BU Posts */
+/* BU Posts
+----------------------------------------------------------------- */
+
 .widget-bu-posts {
 	
 }
@@ -72,22 +85,26 @@
 	color: $color-widget-postMeta;
 }
 .widget-bu-posts .comment-counter {
-	// margin-left: 4px;
-	// padding-left: 8px;
 }
 
-/* content nav */
-#contentnav h3 {
+/* Content Nav
+----------------------------------------------------------------- */
+
+#contentnav h3,
+.widget_nav_menu h3 {
 	margin-bottom: 0;
 }
-#contentnav ul {
+#contentnav ul,
+.widget_nav_menu ul {
 	border: $border-widget-contentnav;
 	border-width: $borderWidth-widget-contentnav;
 }
-#contentnav h3 + ul {
+#contentnav h3 + ul,
+.widget_nav_menu h3 + ul {
 	border-width: 0 0 1px;
 }
-#contentnav li {
+#contentnav li,
+.widget_nav_menu li {
 	border: $border-widgetList;
 	border-width: $borderWidth-widgetList;
 	font-family: $fontFamily-widget-contentnav;
@@ -96,36 +113,46 @@
 		border: none;
 	}
 }
-#contentnav li a {
+#contentnav li a,
+.widget_nav_menu li a {
 	display: block;
 	padding: 10px 0;
 	font-size: $fontSize-widget-contentnav-link;
 	color: $color-widget-contentnav;
 }
 #contentnav li a:hover,
-#contentnav li a:focus {
+#contentnav li a:focus,
+.widget_nav_menu li a:hover,
+.widget_nav_menu li a:focus {
 	color: $color-widget-contentnav-hover;
 	text-decoration: none;
 }
-#contentnav .current_page_item a {
+#contentnav .current_page_item a,
+.widget_nav_menu .current_page_item a {
 	 color: $color-widget-contentnav-active;
 }
-#contentnav .current_page_item li a {
+#contentnav .current_page_item li a,
+.widget_nav_menu .current_page_item li a {
 	color: $color-widget-contentnav;
 }
-#contentnav li ul {
+#contentnav li ul,
+.widget_nav_menu li ul {
 	margin: 0;
 	border: none;
 }
-#contentnav li ul li {
+#contentnav li ul li,
+.widget_nav_menu li ul li {
 	border: none;
 	padding: 0 0 0 20px;
 }
-#contentnav li li a {
+#contentnav li li a,
+.widget_nav_menu li li a {
 	font-size: $fontSize-widget-contentnav-nestedLink;
 }
 
-/* calendar */
+/* Calendar
+----------------------------------------------------------------- */
+
 .widget-bu-calendar {
 
 }
