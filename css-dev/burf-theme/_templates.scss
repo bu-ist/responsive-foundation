@@ -16,13 +16,16 @@
 .page-template-news .content .content-container,
 .single-post .content .content-container,
 .single-calendar .content .content-container,
+.page-template-profiles .content .content-container,
 .single-profile .content .content-container {
 	max-width: $container-S;
 }
 .page-template-news article[role=main],
 .single-post article[role=main],
 .single-calendar article[role=main],
-.single-profile article[role=main] {
+.page-template-profiles article[role=main],
+.single-profile article[role=main],
+.post-type-archive-profile article[role=main] {
 	margin: 0 auto;
 	float: none;
 	width: 100%;
@@ -140,6 +143,9 @@
 }
 .single .meta p {
 	font-family: $fontFamily-news-meta;
+	margin-bottom: 10px;
+}
+.single .meta p:last-child {
 	margin-bottom: 0;
 }
 .single .meta em {
