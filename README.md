@@ -12,7 +12,7 @@ Note that this repository does not include any production-ready assets (e.g. min
 
 ```bash
 $ npm install -g bower
-$ bower install git@github.com:bu-ist/responsive-foundation.git#0.1.0
+$ bower install git@github.com:bu-ist/responsive-foundation.git#1.0.0
 ```
 
 ## Sass Usage
@@ -30,7 +30,7 @@ In your project's main SCSS file:
 # css-dev/style.scss:
 
 // Import base layer
-@import "burf";
+@import "burf-base";
 
 // Import theme layer
 @import "burf-theme";
