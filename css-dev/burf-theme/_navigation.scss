@@ -307,13 +307,6 @@ nav a {
 		margin-left: $width-sideNav;
 	}
 }
-.l-sideNav .content-container,
-.l-sideNav .footbar-container {
-	@include breakpoint(small) {
-		padding-left: 60px;
-		padding-right: 60px;
-	}
-}
 .l-sideNav .primaryNav  {	
 	@include breakpoint(small) {	
 		background: none;
