@@ -18,6 +18,9 @@ body {
 	border-width: $borderWidth-masthead;
 	@include clearfix;
 }
+.masthead-container {
+	position: relative;
+}
 
 /* .bannerContainer
 ----------------------------------------------------------------- */
