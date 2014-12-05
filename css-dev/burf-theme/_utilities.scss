@@ -11,8 +11,8 @@
 /* back link */
 .backLink {
 	&:before {
-		content: '← ';
-		color: #fff;
+		content: $backLink-before;
+		color: $color-backLink-before;
 	}
 }
 

@@ -244,8 +244,13 @@ nav a {
 }
 .primaryNav-menu li li a {
 	line-height: $lineHeight-base;
-	color: $color-primaryNav-link;
+	color: $color-primaryNav-dropdown-link;
 	padding: 10px 0;
+	
+	&:hover,
+	&:focus {
+		color: $color-primaryNav-dropdown-link-hover;
+	}
 }
 
 /* utilityNav
@@ -308,9 +313,12 @@ nav a {
 /* sideNav
 ----------------------------------------------------------------- */
 
+.l-sideNav .wrapper {
+	background: $color-primaryNav-bg;
+}
 .l-sideNav .content {
 	@include breakpoint(small) {
-		margin-left:60px;
+		margin-left: 60px;
 	}
 	@include breakpoint(large) {	
 		margin-left: $width-sideNav;

@@ -99,9 +99,12 @@ article[role=main] {
 	background: $color-footbar-bg;
 	width: 100%;
 	padding-bottom: $footbar-paddingBottom;
+	border: $border-footbar;
+	border-width: $borderWidth-footbar;
 }
 .footbar .footbar-container {
 	@extend .container;
+	background: $color-footbar-container-bg;
 
 	@include breakpoint(medium) {
 		padding: $grid-container-padding-largeScreen;
