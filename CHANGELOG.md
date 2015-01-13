@@ -1,3 +1,7 @@
+# 0.1.2
+
+* Adding push, pull, and offset classes back into grid.scss
+
 # 1.0.1
 
 * Lots of new variables (see b6ac547505e5ec16508f815a25efffa1a50a2f0d)
