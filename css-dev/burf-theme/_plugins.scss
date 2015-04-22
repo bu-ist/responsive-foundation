@@ -102,7 +102,7 @@
 	@extend %clearfix;
 }
 .profile-listing .advanced li {
-	@extend .col-md-4;
+	@extend %col-medium-4;
 }
 .profile-listing .advanced li:nth-child(3n+1) {
 	clear: left;
@@ -129,7 +129,7 @@
 	@extend %clearfix;
 }
 .profile-listing .mini li {
-	@extend .col-md-6;
+	@extend %col-medium-6;
 	margin: 0;
 	padding: 0 0 15px 75px;
 	min-height: 90px;

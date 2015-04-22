@@ -42,7 +42,7 @@
 }
 .sidebarPosts .widget,
 .sidebarProfiles .widget {
-	@extend .col-sm-6;
+	@extend %col-small-6;
 
 	@include breakpoint(small) {
 		padding: $grid-sidebar-padding;

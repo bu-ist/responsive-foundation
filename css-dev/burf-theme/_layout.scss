@@ -66,7 +66,7 @@ body {
 ----------------------------------------------------------------- */
 
 article[role=main] {
-	@extend .col-md-8;
+	@extend %col-medium-8;
 	padding-bottom: $column-paddingBottom;
 
 	@include breakpoint(small) {
@@ -83,7 +83,7 @@ article[role=main] {
 ----------------------------------------------------------------- */
 
 .sidebar {
-	@extend .col-md-4;
+	@extend %col-medium-4;
 	font-size: $fontSize-small;
 
 	@include breakpoint(medium) {
@@ -111,7 +111,7 @@ article[role=main] {
 	}
 }
 .footbar-container .widget {
-	@extend .col-md-4;
+	@extend %col-medium-4;
 
 	@include breakpoint(medium) {
 		padding: $grid-sidebar-padding;
@@ -166,7 +166,7 @@ article[role=main] {
 	}
 }
 .siteFooter-info {
-	@extend .col-sm-6;
+	@extend %col-small-6;
 
 	@include breakpoint(small) {
 		padding: 0 0 10px 30px;
@@ -174,7 +174,7 @@ article[role=main] {
 }
 .siteFooter-links,
 .siteFooter-social {
-	@extend .col-sm-3;
+	@extend %col-small-3;
 	padding: 0 0 30px;
 
 	@include breakpoint(small) {
@@ -221,25 +221,25 @@ article[role=main] {
 }
 /* Has only HTML info */
 .has-info .siteFooter-info {
-	@extend .col-sm-12;
+	@extend %col-small-12;
 }
 /* Has only general links */
 .has-links .siteFooter-links {
-	@extend .col-sm-12;
+	@extend %col-small-12;
 }
 .has-links .siteFooter-links li  {
 	@extend .u-list-inlineLinks;
 }
 /* Has general + social media links */
 .has-social .siteFooter-social {
-	@extend .col-sm-12;
+	@extend %col-small-12;
 }
 .has-social .siteFooter-social li  {
 	@extend .u-list-inlineLinks;
 }
 .has-links-social .siteFooter-links,
 .has-links-social .siteFooter-social {
-	@extend .col-sm-6;
+	@extend %col-small-6;
 }
 .has-links-social .siteFooter-links li,
 .has-links-social .siteFooter-social li  {
@@ -247,20 +247,20 @@ article[role=main] {
 }
 /* Has info + general links */
 .has-info-links .siteFooter-info {
-	@extend .col-sm-8;
+	@extend %col-small-8;
 }
 .has-info-links .siteFooter-links {
-	@extend .col-sm-4;
+	@extend %col-small-4;
 }
 .has-info-links .siteFooter-links li  {
 	@extend .u-list-inlineLinks;
 }
 /* Has info + social media links */
 .has-info-social .siteFooter-info {
-	@extend .col-sm-8;
+	@extend %col-small-8;
 }
 .has-info-social .siteFooter-social {
-	@extend .col-sm-4;
+	@extend %col-small-4;
 }
 .has-info-social .siteFooter-social li  {
 	@extend .u-list-inlineLinks;
