@@ -13,8 +13,11 @@
 // grid
 @import 'burf-base/grid';
 
-// base styles
+// reset
 @import 'burf-base/base-global';
+
+// base styles
+@import 'burf-base/base-utilities';
 @import 'burf-base/base-typography';
 @import 'burf-base/base-tables';
 @import 'burf-base/base-forms';

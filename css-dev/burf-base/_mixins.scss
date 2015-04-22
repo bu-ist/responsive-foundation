@@ -30,6 +30,20 @@
 			box-shadow: $shadow;
 }
 
+// linear-gradient
+// Usage: @include linear-gradient($fromColor, $toColor);
+// where $fromColor and $toColor are valid colors or variables which hold a color
+// Note: you should always specify a backup background-color when using this.
+@mixin linear-gradient($fromColor, $toColor) {
+	background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+	background-image:   -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+	background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, $fromColor, $toColor);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
+
 // hide text. Uses Sass placeholder selector (%).
 // Usage: @extend hide-text
 %hide-text {
@@ -110,7 +124,7 @@
 	   -moz-animation: #{$str};
 		-ms-animation: #{$str};
 		 -o-animation: #{$str};
-			animation: #{$str};      
+			animation: #{$str};
 }
 // vertical-center: a more IE-friendly version of vertical center. Apply "vertical-center-child" to a parent element and "vertical-center" to the child
 // Usage: @include vertical-center-child

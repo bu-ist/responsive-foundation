@@ -65,7 +65,7 @@
 	margin-top: 30px;
 	padding-top: 30px;
 	border: $border-news-post;
-	border-width: $borderWidth-news-post; 
+	border-width: $borderWidth-news-post;
 	position: relative;
 }
 .news-posts .post:first-child,
@@ -107,8 +107,8 @@
 }
 .news-posts .paging-navigation a,
 .archive .paging-navigation a {
-	@extend .button;
-	@extend .button-primary;
+	@extend %button-styles;
+	@extend %button-styles-primary;
 }
 .news-posts .paging-navigation .nav-previous,
 .archive .paging-navigation .nav-previous {
@@ -153,9 +153,9 @@
 }
 .single .archiveLink,
 .single-calendar .archiveLink {
-	@extend .button;
+	@extend %button-styles;
 	@extend .backLink;
-	@extend .button-primary;
+	@extend %button-styles-primary;
 	width: 100%;
 }
 
@@ -250,7 +250,7 @@
 .singleEvent .dateSummary {
 	@extend .message;
 	margin: 0 0 20px 0;
-	
+
 	@include breakpoint(small) {
 		float: right;
 		width: 33.33333333333333%;
@@ -264,7 +264,7 @@
 .singleEvent .dateSummary li {
 	list-style: none;
 	margin-top: 10px;
-	
+
 	&:first-child {
 		margin-top: 0;
 	}

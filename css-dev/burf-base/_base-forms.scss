@@ -1,4 +1,4 @@
-/* Forms: Noemalize
+/* Forms: Normalize
 ----------------------------------------------------------------- */
 
 /* 1. Correct margin displayed oddly in IE 6/7. */
@@ -56,16 +56,17 @@ select {
 }
 /* 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls.
    2. Removed from normalize.css: "Correct inability to style clickable `input` types in iOS which added -webkit-appearance: button."
-   3. Improve usability and consistency of cursor style between image-type `input` and others.
-   4. Remove inner spacing in IE 7 without affecting normal text inputs. Known issue:inner spacing remains in IE 6.
+   3. Replicated in %button-styles-input: Improve usability and consistency of cursor style between image-type `input` and others.
+   4. Replicated in %button-styles-input: Remove inner spacing in IE 7 without affecting normal text inputs. Known issue:inner spacing remains in IE 6.
    5. Remove WebKit default button business. */
 button,
 html input[type="button"], /* 1 */
 input[type="reset"],
 input[type="submit"] {
-	@extend .button;
-	cursor: pointer; /* 3 */
-	*overflow: visible; /* 4 */
+	@extend %button-styles;
+	@extend %button-styles-input;
+	// cursor: pointer; /* 3 */
+	// *overflow: visible; /* 4 */
 	-webkit-appearance: none; /* 5 */
 }
 /* Re-set default cursor for disabled elements. */
@@ -302,84 +303,12 @@ select[multiple] {
 ----------------------------------------------------------------- */
 
 .button {
-    /* Structure */
-    display: inline-block;
-    *display: inline; /*IE 6/7*/
-    zoom: 1;
-    line-height: normal;
-    white-space: nowrap;
-    vertical-align: baseline;
-    text-align: center;
-    cursor: pointer;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-	font-size: $fontSize-button;
-	font-family: $fontFamily-button;
+	@extend %button-styles;
 }
-/* Firefox: Get rid of the inner focus border */
-.button::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-}
-.button {
-    font-size: 100%;
-    *font-size: 90%; /*IE 6/7 - To reduce IE's oversized button text*/
-    *overflow: visible; /*IE 6/7 - Because of IE's overly large left/right padding on buttons */
-    padding: 0.5em 1em;
-    color: $color-button-text;
-    border: 1px solid #999;  /*IE 6/7/8*/
-    border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
-    background-color: $color-button-bg;
-    text-decoration: none;
-    border-radius: 2px;
-}
-.button-hover,
-.button:hover,
-.button:focus {
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000',GradientType=0);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.10)));
-    background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
-    background-image: -moz-linear-gradient(top, rgba(0,0,0, 0.05) 0%, rgba(0,0,0, 0.10));
-    background-image: -o-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
-    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
-}
-.button:focus {
-    outline: 0;
-}
-.button-active,
-.button:active {
-    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
-}
-.button[disabled],
-.button-disabled,
-.button-disabled:hover,
-.button-disabled:focus,
-.button-disabled:active {
-    border: none;
-    background-image: none;
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-    filter: alpha(opacity=40);
-    -khtml-opacity: 0.40;
-    -moz-opacity: 0.40;
-    opacity: 0.40;
-    cursor: not-allowed;
-    box-shadow: none;
-}
-.button-hidden {
-    display: none;
-}
-/* Firefox: Get rid of the inner focus border */
-.button::-moz-focus-inner{
-    padding: 0;
-    border: 0;
-}
+
 .button-primary,
 .button-selected,
 a.button-primary,
 a.button-selected {
-    background-color: $color-button-primary-bg;
-    color: $color-button-primary-text;
+	@extend %button-styles-primary;
 }
