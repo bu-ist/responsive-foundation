@@ -12,11 +12,11 @@ body {
 ----------------------------------------------------------------- */
 
 .masthead {
+	@extend %clearfix;
 	background: $color-masthead-bg;
 	position: relative;
 	border: $border-masthead;
 	border-width: $borderWidth-masthead;
-	@include clearfix;
 }
 .masthead-container {
 	position: relative;
@@ -41,7 +41,7 @@ body {
 }
 .bannerContainer-pageWidth {
 	margin:  -15px 0 35px;
-	
+
 	@include breakpoint(small) {
 		margin: 0 0 60px;
 	}
@@ -56,7 +56,7 @@ body {
 	background: none;
 	padding: 0;
 	margin: -15px 0 35px;
-	
+
 	@include breakpoint(small) {
 		margin-top: 0;
 	}
@@ -70,7 +70,7 @@ article[role=main] {
 	padding-bottom: $column-paddingBottom;
 
 	@include breakpoint(small) {
-		padding-bottom: $column-paddingBottom-largeScreen;	
+		padding-bottom: $column-paddingBottom-largeScreen;
 	}
 }
 
@@ -95,7 +95,7 @@ article[role=main] {
 ----------------------------------------------------------------- */
 
 .footbar {
-	@include clearfix;
+	@extend %clearfix;
 	background: $color-footbar-bg;
 	width: 100%;
 	padding-bottom: $footbar-paddingBottom;
@@ -126,7 +126,7 @@ article[role=main] {
 ----------------------------------------------------------------- */
 
 .siteFooter {
-	@include clearfix;
+	@extend %clearfix;
 	position:relative;
 	background: $color-siteFooter-bg;
 	padding: 40px 20px 5px;

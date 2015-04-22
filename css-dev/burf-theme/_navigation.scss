@@ -164,7 +164,7 @@ nav a {
 ----------------------------------------------------------------- */
 
 .primaryNav {
-	@include clearfix;
+	@extend %clearfix;
 	background: $color-primaryNav-bg;
 	display: block;
 	padding: 0 10px;

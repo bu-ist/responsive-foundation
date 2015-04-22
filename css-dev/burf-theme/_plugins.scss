@@ -43,7 +43,7 @@
 ----------------------------------------------------------------- */
 
 .profile-listing {
-	@include clearfix;
+	@extend %clearfix;
 }
 .profile-listing ul {
 	padding: 0;
@@ -99,7 +99,7 @@
 	margin-bottom: 0;
 }
 .profile-listing .advanced {
-	@include clearfix;
+	@extend %clearfix;
 }
 .profile-listing .advanced li {
 	@extend .col-md-4;
@@ -126,7 +126,7 @@
 	width: 100%;
 }
 .profile-listing .mini {
-	@include clearfix;
+	@extend %clearfix;
 }
 .profile-listing .mini li {
 	@extend .col-md-6;
@@ -211,7 +211,7 @@
 .single-profile .profile-info {
 	@extend .message;
 	margin: 0 0 20px 0;
-	
+
 	@include breakpoint(small) {
 		float: right;
 		width: 33.33333333333333%;

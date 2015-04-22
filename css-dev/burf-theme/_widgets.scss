@@ -71,12 +71,12 @@
 ----------------------------------------------------------------- */
 
 .widget-bu-posts {
-	
+
 }
 .widget-bu-posts .post {
-	@include clearfix;
+	@extend %clearfix;
 	margin-bottom: 25px;
-	
+
 	&:last-child {
 		//border-bottom: none;
 		margin-bottom: 0;
@@ -196,7 +196,7 @@
 	border-width: $borderWidth-widgetList;
 	margin-top: 10px;
 	padding-top: 10px;
-	
+
 	&:first-child {
 		border: none;
 		padding: 0;
