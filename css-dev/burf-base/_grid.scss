@@ -26,6 +26,9 @@
 }
 .row {
 	margin: $grid-row-margin;
+	@include breakpoint(small) {
+		margin-right: 0;
+	}
 }
 .row [class*="col-"] {
 	padding: $grid-column-padding;
@@ -47,83 +50,321 @@ margin-bottom: 0;
 Grid placeholders
 
 Builds placeholder classes for the grid.
-Available classes follow the pattern below:
+Available classes follow the pattern below.
 
-Friendly classes for common column needs (all start at medium breakpoint):
-	@extend %col-half;
-	@extend %col-third;
-	@extend %col-quarter;
+Friendly classes for common column needs, avaiable for the following breakpoints and sizes:
+	Breakpoints: small, medium
+	Sizes: 1/4, 1/3, 1/2, 2/3, 3/4, whole column
+	Examples:
+		Make something take up 1/2 of available space starting at the small breakpoint:
+			@extend %col-small-one-half;
+		Make something take up 3/4 of available space starting at the medium breakpoint:
+			@extend %col-medium-three-quarter;
 
 For your less obvious grid needs:
-	Basic usage:
-		@extend %col-xs-3;
+	Basic usage (no breakpoints):
+		@extend %col-3;
 	Half column that starts only at medium breakpoints (half of 12):
 		@extend %col-medium-6;
-	Position 1 column to the left starting at large breakpoint (does not affect document flow):
-		@extend %col-large-push-12;
-	Push 1 column to the left starting at large breakpoint (affects document flow):
-		@extend %col-large-offset-12;
-	Position 1 column to the right starting at large breakpoint:
-		@extend %col-large-pull-12;
+
+Optional grid classes are available as well, and may be turned on or off using variables:
+	Margin: Automatically calculates width with margin included. Handy for items with a background color.
+		Example: Make something take up 6 columns, starting at medium breakpoint, with margins:
+		Usage: @extend %col-medium-margin-6;
+	Push: position ___ number of columns to the left (no affect on document flow)
+		Example: Position something 6 columns to the left without affecting anything else
+		Usage: @extend %col-medium-push-6;
+	Offset: position ___ number of columns to the left (does affect document flow)
+		Example: Position something 6 columns to the left and bump everything else along with it
+		Usage: @extend %col-medium-offset-6;
+	Pull: position ___ number of columns to the right (does not affect document flow)
+		Example: Position something 6 columns to the right without affecting anything else
+		Usage: @extend %col-medium-pull-6;
+
+Grid controls (see _variables.scss)
+	$grid-number-columns
+		Controls number of columns in grid.
+		Required: Columns must be neatly divisible by 2, 3, and 4.
+		Default: 12
+	$grid-breakpoints
+		The breakpoints you want grids to begin at.
+		Required: Small and medium if you use burf-theme. Large is optional.
+		Default: "small", "medium"
+	$grid-margins
+		Turn on optional margin classes.
+		Default: false
+	$grid-margin-width
+		Your desired grid margin, in %. Default value works out to 20px on large screens.
+		Relies on $grid-margins being set to "true".
+		Default: 2.6
+	$grid-push
+		Turn on optional push classes.
+		Default: false
+	$grid-pull
+		Turn on optional pull classes.
+		Default: false
+	$grid-offset
+		Turn on optional offset classes.
+		Default: false
 
 ----------------------------------------------------------------- */
 
-// Variables which control the grid. Adjust columns and breakpoints to support here.
-$grid-number-columns: 12;
-$grid-breakpoints: "small", "medium", "large";
+// Base styles
+%col-float {
+	float: left;
+}
+%col-base {
+	position: relative;
+	min-height: 1px;
+}
+%col-margin-base {
+	margin: $grid-margin-width#{"%"};
+	margin-top: 0;
+	padding: 20px;
+	@include breakpoint(small) {
+		margin-right: 0;
+	}
+}
 
 // A helper mixin to build grid styles. No need to use outside this file.
 @mixin gridBuild($cssproperty, $amount) {
 	#{$cssproperty}: #{$amount}#{"%"};
 }
 
-%col-base {
-	position: relative;
-	min-height: 1px;
-}
+// Initial grid setup
+$grid-widths: ();
+$grid-widths-margins: ();
 
 @for $i from 1 through $grid-number-columns {
-	// Determine current width
+	// Determine current base width
 	$percentage: ($i / $grid-number-columns)*100;
-
-	// Mobile grid styles
-	%col-xs {
-		&-#{$i} {
-			@extend %col-base;
-			@include gridBuild(width, $percentage);
-		}
+	// Create a list of widths for gridBuild to use later
+	$grid-widths: append($grid-widths, $percentage, comma);
+	// If margins are turned on, also create a list with width excluding margin
+	@if $grid-margins {
+		$grid-widths-margins: append($grid-widths-margins, ($percentage - $grid-margin-width), comma);
 	}
-	// Responsive grid styles
-	@each $breakpoint in $grid-breakpoints {
+	// Create basic grid classes, no breakpoints
+	// Example output: %col-1
+	%col-#{$i} {
+		@extend %col-base;
+		@extend %col-float;
+		@include gridBuild(width, $percentage);
+	}
+}
+
+// Breakpoints time
+
+@each $breakpoint in $grid-breakpoints {
+	@for $i from 1 through $grid-number-columns {
+		// Add to base styles
 		%col-#{$breakpoint} {
 			&-#{$i} {
+				// Example output: %col-small-1
 				@extend %col-base;
 			}
-			@include breakpoint($breakpoint) {
+			@if $grid-margins {
+				&-margin-#{$i} {
+					// Example output: %col-small-margin-1
+					@extend %col-margin-base;
+				}
+			}
+		}
+	}
+	@include breakpoint($breakpoint) {
+		@for $i from 1 through length($grid-widths) {
+			// Get percentage from earlier
+			$percentage: nth($grid-widths, $i);
+
+			%col-#{$breakpoint} {
 				&-#{$i} {
+					// Example output: %col-small-1
 					@include gridBuild(width, $percentage);
 					float: left;
 				}
-				&-push-#{$i} {
-					@include gridBuild(left, $percentage);
+				@if $grid-margins {
+					&-margin-#{$i} {
+						// Example output: %col-small-margins-1
+						$percentage: nth($grid-widths-margins, $i);
+						@include gridBuild(width, $percentage);
+						float: left;
+					}
 				}
-				&-pull-#{$i} {
-					@include gridBuild(right, $percentage);
+				@if $grid-push {
+					&-push-#{$i} {
+						// Example output: %col-small-push-1
+						@include gridBuild(left, $percentage);
+						float: left;
+					}
 				}
-				&-offset-#{$i} {
-					@include gridBuild(margin-left, $percentage);
+				@if $grid-pull {
+					&-pull-#{$i} {
+						// Example output: %col-small-pull-1
+						@include gridBuild(right, $percentage);
+						float: left;
+					}
+				}
+				@if $grid-offset {
+					&-offset-#{$i} {
+						// Example output: %col-small-offset-1
+						@include gridBuild(margin-left, $percentage);
+						float: left;
+					}
 				}
 			}
 		}
 	}
 }
 
-%col-half {
-	@extend %col-medium-#{($grid-number-columns / 2)};
+// Friendly placeholders for common needs - calculated based on grid columns
+
+%col-small-one-quarter {
+	@extend %col-small-#{$grid-number-columns * (1/4)};
 }
-%col-third {
-	@extend %col-medium-#{($grid-number-columns / 3)};
+%col-small-one-third {
+	@extend %col-small-#{$grid-number-columns * (1/3)};
 }
-%col-quarter {
-	@extend %col-medium-#{($grid-number-columns / 4)};
+%col-small-one-half {
+	@extend %col-small-#{$grid-number-columns * (1/2)};
+}
+%col-small-two-third {
+	@extend %col-small-#{$grid-number-columns * (2/3)};
+}
+%col-small-three-quarter {
+	@extend %col-small-#{$grid-number-columns * (3/4)};
+}
+%col-small-full-width {
+	@extend %col-small-#{$grid-number-columns * (1)};
+}
+
+%col-medium-one-quarter {
+	@extend %col-medium-#{$grid-number-columns * (1/4)};
+}
+%col-medium-one-third {
+	@extend %col-medium-#{$grid-number-columns * (1/3)};
+}
+%col-medium-one-half {
+	@extend %col-medium-#{$grid-number-columns * (1/2)};
+}
+%col-medium-two-third {
+	@extend %col-medium-#{$grid-number-columns * (2/3)};
+}
+%col-medium-three-quarter {
+	@extend %col-medium-#{$grid-number-columns * (3/4)};
+}
+%col-medium-full-width {
+	@extend %col-medium-#{$grid-number-columns * (1)};
+}
+
+// Margins may not always be turned on, so these should be allowed to fail if they aren't.
+%col-medium-margin-one-quarter {
+	@extend %col-medium-margin-#{$grid-number-columns * (1/4)} !optional;
+}
+%col-medium-margin-one-third {
+	@extend %col-medium-margin-#{$grid-number-columns * (1/3)} !optional;
+}
+%col-medium-margin-one-half {
+	@extend %col-medium-margin-#{$grid-number-columns * (1/2)} !optional;
+}
+%col-medium-margin-two-third {
+	@extend %col-medium-margin-#{$grid-number-columns * (2/3)} !optional;
+}
+%col-medium-margin-three-quarter {
+	@extend %col-medium-margin-#{$grid-number-columns * (3/4)} !optional;
+}
+%col-medium-margin-full-width {
+	@extend %col-medium-margin-#{$grid-number-columns * (1)} !optional;
+}
+
+/* -----------------------------------------------------------------
+
+Extras
+
+Importing these extra classes is completely optional. You may want
+to import these classes if you are using shortcodes in your content
+and want to give clients classes to help style those shortcodes.
+
+For theme development purposes, you should extend the placeholder
+classes you need in your custom SASS partial. These should only be
+within content or widgets in Wordpress.
+
+Nothing in burf-base or burf-theme, nor in Wordpress, is affected by
+leaving these classes out. You can safely leave these out if they
+are not necessary for your project. By default, they are not imported.
+
+To import, go to your styles.scss file and use the following code
+directly underneath the normal burf-theme import:
+
+@import 'burf-theme/extras';
+
+----------------------------------------------------------------- */
+
+/* Classes for layout */
+
+.row {
+	.one-quarter,
+	.one-third,
+	.one-half,
+	.two-third,
+	.three-quarter,
+	.full-width {
+		padding: $grid-column-padding;
+	}
+}
+
+.one-quarter-margin,
+.one-third-margin,
+.one-half-margin,
+.two-third-margin,
+.three-quarter-margin,
+.full-width-margin {
+	background: pink;
+	padding: 20px;
+}
+
+.one-quarter {
+	@extend %col-medium-one-quarter;
+}
+.one-third {
+	@extend %col-medium-one-third;
+}
+.one-half {
+	@extend %col-medium-one-half;
+}
+.two-third {
+	@extend %col-medium-two-third;
+}
+.three-quarter {
+	@extend %col-medium-three-quarter;
+}
+.full-width {
+	@extend %col-medium-full-width;
+}
+
+// These classes require $grid-margins in burf-base to be set to true. Default is false.
+.one-quarter-margin {
+	@extend %col-medium-margin-one-quarter !optional;
+}
+.one-third-margin {
+	@extend %col-medium-margin-one-third !optional;
+}
+.one-half-margin {
+	@extend %col-medium-margin-one-half !optional;
+}
+.two-third-margin {
+	@extend %col-medium-margin-two-third !optional;
+}
+.three-quarter-margin {
+	@extend %col-medium-margin-three-quarter !optional;
+}
+.full-width-margin {
+	@extend %col-medium-margin-full-width !optional;
+}
+
+.equal-height {
+	@extend %equal-height-parent;
+
+	.one-quarter-margin {
+		@extend %equal-height-child;
+	}
 }

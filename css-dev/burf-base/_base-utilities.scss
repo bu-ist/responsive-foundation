@@ -78,3 +78,14 @@
 	background-color: $color-button-primary-bg;
 	color: $color-button-primary-text;
 }
+
+%equal-height-parent {
+	overflow: hidden;
+
+	%equal-height-child {
+		@include breakpoint(medium) {
+			margin-bottom: -99999px;
+			padding-bottom: 99999px;
+		}
+	}
+}
