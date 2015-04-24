@@ -15,48 +15,46 @@
 	font-size: $fontSize-widget;
 }
 .widgetTitle {
-	font-size: $fontSize-widgetTitle;
-	line-height: $lineHeight-widgetTitle;
-	font-family: $fontFamily-widgetTitle;
-	color: $color-widgetTitle;
+	padding: 0 0 4px 0;
 	border: $border-widgetTitle;
 	border-width: $borderWidth-widgetTitle;
-	padding: 0 0 4px 0;
+	font-family: $fontFamily-widgetTitle;
+	font-size: $fontSize-widgetTitle;
+	line-height: $lineHeight-widgetTitle;
+	color: $color-widgetTitle;
 }
 .widgetTitle a {
 	color: $color-widgetTitle;
 	text-decoration: none;
-
 	&:after {
 		content: $widgetTitle-link-after;
 		color: $color-widgetTitle-link-after;
 	}
 }
 .widgetTitle a:hover {
-
 	&:after {
 		color: $color-widgetTitle-link-after-hover;
 	}
 }
 .widget a {
 	color: $color-widget-link;
-
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		color: $color-widget-link-hover;
 	}
 }
 .footbar .widget a {
 	color: $color-footbar-widget-link;
-
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		color: $color-footbar-widget-link-hover;
 	}
 }
 .widget ul {
+	padding: 0;
+	margin: 0;
 	list-style: none;
 	list-style-image: none;
-	margin: 0;
-	padding: 0;
 }
 .widget h1,
 .widget h2,
@@ -70,44 +68,40 @@
 /* BU Posts
 ----------------------------------------------------------------- */
 
-.widget-bu-posts {
 
-}
 .widget-bu-posts .post {
-	@extend %clearfix;
 	margin-bottom: 25px;
-
+	@extend %clearfix;
 	&:last-child {
 		//border-bottom: none;
 		margin-bottom: 0;
 	}
 }
 .widget-bu-posts .headline {
+	margin: 0;
 	font-size: $fontSize-widget-postHeadline;
 	line-height: $lineHeight-widget-postHeadline;
-	margin: 0;
 }
 .widget-bu-posts .excerpt {
+	margin: 4px 0 0;
 	font-size: $fontSize-widget-postExcerpt;
 	line-height: $lineHeight-widget-postExcerpt;
-	margin: 4px 0 0;
 }
 .widget-bu-posts .thumb {
 	display: block;
 	float: left;
-	margin: 5px 15px 15px 0;
 	max-width: 45%;
+	margin: 5px 15px 15px 0;
 }
 .widget-bu-posts .published {
 	font-size: $fontSize-widget-postDate;
 }
 .widget-bu-posts .meta {
-	font-size: $fontSize-widget-postMeta;
 	margin: 0;
+	font-size: $fontSize-widget-postMeta;
 	color: $color-widget-postMeta;
 }
-.widget-bu-posts .comment-counter {
-}
+
 
 /* Content Nav
 ----------------------------------------------------------------- */
@@ -130,7 +124,6 @@
 	border: $border-widgetList;
 	border-width: $borderWidth-widgetList;
 	font-family: $fontFamily-widget-contentnav;
-
 	&:first-child {
 		border: none;
 	}
@@ -151,7 +144,7 @@
 }
 #contentnav .current_page_item a,
 .widget_nav_menu .current_page_item a {
-	 color: $color-widget-contentnav-active;
+	color: $color-widget-contentnav-active;
 }
 #contentnav .current_page_item li a,
 .widget_nav_menu .current_page_item li a {
@@ -164,8 +157,8 @@
 }
 #contentnav li ul li,
 .widget_nav_menu li ul li {
-	border: none;
 	padding: 0 0 0 20px;
+	border: none;
 }
 #contentnav li li a,
 .widget_nav_menu li li a {
@@ -175,37 +168,34 @@
 /* Calendar
 ----------------------------------------------------------------- */
 
-.widget-bu-calendar {
 
-}
 .widget-bu-calendar .date {
 	font-family: $fontFamily-widget-calendar-date;
 }
 .widget-bu-calendar .default .date {
-	font-weight: 700;
-	color: $color-widget-calendarDate;
 	position: absolute;
 	top: 0;
 	left: 0;
+	font-weight: 700;
+	color: $color-widget-calendarDate;
 }
 .widget-bu-calendar .default a .date {
 	color: $color-grayScale-0;
 }
 .widget-bu-calendar .default li {
+	padding-top: 10px;
+	margin-top: 10px;
 	border: $border-widgetList;
 	border-width: $borderWidth-widgetList;
-	margin-top: 10px;
-	padding-top: 10px;
-
 	&:first-child {
-		border: none;
 		padding: 0;
+		border: none;
 	}
 }
 .widget-bu-calendar .default a {
 	position: relative;
-	padding-left: 60px;
 	display: block;
+	padding-left: 60px;
 }
 
 /* calendar: full-date */
@@ -214,47 +204,45 @@
 	font-size: $fontSize-widget-calendarDate;
 }
 .widget-bu-calendar .full-date li {
+	padding: 10px 0;
 	border: $border-widgetList;
 	border-width: $borderWidth-widgetList;
-	padding: 10px 0;
-
 	&:first-child {
-		border: none;
 		padding: 0 0 10px;
+		border: none;
 	}
 }
 
 /* calendar: graphic */
 .widget-bu-calendar .graphic li {
 	padding-top: 10px;
-
 	&:first-child {
 		padding-top: 0;
 	}
 }
 .widget-bu-calendar .graphic a {
 	position: relative;
-	padding-left: 60px;
 	display: block;
 	min-height: 48px;
+	padding-left: 60px;
 }
 .widget-bu-calendar .graphic .date {
-	text-align: center;
-	width: 48px;
 	position: absolute;
 	top: 0;
 	left: 0;
+	width: 48px;
+	text-align: center;
 }
 .widget-bu-calendar .graphic .day {
 	display: block;
+	font-weight: 700;
 	font-size: $fontSize-widget-calendarDateDay;
 	line-height: $lineHeight-widget-calendarDate;
-	font-weight: 700;
 	color: $color-widget-calendarDateDay;
 }
 .widget-bu-calendar .graphic .month {
-	text-transform: uppercase;
 	font-size: $fontSize-widget-calendarDateMonth;
 	line-height: $lineHeight-widget-calendarDate;
 	color: $color-widget-calendarDateMonth;
+	text-transform: uppercase;
 }

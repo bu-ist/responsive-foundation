@@ -26,9 +26,9 @@
 .page-template-profiles article[role=main],
 .single-profile article[role=main],
 .post-type-archive-profile article[role=main] {
-	margin: 0 auto;
 	float: none;
 	width: 100%;
+	margin: 0 auto;
 }
 
 /* Narrow Sidebar
@@ -37,8 +37,8 @@
 .sidebarPosts,
 .sidebarProfiles {
 	@extend %clearfix;
-	margin: 0 auto;
 	float: none;
+	margin: 0 auto;
 }
 .sidebarPosts .widget,
 .sidebarProfiles .widget {
@@ -62,16 +62,16 @@
 }
 .news-posts .post,
 .archive .content-container article {
-	margin-top: 30px;
+	position: relative;
 	padding-top: 30px;
+	margin-top: 30px;
 	border: $border-news-post;
 	border-width: $borderWidth-news-post;
-	position: relative;
 }
 .news-posts .post:first-child,
 .archive .content-container article:first-child {
-	margin-top: 0;
 	padding-top: 0;
+	margin-top: 0;
 	border-top: none;
 }
 .news-posts .meta,
@@ -96,8 +96,8 @@
 .news-posts .paging-navigation,
 .archive  .paging-navigation {
 	@extend %clearfix;
-	margin-top: 30px;
 	padding-top: 30px;
+	margin-top: 30px;
 	border: $border-news-post;
 	border-width: $borderWidth-news-post;
 }
@@ -125,25 +125,25 @@
 .single article[role=main] .meta {
 	@extend .message;
 	@include border-radius($borderRadius-single-meta);
-	background-color: $color-single-meta-bg;
+	padding: $padding-single-meta;
+	margin-bottom: 30px;
 	border: $border-single-meta;
 	border-width: $borderWidth-single-meta;
 	border-left-color: $color-single-meta-borderLeft;
+	background-color: $color-single-meta-bg;
 	font-size: $fontSize-single-meta;
-	padding: $padding-single-meta;
-	margin-bottom: 30px;
 }
 .single .meta .post-title {
 	margin-bottom: 10px;
 }
 .single .meta .byline {
-	font-size: $fontSize-single-meta;
-	font-weight: normal;
 	margin-bottom: 10px;
+	font-weight: normal;
+	font-size: $fontSize-single-meta;
 }
 .single .meta p {
-	font-family: $fontFamily-news-meta;
 	margin-bottom: 10px;
+	font-family: $fontFamily-news-meta;
 }
 .single .meta p:last-child {
 	margin-bottom: 0;
@@ -177,9 +177,7 @@
 .event-list li {
 	list-style: none;
 }
-.event-list .event-time {
 
-}
 .event-list .event-link a {
 	color: $color-calendar-eventLink;
 }
@@ -192,17 +190,17 @@
 	width: 100%;
 }
 .monthCalendar caption {
-	font-style: normal;
 	font-family: $fontFamily-calendarMonth-caption;
+	font-style: normal;
 	font-size: $fontSize-calendarMonth-caption;
 	color: $color-calendarMonth-caption;
 }
 .monthCalendar th,
 .monthCalendar td {
-	font-family: $fontFamily-calendarMonth-cell;
 	width: 14.285714285%;
-	text-align: center;
 	padding: $padding-monthCalendar-cell;
+	font-family: $fontFamily-calendarMonth-cell;
+	text-align: center;
 }
 .monthCalendar th {
 	background: $color-calendarMonth-th-bg;
@@ -229,8 +227,7 @@
 	color: $color-calendarMonth-cellLinkToday;
 	text-decoration: none;
 }
-.calendar-topics {
-}
+
 .calendar-topics ul {
 	padding-left: 20px;
 }
@@ -238,19 +235,17 @@
 /* Calendar Single Event
 ----------------------------------------------------------------- */
 
-.singleEvent {
-}
+
 .singleEvent .label {
 	font-family: $fontFamily-singleEvent-label;
-	font-size: $fontSize-smaller;
 	font-weight: $fontWeight-calendar-label;
+	font-size: $fontSize-smaller;
 	color: $color-calendarSingle-label;
 	text-transform: uppercase;
 }
 .singleEvent .dateSummary {
 	@extend .message;
 	margin: 0 0 20px 0;
-
 	@include breakpoint(small) {
 		float: right;
 		width: 33.33333333333333%;
@@ -258,13 +253,12 @@
 	}
 }
 .singleEvent .dateSummary ul {
-	margin: 0;
 	padding: 0;
+	margin: 0;
 }
 .singleEvent .dateSummary li {
-	list-style: none;
 	margin-top: 10px;
-
+	list-style: none;
 	&:first-child {
 		margin-top: 0;
 	}
@@ -277,15 +271,14 @@
 }
 .singleEvent .dateSummary .time {
 	display: block;
-	color: #000;
-	font-size: $fontSize-medium;
 	font-weight: bold;
+	font-size: $fontSize-medium;
+	color: #000000;
 }
 .singleEvent .description {
 	margin: $fontMargin-base;
 }
-.singleEvent .additionalDetails {
-}
+
 .singleEvent .additionalDetails dd {
 	margin: 0 0 20px 0;
 }

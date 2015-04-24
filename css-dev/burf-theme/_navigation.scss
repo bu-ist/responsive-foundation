@@ -29,11 +29,10 @@ nav a {
 }
 #quicksearch fieldset {
 	margin: 0;
-
 	@include breakpoint(small) {
 		max-width: $container-S;
-		margin: 0 auto;
 		padding: 0 20px;
+		margin: 0 auto;
 	}
 }
 #quicksearch label,
@@ -44,9 +43,8 @@ nav a {
 	@extend %button-styles-primary;
 	@include border-radius($borderRadius-quicksearch-button);
 	width: 25%;
-	padding-left: 0;
 	padding-right: 0;
-
+	padding-left: 0;
 	@include breakpoint(small) {
 		width: 15%;
 	}
@@ -58,10 +56,9 @@ nav a {
 #q {
 	@include border-radius($borderRadius-quicksearch-input);
 	width: 75%;
-	padding-left: 10px;
 	padding-right: 10px;
+	padding-left: 10px;
 	color: $color-search-text;
-
 	@include breakpoint(small) {
 		width: 85%;
 	}
@@ -76,12 +73,11 @@ nav a {
 	float: right;
 	width: 60px;
 	height: 60px;
+	padding: 0;
 	font-size: 31px;
 	line-height: 60px;
-	padding: 0;
 	color: $color-navToggle;
 	text-align: center;
-
 	&:visited {
 		color: $color-navToggle;
 	}
@@ -110,12 +106,11 @@ nav a {
 
 .navToggle {
 	@extend %hide-text;
-	float: left;
-	height: 60px;
-	width: 60px;
 	position: relative;
+	float: left;
+	width: 60px;
+	height: 60px;
 	cursor: pointer;
-
 	@include breakpoint(small) {
 		display: none;
 	}
@@ -127,11 +122,11 @@ nav a {
 	top: 28px;
 	left: 15px;
 	display: block;
-	height: 4px;
 	width: 30px;
+	height: 4px;
 	background: white;
+	content: "";
 	cursor: pointer;
-	content: '';
 }
 .navToggle span:before {
 	top: -10px;
@@ -165,9 +160,9 @@ nav a {
 
 .primaryNav {
 	@extend %clearfix;
-	background: $color-primaryNav-bg;
 	display: block;
 	padding: 0 10px;
+	background: $color-primaryNav-bg;
 }
 .masthead-container .primaryNav .utilityNav {
 	@include breakpoint(small) {
@@ -177,7 +172,6 @@ nav a {
 .primaryNav.is-open {
 	height: auto;
 	padding-bottom: 20px;
-
 	@include breakpoint(small) {
 		padding-bottom: 0;
 	}
@@ -185,38 +179,36 @@ nav a {
 .primaryNav-menu {
 	display: none;
 	margin: 40px 10px 0 10px;
-
 	@include breakpoint(small) {
 		display: inline;
-		border: none;
 		margin: 0;
+		border: none;
 	}
 }
 .primaryNav-menu li {
-	zoom: 1;
 	display: block;
+	zoom: 1;
 	@include breakpoint(small) {
 		display: inline-block;
-		*display: inline;
 		border: none;
+		*display: inline;
 	}
 }
 .primaryNav-menu a {
 	display: block;
 	padding: 10px 0;
-	text-decoration: none;
-	color: $color-primaryNav-link;
 	border: 1px solid $color-primaryNav-border;
 	border-width: $borderWidth-primaryNav;
-
+	color: $color-primaryNav-link;
+	text-decoration: none;
+	@include breakpoint(small) {
+		padding: 0 10px;
+		border: none;
+		line-height: 60px;
+	}
 	&:hover,
 	&:focus {
 		color: $color-primaryNav-link-hover;
-	}
-	@include breakpoint(small) {
-		border:none;
-		line-height: 60px;
-		padding: 0 10px;
 	}
 }
 .primaryNav-menu li a.active,
@@ -226,12 +218,12 @@ nav a {
 .primaryNav-menu ul {
 	display: none;
 	@include breakpoint(small) {
-		display: block;
 		position: absolute;
 		left: -9999px;
 		z-index: 2;
-		background: $color-primaryNav-dropdown-bg;
+		display: block;
 		width: 240px;
+		background: $color-primaryNav-dropdown-bg;
 	}
 }
 .primaryNav-menu li:hover ul,
@@ -243,10 +235,9 @@ nav a {
 	padding: 0 10px;
 }
 .primaryNav-menu li li a {
+	padding: 10px 0;
 	line-height: $lineHeight-base;
 	color: $color-primaryNav-dropdown-link;
-	padding: 10px 0;
-
 	&:hover,
 	&:focus {
 		color: $color-primaryNav-dropdown-link-hover;
@@ -258,8 +249,8 @@ nav a {
 
 .utilityNav {
 	display: none;
-	margin: 0 10px;
 	padding: 20px 0 0;
+	margin: 0 10px;
 	border: 1px solid $color-primaryNav-border;
 	border-width: $borderWidth-utilityNav;
 	font-size: $fontSize-utilityNav;
@@ -267,33 +258,30 @@ nav a {
 .masthead-container .utilityNav {
 	@include breakpoint(small) {
 		display: block;
-		border: none;
-		margin: 0;
 		padding: 0;
+		margin: 0;
+		border: none;
 	}
 }
 .utilityNav li {
-	border: none;
 	padding: 0;
-
+	border: none;
 	@include breakpoint(small) {
 		display: inline-block;
-		*display: inline;
-		border: none;
 		padding-left: 10px;
+		border: none;
+		*display: inline;
 	}
 }
 .utilityNav a {
-	text-decoration: none;
 	color: $color-utilityNav-link;
-
+	text-decoration: none;
 	&:hover {
 		color: $color-utilityNav-link-hover;
 	}
 }
 .primaryNav .utilityNav a {
 	color: $color-utilityNav-inPrimaryNav-link;
-
 	&:hover {
 		color: $color-utilityNav-inPrimaryNav-link-hover;
 	}
@@ -324,19 +312,19 @@ nav a {
 		margin-left: $width-sideNav;
 	}
 }
-.l-sideNav .primaryNav  {
+.l-sideNav .primaryNav {
 	@include breakpoint(small) {
-		background: none;
 		position: absolute;
 		top: $height-brand;
 		width: $width-sideNav;
+		background: none;
 	}
 	@include breakpoint(large) {
 		display: block;
 		padding: 20px 10px;
 	}
 }
-.search-open.l-sideNav .primaryNav  {
+.search-open.l-sideNav .primaryNav {
 	@include breakpoint(small) {
 		top: $height-brand + 98px; /* adds the height of the open search form */
 	}
@@ -383,19 +371,16 @@ nav a {
 .l-sideNav .brand .searchToggle,
 .l-noNav .brand .searchToggle {
 	color: $color-navToggle-alt;
-
+	@include breakpoint(small) {
+		right: 10px;
+		display: block;
+		@include vertical-center;
+	}
 	&:visited {
 		color: $color-navToggle-alt;
 	}
-
 	&:hover {
 		color: $color-navToggle-alt-hover;
-	}
-
-	@include breakpoint(small) {
-		@include vertical-center;
-		display: block;
-		right: 10px;
 	}
 }
 .l-sideNav .primaryNav .searchToggle {
@@ -406,7 +391,6 @@ nav a {
 /* sideNav: navToggle */
 .l-sideNav .navToggle {
 	display: block;
-
 	@include breakpoint(large) {
 		display: none;
 	}
@@ -414,10 +398,10 @@ nav a {
 .l-sideNav .masthead-container .utilityNav {
 	margin: 0 10px;
 	@include breakpoint(large) {
-		display: block;
 		position: relative;
 		top: auto;
 		right: auto;
+		display: block;
 	}
 }
 .l-sideNav .utilityNav a:hover {
@@ -471,27 +455,20 @@ nav a {
 }
 .l-noNav .masthead-container .utilityNav {
 	display: none;
-
 	@include breakpoint(small) {
-		display: block;
 		position: absolute;
 		top: 49px;
 		right: 80px;
+		display: block;
 	}
 }
 .l-noNav .brand .searchToggle {
 	display: block;
-	font-size: 24px;
 	margin: 0 -60px 0 0;
-
+	font-size: 24px;
 	@include breakpoint(small) {
-
 	}
 }
 .l-noNav #quicksearch {
 	border-top: 1px solid $color-grayScale-d;
 }
-
-
-
-

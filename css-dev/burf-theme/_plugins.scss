@@ -10,24 +10,24 @@
 ----------------------------------------------------------------- */
 
 .bu_collapsible {
-	padding-right: 30px;
 	position: relative;
+	padding-right: 30px;
 }
 .bu_collapsible:after {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 0;
+	height: 0;
+	margin-top: -4px;
 	border: 8px solid transparent;
 	border-top-color: $color-collapsible-after-border;
 	content: "";
-	position: absolute;
-	right: 0;
-	top: 50%;
-	margin-top: -4px;
-	width: 0;
-	height: 0;
 }
 .bu_collapsible_open .bu_collapsible:after {
+	margin-top: -12px;
 	border-top-color: transparent;
 	border-bottom-color: $color-collapsible-after-border;
-	margin-top: -12px;
 }
 .bu_collapsible:hover:after,
 .bu_collapsible:focus:after {
@@ -49,9 +49,9 @@
 	padding: 0;
 }
 .profile-listing li {
-	list-style: none;
-	margin-bottom: 25px;
 	position: relative;
+	margin-bottom: 25px;
+	list-style: none;
 }
 .profile-listing a {
 	text-decoration: none;
@@ -60,9 +60,9 @@
 	line-height: 0;
 }
 .profile-listing a .profile-name {
-	color: $color-profile-name;
 	font-family: $fontFamily-profile-name;
 	font-size: $fontSize-profile-name;
+	color: $color-profile-name;
 	text-decoration: underline;
 }
 .profile-listing a:hover .profile-name,
@@ -70,27 +70,27 @@
 	text-decoration: none;
 }
 .profile-listing .profile-title {
-	color: $color-profile-title;
+	display: block;
 	font-family: $fontFamily-profile-title;
 	font-size: $fontSize-profile-title;
-	display: block;
+	color: $color-profile-title;
 }
 .profile-listing .basic {
 	border-top: $border-profiles;
 }
 .profile-listing .basic li {
-	border-bottom: $border-profiles;
 	min-height: 100px;
 	padding: 25px 65px 25px 0;
 	margin-bottom: 0;
+	border-bottom: $border-profiles;
 }
 .profile-listing .basic figure {
 	@include border-radius($borderRadius-profile-figure);
 	position: absolute;
 	right: 0;
+	overflow: hidden;
 	width: 50px;
 	height: 50px;
-	overflow: hidden;
 }
 .profile-listing .basic figure img {
 	width: 100%;
@@ -108,19 +108,19 @@
 	clear: left;
 }
 .profile-listing .advanced li a {
-	text-align: center;
-	padding: 0 15px;
 	display: block;
+	padding: 0 15px;
+	text-align: center;
 }
 .profile-listing .advanced li p {
 	margin-bottom: 0;
 }
 .profile-listing .advanced figure {
-	@include border-radius($borderRadius-profile-figure);
+	overflow: hidden;
 	width: 150px;
 	height: 150px;
-	overflow: hidden;
 	margin: 0 auto 15px;
+	@include border-radius($borderRadius-profile-figure);
 }
 .profile-listing .advanced figure img {
 	width: 100%;
@@ -130,9 +130,9 @@
 }
 .profile-listing .mini li {
 	@extend %col-medium-6;
-	margin: 0;
-	padding: 0 0 15px 75px;
 	min-height: 90px;
+	padding: 0 0 15px 75px;
+	margin: 0;
 
 	@include breakpoint(medium) {
 		padding: 0 0 15px 95px;
@@ -151,31 +151,30 @@
 	font-size: $fontSize-profile-mini-name;
 }
 .profile-listing .mini li .email a {
+	margin-top: 5px;
 	font-size: $fontSize-profile-mini-email;
 	line-height: $lineHeight-profile-mini-email;
-	margin-top: 5px;
-	word-wrap: break-word;
 	text-decoration: underline;
+	word-wrap: break-word;
 }
 .profile-listing .mini li .email a:hover,
 .profile-listing .mini li .email a:focus {
 	text-decoration: none;
 }
 .profile-listing .mini li .summary {
+	margin-top: 5px;
 	font-size: $fontSize-profile-mini-email;
 	line-height: $lineHeight-profile-mini-email;
-	margin-top: 5px;
 	word-wrap: break-word;
 }
 .profile-listing .mini figure {
 	@include border-radius($borderRadius-profile-figure);
-	width: 60px;
-	height: 60px;
-	overflow: hidden;
 	position: absolute;
 	top: 0;
 	left: 0;
-
+	overflow: hidden;
+	width: 60px;
+	height: 60px;
 	@include breakpoint(medium) {
 		width: 80px;
 		height: 80px;
@@ -185,24 +184,23 @@
 	width: 100%;
 }
 /* single profile */
-.single-profile {
-}
+
 .single-profile article[role=main] h1 {
-	text-align: center;
 	padding-top: 145px;
 	margin-bottom: 0;
+	text-align: center;
 }
 .single-profile article[role=main] h2 {
 	text-align: center;
 }
 .single-profile figure {
 	@include border-radius($borderRadius-profile-figure);
-	width: 120px;
-	height: 120px;
-	overflow: hidden;
 	position: absolute;
 	top: 0;
 	left: 50%;
+	overflow: hidden;
+	width: 120px;
+	height: 120px;
 	margin-left: -60px;
 }
 .single-profile figure img {
@@ -211,7 +209,6 @@
 .single-profile .profile-info {
 	@extend .message;
 	margin: 0 0 20px 0;
-
 	@include breakpoint(small) {
 		float: right;
 		width: 33.33333333333333%;
@@ -219,25 +216,24 @@
 	}
 }
 .single-profile .profile-info ul {
-	margin: 0;
 	padding: 0;
+	margin: 0;
 }
 .single-profile .profile-info li {
-	font-size: $fontSize-small;
-	list-style: none;
 	margin: 0 0 20px 0;
+	list-style: none;
+	font-size: $fontSize-small;
 	word-wrap: break-word;
 }
 .single-profile .profile-info .label {
-	text-transform: uppercase;
-	font-family: $fontFamily-sansSerif;
-	font-size: $fontSize-smaller;
-	font-weight: 700;
-	color: $color-profile-info-label;
 	display: block;
+	font-family: $fontFamily-sansSerif;
+	font-weight: 700;
+	font-size: $fontSize-smaller;
+	color: $color-profile-info-label;
+	text-transform: uppercase;
 }
-.single-profile .profile-bio {
-}
+
 
 /* Course Feeds
 ----------------------------------------------------------------- */

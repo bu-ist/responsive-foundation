@@ -7,33 +7,33 @@
 .comments-area ol {
 	padding: 0;
 	margin: 0;
+list-style: none;
 }
 .comments-area li {
-	list-style: none;
 }
 .comments-list {
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid #dddddd;
 }
-.comments-list li li article  {
+.comments-list li li article {
 	padding-left: 30px;
 }
-.comments-list li li li article  {
+.comments-list li li li article {
 	padding-left: 60px;
 }
-.comments-list li li li li article  {
+.comments-list li li li li article {
 	padding-left: 90px;
 }
-.comments-list li li li li li article  {
+.comments-list li li li li li article {
 	padding-left: 120px;
 }
 .comments-list article {
 	position: relative;
+	padding: $comment-padding;
+	margin: $comment-margin;
 	border: $border-comment;
 	border-width: $borderWidth-comment;
-	margin: $comment-margin;
-	padding: $comment-padding;
-	font-size: $fontSize-smaller;
 	font-family: $fontFamily-comment;
+	font-size: $fontSize-smaller;
 }
 .reply a {
 	font-size: $fontSize-smallest;
@@ -44,7 +44,7 @@
 }
 // TODO: probably shouldn't be outputting gravatar markup and hiding here...
 .comment-author img {
-	display:none;
+	display: none;
 }
 .comment-author .fn {
 	font-size: $fontSize-small;
@@ -64,20 +64,20 @@
 .comment-respond {
 	@include border-radius(5px);
 	position: relative;
-	margin: 15px 0 20px;
 	padding: 20px;
-	background: $color-commentForm-bg;
+	margin: 15px 0 20px;
 	border: $border-commentForm;
 	border-width: $borderWidth-commentForm;
+	background: $color-commentForm-bg;
 }
 .comment-respond-title {
 	margin: 0 0 20px;
 	font-size: $fontSize-medium;
 }
 .comment-respond fieldset {
-	border: 0;
-	margin: 0;
 	padding: 0;
+	margin: 0;
+	border: 0;
 }
 .comment-respond p {
 	margin: 0 0 20px;
@@ -87,24 +87,22 @@
 }
 .comment-respond fieldset .form-tip {
 	font-size: $fontSize-smallest;
-
 	@include breakpoint(small) {
-		display:block;
+		display: block;
 	}
 }
 .comment-respond fieldset .form-tip,
 .comment-respond fieldset .form-tip a {
-	color: #aaa;
+	color: #aaaaaa;
 }
 .comment-respond label {
 	display: block;
 	margin: 0 0 2px;
-
 	@include breakpoint(small) {
-		float:left;
+		float: left;
 		width: 25%;
-		margin: $form-label-margin;
 		padding-right: 10px;
+		margin: $form-label-margin;
 	}
 }
 .comment-form .button {
@@ -114,21 +112,16 @@
 }
 .comment-form textarea {
 	@include transition(height, 5ms, ease-in-out, 0s); // TODO: expand height on focus, but don't shrink if it contains content
-	height: 6em;
 	width: 100%;
-
+	height: 6em;
 	@include breakpoint(small) {
 		width: 75%;
 	}
 }
 .comment-respond .cancel-comment-reply {
-	display: inline-block;
 	position: absolute;
 	top: 20px;
 	right: 20px;
+	display: inline-block;
 	font-size: $fontSize-smallest;
 }
-
-
-
-
