@@ -251,3 +251,15 @@ article[role=main] {
 	@extend %u-list-inlineLinks;
 }
 
+/* Has all three */
+.has-info-links-social .siteFooter-info {
+	@extend %col-small-one-half;
+}
+.has-info-links-social .siteFooter-links,
+.has-info-links-social .siteFooter-social {
+	@extend %col-small-one-quarter;
+}
+// .has-info-links-social .siteFooter-links li, Doesn't always look good.
+.has-info-links-social .siteFooter-social li  {
+    @extend %u-list-inlineLinks;
+}
