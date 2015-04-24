@@ -5,18 +5,18 @@ body {
 	background: $color-content-bg;
 }
 .content-container {
-	@extend .container;
+	@extend %container-styles;
 }
 
 /* masthead
 ----------------------------------------------------------------- */
 
 .masthead {
+	@extend %clearfix;
 	position: relative;
 	border: $border-masthead;
 	border-width: $borderWidth-masthead;
 	background: $color-masthead-bg;
-	@extend %clearfix;
 }
 .masthead-container {
 	position: relative;
@@ -64,8 +64,8 @@ body {
 ----------------------------------------------------------------- */
 
 article[role=main] {
-	padding-bottom: $column-paddingBottom;
 	@extend %col-medium-two-third;
+	padding-bottom: $column-paddingBottom;
 	@include breakpoint(small) {
 		padding-bottom: $column-paddingBottom-largeScreen;
 	}
@@ -80,8 +80,8 @@ article[role=main] {
 ----------------------------------------------------------------- */
 
 .sidebar {
-	font-size: $fontSize-small;
 	@extend %col-medium-one-third;
+	font-size: $fontSize-small;
 	@include breakpoint(medium) {
 		padding: $sidebar-padding;
 	}
@@ -91,16 +91,16 @@ article[role=main] {
 ----------------------------------------------------------------- */
 
 .footbar {
+	@extend %clearfix;
 	width: 100%;
 	padding-bottom: $footbar-paddingBottom;
 	border: $border-footbar;
 	border-width: $borderWidth-footbar;
 	background: $color-footbar-bg;
-	@extend %clearfix;
 }
-.footbar .footbar-container {
+.footbar-container {
+	@extend %container-styles;
 	background: $color-footbar-container-bg;
-	@extend .container;
 	@include breakpoint(medium) {
 		padding: $grid-container-padding-largeScreen;
 	}
@@ -119,6 +119,7 @@ article[role=main] {
 ----------------------------------------------------------------- */
 
 .siteFooter {
+	@extend %clearfix;
 	position: relative;
 	display: block;
 	clear: both;
@@ -129,7 +130,6 @@ article[role=main] {
 	font-size: $fontSize-small;
 	line-height: $lineHeight-small;
 	color: $color-grayScale-8;
-	@extend %clearfix;
 }
 .siteFooter h1,
 .siteFooter h2,
@@ -177,9 +177,8 @@ article[role=main] {
 	}
 }
 
-
 /* utility class for displaying lists of links inline. Use @extend */
-.u-list-inlineLinks {
+%u-list-inlineLinks {
 	display: inline-block;
 	padding: 0;
 	margin-right: 20px;
@@ -191,7 +190,7 @@ article[role=main] {
 .has-branding {
 	min-height: 140px;
 }
-.has-branding .siteFooter-brand {
+.siteFooter-brand {
 	width: 112px;
 	margin: 6px auto 35px;
 	@include breakpoint(small) {
@@ -214,14 +213,14 @@ article[role=main] {
 	@extend %col-small-full-width;
 }
 .has-links .siteFooter-links li {
-	@extend .u-list-inlineLinks;
+	@extend %u-list-inlineLinks;
 }
 /* Has general + social media links */
 .has-social .siteFooter-social {
 	@extend %col-small-full-width;
 }
 .has-social .siteFooter-social li {
-	@extend .u-list-inlineLinks;
+	@extend %u-list-inlineLinks;
 }
 .has-links-social .siteFooter-links,
 .has-links-social .siteFooter-social {
@@ -229,7 +228,7 @@ article[role=main] {
 }
 .has-links-social .siteFooter-links li,
 .has-links-social .siteFooter-social li {
-	@extend .u-list-inlineLinks;
+	@extend %u-list-inlineLinks;
 }
 /* Has info + general links */
 .has-info-links .siteFooter-info {
@@ -239,7 +238,7 @@ article[role=main] {
 	@extend %col-small-one-quarter;
 }
 .has-info-links .siteFooter-links li {
-	@extend .u-list-inlineLinks;
+	@extend %u-list-inlineLinks;
 }
 /* Has info + social media links */
 .has-info-social .siteFooter-info {
@@ -249,5 +248,6 @@ article[role=main] {
 	@extend %col-small-one-quarter;
 }
 .has-info-social .siteFooter-social li {
-	@extend .u-list-inlineLinks;
+	@extend %u-list-inlineLinks;
 }
+
