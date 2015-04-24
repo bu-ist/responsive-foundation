@@ -31,778 +31,1353 @@
 	span {
 		display: none;
 	}
+}
+%icon-iefix {
 	/* This triggers a redraw in IE to Fix IE8"s :before content rendering. */
-	html:hover & {
+	.lt-ie9:hover & {
 		-ms-zoom: 1;
 	}
 }
 // Choose which icon you'd like to use. Based off %icon.
 /* social icons */
-%icon-dropbox:before {
-	@extend %icon;
-	content: "\F653";
+%icon-dropbox {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F653";
+	}
 }
-%icon-dropbox-alt:before {
-	@extend %icon;
-	content: "\F65A";
+%icon-dropbox-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F65A";
+	}
 }
-%icon-facebook:before {
-	@extend %icon;
-	content: "\F610";
+%icon-facebook {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F610";
+	}
 }
-%icon-facebook-alt:before {
-	@extend %icon;
-	content: "\F61A";
+%icon-facebook-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F61A";
+	}
 }
-%icon-flickr:before {
-	@extend %icon;
-	content: "\F640";
+%icon-flickr {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F640";
+	}
 }
-%icon-flickr-alt:before {
-	@extend %icon;
-	content: "\F644";
+%icon-flickr-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F644";
+	}
 }
-%icon-foursquare:before {
-	@extend %icon;
-	content: "\F690";
+%icon-foursquare {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F690";
+	}
 }
-%icon-foursquare-alt:before {
-	@extend %icon;
-	content: "\F691";
+%icon-foursquare-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F691";
+	}
 }
-%icon-github:before {
-	@extend %icon;
-	content: "\F670";
+%icon-github {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F670";
+	}
 }
-%icon-github-alt:before {
-	@extend %icon;
-	content: "\F671";
+%icon-github-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F671";
+	}
 }
-%icon-googleplus:before {
-	@extend %icon;
-	content: "\F613";
+%icon-googleplus {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F613";
+	}
 }
-%icon-googleplus-alt:before {
-	@extend %icon;
-	content: "\F614";
+%icon-googleplus-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F614";
+	}
 }
-%icon-instagram:before {
-	@extend %icon;
-	content: "\F641";
+%icon-instagram {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F641";
+	}
 }
-%icon-instagram-alt:before {
-	@extend %icon;
-	content: "\F64A";
+%icon-instagram-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F64A";
+	}
 }
-%icon-kickstarter:before {
-	@extend %icon;
-	content: "\F681";
+%icon-kickstarter {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F681";
+	}
 }
-%icon-kickstarter-alt:before {
-	@extend %icon;
-	content: "\F68A";
+%icon-kickstarter-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F68A";
+	}
 }
-%icon-linkedin:before {
-	@extend %icon;
-	content: "\F612";
+%icon-linkedin {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F612";
+	}
 }
-%icon-linkedin-alt:before {
-	@extend %icon;
-	content: "\F61E";
+%icon-linkedin-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F61E";
+	}
 }
-%icon-paypal:before {
-	@extend %icon;
-	content: "\F680";
+%icon-paypal {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F680";
+	}
 }
-%icon-paypal-alt:before {
-	@extend %icon;
-	content: "\F68B";
+%icon-paypal-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F68B";
+	}
 }
-%icon-pinterest:before {
-	@extend %icon;
-	content: "\F650";
+%icon-pinterest {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F650";
+	}
 }
-%icon-pinterest-alt:before {
-	@extend %icon;
-	content: "\F651";
+%icon-pinterest-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F651";
+	}
 }
-%icon-pocket:before {
-	@extend %icon;
-	content: "\F634";
+%icon-pocket {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F634";
+	}
 }
-%icon-pocket-alt:before {
-	@extend %icon;
-	content: "\F635";
+%icon-pocket-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F635";
+	}
 }
-%icon-reddit:before {
-	@extend %icon;
-	content: "\F616";
+%icon-reddit {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F616";
+	}
 }
-%icon-reddit-alt:before {
-	@extend %icon;
-	content: "\F617";
+%icon-reddit-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F617";
+	}
 }
-%icon-renren:before {
-	@extend %icon;
-	content: "\F61C";
+%icon-renren {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F61C";
+	}
 }
-%icon-retweet:before {
-	@extend %icon;
-	content: "\F600";
+%icon-retweet {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F600";
+	}
 }
-%icon-soundcloud:before {
-	@extend %icon;
-	content: "\F6B3";
+%icon-soundcloud {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F6B3";
+	}
 }
-%icon-soundcloud-alt:before {
-	@extend %icon;
-	content: "\F6B4";
+%icon-soundcloud-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F6B4";
+	}
 }
-%icon-spotify:before {
-	@extend %icon;
-	content: "\F6B1";
+%icon-spotify {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F6B1";
+	}
 }
-%icon-stackexchange:before {
-	@extend %icon;
-	content: "\F673";
+%icon-stackexchange {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F673";
+	}
 }
-%icon-stackexchange-alt:before {
-	@extend %icon;
-	content: "\F67B";
+%icon-stackexchange-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F67B";
+	}
 }
-%icon-stackoverflow:before {
-	@extend %icon;
-	content: "\F672";
+%icon-stackoverflow {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F672";
+	}
 }
-%icon-stackoverflow-alt:before {
-	@extend %icon;
-	content: "\F67A";
+%icon-stackoverflow-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F67A";
+	}
 }
-%icon-twitter:before {
-	@extend %icon;
-	content: "\F611";
+%icon-twitter {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F611";
+	}
 }
-%icon-twitter-alt:before {
-	@extend %icon;
-	content: "\F62B";
+%icon-twitter-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F62B";
+	}
 }
-%icon-tumblr:before {
-	@extend %icon;
-	content: "\F620";
+%icon-tumblr {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F620";
+	}
 }
-%icon-tumblr-alt:before {
-	@extend %icon;
-	content: "\F62A";
+%icon-tumblr-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F62A";
+	}
 }
-%icon-vimeo:before {
-	@extend %icon;
-	content: "\F631";
+%icon-vimeo {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F631";
+	}
 }
-%icon-vimeo-alt:before {
-	@extend %icon;
-	content: "\F63C";
+%icon-vimeo-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F63C";
+	}
 }
-%icon-vine:before {
-	@extend %icon;
-	content: "\F633";
+%icon-vine {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F633";
+	}
 }
-%icon-vine-alt:before {
-	@extend %icon;
-	content: "\F63B";
+%icon-vine-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F63B";
+	}
 }
-%icon-weibo:before {
-	@extend %icon;
-	content: "\F61B";
+%icon-weibo {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F61B";
+	}
 }
-%icon-weibo-alt:before {
-	@extend %icon;
-	content: "\F61D";
+%icon-weibo-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F61D";
+	}
 }
-%icon-wordpress:before {
-	@extend %icon;
-	content: "\F621";
+%icon-wordpress {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F621";
+	}
 }
-%icon-youtube:before {
-	@extend %icon;
-	content: "\F630";
+%icon-youtube {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F630";
+	}
 }
-%icon-youtube-alt:before {
-	@extend %icon;
-	content: "\F632";
+%icon-youtube-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F632";
+	}
 }
 /* general icons */
 
-%icon-action:before {
-	@extend %icon;
-	content: "\EE00";
-}
-%icon-alert:before {
-	@extend %icon;
-	content: "\26A0";
-}
-%icon-android:before {
-	@extend %icon;
-	content: "\F6F3";
-}
-%icon-appleinc:before {
-	@extend %icon;
-	content: "\F8FF";
-}
-%icon-burst:before {
-	@extend %icon;
-	content: "\F552";
-}
-%icon-calculator:before {
-	@extend %icon;
-	content: "\E551";
-}
-%icon-cart:before {
-	@extend %icon;
-	content: "\E500";
-}
-%icon-code:before {
-	@extend %icon;
-	content: "\E780";
-}
-%icon-compass:before {
-	@extend %icon;
-	content: "\E671";
-}
-%icon-contract:before {
-	@extend %icon;
-	content: "\EE01";
-}
-%icon-dashboard:before {
-	@extend %icon;
-	content: "\F000";
-}
-%icon-download:before {
-	@extend %icon;
-	content: "\EB01";
-}
-%icon-downloadbox:before {
-	@extend %icon;
-	content: "\EB02";
-}
-%icon-ban:before {
-	@extend %icon;
-	content: "\1F6AB";
-}
-%icon-barchart:before {
-	@extend %icon;
-	content: "\1F4CA";
-}
-%icon-bike:before {
-	@extend %icon;
-	content: "\1F6B2";
-}
-%icon-book:before {
-	@extend %icon;
-	content: "\1F4D5";
-}
-%icon-bookmark:before {
-	@extend %icon;
-	content: "\1F516";
-}
-%icon-box:before {
-	@extend %icon;
-	content: "\1F4E6";
-}
-%icon-briefcase:before {
-	@extend %icon;
-	content: "\1F4BC";
-}
-%icon-bug:before {
-	@extend %icon;
-	content: "\1F41B";
-}
-%icon-calendar:before {
-	@extend %icon;
-	content: "\1F4C5";
-}
-%icon-camera:before {
-	@extend %icon;
-	content: "\1F4F7";
-}
-%icon-car:before {
-	@extend %icon;
-	content: "\1F698";
-}
-%icon-chat:before {
-	@extend %icon;
-	content: "\1F4AC";
-}
-%icon-check:before {
-	@extend %icon;
-	content: "\2713";
-}
-%icon-close:before {
-	@extend %icon;
-	content: "\E421";
-}
-%icon-clipboard:before {
-	@extend %icon;
-	content: "\1F4CB";
-}
-%icon-clock:before {
-	@extend %icon;
-	content: "\23F2";
-}
-%icon-cloud:before {
-	@extend %icon;
-	content: "\2601";
-}
-%icon-compose:before {
-	@extend %icon;
-	content: "\1F4DD";
-}
-%icon-contacts:before {
-	@extend %icon;
-	content: "\1F4C7";
-}
-%icon-crosshair:before {
-	@extend %icon;
-	content: "\2316";
-}
-%icon-delete:before {
-	@extend %icon;
-	content: "\2421";
-}
-%icon-desktop:before {
-	@extend %icon;
-	content: "\1F4BB";
-}
-%icon-directleft:before {
-	@extend %icon;
-	content: "\25C3";
-}
-%icon-directright:before {
-	@extend %icon;
-	content: "\25B9";
-}
-%icon-directup:before {
-	@extend %icon;
-	content: "\25B4";
-}
-%icon-dislike:before {
-	@extend %icon;
-	content: "\1F44E";
-}
-%icon-down:before {
-	@extend %icon;
-	content: "\2B07";
-}
-%icon-dropdown:before {
-	@extend %icon;
-	content: "\25BE";
-}
-%icon-emptycart:before {
-	@extend %icon;
-	content: "\E507";
-}
-%icon-grid:before {
-	@extend %icon;
-	content: "\E9A0";
-}
-%icon-index:before {
-	@extend %icon;
-	content: "\E902";
-}
-%icon-envelope:before {
-	@extend %icon;
-	content: "\2709";
-}
-%icon-expand:before {
-	@extend %icon;
-	content: "\2922";
-}
-%icon-fastforward:before {
-	@extend %icon;
-	content: "\29E3";
-}
-%icon-file:before {
-	@extend %icon;
-	content: "\1F4C4";
-}
-%icon-files:before {
-	@extend %icon;
-	content: "\EC00";
-}
-%icon-flag:before {
-	@extend %icon;
-	content: "\2691";
-}
-%icon-flask:before {
-	@extend %icon;
-	content: "\F4C0";
-}
-%icon-folder:before {
-	@extend %icon;
-	content: "\1F4C1";
-}
-%icon-globe:before {
-	@extend %icon;
-	content: "\1F310";
-}
-%icon-headphones:before {
-	@extend %icon;
-	content: "\1F3A7";
-}
-%icon-heart:before {
-	@extend %icon;
-	content: "\2665";
-}
-%icon-home:before {
-	@extend %icon;
-	content: "\2302";
-}
-%icon-hyphen:before {
-	@extend %icon;
-	content: "\002D";
-}
-%icon-infinity:before {
-	@extend %icon;
-	content: "\221E";
-}
-%icon-info:before {
-	@extend %icon;
-	content: "\2139";
-}
-%icon-key:before {
-	@extend %icon;
-	content: "\1F511";
-}
-%icon-laptop:before {
-	@extend %icon;
-	content: "\EA00";
-}
-%icon-layers:before {
-	@extend %icon;
-	content: "\E202";
-}
-%icon-layout:before {
-	@extend %icon;
-	content: "\E202";
-}
-%icon-left:before {
-	@extend %icon;
-	content: "\2B05";
-}
-%icon-lightbulb:before {
-	@extend %icon;
-	content: "\1F4A1";
-}
-%icon-lightning:before {
-	@extend %icon;
-	content: "\2607";
-}
-%icon-like:before {
-	@extend %icon;
-	content: "\1F44D";
-}
-%icon-like-alt:before {
-	@extend %icon;
-	content: "\1F44B";
-}
-%icon-link:before {
-	@extend %icon;
-	content: "\1F51B";
-}
-%icon-link-alt:before {
-	@extend %icon;
-	content: "\F699";
-}
-%icon-list:before {
-	@extend %icon;
-	content: "\ED50";
-}
-%icon-location:before {
-	@extend %icon;
-	content: "\E6D0";
-}
-%icon-lock:before {
-	@extend %icon;
-	content: "\1F512";
-}
-%icon-map:before {
-	@extend %icon;
-	content: "\E673";
-}
-%icon-megaphone:before {
-	@extend %icon;
-	content: "\1F4E2";
-}
-%icon-menu:before {
-	@extend %icon;
-	content: "\E9A1";
-}
-%icon-mic:before {
-	@extend %icon;
-	content: "\1F3A4";
-}
-%icon-music:before {
-	@extend %icon;
-	content: "\266B";
-}
-%icon-navigate:before {
-	@extend %icon;
-	content: "\E670";
-}
-%icon-navigateleft:before {
-	@extend %icon;
-	content: "\25C5";
-}
-%icon-navigateright:before {
-	@extend %icon;
-	content: "\25BB";
-}
-%icon-navigatedown:before {
-	@extend %icon;
-	content: "\F501";
-}
-%icon-navigateup:before {
-	@extend %icon;
-	content: "\F500";
-}
-%icon-notebook:before {
-	@extend %icon;
-	content: "\1F4D3";
-}
-%icon-notifications:before {
-	@extend %icon;
-	content: "\1F514";
-}
-%icon-pause:before {
-	@extend %icon;
-	content: "\E8A0";
-}
-%icon-phone:before {
-	@extend %icon;
-	content: "\1F4DE";
-}
-%icon-picture:before {
-	@extend %icon;
-	content: "\1F304";
-}
-%icon-piechart:before {
-	@extend %icon;
-	content: "\E570";
-}
-%icon-pinboard:before {
-	@extend %icon;
-	content: "\F654";
-}
-%icon-pin:before {
-	@extend %icon;
-	content: "\1F4CD";
-}
-%icon-plane:before {
-	@extend %icon;
-	content: "\2708";
-}
-%icon-planet:before {
-	@extend %icon;
-	content: "\F280";
-}
-%icon-play:before {
-	@extend %icon;
-	content: "\25B6";
-}
-%icon-plus:before {
-	@extend %icon;
-	content: "\002B";
-}
-%icon-poo:before {
-	@extend %icon;
-	content: "\1F4A9";
-}
-%icon-print:before {
-	@extend %icon;
-	content: "\2399";
-}
-%icon-puzzle:before {
-	@extend %icon;
-	content: "\E710";
-}
-%icon-record:before {
-	@extend %icon;
-	content: "\25CF";
-}
-%icon-rss:before {
-	@extend %icon;
-	content: "\E310";
-}
-%icon-rss-alt:before {
-	@extend %icon;
-	content: "\E31A";
-}
-%icon-redirect:before {
-	@extend %icon;
-	content: "\21AA";
-}
-%icon-refresh:before {
-	@extend %icon;
-	content: "\21BB";
-}
-%icon-replay:before {
-	@extend %icon;
-	content: "\21BA";
-}
-%icon-reply:before {
-	@extend %icon;
-	content: "\21A9";
-}
-%icon-rewind:before {
-	@extend %icon;
-	content: "\23EA";
-}
-%icon-right:before {
-	@extend %icon;
-	content: "\27A1";
-}
-%icon-rotaryphone:before {
-	@extend %icon;
-	content: "\260E";
-}
-%icon-scaledown:before {
-	@extend %icon;
-	content: "\EE05";
-}
-%icon-scaleup:before {
-	@extend %icon;
-	content: "\EE04";
-}
-%icon-screwdriver:before {
-	@extend %icon;
-	content: "\F037";
-}
-%icon-share:before {
-	@extend %icon;
-	content: "\F601";
-}
-%icon-signpost:before {
-	@extend %icon;
-	content: "\E672";
-}
-%icon-smartphone:before {
-	@extend %icon;
-	content: "\EA02";
-}
-%icon-search:before {
-	@extend %icon;
-	content: "\1F50E";
-}
-%icon-settings:before {
-	@extend %icon;
-	content: "\2699";
-}
-%icon-skipback:before {
-	@extend %icon;
-	content: "\23EE";
-}
-%icon-skipforward:before {
-	@extend %icon;
-	content: "\23ED";
-}
-%icon-star:before {
-	@extend %icon;
-	content: "\22C6";
-}
-%icon-stop:before {
-	@extend %icon;
-	content: "\25A0";
-}
-%icon-stock:before {
-	@extend %icon;
-	content: "\E579";
-}
-%icon-storagebox:before {
-	@extend %icon;
-	content: "\E901";
-}
-%icon-sync:before {
-	@extend %icon;
-	content: "\EB82";
-}
-%icon-tablet:before {
-	@extend %icon;
-	content: "\EA01";
-}
-%icon-tag:before {
-	@extend %icon;
-	content: "\E100";
-}
-%icon-thermometer:before {
-	@extend %icon;
-	content: "\F201";
-}
-%icon-thumbnails:before {
-	@extend %icon;
-	content: "\E9A3";
-}
-%icon-toolbox:before {
-	@extend %icon;
-	content: "\F030";
-}
-%icon-tv:before {
-	@extend %icon;
-	content: "\1F4FA";
-}
-%icon-unlock:before {
-	@extend %icon;
-	content: "\1F513";
-}
-%icon-up:before {
-	@extend %icon;
-	content: "\2806";
-}
-%icon-upload:before {
-	@extend %icon;
-	content: "\EB41";
-}
-%icon-uploadcloud:before {
-	@extend %icon;
-	content: "\EB40";
-}
-%icon-user:before {
-	@extend %icon;
-	content: "\1F464";
-}
-%icon-users:before {
-	@extend %icon;
-	content: "\1F465";
-}
-%icon-utensils:before {
-	@extend %icon;
-	content: "\1F374";
-}
-%icon-video:before {
-	@extend %icon;
-	content: "\1F4F9";
-}
-%icon-view:before {
-	@extend %icon;
-	content: "\1F440";
-}
-%icon-volume:before {
-	@extend %icon;
-	content: "\1F508";
-}
-%icon-watch:before {
-	@extend %icon;
-	content: "\231A";
-}
-%icon-wrench:before {
-	@extend %icon;
-	content: "\1F527";
-}
-%icon-write:before {
-	@extend %icon;
-	content: "\270E";
-}
-%icon-wifi:before {
-	@extend %icon;
-	content: "\EB84";
+%icon-action {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\EE00";
+	}
+}
+%icon-alert {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\26A0";
+	}
+}
+%icon-android {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F6F3";
+	}
+}
+%icon-appleinc {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F8FF";
+	}
+}
+%icon-burst {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F552";
+	}
+}
+%icon-calculator {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E551";
+	}
+}
+%icon-cart {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E500";
+	}
+}
+%icon-code {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E780";
+	}
+}
+%icon-compass {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E671";
+	}
+}
+%icon-contract {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\EE01";
+	}
+}
+%icon-dashboard {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F000";
+	}
+}
+%icon-download {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\EB01";
+	}
+}
+%icon-downloadbox {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\EB02";
+	}
+}
+%icon-ban {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F6AB";
+	}
+}
+%icon-barchart {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F4CA";
+	}
+}
+%icon-bike {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F6B2";
+	}
+}
+%icon-book {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F4D5";
+	}
+}
+%icon-bookmark {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F516";
+	}
+}
+%icon-box {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F4E6";
+	}
+}
+%icon-briefcase {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F4BC";
+	}
+}
+%icon-bug {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F41B";
+	}
+}
+%icon-calendar {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F4C5";
+	}
+}
+%icon-camera {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F4F7";
+	}
+}
+%icon-car {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F698";
+	}
+}
+%icon-chat {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F4AC";
+	}
+}
+%icon-check {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\2713";
+	}
+}
+%icon-close {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E421";
+	}
+}
+%icon-clipboard {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F4CB";
+	}
+}
+%icon-clock {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\23F2";
+	}
+}
+%icon-cloud {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\2601";
+	}
+}
+%icon-compose {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F4DD";
+	}
+}
+%icon-contacts {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F4C7";
+	}
+}
+%icon-crosshair {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\2316";
+	}
+}
+%icon-delete {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\2421";
+	}
+}
+%icon-desktop {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F4BB";
+	}
+}
+%icon-directleft {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\25C3";
+	}
+}
+%icon-directright {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\25B9";
+	}
+}
+%icon-directup {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\25B4";
+	}
+}
+%icon-dislike {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F44E";
+	}
+}
+%icon-down {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\2B07";
+	}
+}
+%icon-dropdown {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\25BE";
+	}
+}
+%icon-emptycart {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E507";
+	}
+}
+%icon-grid {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E9A0";
+	}
+}
+%icon-index {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E902";
+	}
+}
+%icon-envelope {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\2709";
+	}
+}
+%icon-expand {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\2922";
+	}
+}
+%icon-fastforward {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\29E3";
+	}
+}
+%icon-file {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F4C4";
+	}
+}
+%icon-files {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\EC00";
+	}
+}
+%icon-flag {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\2691";
+	}
+}
+%icon-flask {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F4C0";
+	}
+}
+%icon-folder {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F4C1";
+	}
+}
+%icon-globe {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F310";
+	}
+}
+%icon-headphones {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F3A7";
+	}
+}
+%icon-heart {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\2665";
+	}
+}
+%icon-home {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\2302";
+	}
+}
+%icon-hyphen {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\002D";
+	}
+}
+%icon-infinity {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\221E";
+	}
+}
+%icon-info {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\2139";
+	}
+}
+%icon-key {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F511";
+	}
+}
+%icon-laptop {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\EA00";
+	}
+}
+%icon-layers {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E202";
+	}
+}
+%icon-layout {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E202";
+	}
+}
+%icon-left {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\2B05";
+	}
+}
+%icon-lightbulb {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F4A1";
+	}
+}
+%icon-lightning {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\2607";
+	}
+}
+%icon-like {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F44D";
+	}
+}
+%icon-like-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F44B";
+	}
+}
+%icon-link {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F51B";
+	}
+}
+%icon-link-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F699";
+	}
+}
+%icon-list {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\ED50";
+	}
+}
+%icon-location {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E6D0";
+	}
+}
+%icon-lock {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F512";
+	}
+}
+%icon-map {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E673";
+	}
+}
+%icon-megaphone {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F4E2";
+	}
+}
+%icon-menu {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E9A1";
+	}
+}
+%icon-mic {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F3A4";
+	}
+}
+%icon-music {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\266B";
+	}
+}
+%icon-navigate {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E670";
+	}
+}
+%icon-navigateleft {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\25C5";
+	}
+}
+%icon-navigateright {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\25BB";
+	}
+}
+%icon-navigatedown {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F501";
+	}
+}
+%icon-navigateup {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F500";
+	}
+}
+%icon-notebook {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F4D3";
+	}
+}
+%icon-notifications {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F514";
+	}
+}
+%icon-pause {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E8A0";
+	}
+}
+%icon-phone {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F4DE";
+	}
+}
+%icon-picture {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F304";
+	}
+}
+%icon-piechart {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E570";
+	}
+}
+%icon-pinboard {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F654";
+	}
+}
+%icon-pin {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F4CD";
+	}
+}
+%icon-plane {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\2708";
+	}
+}
+%icon-planet {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F280";
+	}
+}
+%icon-play {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\25B6";
+	}
+}
+%icon-plus {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\002B";
+	}
+}
+%icon-poo {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F4A9";
+	}
+}
+%icon-print {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\2399";
+	}
+}
+%icon-puzzle {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E710";
+	}
+}
+%icon-record {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\25CF";
+	}
+}
+%icon-rss {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E310";
+	}
+}
+%icon-rss-alt {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E31A";
+	}
+}
+%icon-redirect {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\21AA";
+	}
+}
+%icon-refresh {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\21BB";
+	}
+}
+%icon-replay {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\21BA";
+	}
+}
+%icon-reply {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\21A9";
+	}
+}
+%icon-rewind {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\23EA";
+	}
+}
+%icon-right {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\27A1";
+	}
+}
+%icon-rotaryphone {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\260E";
+	}
+}
+%icon-scaledown {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\EE05";
+	}
+}
+%icon-scaleup {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\EE04";
+	}
+}
+%icon-screwdriver {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F037";
+	}
+}
+%icon-share {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F601";
+	}
+}
+%icon-signpost {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E672";
+	}
+}
+%icon-smartphone {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\EA02";
+	}
+}
+%icon-search {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F50E";
+	}
+}
+%icon-settings {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\2699";
+	}
+}
+%icon-skipback {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\23EE";
+	}
+}
+%icon-skipforward {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\23ED";
+	}
+}
+%icon-star {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\22C6";
+	}
+}
+%icon-stop {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\25A0";
+	}
+}
+%icon-stock {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E579";
+	}
+}
+%icon-storagebox {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E901";
+	}
+}
+%icon-sync {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\EB82";
+	}
+}
+%icon-tablet {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\EA01";
+	}
+}
+%icon-tag {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E100";
+	}
+}
+%icon-thermometer {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F201";
+	}
+}
+%icon-thumbnails {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\E9A3";
+	}
+}
+%icon-toolbox {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\F030";
+	}
+}
+%icon-tv {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F4FA";
+	}
+}
+%icon-unlock {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F513";
+	}
+}
+%icon-up {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\2806";
+	}
+}
+%icon-upload {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\EB41";
+	}
+}
+%icon-uploadcloud {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\EB40";
+	}
+}
+%icon-user {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F464";
+	}
+}
+%icon-users {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F465";
+	}
+}
+%icon-utensils {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F374";
+	}
+}
+%icon-video {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F4F9";
+	}
+}
+%icon-view {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F440";
+	}
+}
+%icon-volume {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F508";
+	}
+}
+%icon-watch {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\231A";
+	}
+}
+%icon-wrench {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\1F527";
+	}
+}
+%icon-write {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\270E";
+	}
+}
+%icon-wifi {
+	@extend %icon-iefix;
+	&:before {
+		@extend %icon;
+		content: "\EB84";
+	}
 }
 
 /* Footer links */

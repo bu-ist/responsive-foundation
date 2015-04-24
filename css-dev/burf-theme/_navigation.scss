@@ -67,7 +67,6 @@ nav a {
 /* searchToggle
 ----------------------------------------------------------------- */
 .searchToggle {
-	@extend %icon;
 	@extend %icon-search;
 	@include transition(color, 200ms, ease-in-out, 0s);
 	float: right;
