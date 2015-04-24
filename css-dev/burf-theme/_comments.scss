@@ -4,16 +4,16 @@
 .comments-area {
 	color: $color-comments;
 }
+// Remove defaults for all OL on this page
 .comments-area ol {
 	padding: 0;
 	margin: 0;
-list-style: none;
-}
-.comments-area li {
+	list-style: none;
 }
 .comments-list {
 	border-bottom: 1px solid #dddddd;
 }
+// TODO: classes instead of nested li
 .comments-list li li article {
 	padding-left: 30px;
 }
@@ -26,7 +26,7 @@ list-style: none;
 .comments-list li li li li li article {
 	padding-left: 120px;
 }
-.comments-list article {
+.comment-body {
 	position: relative;
 	padding: $comment-padding;
 	margin: $comment-margin;
@@ -35,7 +35,7 @@ list-style: none;
 	font-family: $fontFamily-comment;
 	font-size: $fontSize-smaller;
 }
-.reply a {
+.comment-reply-link {
 	font-size: $fontSize-smallest;
 	color: $color-comment-reply;
 }
@@ -82,17 +82,17 @@ list-style: none;
 .comment-respond p {
 	margin: 0 0 20px;
 }
-.comment-respond .comment-form-submit {
+.comment-form-submit {
 	margin: 15px 0 0;
 }
-.comment-respond fieldset .form-tip {
+.form-tip {
 	font-size: $fontSize-smallest;
 	@include breakpoint(small) {
 		display: block;
 	}
 }
-.comment-respond fieldset .form-tip,
-.comment-respond fieldset .form-tip a {
+.form-tip,
+.form-tip a {
 	color: #aaaaaa;
 }
 .comment-respond label {
@@ -118,7 +118,8 @@ list-style: none;
 		width: 75%;
 	}
 }
-.comment-respond .cancel-comment-reply {
+// TODO: The link below this is hidden with a style attribute in markup. Intentional?
+.cancel-comment-reply {
 	position: absolute;
 	top: 20px;
 	right: 20px;
