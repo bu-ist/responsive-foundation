@@ -21,67 +21,81 @@ a:hover {
 /* Typography
 ----------------------------------------------------------------- */
 
-/* Address font sizes and margins set differently in IE 6/7. Address font sizes within `section` and `article` in Firefox 4+, Safari 5, and Chrome. */
-h1,
-.font-jumbo {
+%font-jumbo {
+	margin: $fontMargin-jumbo;
 	font-size: $fontSize-jumbo;
 	line-height: $lineHeight-jumbo;
-	margin: $fontMargin-jumbo;
 }
-h2,
-.font-largest {
+%font-largest {
+	margin: $fontMargin-largest;
 	font-size: $fontSize-largest;
 	line-height: $lineHeight-largest;
-	margin: $fontMargin-largest;
 }
-h3,
-.font-larger {
+%font-larger {
+	margin: $fontMargin-larger;
 	font-size: $fontSize-larger;
 	line-height: $lineHeight-larger;
-	margin: $fontMargin-larger;
 }
-h4,
-.font-large {
+%font-large {
+	margin: $fontMargin-large;
 	font-size: $fontSize-large;
 	line-height: $lineHeight-large;
-	margin: $fontMargin-large;
 }
-h5,
-.font-medium {
+%font-medium {
+	margin: $fontMargin-medium;
 	font-size: $fontSize-medium;
 	line-height: $lineHeight-medium;
-	margin: $fontMargin-medium;
 }
-h6,
-.font-small {
+%font-small {
+	margin: $fontMargin-small;
 	font-size: $fontSize-small;
 	line-height: $lineHeight-small;
-	margin: $fontMargin-small;
 }
 /* Generic font size classes */
-.font-smaller {
+%font-smaller {
+	margin: $fontMargin-smaller;
 	font-size: $fontSize-smaller;
 	line-height: $lineHeight-smaller;
-	margin: $fontMargin-smaller;
 }
-.font-smallest {
+%font-smallest {
+	margin: $fontMargin-smallest;
 	font-size: $fontSize-smallest;
 	line-height: $lineHeight-smallest;
-	margin: $fontMargin-smallest;
 }
-.font-micro {
+%font-micro {
+	margin: $fontMargin-micro;
 	font-size: $fontSize-micro;
 	line-height: $lineHeight-micro;
-	margin: $fontMargin-micro;
 }
+
+/* Address font sizes and margins set differently in IE 6/7. Address font sizes within `section` and `article` in Firefox 4+, Safari 5, and Chrome. */
+h1 {
+	@extend %font-jumbo;
+}
+h2 {
+	@extend %font-largest;
+}
+h3 {
+	@extend %font-larger;
+}
+h4 {
+	@extend %font-large;
+}
+h5 {
+	@extend %font-medium;
+}
+h6 {
+	@extend %font-small;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	color: $color-heading;
 	font-family: $fontFamily-heading;
+	color: $color-heading;
 }
 h1 small,
 h2 small,
@@ -89,8 +103,8 @@ h3 small,
 h4 small,
 h5 small,
 h6 small {
-	font-size: .75em;
-	font-weight :normal;
+	font-weight: normal;
+	font-size: 0.75em;
 	color: $color-heading-small;
 }
 hgroup {
@@ -127,21 +141,21 @@ dfn {
 /* Address differences between Firefox and other browsers. Known issue:no IE 6/7 normalization. */
 hr {
 	-moz-box-sizing: content-box;
-	box-sizing: content-box;
+	     box-sizing: content-box;
 	height: 0;
 }
 /* Address styling not present in IE 6/7/8/9. */
 mark {
-	background: #ff0;
-	color: #000;
+	background: #ffff00;
+	color: #000000;
 }
 /* Address margins set differently in IE 6/7. */
 p,
 pre {
 	margin: $fontMargin-base;
 }
-/* Correct font family set oddly in IE 6, Safari 4/5, and Chrome. */ 
-code, 
+/* Correct font family set oddly in IE 6, Safari 4/5, and Chrome. */
+code,
 kbd,
 pre,
 samp {
@@ -161,7 +175,7 @@ q {
 /* Address `quotes` property not supported in Safari 4. */
 q:before,
 q:after {
-	content: '';
+	content: "";
 	content: none;
 }
 /* Address inconsistent and variable font size in all browsers. */
@@ -171,10 +185,10 @@ small {
 /* Prevent `sub` and `sup` affecting `line-height` in all browsers. */
 sub,
 sup {
-	font-size: $fontSize-smallest;
-	line-height: 0;
 	position: relative;
 	vertical-align: baseline;
+	font-size: $fontSize-smallest;
+	line-height: 0;
 }
 sup {
 	top: -0.5em;
@@ -209,51 +223,46 @@ ul {
 /* Correct list images handled incorrectly in IE 7. */
 nav ul,
 nav ol {
+	padding: 0;
+	margin: 0;
 	list-style: none;
 	list-style-image: none;
-	margin: 0;
-	padding: 0;
 }
 /* remove margin from nested lists */
 ul ul,
 ul ol,
 ol ul,
 ol ol {
-	margin:0;
+	margin: 0;
 }
 
 /* Code
 ----------------------------------------------------------------- */
 
 code {
-    color: $color-code;
-    background: $color-code-bg;
-}
-code {
-    padding: $fontPadding-code;
-    white-space: nowrap;
+	padding: $fontPadding-code;
+	background: $color-code-bg;
+	color: $color-code;
+	white-space: nowrap;
 }
 .content p code {
-    font-size: 90%;
+	font-size: 90%;
 }
 .code {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	padding: 20px;
 	margin: $fontMargin-code;
-    padding: 20px;
-    background: $color-code-bg;
-    border: 1px solid $color-grayScale-e;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+	border: 1px solid $color-grayScale-e;
+	background: $color-code-bg;
 }
 .code + .code {
 	margin-top: -15px;
 }
 .code code {
-    font-size: 95%;
-    white-space: pre;
-    word-wrap: normal;
-    padding: 0;
-    background: none;
+	padding: 0;
+	background: none;
+	font-size: 95%;
+	white-space: pre;
+	word-wrap: normal;
 }
-
-
-

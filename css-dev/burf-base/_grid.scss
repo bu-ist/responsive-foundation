@@ -1,18 +1,11 @@
-/* grid
+/* placeholders for theme use
 ----------------------------------------------------------------- */
 
-.wrapper {
-	overflow:hidden;
-}
-.content {
-	position:relative;
-}
-.container {
-	@extend %clearfix;
-	padding: $grid-container-padding;
+%container-styles {
 	width: 100%;
+	padding: $grid-container-padding;
 	margin: 0 auto;
-
+	@extend %clearfix;
 	@include breakpoint(small) {
 		max-width: $container-S;
 		padding: $grid-container-padding-largeScreen;
@@ -24,25 +17,50 @@
 		max-width: $container-L;
 	}
 }
-.row {
+%row-styles {
+	@extend %clearfix;
 	margin: $grid-row-margin;
 	@include breakpoint(small) {
 		margin-right: 0;
 	}
 }
-.row [class*="col-"] {
+%row-child-styles {
 	padding: $grid-column-padding;
 }
-.row:before,
-.row:after {
-display: table;
-content: " ";
+%equal-height-parent {
+	overflow: hidden;
 }
-.row:after {
-clear: both;
+%equal-height-child {
+	@include breakpoint(medium) {
+		padding-bottom: 99999px;
+		margin-bottom: -99999px;
+	}
+}
+
+// Additional placeholders are available for the grid. See below for detailed docs.
+// Examples: %col-small-one-half, %col-3, %col-medium-6
+// Optional: %col-medium-margin-6, %col-medium-push-6, %col-medium-offset-6, %col-medium-pull-6
+
+/* grid
+----------------------------------------------------------------- */
+
+.wrapper {
+	overflow: hidden;
+}
+.content {
+	position: relative;
+}
+.container {
+	@extend %container-styles;
+}
+.row {
+	@extend %row-styles;
+}
+.row [class*="col-"] {
+	@extend %row-child-styles;
 }
 .row .row:nth-last-of-type(1) {
-margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 /* ---------------------------------------------------------------
@@ -218,62 +236,66 @@ $grid-widths-margins: ();
 
 // Friendly placeholders for common needs - calculated based on grid columns
 
-%col-small-one-quarter {
-	@extend %col-small-#{$grid-number-columns * (1/4)};
-}
-%col-small-one-third {
-	@extend %col-small-#{$grid-number-columns * (1/3)};
-}
-%col-small-one-half {
-	@extend %col-small-#{$grid-number-columns * (1/2)};
-}
-%col-small-two-third {
-	@extend %col-small-#{$grid-number-columns * (2/3)};
-}
-%col-small-three-quarter {
-	@extend %col-small-#{$grid-number-columns * (3/4)};
-}
-%col-small-full-width {
-	@extend %col-small-#{$grid-number-columns * (1)};
-}
-
-%col-medium-one-quarter {
-	@extend %col-medium-#{$grid-number-columns * (1/4)};
-}
-%col-medium-one-third {
-	@extend %col-medium-#{$grid-number-columns * (1/3)};
-}
-%col-medium-one-half {
-	@extend %col-medium-#{$grid-number-columns * (1/2)};
-}
-%col-medium-two-third {
-	@extend %col-medium-#{$grid-number-columns * (2/3)};
-}
-%col-medium-three-quarter {
-	@extend %col-medium-#{$grid-number-columns * (3/4)};
-}
-%col-medium-full-width {
-	@extend %col-medium-#{$grid-number-columns * (1)};
+%col-small {
+	&-one-quarter {
+		@extend %col-small-#{$grid-number-columns * (1/4)};
+	}
+	&-one-third {
+		@extend %col-small-#{$grid-number-columns * (1/3)};
+	}
+	&-one-half {
+		@extend %col-small-#{$grid-number-columns * (1/2)};
+	}
+	&-two-third {
+		@extend %col-small-#{$grid-number-columns * (2/3)};
+	}
+	&-three-quarter {
+		@extend %col-small-#{$grid-number-columns * (3/4)};
+	}
+	&-full-width {
+		@extend %col-small-#{$grid-number-columns * (1)};
+	}
 }
 
-// Margins may not always be turned on, so these should be allowed to fail if they aren't.
-%col-medium-margin-one-quarter {
-	@extend %col-medium-margin-#{$grid-number-columns * (1/4)} !optional;
-}
-%col-medium-margin-one-third {
-	@extend %col-medium-margin-#{$grid-number-columns * (1/3)} !optional;
-}
-%col-medium-margin-one-half {
-	@extend %col-medium-margin-#{$grid-number-columns * (1/2)} !optional;
-}
-%col-medium-margin-two-third {
-	@extend %col-medium-margin-#{$grid-number-columns * (2/3)} !optional;
-}
-%col-medium-margin-three-quarter {
-	@extend %col-medium-margin-#{$grid-number-columns * (3/4)} !optional;
-}
-%col-medium-margin-full-width {
-	@extend %col-medium-margin-#{$grid-number-columns * (1)} !optional;
+%col-medium {
+	&-one-quarter {
+		@extend %col-medium-#{$grid-number-columns * (1/4)};
+	}
+	&-one-third {
+		@extend %col-medium-#{$grid-number-columns * (1/3)};
+	}
+	&-one-half {
+		@extend %col-medium-#{$grid-number-columns * (1/2)};
+	}
+	&-two-third {
+		@extend %col-medium-#{$grid-number-columns * (2/3)};
+	}
+	&-three-quarter {
+		@extend %col-medium-#{$grid-number-columns * (3/4)};
+	}
+	&-full-width {
+		@extend %col-medium-#{$grid-number-columns * (1)};
+	}
+	@if $grid-margins {
+		&-margin-one-quarter {
+			@extend %col-medium-margin-#{$grid-number-columns * (1/4)};
+		}
+		&-margin-one-third {
+			@extend %col-medium-margin-#{$grid-number-columns * (1/3)};
+		}
+		&-margin-one-half {
+			@extend %col-medium-margin-#{$grid-number-columns * (1/2)};
+		}
+		&-margin-two-third {
+			@extend %col-medium-margin-#{$grid-number-columns * (2/3)};
+		}
+		&-margin-three-quarter {
+			@extend %col-medium-margin-#{$grid-number-columns * (3/4)};
+		}
+		&-margin-full-width {
+			@extend %col-medium-margin-#{$grid-number-columns * (1)};
+		}
+	}
 }
 
 /* -----------------------------------------------------------------
@@ -342,23 +364,25 @@ directly underneath the normal burf-theme import:
 }
 
 // These classes require $grid-margins in burf-base to be set to true. Default is false.
-.one-quarter-margin {
-	@extend %col-medium-margin-one-quarter !optional;
-}
-.one-third-margin {
-	@extend %col-medium-margin-one-third !optional;
-}
-.one-half-margin {
-	@extend %col-medium-margin-one-half !optional;
-}
-.two-third-margin {
-	@extend %col-medium-margin-two-third !optional;
-}
-.three-quarter-margin {
-	@extend %col-medium-margin-three-quarter !optional;
-}
-.full-width-margin {
-	@extend %col-medium-margin-full-width !optional;
+@if $grid-margins {
+	.one-quarter-margin {
+		@extend %col-medium-margin-one-quarter;
+	}
+	.one-third-margin {
+		@extend %col-medium-margin-one-third;
+	}
+	.one-half-margin {
+		@extend %col-medium-margin-one-half;
+	}
+	.two-third-margin {
+		@extend %col-medium-margin-two-third;
+	}
+	.three-quarter-margin {
+		@extend %col-medium-margin-three-quarter;
+	}
+	.full-width-margin {
+		@extend %col-medium-margin-full-width;
+	}
 }
 
 .equal-height {
