@@ -67,8 +67,8 @@ nav a {
 /* searchToggle
 ----------------------------------------------------------------- */
 .searchToggle {
-	@extend .icon;
-	@extend .icon-search;
+	@extend %icon;
+	@extend %icon-search;
 	@include transition(color, 200ms, ease-in-out, 0s);
 	float: right;
 	width: 60px;
@@ -90,7 +90,7 @@ nav a {
 }
 
 .searchToggle.is-open {
-	@extend .icon-close;
+	@extend %icon-close;
 }
 
 /* when nav or search are opened */
