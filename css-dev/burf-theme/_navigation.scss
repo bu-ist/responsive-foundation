@@ -279,6 +279,7 @@ nav a {
 		color: $color-utilityNav-link-hover;
 	}
 }
+// Required for mobile styles, when utility nav is in primary nav menu
 .primaryNav .utilityNav a {
 	color: $color-utilityNav-inPrimaryNav-link;
 	&:hover {
@@ -402,9 +403,6 @@ nav a {
 		right: auto;
 		display: block;
 	}
-}
-.l-sideNav .utilityNav a:hover {
-	color: $color-grayScale-f;
 }
 .l-sideNav .utilityNav li {
 	display: block;
