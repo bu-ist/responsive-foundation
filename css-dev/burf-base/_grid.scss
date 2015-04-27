@@ -1,6 +1,8 @@
 /* placeholders for theme use
 ----------------------------------------------------------------- */
-
+%wrapper-styles {
+	overflow: hidden;
+}
 %container-styles {
 	width: 100%;
 	padding: $grid-container-padding;
@@ -45,7 +47,7 @@
 ----------------------------------------------------------------- */
 
 .wrapper {
-	overflow: hidden;
+	@extend %wrapper-styles;
 }
 .content {
 	position: relative;
