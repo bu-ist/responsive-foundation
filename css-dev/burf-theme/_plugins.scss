@@ -53,13 +53,19 @@
 	margin-bottom: 25px;
 	list-style: none;
 }
+.profile-listing p {
+	margin-bottom: 0;
+}
 .profile-listing a {
 	text-decoration: none;
 }
 .profile-listing figure {
 	line-height: 0;
 }
-.profile-listing a .profile-name {
+.profile-listing figure img {
+	width: 100%;
+}
+.profile-listing .profile-name {
 	font-family: $fontFamily-profile-name;
 	font-size: $fontSize-profile-name;
 	color: $color-profile-name;
@@ -92,28 +98,19 @@
 	width: 50px;
 	height: 50px;
 }
-.profile-listing .basic figure img {
-	width: 100%;
-}
-.profile-listing .basic li p {
-	margin-bottom: 0;
-}
 .profile-listing .advanced {
 	@extend %clearfix;
 }
 .profile-listing .advanced li {
-	@extend %col-medium-4;
+	@extend %col-medium-one-third;
 }
 .profile-listing .advanced li:nth-child(3n+1) {
 	clear: left;
 }
-.profile-listing .advanced li a {
+.profile-listing .advanced a {
 	display: block;
 	padding: 0 15px;
 	text-align: center;
-}
-.profile-listing .advanced li p {
-	margin-bottom: 0;
 }
 .profile-listing .advanced figure {
 	overflow: hidden;
@@ -121,9 +118,6 @@
 	height: 150px;
 	margin: 0 auto 15px;
 	@include border-radius($borderRadius-profile-figure);
-}
-.profile-listing .advanced figure img {
-	width: 100%;
 }
 .profile-listing .mini {
 	@extend %clearfix;
@@ -143,25 +137,23 @@
 	clear: left;
 	padding-right: 15px;
 }
-.profile-listing .mini li p {
-	margin-bottom: 0;
-}
-.profile-listing .mini li .name {
+.profile-listing .mini .name {
 	font-family: $fontFamily-profile-name;
 	font-size: $fontSize-profile-mini-name;
 }
-.profile-listing .mini li .email a {
+.profile-listing .mini .email a {
 	margin-top: 5px;
 	font-size: $fontSize-profile-mini-email;
 	line-height: $lineHeight-profile-mini-email;
 	text-decoration: underline;
 	word-wrap: break-word;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
 }
-.profile-listing .mini li .email a:hover,
-.profile-listing .mini li .email a:focus {
-	text-decoration: none;
-}
-.profile-listing .mini li .summary {
+.profile-listing .mini .summary {
 	margin-top: 5px;
 	font-size: $fontSize-profile-mini-email;
 	line-height: $lineHeight-profile-mini-email;
@@ -180,9 +172,7 @@
 		height: 80px;
 	}
 }
-.profile-listing .advanced figure img {
-	width: 100%;
-}
+
 /* single profile */
 
 .single-profile article[role=main] h1 {
@@ -206,7 +196,7 @@
 .single-profile figure img {
 	width: 100%;
 }
-.single-profile .profile-info {
+.profile-info {
 	@extend .message;
 	margin: 0 0 20px 0;
 	@include breakpoint(small) {
@@ -215,17 +205,17 @@
 		margin: 0 0 20px 20px;
 	}
 }
-.single-profile .profile-info ul {
+.profile-info ul {
 	padding: 0;
 	margin: 0;
 }
-.single-profile .profile-info li {
+.profile-info li {
 	margin: 0 0 20px 0;
 	list-style: none;
 	font-size: $fontSize-small;
 	word-wrap: break-word;
 }
-.single-profile .profile-info .label {
+.profile-info .label {
 	display: block;
 	font-family: $fontFamily-sansSerif;
 	font-weight: 700;
