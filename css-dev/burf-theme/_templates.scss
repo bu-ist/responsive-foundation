@@ -13,25 +13,27 @@
 ----------------------------------------------------------------- */
 
 %templateNarrow {
+	/* These classes are using %templateNarrow. */
 	.content-container {
 		max-width: $container-S;
 	}
 	article[role=main] {
-		float: none;
-		width: 100%;
-		margin: 0 auto;
+		@extend %col-medium-full-width;
 	}
 }
 
 // A utility class to easily undo narrow column widths.
 // Always overrides %templateNarrow.
 %removeTemplateNarrow {
+	/* These classes are using %removeTemplateNarrow. */
 	.content-container {
 		max-width: $container-L;
 	}
 	article[role=main] {
-		width: 66%;
-		float: left;
+		@include breakpoint(medium) {
+			width: 66.66667%;
+    		float: left;
+		}
 	}
 }
 
@@ -45,11 +47,16 @@
 	@extend %templateNarrow;
 }
 
+.single-profile {
+	@extend %removeTemplateNarrow;
+}
+
 /* Narrow Sidebar
 ----------------------------------------------------------------- */
 
 // A utility class to style sidebars on narrow width templates.
 %templateNarrowSidebar {
+	/* These classes are using %templateNarrowSidebar. */
 	@extend %clearfix;
 	float: none;
 	margin: 0 auto;
@@ -69,13 +76,24 @@
 // A utility class to easily undo narrow width sidebar styles.
 // Always overrides %templateNarrowSidebar.
 %removeTemplateNarrowSidebar {
+	/* These classes are using %removeTemplateNarrowSidebar. */
 	@extend .sidebar;
-	float: left;
+	@extend %container-styles;
+	@include breakpoint(medium) {
+		float: left;
+	}
+
 	.widget {
 		width: 100%;
 
-		&:first-child {
-			padding: $grid-sidebar-padding;
+		@include breakpoint(small) {
+			padding: 0;
+		}
+		@include breakpoint(medium) {
+			padding-right: 60px;
+		}
+		@include breakpoint(large) {
+			padding-right: 0;
 		}
 	}
 }
@@ -83,6 +101,10 @@
 .sidebarPosts,
 .sidebarProfiles {
 	@extend %templateNarrowSidebar;
+}
+
+.sidebarProfiles {
+	@extend %removeTemplateNarrowSidebar;
 }
 
 /* News & Archive Template
