@@ -193,7 +193,7 @@
 .single-profile article[role=main] h2 {
 	text-align: center;
 }
-.single-profile figure {
+.single-profile .profile-thumb figure {
 	@include border-radius($borderRadius-profile-figure);
 	position: absolute;
 	top: 0;
