@@ -9,15 +9,18 @@
 }
 
 /* back link */
-.backLink {
+%backlink-styles {
 	&:before {
 		content: $backLink-before;
 		color: $color-backLink-before;
 	}
 }
+.backLink {
+	@extend %backlink-styles;
+}
 
 /* message */
-.message {
+%message-styles {
 	@include border-radius($borderRadius-message);
 	padding: $padding-message;
 	border: $border-message;
@@ -26,24 +29,31 @@
 	background-color: $color-message-bg;
 	font-size: $fontSize-message;
 }
+.message {
+	@extend %message-styles;
+}
 
 /* .responsiveVideo */
-.responsiveVideo {
+%responsiveVideo-styles {
 	position: relative;
 	padding-top: 45px;
 	padding-bottom: 56.25%;
 	margin-bottom: 14px;
+	div,
+	embed,
+	object,
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100% !important;
+		height: 100% !important;
+	}
 }
-.responsiveVideo div,
-.responsiveVideo embed,
-.responsiveVideo object,
-.responsiveVideo iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100% !important;
-	height: 100% !important;
+.responsiveVideo {
+	@extend %responsiveVideo-styles;
 }
+
 
 /* collapsibles (class name requires underscore due to dependency on front-end library) */
 h1.bu_collapsible,
@@ -55,53 +65,34 @@ h6.bu_collapsible {
 	margin-bottom: 0;
 }
 
-/* WordPress inline images (use WP standard class names) */
-img.alignright {
-	float: right;
-	margin: 0.0 0 10px 10px;
-}
-div.alignright {
-	float: right;
-	//width: auto !important;
+/* WordPress inline align classes (use WP standard class names) */
+
+$align-margin: 10px;
+
+%align-styles {
 	max-width: 100%;
-	margin: 0 0 10px 10px;
+	p {
+		margin-bottom: 0;
+	}
+	img {
+		margin-bottom: $align-margin / 2;
+	}
 }
-div.alignright p {
-	margin-bottom: 0;
+.alignright {
+	@extend %align-styles;
+	float: right;
+	margin: 0.0 0 $align-margin $align-margin;
 }
-div.alignright img {
-	margin-bottom: 5px;
-}
-img.alignleft {
+.alignleft {
+	@extend %align-styles;
 	float: left;
-	margin: 0 10px 10px 0;
+	margin: 0 $align-margin $align-margin 0;
 }
-div.alignleft {
-	float: left;
-	//width: auto !important;
-	max-width: 100%;
-	margin: 0 10px 10px 0;
-}
-div.alignleft p {
-	margin-bottom: 0;
-}
-div.alignleft img {
-	margin-bottom: 5px;
-}
-img.aligncenter {
+.aligncenter {
 	display: block;
-	margin: 0 auto 10px;
+	margin: 0 auto $align-margin;
 }
-div.aligncenter {
-	max-width: 100%;
-	margin: 0 auto;
-}
-div.aligncenter p {
-	margin-bottom: 0;
-}
-div.aligncenter img {
-	margin-bottom: 5px;
-}
+
 .wp-caption,
 .wp-caption-text {
 	font-family: $fontFamily-caption;

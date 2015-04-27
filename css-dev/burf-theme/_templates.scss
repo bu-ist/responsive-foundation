@@ -47,10 +47,6 @@
 	@extend %templateNarrow;
 }
 
-.single-profile {
-	@extend %removeTemplateNarrow;
-}
-
 /* Narrow Sidebar
 ----------------------------------------------------------------- */
 
@@ -103,10 +99,6 @@
 	@extend %templateNarrowSidebar;
 }
 
-.sidebarProfiles {
-	@extend %removeTemplateNarrowSidebar;
-}
-
 /* News & Archive Template
 ----------------------------------------------------------------- */
 
@@ -147,29 +139,24 @@
 .news-posts .meta em {
 	color: $color-news-metaEm;
 }
-.news-posts .paging-navigation,
-.archive  .paging-navigation {
+.paging-navigation {
 	@extend %clearfix;
 	padding-top: 30px;
 	margin-top: 30px;
 	border: $border-news-post;
 	border-width: $borderWidth-news-post;
 }
-.news-posts .paging-navigation .screen-reader-text,
-.archive  .paging-navigation .screen-reader-text {
+.paging-navigation .screen-reader-text {
 	display: none;
 }
-.news-posts .paging-navigation a,
-.archive .paging-navigation a {
+.paging-navigation a {
 	@extend %button-styles;
 	@extend %button-styles-primary;
 }
-.news-posts .paging-navigation .nav-previous,
-.archive .paging-navigation .nav-previous {
+.paging-navigation .nav-previous {
 	float: left;
 }
-.news-posts .paging-navigation .nav-next,
-.archive  .paging-navigation .nav-next {
+.paging-navigation .nav-next {
 	float: right;
 }
 
@@ -177,7 +164,7 @@
 ----------------------------------------------------------------- */
 
 .single article[role=main] .meta {
-	@extend .message;
+	@extend %message-styles;
 	@include border-radius($borderRadius-single-meta);
 	padding: $padding-single-meta;
 	margin-bottom: 30px;
@@ -205,11 +192,10 @@
 .single .meta em {
 	color: $color-news-metaEm;
 }
-.single .archiveLink,
-.single-calendar .archiveLink {
+.archiveLink {
 	@extend %button-styles;
-	@extend .backLink;
 	@extend %button-styles-primary;
+	@extend %backlink-styles;
 	width: 100%;
 }
 
@@ -219,7 +205,7 @@
 .calendar-topic {
 	font-size: $fontSize-calendar-topic;
 }
-.calendar-topic .calendar-range {
+.calendar-range {
 	color: $color-calendar-headingDateRange;
 }
 .event-list .event-date {
@@ -234,11 +220,12 @@
 
 .event-list .event-link a {
 	color: $color-calendar-eventLink;
+	&:hover,
+	&:focus {
+		color: $color-calendar-eventLink-hover;
+	}
 }
-.event-list .event-link a:hover,
-.event-list .event-link a:focus {
-	color: $color-calendar-eventLink-hover;
-}
+
 /* sidebar */
 .monthCalendar {
 	width: 100%;
@@ -262,10 +249,10 @@
 }
 .monthCalendar td a {
 	color: $color-calendarMonth-cellLink;
-}
-.monthCalendar td a:hover,
-.monthCalendar td a:focus {
-	color: $color-calendarMonth-cellLink-hover;
+	&:hover,
+	&::focus {
+		color: $color-calendarMonth-cellLink-hover;
+	}
 }
 .monthCalendar .out {
 	background: $color-calendarMonth-cellLinkOut-bg;
@@ -289,7 +276,6 @@
 /* Calendar Single Event
 ----------------------------------------------------------------- */
 
-
 .singleEvent .label {
 	font-family: $fontFamily-singleEvent-label;
 	font-weight: $fontWeight-calendar-label;
@@ -297,8 +283,8 @@
 	color: $color-calendarSingle-label;
 	text-transform: uppercase;
 }
-.singleEvent .dateSummary {
-	@extend .message;
+.dateSummary {
+	@extend %message-styles;
 	margin: 0 0 20px 0;
 	@include breakpoint(small) {
 		float: right;
@@ -306,24 +292,24 @@
 		margin: 0 0 20px 20px;
 	}
 }
-.singleEvent .dateSummary ul {
+.dateSummary ul {
 	padding: 0;
 	margin: 0;
 }
-.singleEvent .dateSummary li {
+.dateSummary li {
 	margin-top: 10px;
 	list-style: none;
 	&:first-child {
 		margin-top: 0;
 	}
 }
-.singleEvent .dateSummary .label {
+.dateSummary .label {
 	display: block;
 }
-.singleEvent .dateSummary li em {
+.dateSummary li em {
 	display: none;
 }
-.singleEvent .dateSummary .time {
+.dateSummary .time {
 	display: block;
 	font-weight: bold;
 	font-size: $fontSize-medium;

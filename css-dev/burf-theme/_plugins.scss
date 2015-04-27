@@ -197,7 +197,7 @@
 	width: 100%;
 }
 .profile-info {
-	@extend .message;
+	@extend %message-styles;
 	margin: 0 0 20px 0;
 	@include breakpoint(small) {
 		float: right;
