@@ -12,45 +12,77 @@
 /* Narrow Content Column
 ----------------------------------------------------------------- */
 
-.archive .content .content-container,
-.page-template-news .content .content-container,
-.single-post .content .content-container,
-.single-calendar .content .content-container,
-.page-template-profiles .content .content-container,
-.single-profile .content .content-container {
-	max-width: $container-S;
+%templateNarrow {
+	.content-container {
+		max-width: $container-S;
+	}
+	article[role=main] {
+		float: none;
+		width: 100%;
+		margin: 0 auto;
+	}
 }
-.page-template-news article[role=main],
-.single-post article[role=main],
-.single-calendar article[role=main],
-.page-template-profiles article[role=main],
-.single-profile article[role=main],
-.post-type-archive-profile article[role=main] {
-	float: none;
-	width: 100%;
-	margin: 0 auto;
+
+// A utility class to easily undo narrow column widths.
+// Always overrides %templateNarrow.
+%removeTemplateNarrow {
+	.content-container {
+		max-width: $container-L;
+	}
+	article[role=main] {
+		width: 66%;
+		float: left;
+	}
+}
+
+.archive,
+.page-template-news,
+.single-post,
+.single-calendar,
+.page-template-profiles,
+.single-profile,
+.post-type-archive-profile {
+	@extend %templateNarrow;
 }
 
 /* Narrow Sidebar
 ----------------------------------------------------------------- */
 
-.sidebarPosts,
-.sidebarProfiles {
+// A utility class to style sidebars on narrow width templates.
+%templateNarrowSidebar {
 	@extend %clearfix;
 	float: none;
 	margin: 0 auto;
-}
-.sidebarPosts .widget,
-.sidebarProfiles .widget {
-	@extend %col-small-6;
 
-	@include breakpoint(small) {
-		padding: $grid-sidebar-padding;
+	.widget {
+		@extend %col-small-one-half;
+		@include breakpoint(small) {
+			padding: $grid-sidebar-padding;
 
-		&:first-child {
-			padding: 0;
+			&:first-child {
+				padding: 0;
+			}
 		}
 	}
+}
+
+// A utility class to easily undo narrow width sidebar styles.
+// Always overrides %templateNarrowSidebar.
+%removeTemplateNarrowSidebar {
+	@extend .sidebar;
+	float: left;
+	.widget {
+		width: 100%;
+
+		&:first-child {
+			padding: $grid-sidebar-padding;
+		}
+	}
+}
+
+.sidebarPosts,
+.sidebarProfiles {
+	@extend %templateNarrowSidebar;
 }
 
 /* News & Archive Template
