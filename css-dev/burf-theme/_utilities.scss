@@ -116,7 +116,8 @@ $align-margin: 10px;
 	text-align: center;
 }
 
-.responsive-table {
+// Must be a class that wraps around a table to work properly.
+%resposive-table-styles {
 	position: relative;
 	table {
 		border: 1px solid $borderColor-table;
@@ -131,45 +132,45 @@ $align-margin: 10px;
 		-webkit-overflow-scrolling: touch;
 		width: 100%;
 		margin: 35px 0;
-		border: 1px solid $borderColor-table-dark;
 		-ms-overflow-style: -ms-autohiding-scrollbar;
 		// Tighten up spacing
-		> table {
+		table {
 			margin: 0;
 			table-layout: auto;
 			// Ensure the content doesn't wrap
-			> thead, > tbody, > tfoot {
-				> tr {
-					> th, > td {
-						border: 1px solid $borderColor-table;
-						white-space: nowrap;
-					}
-				}
+			td {
+				border: 1px solid $borderColor-table;
+				white-space: nowrap;
 			}
 		}
-		// Special overrides for the bordered tables
-		> .table-bordered {
-			border: 0;
-			// Nuke the appropriate borders so that the parent can handle them
-			> thead, > tbody, > tfoot {
-				> tr {
-					> th:first-child, > td:first-child {
-						border-left: 0;
-					}
-					> th:last-child, > td:last-child {
-						border-right: 0;
-					}
-				}
-			}
-			// Only nuke the last row's bottom-border in `tbody` and `tfoot` since
-			// chances are there will be only one `tr` in a `thead` and that would
-			// remove the border altogether.
-			> tbody, > tfoot {
-				> tr:last-child {
-					> th, > td {
-						border-bottom: 0;
-					}
-				}
+	}
+}
+
+.responsive-table {
+	@extend %resposive-table-styles;
+}
+// Special overrides for the bordered tables
+.table-bordered {
+	border: 0;
+	// Nuke the appropriate borders so that the parent can handle them
+	th,
+	td {
+		&:first-child {
+			border-left: 0;
+		}
+		&:last-child {
+			border-right: 0;
+		}
+	}
+	// Only nuke the last row's bottom-border in `tbody` and `tfoot` since
+	// chances are there will be only one `tr` in a `thead` and that would
+	// remove the border altogether.
+	tbody,
+	tfoot {
+		tr:last-child {
+			th,
+			td {
+				border-bottom: 0;
 			}
 		}
 	}
