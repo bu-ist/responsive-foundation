@@ -105,16 +105,25 @@ article[role=main] {
 		padding: $grid-container-padding-largeScreen;
 	}
 }
+
 .footbar-container .widget {
 	@extend %col-medium-one-third;
 	@include breakpoint(medium) {
-		padding: $grid-sidebar-padding;
+		width: (100%/$number-widgets-footbar) - $widget-marginLeft * ((($number-widgets-footbar)-1)/$number-widgets-footbar);
+		float: left;
+		margin-left: $widget-marginLeft;
+		margin-top: 0;
+		padding: 0;
+
 		&:first-child,
-		&:nth-child(3n+1) {
-			padding: 0;
+		&:nth-child(#{$number-widgets-footbar}n+1) {
+			margin-left: 0;
+			clear: left;
 		}
 	}
 }
+
+
 
 /* footer
 ----------------------------------------------------------------- */
