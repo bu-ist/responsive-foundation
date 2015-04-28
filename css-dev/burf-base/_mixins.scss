@@ -179,22 +179,31 @@
 @mixin breakpoint($point) {
 	@if ($MQs) {
 		@if ($point == extra_small) {
-			@media (min-width:$XS) {
+			@media screen and (min-width:$XS) {
 				@content;
 			}
 		}
-		@if ($point == small) {
-			@media (min-width:$S) {
+		@else if ($point == small) {
+			@media screen and (min-width:$S) {
 				@content;
 			}
 		}
-		@if ($point == medium) {
-			@media (min-width:$M) {
+		@else if ($point == medium) {
+			@media screen and (min-width:$M) {
 				@content;
 			}
 		}
-		@if ($point == large) {
-			@media (min-width:$L) {
+		@else if ($point == large) {
+			@media screen and (min-width:$L) {
+				@content;
+			}
+		}
+		@else {
+			// Can also accept your very own min-width argument, like so:
+			// "min-width: 300px;"
+			// "max-width: 900px;"
+			// Keep in mind these print for all sizes if MQs aren't supported.
+			@media screen and ($point) {
 				@content;
 			}
 		}
@@ -219,18 +228,6 @@
 	only screen and (        min-device-pixel-ratio: 2),
 	only screen and (                min-resolution: 192dpi),
 	only screen and (                min-resolution: 2dppx) {
-		@content;
-	}
-}
-
-// Same as @mixin mq($point), except allows a longer string of media query conditions, e.g. min-width and max-width, or multiple DPI checkers
-@mixin breakpoint-multiple($points) {
-	// If primary stylesheet indicates media query support (e.g. style.scss), output media queries. If not (e.g. ie.scss), output the block WITHOUT @media wrapper.
-	@if ($MQs) {
-		@media only screen and #{$points} {
-			@content;
-		}
-	} @else {
 		@content;
 	}
 }

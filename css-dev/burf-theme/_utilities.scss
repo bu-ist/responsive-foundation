@@ -126,7 +126,7 @@ $align-margin: 10px;
 			border: 1px solid $borderColor-table;
 		}
 	}
-	@media screen and (max-width: $container_M) {
+	@include breakpoint ("max-width: #{$container_M}") {
 		overflow-x: auto;
 		overflow-y: hidden;
 		-webkit-overflow-scrolling: touch;
