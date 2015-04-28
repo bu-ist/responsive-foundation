@@ -23,7 +23,7 @@
 
 // box-shadow
 // Usage: @include box-shadow(0 0 1px 3px #000000)
-@mixin box-shadow($shadow) {
+@mixin box-shadow($shadow...) {
 	-webkit-box-shadow: $shadow;
 	   -moz-box-shadow: $shadow;
 	        box-shadow: $shadow;
