@@ -144,11 +144,13 @@ $fontFamily-profile-title:                 $fontFamily-base !default;
 //font-weight
 $fontWeight-calendar-label:                700 !default;
 
-// margin/padding
+// content grid
 $number-columns: 									 3 !default;
 $margin-width: 			  					    5.2% !default;
 $number-widgets-footbar: 						 $number-columns !default;
 $sidebar-padding:                          0 0 0 ($margin-width - $margin-width*(1/($number-widgets-footbar))) !default;
+
+// margin/padding
 $column-paddingBottom:                     10px !default;
 $column-paddingBottom-largeScreen:         35px !default;
 $comment-margin:                           15px 0 !default;
@@ -158,6 +160,7 @@ $padding-single-meta:                      20px !default;
 $padding-monthCalendar-cell:               4px !default;
 $widget-marginBottom:                      40px !default;
 $footbar-paddingBottom:                    20px !default;
+$margin-floatedContent: 						 10px !default;
 
 // borders & shadows
 // -----------------------------------------------------------------

@@ -10,6 +10,7 @@
 
 /* back link */
 %backlink-styles {
+	/* These classes are using %backlink-styles. */
 	&:before {
 		content: $backLink-before;
 		color: $color-backLink-before;
@@ -21,6 +22,7 @@
 
 /* message */
 %message-styles {
+	/* These classes are using %message-styles. */
 	@include border-radius($borderRadius-message);
 	padding: $padding-message;
 	border: $border-message;
@@ -35,6 +37,7 @@
 
 /* .responsiveVideo */
 %responsiveVideo-styles {
+	/* These classes are using %responsiveVideo-styles. */
 	position: relative;
 	padding-top: 45px;
 	padding-bottom: 56.25%;
@@ -67,30 +70,29 @@ h6.bu_collapsible {
 
 /* WordPress inline align classes (use WP standard class names) */
 
-$align-margin: 10px;
-
+// A placeholder just for align. Not meant to be extended elsewhere.
 %align-styles {
 	max-width: 100%;
 	p {
 		margin-bottom: 0;
 	}
 	img {
-		margin-bottom: $align-margin / 2;
+		margin-bottom: $margin-floatedContent / 2;
 	}
 }
 .alignright {
 	@extend %align-styles;
 	float: right;
-	margin: 0.0 0 $align-margin $align-margin;
+	margin: 0.0 0 $margin-floatedContent $margin-floatedContent;
 }
 .alignleft {
 	@extend %align-styles;
 	float: left;
-	margin: 0 $align-margin $align-margin 0;
+	margin: 0 $margin-floatedContent $margin-floatedContent 0;
 }
 .aligncenter {
 	display: block;
-	margin: 0 auto $align-margin;
+	margin: 0 auto $margin-floatedContent;
 }
 
 .wp-caption,
@@ -118,6 +120,7 @@ $align-margin: 10px;
 
 // Must be a class that wraps around a table to work properly.
 %resposive-table-styles {
+	/* These classes are using %resposive-table-styles. */
 	position: relative;
 	table {
 		border: 1px solid $borderColor-table;

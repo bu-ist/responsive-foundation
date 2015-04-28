@@ -1,9 +1,11 @@
 /* placeholders for theme use
 ----------------------------------------------------------------- */
 %wrapper-styles {
+	/* These classes are using %wrapper-styles. */
 	overflow: hidden;
 }
 %container-styles {
+	/* These classes are using %container-styles. */
 	width: 100%;
 	padding: $grid-container-padding;
 	margin: 0 auto;
@@ -20,6 +22,7 @@
 	}
 }
 %row-styles {
+	/* These classes are using %row-styles. */
 	@extend %clearfix;
 	margin: $grid-row-margin;
 	@include breakpoint(small) {
@@ -27,13 +30,16 @@
 	}
 }
 %row-child-styles {
+	/* These classes are using %row-child-styles. */
 	padding: $grid-column-padding;
 }
 %equal-height-parent {
+	/* These classes are using %equal-height-parent. */
 	overflow: hidden;
 }
 %equal-height-child {
 	@include breakpoint(medium) {
+		/* These classes are using %equal-height-child. */
 		padding-bottom: 99999px;
 		margin-bottom: -99999px;
 	}
@@ -65,79 +71,78 @@
 	margin-bottom: 0;
 }
 
-/* ---------------------------------------------------------------
+// Grid placeholders
 
-Grid placeholders
+// Builds placeholder classes for the grid.
+// Available classes follow the pattern below.
 
-Builds placeholder classes for the grid.
-Available classes follow the pattern below.
+// Friendly classes for common column needs, avaiable for the following breakpoints and sizes:
+// 	Breakpoints: small, medium
+// 	Sizes: 1/4, 1/3, 1/2, 2/3, 3/4, whole column
+// 	Examples:
+// 		Make something take up 1/2 of available space starting at the small breakpoint:
+// 			@extend %col-small-one-half;
+// 		Make something take up 3/4 of available space starting at the medium breakpoint:
+// 			@extend %col-medium-three-quarter;
 
-Friendly classes for common column needs, avaiable for the following breakpoints and sizes:
-	Breakpoints: small, medium
-	Sizes: 1/4, 1/3, 1/2, 2/3, 3/4, whole column
-	Examples:
-		Make something take up 1/2 of available space starting at the small breakpoint:
-			@extend %col-small-one-half;
-		Make something take up 3/4 of available space starting at the medium breakpoint:
-			@extend %col-medium-three-quarter;
+// For your less obvious grid needs:
+// 	Basic usage (no breakpoints):
+// 		@extend %col-3;
+// 	Half column that starts only at medium breakpoints (half of 12):
+// 		@extend %col-medium-6;
 
-For your less obvious grid needs:
-	Basic usage (no breakpoints):
-		@extend %col-3;
-	Half column that starts only at medium breakpoints (half of 12):
-		@extend %col-medium-6;
+// Optional grid classes are available as well, and may be turned on or off using variables:
+// 	Margin: Automatically calculates width with margin included. Handy for items with a background color.
+// 		Example: Make something take up 6 columns, starting at medium breakpoint, with margins:
+// 		Usage: @extend %col-medium-margin-6;
+// 	Push: position ___ number of columns to the left (no affect on document flow)
+// 		Example: Position something 6 columns to the left without affecting anything else
+// 		Usage: @extend %col-medium-push-6;
+// 	Offset: position ___ number of columns to the left (does affect document flow)
+// 		Example: Position something 6 columns to the left and bump everything else along with it
+// 		Usage: @extend %col-medium-offset-6;
+// 	Pull: position ___ number of columns to the right (does not affect document flow)
+// 		Example: Position something 6 columns to the right without affecting anything else
+// 		Usage: @extend %col-medium-pull-6;
 
-Optional grid classes are available as well, and may be turned on or off using variables:
-	Margin: Automatically calculates width with margin included. Handy for items with a background color.
-		Example: Make something take up 6 columns, starting at medium breakpoint, with margins:
-		Usage: @extend %col-medium-margin-6;
-	Push: position ___ number of columns to the left (no affect on document flow)
-		Example: Position something 6 columns to the left without affecting anything else
-		Usage: @extend %col-medium-push-6;
-	Offset: position ___ number of columns to the left (does affect document flow)
-		Example: Position something 6 columns to the left and bump everything else along with it
-		Usage: @extend %col-medium-offset-6;
-	Pull: position ___ number of columns to the right (does not affect document flow)
-		Example: Position something 6 columns to the right without affecting anything else
-		Usage: @extend %col-medium-pull-6;
-
-Grid controls (see _variables.scss)
-	$grid-number-columns
-		Controls number of columns in grid.
-		Required: Columns must be neatly divisible by 2, 3, and 4.
-		Default: 12
-	$grid-breakpoints
-		The breakpoints you want grids to begin at.
-		Required: Small and medium if you use burf-theme. Large is optional.
-		Default: "small", "medium"
-	$grid-margins
-		Turn on optional margin classes.
-		Default: false
-	$grid-margin-width
-		Your desired grid margin, in %. Default value works out to 20px on large screens.
-		Relies on $grid-margins being set to "true".
-		Default: 2.6
-	$grid-push
-		Turn on optional push classes.
-		Default: false
-	$grid-pull
-		Turn on optional pull classes.
-		Default: false
-	$grid-offset
-		Turn on optional offset classes.
-		Default: false
-
------------------------------------------------------------------ */
+//	Grid controls (see _variables.scss)
+//		$grid-number-columns
+//			Controls number of columns in grid.
+//			Required: Columns must be neatly divisible by 2, 3, and 4.
+//			Default: 12
+//		$grid-breakpoints
+//			The breakpoints you want grids to begin at.
+//			Required: Small and medium if you use burf-theme. Large is optional.
+//			Default: "small", "medium"
+//		$grid-margins
+//			Turn on optional margin classes.
+//			Default: false
+//		$grid-margin-width
+//			Your desired grid margin, in %. Default value works out to 20px on large screens.
+//			Relies on $grid-margins being set to "true".
+//			Default: 2.6
+//		$grid-push
+//			Turn on optional push classes.
+//			Default: false
+//		$grid-pull
+//			Turn on optional pull classes.
+//			Default: false
+//		$grid-offset
+//			Turn on optional offset classes.
+//			Default: false
 
 // Base styles
 %col-float {
+	/* These classes are using %col-float. */
 	float: left;
 }
 %col-base {
+	/* These classes are using %col-base. */
 	position: relative;
 	min-height: 1px;
 }
 %col-margin-base {
+	/* These classes are using %col-margin-base. */
 	margin: $grid-margin-width#{"%"};
 	margin-top: 0;
 	padding: 20px;
@@ -167,6 +172,7 @@ $grid-widths-margins: ();
 	// Create basic grid classes, no breakpoints
 	// Example output: %col-1
 	%col-#{$i} {
+		/* These classes are using %col-#{$i}. */
 		@extend %col-base;
 		@extend %col-float;
 		@include gridBuild(width, $percentage);
@@ -180,12 +186,10 @@ $grid-widths-margins: ();
 		// Add to base styles
 		%col-#{$breakpoint} {
 			&-#{$i} {
-				// Example output: %col-small-1
 				@extend %col-base;
 			}
 			@if $grid-margins {
 				&-margin-#{$i} {
-					// Example output: %col-small-margin-1
 					@extend %col-margin-base;
 				}
 			}
@@ -198,13 +202,13 @@ $grid-widths-margins: ();
 
 			%col-#{$breakpoint} {
 				&-#{$i} {
-					// Example output: %col-small-1
+					/* These classes are using %col-#{$breakpoint}-#{$i}. */
 					@include gridBuild(width, $percentage);
 					float: left;
 				}
 				@if $grid-margins {
 					&-margin-#{$i} {
-						// Example output: %col-small-margins-1
+						/* These classes are using %col-#{$breakpoint}-margin-#{$i}. */
 						$percentage: nth($grid-widths-margins, $i);
 						@include gridBuild(width, $percentage);
 						float: left;
@@ -212,21 +216,21 @@ $grid-widths-margins: ();
 				}
 				@if $grid-push {
 					&-push-#{$i} {
-						// Example output: %col-small-push-1
+						/* These classes are using %col-#{$breakpoint}-push-#{$i}. */
 						@include gridBuild(left, $percentage);
 						float: left;
 					}
 				}
 				@if $grid-pull {
 					&-pull-#{$i} {
-						// Example output: %col-small-pull-1
+						/* These classes are using %col-#{$breakpoint}-pull-#{$i}. */
 						@include gridBuild(right, $percentage);
 						float: left;
 					}
 				}
 				@if $grid-offset {
 					&-offset-#{$i} {
-						// Example output: %col-small-offset-1
+						/* These classes are using %col-#{$breakpoint}-offset-#{$i}. */
 						@include gridBuild(margin-left, $percentage);
 						float: left;
 					}
@@ -300,28 +304,24 @@ $grid-widths-margins: ();
 	}
 }
 
-/* -----------------------------------------------------------------
-
-Extras
-
-Importing these extra classes is completely optional. You may want
-to import these classes if you are using shortcodes in your content
-and want to give clients classes to help style those shortcodes.
-
-For theme development purposes, you should extend the placeholder
-classes you need in your custom SASS partial. These should only be
-within content or widgets in Wordpress.
-
-Nothing in burf-base or burf-theme, nor in Wordpress, is affected by
-leaving these classes out. You can safely leave these out if they
-are not necessary for your project. By default, they are not imported.
-
-To import, go to your styles.scss file and use the following code
-directly underneath the normal burf-theme import:
-
-@import 'burf-theme/extras';
-
------------------------------------------------------------------ */
+// Extras
+//
+// Importing these extra classes is completely optional. You may want
+// to import these classes if you are using shortcodes in your content
+// and want to give clients classes to help style those shortcodes.
+//
+// For theme development purposes, you should extend the placeholder
+// classes you need in your custom SASS partial. These should only be
+// within content or widgets in Wordpress.
+//
+// Nothing in burf-base or burf-theme, nor in Wordpress, is affected by
+// leaving these classes out. You can safely leave these out if they
+// are not necessary for your project. By default, they are not imported.
+//
+// To import, go to your styles.scss file and use the following code
+// directly underneath the normal burf-theme import:
+//
+// @import 'burf-theme/extras';
 
 /* Classes for layout */
 

@@ -6,6 +6,7 @@
 
 %clearfix {
 	&:after {
+		/* These classes are using %clearfix. */
 		display: table;
 		clear: both;
 		content: "";
@@ -48,6 +49,7 @@
 // hide text. Uses Sass placeholder selector (%).
 // Usage: @extend hide-text
 %hide-text {
+	/* These classes are using %hide-text. */
 	overflow: hidden;
 	text-indent: 100%;
 	white-space: nowrap;
@@ -164,6 +166,7 @@
 // Hide elements visually but not from screen readers. Great for accessibility hints like skip to content. Uses Sass placeholder selector (%).
 // Usage: @extend %visuallyhidden
 %visuallyhidden {
+	/* These classes are using %visuallyhidden. */
 	position: absolute;
 	overflow: hidden;
 	clip: rect(0 0 0 0);

@@ -22,47 +22,56 @@ a:hover {
 ----------------------------------------------------------------- */
 
 %font-jumbo {
+	/* These classes are using %font-jumbo. */
 	margin: $fontMargin-jumbo;
 	font-size: $fontSize-jumbo;
 	line-height: $lineHeight-jumbo;
 }
 %font-largest {
+	/* These classes are using %font-largest. */
 	margin: $fontMargin-largest;
 	font-size: $fontSize-largest;
 	line-height: $lineHeight-largest;
 }
 %font-larger {
+	/* These classes are using %font-larger. */
 	margin: $fontMargin-larger;
 	font-size: $fontSize-larger;
 	line-height: $lineHeight-larger;
 }
 %font-large {
+	/* These classes are using %font-large. */
 	margin: $fontMargin-large;
 	font-size: $fontSize-large;
 	line-height: $lineHeight-large;
 }
 %font-medium {
+	/* These classes are using %font-medium. */
 	margin: $fontMargin-medium;
 	font-size: $fontSize-medium;
 	line-height: $lineHeight-medium;
 }
 %font-small {
+	/* These classes are using %font-small. */
 	margin: $fontMargin-small;
 	font-size: $fontSize-small;
 	line-height: $lineHeight-small;
 }
 /* Generic font size classes */
 %font-smaller {
+	/* These classes are using %font-smaller. */
 	margin: $fontMargin-smaller;
 	font-size: $fontSize-smaller;
 	line-height: $lineHeight-smaller;
 }
 %font-smallest {
+	/* These classes are using %font-smallest. */
 	margin: $fontMargin-smallest;
 	font-size: $fontSize-smallest;
 	line-height: $lineHeight-smallest;
 }
 %font-micro {
+	/* These classes are using %font-micro. */
 	margin: $fontMargin-micro;
 	font-size: $fontSize-micro;
 	line-height: $lineHeight-micro;

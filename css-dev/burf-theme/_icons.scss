@@ -11,6 +11,7 @@
 // Basic icon styles. Replaces .icon.
 // Helpful if you don't want to use :before or you're some mad scientist with content we don't know about
 %icon {
+	/* These classes are using %icon. */
 	display: inline-block;
 	padding-bottom: 0.2em; /* Accomodate for inline icons */
 	vertical-align: middle;
@@ -33,8 +34,9 @@
 	}
 }
 %icon-iefix {
-	/* This triggers a redraw in IE to Fix IE8"s :before content rendering. */
 	.lt-ie9:hover & {
+		/* These classes are using %icon-iefix. */
+		// This triggers a redraw in IE to Fix IE8"s :before content rendering.
 		-ms-zoom: 1;
 	}
 }
@@ -43,6 +45,7 @@
 %icon-dropbox {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-dropbox. */
 		@extend %icon;
 		content: "\F653";
 	}
@@ -50,6 +53,7 @@
 %icon-dropbox-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-dropbox-alt. */
 		@extend %icon;
 		content: "\F65A";
 	}
@@ -57,6 +61,7 @@
 %icon-facebook {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-facebook. */
 		@extend %icon;
 		content: "\F610";
 	}
@@ -64,6 +69,7 @@
 %icon-facebook-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-facebook-alt. */
 		@extend %icon;
 		content: "\F61A";
 	}
@@ -71,6 +77,7 @@
 %icon-flickr {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-flickr. */
 		@extend %icon;
 		content: "\F640";
 	}
@@ -78,6 +85,7 @@
 %icon-flickr-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-flickr-alt. */
 		@extend %icon;
 		content: "\F644";
 	}
@@ -85,6 +93,7 @@
 %icon-foursquare {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-foursquare. */
 		@extend %icon;
 		content: "\F690";
 	}
@@ -92,6 +101,7 @@
 %icon-foursquare-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-foursquare-alt. */
 		@extend %icon;
 		content: "\F691";
 	}
@@ -99,6 +109,7 @@
 %icon-github {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-github. */
 		@extend %icon;
 		content: "\F670";
 	}
@@ -106,6 +117,7 @@
 %icon-github-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-github-alt. */
 		@extend %icon;
 		content: "\F671";
 	}
@@ -113,6 +125,7 @@
 %icon-googleplus {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-googleplus. */
 		@extend %icon;
 		content: "\F613";
 	}
@@ -120,6 +133,7 @@
 %icon-googleplus-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-googleplus-alt. */
 		@extend %icon;
 		content: "\F614";
 	}
@@ -127,6 +141,7 @@
 %icon-instagram {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-instagram. */
 		@extend %icon;
 		content: "\F641";
 	}
@@ -134,6 +149,7 @@
 %icon-instagram-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-instagram-alt. */
 		@extend %icon;
 		content: "\F64A";
 	}
@@ -141,6 +157,7 @@
 %icon-kickstarter {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-kickstarter. */
 		@extend %icon;
 		content: "\F681";
 	}
@@ -148,6 +165,7 @@
 %icon-kickstarter-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-kickstarter-alt. */
 		@extend %icon;
 		content: "\F68A";
 	}
@@ -155,6 +173,7 @@
 %icon-linkedin {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-linkedin. */
 		@extend %icon;
 		content: "\F612";
 	}
@@ -162,6 +181,7 @@
 %icon-linkedin-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-linkedin-alt. */
 		@extend %icon;
 		content: "\F61E";
 	}
@@ -169,6 +189,7 @@
 %icon-paypal {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-paypal. */
 		@extend %icon;
 		content: "\F680";
 	}
@@ -176,6 +197,7 @@
 %icon-paypal-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-paypal-alt. */
 		@extend %icon;
 		content: "\F68B";
 	}
@@ -183,6 +205,7 @@
 %icon-pinterest {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-pinterest. */
 		@extend %icon;
 		content: "\F650";
 	}
@@ -190,6 +213,7 @@
 %icon-pinterest-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-pinterest-alt. */
 		@extend %icon;
 		content: "\F651";
 	}
@@ -197,6 +221,7 @@
 %icon-pocket {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-pocket. */
 		@extend %icon;
 		content: "\F634";
 	}
@@ -204,6 +229,7 @@
 %icon-pocket-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-pocket-alt. */
 		@extend %icon;
 		content: "\F635";
 	}
@@ -211,6 +237,7 @@
 %icon-reddit {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-reddit. */
 		@extend %icon;
 		content: "\F616";
 	}
@@ -218,6 +245,7 @@
 %icon-reddit-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-reddit-alt. */
 		@extend %icon;
 		content: "\F617";
 	}
@@ -225,6 +253,7 @@
 %icon-renren {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-renren. */
 		@extend %icon;
 		content: "\F61C";
 	}
@@ -232,6 +261,7 @@
 %icon-retweet {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-retweet. */
 		@extend %icon;
 		content: "\F600";
 	}
@@ -239,6 +269,7 @@
 %icon-soundcloud {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-soundcloud. */
 		@extend %icon;
 		content: "\F6B3";
 	}
@@ -246,6 +277,7 @@
 %icon-soundcloud-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-soundcloud-alt. */
 		@extend %icon;
 		content: "\F6B4";
 	}
@@ -253,6 +285,7 @@
 %icon-spotify {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-spotify. */
 		@extend %icon;
 		content: "\F6B1";
 	}
@@ -260,6 +293,7 @@
 %icon-stackexchange {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-stackexchange. */
 		@extend %icon;
 		content: "\F673";
 	}
@@ -267,6 +301,7 @@
 %icon-stackexchange-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-stackexchange-alt. */
 		@extend %icon;
 		content: "\F67B";
 	}
@@ -274,6 +309,7 @@
 %icon-stackoverflow {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-stackoverflow. */
 		@extend %icon;
 		content: "\F672";
 	}
@@ -281,6 +317,7 @@
 %icon-stackoverflow-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-stackoverflow-alt. */
 		@extend %icon;
 		content: "\F67A";
 	}
@@ -288,6 +325,7 @@
 %icon-twitter {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-twitter. */
 		@extend %icon;
 		content: "\F611";
 	}
@@ -295,6 +333,7 @@
 %icon-twitter-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-twitter-alt. */
 		@extend %icon;
 		content: "\F62B";
 	}
@@ -302,6 +341,7 @@
 %icon-tumblr {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-tumblr. */
 		@extend %icon;
 		content: "\F620";
 	}
@@ -309,6 +349,7 @@
 %icon-tumblr-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-tumblr-alt. */
 		@extend %icon;
 		content: "\F62A";
 	}
@@ -316,6 +357,7 @@
 %icon-vimeo {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-vimeo. */
 		@extend %icon;
 		content: "\F631";
 	}
@@ -323,6 +365,7 @@
 %icon-vimeo-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-vimeo-alt. */
 		@extend %icon;
 		content: "\F63C";
 	}
@@ -330,6 +373,7 @@
 %icon-vine {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-vine. */
 		@extend %icon;
 		content: "\F633";
 	}
@@ -337,6 +381,7 @@
 %icon-vine-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-vine-alt. */
 		@extend %icon;
 		content: "\F63B";
 	}
@@ -344,6 +389,7 @@
 %icon-weibo {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-weibo. */
 		@extend %icon;
 		content: "\F61B";
 	}
@@ -351,6 +397,7 @@
 %icon-weibo-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-weibo-alt. */
 		@extend %icon;
 		content: "\F61D";
 	}
@@ -358,6 +405,7 @@
 %icon-wordpress {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-wordpress. */
 		@extend %icon;
 		content: "\F621";
 	}
@@ -365,6 +413,7 @@
 %icon-youtube {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-youtube. */
 		@extend %icon;
 		content: "\F630";
 	}
@@ -372,6 +421,7 @@
 %icon-youtube-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-youtube-alt. */
 		@extend %icon;
 		content: "\F632";
 	}
@@ -381,6 +431,7 @@
 %icon-action {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-action. */
 		@extend %icon;
 		content: "\EE00";
 	}
@@ -388,6 +439,7 @@
 %icon-alert {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-alert. */
 		@extend %icon;
 		content: "\26A0";
 	}
@@ -395,6 +447,7 @@
 %icon-android {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-android. */
 		@extend %icon;
 		content: "\F6F3";
 	}
@@ -402,6 +455,7 @@
 %icon-appleinc {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-appleinc. */
 		@extend %icon;
 		content: "\F8FF";
 	}
@@ -409,6 +463,7 @@
 %icon-burst {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-burst. */
 		@extend %icon;
 		content: "\F552";
 	}
@@ -416,6 +471,7 @@
 %icon-calculator {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-calculator. */
 		@extend %icon;
 		content: "\E551";
 	}
@@ -423,6 +479,7 @@
 %icon-cart {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-cart. */
 		@extend %icon;
 		content: "\E500";
 	}
@@ -430,6 +487,7 @@
 %icon-code {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-code. */
 		@extend %icon;
 		content: "\E780";
 	}
@@ -437,6 +495,7 @@
 %icon-compass {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-compass. */
 		@extend %icon;
 		content: "\E671";
 	}
@@ -444,6 +503,7 @@
 %icon-contract {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-contract. */
 		@extend %icon;
 		content: "\EE01";
 	}
@@ -451,6 +511,7 @@
 %icon-dashboard {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-dashboard. */
 		@extend %icon;
 		content: "\F000";
 	}
@@ -458,6 +519,7 @@
 %icon-download {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-download. */
 		@extend %icon;
 		content: "\EB01";
 	}
@@ -465,6 +527,7 @@
 %icon-downloadbox {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-downloadbox. */
 		@extend %icon;
 		content: "\EB02";
 	}
@@ -472,6 +535,7 @@
 %icon-ban {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-ban. */
 		@extend %icon;
 		content: "\1F6AB";
 	}
@@ -479,6 +543,7 @@
 %icon-barchart {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-barchart. */
 		@extend %icon;
 		content: "\1F4CA";
 	}
@@ -486,6 +551,7 @@
 %icon-bike {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-bike. */
 		@extend %icon;
 		content: "\1F6B2";
 	}
@@ -493,6 +559,7 @@
 %icon-book {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-book. */
 		@extend %icon;
 		content: "\1F4D5";
 	}
@@ -500,6 +567,7 @@
 %icon-bookmark {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-bookmark. */
 		@extend %icon;
 		content: "\1F516";
 	}
@@ -507,6 +575,7 @@
 %icon-box {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-box. */
 		@extend %icon;
 		content: "\1F4E6";
 	}
@@ -514,6 +583,7 @@
 %icon-briefcase {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-briefcase. */
 		@extend %icon;
 		content: "\1F4BC";
 	}
@@ -521,6 +591,7 @@
 %icon-bug {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-bug. */
 		@extend %icon;
 		content: "\1F41B";
 	}
@@ -528,6 +599,7 @@
 %icon-calendar {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-calendar. */
 		@extend %icon;
 		content: "\1F4C5";
 	}
@@ -535,6 +607,7 @@
 %icon-camera {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-camera. */
 		@extend %icon;
 		content: "\1F4F7";
 	}
@@ -542,6 +615,7 @@
 %icon-car {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-car. */
 		@extend %icon;
 		content: "\1F698";
 	}
@@ -549,6 +623,7 @@
 %icon-chat {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-chat. */
 		@extend %icon;
 		content: "\1F4AC";
 	}
@@ -556,6 +631,7 @@
 %icon-check {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-check. */
 		@extend %icon;
 		content: "\2713";
 	}
@@ -563,6 +639,7 @@
 %icon-close {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-close. */
 		@extend %icon;
 		content: "\E421";
 	}
@@ -570,6 +647,7 @@
 %icon-clipboard {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-clipboard. */
 		@extend %icon;
 		content: "\1F4CB";
 	}
@@ -577,6 +655,7 @@
 %icon-clock {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-clock. */
 		@extend %icon;
 		content: "\23F2";
 	}
@@ -584,6 +663,7 @@
 %icon-cloud {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-cloud. */
 		@extend %icon;
 		content: "\2601";
 	}
@@ -591,6 +671,7 @@
 %icon-compose {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-compose. */
 		@extend %icon;
 		content: "\1F4DD";
 	}
@@ -598,6 +679,7 @@
 %icon-contacts {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-contacts. */
 		@extend %icon;
 		content: "\1F4C7";
 	}
@@ -605,6 +687,7 @@
 %icon-crosshair {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-crosshair. */
 		@extend %icon;
 		content: "\2316";
 	}
@@ -612,6 +695,7 @@
 %icon-delete {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-delete. */
 		@extend %icon;
 		content: "\2421";
 	}
@@ -619,6 +703,7 @@
 %icon-desktop {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-desktop. */
 		@extend %icon;
 		content: "\1F4BB";
 	}
@@ -626,6 +711,7 @@
 %icon-directleft {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-directleft. */
 		@extend %icon;
 		content: "\25C3";
 	}
@@ -633,6 +719,7 @@
 %icon-directright {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-directright. */
 		@extend %icon;
 		content: "\25B9";
 	}
@@ -640,6 +727,7 @@
 %icon-directup {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-directup. */
 		@extend %icon;
 		content: "\25B4";
 	}
@@ -647,6 +735,7 @@
 %icon-dislike {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-dislike. */
 		@extend %icon;
 		content: "\1F44E";
 	}
@@ -654,6 +743,7 @@
 %icon-down {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-down. */
 		@extend %icon;
 		content: "\2B07";
 	}
@@ -661,6 +751,7 @@
 %icon-dropdown {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-dropdown. */
 		@extend %icon;
 		content: "\25BE";
 	}
@@ -668,11 +759,13 @@
 %icon-emptycart {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-emptycart. */
 		@extend %icon;
 		content: "\E507";
 	}
 }
 %icon-grid {
+	/* These classes are %icon-grid. */
 	@extend %icon-iefix;
 	&:before {
 		@extend %icon;
@@ -680,6 +773,7 @@
 	}
 }
 %icon-index {
+	/* These classes are %icon-index. */
 	@extend %icon-iefix;
 	&:before {
 		@extend %icon;
@@ -689,6 +783,7 @@
 %icon-envelope {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-envelope. */
 		@extend %icon;
 		content: "\2709";
 	}
@@ -696,6 +791,7 @@
 %icon-expand {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-expand. */
 		@extend %icon;
 		content: "\2922";
 	}
@@ -703,6 +799,7 @@
 %icon-fastforward {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-fastforward. */
 		@extend %icon;
 		content: "\29E3";
 	}
@@ -710,6 +807,7 @@
 %icon-file {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-file. */
 		@extend %icon;
 		content: "\1F4C4";
 	}
@@ -717,6 +815,7 @@
 %icon-files {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-files. */
 		@extend %icon;
 		content: "\EC00";
 	}
@@ -724,6 +823,7 @@
 %icon-flag {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-flag. */
 		@extend %icon;
 		content: "\2691";
 	}
@@ -731,6 +831,7 @@
 %icon-flask {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-flask. */
 		@extend %icon;
 		content: "\F4C0";
 	}
@@ -738,6 +839,7 @@
 %icon-folder {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-folder. */
 		@extend %icon;
 		content: "\1F4C1";
 	}
@@ -745,6 +847,7 @@
 %icon-globe {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-globe. */
 		@extend %icon;
 		content: "\1F310";
 	}
@@ -752,6 +855,7 @@
 %icon-headphones {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-headphones. */
 		@extend %icon;
 		content: "\1F3A7";
 	}
@@ -759,6 +863,7 @@
 %icon-heart {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-heart. */
 		@extend %icon;
 		content: "\2665";
 	}
@@ -766,6 +871,7 @@
 %icon-home {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-home. */
 		@extend %icon;
 		content: "\2302";
 	}
@@ -773,6 +879,7 @@
 %icon-hyphen {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-hyphen. */
 		@extend %icon;
 		content: "\002D";
 	}
@@ -780,6 +887,7 @@
 %icon-infinity {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-infinity. */
 		@extend %icon;
 		content: "\221E";
 	}
@@ -787,6 +895,7 @@
 %icon-info {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-info. */
 		@extend %icon;
 		content: "\2139";
 	}
@@ -794,6 +903,7 @@
 %icon-key {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-key. */
 		@extend %icon;
 		content: "\1F511";
 	}
@@ -801,6 +911,7 @@
 %icon-laptop {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-laptop. */
 		@extend %icon;
 		content: "\EA00";
 	}
@@ -808,6 +919,7 @@
 %icon-layers {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-layers. */
 		@extend %icon;
 		content: "\E202";
 	}
@@ -815,6 +927,7 @@
 %icon-layout {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-layout. */
 		@extend %icon;
 		content: "\E202";
 	}
@@ -822,6 +935,7 @@
 %icon-left {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-left. */
 		@extend %icon;
 		content: "\2B05";
 	}
@@ -829,6 +943,7 @@
 %icon-lightbulb {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-lightbulb. */
 		@extend %icon;
 		content: "\1F4A1";
 	}
@@ -836,6 +951,7 @@
 %icon-lightning {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-lightning. */
 		@extend %icon;
 		content: "\2607";
 	}
@@ -843,6 +959,7 @@
 %icon-like {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-like. */
 		@extend %icon;
 		content: "\1F44D";
 	}
@@ -850,6 +967,7 @@
 %icon-like-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-like-alt. */
 		@extend %icon;
 		content: "\1F44B";
 	}
@@ -857,6 +975,7 @@
 %icon-link {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-link. */
 		@extend %icon;
 		content: "\1F51B";
 	}
@@ -864,6 +983,7 @@
 %icon-link-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-link-alt. */
 		@extend %icon;
 		content: "\F699";
 	}
@@ -871,6 +991,7 @@
 %icon-list {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-list. */
 		@extend %icon;
 		content: "\ED50";
 	}
@@ -878,6 +999,7 @@
 %icon-location {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-location. */
 		@extend %icon;
 		content: "\E6D0";
 	}
@@ -885,6 +1007,7 @@
 %icon-lock {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-lock. */
 		@extend %icon;
 		content: "\1F512";
 	}
@@ -892,6 +1015,7 @@
 %icon-map {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-map. */
 		@extend %icon;
 		content: "\E673";
 	}
@@ -899,6 +1023,7 @@
 %icon-megaphone {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-megaphone. */
 		@extend %icon;
 		content: "\1F4E2";
 	}
@@ -906,6 +1031,7 @@
 %icon-menu {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-menu. */
 		@extend %icon;
 		content: "\E9A1";
 	}
@@ -913,6 +1039,7 @@
 %icon-mic {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-mic. */
 		@extend %icon;
 		content: "\1F3A4";
 	}
@@ -920,6 +1047,7 @@
 %icon-music {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-music. */
 		@extend %icon;
 		content: "\266B";
 	}
@@ -927,6 +1055,7 @@
 %icon-navigate {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-navigate. */
 		@extend %icon;
 		content: "\E670";
 	}
@@ -934,6 +1063,7 @@
 %icon-navigateleft {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-navigateleft. */
 		@extend %icon;
 		content: "\25C5";
 	}
@@ -941,6 +1071,7 @@
 %icon-navigateright {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-navigateright. */
 		@extend %icon;
 		content: "\25BB";
 	}
@@ -948,6 +1079,7 @@
 %icon-navigatedown {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-navigatedown. */
 		@extend %icon;
 		content: "\F501";
 	}
@@ -955,6 +1087,7 @@
 %icon-navigateup {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-navigateup. */
 		@extend %icon;
 		content: "\F500";
 	}
@@ -962,6 +1095,7 @@
 %icon-notebook {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-notebook. */
 		@extend %icon;
 		content: "\1F4D3";
 	}
@@ -969,6 +1103,7 @@
 %icon-notifications {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-notifications. */
 		@extend %icon;
 		content: "\1F514";
 	}
@@ -976,6 +1111,7 @@
 %icon-pause {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-pause. */
 		@extend %icon;
 		content: "\E8A0";
 	}
@@ -983,6 +1119,7 @@
 %icon-phone {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-phone. */
 		@extend %icon;
 		content: "\1F4DE";
 	}
@@ -990,6 +1127,7 @@
 %icon-picture {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-picture. */
 		@extend %icon;
 		content: "\1F304";
 	}
@@ -997,6 +1135,7 @@
 %icon-piechart {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-piechart. */
 		@extend %icon;
 		content: "\E570";
 	}
@@ -1004,6 +1143,7 @@
 %icon-pinboard {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-pinboard. */
 		@extend %icon;
 		content: "\F654";
 	}
@@ -1011,6 +1151,7 @@
 %icon-pin {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-pin. */
 		@extend %icon;
 		content: "\1F4CD";
 	}
@@ -1018,6 +1159,7 @@
 %icon-plane {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-plane. */
 		@extend %icon;
 		content: "\2708";
 	}
@@ -1025,6 +1167,7 @@
 %icon-planet {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-planet. */
 		@extend %icon;
 		content: "\F280";
 	}
@@ -1032,6 +1175,7 @@
 %icon-play {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-play. */
 		@extend %icon;
 		content: "\25B6";
 	}
@@ -1039,6 +1183,7 @@
 %icon-plus {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-plus. */
 		@extend %icon;
 		content: "\002B";
 	}
@@ -1046,6 +1191,7 @@
 %icon-poo {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-poo. */
 		@extend %icon;
 		content: "\1F4A9";
 	}
@@ -1053,6 +1199,7 @@
 %icon-print {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-print. */
 		@extend %icon;
 		content: "\2399";
 	}
@@ -1060,6 +1207,7 @@
 %icon-puzzle {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-puzzle. */
 		@extend %icon;
 		content: "\E710";
 	}
@@ -1067,6 +1215,7 @@
 %icon-record {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-record. */
 		@extend %icon;
 		content: "\25CF";
 	}
@@ -1074,6 +1223,7 @@
 %icon-rss {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-rss. */
 		@extend %icon;
 		content: "\E310";
 	}
@@ -1081,6 +1231,7 @@
 %icon-rss-alt {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-rss-alt. */
 		@extend %icon;
 		content: "\E31A";
 	}
@@ -1088,6 +1239,7 @@
 %icon-redirect {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-redirect. */
 		@extend %icon;
 		content: "\21AA";
 	}
@@ -1095,6 +1247,7 @@
 %icon-refresh {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-refresh. */
 		@extend %icon;
 		content: "\21BB";
 	}
@@ -1102,6 +1255,7 @@
 %icon-replay {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-replay. */
 		@extend %icon;
 		content: "\21BA";
 	}
@@ -1109,6 +1263,7 @@
 %icon-reply {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-reply. */
 		@extend %icon;
 		content: "\21A9";
 	}
@@ -1116,6 +1271,7 @@
 %icon-rewind {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-rewind. */
 		@extend %icon;
 		content: "\23EA";
 	}
@@ -1123,6 +1279,7 @@
 %icon-right {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-right. */
 		@extend %icon;
 		content: "\27A1";
 	}
@@ -1130,6 +1287,7 @@
 %icon-rotaryphone {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-rotaryphone. */
 		@extend %icon;
 		content: "\260E";
 	}
@@ -1137,6 +1295,7 @@
 %icon-scaledown {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-scaledown. */
 		@extend %icon;
 		content: "\EE05";
 	}
@@ -1144,6 +1303,7 @@
 %icon-scaleup {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-scaleup. */
 		@extend %icon;
 		content: "\EE04";
 	}
@@ -1151,6 +1311,7 @@
 %icon-screwdriver {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-screwdriver. */
 		@extend %icon;
 		content: "\F037";
 	}
@@ -1158,6 +1319,7 @@
 %icon-share {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-share. */
 		@extend %icon;
 		content: "\F601";
 	}
@@ -1165,6 +1327,7 @@
 %icon-signpost {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-signpost. */
 		@extend %icon;
 		content: "\E672";
 	}
@@ -1172,6 +1335,7 @@
 %icon-smartphone {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-smartphone. */
 		@extend %icon;
 		content: "\EA02";
 	}
@@ -1179,6 +1343,7 @@
 %icon-search {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-search. */
 		@extend %icon;
 		content: "\1F50E";
 	}
@@ -1186,6 +1351,7 @@
 %icon-settings {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-settings. */
 		@extend %icon;
 		content: "\2699";
 	}
@@ -1193,6 +1359,7 @@
 %icon-skipback {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-skipback. */
 		@extend %icon;
 		content: "\23EE";
 	}
@@ -1200,6 +1367,7 @@
 %icon-skipforward {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-skipforward. */
 		@extend %icon;
 		content: "\23ED";
 	}
@@ -1207,6 +1375,7 @@
 %icon-star {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-star. */
 		@extend %icon;
 		content: "\22C6";
 	}
@@ -1214,6 +1383,7 @@
 %icon-stop {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-stop. */
 		@extend %icon;
 		content: "\25A0";
 	}
@@ -1221,6 +1391,7 @@
 %icon-stock {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-stock. */
 		@extend %icon;
 		content: "\E579";
 	}
@@ -1228,6 +1399,7 @@
 %icon-storagebox {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-storagebox. */
 		@extend %icon;
 		content: "\E901";
 	}
@@ -1235,6 +1407,7 @@
 %icon-sync {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-sync. */
 		@extend %icon;
 		content: "\EB82";
 	}
@@ -1242,6 +1415,7 @@
 %icon-tablet {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-tablet. */
 		@extend %icon;
 		content: "\EA01";
 	}
@@ -1249,6 +1423,7 @@
 %icon-tag {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-tag. */
 		@extend %icon;
 		content: "\E100";
 	}
@@ -1256,6 +1431,7 @@
 %icon-thermometer {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-thermometer. */
 		@extend %icon;
 		content: "\F201";
 	}
@@ -1263,6 +1439,7 @@
 %icon-thumbnails {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-thumbnails. */
 		@extend %icon;
 		content: "\E9A3";
 	}
@@ -1270,6 +1447,7 @@
 %icon-toolbox {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-toolbox. */
 		@extend %icon;
 		content: "\F030";
 	}
@@ -1277,6 +1455,7 @@
 %icon-tv {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-tv. */
 		@extend %icon;
 		content: "\1F4FA";
 	}
@@ -1284,6 +1463,7 @@
 %icon-unlock {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-unlock. */
 		@extend %icon;
 		content: "\1F513";
 	}
@@ -1291,6 +1471,7 @@
 %icon-up {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-up. */
 		@extend %icon;
 		content: "\2806";
 	}
@@ -1298,6 +1479,7 @@
 %icon-upload {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-upload. */
 		@extend %icon;
 		content: "\EB41";
 	}
@@ -1305,6 +1487,7 @@
 %icon-uploadcloud {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-uploadcloud. */
 		@extend %icon;
 		content: "\EB40";
 	}
@@ -1312,6 +1495,7 @@
 %icon-user {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-user. */
 		@extend %icon;
 		content: "\1F464";
 	}
@@ -1319,6 +1503,7 @@
 %icon-users {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-users. */
 		@extend %icon;
 		content: "\1F465";
 	}
@@ -1326,6 +1511,7 @@
 %icon-utensils {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-utensils. */
 		@extend %icon;
 		content: "\1F374";
 	}
@@ -1333,6 +1519,7 @@
 %icon-video {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-video. */
 		@extend %icon;
 		content: "\1F4F9";
 	}
@@ -1340,6 +1527,7 @@
 %icon-view {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-view. */
 		@extend %icon;
 		content: "\1F440";
 	}
@@ -1347,6 +1535,7 @@
 %icon-volume {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-volume. */
 		@extend %icon;
 		content: "\1F508";
 	}
@@ -1354,6 +1543,7 @@
 %icon-watch {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-watch. */
 		@extend %icon;
 		content: "\231A";
 	}
@@ -1361,6 +1551,7 @@
 %icon-wrench {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-wrench. */
 		@extend %icon;
 		content: "\1F527";
 	}
@@ -1368,6 +1559,7 @@
 %icon-write {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-write. */
 		@extend %icon;
 		content: "\270E";
 	}
@@ -1375,6 +1567,7 @@
 %icon-wifi {
 	@extend %icon-iefix;
 	&:before {
+		/* These classes are using %icon-wifi. */
 		@extend %icon;
 		content: "\EB84";
 	}

@@ -12,7 +12,7 @@
 // }
 
 %button-styles {
-	/* Structure */
+	/* These classes are using %button-styles. */
 	display: inline-block;
 	padding: 0.5em 1em;
 	border: 1px solid #999999;  /*IE 6/7/8*/
@@ -35,6 +35,7 @@
 }
 /* Additional styles for inputs */
 %button-styles-input {
+	/* These classes are using %button-styles-input. */
 	white-space: nowrap;
 	cursor: pointer;
 	zoom: 1;
@@ -71,6 +72,7 @@
 	}
 }
 %button-styles-primary {
+	/* These classes are using %button-styles-primary. */
 	background-color: $color-button-primary-bg;
 	color: $color-button-primary-text;
 	&:hover,

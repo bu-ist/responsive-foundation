@@ -195,8 +195,8 @@ article[role=main] {
 	}
 }
 
-/* utility class for displaying lists of links inline. Use @extend */
 %u-list-inlineLinks {
+	/* These classes are using %u-list-inlineLinks. */
 	display: inline-block;
 	padding: 0;
 	margin-right: 20px;
