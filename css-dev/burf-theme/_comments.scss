@@ -13,25 +13,17 @@
 .comments-list {
 	border-bottom: 1px solid #dddddd;
 }
-// TODO: classes instead of nested li
-.comments-list li li article {
-	padding-left: 30px;
+// Nested padding
+.comments-list li li {
+	padding: $comment-padding;
 }
-.comments-list li li li article {
-	padding-left: 60px;
-}
-.comments-list li li li li article {
-	padding-left: 90px;
-}
-.comments-list li li li li li article {
-	padding-left: 120px;
+.comment {
+	border: $border-comment;
+	border-width: $borderWidth-comment;
 }
 .comment-body {
 	position: relative;
-	padding: $comment-padding;
 	margin: $comment-margin;
-	border: $border-comment;
-	border-width: $borderWidth-comment;
 	font-family: $fontFamily-comment;
 	font-size: $fontSize-smaller;
 }
