@@ -64,7 +64,7 @@ body {
 ----------------------------------------------------------------- */
 
 article[role=main] {
-	@extend %col-medium-two-third;
+	@extend %col-medium-#{$grid-number-columns*((($number-columns)-1)/$number-columns)};
 	padding-bottom: $column-paddingBottom;
 	@include breakpoint(small) {
 		padding-bottom: $column-paddingBottom-largeScreen;
@@ -80,7 +80,7 @@ article[role=main] {
 ----------------------------------------------------------------- */
 
 .sidebar {
-	@extend %col-medium-one-third;
+	@extend %col-medium-#{$grid-number-columns*(1/$number-columns)};
 	font-size: $fontSize-small;
 	@include breakpoint(medium) {
 		padding: $sidebar-padding;
@@ -105,13 +105,21 @@ article[role=main] {
 		padding: $grid-container-padding-largeScreen;
 	}
 }
-
 .footbar-container .widget {
-	@extend %col-medium-one-third;
+	@extend %col-base;
+	@extend %col-float;
 	@include breakpoint(medium) {
-		width: (100%/$number-widgets-footbar) - $widget-marginLeft * ((($number-widgets-footbar)-1)/$number-widgets-footbar);
+		// Bet you're really reconsidering overriding this width now!
+		// Don't worry, it's not so bad.
+		// First, width gets equally divided among widgets.
+		// Next, calculate the amount of margin you need to subtract from the width.
+		// You need to split the margin equally, but the first margin in every row will always be left out.
+		// So if there are 3 widgets in the footbar, you only need to account for margin on two:
+		// width - (margin * 2/3)
+		// See? Totally fine.
+		width: (100%/$number-widgets-footbar) - $margin-width * ((($number-widgets-footbar)-1)/$number-widgets-footbar);
 		float: left;
-		margin-left: $widget-marginLeft;
+		margin-left: $margin-width;
 		margin-top: 0;
 		padding: 0;
 
