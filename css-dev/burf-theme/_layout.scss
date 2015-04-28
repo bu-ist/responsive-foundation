@@ -109,7 +109,8 @@ article[role=main] {
 	@extend %col-medium-one-third;
 	@include breakpoint(medium) {
 		padding: $grid-sidebar-padding;
-		&:first-child {
+		&:first-child,
+		&:nth-child(3n+1) {
 			padding: 0;
 		}
 	}
