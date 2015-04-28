@@ -106,59 +106,51 @@
 /* Content Nav
 ----------------------------------------------------------------- */
 
-#contentnav h3,
-.widget_nav_menu h3 {
-	margin-bottom: 0;
-}
-#contentnav ul,
-.widget_nav_menu ul {
-	border: $border-widget-contentnav;
-	border-width: $borderWidth-widget-contentnav;
-}
-#contentnav li,
-.widget_nav_menu li {
-	border: $border-widgetList;
-	border-width: $borderWidth-widgetList;
-	font-family: $fontFamily-widget-contentnav;
-	&:first-child {
-		border: none;
+.widget_bu_pages,
+.widget_nav_menu {
+	h3 {
+		margin-bottom: 0;
+	}
+	ul {
+		border: $border-widget-contentnav;
+		border-width: $borderWidth-widget-contentnav;
+		ul {
+			margin: 0;
+			border: none;
+		}
+	}
+	li {
+		border: $border-widgetList;
+		border-width: $borderWidth-widgetList;
+		font-family: $fontFamily-widget-contentnav;
+		&:first-child {
+			border: none;
+		}
+		li {
+			padding: 0 0 0 20px;
+			border: none;
+			a {
+				font-size: $fontSize-widget-contentnav-nestedLink;
+			}
+		}
+	}
+	a {
+		display: block;
+		padding: 10px 0;
+		font-size: $fontSize-widget-contentnav-link;
+		color: $color-widget-contentnav;
+
+		&:hover,
+		&:focus {
+			color: $color-widget-contentnav-hover;
+			text-decoration: none;
+		}
 	}
 }
-#contentnav li a,
-.widget_nav_menu li a {
-	display: block;
-	padding: 10px 0;
-	font-size: $fontSize-widget-contentnav-link;
-	color: $color-widget-contentnav;
-}
-#contentnav li a:hover,
-#contentnav li a:focus,
-.widget_nav_menu li a:hover,
-.widget_nav_menu li a:focus {
-	color: $color-widget-contentnav-hover;
-	text-decoration: none;
-}
-#contentnav .current_page_item a,
+
+.widget_bu_pages .active,
 .widget_nav_menu .current_page_item a {
 	color: $color-widget-contentnav-active;
-}
-#contentnav .current_page_item li a,
-.widget_nav_menu .current_page_item li a {
-	color: $color-widget-contentnav;
-}
-#contentnav li ul,
-.widget_nav_menu li ul {
-	margin: 0;
-	border: none;
-}
-#contentnav li ul li,
-.widget_nav_menu li ul li {
-	padding: 0 0 0 20px;
-	border: none;
-}
-#contentnav li li a,
-.widget_nav_menu li li a {
-	font-size: $fontSize-widget-contentnav-nestedLink;
 }
 
 /* Calendar
