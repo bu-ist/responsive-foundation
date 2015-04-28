@@ -30,7 +30,7 @@
 		@include linear-gradient(transparent, rgba(0,0,0, 0.10));
 	}
 	&:active {
-		box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+		@include box-shadow(0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset);
 	}
 }
 /* Additional styles for inputs */
@@ -62,7 +62,7 @@
 	&-disabled:active {
 		border: none;
 		background-image: none;
-		box-shadow: none;
+		@include box-shadow(none);
 		cursor: not-allowed;
 		@include opacity(0.4);
 	}
@@ -213,7 +213,7 @@ textarea {
 	display: inline-block;
 	padding: $form-input-padding;
 	border: $form-input-border;
-	box-shadow: $form-input-shadow;
+	@include	box-shadow($form-input-shadow);
 	@include border-radius($form-input-borderRadius);
 }
 input[type="text"]:focus,
