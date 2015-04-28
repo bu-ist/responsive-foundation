@@ -115,10 +115,6 @@
 	border: $border-widget-contentnav;
 	border-width: $borderWidth-widget-contentnav;
 }
-#contentnav h3 + ul,
-.widget_nav_menu h3 + ul {
-	border-width: 0 0 1px;
-}
 #contentnav li,
 .widget_nav_menu li {
 	border: $border-widgetList;
