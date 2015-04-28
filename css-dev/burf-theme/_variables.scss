@@ -111,6 +111,7 @@ $fontSize-profile-mini-name:               $fontSize-small !default;
 $fontSize-profile-mini-email:              $fontSize-smaller !default;
 
 // line-height
+$lineHeight-widget:								 $lineHeight-base !default;
 $lineHeight-widgetTitle:                   $lineHeight-large !default;
 $lineHeight-widget-postHeadline:           1.4 !default;
 $lineHeight-widget-postExcerpt:            $lineHeight-medium !default;
@@ -141,7 +142,7 @@ $fontFamily-profile-name:                  $fontFamily-sansSerif !default;
 $fontFamily-profile-title:                 $fontFamily-base !default;
 
 //font-weight
-$fontWeight-calendar-label:                700;
+$fontWeight-calendar-label:                700 !default;
 
 // margin/padding
 $number-columns: 									 3 !default;
@@ -214,4 +215,3 @@ $image-masterPlate-retina:  "http://www.bu.edu/cdn/images/logos/masterplate112x5
 $image-subBrand:            "http://www.bu.edu/cdn/images/logos/subbrand49x35.png" !default;
 $image-subBrand-retina:     "http://www.bu.edu/cdn/images/logos/subbrand49x35-retina.png" !default;
 $image-searchToggle-sprite: "images/search.png" !default;
-
