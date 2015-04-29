@@ -59,7 +59,9 @@
 .profile-listing a {
 	text-decoration: none;
 }
-.profile-listing figure {
+.profile-listing figure,
+.single-profile .profile-thumb figure  {
+	@include border-radius($borderRadius-profile-figure);
 	line-height: 0;
 }
 .profile-listing figure img {
@@ -91,7 +93,6 @@
 	border-bottom: $border-profiles;
 }
 .profile-listing .basic figure {
-	@include border-radius($borderRadius-profile-figure);
 	position: absolute;
 	right: 0;
 	overflow: hidden;
@@ -117,7 +118,6 @@
 	width: 150px;
 	height: 150px;
 	margin: 0 auto 15px;
-	@include border-radius($borderRadius-profile-figure);
 }
 .profile-listing .mini {
 	@extend %clearfix;
@@ -160,7 +160,6 @@
 	word-wrap: break-word;
 }
 .profile-listing .mini figure {
-	@include border-radius($borderRadius-profile-figure);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -184,7 +183,6 @@
 	text-align: center;
 }
 .single-profile .profile-thumb figure {
-	@include border-radius($borderRadius-profile-figure);
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -223,7 +221,6 @@
 	color: $color-profile-info-label;
 	text-transform: uppercase;
 }
-
 
 /* Course Feeds
 ----------------------------------------------------------------- */

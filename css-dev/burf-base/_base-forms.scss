@@ -218,6 +218,9 @@ textarea {
 	@include	box-shadow($form-input-shadow);
 	@include border-radius($form-input-borderRadius);
 }
+%form-input-focusShadow {
+	@include box-shadow($form-input-focusShadow);
+}
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
@@ -234,18 +237,18 @@ input[type="tel"]:focus,
 input[type="color"]:focus,
 select:focus,
 textarea:focus {
+	@extend %form-input-focusShadow;
 	outline: 0;
 	outline: thin dotted \9; /* IE6-9 */
 	outline: 1px auto $color-input-focusBorder;
 	border-color: $color-input-focusBorder;
-	@include box-shadow($form-input-focusShadow);
 }
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
+	@extend %form-input-focusShadow;
 	outline: thin dotted $color-grayScale-3;
 	outline: 1px auto $color-input-focusBorder;
-	@include box-shadow($form-input-focusShadow);
 }
 .checkbox,
 .radio {
