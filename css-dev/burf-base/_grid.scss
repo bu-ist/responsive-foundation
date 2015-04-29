@@ -95,14 +95,14 @@
 // 	Margin: Automatically calculates width with margin included. Handy for items with a background color.
 // 		Example: Make something take up 6 columns, starting at medium breakpoint, with margins:
 // 		Usage: @extend %col-medium-margin-6;
-// 	Push: position ___ number of columns to the left (no affect on document flow)
-// 		Example: Position something 6 columns to the left without affecting anything else
-// 		Usage: @extend %col-medium-push-6;
-// 	Offset: position ___ number of columns to the left (does affect document flow)
-// 		Example: Position something 6 columns to the left and bump everything else along with it
-// 		Usage: @extend %col-medium-offset-6;
-// 	Pull: position ___ number of columns to the right (does not affect document flow)
+// 	Push: position ___ number of columns to the right (no affect on document flow)
 // 		Example: Position something 6 columns to the right without affecting anything else
+// 		Usage: @extend %col-medium-push-6;
+// 	Offset: position ___ number of columns to the right (does affect document flow)
+// 		Example: Position something 6 columns to the right and bump everything else along with it
+// 		Usage: @extend %col-medium-offset-6;
+// 	Pull: position ___ number of columns to the pull (does not affect document flow)
+// 		Example: Position something 6 columns to the pull without affecting anything else
 // 		Usage: @extend %col-medium-pull-6;
 
 //	Grid controls (see _variables.scss)
