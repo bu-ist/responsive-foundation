@@ -142,7 +142,7 @@ article[role=main] {
 	display: block;
 	clear: both;
 	width: 100%;
-	padding: 40px 20px 5px;
+	padding: $padding-siteFooter;
 	background: $color-siteFooter-bg;
 	font-family: $fontFamily-sansSerif;
 	font-size: $fontSize-small;
@@ -159,12 +159,12 @@ article[role=main] {
 	font-family: $fontFamily-sansSerif;
 	font-size: $fontSize-small;
 	line-height: $lineHeight-small;
-	color: $color-grayScale-f;
+	color: $color-siteFooter;
 }
 .siteFooter a {
-	color: $color-grayScale-8;
+	color: $color-siteFooter-link;
 	&:hover {
-		color: $color-grayScale-f;
+		color: $color-siteFooter-link-hover;
 	}
 }
 .siteFooter li {
