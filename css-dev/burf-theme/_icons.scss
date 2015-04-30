@@ -644,6 +644,9 @@ html:hover [class^="icon-"] {
 	@extend .icon;
 	font-size: $fontSize-large;
 }
+.siteFooter-social a[href*="dropbox.com"] i {
+	@extend .icon-dropbox;
+}
 .siteFooter-social a[href*="facebook.com"] i {
 	@extend .icon-facebook;
 }
@@ -655,9 +658,6 @@ html:hover [class^="icon-"] {
 }
 .siteFooter-social a[href*="github.com"] i {
 	@extend .icon-github;
-}
-.siteFooter-social a[href*="googleplus.com"] i {
-	@extend .icon-googleplus;
 }
 .siteFooter-social a[href*="instagram.com"] i {
 	@extend .icon-instagram;
@@ -671,32 +671,48 @@ html:hover [class^="icon-"] {
 .siteFooter-social a[href*="pinterest.com"] i {
 	@extend .icon-pinterest;
 }
+.siteFooter-social a[href*="plus.google.com"] i {
+	@extend .icon-googleplus;
+}
+.siteFooter-social a[href*="getpocket.com"] i {
+	@extend .icon-pocket;
+}
+.siteFooter-social a[href*="reddit.com"] i {
+	@extend .icon-reddit;
+}
 .siteFooter-social a[href*="tumblr.com"] i {
 	@extend .icon-tumblr;
 }
 .siteFooter-social a[href*="twitter.com"] i {
 	@extend .icon-twitter;
 }
-.siteFooter-social a[href*="youtube.com"] i {
-	@extend .icon-youtube;
-}
 .siteFooter-social a[href*="vimeo.com"] i {
 	@extend .icon-vimeo;
 }
+.siteFooter-social a[href*="vine.co"] i {
+	@extend .icon-vine;
+}
+.siteFooter-social a[href*="youtube.com"] i {
+	@extend .icon-youtube;
+}
 /* hide labels */
+.siteFooter-social a[href*="dropbox.com"] span,
 .siteFooter-social a[href*="facebook.com"] span,
 .siteFooter-social a[href*="flickr.com"] span,
 .siteFooter-social a[href*="foursquare.com"] span,
 .siteFooter-social a[href*="github.com"] span,
-.siteFooter-social a[href*="googleplus.com"] span,
 .siteFooter-social a[href*="instagram.com"] span,
 .siteFooter-social a[href*="kickstarter.com"] span,
 .siteFooter-social a[href*="linkedin.com"] span,
 .siteFooter-social a[href*="pinterest.com"] span,
+.siteFooter-social a[href*="plus.google.com"] span,
+.siteFooter-social a[href*="getpocket.com"] span,
+.siteFooter-social a[href*="reddit.com"] span,
 .siteFooter-social a[href*="tumblr.com"] span,
 .siteFooter-social a[href*="twitter.com"] span,
-.siteFooter-social a[href*="youtube.com"] span,
-.siteFooter-social a[href*="vimeo.com"] span {
+.siteFooter-social a[href*="vimeo.com"] span,
+.siteFooter-social a[href*="vine.co"] span,
+.siteFooter-social a[href*="youtube.com"] span {
 	display: none;
 }
 
