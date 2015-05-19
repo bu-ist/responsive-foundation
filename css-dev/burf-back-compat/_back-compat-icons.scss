@@ -1,6 +1,10 @@
 // Backwards Compatibility: burf-theme _icons.scss
 // For Responsive Foundation 1.0.4 and below
 
+// BEFORE INCLUDING THIS FILE:
+// Please ensure all @extend issues are resolved in your theme, as this file will mask them.
+// You will need to include this file before your burf-base and burf-theme includes.
+
 // These classes help ease the transition from CSS classes to SASS placeholder classes in Responsive.
 // Use these classes if you have content in Wordpress which relies on icon classes (.icon-facebook, etc)
 // Social footer icons are already accounted for; you do not need to include this partial to support those.

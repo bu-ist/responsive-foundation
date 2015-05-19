@@ -1,6 +1,10 @@
 // Backwards Compatibility: burf-base _base-typography.scss
 // For Responsive Foundation 1.0.4 and below
 
+// BEFORE INCLUDING THIS FILE:
+// Please ensure all @extend issues are resolved in your theme, as this file will mask them.
+// You will need to include this file before your burf-base and burf-theme includes.
+
 // These classes help ease the transition from CSS classes to SASS placeholder classes in Responsive.
 // Use these classes if you have content in Wordpress which relies on typography classes (.font-jumbo, etc)
 // @extends within your theme should be changed from CSS classes to their SASS placeholder equivalent.

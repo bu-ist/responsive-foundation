@@ -1,10 +1,14 @@
 // Backwards Compatibility: burf-base _grid.scss
 // For Responsive Foundation 1.0.4 and below
 
+// BEFORE INCLUDING THIS FILE:
+// Please ensure all @extend issues are resolved in your theme, as this file will mask them.
+// You will need to include this file before your burf-base and burf-theme includes.
+
 // These classes help ease the transition from CSS classes to SASS placeholder classes in Responsive.
 // Use these classes if you have content in Wordpress which relies on grid classes (.col-xs-1, etc)
 // @extends within your theme should be changed from CSS classes to their SASS placeholder equivalent.
-// Use the following variables in your theme to turn on push, pull, offset, and margin as necessary:
+// Use the following in your theme's variables file to turn on push, pull, offset, and margin as necessary:
 
 // $grid-push
 // $grid-pull
@@ -12,6 +16,18 @@
 // $grid-margins
 
 // For best performance, include only the grid classes your theme needs to use.
+
+/* variables
+----------------------------------------------------------------- */
+
+// This partial requires these variable values, but you may still override them as usual by including
+// a variables file before this file in your own theme.
+
+$grid-breakpoints:                         "small", "medium", "large" !default;
+$grid-margins:                             false !default;
+$grid-push:                                false !default;
+$grid-pull:                                false !default;
+$grid-offset:                              false !default;
 
 /* grid
 ----------------------------------------------------------------- */
@@ -502,7 +518,7 @@
 	}
 }
 
-@if $grid-margin {
+@if $grid-margins {
 	/* margin - small */
 	.col-sm-margin-1 {
 		@extend %col-small-margin-1;
