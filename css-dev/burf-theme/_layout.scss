@@ -108,6 +108,8 @@ article[role=main] {
 .footbar-container .widget {
 	@extend %col-base;
 	@extend %col-float;
+	width: 100%;
+
 	@include breakpoint(medium) {
 		// Bet you're really reconsidering overriding this width now!
 		// Don't worry, it's not so bad.
