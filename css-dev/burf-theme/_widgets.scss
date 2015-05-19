@@ -134,17 +134,17 @@
 				font-size: $fontSize-widget-contentnav-nestedLink;
 			}
 		}
-	}
-	a {
-		display: block;
-		padding: 10px 0;
-		font-size: $fontSize-widget-contentnav-link;
-		color: $color-widget-contentnav;
+		a {
+			display: block;
+			padding: 10px 0;
+			font-size: $fontSize-widget-contentnav-link;
+			color: $color-widget-contentnav;
 
-		&:hover,
-		&:focus {
-			color: $color-widget-contentnav-hover;
-			text-decoration: none;
+			&:hover,
+			&:focus {
+				color: $color-widget-contentnav-hover;
+				text-decoration: none;
+			}
 		}
 	}
 }
