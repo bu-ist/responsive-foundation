@@ -34,7 +34,7 @@ $border-bottom:									 0 0 1px 0;
 
 // Message
 
-$border-message:                           $border-base;
+$border-message:                           $border-base !default;
 $borderWidth-message:                      1px 1px 1px 5px !default;
 $borderRadius-message:                     3px !default;
 $padding-message:                          20px !default;
