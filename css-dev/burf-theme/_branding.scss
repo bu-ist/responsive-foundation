@@ -83,3 +83,17 @@
 		background-size: 112px 50px;
 	}
 }
+
+/* BUMC logo in footer */
+.brand-bumcLogo {
+	@extend %hide-text;
+	display: block;
+	background: url($image-bumcLogo) no-repeat 0 0;
+	width: 96px;
+	height: 40px;
+
+	@include retina {
+		background-image: url($image-bumcLogo-retina);
+		background-size: 96px 40px;
+	}
+}

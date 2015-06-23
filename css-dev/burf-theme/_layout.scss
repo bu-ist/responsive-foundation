@@ -214,11 +214,62 @@ article[role=main] {
 		left: 20px;
 	}
 }
-.has-branding .siteFooter-content {
+.siteFooter-brand + .siteFooter-content {
 	@include breakpoint(small) {
 		margin: 0 0 0 112px;
 	}
 }
+
+/* Add BUMC logo if specified by theme */
+.has-branding .siteFooter-bumc {
+	width: 96px;
+
+	@include breakpoint(small) {
+		position: absolute;
+		top: 48px;
+		left: 162px;
+	}
+}
+.siteFooter-bumc + .siteFooter-content {
+	@include breakpoint(small) {
+		margin: 0 0 0 112px;
+	}
+}
+
+.siteFooter-brand + .siteFooter-bumc + .siteFooter-content {
+	@include breakpoint(small) {
+		margin: 0 0 0 234px;
+	}
+}
+
+/* Add disclaimer if specified by theme */
+.has-branding .siteFooter-disclaimer {
+	width: 96px;
+
+	@include breakpoint(small) {
+		position: absolute;
+		top: 48px;
+		left: 162px;
+	}
+}
+.siteFooter-disclaimer + .siteFooter-content {
+	@include breakpoint(small) {
+		margin: 0 0 0 112px;
+	}
+}
+
+.siteFooter-brand + .siteFooter-bumc + .siteFooter-content {
+	@include breakpoint(small) {
+		margin: 0 0 0 234px;
+	}
+}
+
+.siteFooter-brand + .siteFooter-bumc +  .siteFooter-disclaimer + .siteFooter-content {
+	@include breakpoint(small) {
+		margin: 0 0 0 234px;
+	}
+}
+
 /* Has only HTML info */
 .has-info .siteFooter-info {
 	@extend .col-sm-12;
