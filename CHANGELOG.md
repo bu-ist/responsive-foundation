@@ -1,3 +1,9 @@
+# 1.1.0
+
+* Responsi-as-a-Service beta release (1.3.0-beta)
+* Customizer font palette updates
+* Footer styles for BUMC logo and disclaimer link
+
 # 1.0.5
 
 * Add fallback for branding (#34). Props ashleykolodziej.
