@@ -23,7 +23,7 @@
 // This partial requires these variable values, but you may still override them as usual by including
 // a variables file before this file in your own theme.
 
-$grid-breakpoints:                         "small", "medium", "large" !default;
+$grid-breakpoints:                         "sm", "md", "lg" !default;
 $grid-margins:                             false !default;
 $grid-push:                                false !default;
 $grid-pull:                                false !default;
@@ -74,189 +74,189 @@ $grid-offset:                              false !default;
 /* small screens */
 
 .col-sm-1 {
-	@extend %col-small-1;
+	@extend %col-sm-1;
 }
 .col-sm-2 {
-	@extend %col-small-2;
+	@extend %col-sm-2;
 }
 .col-sm-3 {
-	@extend %col-small-3;
+	@extend %col-sm-3;
 }
 .col-sm-4 {
-	@extend %col-small-4;
+	@extend %col-sm-4;
 }
 .col-sm-5 {
-	@extend %col-small-5;
+	@extend %col-sm-5;
 }
 .col-sm-6 {
-	@extend %col-small-6;
+	@extend %col-sm-6;
 }
 .col-sm-7 {
-	@extend %col-small-7;
+	@extend %col-sm-7;
 }
 .col-sm-8 {
-	@extend %col-small-8;
+	@extend %col-sm-8;
 }
 .col-sm-9 {
-	@extend %col-small-9;
+	@extend %col-sm-9;
 }
 .col-sm-10 {
-	@extend %col-small-10;
+	@extend %col-sm-10;
 }
 .col-sm-11 {
-	@extend %col-small-11;
+	@extend %col-sm-11;
 }
 .col-sm-12 {
-	@extend %col-small-12;
+	@extend %col-sm-12;
 }
 
 /* medium screens */
 
 .col-md-1 {
-	@extend %col-medium-1;
+	@extend %col-md-1;
 }
 .col-md-2 {
-	@extend %col-medium-2;
+	@extend %col-md-2;
 }
 .col-md-3 {
-	@extend %col-medium-3;
+	@extend %col-md-3;
 }
 .col-md-4 {
-	@extend %col-medium-4;
+	@extend %col-md-4;
 }
 .col-md-5 {
-	@extend %col-medium-5;
+	@extend %col-md-5;
 }
 .col-md-6 {
-	@extend %col-medium-6;
+	@extend %col-md-6;
 }
 .col-md-7 {
-	@extend %col-medium-7;
+	@extend %col-md-7;
 }
 .col-md-8 {
-	@extend %col-medium-8;
+	@extend %col-md-8;
 }
 .col-md-9 {
-	@extend %col-medium-9;
+	@extend %col-md-9;
 }
 .col-md-10 {
-	@extend %col-medium-10;
+	@extend %col-md-10;
 }
 .col-md-11 {
-	@extend %col-medium-11;
+	@extend %col-md-11;
 }
 .col-md-12 {
-	@extend %col-medium-12;
+	@extend %col-md-12;
 }
 
 /* large screens */
 
 .col-lg-1 {
-	@extend %col-large-1;
+	@extend %col-lg-1;
 }
 .col-lg-2 {
-	@extend %col-large-2;
+	@extend %col-lg-2;
 }
 .col-lg-3 {
-	@extend %col-large-3;
+	@extend %col-lg-3;
 }
 .col-lg-4 {
-	@extend %col-large-4;
+	@extend %col-lg-4;
 }
 .col-lg-5 {
-	@extend %col-large-5;
+	@extend %col-lg-5;
 }
 .col-lg-6 {
-	@extend %col-large-6;
+	@extend %col-lg-6;
 }
 .col-lg-7 {
-	@extend %col-large-7;
+	@extend %col-lg-7;
 }
 .col-lg-8 {
-	@extend %col-large-8;
+	@extend %col-lg-8;
 }
 .col-lg-9 {
-	@extend %col-large-9;
+	@extend %col-lg-9;
 }
 .col-lg-10 {
-	@extend %col-large-10;
+	@extend %col-lg-10;
 }
 .col-lg-11 {
-	@extend %col-large-11;
+	@extend %col-lg-11;
 }
 .col-lg-12 {
-	@extend %col-large-12;
+	@extend %col-lg-12;
 }
 
 @if $grid-push {
 	/* push - small */
 	.col-sm-push-1 {
-		@extend %col-small-push-1;
+		@extend %col-sm-push-1;
 	}
 	.col-sm-push-2 {
-		@extend %col-small-push-2;
+		@extend %col-sm-push-2;
 	}
 	.col-sm-push-3 {
-		@extend %col-small-push-3;
+		@extend %col-sm-push-3;
 	}
 	.col-sm-push-4 {
-		@extend %col-small-push-4;
+		@extend %col-sm-push-4;
 	}
 	.col-sm-push-5 {
-		@extend %col-small-push-5;
+		@extend %col-sm-push-5;
 	}
 	.col-sm-push-6 {
-		@extend %col-small-push-6;
+		@extend %col-sm-push-6;
 	}
 	.col-sm-push-7 {
-		@extend %col-small-push-7;
+		@extend %col-sm-push-7;
 	}
 	.col-sm-push-8 {
-		@extend %col-small-push-8;
+		@extend %col-sm-push-8;
 	}
 	.col-sm-push-9 {
-		@extend %col-small-push-9;
+		@extend %col-sm-push-9;
 	}
 	.col-sm-push-10 {
-		@extend %col-small-push-10;
+		@extend %col-sm-push-10;
 	}
 	.col-sm-push-11 {
-		@extend %col-small-push-11;
+		@extend %col-sm-push-11;
 	}
 
 	/* push - medium */
 	.col-md-push-1 {
-		@extend %col-medium-push-1;
+		@extend %col-md-push-1;
 	}
 	.col-md-push-2 {
-		@extend %col-medium-push-2;
+		@extend %col-md-push-2;
 	}
 	.col-md-push-3 {
-		@extend %col-medium-push-3;
+		@extend %col-md-push-3;
 	}
 	.col-md-push-4 {
-		@extend %col-medium-push-4;
+		@extend %col-md-push-4;
 	}
 	.col-md-push-5 {
-		@extend %col-medium-push-5;
+		@extend %col-md-push-5;
 	}
 	.col-md-push-6 {
-		@extend %col-medium-push-6;
+		@extend %col-md-push-6;
 	}
 	.col-md-push-7 {
-		@extend %col-medium-push-7;
+		@extend %col-md-push-7;
 	}
 	.col-md-push-8 {
-		@extend %col-medium-push-8;
+		@extend %col-md-push-8;
 	}
 	.col-md-push-9 {
-		@extend %col-medium-push-9;
+		@extend %col-md-push-9;
 	}
 	.col-md-push-10 {
-		@extend %col-medium-push-10;
+		@extend %col-md-push-10;
 	}
 	.col-md-push-11 {
-		@extend %col-medium-push-11;
+		@extend %col-md-push-11;
 	}
 
 	/* push - large */
@@ -264,109 +264,109 @@ $grid-offset:                              false !default;
 		left: auto;
 	}
 	.col-lg-push-1 {
-		@extend %col-large-push-1;
+		@extend %col-lg-push-1;
 	}
 	.col-lg-push-2 {
-		@extend %col-large-push-2;
+		@extend %col-lg-push-2;
 	}
 	.col-lg-push-3 {
-		@extend %col-large-push-3;
+		@extend %col-lg-push-3;
 	}
 	.col-lg-push-4 {
-		@extend %col-large-push-4;
+		@extend %col-lg-push-4;
 	}
 	.col-lg-push-5 {
-		@extend %col-large-push-5;
+		@extend %col-lg-push-5;
 	}
 	.col-lg-push-6 {
-		@extend %col-large-push-6;
+		@extend %col-lg-push-6;
 	}
 	.col-lg-push-7 {
-		@extend %col-large-push-7;
+		@extend %col-lg-push-7;
 	}
 	.col-lg-push-8 {
-		@extend %col-large-push-8;
+		@extend %col-lg-push-8;
 	}
 	.col-lg-push-9 {
-		@extend %col-large-push-9;
+		@extend %col-lg-push-9;
 	}
 	.col-lg-push-10 {
-		@extend %col-large-push-10;
+		@extend %col-lg-push-10;
 	}
 	.col-lg-push-11 {
-		@extend %col-large-push-11;
+		@extend %col-lg-push-11;
 	}
 }
 
 @if $grid-pull {
 	/* pull - small */
 	.col-sm-pull-1 {
-		@extend %col-small-pull-1;
+		@extend %col-sm-pull-1;
 	}
 	.col-sm-pull-2 {
-		@extend %col-small-pull-2;
+		@extend %col-sm-pull-2;
 	}
 	.col-sm-pull-3 {
-		@extend %col-small-pull-3;
+		@extend %col-sm-pull-3;
 	}
 	.col-sm-pull-4 {
-		@extend %col-small-pull-4;
+		@extend %col-sm-pull-4;
 	}
 	.col-sm-pull-5 {
-		@extend %col-small-pull-5;
+		@extend %col-sm-pull-5;
 	}
 	.col-sm-pull-6 {
-		@extend %col-small-pull-6;
+		@extend %col-sm-pull-6;
 	}
 	.col-sm-pull-7 {
-		@extend %col-small-pull-7;
+		@extend %col-sm-pull-7;
 	}
 	.col-sm-pull-8 {
-		@extend %col-small-pull-8;
+		@extend %col-sm-pull-8;
 	}
 	.col-sm-pull-9 {
-		@extend %col-small-pull-9;
+		@extend %col-sm-pull-9;
 	}
 	.col-sm-pull-10 {
-		@extend %col-small-pull-10;
+		@extend %col-sm-pull-10;
 	}
 	.col-sm-pull-11 {
-		@extend %col-small-pull-11;
+		@extend %col-sm-pull-11;
 	}
 
 	/* pull - medium */
 	.col-md-pull-1 {
-		@extend %col-medium-pull-1;
+		@extend %col-md-pull-1;
 	}
 	.col-md-pull-2 {
-		@extend %col-medium-pull-2;
+		@extend %col-md-pull-2;
 	}
 	.col-md-pull-3 {
-		@extend %col-medium-pull-3;
+		@extend %col-md-pull-3;
 	}
 	.col-md-pull-4 {
-		@extend %col-medium-pull-4;
+		@extend %col-md-pull-4;
 	}
 	.col-md-pull-5 {
-		@extend %col-medium-pull-5;
+		@extend %col-md-pull-5;
 	}
 	.col-md-pull-6 {
-		@extend %col-medium-pull-6;
+		@extend %col-md-pull-6;
 	}
 	.col-md-pull-7 {
-		@extend %col-medium-pull-7;
+		@extend %col-md-pull-7;
 	}
 	.col-md-pull-8 {
-		@extend %col-medium-pull-8;
+		@extend %col-md-pull-8;
 	}
 	.col-md-pull-9 {
-		@extend %col-medium-pull-9;
+		@extend %col-md-pull-9;
 	}
 	.col-md-pull-10 {
-		@extend %col-medium-pull-10;
+		@extend %col-md-pull-10;
 	}
 	.col-md-pull-11 {
-		@extend %col-medium-pull-11;
+		@extend %col-md-pull-11;
 	}
 
 	/* pull - large */
@@ -374,109 +374,109 @@ $grid-offset:                              false !default;
 		right: auto;
 	}
 	.col-lg-pull-1 {
-		@extend %col-large-pull-1;
+		@extend %col-lg-pull-1;
 	}
 	.col-lg-pull-2 {
-		@extend %col-large-pull-2;
+		@extend %col-lg-pull-2;
 	}
 	.col-lg-pull-3 {
-		@extend %col-large-pull-3;
+		@extend %col-lg-pull-3;
 	}
 	.col-lg-pull-4 {
-		@extend %col-large-pull-4;
+		@extend %col-lg-pull-4;
 	}
 	.col-lg-pull-5 {
-		@extend %col-large-pull-5;
+		@extend %col-lg-pull-5;
 	}
 	.col-lg-pull-6 {
-		@extend %col-large-pull-6;
+		@extend %col-lg-pull-6;
 	}
 	.col-lg-pull-7 {
-		@extend %col-large-pull-7;
+		@extend %col-lg-pull-7;
 	}
 	.col-lg-pull-8 {
-		@extend %col-large-pull-8;
+		@extend %col-lg-pull-8;
 	}
 	.col-lg-pull-9 {
-		@extend %col-large-pull-9;
+		@extend %col-lg-pull-9;
 	}
 	.col-lg-pull-10 {
-		@extend %col-large-pull-10;
+		@extend %col-lg-pull-10;
 	}
 	.col-lg-pull-11 {
-		@extend %col-large-pull-11;
+		@extend %col-lg-pull-11;
 	}
 }
 
 @if $grid-offset {
 	/* offset - small */
 	.col-sm-offset-1 {
-		@extend %col-small-offset-1;
+		@extend %col-sm-offset-1;
 	}
 	.col-sm-offset-2 {
-		@extend %col-small-offset-2;
+		@extend %col-sm-offset-2;
 	}
 	.col-sm-offset-3 {
-		@extend %col-small-offset-3;
+		@extend %col-sm-offset-3;
 	}
 	.col-sm-offset-4 {
-		@extend %col-small-offset-4;
+		@extend %col-sm-offset-4;
 	}
 	.col-sm-offset-5 {
-		@extend %col-small-offset-5;
+		@extend %col-sm-offset-5;
 	}
 	.col-sm-offset-6 {
-		@extend %col-small-offset-6;
+		@extend %col-sm-offset-6;
 	}
 	.col-sm-offset-7 {
-		@extend %col-small-offset-7;
+		@extend %col-sm-offset-7;
 	}
 	.col-sm-offset-8 {
-		@extend %col-small-offset-8;
+		@extend %col-sm-offset-8;
 	}
 	.col-sm-offset-9 {
-		@extend %col-small-offset-9;
+		@extend %col-sm-offset-9;
 	}
 	.col-sm-offset-10 {
-		@extend %col-small-offset-10;
+		@extend %col-sm-offset-10;
 	}
 	.col-sm-offset-11 {
-		@extend %col-small-offset-11;
+		@extend %col-sm-offset-11;
 	}
 
 	/* offset - medium */
 	.col-md-offset-1 {
-		@extend %col-medium-offset-1;
+		@extend %col-md-offset-1;
 	}
 	.col-md-offset-2 {
-		@extend %col-medium-offset-2;
+		@extend %col-md-offset-2;
 	}
 	.col-md-offset-3 {
-		@extend %col-medium-offset-3;
+		@extend %col-md-offset-3;
 	}
 	.col-md-offset-4 {
-		@extend %col-medium-offset-4;
+		@extend %col-md-offset-4;
 	}
 	.col-md-offset-5 {
-		@extend %col-medium-offset-5;
+		@extend %col-md-offset-5;
 	}
 	.col-md-offset-6 {
-		@extend %col-medium-offset-6;
+		@extend %col-md-offset-6;
 	}
 	.col-md-offset-7 {
-		@extend %col-medium-offset-7;
+		@extend %col-md-offset-7;
 	}
 	.col-md-offset-8 {
-		@extend %col-medium-offset-8;
+		@extend %col-md-offset-8;
 	}
 	.col-md-offset-9 {
-		@extend %col-medium-offset-9;
+		@extend %col-md-offset-9;
 	}
 	.col-md-offset-10 {
-		@extend %col-medium-offset-10;
+		@extend %col-md-offset-10;
 	}
 	.col-md-offset-11 {
-		@extend %col-medium-offset-11;
+		@extend %col-md-offset-11;
 	}
 
 	/* offset - large */
@@ -484,109 +484,109 @@ $grid-offset:                              false !default;
 		margin-left: 0;
 	}
 	.col-lg-offset-1 {
-		@extend %col-large-offset-1;
+		@extend %col-lg-offset-1;
 	}
 	.col-lg-offset-2 {
-		@extend %col-large-offset-2;
+		@extend %col-lg-offset-2;
 	}
 	.col-lg-offset-3 {
-		@extend %col-large-offset-3;
+		@extend %col-lg-offset-3;
 	}
 	.col-lg-offset-4 {
-		@extend %col-large-offset-4;
+		@extend %col-lg-offset-4;
 	}
 	.col-lg-offset-5 {
-		@extend %col-large-offset-5;
+		@extend %col-lg-offset-5;
 	}
 	.col-lg-offset-6 {
-		@extend %col-large-offset-6;
+		@extend %col-lg-offset-6;
 	}
 	.col-lg-offset-7 {
-		@extend %col-large-offset-7;
+		@extend %col-lg-offset-7;
 	}
 	.col-lg-offset-8 {
-		@extend %col-large-offset-8;
+		@extend %col-lg-offset-8;
 	}
 	.col-lg-offset-9 {
-		@extend %col-large-offset-9;
+		@extend %col-lg-offset-9;
 	}
 	.col-lg-offset-10 {
-		@extend %col-large-offset-10;
+		@extend %col-lg-offset-10;
 	}
 	.col-lg-offset-11 {
-		@extend %col-large-offset-11;
+		@extend %col-lg-offset-11;
 	}
 }
 
 @if $grid-margins {
 	/* margin - small */
 	.col-sm-margin-1 {
-		@extend %col-small-margin-1;
+		@extend %col-sm-margin-1;
 	}
 	.col-sm-margin-2 {
-		@extend %col-small-margin-2;
+		@extend %col-sm-margin-2;
 	}
 	.col-sm-margin-3 {
-		@extend %col-small-margin-3;
+		@extend %col-sm-margin-3;
 	}
 	.col-sm-margin-4 {
-		@extend %col-small-margin-4;
+		@extend %col-sm-margin-4;
 	}
 	.col-sm-margin-5 {
-		@extend %col-small-margin-5;
+		@extend %col-sm-margin-5;
 	}
 	.col-sm-margin-6 {
-		@extend %col-small-margin-6;
+		@extend %col-sm-margin-6;
 	}
 	.col-sm-margin-7 {
-		@extend %col-small-margin-7;
+		@extend %col-sm-margin-7;
 	}
 	.col-sm-margin-8 {
-		@extend %col-small-margin-8;
+		@extend %col-sm-margin-8;
 	}
 	.col-sm-margin-9 {
-		@extend %col-small-margin-9;
+		@extend %col-sm-margin-9;
 	}
 	.col-sm-margin-10 {
-		@extend %col-small-margin-10;
+		@extend %col-sm-margin-10;
 	}
 	.col-sm-margin-11 {
-		@extend %col-small-margin-11;
+		@extend %col-sm-margin-11;
 	}
 
 	/* margin - medium */
 	.col-md-margin-1 {
-		@extend %col-medium-margin-1;
+		@extend %col-md-margin-1;
 	}
 	.col-md-margin-2 {
-		@extend %col-medium-margin-2;
+		@extend %col-md-margin-2;
 	}
 	.col-md-margin-3 {
-		@extend %col-medium-margin-3;
+		@extend %col-md-margin-3;
 	}
 	.col-md-margin-4 {
-		@extend %col-medium-margin-4;
+		@extend %col-md-margin-4;
 	}
 	.col-md-margin-5 {
-		@extend %col-medium-margin-5;
+		@extend %col-md-margin-5;
 	}
 	.col-md-margin-6 {
-		@extend %col-medium-margin-6;
+		@extend %col-md-margin-6;
 	}
 	.col-md-margin-7 {
-		@extend %col-medium-margin-7;
+		@extend %col-md-margin-7;
 	}
 	.col-md-margin-8 {
-		@extend %col-medium-margin-8;
+		@extend %col-md-margin-8;
 	}
 	.col-md-margin-9 {
-		@extend %col-medium-margin-9;
+		@extend %col-md-margin-9;
 	}
 	.col-md-margin-10 {
-		@extend %col-medium-margin-10;
+		@extend %col-md-margin-10;
 	}
 	.col-md-margin-11 {
-		@extend %col-medium-margin-11;
+		@extend %col-md-margin-11;
 	}
 
 	/* margin - large */
@@ -594,36 +594,36 @@ $grid-offset:                              false !default;
 		margin-left: 0;
 	}
 	.col-lg-margin-1 {
-		@extend %col-large-margin-1;
+		@extend %col-lg-margin-1;
 	}
 	.col-lg-margin-2 {
-		@extend %col-large-margin-2;
+		@extend %col-lg-margin-2;
 	}
 	.col-lg-margin-3 {
-		@extend %col-large-margin-3;
+		@extend %col-lg-margin-3;
 	}
 	.col-lg-margin-4 {
-		@extend %col-large-margin-4;
+		@extend %col-lg-margin-4;
 	}
 	.col-lg-margin-5 {
-		@extend %col-large-margin-5;
+		@extend %col-lg-margin-5;
 	}
 	.col-lg-margin-6 {
-		@extend %col-large-margin-6;
+		@extend %col-lg-margin-6;
 	}
 	.col-lg-margin-7 {
-		@extend %col-large-margin-7;
+		@extend %col-lg-margin-7;
 	}
 	.col-lg-margin-8 {
-		@extend %col-large-margin-8;
+		@extend %col-lg-margin-8;
 	}
 	.col-lg-margin-9 {
-		@extend %col-large-margin-9;
+		@extend %col-lg-margin-9;
 	}
 	.col-lg-margin-10 {
-		@extend %col-large-margin-10;
+		@extend %col-lg-margin-10;
 	}
 	.col-lg-margin-11 {
-		@extend %col-large-margin-11;
+		@extend %col-lg-margin-11;
 	}
 }
