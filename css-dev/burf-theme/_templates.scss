@@ -15,10 +15,10 @@
 %templateNarrow {
 	/* These classes are using %templateNarrow. */
 	.content-container {
-		max-width: $container-S;
+		max-width: $container-SM;
 	}
 	article[role=main] {
-		@extend %col-medium-full-width;
+		@extend %col-md-full-width;
 	}
 }
 
@@ -27,10 +27,10 @@
 %removeTemplateNarrow {
 	/* These classes are using %removeTemplateNarrow. */
 	.content-container {
-		max-width: $container-L;
+		max-width: $container-LG;
 	}
 	article[role=main] {
-		@include breakpoint(medium) {
+		@include breakpoint(md) {
 			width: 66.66667%;
     		float: left;
 		}
@@ -58,8 +58,8 @@
 	margin: 0 auto;
 
 	.widget {
-		@extend %col-small-one-half;
-		@include breakpoint(small) {
+		@extend %col-sm-one-half;
+		@include breakpoint(sm) {
 			padding: $grid-sidebar-padding;
 
 			&:first-child {
@@ -75,20 +75,20 @@
 	/* These classes are using %removeTemplateNarrowSidebar. */
 	@extend .sidebar;
 	@extend %container-styles;
-	@include breakpoint(medium) {
+	@include breakpoint(md) {
 		float: left;
 	}
 
 	.widget {
 		width: 100%;
 
-		@include breakpoint(small) {
+		@include breakpoint(sm) {
 			padding: 0;
 		}
-		@include breakpoint(medium) {
+		@include breakpoint(md) {
 			padding-right: 60px;
 		}
-		@include breakpoint(large) {
+		@include breakpoint(lg) {
 			padding-right: 0;
 		}
 	}
@@ -286,7 +286,7 @@
 .dateSummary {
 	@extend %message-styles;
 	margin: 0 0 20px 0;
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		float: right;
 		width: 33.33333333333333%;
 		margin: 0 0 20px 20px;
