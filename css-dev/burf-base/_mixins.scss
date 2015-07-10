@@ -181,23 +181,23 @@
 // Usage: @include breakpoint(medium) {...}
 @mixin breakpoint($point) {
 	@if ($MQs) {
-		@if ($point == extra_small) {
+		@if ($point == xs) {
 			@media screen and (min-width:$XS) {
 				@content;
 			}
 		}
-		@else if ($point == small) {
-			@media screen and (min-width:$S) {
+		@else if ($point == sm) {
+			@media screen and (min-width:$SM) {
 				@content;
 			}
 		}
-		@else if ($point == medium) {
-			@media screen and (min-width:$M) {
+		@else if ($point == md) {
+			@media screen and (min-width:$MD) {
 				@content;
 			}
 		}
-		@else if ($point == large) {
-			@media screen and (min-width:$L) {
+		@else if ($point == lg) {
+			@media screen and (min-width:$LG) {
 				@content;
 			}
 		}
@@ -212,7 +212,7 @@
 		}
 	}
 	@else {
-		@if ($point == large) {
+		@if ($point == lg) {
 			// ie8 and large desktop output nothing
 		}
 		@else {
