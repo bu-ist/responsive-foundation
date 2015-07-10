@@ -11,12 +11,15 @@
 // Grid Controls
 
 $grid-number-columns:                      12 !default;
-$grid-breakpoints:                         "sm", "md" !default;
 $grid-margins:                             false !default;
 $grid-margin-width:                        2.6 !default;
+
+$grid-breakpoints:                         "sm", "md" !default;
 $grid-push:                                false !default;
 $grid-pull:                                false !default;
 $grid-offset:                              false !default;
+
+$grid-classes:										 true !default;
 
 // Grid Spacing
 
