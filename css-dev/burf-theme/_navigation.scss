@@ -435,6 +435,12 @@ nav a {
 	}
 }
 
+.l-topNav.search-open .utilityNav {
+	@include breakpoint(sm) {
+		top: 209px;
+	}
+}
+
 .l-topNav #quicksearch {
 	border-bottom: 1px solid $color-grayScale-d;
 }
