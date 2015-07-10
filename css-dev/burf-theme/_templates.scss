@@ -18,7 +18,7 @@
 		max-width: $container-SM;
 	}
 	article[role=main] {
-		@extend %col-md-full-width;
+		@extend %col-md-full;
 	}
 }
 
@@ -58,7 +58,7 @@
 	margin: 0 auto;
 
 	.widget {
-		@extend %col-sm-one-half;
+		@extend %col-sm-half;
 		@include breakpoint(sm) {
 			padding: $grid-sidebar-padding;
 

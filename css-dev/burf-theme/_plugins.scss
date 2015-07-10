@@ -103,7 +103,7 @@
 	@extend %clearfix;
 }
 .profile-listing .advanced li {
-	@extend %col-md-one-third;
+	@extend %col-md-third;
 }
 .profile-listing .advanced li:nth-child(3n+1) {
 	clear: left;
