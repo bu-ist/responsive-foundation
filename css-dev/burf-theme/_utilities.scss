@@ -80,20 +80,20 @@ h6.bu_collapsible {
 	img {
 		margin-bottom: $margin-floatedContent / 2;
 	}
-	@include breakpoint(extra_small) {
+	@include breakpoint(xs) {
 		max-width: 50%;
 	}
 }
 .alignright {
 	@extend %align-styles;
-	@include breakpoint(extra_small) {
+	@include breakpoint(xs) {
 		float: right;
 		margin: 0.0 0 $margin-floatedContent $margin-floatedContent;
 	}
 }
 .alignleft {
 	@extend %align-styles;
-	@include breakpoint(extra_small) {
+	@include breakpoint(xs) {
 		float: left;
 		margin: 0 $margin-floatedContent $margin-floatedContent 0;
 	}
@@ -137,7 +137,7 @@ h6.bu_collapsible {
 			border: 1px solid $borderColor-table;
 		}
 	}
-	@include breakpoint ("max-width: #{$container_M}") {
+	@include breakpoint("max-width: #{$container_MD}") {
 		overflow-x: auto;
 		overflow-y: hidden;
 		-webkit-overflow-scrolling: touch;
