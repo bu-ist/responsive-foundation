@@ -11,17 +11,19 @@
 // Grid Controls
 
 $grid-number-columns:                      12 !default;
-$grid-margins:                             false !default;
 $grid-margin-width:                        2.6 !default;
 
-// Choose which breakpoints and features you want to support
+// Choose which breakpoints and features you want to support.
+// Small (sm) and medium (md) are required, everything else is optional.
 
 $grid-breakpoints:                         "sm", "md" !default;
+$grid-margins:                             false !default;
 $grid-push:                                false !default;
 $grid-pull:                                false !default;
 $grid-offset:                              false !default;
 
-// Choose whether or not to print classes for grid in your CSS. Completely optional.
+// Choose whether or not to print the numeric grid classes (.col-sm-5). Optional.
+// Note that friendly placeholders (.col-quarter, .col-sm-quarter) will always print.
 
 $grid-classes:										 true !default;
 
