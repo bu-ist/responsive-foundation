@@ -79,7 +79,7 @@
 }
 .form-tip {
 	font-size: $fontSize-smallest;
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		display: block;
 	}
 }
@@ -90,7 +90,7 @@
 .comment-respond label {
 	display: block;
 	margin: 0 0 2px;
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		float: left;
 		width: 25%;
 		padding-right: 10px;
@@ -98,7 +98,7 @@
 	}
 }
 .comment-form .button {
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		margin-left: 25%;
 	}
 }
@@ -106,7 +106,7 @@
 	@include transition(height, 5ms, ease-in-out, 0s); // TODO: expand height on focus, but don't shrink if it contains content
 	width: 100%;
 	height: 6em;
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		width: 75%;
 	}
 }
