@@ -34,19 +34,19 @@ body {
 	margin: 0 auto;
 }
 .bannerContainer-windowWidth {
-	@include breakpoint(large) {
+	@include breakpoint(lg) {
 		padding: 20px;
 		background: $color-bannerContainer;
 	}
 }
 .bannerContainer-pageWidth {
 	margin: -15px 0 35px;
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		margin: 0 0 60px;
 	}
 }
 .bannerContainer-pageWidth img {
-	@include breakpoint(medium) {
+	@include breakpoint(md) {
 		width: 100%;
 		background: $color-bannerContainer;
 	}
@@ -55,7 +55,7 @@ body {
 	padding: 0;
 	margin: -15px 0 35px;
 	background: none;
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		margin-top: 0;
 	}
 }
@@ -64,9 +64,9 @@ body {
 ----------------------------------------------------------------- */
 
 article[role=main] {
-	@extend %col-medium-#{$grid-number-columns*((($number-columns)-1)/$number-columns)};
+	@extend %col-md-#{$grid-number-columns*((($number-columns)-1)/$number-columns)};
 	padding-bottom: $column-paddingBottom;
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		padding-bottom: $column-paddingBottom-largeScreen;
 	}
 }
@@ -80,9 +80,9 @@ article[role=main] {
 ----------------------------------------------------------------- */
 
 .sidebar {
-	@extend %col-medium-#{$grid-number-columns*(1/$number-columns)};
+	@extend %col-md-#{$grid-number-columns*(1/$number-columns)};
 	font-size: $fontSize-small;
-	@include breakpoint(medium) {
+	@include breakpoint(md) {
 		padding: $sidebar-padding;
 	}
 }
@@ -101,7 +101,7 @@ article[role=main] {
 .footbar-container {
 	@extend %container-styles;
 	background: $color-footbar-container-bg;
-	@include breakpoint(medium) {
+	@include breakpoint(md) {
 		padding: $grid-container-padding-largeScreen;
 	}
 }
@@ -110,7 +110,7 @@ article[role=main] {
 	@extend %col-float;
 	width: 100%;
 
-	@include breakpoint(medium) {
+	@include breakpoint(md) {
 		// Bet you're really reconsidering overriding this width now!
 		// Don't worry, it's not so bad.
 		// First, width gets equally divided among widgets.
@@ -177,22 +177,22 @@ article[role=main] {
 	}
 }
 .siteFooter-info {
-	@extend %col-small-one-half;
-	@include breakpoint(small) {
+	@extend %col-sm-one-half;
+	@include breakpoint(sm) {
 		padding: 0 0 10px 30px;
 	}
 }
 .siteFooter-links,
 .siteFooter-social {
-	@extend %col-small-one-quarter;
+	@extend %col-sm-one-quarter;
 	padding: 0 0 30px;
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		padding-left: 30px;
 	}
 }
 .siteFooter-social {
 	text-align: center;
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		text-align: left;
 	}
 }
@@ -213,38 +213,38 @@ article[role=main] {
 .siteFooter-brand {
 	width: 112px;
 	margin: 6px auto 35px;
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		position: absolute;
 		top: 40px;
 		left: 20px;
 	}
 }
 .has-branding .siteFooter-content {
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		margin: 0 0 0 112px;
 	}
 }
 /* Has only HTML info */
 .has-info .siteFooter-info {
-	@extend %col-small-full-width;
+	@extend %col-sm-full-width;
 }
 /* Has only general links */
 .has-links .siteFooter-links {
-	@extend %col-small-full-width;
+	@extend %col-sm-full-width;
 }
 .has-links .siteFooter-links li {
 	@extend %u-list-inlineLinks;
 }
 /* Has general + social media links */
 .has-social .siteFooter-social {
-	@extend %col-small-full-width;
+	@extend %col-sm-full-width;
 }
 .has-social .siteFooter-social li {
 	@extend %u-list-inlineLinks;
 }
 .has-links-social .siteFooter-links,
 .has-links-social .siteFooter-social {
-	@extend %col-small-one-half;
+	@extend %col-sm-one-half;
 }
 .has-links-social .siteFooter-links li,
 .has-links-social .siteFooter-social li {
@@ -252,20 +252,20 @@ article[role=main] {
 }
 /* Has info + general links */
 .has-info-links .siteFooter-info {
-	@extend %col-small-three-quarter;
+	@extend %col-sm-three-quarter;
 }
 .has-info-links .siteFooter-links {
-	@extend %col-small-one-quarter;
+	@extend %col-sm-one-quarter;
 }
 .has-info-links .siteFooter-links li {
 	@extend %u-list-inlineLinks;
 }
 /* Has info + social media links */
 .has-info-social .siteFooter-info {
-	@extend %col-small-three-quarter;
+	@extend %col-sm-three-quarter;
 }
 .has-info-social .siteFooter-social {
-	@extend %col-small-one-quarter;
+	@extend %col-sm-one-quarter;
 }
 .has-info-social .siteFooter-social li {
 	@extend %u-list-inlineLinks;
@@ -273,11 +273,11 @@ article[role=main] {
 
 /* Has all three */
 .has-info-links-social .siteFooter-info {
-	@extend %col-small-one-half;
+	@extend %col-sm-one-half;
 }
 .has-info-links-social .siteFooter-links,
 .has-info-links-social .siteFooter-social {
-	@extend %col-small-one-quarter;
+	@extend %col-sm-one-quarter;
 }
 // .has-info-links-social .siteFooter-links li, Doesn't always look good.
 .has-info-links-social .siteFooter-social li  {
