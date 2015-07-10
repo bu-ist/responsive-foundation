@@ -341,7 +341,7 @@ select[multiple] {
 }
 
 /* Aligned Forms */
-@include breakpoint(medium) {
+@include breakpoint(md) {
 	.form-aligned input,
 	.form-aligned textarea,
 	.form-aligned select {
