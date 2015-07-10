@@ -34,7 +34,7 @@
 .brand .siteDescription {
 	@extend %vertical-center;
 	display: none;
-	@include breakpoint(medium) {
+	@include breakpoint(md) {
 		display: block;
 		font-family: $fontFamily-base;
 		font-size: $fontSize-small;
