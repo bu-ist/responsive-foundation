@@ -242,6 +242,41 @@ $grid-widths-margins: ();
 	}
 }
 
+@if $grid-classes {
+	@for $i from 1 through $grid-number-columns {
+		.col-#{$i} {
+			@extend %col-#{$i};
+		}
+		@each $breakpoint in $grid-breakpoints {
+			.col-#{$breakpoint} {
+				&-#{$i} {
+					@extend %col-#{$breakpoint}-#{$i};
+				}
+				@if $grid-margins {
+					&-margin-#{$i} {
+						@extend %col-#{$breakpoint}-margin-#{$i};
+					}
+				}
+				@if $grid-push {
+					&-push-#{$i} {
+						@extend %col-#{$breakpoint}-push-#{$i};
+					}
+				}
+				@if $grid-pull {
+					&-pull-#{$i} {
+						@extend %col-#{$breakpoint}-pull-#{$i};
+					}
+				}
+				@if $grid-offset {
+					&-offset-#{$i} {
+						@extend %col-#{$breakpoint}-offset-#{$i};
+					}
+				}
+			}
+		}
+	}
+}
+
 // Friendly placeholders for common needs - calculated based on grid columns
 
 %col-sm {
