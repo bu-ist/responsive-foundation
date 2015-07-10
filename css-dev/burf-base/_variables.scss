@@ -14,10 +14,14 @@ $grid-number-columns:                      12 !default;
 $grid-margins:                             false !default;
 $grid-margin-width:                        2.6 !default;
 
+// Choose which breakpoints and features you want to support
+
 $grid-breakpoints:                         "sm", "md" !default;
 $grid-push:                                false !default;
 $grid-pull:                                false !default;
 $grid-offset:                              false !default;
+
+// Choose whether or not to print classes for grid in your CSS. Completely optional.
 
 $grid-classes:										 true !default;
 
