@@ -132,6 +132,10 @@
 //		$grid-offset
 //			Turn on optional offset classes.
 //			Default: false
+//		$grid-classes
+//			Choose to output numeric grid classes (ie, .col-sm-5)
+//			Note that friendly grid classes always print.
+//			Default: true
 
 // Base styles
 %col-float {
@@ -243,6 +247,7 @@ $grid-widths-margins: ();
 }
 
 // Friendly placeholders for common needs - calculated based on grid columns
+// The classes for these always print, regardless of $grid-classes setting.
 
 $quarter: 				$grid-number-columns * (1/4);
 $third: 					$grid-number-columns * (1/3);
