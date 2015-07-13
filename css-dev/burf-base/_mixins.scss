@@ -131,17 +131,18 @@
 	        animation: #{$str};
 }
 // vertical-center: a more IE-friendly version of vertical center. Apply "vertical-center-child" to a parent element and "vertical-center" to the child
-// Usage: @include vertical-center-child
-@mixin vertical-center-child {
+// Default usage: @include vertical-center-child;
+// Usage specifying a child selector: @include vertical-center-child(".yourSelector");
+@mixin vertical-center-child($selector: "*") {
 	.lt-ie9 & {
 		display: table;
 	}
-	.lt-ie9 & > * {
+	.lt-ie9 & > #{$selector} {
 		top: auto;
 		display: table-cell;
 		vertical-align: middle;
 	}
-	& > * {
+	& > #{$selector} {
 		position: relative;
 		top: 50%;
 		display: block;
