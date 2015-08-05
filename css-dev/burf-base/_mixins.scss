@@ -179,7 +179,7 @@
 }
 
 // If primary stylesheet indicates media query support (e.g. style.scss), output media queries. If not (e.g. ie.scss), output the block WITHOUT @media wrapper.
-// Usage: @include breakpoint(medium) {...}
+// Usage: @include breakpoint(md) {...}
 @mixin breakpoint($point) {
 	@if ($MQs) {
 		@if ($point == xs) {

@@ -234,8 +234,8 @@ article[role=main] {
 .siteFooter-bumc {
 	width: 96px;
 	margin: 6px auto 35px;
-	
-	@include breakpoint(small) {
+
+	@include breakpoint(sm) {
 		margin:0;
 		position: absolute;
 		top: 40px;
@@ -243,19 +243,19 @@ article[role=main] {
 	}
 }
 .siteFooter-brand + .siteFooter-bumc {
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		position: absolute;
 		top: 48px;
 		left: 162px;
 	}
 }
 .siteFooter-bumc + .siteFooter-content {
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		margin: 0 0 0 112px;
 	}
 }
 .siteFooter-brand + .siteFooter-bumc + .siteFooter-content {
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		margin: 0 0 0 234px;
 	}
 }
@@ -264,8 +264,8 @@ article[role=main] {
 .siteFooter-disclaimer {
 	margin-bottom:20px;
 	text-align:center;
-	
-	@include breakpoint(small) {
+
+	@include breakpoint(sm) {
 		margin-bottom:0;
 		position: absolute;
 	}
@@ -273,35 +273,35 @@ article[role=main] {
 .has-branding .siteFooter-disclaimer,
 .siteFooter-bumc + .siteFooter-disclaimer {
 
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		position: absolute;
 		top: 48px;
 		left: 162px;
 	}
 }
 .siteFooter-disclaimer + .siteFooter-content {
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		margin: 0 0 0 112px;
 	}
 }
 .siteFooter-brand + .siteFooter-disclaimer + .siteFooter-content,
 .siteFooter-bumc + .siteFooter-disclaimer + .siteFooter-content {
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		margin: 0 0 0 234px;
 	}
 }
 .siteFooter-brand + .siteFooter-bumc + .siteFooter-content {
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		margin: 0 0 0 234px;
 	}
 }
 .siteFooter-brand + .siteFooter-bumc + .siteFooter-disclaimer {
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		left: 282px;
 	}
 }
 .siteFooter-brand + .siteFooter-bumc + .siteFooter-disclaimer + .siteFooter-content {
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		margin: 0 0 0 344px;
 	}
 }

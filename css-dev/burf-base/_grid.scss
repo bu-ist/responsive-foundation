@@ -152,7 +152,7 @@
 	margin: $grid-margin-width#{"%"};
 	margin-top: 0;
 	padding: 20px;
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		margin-right: 0;
 	}
 }
