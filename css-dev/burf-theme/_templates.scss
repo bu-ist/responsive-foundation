@@ -12,45 +12,91 @@
 /* Narrow Content Column
 ----------------------------------------------------------------- */
 
-.archive .content .content-container,
-.page-template-news .content .content-container,
-.single-post .content .content-container,
-.single-calendar .content .content-container,
-.page-template-profiles .content .content-container,
-.single-profile .content .content-container {
-	max-width: $container-S;
+%templateNarrow {
+	/* These classes are using %templateNarrow. */
+	.content-container {
+		max-width: $container-SM;
+	}
+	article[role=main] {
+		@extend %col-md-full;
+	}
 }
-.page-template-news article[role=main],
-.single-post article[role=main],
-.single-calendar article[role=main],
-.page-template-profiles article[role=main],
-.single-profile article[role=main],
-.post-type-archive-profile article[role=main] {
-	margin: 0 auto;
-	float: none;
-	width: 100%;
+
+// A utility class to easily undo narrow column widths.
+// Always overrides %templateNarrow.
+%removeTemplateNarrow {
+	/* These classes are using %removeTemplateNarrow. */
+	.content-container {
+		max-width: $container-LG;
+	}
+	article[role=main] {
+		@include breakpoint(md) {
+			width: 66.66667%;
+    		float: left;
+		}
+	}
+}
+
+.archive,
+.page-template-news,
+.single-post,
+.single-calendar,
+.page-template-profiles,
+.single-profile,
+.post-type-archive-profile {
+	@extend %templateNarrow;
 }
 
 /* Narrow Sidebar
 ----------------------------------------------------------------- */
 
-.sidebarPosts,
-.sidebarProfiles {
-	@include clearfix;
-	margin: 0 auto;
+// A utility class to style sidebars on narrow width templates.
+%templateNarrowSidebar {
+	/* These classes are using %templateNarrowSidebar. */
+	@extend %clearfix;
 	float: none;
-}
-.sidebarPosts .widget,
-.sidebarProfiles .widget {
-	@extend .col-sm-6;
+	margin: 0 auto;
 
-	@include breakpoint(small) {
-		padding: $grid-sidebar-padding;
+	.widget {
+		@extend %col-sm-half;
+		@include breakpoint(sm) {
+			padding: $grid-sidebar-padding;
 
-		&:first-child {
-			padding: 0;
+			&:first-child {
+				padding: 0;
+			}
 		}
 	}
+}
+
+// A utility class to easily undo narrow width sidebar styles.
+// Always overrides %templateNarrowSidebar.
+%removeTemplateNarrowSidebar {
+	/* These classes are using %removeTemplateNarrowSidebar. */
+	@extend .sidebar;
+	@extend %container-styles;
+	@include breakpoint(md) {
+		float: left;
+	}
+
+	.widget {
+		width: 100%;
+
+		@include breakpoint(sm) {
+			padding: 0;
+		}
+		@include breakpoint(md) {
+			padding-right: 60px;
+		}
+		@include breakpoint(lg) {
+			padding-right: 0;
+		}
+	}
+}
+
+.sidebarPosts,
+.sidebarProfiles {
+	@extend %templateNarrowSidebar;
 }
 
 /* News & Archive Template
@@ -62,16 +108,16 @@
 }
 .news-posts .post,
 .archive .content-container article {
-	margin-top: 30px;
-	padding-top: 30px;
-	border: $border-news-post;
-	border-width: $borderWidth-news-post; 
 	position: relative;
+	padding-top: 30px;
+	margin-top: 30px;
+	border: $border-news-post;
+	border-width: $borderWidth-news-post;
 }
 .news-posts .post:first-child,
 .archive .content-container article:first-child {
-	margin-top: 0;
 	padding-top: 0;
+	margin-top: 0;
 	border-top: none;
 }
 .news-posts .meta,
@@ -93,29 +139,24 @@
 .news-posts .meta em {
 	color: $color-news-metaEm;
 }
-.news-posts .paging-navigation,
-.archive  .paging-navigation {
-	@include clearfix;
-	margin-top: 30px;
+.paging-navigation {
+	@extend %clearfix;
 	padding-top: 30px;
+	margin-top: 30px;
 	border: $border-news-post;
 	border-width: $borderWidth-news-post;
 }
-.news-posts .paging-navigation .screen-reader-text,
-.archive  .paging-navigation .screen-reader-text {
+.paging-navigation .screen-reader-text {
 	display: none;
 }
-.news-posts .paging-navigation a,
-.archive .paging-navigation a {
-	@extend .button;
-	@extend .button-primary;
+.paging-navigation a {
+	@extend %button-styles;
+	@extend %button-styles-primary;
 }
-.news-posts .paging-navigation .nav-previous,
-.archive .paging-navigation .nav-previous {
+.paging-navigation .nav-previous {
 	float: left;
 }
-.news-posts .paging-navigation .nav-next,
-.archive  .paging-navigation .nav-next {
+.paging-navigation .nav-next {
 	float: right;
 }
 
@@ -123,27 +164,27 @@
 ----------------------------------------------------------------- */
 
 .single article[role=main] .meta {
-	@extend .message;
+	@extend %message-styles;
 	@include border-radius($borderRadius-single-meta);
-	background-color: $color-single-meta-bg;
+	padding: $padding-single-meta;
+	margin-bottom: 30px;
 	border: $border-single-meta;
 	border-width: $borderWidth-single-meta;
 	border-left-color: $color-single-meta-borderLeft;
+	background-color: $color-single-meta-bg;
 	font-size: $fontSize-single-meta;
-	padding: $padding-single-meta;
-	margin-bottom: 30px;
 }
 .single .meta .post-title {
 	margin-bottom: 10px;
 }
 .single .meta .byline {
-	font-size: $fontSize-single-meta;
-	font-weight: normal;
 	margin-bottom: 10px;
+	font-weight: normal;
+	font-size: $fontSize-single-meta;
 }
 .single .meta p {
-	font-family: $fontFamily-news-meta;
 	margin-bottom: 10px;
+	font-family: $fontFamily-news-meta;
 }
 .single .meta p:last-child {
 	margin-bottom: 0;
@@ -151,11 +192,10 @@
 .single .meta em {
 	color: $color-news-metaEm;
 }
-.single .archiveLink,
-.single-calendar .archiveLink {
-	@extend .button;
-	@extend .backLink;
-	@extend .button-primary;
+.archiveLink {
+	@extend %button-styles;
+	@extend %button-styles-primary;
+	@extend %backlink-styles;
 	width: 100%;
 }
 
@@ -165,7 +205,7 @@
 .calendar-topic {
 	font-size: $fontSize-calendar-topic;
 }
-.calendar-topic .calendar-range {
+.calendar-range {
 	color: $color-calendar-headingDateRange;
 }
 .event-list .event-date {
@@ -177,32 +217,31 @@
 .event-list li {
 	list-style: none;
 }
-.event-list .event-time {
 
-}
 .event-list .event-link a {
 	color: $color-calendar-eventLink;
+	&:hover,
+	&:focus {
+		color: $color-calendar-eventLink-hover;
+	}
 }
-.event-list .event-link a:hover,
-.event-list .event-link a:focus {
-	color: $color-calendar-eventLink-hover;
-}
+
 /* sidebar */
 .monthCalendar {
 	width: 100%;
 }
 .monthCalendar caption {
-	font-style: normal;
 	font-family: $fontFamily-calendarMonth-caption;
+	font-style: normal;
 	font-size: $fontSize-calendarMonth-caption;
 	color: $color-calendarMonth-caption;
 }
 .monthCalendar th,
 .monthCalendar td {
-	font-family: $fontFamily-calendarMonth-cell;
 	width: 14.285714285%;
-	text-align: center;
 	padding: $padding-monthCalendar-cell;
+	font-family: $fontFamily-calendarMonth-cell;
+	text-align: center;
 }
 .monthCalendar th {
 	background: $color-calendarMonth-th-bg;
@@ -210,10 +249,10 @@
 }
 .monthCalendar td a {
 	color: $color-calendarMonth-cellLink;
-}
-.monthCalendar td a:hover,
-.monthCalendar td a:focus {
-	color: $color-calendarMonth-cellLink-hover;
+	&:hover,
+	&::focus {
+		color: $color-calendarMonth-cellLink-hover;
+	}
 }
 .monthCalendar .out {
 	background: $color-calendarMonth-cellLinkOut-bg;
@@ -229,8 +268,7 @@
 	color: $color-calendarMonth-cellLinkToday;
 	text-decoration: none;
 }
-.calendar-topics {
-}
+
 .calendar-topics ul {
 	padding-left: 20px;
 }
@@ -238,54 +276,49 @@
 /* Calendar Single Event
 ----------------------------------------------------------------- */
 
-.singleEvent {
-}
 .singleEvent .label {
 	font-family: $fontFamily-singleEvent-label;
-	font-size: $fontSize-smaller;
 	font-weight: $fontWeight-calendar-label;
+	font-size: $fontSize-smaller;
 	color: $color-calendarSingle-label;
 	text-transform: uppercase;
 }
-.singleEvent .dateSummary {
-	@extend .message;
+.dateSummary {
+	@extend %message-styles;
 	margin: 0 0 20px 0;
-	
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		float: right;
 		width: 33.33333333333333%;
 		margin: 0 0 20px 20px;
 	}
 }
-.singleEvent .dateSummary ul {
-	margin: 0;
+.dateSummary ul {
 	padding: 0;
+	margin: 0;
 }
-.singleEvent .dateSummary li {
-	list-style: none;
+.dateSummary li {
 	margin-top: 10px;
-	
+	list-style: none;
 	&:first-child {
 		margin-top: 0;
 	}
 }
-.singleEvent .dateSummary .label {
+.dateSummary .label {
 	display: block;
 }
-.singleEvent .dateSummary li em {
+.dateSummary li em {
 	display: none;
 }
-.singleEvent .dateSummary .time {
+.dateSummary .time {
 	display: block;
-	color: #000;
-	font-size: $fontSize-medium;
 	font-weight: bold;
+	font-size: $fontSize-medium;
+	color: #000000;
 }
 .singleEvent .description {
 	margin: $fontMargin-base;
 }
-.singleEvent .additionalDetails {
-}
+
 .singleEvent .additionalDetails dd {
 	margin: 0 0 20px 0;
 }

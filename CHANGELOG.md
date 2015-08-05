@@ -1,3 +1,13 @@
+# 1.2.0
+
+* Merging branch `ashley` into `develop`
+* Bug fixes
+* Changed grid classes
+* Footer widget fixes
+* Using more placeholders
+* Variables organized by templates
+* [Full List of Changes](/bu-ist/responsive-foundation/pull/10) 
+
 # 1.1.0
 
 * Responsi-as-a-Service beta release (1.3.0-beta)

@@ -1,49 +1,51 @@
-
 /* Branding
 ----------------------------------------------------------------- */
 
-.brand {
+%vertical-center-child {
 	@include vertical-center-child;
+}
+%vertical-center {
+	@include vertical-center;
+}
+
+.brand {
+	@extend %vertical-center-child;
+	overflow: hidden;
 	height: $height-brand;
 	padding: 0 0 0 20px;
-	overflow: hidden;
 	font-family: $fontFamily-brand;
 	font-size: 18px;
 	line-height: 1.3;
 }
 .brand [class*="brand-"] {
-	@include vertical-center;
+	@extend %vertical-center;
 	display: block;
 	float: left;
 	font-weight: 400;
-	text-decoration: none;
 	color: $color-brand;
-
+	text-decoration: none;
 	&:visited {
 		color: $color-brand;
 	}
 }
-.brand a strong {
+.brand strong {
 	font-weight: 600;
 }
 .brand .siteDescription {
+	@extend %vertical-center;
 	display: none;
-
-	@include breakpoint(medium) {
-		@include vertical-center;
+	@include breakpoint(md) {
 		display: block;
-		color: $color-grayScale-9;
-		font-size: $fontSize-small;
 		font-family: $fontFamily-base;
-		//font-style: italic;
+		font-size: $fontSize-small;
+		color: $color-grayScale-9;
 	}
 }
 
 /* Sub-brand signature */
 .brand-signature {
-	background: url($image-subBrand) no-repeat 0 49%;
 	padding: 6px 30px 6px 56px;
-
+	background: url($image-subBrand) no-repeat 0 49%;
 	@include retina {
 		background-image: url($image-subBrand-retina);
 		background-size: 49px 35px;
@@ -61,10 +63,10 @@
 .brand-sponsored .siteName,
 .brand-unbranded .siteName {
 	display: block;
-	color: #c00;
-	font-family: $fontFamily-brand-sponsored;	
+	font-family: $fontFamily-brand-sponsored;
 	font-weight: 600;
 	font-size: 20px;
+	color: #cc0000;
 }
 .brand-unbranded .siteName {
 	font-family: $fontFamily-brand-unbranded;
@@ -74,10 +76,9 @@
 .brand-masterPlate {
 	@extend %hide-text;
 	display: block;
-	background: url($image-masterPlate) no-repeat 0 0;
 	width: 112px;
 	height: 50px;
-
+	background: url($image-masterPlate) no-repeat 0 0;
 	@include retina {
 		background-image: url($image-masterPlate-retina);
 		background-size: 112px 50px;
