@@ -8,8 +8,8 @@
 *:before,
 *:after {
 	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 /* HTML5 display definitions
@@ -55,12 +55,12 @@ figure {
 /* Base
 ----------------------------------------------------------------- */
 
-/* 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using `em` units. 
-   2. Prevent iOS text size adjust after orientation change, without disabling user zoom. 
+/* 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using `em` units.
+   2. Prevent iOS text size adjust after orientation change, without disabling user zoom.
    3. Normalize font rendering in Firefox */
 html {
 	font-size: 100%; /* 1 */
-	-ms-text-size-adjust: 100%; /* 2 */
+	    -ms-text-size-adjust: 100%; /* 2 */
 	-webkit-text-size-adjust: 100%; /* 2 */
 	-moz-osx-font-smoothing: grayscale; /* 3 */
 }
@@ -75,8 +75,8 @@ textarea {
 /* Address margins handled incorrectly in IE 6/7. */
 body {
 	margin: 0;
-	font-size: $fontSize-base;
 	font-family: $fontFamily-base;
+	font-size: $fontSize-base;
 	line-height: $lineHeight-base;
 	color: $color-base;
 }
@@ -87,7 +87,7 @@ section {
 /* Embedded content
 ----------------------------------------------------------------- */
 
-/* 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3. 
+/* 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
    2. Improve image quality when scaled in IE 7. */
 img {
 	border: 0; /* 1 */
@@ -97,8 +97,8 @@ img,
 a img,
 object,
 embed {
-	max-width: 100%;
 	height: auto;
+	max-width: 100%;
 }
 /* Correct overflow displayed oddly in IE 9. */
 svg:not(:root) {

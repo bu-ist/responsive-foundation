@@ -3,54 +3,54 @@
 
 /* 1. From normalize.css: removes most spacing between table cells. */
 table {
-    border-collapse: collapse; /* 1 */
-    border-spacing: 0; /* 1 */
-    empty-cells: show;
-    border: $table-border;
-    margin: $table-margin;
+	margin: $table-margin;
+	border: $table-border;
+	border-spacing: 0; /* 1 */
+	border-collapse: collapse; /* 1 */
+	empty-cells: show;
 }
 table caption {
-    padding: $table-caption-padding;
-    color: $color-table-caption;
-    font-size: $fontSize-table-caption;
-    font-style: italic;
-    text-align: center;
+	padding: $table-caption-padding;
+	font-style: italic;
+	font-size: $fontSize-table-caption;
+	color: $color-table-caption;
+	text-align: center;
 }
 table td,
 table th {
-    border-left: 1px solid $color-table-border;
-    border-width: 0 0 0 1px;
-    margin: 0;
-    padding: $table-padding;
-    font-size: inherit;
-    overflow: visible; /*to make ths where the title is really long work*/
+	overflow: visible; /*to make ths where the title is really long work*/
+	padding: $table-padding;
+	margin: 0;
+	border-width: 0 0 0 1px;
+	border-left: 1px solid $color-table-border;
+	font-size: inherit;
 }
 table th {
-    border-bottom: 1px solid $color-table-border;
+	border-bottom: 1px solid $color-table-border;
 }
 table td {
-    background-color: transparent;
-    vertical-align: top;
+	background-color: transparent;
+	vertical-align: top;
 }
 table td:first-child,
 table th:first-child {
-    border-left-width: 0;
+	border-left-width: 0;
 }
 table thead {
-    background: $color-table-head-bg;
-    color: $color-table-head;
-    text-align: left;
-    vertical-align: bottom;
+	background: $color-table-head-bg;
+	vertical-align: bottom;
+	color: $color-table-head;
+	text-align: left;
 }
 /* tables that use grid width classes */
 table col[class*="col-"] {
-    display: table-column;
-    float: none;
+	display: table-column;
+	float: none;
 }
 table td[class*="col-"],
 table th[class*="col-"] {
-    display: table-cell;
-    float: none;
+	display: table-cell;
+	float: none;
 }
 
 /* Striped tables
@@ -59,18 +59,18 @@ table th[class*="col-"] {
 /* nth-child selector for modern browsers, otherwise apply .u-odd class to markup */
 .table-striped tr:nth-child(2n-1) td,
 .u-odd td {
-    background-color: $color-table-stripes;
+	background-color: $color-table-stripes;
 }
 
 /* Bordered tables
 ----------------------------------------------------------------- */
 
 .table-bordered td {
-    border-bottom: 1px solid $color-table-border;
+	border-bottom: 1px solid $color-table-border;
 }
 .table-bordered tbody > tr:last-child td,
 .table-horizontal tbody > tr:last-child td {
-    border-bottom-width: 0;
+	border-bottom-width: 0;
 }
 
 /* Horizontal tables
@@ -78,9 +78,9 @@ table th[class*="col-"] {
 
 .table-horizontal td,
 .table-horizontal th {
-    border-width: 0 0 1px 0;
-    border-bottom: 1px solid $color-table-border;
+	border-width: 0 0 1px 0;
+	border-bottom: 1px solid $color-table-border;
 }
 .table-horizontal tbody > tr:last-child td {
-    border-bottom-width: 0;
+	border-bottom-width: 0;
 }

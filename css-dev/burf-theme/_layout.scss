@@ -5,18 +5,18 @@ body {
 	background: $color-content-bg;
 }
 .content-container {
-	@extend .container;
+	@extend %container-styles;
 }
 
 /* masthead
 ----------------------------------------------------------------- */
 
 .masthead {
-	background: $color-masthead-bg;
+	@extend %clearfix;
 	position: relative;
 	border: $border-masthead;
 	border-width: $borderWidth-masthead;
-	@include clearfix;
+	background: $color-masthead-bg;
 }
 .masthead-container {
 	position: relative;
@@ -26,38 +26,36 @@ body {
 ----------------------------------------------------------------- */
 
 .bannerContainer {
-	text-align: center;
 	padding: 0;
+	text-align: center;
 }
 .bannerContainer img {
 	display: block;
 	margin: 0 auto;
 }
 .bannerContainer-windowWidth {
-	@include breakpoint(large) {
-		background: $color-bannerContainer;
+	@include breakpoint(lg) {
 		padding: 20px;
+		background: $color-bannerContainer;
 	}
 }
 .bannerContainer-pageWidth {
-	margin:  -15px 0 35px;
-	
-	@include breakpoint(small) {
+	margin: -15px 0 35px;
+	@include breakpoint(sm) {
 		margin: 0 0 60px;
 	}
 }
 .bannerContainer-pageWidth img {
-	@include breakpoint(medium) {
-		background: $color-bannerContainer;
+	@include breakpoint(md) {
 		width: 100%;
+		background: $color-bannerContainer;
 	}
 }
 .bannerContainer-contentWidth {
-	background: none;
 	padding: 0;
 	margin: -15px 0 35px;
-	
-	@include breakpoint(small) {
+	background: none;
+	@include breakpoint(sm) {
 		margin-top: 0;
 	}
 }
@@ -66,11 +64,10 @@ body {
 ----------------------------------------------------------------- */
 
 article[role=main] {
-	@extend .col-md-8;
+	@extend %col-md-#{$grid-number-columns*((($number-columns)-1)/$number-columns)};
 	padding-bottom: $column-paddingBottom;
-
-	@include breakpoint(small) {
-		padding-bottom: $column-paddingBottom-largeScreen;	
+	@include breakpoint(sm) {
+		padding-bottom: $column-paddingBottom-largeScreen;
 	}
 }
 
@@ -83,10 +80,9 @@ article[role=main] {
 ----------------------------------------------------------------- */
 
 .sidebar {
-	@extend .col-md-4;
+	@extend %col-md-#{$grid-number-columns*(1/$number-columns)};
 	font-size: $fontSize-small;
-
-	@include breakpoint(medium) {
+	@include breakpoint(md) {
 		padding: $sidebar-padding;
 	}
 }
@@ -95,48 +91,65 @@ article[role=main] {
 ----------------------------------------------------------------- */
 
 .footbar {
-	@include clearfix;
-	background: $color-footbar-bg;
+	@extend %clearfix;
 	width: 100%;
 	padding-bottom: $footbar-paddingBottom;
 	border: $border-footbar;
 	border-width: $borderWidth-footbar;
+	background: $color-footbar-bg;
 }
-.footbar .footbar-container {
-	@extend .container;
+.footbar-container {
+	@extend %container-styles;
 	background: $color-footbar-container-bg;
-
-	@include breakpoint(medium) {
+	@include breakpoint(md) {
 		padding: $grid-container-padding-largeScreen;
 	}
 }
 .footbar-container .widget {
-	@extend .col-md-4;
+	@extend %col-base;
+	@extend %col-float;
+	width: 100%;
 
-	@include breakpoint(medium) {
-		padding: $grid-sidebar-padding;
+	@include breakpoint(md) {
+		// Bet you're really reconsidering overriding this width now!
+		// Don't worry, it's not so bad.
+		// First, width gets equally divided among widgets.
+		// Next, calculate the amount of margin you need to subtract from the width.
+		// You need to split the margin equally, but the first margin in every row will always be left out.
+		// So if there are 3 widgets in the footbar, you only need to account for margin on two:
+		// width - (margin * 2/3)
+		// See? Totally fine.
+		width: (100%/$number-widgets-footbar) - $margin-width * ((($number-widgets-footbar)-1)/$number-widgets-footbar);
+		float: left;
+		margin-left: $margin-width;
+		margin-top: 0;
+		padding: 0;
 
-		&:first-child {
-			padding: 0;
+		&:first-child,
+		&:nth-child(#{$number-widgets-footbar}n+1) {
+			margin-left: 0;
+			clear: left;
 		}
 	}
 }
+
+
 
 /* footer
 ----------------------------------------------------------------- */
 
 .siteFooter {
-	@include clearfix;
-	position:relative;
-	background: $color-siteFooter-bg;
-	padding: 40px 20px 5px;
-	width: 100%;
+	@extend %clearfix;
+	position: relative;
 	display: block;
 	clear: both;
-	color: $color-grayScale-8;
+	width: 100%;
+	padding: $padding-siteFooter;
+	background: $color-siteFooter-bg;
+	font-family: $fontFamily-sansSerif;
 	font-size: $fontSize-small;
 	line-height: $lineHeight-small;
-	font-family: $fontFamily-sansSerif;
+	color: $color-grayScale-8;
 }
 .siteFooter h1,
 .siteFooter h2,
@@ -144,60 +157,55 @@ article[role=main] {
 .siteFooter h4,
 .siteFooter h5,
 .siteFooter h6 {
-	color: $color-grayScale-f;
+	margin: 0 0 3px;
+	font-family: $fontFamily-sansSerif;
 	font-size: $fontSize-small;
 	line-height: $lineHeight-small;
-	font-family: $fontFamily-sansSerif;
-	margin: 0 0 3px;
+	color: $color-siteFooter;
 }
 .siteFooter a {
-	color: $color-grayScale-8;
-
+	color: $color-siteFooter-link;
 	&:hover {
-		color: $color-grayScale-f;
+		color: $color-siteFooter-link-hover;
 	}
 }
 .siteFooter li {
-	line-height: 1.4;
 	margin: 0 0 5px;
-
+	line-height: 1.4;
 	&:last-child {
 		margin: 0;
 	}
 }
 .siteFooter-info {
-	padding-bottom:35px;
-	@extend .col-sm-6;
-	text-align:center;
+	@extend %col-sm-half;
 
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		padding: 0 0 10px 30px;
 		text-align:left;
 	}
 }
 .siteFooter-links,
 .siteFooter-social {
-	@extend .col-sm-3;
+	@extend %col-sm-quarter;
 	padding: 0 0 30px;
-
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		padding-left: 30px;
 	}
 }
 .siteFooter-social {
 	text-align: center;
-
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		text-align: left;
 	}
 }
 
+
 /* utility class for displaying lists of links inline. Use @extend */
-.u-list-inlineLinks {
+%u-list-inlineLinks {
+	/* These classes are using %u-list-inlineLinks. */
 	display: inline-block;
 	padding: 0;
 	margin-right: 20px;
-
 	&:last-child {
 		margin-right: 0;
 	}
@@ -210,15 +218,14 @@ article[role=main] {
 .has-branding .siteFooter-brand {
 	width: 112px;
 	margin: 6px auto 35px;
-
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		position: absolute;
 		top: 40px;
 		left: 20px;
 	}
 }
 .siteFooter-brand + .siteFooter-content {
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		margin: 0 0 0 112px;
 	}
 }
@@ -302,50 +309,63 @@ article[role=main] {
 
 /* Has only HTML info */
 .has-info .siteFooter-info {
-	@extend .col-sm-12;
+	@extend %col-sm-full;
 }
 
 /* Has only general links */
 .has-links .siteFooter-links {
-	@extend .col-sm-12;
+	@extend %col-sm-full;
 }
-.has-links .siteFooter-links li  {
-	@extend .u-list-inlineLinks;
+.has-links .siteFooter-links li {
+	@extend %u-list-inlineLinks;
 }
 
 /* Has general + social media links */
 .has-social .siteFooter-social {
-	@extend .col-sm-12;
+	@extend %col-sm-full;
 }
-.has-social .siteFooter-social li  {
-	@extend .u-list-inlineLinks;
+.has-social .siteFooter-social li {
+	@extend %u-list-inlineLinks;
 }
 .has-links-social .siteFooter-links,
 .has-links-social .siteFooter-social {
-	@extend .col-sm-6;
+	@extend %col-sm-half;
 }
 .has-links-social .siteFooter-links li,
-.has-links-social .siteFooter-social li  {
-	@extend .u-list-inlineLinks;
+.has-links-social .siteFooter-social li {
+	@extend %u-list-inlineLinks;
 }
 
 /* Has info + general links */
 .has-info-links .siteFooter-info {
-	@extend .col-sm-8;
+	@extend %col-sm-three-quarter;
 }
 .has-info-links .siteFooter-links {
-	@extend .col-sm-4;
+	@extend %col-sm-quarter;
 }
-.has-info-links .siteFooter-links li  {
-	@extend .u-list-inlineLinks;
+.has-info-links .siteFooter-links li {
+	@extend %u-list-inlineLinks;
 }
 /* Has info + social media links */
 .has-info-social .siteFooter-info {
-	@extend .col-sm-8;
+	@extend %col-sm-three-quarter;
 }
 .has-info-social .siteFooter-social {
-	@extend .col-sm-4;
+	@extend %col-sm-quarter;
 }
-.has-info-social .siteFooter-social li  {
-	@extend .u-list-inlineLinks;
+.has-info-social .siteFooter-social li {
+	@extend %u-list-inlineLinks;
+}
+
+/* Has all three */
+.has-info-links-social .siteFooter-info {
+	@extend %col-sm-half;
+}
+.has-info-links-social .siteFooter-links,
+.has-info-links-social .siteFooter-social {
+	@extend %col-sm-quarter;
+}
+// .has-info-links-social .siteFooter-links li, Doesn't always look good.
+.has-info-links-social .siteFooter-social li  {
+    @extend %u-list-inlineLinks;
 }

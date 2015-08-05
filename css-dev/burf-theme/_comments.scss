@@ -4,38 +4,30 @@
 .comments-area {
 	color: $color-comments;
 }
+// Remove defaults for all OL on this page
 .comments-area ol {
 	padding: 0;
 	margin: 0;
-}
-.comments-area li {
 	list-style: none;
 }
 .comments-list {
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid #dddddd;
 }
-.comments-list li li article  {
-	padding-left: 30px;
+// Nested padding
+.comments-list li li {
+	padding: $comment-padding;
 }
-.comments-list li li li article  {
-	padding-left: 60px;
-}
-.comments-list li li li li article  {
-	padding-left: 90px;
-}
-.comments-list li li li li li article  {
-	padding-left: 120px;
-}
-.comments-list article {
-	position: relative;
+.comment {
 	border: $border-comment;
 	border-width: $borderWidth-comment;
-	margin: $comment-margin;
-	padding: $comment-padding;
-	font-size: $fontSize-smaller;
-	font-family: $fontFamily-comment;
 }
-.reply a {
+.comment-body {
+	position: relative;
+	margin: $comment-margin;
+	font-family: $fontFamily-comment;
+	font-size: $fontSize-smaller;
+}
+.comment-reply-link {
 	font-size: $fontSize-smallest;
 	color: $color-comment-reply;
 }
@@ -44,7 +36,7 @@
 }
 // TODO: probably shouldn't be outputting gravatar markup and hiding here...
 .comment-author img {
-	display:none;
+	display: none;
 }
 .comment-author .fn {
 	font-size: $fontSize-small;
@@ -64,71 +56,65 @@
 .comment-respond {
 	@include border-radius(5px);
 	position: relative;
-	margin: 15px 0 20px;
 	padding: 20px;
-	background: $color-commentForm-bg;
+	margin: 15px 0 20px;
 	border: $border-commentForm;
 	border-width: $borderWidth-commentForm;
+	background: $color-commentForm-bg;
 }
 .comment-respond-title {
 	margin: 0 0 20px;
 	font-size: $fontSize-medium;
 }
 .comment-respond fieldset {
-	border: 0;
-	margin: 0;
 	padding: 0;
+	margin: 0;
+	border: 0;
 }
 .comment-respond p {
 	margin: 0 0 20px;
 }
-.comment-respond .comment-form-submit {
+.comment-form-submit {
 	margin: 15px 0 0;
 }
-.comment-respond fieldset .form-tip {
+.form-tip {
 	font-size: $fontSize-smallest;
-
-	@include breakpoint(small) {
-		display:block;
+	@include breakpoint(sm) {
+		display: block;
 	}
 }
-.comment-respond fieldset .form-tip,
-.comment-respond fieldset .form-tip a {
-	color: #aaa;
+.form-tip,
+.form-tip a {
+	color: #aaaaaa;
 }
 .comment-respond label {
 	display: block;
 	margin: 0 0 2px;
-
-	@include breakpoint(small) {
-		float:left;
+	@include breakpoint(sm) {
+		float: left;
 		width: 25%;
-		margin: $form-label-margin;
 		padding-right: 10px;
+		margin: $form-label-margin;
 	}
 }
 .comment-form .button {
-	@include breakpoint(small) {
+	@include breakpoint(sm) {
 		margin-left: 25%;
 	}
 }
 .comment-form textarea {
 	@include transition(height, 5ms, ease-in-out, 0s); // TODO: expand height on focus, but don't shrink if it contains content
-	height: 6em;
 	width: 100%;
-
-	@include breakpoint(small) {
+	height: 6em;
+	@include breakpoint(sm) {
 		width: 75%;
 	}
 }
-.comment-respond .cancel-comment-reply {
-	display: inline-block;
+// TODO: The link below this is hidden with a style attribute in markup. Intentional?
+.cancel-comment-reply {
 	position: absolute;
 	top: 20px;
 	right: 20px;
+	display: inline-block;
 	font-size: $fontSize-smallest;
 }
-
-
-
-
