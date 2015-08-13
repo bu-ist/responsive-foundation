@@ -15,7 +15,7 @@
 
 // border-radius
 // Usage: @include border-radius(3px)
-@mixin border-radius($radius) {
+@mixin border-radius( $radius ) {
 	-webkit-border-radius: $radius;
 	-moz-border-radius: $radius;
 	-ms-border-radius: $radius;
@@ -263,4 +263,11 @@
 
 	#{$attribute}: $solid-color;
 	#{$attribute}: $color;
+}
+
+// Help for mixins so it's easier to see syntax - prints to console on each save
+// Usage: @include mixin-help
+
+@mixin mixin-help {
+	@debug '\a\a\a Quick guide to Responsive mixins: \a\a border-radius: @include border-radius(3px); \a box-shadow: @include box-shadow(0 0 1px 3px #000000); \a linear-gradient: @include linear-gradient($fromColor, $toColor); \a opacity: @include opacity(0.5); \a transition: @include transition(all, 250ms, ease-in-out, 0s); \a transform: @include(any valid CSS transform argument); \a rotate: @include rotate(90); \a scale: @include scale(2); \a translate: @include translate(10px, 20px); \a keyframes: @include keyframes(animationName) { ... } ; \a animation: @include animation(animationName); \a vertical-center: @include vertical-center in the element you want to center \a vertical-center (IE friendly): @include vertical-center-child(.childElement) in the parent class \a breakpoint: @include breakpoint(md) { ... } \a retina:  @include retina { ... } \a rgba-color: @include rgba-color(\'background-color\', rgba(someColor, 0.5), fallbackColor); \a\a';
 }
