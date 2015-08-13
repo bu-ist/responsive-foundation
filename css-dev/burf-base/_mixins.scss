@@ -271,13 +271,22 @@
 
 // Mixin to generate RGBA colors for any style with a fallback for non-rgba browsers such as IE8.
 // Usage: @include rgba-color('background-color', rgba(black, 0.5), white);
-@mixin rgba-color($attribute, $color, $background) {
-	$percent: alpha($color) * 100%;
-	$opaque: opacify($color, 1);
-	$solid-color: mix($opaque, $background, $percent);
+@mixin rgba-color( $attribute: NULL, $color: NULL, $background: NULL ) {
+	@if (
+		type_of($attribute) == string and
+		type_of($color) == color and
+		type_of($background) == color
+	) {
+		$percent: alpha($color) * 100%;
+		$opaque: opacify($color, 1);
+		$solid-color: mix($opaque, $background, $percent);
 
-	#{$attribute}: $solid-color;
-	#{$attribute}: $color;
+		#{$attribute}: $solid-color;
+		#{$attribute}: $color;
+	}
+	@else {
+		@error 'The rgba-color mixin requires a valid CSS attribute to apply the color to, a valid RGBA color, and a valid fallback color. \a Example usage: @include rgba-color(\'background-color\', rgba(black, 0.5), white);';
+	}
 }
 
 // Help for mixins so it's easier to see syntax - prints to console on each save
