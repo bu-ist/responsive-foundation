@@ -36,14 +36,23 @@
 // Usage: @include linear-gradient($fromColor, $toColor);
 // where $fromColor and $toColor are valid colors or variables which hold a color
 // Note: you should always specify a backup background-color when using this.
-@mixin linear-gradient($fromColor, $toColor) {
-	background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
-	background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
-	background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
-	background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
-	background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
-	background-image:         linear-gradient(top, $fromColor, $toColor);
-	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+@mixin linear-gradient( $fromColor: NULL, $toColor: NULL ) {
+	// Both variables must be defined colors
+	@if (
+			type_of( $fromColor ) == color and
+			type_of( $toColor ) == color
+		) {
+		background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+		background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+		background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+		background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+		background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+		background-image:         linear-gradient(top, $fromColor, $toColor);
+		filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+	}
+	@else {
+		@error 'The linear gradient mixin requires two valid colors or variables which hold colors. \a Example usage: @include linear-gradient($fromColor, $toColor);';
+	}
 }
 
 // hide text. Uses Sass placeholder selector (%).
@@ -181,6 +190,15 @@
 // If primary stylesheet indicates media query support (e.g. style.scss), output media queries. If not (e.g. ie.scss), output the block WITHOUT @media wrapper.
 // Usage: @include breakpoint(md) {...}
 @mixin breakpoint($point) {
+	// Error handling for anyone upgrading to 1.2.0
+	@if (
+		$point == extra_small or
+		$point == small or
+		$point == medium or
+		$point == large
+	) {
+		@error 'The breakpoint shorthand "#{$point}" is no longer supported as of Responsive 1.2.0. Use "xs", "sm", "md", or "lg" instead.';
+	}
 	@if ($MQs) {
 		@if ($point == xs) {
 			@media screen and (min-width:$XS) {
