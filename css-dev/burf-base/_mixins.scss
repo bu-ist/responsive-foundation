@@ -66,11 +66,16 @@
 
 // cross-browser opacity
 // Usage: @include opacity(0.5)
-@mixin opacity($opacity) {
-	$opacity-ie: $opacity * 100;
-
-	opacity: $opacity;
-	filter: alpha(opacity=$opacity-ie); //IE8
+@mixin opacity( $opacity: NULL ) {
+	// Opacity must be in decimal form
+	@if ( $opacity < 1 ) {
+		$opacity-ie: $opacity * 100;
+		opacity: $opacity;
+		filter: alpha(opacity=$opacity-ie); //IE8
+	}
+	@else {
+		@error 'Opacity must be specified as a decimal value. \a Example usage: @include opacity(0.5);';
+	}
 }
 
 // transition
