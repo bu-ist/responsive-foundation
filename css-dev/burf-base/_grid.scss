@@ -249,8 +249,8 @@ $grid-widths-margins: ();
 				@if $grid-margins {
 					&-margin-#{$i} {
 						/* These classes are using %col-#{$breakpoint}-margin-#{$i}. */
-						$percentage: nth($grid-widths-margins, $i);
-						@include gridBuild(width, $percentage);
+						$margin-percentage: nth($grid-widths-margins, $i);
+						@include gridBuild(width, $margin-percentage);
 						float: left;
 					}
 				}
