@@ -168,7 +168,19 @@
 	margin-bottom:30px;
 }
 
-
+.home.blog .tags {
+	margin-bottom:24px;
+}
+.home.blog .content-container article {
+	position: relative;
+	padding-top: 30px;
+	margin-top: 30px;
+	border: $border-news-post;
+	border-width: $borderWidth-news-post;
+	&:first-child {
+		border: none;
+	}
+}
 
 /* Single Post
 ----------------------------------------------------------------- */
