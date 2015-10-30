@@ -228,14 +228,6 @@ $grid-widths-margins: ();
 					@include gridBuild(width, $percentage);
 					float: left;
 				}
-				@if $grid-margins {
-					&-margin-#{$i} {
-						/* These classes are using %col-#{$breakpoint}-margin-#{$i}. */
-						$percentage: nth($grid-widths-margins, $i);
-						@include gridBuild(width, $percentage);
-						float: left;
-					}
-				}
 				@if $grid-push {
 					&-push-#{$i} {
 						/* These classes are using %col-#{$breakpoint}-push-#{$i}. */
@@ -252,6 +244,14 @@ $grid-widths-margins: ();
 					&-offset-#{$i} {
 						/* These classes are using %col-#{$breakpoint}-offset-#{$i}. */
 						@include gridBuild(margin-left, $percentage);
+					}
+				}
+				@if $grid-margins {
+					&-margin-#{$i} {
+						/* These classes are using %col-#{$breakpoint}-margin-#{$i}. */
+						$percentage: nth($grid-widths-margins, $i);
+						@include gridBuild(width, $percentage);
+						float: left;
 					}
 				}
 			}
