@@ -240,21 +240,18 @@ $grid-widths-margins: ();
 					&-push-#{$i} {
 						/* These classes are using %col-#{$breakpoint}-push-#{$i}. */
 						@include gridBuild(left, $percentage);
-						float: left;
 					}
 				}
 				@if $grid-pull {
 					&-pull-#{$i} {
 						/* These classes are using %col-#{$breakpoint}-pull-#{$i}. */
 						@include gridBuild(right, $percentage);
-						float: left;
 					}
 				}
 				@if $grid-offset {
 					&-offset-#{$i} {
 						/* These classes are using %col-#{$breakpoint}-offset-#{$i}. */
 						@include gridBuild(margin-left, $percentage);
-						float: left;
 					}
 				}
 			}
