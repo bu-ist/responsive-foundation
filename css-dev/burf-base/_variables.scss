@@ -16,7 +16,7 @@ $grid-margin-width:                        2.6 !default;
 // Choose which breakpoints and features you want to support.
 // Small (sm) and medium (md) are required, everything else is optional.
 
-$grid-breakpoints:                         "sm", "md" !default;
+$grid-breakpoints:                         "xs", "sm", "md" !default;
 $grid-margins:                             true !default;
 $grid-push:                                true !default;
 $grid-pull:                                true !default;
