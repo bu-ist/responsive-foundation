@@ -17,10 +17,10 @@ $grid-margin-width:                        2.6 !default;
 // Small (sm) and medium (md) are required, everything else is optional.
 
 $grid-breakpoints:                         "sm", "md" !default;
-$grid-margins:                             false !default;
-$grid-push:                                false !default;
-$grid-pull:                                false !default;
-$grid-offset:                              false !default;
+$grid-margins:                             true !default;
+$grid-push:                                true !default;
+$grid-pull:                                true !default;
+$grid-offset:                              true !default;
 
 // Choose whether or not to print the numeric grid classes (.col-sm-5). Optional.
 // Note that friendly placeholders (.col-quarter, .col-sm-quarter) will always print.
