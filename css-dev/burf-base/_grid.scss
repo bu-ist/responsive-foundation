@@ -149,12 +149,12 @@
 }
 %col-margin-base {
 	/* These classes are using %col-margin-base. */
-	margin: $grid-margin-width#{"%"};
+	margin-bottom: $grid-margin-width#{"%"};
 	margin-top: 0;
 	padding: 20px;
-	@include breakpoint(sm) {
-		margin-right: 0;
-	}
+}
+%col-noleftmargin {
+	margin-left: 0;
 }
 
 // A helper mixin to build grid styles. No need to use outside this file.
@@ -188,6 +188,14 @@ $grid-widths-margins: ();
 // Breakpoints time
 
 @each $breakpoint in $grid-breakpoints {
+	// If margins, build a margin placeholder for that breakpoint
+	@if $grid-margins {
+		%col-#{$breakpoint}-margin-base {
+			@include breakpoint(#{$breakpoint}) {
+				margin-left: $grid-margin-width#{"%"};
+			}
+		}
+	}
 	@for $i from 1 through $grid-number-columns {
 		// Add to base styles
 		%col-#{$breakpoint} {
@@ -197,6 +205,14 @@ $grid-widths-margins: ();
 			@if $grid-margins {
 				&-margin-#{$i} {
 					@extend %col-margin-base;
+					@extend %col-#{$breakpoint}-margin-base;
+
+					// This will remove the margin for multiples of the same type in a row
+					// If you mix and match types, you'll need to remove the margin on your own.
+					&:first-child,
+					&:nth-child(#{$i}n) {
+						@extend %col-noleftmargin;
+					}
 				}
 			}
 		}
