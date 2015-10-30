@@ -37,6 +37,7 @@
 	}
 }
 
+.home.blog,
 .archive,
 .page-template-news,
 .single-post,
@@ -159,6 +160,15 @@
 .paging-navigation .nav-next {
 	float: right;
 }
+
+/* Homepage set to show Posts
+----------------------------------------------------------------- */
+
+.home.blog .paging-navigation {
+	margin-bottom:30px;
+}
+
+
 
 /* Single Post
 ----------------------------------------------------------------- */

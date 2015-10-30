@@ -16,6 +16,7 @@ nav a {
 .brand .siteDescription {
 	float: left;
 	width: auto;
+	margin-left: 50px;
 }
 
 /* quicksearch (use WordPress plugin class name)
@@ -293,7 +294,7 @@ nav a {
 .l-default .utilityNav {
 	@include breakpoint(sm) {
 		position: absolute;
-		top: 49px;
+		top: 47px;
 		right: 20px;
 	}
 }
