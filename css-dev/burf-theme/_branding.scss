@@ -43,7 +43,7 @@
 }
 
 /* Sub-brand signature */
-.brand-signature {
+.brand-signature, .brand-sponsored {
 	padding: 6px 30px 6px 56px;
 	background: url($image-subBrand) no-repeat 0 49%;
 	@include retina {
@@ -56,13 +56,12 @@
 }
 
 /* Sponsored branding */
-.brand-sponsored {
-	font-size: 14px;
+.brand-sponsored, .brand-sponsored .siteName {
+	font-size: 16px;
+	display: block;
 }
 
-.brand-sponsored .siteName,
 .brand-unbranded .siteName {
-	display: block;
 	font-family: $fontFamily-brand-sponsored;
 	font-weight: 600;
 	font-size: 20px;
