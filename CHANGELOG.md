@@ -1,3 +1,9 @@
+# 1.2.1
+
+* Merging branch `develop` into `master`
+* Additional styles for "latest posts" front page display
+* Re-enabled push/pull grid classes
+
 # 1.2.0
 
 * Merging branch `ashley` into `develop`
