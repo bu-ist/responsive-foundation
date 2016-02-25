@@ -36,10 +36,6 @@ nav a {
 		margin: 0 auto;
 	}
 }
-#quicksearch legend,
-#quicksearch select {
-	display: none;
-}
 #quicksearch .button {
 	@extend %button-styles-primary;
 	@include border-radius($borderRadius-quicksearch-button);
