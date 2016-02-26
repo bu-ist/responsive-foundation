@@ -40,8 +40,8 @@ nav a {
 	@extend %button-styles-primary;
 	@include border-radius($borderRadius-quicksearch-button);
 	width: 25%;
-	padding-right: 0;
-	padding-left: 0;
+	padding:11px 0 12px 0;
+	float:right;
 	@include breakpoint(sm) {
 		width: 15%;
 	}
