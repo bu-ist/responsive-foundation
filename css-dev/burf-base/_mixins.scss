@@ -204,7 +204,11 @@
 
 // If primary stylesheet indicates media query support (e.g. style.scss), output media queries. If not (e.g. ie.scss), output the block WITHOUT @media wrapper.
 // Usage: @include breakpoint(md) {...}
-@mixin breakpoint($point) {
+// $skiplgMQforIE tells this mixin whether or not to skip the lg point styles on THIS set of styles for IE8.
+// If you have an individual set of styles for the large breakpoint that you need to print, this allows you to do it.
+// Realistically, you probably don't need it.
+
+@mixin breakpoint($point, $skiplgMQsforIE: true) {
 	// Error handling for anyone upgrading to 1.2.0
 	@if (
 		$point == extra_small or
@@ -246,7 +250,7 @@
 		}
 	}
 	@else {
-		@if ($point == lg) {
+		@if ($point == lg and $skiplgMQsforIE) {
 			// ie8 and large desktop output nothing
 		}
 		@else {
