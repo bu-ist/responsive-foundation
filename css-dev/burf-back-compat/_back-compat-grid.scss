@@ -25,9 +25,9 @@
 
 $grid-breakpoints:                         "sm", "md", "lg" !default;
 $grid-margins:                             false !default;
-$grid-push:                                false !default;
-$grid-pull:                                false !default;
-$grid-offset:                              false !default;
+$grid-push:                                true !default;
+$grid-pull:                                true !default;
+$grid-offset:                              true !default;
 
 /* grid
 ----------------------------------------------------------------- */
