@@ -1,3 +1,13 @@
+
+# 1.3.0
+
+* Grid fixes for the `lg` breakpoint
+* Added support for SSL
+* Added support for search accessibility
+* Added auto-focusing to search input field after search open click
+* Many edits for Branding considerations
+
+
 # 1.2.1
 
 * Merging branch `develop` into `master`
