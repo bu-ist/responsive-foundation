@@ -191,7 +191,7 @@ $grid-widths-margins: ();
 	// If margins, build a margin placeholder for that breakpoint
 	@if $grid-margins {
 		%col-#{$breakpoint}-margin-base {
-			@include breakpoint(#{$breakpoint}) {
+			@include breakpoint(#{$breakpoint}, false) {
 				margin-left: $grid-margin-width#{"%"};
 			}
 		}
@@ -217,7 +217,7 @@ $grid-widths-margins: ();
 			}
 		}
 	}
-	@include breakpoint($breakpoint) {
+	@include breakpoint($breakpoint, false) {
 		@for $i from 1 through length($grid-widths) {
 			// Get percentage from earlier
 			$percentage: nth($grid-widths, $i);
