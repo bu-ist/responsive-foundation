@@ -1,3 +1,7 @@
+# 1.3.2
+
+* Removes typo in class on `_grid.scss`
+
 # 1.3.1
 
 * Fixes for margin classes in `_grid.scss`
