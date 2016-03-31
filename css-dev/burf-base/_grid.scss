@@ -156,6 +156,10 @@
 %col-noleftmargin {
 	margin-left: 0;
 }
+.col-margin-parent,
+%col-margin-parent {
+	margin-left: -$grid-margin-width#{"%"};
+}
 
 // A helper mixin to build grid styles. No need to use outside this file.
 @mixin gridBuild($cssproperty, $amount) {
@@ -191,8 +195,14 @@ $grid-widths-margins: ();
 	// If margins, build a margin placeholder for that breakpoint
 	@if $grid-margins {
 		%col-#{$breakpoint}-margin-base {
-			@include breakpoint(#{$breakpoint}, false) {
+			@include breakpoint($breakpoint, false) {
 				margin-left: $grid-margin-width#{"%"};
+			}
+		}
+		.%col-#{$breakpoint}-margin-parent,
+		%col-#{$breakpoint}-margin-parent {
+			@include breakpoint($breakpoint, false) {
+				margin-left: -$grid-margin-width#{"%"};
 			}
 		}
 	}
@@ -206,13 +216,6 @@ $grid-widths-margins: ();
 				&-margin-#{$i} {
 					@extend %col-margin-base;
 					@extend %col-#{$breakpoint}-margin-base;
-
-					// This will remove the margin for multiples of the same type in a row
-					// If you mix and match types, you'll need to remove the margin on your own.
-					&:first-child,
-					&:nth-child(#{$i}n) {
-						@extend %col-noleftmargin;
-					}
 				}
 			}
 		}
