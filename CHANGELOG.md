@@ -1,3 +1,7 @@
+# 1.3.1
+
+* Fixes for margin classes in `_grid.scss`
+* Adds `col-margin-parent` classes and placeholders
 
 # 1.3.0
 
@@ -22,7 +26,7 @@
 * Footer widget fixes
 * Using more placeholders
 * Variables organized by templates
-* [Full List of Changes](/bu-ist/responsive-foundation/pull/10) 
+* [Full List of Changes](/bu-ist/responsive-foundation/pull/10)
 
 # 1.1.0
 
