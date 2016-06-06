@@ -7,16 +7,16 @@
 	<meta http-equiv="ClearType" content="true" />
 
 	<title>Responsive Foundation Style Guide</title>
-	<link type="text/css" rel="stylesheet" href="vendor/prism.css" >
+	<link type="text/css" rel="stylesheet" href="vendor/rainbow.css" >
 	<link type="text/css" rel="stylesheet" href="css/docs.css" >
 	<script type="application/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script type="application/javascript" src="vendor/prism.js"></script>
+	<script type="application/javascript" src="vendor/rainbow.js"></script>
 </head>
 <body class="f1">
 	<header role="banner">
-		<nav class="navContainer" role="navigation">
+		<nav class="primaryNav" role="navigation">
 			<div class="navToggle"><span>Menu</span></div>
-			<ul id="nav" class="primaryNav">
+			<ul id="nav" class="primaryNav-menu">
 				<li class="page_item current_page_item"><a href="index.html" class="level_1 active">Home</a></li>
 				<li class="page_item"><a href="base.html" class="level_1">Sass: Base</a></li>
 				<li class="page_item"><a href="theme.html" class="level_1">Sass: Theme</a></li>
@@ -30,7 +30,7 @@
 	</header>
 
 	<div class="wrapper">
-		<div class="contentWrapper">
+		<div class="content">
 			<div class="container">
 				<article id="content" role="main" class="col-md-8">
 					<p>Welcome to the <a href="https://github.com/bu-ist/responsive-foundation/">Responsive Foundation</a> visual style guide!</p>
@@ -44,7 +44,7 @@
 					Assumming you have <a href="http://nodejs.org/">Node.js</a> installed, fire up your terminal and run the following from within your project directory.
 					</p>
 
-<pre><code class="language-bash"># Move into your project directory
+<pre class="code"><code data-language="bash"># Move into your project directory
 cd your-project
 
 # Install Bower globally using NPM
@@ -66,7 +66,7 @@ bower install git@github.com:bu-ist/responsive-foundation.git#0.1.0
 					</ul>
 					<p>In your project's main SCSS file:</p>
 
-<pre><code class="language-scss">// your-project/css-dev/style.scss:
+<pre class="code"><code data-language="css">// your-project/css-dev/style.scss:
 
 // Import base components
 @import "burf";
@@ -77,7 +77,7 @@ bower install git@github.com:bu-ist/responsive-foundation.git#0.1.0
 
 					<p>Example Grunt configuration using the <a href="https://github.com/gruntjs/grunt-contrib-sass">grunt-contrib-sass</a> plugin:</p>
 
-<pre><code class="language-javascript">// your-project/Gruntfile.js:
+<pre class="code"><code data-language="javascript">// your-project/Gruntfile.js:
 sass: {
 	options: {
 		loadPath: "bower_components/responsive-foundation/css-dev"
@@ -91,7 +91,7 @@ sass: {
 					<p>Foundation also provides a small collection of <a href="javascript.html">Javascript files</a>.</p>
 					<p>We recommend that you include these files as needed with Grunt using the <a href="https://github.com/gruntjs/grunt-contrib-concat">grunt-contrib-concat</a> and <a href="https://github.com/gruntjs/grunt-contrib-uglify">grunt-contrib-uglify</a> plugins.</p>
 
-<pre><code class="language-javascript">// your-project/Gruntfile.js:
+<pre class="code"><code data-language="javascript">// your-project/Gruntfile.js:
 
 // Concatenate all scripts in responsive-foundation/js-dev
 // into your project as js/burf.js
@@ -121,7 +121,7 @@ uglify: {
 				</aside><!-- .sidebar -->
 
 			</div><!-- .container -->
-		</div><!-- .contentWrapper -->
+		</div><!-- .content -->
 	</div><!-- .wrapper -->
 
 	<aside class="footbar">
