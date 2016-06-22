@@ -39,6 +39,14 @@
 	border-bottom-color: $color-collapsible-after-border-hover;
 }
 
+// Print styles for collapsibles
+
+@media print {
+	.bu_collapsible_section {
+		display: block !important; // important required to override inline styles added by JS
+	}
+}
+
 /* Profiles
 ----------------------------------------------------------------- */
 
