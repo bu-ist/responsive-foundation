@@ -6,6 +6,7 @@
 	4. Single Post
 	5. Calendar Template
 	6. Calendar Single Event
+	7. 404 page
 
 ----------------------------------------------------------------- */
 
@@ -343,4 +344,27 @@
 
 .singleEvent .additionalDetails dd {
 	margin: 0 0 20px 0;
+}
+
+// 404 page
+
+.error-404 {
+	#quicksearch {
+		position: static;
+		display: block;
+		background: transparent !important; // required to override Responsive layout styles
+		border: none;
+		padding: 0;
+		margin: 50px 0;
+		max-width: 500px;
+		font-size: 16.5px;
+
+		fieldset {
+			padding: 0;
+		}
+
+		select {
+			display: none;
+		}
+	}
 }
