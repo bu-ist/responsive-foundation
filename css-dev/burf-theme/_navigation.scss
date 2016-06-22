@@ -250,7 +250,6 @@ nav a {
 	border: 1px solid $color-primaryNav-border;
 	border-width: $borderWidth-utilityNav;
 	font-size: $fontSize-utilityNav;
-	line-height: 1;
 }
 .masthead-container .utilityNav {
 	@include breakpoint(sm) {
@@ -293,6 +292,7 @@ nav a {
 		position: absolute;
 		top: ($height-brand / 2) - ($fontSize-utilityNav / 2);
 		right: 20px;
+		line-height: 1;
 	}
 }
 
@@ -430,6 +430,7 @@ nav a {
 		position: absolute;
 		top: (($height-brand / 2) - ($fontSize-utilityNav / 2)) + 60;
 		right: 20px;
+		line-height: 1;
 	}
 }
 
