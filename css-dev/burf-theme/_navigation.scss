@@ -250,6 +250,7 @@ nav a {
 	border: 1px solid $color-primaryNav-border;
 	border-width: $borderWidth-utilityNav;
 	font-size: $fontSize-utilityNav;
+	line-height: 1;
 }
 .masthead-container .utilityNav {
 	@include breakpoint(sm) {
@@ -290,7 +291,7 @@ nav a {
 .l-default .utilityNav {
 	@include breakpoint(sm) {
 		position: absolute;
-		top: 47px;
+		top: ($height-brand / 2) - ($fontSize-utilityNav / 2);
 		right: 20px;
 	}
 }
@@ -427,7 +428,7 @@ nav a {
 .l-topNav .utilityNav {
 	@include breakpoint(sm) {
 		position: absolute;
-		top: 109px;
+		top: (($height-brand / 2) - ($fontSize-utilityNav / 2)) + 60;
 		right: 20px;
 	}
 }
@@ -457,7 +458,7 @@ nav a {
 	display: none;
 	@include breakpoint(sm) {
 		position: absolute;
-		top: 49px;
+		top: ($height-brand / 2) - ($fontSize-utilityNav / 2);
 		right: 80px;
 		display: block;
 	}
