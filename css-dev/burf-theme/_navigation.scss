@@ -459,7 +459,7 @@ nav a {
 	display: none;
 	@include breakpoint(sm) {
 		position: absolute;
-		top: ($height-brand / 2) - ($fontSize-utilityNav / 2);
+		top: ($height-brand / 2) - ($fontSize-utilityNav / 2) - 5;
 		right: 80px;
 		display: block;
 	}
