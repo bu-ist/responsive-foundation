@@ -81,7 +81,7 @@
 // Always overrides %templateNarrowSidebar.
 %removeTemplateNarrowSidebar {
 	/* These classes are using %removeTemplateNarrowSidebar. */
-	@extend .sidebar;
+	@extend %sidebar-styles;
 	@extend %container-styles;
 	@include breakpoint(md) {
 		float: left;

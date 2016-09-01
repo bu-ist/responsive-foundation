@@ -63,7 +63,8 @@ body {
 /* content
 ----------------------------------------------------------------- */
 
-article[role=main] {
+article[role=main],
+.content-area {
 	@extend %col-md-#{$grid-number-columns*((($number-columns)-1)/$number-columns)};
 	padding-bottom: $column-paddingBottom;
 	@include breakpoint(sm) {
@@ -76,6 +77,23 @@ article[role=main] {
 	}
 }
 
+// Bottom layout
+.sidebarLocation-bottom {
+	@extend %templateNarrow;
+
+	.sidebar {
+		@extend %col-sm-margin-parent;
+		clear: both;
+		width: auto;
+		float: none;
+		padding-left: 0;
+
+		.widget {
+			@extend %col-sm-margin-half;
+		}
+	}
+}
+
 .page-template-no-sidebars article[role=main] {
 	width: 100%;
 }
@@ -84,7 +102,7 @@ article[role=main] {
 /* sidebar
 ----------------------------------------------------------------- */
 
-.sidebar {
+%sidebar-styles {
 	@extend %col-md-#{$grid-number-columns*(1/$number-columns)};
 	font-size: $fontSize-small;
 
@@ -103,6 +121,10 @@ article[role=main] {
 			padding-right: $sidebar-padding;
 		}
 	}
+}
+
+.sidebar {
+	@extend %sidebar-styles;
 }
 
 /* layouts
