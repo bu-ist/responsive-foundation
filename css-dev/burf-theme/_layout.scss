@@ -87,6 +87,18 @@ article[role=main] {
 	}
 }
 
+/* sidebar layouts
+----------------------------------------------------------------- */
+
+// Right is default, so no change. But this is the class that controls it.
+// .sidebarLocation-right { }
+
+.sidebarLocation-left {
+	.sidebar {
+		@extend %col-md-pull-#{$grid-number-columns*(1-(1/$number-columns))};
+	}
+}
+
 /* .footbar
 ----------------------------------------------------------------- */
 
