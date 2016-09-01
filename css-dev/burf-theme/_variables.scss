@@ -22,7 +22,7 @@ $number-columns: 									 3 !default;
 $margin-width: 			  					    5.2% !default;
 $number-widgets-footbar: 						 $number-columns !default;
 $width-sideNav:                            240px !default;
-$sidebar-padding:                          0 0 0 ($margin-width - $margin-width*(1/($number-widgets-footbar))) !default;
+$sidebar-padding:                          ($margin-width - $margin-width*(1/($number-widgets-footbar))) !default;
 $column-paddingBottom:                     10px !default;
 $column-paddingBottom-largeScreen:         35px !default;
 

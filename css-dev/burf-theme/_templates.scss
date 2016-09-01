@@ -47,6 +47,12 @@
 .single-profile,
 .post-type-archive-profile {
 	@extend %templateNarrow;
+
+	// Layouts
+	&.sidebarLocation-left,
+	&.sidebarLocation-right {
+		@extend %removeTemplateNarrow;
+	}
 }
 
 /* Narrow Sidebar
@@ -99,6 +105,12 @@
 .sidebarPosts,
 .sidebarProfiles {
 	@extend %templateNarrowSidebar;
+
+	// Layouts
+	.sidebarLocation-left &,
+	.sidebarLocation-right & {
+		@extend %removeTemplateNarrowSidebar;
+	}
 }
 
 /* News & Archive Template
