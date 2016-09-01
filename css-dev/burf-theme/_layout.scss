@@ -105,6 +105,7 @@ article[role=main],
 %sidebar-styles {
 	@extend %col-md-#{$grid-number-columns*(1/$number-columns)};
 	font-size: $fontSize-small;
+	clear: none;
 
 	// TODO: sunset this in a future release - this padding should really only apply to .sidebarLocation-right
 	@include breakpoint(md) {
