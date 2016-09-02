@@ -39,12 +39,18 @@
 		}
 	}
 }
+// Does not have a sidebar.
+.single-calendar {
+	@extend %templateNarrow;
 
+	article[role="main"] {
+		left: 0;
+	}
+}
 .home.blog,
 .archive,
 .page-template-news,
 .single-post,
-.single-calendar,
 .page-template-profiles,
 .single-profile,
 .post-type-archive-profile {
@@ -68,6 +74,7 @@
 	width: auto;
 	float: none;
 	clear: both;
+	margin-bottom: $widget-marginBottom;
 
 	.widget {
 		@extend %col-sm-margin-half;
@@ -90,6 +97,8 @@
 
 	.widget {
 		width: 100%;
+		margin-left: 0;
+		margin-bottom: $widget-marginBottom;
 	}
 }
 

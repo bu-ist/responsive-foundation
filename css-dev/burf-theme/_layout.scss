@@ -84,9 +84,11 @@ article[role=main],
 	.sidebar {
 		@extend %col-sm-margin-parent;
 		clear: both;
+		overflow: hidden;
 		width: auto;
 		float: none;
 		padding-left: 0;
+		margin-bottom: $widget-marginBottom;
 
 		.widget {
 			@extend %col-sm-margin-half;
