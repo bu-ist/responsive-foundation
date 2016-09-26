@@ -1,0 +1,34 @@
+// Styles for WordPress gallery shortcode.
+
+$wp-supported-gallery-columns: 9;
+
+.gallery {
+	@extend %clearfix;
+	margin-right: -10px;
+
+	a {
+		display: block;
+		margin-right: 10px;
+	}
+
+	img {
+		width: 100%;
+	}
+}
+
+@for $i from 1 through $wp-supported-gallery-columns {
+	.gallery-columns-#{$i} {
+		.gallery-item {
+			float: left;
+			width: 33.33%;
+
+			@include breakpoint(xs) {
+				width: 100/$i#{"%"};
+
+				&:nth-child(#{$i + 1}) {
+					clear: left;
+				}
+			}
+		}
+	}
+}
