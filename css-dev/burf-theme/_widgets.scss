@@ -15,6 +15,20 @@
 	font-size: $fontSize-widget;
 	line-height: $lineHeight-widget;
 }
+.widget a {
+	color: $color-widget-link;
+	&:hover,
+	&:focus {
+		color: $color-widget-link-hover;
+	}
+}
+.footbar a {
+	color: $color-footbar-widget-link;
+	&:hover,
+	&:focus {
+		color: $color-footbar-widget-link-hover;
+	}
+}
 .widgetTitle {
 	padding: 0 0 4px 0;
 	border: $border-widgetTitle;
@@ -35,20 +49,6 @@
 .widgetTitle a:hover {
 	&:after {
 		color: $color-widgetTitle-link-after-hover;
-	}
-}
-.widget a {
-	color: $color-widget-link;
-	&:hover,
-	&:focus {
-		color: $color-widget-link-hover;
-	}
-}
-.footbar .widget a {
-	color: $color-footbar-widget-link;
-	&:hover,
-	&:focus {
-		color: $color-footbar-widget-link-hover;
 	}
 }
 .widget ul {
