@@ -1,0 +1,7 @@
+node_modules
+docs
+.DS_Store
+bower_components
+.sass-cache
+.grunt
+_docs
