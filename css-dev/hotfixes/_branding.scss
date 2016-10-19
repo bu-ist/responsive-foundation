@@ -1,0 +1,28 @@
+/* Branding Hotfix
+----------------------------------------------------------------- */
+
+%brand-strong {
+	font-weight: 600;
+}
+.brandPart-logotype {
+	@extend %brand-strong;
+}
+
+/* Sponsored branding */
+.brandPart-siteName {
+	display: block;
+
+	.brandPart-logotype + & {
+		display: inline;
+	}
+}
+.brandPart-parent {
+	@extend %brand-strong;
+
+	.brandPart-logotype + & {
+		font-weight: 400;
+	}
+}
+.brandPart-subParent {
+	display: block;
+}
