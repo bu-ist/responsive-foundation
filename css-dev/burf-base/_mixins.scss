@@ -68,7 +68,7 @@
 // Usage: @include opacity(0.5)
 @mixin opacity( $opacity: NULL ) {
 	// Opacity must be in decimal form
-	@if ( $opacity < 1 ) {
+	@if ( $opacity <= 1 ) {
 		$opacity-ie: $opacity * 100;
 		opacity: $opacity;
 		filter: alpha(opacity=$opacity-ie); //IE8
