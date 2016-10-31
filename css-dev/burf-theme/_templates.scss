@@ -27,7 +27,6 @@
 // A utility class to easily undo narrow column widths.
 // Always overrides %templateNarrow.
 %removeTemplateNarrow {
-	/* These classes are using %removeTemplateNarrow. */
 	.content-container {
 		max-width: $container-LG;
 	}
