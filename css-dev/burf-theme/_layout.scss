@@ -75,6 +75,10 @@ article[role=main],
 	.sidebarLocation-left & {
 		@extend %col-md-push-#{$grid-number-columns*(1/$number-columns)};
 	}
+	.page-template-no-sidebars & {
+		left: 0;
+		width: 100%;
+	}
 }
 
 // Bottom layout
@@ -94,10 +98,6 @@ article[role=main],
 			@extend %col-sm-margin-half;
 		}
 	}
-}
-
-.page-template-no-sidebars article[role=main] {
-	width: 100%;
 }
 
 
