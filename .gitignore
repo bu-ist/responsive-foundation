@@ -3,3 +3,4 @@ node_modules
 docs
 .grunt
 npm-debug.log
+.DS_Store
