@@ -52,3 +52,11 @@ These lines assume that the [responsive-foundation/css-dev](css-dev) directory i
 Both the base and theme layers support customization with Sass variables.
 
 Full usage documentation can be found in the [visual style guide](https://bu-ist.github.io/responsive-foundation/).
+
+## Actively maintained versions
+
+After each major release, one version is maintained until everyone can be upgraded to the next major version. Currently, these versions are maintained for the purposes of hotfixes:
+
+- 0.1.0
+- 1.0.4
+- Current
