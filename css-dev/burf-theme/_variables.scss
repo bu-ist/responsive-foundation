@@ -15,6 +15,7 @@ $fontFamily-base:                          "Benton", sans-serif !default;
 $fontFamily-serif:                         "TiemposText", Georgia, serif !default;
 $fontFamily-sansSerif:                     "Benton", sans-serif !default;
 $fontFamily-brand:                         "Whitney SSm A", "Whitney SSm B", $fontFamily-sansSerif !default;
+$color-icons:										 unset;
 
 // Grid
 
@@ -22,7 +23,7 @@ $number-columns: 									 3 !default;
 $margin-width: 			  					    5.2% !default;
 $number-widgets-footbar: 						 $number-columns !default;
 $width-sideNav:                            240px !default;
-$sidebar-padding:                          0 0 0 ($margin-width - $margin-width*(1/($number-widgets-footbar))) !default;
+$sidebar-padding:                          ($margin-width - $margin-width*(1/($number-widgets-footbar))) !default;
 $column-paddingBottom:                     10px !default;
 $column-paddingBottom-largeScreen:         35px !default;
 
@@ -75,6 +76,7 @@ $color-brand:                              $color-grayScale-0 !default;
 // Primary Navigation
 
 $borderWidth-primaryNav:                   $border-top !default;
+$border-primaryNav-desktop: 					 none !default;
 $color-primaryNav-border:                  $color-grayScale-3 !default;
 $fontFamily-navigation:                    $fontFamily-sansSerif !default;
 $fontSize-navigation:                      $fontSize-small !default;

@@ -63,27 +63,89 @@ body {
 /* content
 ----------------------------------------------------------------- */
 
-article[role=main] {
+article[role=main],
+.content-area {
 	@extend %col-md-#{$grid-number-columns*((($number-columns)-1)/$number-columns)};
 	padding-bottom: $column-paddingBottom;
 	@include breakpoint(sm) {
 		padding-bottom: $column-paddingBottom-largeScreen;
 	}
+
+	// Left layout
+	.sidebarLocation-left & {
+		@extend %col-md-push-#{$grid-number-columns*(1/$number-columns)};
+	}
+	.page-template-no-sidebars & {
+		left: 0;
+		width: 100%;
+	}
 }
 
-.page-template-no-sidebars article[role=main] {
-	width: 100%;
+// Bottom layout
+.sidebarLocation-bottom {
+	@extend %templateNarrow;
+
+	.sidebar {
+		@extend %col-sm-margin-parent;
+		clear: both;
+		overflow: hidden;
+		width: auto;
+		float: none;
+		padding-left: 0;
+		margin-bottom: $widget-marginBottom;
+
+		.widget {
+			@extend %col-sm-margin-half;
+		}
+	}
 }
 
 
 /* sidebar
 ----------------------------------------------------------------- */
 
-.sidebar {
+%sidebar-styles {
 	@extend %col-md-#{$grid-number-columns*(1/$number-columns)};
 	font-size: $fontSize-small;
+	clear: none;
+
+	// TODO: sunset this in a future release - this padding should really only apply to .sidebarLocation-right
 	@include breakpoint(md) {
-		padding: $sidebar-padding;
+		padding-left: $sidebar-padding;
+	}
+
+	// Left layout
+	.sidebarLocation-left & {
+		@extend %col-md-pull-#{$grid-number-columns*(1-(1/$number-columns))};
+
+		@include breakpoint(md) {
+			// TODO: sunset in a future release
+			padding: 0;
+			padding-right: $sidebar-padding;
+		}
+	}
+}
+
+.sidebar {
+	@extend %sidebar-styles;
+}
+
+/* layouts
+----------------------------------------------------------------- */
+
+// Left layout
+.sidebarLocation-left {
+	.sidebar {
+		@extend %col-md-pull-#{$grid-number-columns*(1-(1/$number-columns))};
+
+		@include breakpoint(md) {
+			// TODO: sunset in a future release
+			padding: 0;
+			padding-right: $sidebar-padding;
+		}
+	}
+	.sidebarPosts {
+		@extend %removeTemplateNarrowSidebar;
 	}
 }
 

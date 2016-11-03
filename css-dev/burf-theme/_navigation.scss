@@ -199,7 +199,7 @@ nav a {
 	text-decoration: none;
 	@include breakpoint(sm) {
 		padding: 0 10px;
-		border: none;
+		border: $border-primaryNav-desktop;
 		line-height: 60px;
 	}
 	&:hover,
@@ -290,8 +290,9 @@ nav a {
 .l-default .utilityNav {
 	@include breakpoint(sm) {
 		position: absolute;
-		top: 47px;
+		top: ($height-brand / 2) - ($fontSize-utilityNav / 2);
 		right: 20px;
+		line-height: 1;
 	}
 }
 
@@ -427,8 +428,9 @@ nav a {
 .l-topNav .utilityNav {
 	@include breakpoint(sm) {
 		position: absolute;
-		top: 109px;
+		top: (($height-brand / 2) - ($fontSize-utilityNav / 2)) + 60;
 		right: 20px;
+		line-height: 1;
 	}
 }
 
@@ -457,7 +459,7 @@ nav a {
 	display: none;
 	@include breakpoint(sm) {
 		position: absolute;
-		top: 49px;
+		top: ($height-brand / 2) - ($fontSize-utilityNav / 2) - 5;
 		right: 80px;
 		display: block;
 	}
