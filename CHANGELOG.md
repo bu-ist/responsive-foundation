@@ -1,3 +1,12 @@
+# 1.4.0
+
+* Adds styles and support for new [bu-branding](https://github.com/bu-ist/bu-branding) options
+* Adds styles for the new sidebar placement options
+* HTTPS update for customizer font palettes
+* Fixes color palettes styling bugs on news and profile pages
+* Fixes a number of other minor bugs
+* *Breaking change:* `$sidebar-padding` switches to a single value from the padding shorthand
+
 # 1.3.2
 
 * Removes typo in class on `_grid.scss`
