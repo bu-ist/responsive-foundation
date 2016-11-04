@@ -277,7 +277,7 @@ article[role=main],
 .has-branding {
 	min-height: 140px;
 }
-.has-branding .siteFooter-brand {
+.has-branding .site-footer-brand {
 	width: 112px;
 	margin: 6px auto 35px;
 	@include breakpoint(sm) {
@@ -286,14 +286,14 @@ article[role=main],
 		left: 20px;
 	}
 }
-.siteFooter-brand + .siteFooter-content {
+.site-footer-brand + .siteFooter-content {
 	@include breakpoint(sm) {
 		margin: 0 0 0 112px;
 	}
 }
 
 /* Add BUMC logo if specified by theme */
-.siteFooter-bumc {
+.site-footer-bumc {
 	width: 96px;
 	margin: 6px auto 35px;
 
@@ -304,26 +304,26 @@ article[role=main],
 		left: 20px;
 	}
 }
-.siteFooter-brand + .siteFooter-bumc {
+.site-footer-brand + .site-footer-bumc {
 	@include breakpoint(sm) {
 		position: absolute;
 		top: 48px;
 		left: 162px;
 	}
 }
-.siteFooter-bumc + .siteFooter-content {
+.site-footer-bumc + .siteFooter-content {
 	@include breakpoint(sm) {
 		margin: 0 0 0 112px;
 	}
 }
-.siteFooter-brand + .siteFooter-bumc + .siteFooter-content {
+.site-footer-brand + .site-footer-bumc + .siteFooter-content {
 	@include breakpoint(sm) {
 		margin: 0 0 0 234px;
 	}
 }
 
 /* Add disclaimer if specified by theme */
-.siteFooter-disclaimer {
+.site-footer-disclaimer {
 	margin-bottom:20px;
 	text-align:center;
 
@@ -332,8 +332,8 @@ article[role=main],
 		position: absolute;
 	}
 }
-.has-branding .siteFooter-disclaimer,
-.siteFooter-bumc + .siteFooter-disclaimer {
+.has-branding .site-footer-disclaimer,
+.site-footer-bumc + .site-footer-disclaimer {
 
 	@include breakpoint(sm) {
 		position: absolute;
@@ -341,28 +341,28 @@ article[role=main],
 		left: 162px;
 	}
 }
-.siteFooter-disclaimer + .siteFooter-content {
+.site-footer-disclaimer + .siteFooter-content {
 	@include breakpoint(sm) {
 		margin: 0 0 0 112px;
 	}
 }
-.siteFooter-brand + .siteFooter-disclaimer + .siteFooter-content,
-.siteFooter-bumc + .siteFooter-disclaimer + .siteFooter-content {
+.site-footer-brand + .site-footer-disclaimer + .siteFooter-content,
+.site-footer-bumc + .site-footer-disclaimer + .siteFooter-content {
 	@include breakpoint(sm) {
 		margin: 0 0 0 234px;
 	}
 }
-.siteFooter-brand + .siteFooter-bumc + .siteFooter-content {
+.site-footer-brand + .site-footer-bumc + .siteFooter-content {
 	@include breakpoint(sm) {
 		margin: 0 0 0 234px;
 	}
 }
-.siteFooter-brand + .siteFooter-bumc + .siteFooter-disclaimer {
+.site-footer-brand + .site-footer-bumc + .site-footer-disclaimer {
 	@include breakpoint(sm) {
 		left: 282px;
 	}
 }
-.siteFooter-brand + .siteFooter-bumc + .siteFooter-disclaimer + .siteFooter-content {
+.site-footer-brand + .site-footer-bumc + .site-footer-disclaimer + .siteFooter-content {
 	@include breakpoint(sm) {
 		margin: 0 0 0 344px;
 	}
