@@ -39,10 +39,10 @@
 %brand-strong {
 	font-weight: 600;
 }
-.brandPart-logotype {
+.brand-part-logotype {
 	@extend %brand-strong;
 }
-.brand-siteDescription {
+.brand-site-description {
 	@extend %vertical-center;
 	display: none;
 	@include breakpoint(md) {
@@ -72,10 +72,10 @@
 }
 
 /* Sponsored branding */
-.brandPart-siteName {
+.brand-part-sitename {
 	display: block;
 
-	.brandPart-logotype + & {
+	.brand-part-logotype + & {
 		display: inline;
 	}
 }
@@ -89,20 +89,20 @@
 		color: #cc0000;
 	}
 }
-.brandPart-parent {
+.brand-part-parent {
 	@extend %brand-strong;
 
-	.brandPart-logotype + & {
+	.brand-part-logotype + & {
 		font-weight: 400;
 	}
 }
-.brandPart-subParent {
+.brand-part-subparent {
 	display: block;
 }
 
 
 /* Master logo in footer */
-.brand-masterPlate {
+.brand-masterplate {
 	@extend %hide-text;
 	display: block;
 	width: 112px;
@@ -116,7 +116,7 @@
 }
 
 /* BUMC logo in footer */
-.brand-bumcLogo {
+.brand-bumclogo {
 	@extend %hide-text;
 	display: block;
 	background: url($image-bumcLogo) no-repeat 0 0;

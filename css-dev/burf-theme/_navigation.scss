@@ -13,7 +13,7 @@ nav a {
 .brand .searchToggle {
 	display: none;
 }
-.brand .siteDescription {
+.brand .site-description {
 	float: left;
 	width: auto;
 }
@@ -171,8 +171,8 @@ nav a {
 }
 .masthead-container .primaryNav .utilityNav {
 	@include breakpoint(small) {
-		display: none;	
-	}	
+		display: none;
+	}
 }
 .primaryNav.is-open {
 	height: auto;
@@ -208,7 +208,7 @@ nav a {
 	color: $color-primaryNav-link;
 	border: 1px solid $color-primaryNav-border;
 	border-width: $borderWidth-primaryNav;
-	
+
 	&:hover,
 	&:focus {
 		color: $color-primaryNav-link-hover;
@@ -246,7 +246,7 @@ nav a {
 	line-height: $lineHeight-base;
 	color: $color-primaryNav-dropdown-link;
 	padding: 10px 0;
-	
+
 	&:hover,
 	&:focus {
 		color: $color-primaryNav-dropdown-link-hover;
@@ -320,23 +320,23 @@ nav a {
 	@include breakpoint(small) {
 		margin-left: 60px;
 	}
-	@include breakpoint(large) {	
+	@include breakpoint(large) {
 		margin-left: $width-sideNav;
 	}
 }
-.l-sideNav .primaryNav  {	
-	@include breakpoint(small) {	
+.l-sideNav .primaryNav  {
+	@include breakpoint(small) {
 		background: none;
 		position: absolute;
 		top: $height-brand;
 		width: $width-sideNav;
 	}
-	@include breakpoint(large) {	
+	@include breakpoint(large) {
 		display: block;
 		padding: 20px 10px;
 	}
 }
-.search-open.l-sideNav .primaryNav  {	
+.search-open.l-sideNav .primaryNav  {
 	@include breakpoint(small) {
 		top: $height-brand + 98px; /* adds the height of the open search form */
 	}
@@ -345,13 +345,13 @@ nav a {
 	@include breakpoint(small) {
 		margin-left: -10px;
 	}
-} 
+}
 .l-sideNav .primaryNav-menu {
-	@include breakpoint(small) {	
+	@include breakpoint(small) {
 		display: none;
 		margin: 0 10px;
 	}
-	@include breakpoint(large) {	
+	@include breakpoint(large) {
 		display: block;
 	}
 }
@@ -375,7 +375,7 @@ nav a {
 }
 /* sideNav and noNav: quicksearch */
 .l-sideNav #quicksearch {
-	@include breakpoint(small) {	
+	@include breakpoint(small) {
 		border: 1px solid $color-quicksearch-border;
 		border-width: $borderWidth-quicksearch;
 	}
@@ -399,14 +399,14 @@ nav a {
 	}
 }
 .l-sideNav .primaryNav .searchToggle {
-	@include breakpoint(small) {	
+	@include breakpoint(small) {
 		display: none;
 	}
 }
 /* sideNav: navToggle */
 .l-sideNav .navToggle {
 	display: block;
-	
+
 	@include breakpoint(large) {
 		display: none;
 	}
@@ -485,10 +485,10 @@ nav a {
 	margin: 0 -60px 0 0;
 
 	@include breakpoint(small) {
-		
+
 	}
 }
-.l-noNav #quicksearch {	
+.l-noNav #quicksearch {
 	border-top: 1px solid $color-grayScale-d;
 }
 
