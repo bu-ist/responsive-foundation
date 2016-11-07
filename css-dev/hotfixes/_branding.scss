@@ -4,25 +4,25 @@
 %brand-strong {
 	font-weight: 600;
 }
-.brandPart-logotype {
+.brand-part-logotype {
 	@extend %brand-strong;
 }
 
 /* Sponsored branding */
-.brandPart-siteName {
+.brand-part-sitename {
 	display: block;
 
-	.brandPart-logotype + & {
+	.brand-part-logotype + & {
 		display: inline;
 	}
 }
-.brandPart-parent {
+.brand-part-parent {
 	@extend %brand-strong;
 
-	.brandPart-logotype + & {
+	.brand-part-logotype + & {
 		font-weight: 400;
 	}
 }
-.brandPart-subParent {
+.brand-part-subparent {
 	display: block;
 }
