@@ -187,7 +187,7 @@ nav a {
 	@include breakpoint(sm) {
 		display: inline-block;
 		border: none;
-		*display: inline;
+		display: inline;
 	}
 }
 .primaryNav-menu a {
