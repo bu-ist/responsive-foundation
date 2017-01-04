@@ -90,8 +90,8 @@ nav a {
 }
 
 /* when nav or search are opened */
-.is-open .primaryNav-menu,
-.is-open .utilityNav {
+.is-open .primary-nav-menu,
+.is-open .utility-nav {
 	display: block;
 	clear: left;
 }
@@ -160,7 +160,7 @@ nav a {
 	padding: 0 10px;
 	background: $color-primaryNav-bg;
 }
-.masthead-container .primary-nav .utilityNav {
+.masthead-container .primary-nav .utility-nav {
 	@include breakpoint(sm) {
 		display: none;
 	}
@@ -172,7 +172,7 @@ nav a {
 		padding-bottom: 0;
 	}
 }
-.primaryNav-menu {
+.primary-nav-menu {
 	display: none;
 	margin: 40px 10px 0 10px;
 	@include breakpoint(sm) {
@@ -181,7 +181,7 @@ nav a {
 		border: none;
 	}
 }
-.primaryNav-menu li {
+.primary-nav-menu li {
 	display: block;
 	zoom: 1;
 	@include breakpoint(sm) {
@@ -190,7 +190,7 @@ nav a {
 		display: inline;
 	}
 }
-.primaryNav-menu a {
+.primary-nav-menu a {
 	display: block;
 	padding: 10px 0;
 	border: 1px solid $color-primaryNav-border;
@@ -207,11 +207,11 @@ nav a {
 		color: $color-primaryNav-link-hover;
 	}
 }
-.primaryNav-menu li a.active,
-.primaryNav-menu li a.active_section {
+.primary-nav-menu li a.active,
+.primary-nav-menu li a.active_section {
 	color: $color-primaryNav-link-current;
 }
-.primaryNav-menu ul {
+.primary-nav-menu ul {
 	display: none;
 	@include breakpoint(sm) {
 		position: absolute;
@@ -222,15 +222,15 @@ nav a {
 		background: $color-primaryNav-dropdown-bg;
 	}
 }
-.primaryNav-menu li:hover ul,
-.primaryNav-menu li:focus ul {
+.primary-nav-menu li:hover ul,
+.primary-nav-menu li:focus ul {
 	left: auto;
 }
-.primaryNav-menu li li {
+.primary-nav-menu li li {
 	display: block;
 	padding: 0 10px;
 }
-.primaryNav-menu li li a {
+.primary-nav-menu li li a {
 	padding: 10px 0;
 	line-height: $lineHeight-base;
 	color: $color-primaryNav-dropdown-link;
@@ -243,7 +243,7 @@ nav a {
 /* utilityNav
 ----------------------------------------------------------------- */
 
-.utilityNav {
+.utility-nav {
 	display: none;
 	padding: 20px 0 0;
 	margin: 0 10px;
@@ -251,7 +251,7 @@ nav a {
 	border-width: $borderWidth-utilityNav;
 	font-size: $fontSize-utilityNav;
 }
-.masthead-container .utilityNav {
+.masthead-container .utility-nav {
 	@include breakpoint(sm) {
 		display: block;
 		padding: 0;
@@ -259,7 +259,7 @@ nav a {
 		border: none;
 	}
 }
-.utilityNav li {
+.utility-nav li {
 	padding: 0;
 	border: none;
 	@include breakpoint(sm) {
@@ -269,7 +269,7 @@ nav a {
 		*display: inline;
 	}
 }
-.utilityNav a {
+.utility-nav a {
 	color: $color-utilityNav-link;
 	text-decoration: none;
 	&:hover {
@@ -277,7 +277,7 @@ nav a {
 	}
 }
 // Required for mobile styles, when utility nav is in primary nav menu
-.primary-nav .utilityNav a {
+.primary-nav .utility-nav a {
 	color: $color-utilityNav-inPrimaryNav-link;
 	&:hover {
 		color: $color-utilityNav-inPrimaryNav-link-hover;
@@ -287,7 +287,7 @@ nav a {
 /* default
 ----------------------------------------------------------------- */
 
-.l-default .utilityNav {
+.l-default .utility-nav {
 	@include breakpoint(sm) {
 		position: absolute;
 		top: ($height-brand / 2) - ($fontSize-utilityNav / 2);
@@ -332,7 +332,7 @@ nav a {
 		margin-left: -10px;
 	}
 }
-.l-sideNav .primaryNav-menu {
+.l-sideNav .primary-nav-menu {
 	@include breakpoint(sm) {
 		display: none;
 		margin: 0 10px;
@@ -341,22 +341,22 @@ nav a {
 		display: block;
 	}
 }
-.l-sideNav .primaryNav-menu li {
+.l-sideNav .primary-nav-menu li {
 	display: block;
 	padding: 0;
 }
-.l-sideNav .primaryNav-menu a {
+.l-sideNav .primary-nav-menu a {
 	padding: 10px 0;
 	border: 1px solid $color-primaryNav-border;
 	border-width: $borderWidth-primaryNav;
 	line-height: $lineHeight-base;
 }
-.l-sideNav .primaryNav-menu li:first-child a {
+.l-sideNav .primary-nav-menu li:first-child a {
 	@include breakpoint(lg) {
 		border: 0;
 	}
 }
-.l-sideNav .primaryNav-menu ul {
+.l-sideNav .primary-nav-menu ul {
 	display: none;
 }
 /* sideNav and noNav: quicksearch */
@@ -393,7 +393,7 @@ nav a {
 		display: none;
 	}
 }
-.l-sideNav .masthead-container .utilityNav {
+.l-sideNav .masthead-container .utility-nav {
 	margin: 0 10px;
 	@include breakpoint(lg) {
 		position: relative;
@@ -402,7 +402,7 @@ nav a {
 		display: block;
 	}
 }
-.l-sideNav .utilityNav li {
+.l-sideNav .utility-nav li {
 	display: block;
 	padding-left: 0;
 }
@@ -416,8 +416,8 @@ nav a {
 		margin-left: 240px;
 	}
 }
-.l-sideNav.nav-open .primaryNav-menu,
-.l-sideNav.nav-open .utilityNav {
+.l-sideNav.nav-open .primary-nav-menu,
+.l-sideNav.nav-open .utility-nav {
 	display: block;
 	float: none;
 }
@@ -425,7 +425,7 @@ nav a {
 /* top nav
 ----------------------------------------------------------------- */
 
-.l-topNav .utilityNav {
+.l-topNav .utility-nav {
 	@include breakpoint(sm) {
 		position: absolute;
 		top: (($height-brand / 2) - ($fontSize-utilityNav / 2)) + 60;
@@ -434,7 +434,7 @@ nav a {
 	}
 }
 
-.l-topNav.search-open .utilityNav {
+.l-topNav.search-open .utility-nav {
 	@include breakpoint(sm) {
 		top: 209px;
 	}
@@ -455,7 +455,7 @@ nav a {
 .l-noNav .brand {
 	padding-right: 60px;
 }
-.l-noNav .masthead-container .utilityNav {
+.l-noNav .masthead-container .utility-nav {
 	display: none;
 	@include breakpoint(sm) {
 		position: absolute;
