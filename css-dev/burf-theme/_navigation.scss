@@ -154,18 +154,18 @@ nav a {
 /* primaryNav and menu
 ----------------------------------------------------------------- */
 
-.primaryNav {
+.primary-nav {
 	@extend %clearfix;
 	display: block;
 	padding: 0 10px;
 	background: $color-primaryNav-bg;
 }
-.masthead-container .primaryNav .utilityNav {
+.masthead-container .primary-nav .utilityNav {
 	@include breakpoint(sm) {
 		display: none;
 	}
 }
-.primaryNav.is-open {
+.primary-nav.is-open {
 	height: auto;
 	padding-bottom: 20px;
 	@include breakpoint(sm) {
@@ -277,7 +277,7 @@ nav a {
 	}
 }
 // Required for mobile styles, when utility nav is in primary nav menu
-.primaryNav .utilityNav a {
+.primary-nav .utilityNav a {
 	color: $color-utilityNav-inPrimaryNav-link;
 	&:hover {
 		color: $color-utilityNav-inPrimaryNav-link-hover;
@@ -310,7 +310,7 @@ nav a {
 		margin-left: $width-sideNav;
 	}
 }
-.l-sideNav .primaryNav {
+.l-sideNav .primary-nav {
 	@include breakpoint(sm) {
 		position: absolute;
 		top: $height-brand;
@@ -322,7 +322,7 @@ nav a {
 		padding: 20px 10px;
 	}
 }
-.search-open.l-sideNav .primaryNav {
+.search-open.l-sideNav .primary-nav {
 	@include breakpoint(sm) {
 		top: $height-brand + 98px; /* adds the height of the open search form */
 	}
@@ -381,7 +381,7 @@ nav a {
 		color: $color-navToggle-alt-hover;
 	}
 }
-.l-sideNav .primaryNav .searchToggle {
+.l-sideNav .primary-nav .searchToggle {
 	@include breakpoint(sm) {
 		display: none;
 	}
@@ -447,7 +447,7 @@ nav a {
 /* noNav
 ----------------------------------------------------------------- */
 
-.l-noNav .primaryNav {
+.l-noNav .primary-nav {
 	@include breakpoint(sm) {
 		display: none;
 	}
