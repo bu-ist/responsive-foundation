@@ -238,7 +238,7 @@ article[role=main],
 		margin: 0;
 	}
 }
-.siteFooter-info {
+.site-footer-info {
 	@extend %col-sm-half;
 
 	@include breakpoint(sm) {
@@ -247,14 +247,14 @@ article[role=main],
 	}
 }
 .siteFooter-links,
-.siteFooter-social {
+.site-footer-social {
 	@extend %col-sm-quarter;
 	padding: 0 0 30px;
 	@include breakpoint(sm) {
 		padding-left: 30px;
 	}
 }
-.siteFooter-social {
+.site-footer-social {
 	text-align: center;
 	@include breakpoint(sm) {
 		text-align: left;
@@ -370,7 +370,7 @@ article[role=main],
 
 
 /* Has only HTML info */
-.has-info .siteFooter-info {
+.has-info .site-footer-info {
 	@extend %col-sm-full;
 }
 
@@ -383,23 +383,23 @@ article[role=main],
 }
 
 /* Has general + social media links */
-.has-social .siteFooter-social {
+.has-social .site-footer-social {
 	@extend %col-sm-full;
 }
-.has-social .siteFooter-social li {
+.has-social .site-footer-social li {
 	@extend %u-list-inlineLinks;
 }
 .has-links-social .siteFooter-links,
-.has-links-social .siteFooter-social {
+.has-links-social .site-footer-social {
 	@extend %col-sm-half;
 }
 .has-links-social .siteFooter-links li,
-.has-links-social .siteFooter-social li {
+.has-links-social .site-footer-social li {
 	@extend %u-list-inlineLinks;
 }
 
 /* Has info + general links */
-.has-info-links .siteFooter-info {
+.has-info-links .site-footer-info {
 	@extend %col-sm-three-quarter;
 }
 .has-info-links .siteFooter-links {
@@ -409,25 +409,25 @@ article[role=main],
 	@extend %u-list-inlineLinks;
 }
 /* Has info + social media links */
-.has-info-social .siteFooter-info {
+.has-info-social .site-footer-info {
 	@extend %col-sm-three-quarter;
 }
-.has-info-social .siteFooter-social {
+.has-info-social .site-footer-social {
 	@extend %col-sm-quarter;
 }
-.has-info-social .siteFooter-social li {
+.has-info-social .site-footer-social li {
 	@extend %u-list-inlineLinks;
 }
 
 /* Has all three */
-.has-info-links-social .siteFooter-info {
+.has-info-links-social .site-footer-info {
 	@extend %col-sm-half;
 }
 .has-info-links-social .siteFooter-links,
-.has-info-links-social .siteFooter-social {
+.has-info-links-social .site-footer-social {
 	@extend %col-sm-quarter;
 }
 // .has-info-links-social .siteFooter-links li, Doesn't always look good.
-.has-info-links-social .siteFooter-social li  {
+.has-info-links-social .site-footer-social li  {
     @extend %u-list-inlineLinks;
 }
