@@ -35,7 +35,7 @@
 	@extend %message-styles;
 }
 
-/* .responsiveVideo */
+/* .responsive-video */
 %responsiveVideo-styles {
 	/* These classes are using %responsiveVideo-styles. */
 	position: relative;
@@ -53,7 +53,7 @@
 		height: 100% !important;
 	}
 }
-.responsiveVideo {
+.responsive-video {
 	@extend %responsiveVideo-styles;
 }
 

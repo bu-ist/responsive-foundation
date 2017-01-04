@@ -61,7 +61,7 @@ nav a {
 	}
 }
 
-/* searchToggle
+/* search-toggle
 ----------------------------------------------------------------- */
 .searchToggle {
 	@extend %icon-search;
@@ -100,7 +100,7 @@ nav a {
 /* navToggle
 ----------------------------------------------------------------- */
 
-.navToggle {
+.nav-toggle {
 	@extend %hide-text;
 	position: relative;
 	float: left;
@@ -111,9 +111,9 @@ nav a {
 		display: none;
 	}
 }
-.navToggle span,
-.navToggle span:before,
-.navToggle span:after {
+.nav-toggle span,
+.nav-toggle span:before,
+.nav-toggle span:after {
 	position: absolute;
 	top: 28px;
 	left: 15px;
@@ -124,30 +124,30 @@ nav a {
 	content: "";
 	cursor: pointer;
 }
-.navToggle span:before {
+.nav-toggle span:before {
 	top: -10px;
 	left: 0;
 }
-.navToggle span:after {
+.nav-toggle span:after {
 	top: 10px;
 	left: 0;
 }
-.navToggle span,
-.navToggle span:before,
-.navToggle span:after {
+.nav-toggle span,
+.nav-toggle span:before,
+.nav-toggle span:after {
 	@include transition(all, 250ms, ease-in-out, 0s);
 }
-.navToggle.is-open span {
+.nav-toggle.is-open span {
 	background-color: transparent;
 }
-.navToggle.is-open span:before,
-.navToggle.is-open span:after {
+.nav-toggle.is-open span:before,
+.nav-toggle.is-open span:after {
 	top: 0;
 }
-.navToggle.is-open span:before {
+.nav-toggle.is-open span:before {
 	@include rotate (45);
 }
-.navToggle.is-open span:after {
+.nav-toggle.is-open span:after {
 	@include rotate (-45);
 }
 
@@ -327,7 +327,7 @@ nav a {
 		top: $height-brand + 98px; /* adds the height of the open search form */
 	}
 }
-.l-sideNav .navToggle {
+.l-sideNav .nav-toggle {
 	@include breakpoint(sm) {
 		margin-left: -10px;
 	}
@@ -387,7 +387,7 @@ nav a {
 	}
 }
 /* sideNav: navToggle */
-.l-sideNav .navToggle {
+.l-sideNav .nav-toggle {
 	display: block;
 	@include breakpoint(lg) {
 		display: none;

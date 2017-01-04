@@ -101,7 +101,7 @@
 }
 
 .sidebarPosts,
-.sidebarProfiles {
+.sidebar-profiles {
 	@extend %templateNarrowSidebar;
 
 	// Layouts
@@ -225,7 +225,7 @@
 .single .meta em {
 	color: $color-news-metaEm;
 }
-.archiveLink {
+.archive-link {
 	@extend %button-styles;
 	@extend %button-styles-primary;
 	@extend %backlink-styles;
@@ -309,14 +309,14 @@
 /* Calendar Single Event
 ----------------------------------------------------------------- */
 
-.singleEvent .label {
+.single-event .label {
 	font-family: $fontFamily-singleEvent-label;
 	font-weight: $fontWeight-calendar-label;
 	font-size: $fontSize-smaller;
 	color: $color-calendarSingle-label;
 	text-transform: uppercase;
 }
-.dateSummary {
+.date-summary {
 	@extend %message-styles;
 	margin: 0 0 20px 0;
 	@include breakpoint(sm) {
@@ -325,34 +325,34 @@
 		margin: 0 0 20px 20px;
 	}
 }
-.dateSummary ul {
+.date-summary ul {
 	padding: 0;
 	margin: 0;
 }
-.dateSummary li {
+.date-summary li {
 	margin-top: 10px;
 	list-style: none;
 	&:first-child {
 		margin-top: 0;
 	}
 }
-.dateSummary .label {
+.date-summary .label {
 	display: block;
 }
-.dateSummary li em {
+.date-summary li em {
 	display: none;
 }
-.dateSummary .time {
+.date-summary .time {
 	display: block;
 	font-weight: bold;
 	font-size: $fontSize-medium;
 	color: #000000;
 }
-.singleEvent .description {
+.single-event .description {
 	margin: $fontMargin-base;
 }
 
-.singleEvent .additionalDetails dd {
+.single-event .additional-details dd {
 	margin: 0 0 20px 0;
 }
 
