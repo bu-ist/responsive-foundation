@@ -1,3 +1,7 @@
+# 1.4.1
+
+* Fixes a typo in classes for BUMC branding
+
 # 1.4.0
 
 * Adds styles and support for new [bu-branding](https://github.com/bu-ist/bu-branding) options
