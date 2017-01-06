@@ -194,7 +194,7 @@
 /* Single Post
 ----------------------------------------------------------------- */
 
-.single article[role=main] .meta {
+.single .content-area .meta {
 	@extend %message-styles;
 	@include border-radius($borderRadius-single-meta);
 	padding: $padding-single-meta;
