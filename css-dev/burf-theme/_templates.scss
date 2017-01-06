@@ -42,7 +42,7 @@
 .single-calendar {
 	@extend %templateNarrow;
 
-	article[role="main"] {
+	.content-area {
 		left: 0;
 	}
 }
