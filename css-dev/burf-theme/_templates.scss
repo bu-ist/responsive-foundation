@@ -18,7 +18,6 @@
 	.content-container {
 		max-width: $container-SM;
 	}
-	article[role=main],
 	.content-area {
 		@extend %col-md-full;
 	}
@@ -30,7 +29,6 @@
 	.content-container {
 		max-width: $container-LG;
 	}
-	article[role=main],
 	.content-area {
 		@include breakpoint(md) {
 			width: 66.66667%;
@@ -42,7 +40,7 @@
 .single-calendar {
 	@extend %templateNarrow;
 
-	article[role="main"] {
+	.content-area {
 		left: 0;
 	}
 }
@@ -196,7 +194,7 @@
 /* Single Post
 ----------------------------------------------------------------- */
 
-.single article[role=main] .meta {
+.single .content-area .meta {
 	@extend %message-styles;
 	@include border-radius($borderRadius-single-meta);
 	padding: $padding-single-meta;
