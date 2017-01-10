@@ -25,7 +25,6 @@ engines:
     config:
       languages:
       - javascript
-      - php
   eslint:
     enabled: true
     channel: eslint-3
@@ -34,23 +33,13 @@ engines:
   markdownlint:
     enabled: true
   phpcodesniffer:
-    enabled: true
-    config:
-      file_extensions: php
-      standard: WordPress
-      ignore_warnings: false
-      encoding: utf-8
+    enabled: false
   phpmd:
-    enabled: true
-    config:
-      file_extensions: php
-      rulesets: codesize,naming,unusedcode
+    enabled: false
   scss-lint:
     enabled: true
 ratings:
   paths:
-  - "**.inc"
   - "**.js"
-  - "**.php"
   - "**.css"
   - "**.scss"
