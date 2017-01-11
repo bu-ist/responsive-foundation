@@ -40,6 +40,7 @@ engines:
     enabled: true
 ratings:
   paths:
+  - "**.md"
   - "**.js"
   - "**.css"
   - "**.scss"
