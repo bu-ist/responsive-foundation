@@ -36,7 +36,7 @@ Based on newly defined coding standards established in October 2014 by the BU We
 
 #### Remanimg. Again.
 
-* #nav --> .primary-nav-menu --> .primary-nav-menu-menu
+* #nav --> .primaryNav-menu --> .primaryNav-menu-menu
 * .mainNav --> .navContainer --> .primary-nav
 * .contentWrapper --> .content
 	* .container --> .content-container
