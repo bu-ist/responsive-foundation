@@ -9,8 +9,8 @@ nav a {
 	text-decoration: none;
 }
 
-/* .searchToggle appears only when header is small and above, otherwise it's hidden */
-.brand .searchToggle {
+/* .search-toggle appears only when header is small and above, otherwise it's hidden */
+.brand .search-toggle {
 	display: none;
 }
 .brand .site-description {
@@ -61,9 +61,9 @@ nav a {
 	}
 }
 
-/* searchToggle
+/* search-toggle
 ----------------------------------------------------------------- */
-.searchToggle {
+.search-toggle {
 	@extend %icon-search;
 	@include transition(color, 200ms, ease-in-out, 0s);
 	float: right;
@@ -81,17 +81,17 @@ nav a {
 		color: $color-navToggle-hover;
 	}
 }
-.searchToggle span {
+.search-toggle span {
 	display: none;
 }
 
-.searchToggle.is-open {
+.search-toggle.is-open {
 	@extend %icon-close;
 }
 
 /* when nav or search are opened */
-.is-open .primaryNav-menu,
-.is-open .utilityNav {
+.is-open .primary-nav-menu,
+.is-open .utility-nav {
 	display: block;
 	clear: left;
 }
@@ -100,7 +100,7 @@ nav a {
 /* navToggle
 ----------------------------------------------------------------- */
 
-.navToggle {
+.nav-toggle {
 	@extend %hide-text;
 	position: relative;
 	float: left;
@@ -111,9 +111,9 @@ nav a {
 		display: none;
 	}
 }
-.navToggle span,
-.navToggle span:before,
-.navToggle span:after {
+.nav-toggle span,
+.nav-toggle span:before,
+.nav-toggle span:after {
 	position: absolute;
 	top: 28px;
 	left: 15px;
@@ -124,55 +124,55 @@ nav a {
 	content: "";
 	cursor: pointer;
 }
-.navToggle span:before {
+.nav-toggle span:before {
 	top: -10px;
 	left: 0;
 }
-.navToggle span:after {
+.nav-toggle span:after {
 	top: 10px;
 	left: 0;
 }
-.navToggle span,
-.navToggle span:before,
-.navToggle span:after {
+.nav-toggle span,
+.nav-toggle span:before,
+.nav-toggle span:after {
 	@include transition(all, 250ms, ease-in-out, 0s);
 }
-.navToggle.is-open span {
+.nav-toggle.is-open span {
 	background-color: transparent;
 }
-.navToggle.is-open span:before,
-.navToggle.is-open span:after {
+.nav-toggle.is-open span:before,
+.nav-toggle.is-open span:after {
 	top: 0;
 }
-.navToggle.is-open span:before {
+.nav-toggle.is-open span:before {
 	@include rotate (45);
 }
-.navToggle.is-open span:after {
+.nav-toggle.is-open span:after {
 	@include rotate (-45);
 }
 
 /* primaryNav and menu
 ----------------------------------------------------------------- */
 
-.primaryNav {
+.primary-nav {
 	@extend %clearfix;
 	display: block;
 	padding: 0 10px;
 	background: $color-primaryNav-bg;
 }
-.masthead-container .primaryNav .utilityNav {
+.masthead-container .primary-nav .utility-nav {
 	@include breakpoint(sm) {
 		display: none;
 	}
 }
-.primaryNav.is-open {
+.primary-nav.is-open {
 	height: auto;
 	padding-bottom: 20px;
 	@include breakpoint(sm) {
 		padding-bottom: 0;
 	}
 }
-.primaryNav-menu {
+.primary-nav-menu {
 	display: none;
 	margin: 40px 10px 0 10px;
 	@include breakpoint(sm) {
@@ -181,16 +181,16 @@ nav a {
 		border: none;
 	}
 }
-.primaryNav-menu li {
+.primary-nav-menu li {
 	display: block;
 	zoom: 1;
 	@include breakpoint(sm) {
 		display: inline-block;
 		border: none;
-		*display: inline;
+		display: inline;
 	}
 }
-.primaryNav-menu a {
+.primary-nav-menu a {
 	display: block;
 	padding: 10px 0;
 	border: 1px solid $color-primaryNav-border;
@@ -207,11 +207,11 @@ nav a {
 		color: $color-primaryNav-link-hover;
 	}
 }
-.primaryNav-menu li a.active,
-.primaryNav-menu li a.active_section {
+.primary-nav-menu li a.active,
+.primary-nav-menu li a.active_section {
 	color: $color-primaryNav-link-current;
 }
-.primaryNav-menu ul {
+.primary-nav-menu ul {
 	display: none;
 	@include breakpoint(sm) {
 		position: absolute;
@@ -222,15 +222,15 @@ nav a {
 		background: $color-primaryNav-dropdown-bg;
 	}
 }
-.primaryNav-menu li:hover ul,
-.primaryNav-menu li:focus ul {
+.primary-nav-menu li:hover ul,
+.primary-nav-menu li:focus ul {
 	left: auto;
 }
-.primaryNav-menu li li {
+.primary-nav-menu li li {
 	display: block;
 	padding: 0 10px;
 }
-.primaryNav-menu li li a {
+.primary-nav-menu li li a {
 	padding: 10px 0;
 	line-height: $lineHeight-base;
 	color: $color-primaryNav-dropdown-link;
@@ -243,7 +243,7 @@ nav a {
 /* utilityNav
 ----------------------------------------------------------------- */
 
-.utilityNav {
+.utility-nav {
 	display: none;
 	padding: 20px 0 0;
 	margin: 0 10px;
@@ -251,7 +251,7 @@ nav a {
 	border-width: $borderWidth-utilityNav;
 	font-size: $fontSize-utilityNav;
 }
-.masthead-container .utilityNav {
+.masthead-container .utility-nav {
 	@include breakpoint(sm) {
 		display: block;
 		padding: 0;
@@ -259,7 +259,7 @@ nav a {
 		border: none;
 	}
 }
-.utilityNav li {
+.utility-nav li {
 	padding: 0;
 	border: none;
 	@include breakpoint(sm) {
@@ -269,7 +269,7 @@ nav a {
 		*display: inline;
 	}
 }
-.utilityNav a {
+.utility-nav a {
 	color: $color-utilityNav-link;
 	text-decoration: none;
 	&:hover {
@@ -277,7 +277,7 @@ nav a {
 	}
 }
 // Required for mobile styles, when utility nav is in primary nav menu
-.primaryNav .utilityNav a {
+.primary-nav .utility-nav a {
 	color: $color-utilityNav-inPrimaryNav-link;
 	&:hover {
 		color: $color-utilityNav-inPrimaryNav-link-hover;
@@ -287,7 +287,7 @@ nav a {
 /* default
 ----------------------------------------------------------------- */
 
-.l-default .utilityNav {
+.l-default .utility-nav {
 	@include breakpoint(sm) {
 		position: absolute;
 		top: ($height-brand / 2) - ($fontSize-utilityNav / 2);
@@ -296,25 +296,25 @@ nav a {
 	}
 }
 
-/* sideNav
+/* side-nav
 ----------------------------------------------------------------- */
 
-.l-sideNav .wrapper {
+.l-side-nav .wrapper {
 	background: $color-primaryNav-bg;
 }
-.l-sideNav .content {
+.l-side-nav .content {
 	@include breakpoint(sm) {
 		margin-left: 60px;
 	}
 	@include breakpoint(lg) {
-		margin-left: $width-sideNav;
+		margin-left: $width-side-nav;
 	}
 }
-.l-sideNav .primaryNav {
+.l-side-nav .primary-nav {
 	@include breakpoint(sm) {
 		position: absolute;
 		top: $height-brand;
-		width: $width-sideNav;
+		width: $width-side-nav;
 		background: none;
 	}
 	@include breakpoint(lg) {
@@ -322,17 +322,17 @@ nav a {
 		padding: 20px 10px;
 	}
 }
-.search-open.l-sideNav .primaryNav {
+.search-open.l-side-nav .primary-nav {
 	@include breakpoint(sm) {
 		top: $height-brand + 98px; /* adds the height of the open search form */
 	}
 }
-.l-sideNav .navToggle {
+.l-side-nav .nav-toggle {
 	@include breakpoint(sm) {
 		margin-left: -10px;
 	}
 }
-.l-sideNav .primaryNav-menu {
+.l-side-nav .primary-nav-menu {
 	@include breakpoint(sm) {
 		display: none;
 		margin: 0 10px;
@@ -341,33 +341,33 @@ nav a {
 		display: block;
 	}
 }
-.l-sideNav .primaryNav-menu li {
+.l-side-nav .primary-nav-menu li {
 	display: block;
 	padding: 0;
 }
-.l-sideNav .primaryNav-menu a {
+.l-side-nav .primary-nav-menu a {
 	padding: 10px 0;
 	border: 1px solid $color-primaryNav-border;
 	border-width: $borderWidth-primaryNav;
 	line-height: $lineHeight-base;
 }
-.l-sideNav .primaryNav-menu li:first-child a {
+.l-side-nav .primary-nav-menu li:first-child a {
 	@include breakpoint(lg) {
 		border: 0;
 	}
 }
-.l-sideNav .primaryNav-menu ul {
+.l-side-nav .primary-nav-menu ul {
 	display: none;
 }
-/* sideNav and noNav: quicksearch */
-.l-sideNav #quicksearch {
+/* side-nav and no-nav: quicksearch */
+.l-side-nav #quicksearch {
 	@include breakpoint(sm) {
 		border: 1px solid $color-quicksearch-border;
 		border-width: $borderWidth-quicksearch;
 	}
 }
-.l-sideNav .brand .searchToggle,
-.l-noNav .brand .searchToggle {
+.l-side-nav .brand .search-toggle,
+.l-no-nav .brand .search-toggle {
 	color: $color-navToggle-alt;
 	@include breakpoint(sm) {
 		right: 10px;
@@ -381,19 +381,19 @@ nav a {
 		color: $color-navToggle-alt-hover;
 	}
 }
-.l-sideNav .primaryNav .searchToggle {
+.l-side-nav .primary-nav .search-toggle {
 	@include breakpoint(sm) {
 		display: none;
 	}
 }
-/* sideNav: navToggle */
-.l-sideNav .navToggle {
+/* side-nav: navToggle */
+.l-side-nav .nav-toggle {
 	display: block;
 	@include breakpoint(lg) {
 		display: none;
 	}
 }
-.l-sideNav .masthead-container .utilityNav {
+.l-side-nav .masthead-container .utility-nav {
 	margin: 0 10px;
 	@include breakpoint(lg) {
 		position: relative;
@@ -402,11 +402,11 @@ nav a {
 		display: block;
 	}
 }
-.l-sideNav .utilityNav li {
+.l-side-nav .utility-nav li {
 	display: block;
 	padding-left: 0;
 }
-.l-sideNav.nav-open .content {
+.l-side-nav.nav-open .content {
 	@include breakpoint(sm) {
 		left: 240px;
 		margin-left: 0;
@@ -416,8 +416,8 @@ nav a {
 		margin-left: 240px;
 	}
 }
-.l-sideNav.nav-open .primaryNav-menu,
-.l-sideNav.nav-open .utilityNav {
+.l-side-nav.nav-open .primary-nav-menu,
+.l-side-nav.nav-open .utility-nav {
 	display: block;
 	float: none;
 }
@@ -425,7 +425,7 @@ nav a {
 /* top nav
 ----------------------------------------------------------------- */
 
-.l-topNav .utilityNav {
+.l-top-nav .utility-nav {
 	@include breakpoint(sm) {
 		position: absolute;
 		top: (($height-brand / 2) - ($fontSize-utilityNav / 2)) + 60;
@@ -434,28 +434,28 @@ nav a {
 	}
 }
 
-.l-topNav.search-open .utilityNav {
+.l-top-nav.search-open .utility-nav {
 	@include breakpoint(sm) {
 		top: 209px;
 	}
 }
 
-.l-topNav #quicksearch {
+.l-top-nav #quicksearch {
 	border-bottom: 1px solid $color-grayScale-d;
 }
 
-/* noNav
+/* no-nav
 ----------------------------------------------------------------- */
 
-.l-noNav .primaryNav {
+.l-no-nav .primary-nav {
 	@include breakpoint(sm) {
 		display: none;
 	}
 }
-.l-noNav .brand {
+.l-no-nav .brand {
 	padding-right: 60px;
 }
-.l-noNav .masthead-container .utilityNav {
+.l-no-nav .masthead-container .utility-nav {
 	display: none;
 	@include breakpoint(sm) {
 		position: absolute;
@@ -464,11 +464,11 @@ nav a {
 		display: block;
 	}
 }
-.l-noNav .brand .searchToggle {
+.l-no-nav .brand .search-toggle {
 	display: block;
 	margin: 0 -60px 0 0;
 	font-size: 24px;
 }
-.l-noNav #quicksearch {
+.l-no-nav #quicksearch {
 	border-top: 1px solid $color-grayScale-d;
 }
