@@ -1595,7 +1595,7 @@
 /* Footer links */
 
 .siteFooter-social a {
-	@include transition(color, 200ms, ease-in-out, 0s);
+	@include transition(color 200ms ease-in-out 0s);
 }
 
 .siteFooter-social i {
