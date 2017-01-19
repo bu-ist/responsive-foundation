@@ -65,7 +65,7 @@ nav a {
 ----------------------------------------------------------------- */
 .searchToggle {
 	@extend %icon-search;
-	@include transition(color, 200ms, ease-in-out, 0s);
+	@include transition(color 200ms ease-in-out 0s);
 	float: right;
 	width: 60px;
 	height: 60px;
@@ -135,7 +135,7 @@ nav a {
 .navToggle span,
 .navToggle span:before,
 .navToggle span:after {
-	@include transition(all, 250ms, ease-in-out, 0s);
+	@include transition(all 250ms ease-in-out 0s);
 }
 .navToggle.is-open span {
 	background-color: transparent;

@@ -79,23 +79,13 @@
 }
 
 // transition
-// Usage: @include transition(all, 250ms, ease-in-out, 0s)
-@mixin transition($transition-property: NULL, $transition-time: NULL, $method: NULL, $transition-delays: NULL) {
-	@if (
-		type_of( $transition-property ) == string and
-		type_of( $transition-time ) == number and
-		type_of( $method ) == string and
-		type_of( $transition-delays ) == number
-	) {
-		-webkit-transition: $transition-property $transition-time $method $transition-delays;
-	   -moz-transition: $transition-property $transition-time $method $transition-delays;
-	    -ms-transition: $transition-property $transition-time $method $transition-delays;
-	     -o-transition: $transition-property $transition-time $method $transition-delays;
-	        transition: $transition-property $transition-time $method $transition-delays;
-	}
-	@else {
-		@error 'The transition mixin requires a comma-separated list of values, all of which must be specified. \a Example usage: @include transition(all, 250ms, ease-in-out, 0s);';
-	}
+// Usage: @include transitions(all 250ms ease-in-out 0s)
+@mixin transition($transitions) {
+	-webkit-transition: $transitions;
+	   -moz-transition: $transitions;
+	    -ms-transition: $transitions;
+	     -o-transition: $transitions;
+	        transition: $transitions;
 }
 
 // transform
