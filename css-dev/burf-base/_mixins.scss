@@ -239,6 +239,11 @@
 				@content;
 			}
 		}
+		@else if ($point == xl) {
+			@media screen and (min-width:$XL) {
+				@content;
+			}
+		}
 		@else {
 			// Can also accept your very own min-width argument, like so:
 			// "min-width: 300px;"
