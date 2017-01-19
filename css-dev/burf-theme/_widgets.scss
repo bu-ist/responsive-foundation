@@ -29,7 +29,7 @@
 		color: $color-footbar-widget-link-hover;
 	}
 }
-.widgetTitle {
+.widget-title {
 	padding: 0 0 4px 0;
 	border: $border-widgetTitle;
 	border-width: $borderWidth-widgetTitle;
@@ -38,7 +38,7 @@
 	line-height: $lineHeight-widgetTitle;
 	color: $color-widgetTitle;
 }
-.widgetTitle a {
+.widget-title a {
 	color: $color-widgetTitle;
 	text-decoration: none;
 	&:after {
@@ -46,7 +46,7 @@
 		color: $color-widgetTitle-link-after;
 	}
 }
-.widgetTitle a:hover {
+.widget-title a:hover {
 	&:after {
 		color: $color-widgetTitle-link-after-hover;
 	}

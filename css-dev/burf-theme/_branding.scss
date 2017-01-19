@@ -83,10 +83,10 @@
 	@extend %brand-strong;
 	font-family: $fontFamily-brand-unbranded;
 	font-size: 20px;
-	color: #cc0000;
+	color: $color-unbranded;
 
 	&:visited {
-		color: #cc0000;
+		color: $color-unbranded;
 	}
 }
 .brand-part-parent {
