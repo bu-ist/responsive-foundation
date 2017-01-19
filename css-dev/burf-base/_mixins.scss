@@ -80,7 +80,7 @@
 
 // transition
 // Usage: @include transitions(all 250ms ease-in-out 0s)
-@mixin transition($transitions) {
+@mixin transition($transitions...) {
 	-webkit-transition: $transitions;
 	   -moz-transition: $transitions;
 	    -ms-transition: $transitions;
