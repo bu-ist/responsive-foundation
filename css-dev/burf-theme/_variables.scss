@@ -11,7 +11,7 @@
 // Color and Typography
 
 $color-body-bg:                            $color-grayScale-0 !default;
-$fontFamily-base:                          "Benton", sans-serif !default;
+$font-family-base:                          "Benton", sans-serif !default;
 $fontFamily-serif:                         "TiemposText", Georgia, serif !default;
 $fontFamily-sansSerif:                     "Benton", sans-serif !default;
 $fontFamily-brand:                         "Whitney SSm A", "Whitney SSm B", $fontFamily-sansSerif !default;
@@ -169,7 +169,7 @@ $borderRadius-profile-figure:              50% !default;
 $fontFamily-profile-name:                  $fontFamily-sansSerif !default;
 $fontSize-profile-name:                    $fontSize-medium !default;
 $color-profile-name:                       $color-link !default;
-$fontFamily-profile-title:                 $fontFamily-base !default;
+$fontFamily-profile-title:                 $font-family-base !default;
 $fontSize-profile-title:                   $fontSize-small !default;
 $color-profile-title:                      $color-base !default;
 $color-profile-info-label:                 $color-grayScale-a !default;

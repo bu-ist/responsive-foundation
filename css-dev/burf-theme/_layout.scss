@@ -163,7 +163,7 @@ body {
 	@extend %container-styles;
 	background: $color-footbar-container-bg;
 	@include breakpoint(md) {
-		padding: $grid-container-padding-largeScreen;
+		padding: $grid-container-padding-large-screen;
 	}
 }
 .footbar-container .widget {
