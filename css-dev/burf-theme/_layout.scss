@@ -65,9 +65,9 @@ body {
 
 .content-area {
 	@extend %col-md-#{$grid-number-columns*((($number-columns)-1)/$number-columns)};
-	padding-bottom: $column-paddingBottom;
+	padding-bottom: $column-padding-bottom;
 	@include breakpoint(sm) {
-		padding-bottom: $column-paddingBottom-largeScreen;
+		padding-bottom: $column-padding-bottom-large-screen;
 	}
 
 	// Left layout

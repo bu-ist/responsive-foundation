@@ -24,8 +24,8 @@ $margin-width: 			  					    5.2% !default;
 $number-widgets-footbar: 						 $number-columns !default;
 $width-side-nav:                            240px !default;
 $sidebar-padding:                          ($margin-width - $margin-width*(1/($number-widgets-footbar))) !default;
-$column-paddingBottom:                     10px !default;
-$column-paddingBottom-largeScreen:         35px !default;
+$column-padding-bottom:                     10px !default;
+$column-padding-bottom-large-screen:         35px !default;
 
 // Borders
 
