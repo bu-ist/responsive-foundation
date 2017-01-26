@@ -13,7 +13,7 @@
 .widget {
 	margin-bottom: $widget-marginBottom;
 	font-size: $font-size-widget;
-	line-height: $lineHeight-widget;
+	line-height: $line-height-widget;
 }
 .widget a {
 	color: $color-widget-link;
@@ -35,7 +35,7 @@
 	border-width: $border-width-widgetTitle;
 	font-family: $font-family-widgetTitle;
 	font-size: $font-size-widgetTitle;
-	line-height: $lineHeight-widgetTitle;
+	line-height: $line-height-widgetTitle;
 	color: $color-widgetTitle;
 }
 .widget-title a {
@@ -81,12 +81,12 @@
 .widget-bu-posts .headline {
 	margin: 0;
 	font-size: $font-size-widget-postHeadline;
-	line-height: $lineHeight-widget-postHeadline;
+	line-height: $line-height-widget-postHeadline;
 }
 .widget-bu-posts .excerpt {
 	margin: 4px 0 0;
 	font-size: $font-size-widget-postExcerpt;
-	line-height: $lineHeight-widget-postExcerpt;
+	line-height: $line-height-widget-postExcerpt;
 }
 .widget-bu-posts .thumb {
 	display: block;
@@ -213,7 +213,7 @@ $width-calendarDate: 48px;
 		}
 		.date {
 			text-align: center;
-			line-height: $lineHeight-widget-calendarDate;
+			line-height: $line-height-widget-calendarDate;
 		}
 		.day {
 			display: block;

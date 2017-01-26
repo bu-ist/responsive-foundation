@@ -25,56 +25,56 @@ a:hover {
 	/* These classes are using %font-jumbo. */
 	margin: $fontMargin-jumbo;
 	font-size: $font-size-jumbo;
-	line-height: $lineHeight-jumbo;
+	line-height: $line-height-jumbo;
 }
 %font-largest {
 	/* These classes are using %font-largest. */
 	margin: $fontMargin-largest;
 	font-size: $font-size-largest;
-	line-height: $lineHeight-largest;
+	line-height: $line-height-largest;
 }
 %font-larger {
 	/* These classes are using %font-larger. */
 	margin: $fontMargin-larger;
 	font-size: $font-size-larger;
-	line-height: $lineHeight-larger;
+	line-height: $line-height-larger;
 }
 %font-large {
 	/* These classes are using %font-large. */
 	margin: $fontMargin-large;
 	font-size: $font-size-large;
-	line-height: $lineHeight-large;
+	line-height: $line-height-large;
 }
 %font-medium {
 	/* These classes are using %font-medium. */
 	margin: $fontMargin-medium;
 	font-size: $font-size-medium;
-	line-height: $lineHeight-medium;
+	line-height: $line-height-medium;
 }
 %font-small {
 	/* These classes are using %font-small. */
 	margin: $fontMargin-small;
 	font-size: $font-size-small;
-	line-height: $lineHeight-small;
+	line-height: $line-height-small;
 }
 /* Generic font size classes */
 %font-smaller {
 	/* These classes are using %font-smaller. */
 	margin: $fontMargin-smaller;
 	font-size: $font-size-smaller;
-	line-height: $lineHeight-smaller;
+	line-height: $line-height-smaller;
 }
 %font-smallest {
 	/* These classes are using %font-smallest. */
 	margin: $fontMargin-smallest;
 	font-size: $font-size-smallest;
-	line-height: $lineHeight-smallest;
+	line-height: $line-height-smallest;
 }
 %font-micro {
 	/* These classes are using %font-micro. */
 	margin: $fontMargin-micro;
 	font-size: $font-size-micro;
-	line-height: $lineHeight-micro;
+	line-height: $line-height-micro;
 }
 
 /* Address font sizes and margins set differently in IE 6/7. Address font sizes within `section` and `article` in Firefox 4+, Safari 5, and Chrome. */

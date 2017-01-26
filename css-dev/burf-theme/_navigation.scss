@@ -234,7 +234,7 @@ nav a {
 }
 .primary-nav-menu li li a {
 	padding: 10px 0;
-	line-height: $lineHeight-base;
+	line-height: $line-height-base;
 	color: $color-primary-nav-dropdown-link;
 	&:hover,
 	&:focus {
@@ -351,7 +351,7 @@ nav a {
 	padding: 10px 0;
 	border: 1px solid $color-primary-nav-border;
 	border-width: $border-width-primary-nav;
-	line-height: $lineHeight-base;
+	line-height: $line-height-base;
 }
 .l-side-nav .primary-nav-menu li:first-child a {
 	@include breakpoint(lg) {
