@@ -146,10 +146,10 @@ h6.bu_collapsible {
 	/* These classes are using %resposive-table-styles. */
 	position: relative;
 	table {
-		border: 1px solid $borderColor-table;
+		border: 1px solid $border-color-table;
 		td,
 		th {
-			border: 1px solid $borderColor-table;
+			border: 1px solid $border-color-table;
 		}
 	}
 	@include breakpoint("max-width: #{$container_MD}") {
@@ -165,7 +165,7 @@ h6.bu_collapsible {
 			table-layout: auto;
 			// Ensure the content doesn't wrap
 			td {
-				border: 1px solid $borderColor-table;
+				border: 1px solid $border-color-table;
 				white-space: nowrap;
 			}
 		}
