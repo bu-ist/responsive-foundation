@@ -121,8 +121,8 @@
 		}
 	}
 	li {
-		border: $border-widgetList;
-		border-width: $border-width-widgetList;
+		border: $border-widget-list;
+		border-width: $border-width-widget-list;
 		font-family: $font-family-widget-contentnav;
 		&:first-child {
 			border: none;
@@ -184,8 +184,8 @@ $width-calendar-date: 48px;
 	}
 	li {
 		padding: 10px 0;
-		border: $border-widgetList;
-		border-width: $border-width-widgetList;
+		border: $border-widget-list;
+		border-width: $border-width-widget-list;
 		&:first-child {
 			padding: 0 0 10px;
 			border: none;
