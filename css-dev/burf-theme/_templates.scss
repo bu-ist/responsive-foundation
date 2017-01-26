@@ -279,24 +279,24 @@
 	color: $color-calendar-month-th;
 }
 .month td a {
-	color: $color-calendar-month-cellLink;
+	color: $color-calendar-month-link;
 	&:hover,
 	&::focus {
-		color: $color-calendar-month-cellLink-hover;
+		color: $color-calendar-month-link-hover;
 	}
 }
 .month .out {
-	background: $color-calendar-month-cellLinkOut-bg;
+	background: $color-calendar-month-link-out-bg;
 }
 .month .out a {
-	color: $color-calendar-month-cellLinkOut;
+	color: $color-calendar-month-link-out;
 	text-decoration: none;
 }
 .month .today {
-	background: $color-calendar-month-cellLinkToday-bg;
+	background: $color-calendar-month-link-today-bg;
 }
 .month .today a {
-	color: $color-calendar-month-cellLinkToday;
+	color: $color-calendar-month-link-today;
 	text-decoration: none;
 }
 
