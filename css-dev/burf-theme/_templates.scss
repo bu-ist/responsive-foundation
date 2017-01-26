@@ -141,13 +141,13 @@
 }
 .news-posts .meta span:before {
 	content: "\a0\b7\a0";
-	color: $color-news-metaBefore;
+	color: $color-news-meta-before;
 }
 .news-posts .meta span:first-child:before {
 	content: "";
 }
 .news-posts .meta em {
-	color: $color-news-metaEm;
+	color: $color-news-meta-em;
 }
 .paging-navigation {
 	@extend %clearfix;
@@ -221,7 +221,7 @@
 	margin-bottom: 0;
 }
 .single .meta em {
-	color: $color-news-metaEm;
+	color: $color-news-meta-em;
 }
 .archive-link {
 	@extend %button-styles;
