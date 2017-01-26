@@ -1595,9 +1595,8 @@
 /* Footer links */
 
 .site-footer-social a {
-	@include transition(color, 200ms, ease-in-out, 0s);
+	@include transition(color 200ms ease-in-out 0s);
 }
-
 .site-footer-social i {
 	@extend %icon;
 	font-size: $font-size-large;
