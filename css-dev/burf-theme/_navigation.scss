@@ -72,13 +72,13 @@ nav a {
 	padding: 0;
 	font-size: 31px;
 	line-height: 60px;
-	color: $color-navToggle;
+	color: $color-nav-toggle;
 	text-align: center;
 	&:visited {
-		color: $color-navToggle;
+		color: $color-nav-toggle;
 	}
 	&:hover {
-		color: $color-navToggle-hover;
+		color: $color-nav-toggle-hover;
 	}
 }
 .search-toggle span {
@@ -97,7 +97,7 @@ nav a {
 }
 
 
-/* navToggle
+/* nav-toggle
 ----------------------------------------------------------------- */
 
 .nav-toggle {
@@ -120,7 +120,7 @@ nav a {
 	display: block;
 	width: 30px;
 	height: 4px;
-	background: $color-navToggle;
+	background: $color-nav-toggle;
 	content: "";
 	cursor: pointer;
 }
@@ -370,17 +370,17 @@ nav a {
 }
 .l-side-nav .brand .search-toggle,
 .l-no-nav .brand .search-toggle {
-	color: $color-navToggle-alt;
+	color: $color-nav-toggle-alt;
 	@include breakpoint(sm) {
 		right: 10px;
 		display: block;
 		@include vertical-center;
 	}
 	&:visited {
-		color: $color-navToggle-alt;
+		color: $color-nav-toggle-alt;
 	}
 	&:hover {
-		color: $color-navToggle-alt-hover;
+		color: $color-nav-toggle-alt-hover;
 	}
 }
 .l-side-nav .primary-nav .search-toggle {
@@ -388,7 +388,7 @@ nav a {
 		display: none;
 	}
 }
-/* side-nav: navToggle */
+/* side-nav: nav-toggle */
 .l-side-nav .nav-toggle {
 	display: block;
 	@include breakpoint(lg) {
