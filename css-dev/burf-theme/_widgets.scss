@@ -11,7 +11,7 @@
 ----------------------------------------------------------------- */
 
 .widget {
-	margin-bottom: $widget-marginBottom;
+	margin-bottom: $widget-margin-bottom;
 	font-size: $font-size-widget;
 	line-height: $line-height-widget;
 }
@@ -31,24 +31,24 @@
 }
 .widget-title {
 	padding: 0 0 4px 0;
-	border: $border-widgetTitle;
-	border-width: $border-width-widgetTitle;
-	font-family: $font-family-widgetTitle;
-	font-size: $font-size-widgetTitle;
-	line-height: $line-height-widgetTitle;
-	color: $color-widgetTitle;
+	border: $border-widget-title;
+	border-width: $border-width-widget-title;
+	font-family: $font-family-widget-title;
+	font-size: $font-size-widget-title;
+	line-height: $line-height-widget-title;
+	color: $color-widget-title;
 }
 .widget-title a {
-	color: $color-widgetTitle;
+	color: $color-widget-title;
 	text-decoration: none;
 	&:after {
-		content: $widgetTitle-link-after;
-		color: $color-widgetTitle-link-after;
+		content: $widget-title-link-after;
+		color: $color-widget-title-link-after;
 	}
 }
 .widget-title a:hover {
 	&:after {
-		color: $color-widgetTitle-link-after-hover;
+		color: $color-widget-title-link-after-hover;
 	}
 }
 .widget ul {

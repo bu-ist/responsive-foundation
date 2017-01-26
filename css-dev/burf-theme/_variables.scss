@@ -213,7 +213,7 @@ $font-family-comment:                       $font-family-sans-serif !default;
 $color-comments:                           $color-base !default;
 $color-comment-reply:                      $color-grayScale-a !default;
 $color-comment-author:                     $color-grayScale-a !default;
-$color-comment-authorName:                 $color-grayScale-0 !default;
+$color-comment-author-name:                 $color-grayScale-0 !default;
 $color-comment-form-bg:                     $color-grayScale-f5 !default;
 
 // Plugins and Shortcodes
@@ -233,20 +233,20 @@ $color-collapsible-after-border-hover:     $color-link !default;
 
 // All Widgets
 
-$widget-marginBottom:                      40px !default;
+$widget-margin-bottom:                      40px !default;
 $font-size-widget:                          $font-size-small !default;
 $line-height-widget:								 $line-height-base !default;
 
 $font-family-widget-heading:                $font-family-sans-serif !default;
-$font-family-widgetTitle:                   $font-family-sans-serif !default;
-$border-widgetTitle:                       4px solid $color-grayScale-0 !default;
-$border-width-widgetTitle:                  0 0 4px 0 !default;
-$font-size-widgetTitle:                     $font-size-small !default;
-$line-height-widgetTitle:                   $line-height-large !default;
-$color-widgetTitle:                        $color-grayScale-0 !default;
-$widgetTitle-link-after:                   " →" !default;
-$color-widgetTitle-link-after:             $color-grayScale-a !default;
-$color-widgetTitle-link-after-hover:       $color-grayScale-0 !default;
+$font-family-widget-title:                   $font-family-sans-serif !default;
+$border-widget-title:                       4px solid $color-grayScale-0 !default;
+$border-width-widget-title:                  0 0 4px 0 !default;
+$font-size-widget-title:                     $font-size-small !default;
+$line-height-widget-title:                   $line-height-large !default;
+$color-widget-title:                        $color-grayScale-0 !default;
+$widget-title-link-after:                   " →" !default;
+$color-widget-title-link-after:             $color-grayScale-a !default;
+$color-widget-title-link-after-hover:       $color-grayScale-0 !default;
 
 $color-widget-link:                        $color-link !default;
 $color-widget-link-hover:                  $color-link !default;

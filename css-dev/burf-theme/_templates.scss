@@ -71,7 +71,7 @@
 	width: auto;
 	float: none;
 	clear: both;
-	margin-bottom: $widget-marginBottom;
+	margin-bottom: $widget-margin-bottom;
 
 	.widget {
 		@extend %col-sm-margin-half;
@@ -94,7 +94,7 @@
 	.widget {
 		width: 100%;
 		margin-left: 0;
-		margin-bottom: $widget-marginBottom;
+		margin-bottom: $widget-margin-bottom;
 	}
 }
 
