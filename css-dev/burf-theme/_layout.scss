@@ -82,7 +82,7 @@ body {
 
 // Bottom layout
 .sidebar-location-bottom {
-	@extend %templateNarrow;
+	@extend %template-narrow;
 
 	.sidebar {
 		@extend %col-sm-margin-parent;
@@ -144,7 +144,7 @@ body {
 		}
 	}
 	.sidebar-posts {
-		@extend %removeTemplateNarrowSidebar;
+		@extend %remove-template-narrow-sidebar;
 	}
 }
 

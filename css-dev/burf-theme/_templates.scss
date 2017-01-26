@@ -13,8 +13,8 @@
 /* Narrow Content Column
 ----------------------------------------------------------------- */
 
-%templateNarrow {
-	/* These classes are using %templateNarrow. */
+%template-narrow {
+	/* These classes are using %template-narrow. */
 	.content-container {
 		max-width: $container-SM;
 	}
@@ -24,8 +24,8 @@
 }
 
 // A utility class to easily undo narrow column widths.
-// Always overrides %templateNarrow.
-%removeTemplateNarrow {
+// Always overrides %template-narrow.
+%remove-template-narrow {
 	.content-container {
 		max-width: $container-LG;
 	}
@@ -38,7 +38,7 @@
 }
 // Does not have a sidebar.
 .single-calendar {
-	@extend %templateNarrow;
+	@extend %template-narrow;
 
 	.content-area {
 		left: 0;
@@ -51,12 +51,12 @@
 .page-template-profiles,
 .single-profile,
 .post-type-archive-profile {
-	@extend %templateNarrow;
+	@extend %template-narrow;
 
 	// Layouts
 	&.sidebarLocation-left,
 	&.sidebarLocation-right {
-		@extend %removeTemplateNarrow;
+		@extend %remove-template-narrow;
 	}
 }
 
@@ -64,8 +64,8 @@
 ----------------------------------------------------------------- */
 
 // A utility class to style sidebars on narrow width templates.
-%templateNarrowSidebar {
-	/* These classes are using %templateNarrowSidebar. */
+%template-narrow-sidebar {
+	/* These classes are using %template-narrow-sidebar. */
 	@extend %clearfix;
 	@extend %col-sm-margin-parent;
 	width: auto;
@@ -82,8 +82,8 @@
 }
 
 // A utility class to easily undo narrow width sidebar styles.
-// Always overrides %templateNarrowSidebar.
-%removeTemplateNarrowSidebar {
+// Always overrides %template-narrow-sidebar.
+%remove-template-narrow-sidebar {
 	@extend %sidebar-styles;
 	@extend %container-styles;
 	@include breakpoint(md) {
@@ -100,12 +100,12 @@
 
 .sidebar-posts,
 .sidebar-profiles {
-	@extend %templateNarrowSidebar;
+	@extend %template-narrow-sidebar;
 
 	// Layouts
 	.sidebarLocation-left &,
 	.sidebarLocation-right & {
-		@extend %removeTemplateNarrowSidebar;
+		@extend %remove-template-narrow-sidebar;
 	}
 }
 
