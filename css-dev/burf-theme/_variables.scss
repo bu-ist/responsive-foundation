@@ -51,7 +51,7 @@ $font-size-caption:                         $font-size-smaller !default;
 $color-caption:                            $color-grayScale-9 !default;
 $border-color-table:                        $color-grayScale-d !default;
 $border-color-table-dark:                   $color-grayScale-9 !default;
-$boxShadow-table:                          inset -20px 0px 20px -10px $color-grayScale-f0 !default;
+$box-shadow-table:                          inset -20px 0px 20px -10px $color-grayScale-f0 !default;
 
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
@@ -66,7 +66,7 @@ $boxShadow-table:                          inset -20px 0px 20px -10px $color-gra
 // Masthead and Brand
 
 $border-masthead:                          $border-base !default;
-$borderWidth-masthead:                     $border-bottom !default;
+$border-width-masthead:                     $border-bottom !default;
 $color-masthead-bg:                        $color-grayScale-f !default;
 $font-family-brand-sponsored:               $font-family-brand !default;
 $font-family-brand-unbranded:               $font-family-sans-serif !default;
@@ -76,7 +76,7 @@ $color-unbranded:                            #cc0000;
 
 // Primary Navigation
 
-$borderWidth-primaryNav:                   $border-top !default;
+$border-width-primaryNav:                   $border-top !default;
 $border-primaryNav-desktop: 					 none !default;
 $color-primaryNav-border:                  $color-grayScale-3 !default;
 $font-family-navigation:                    $font-family-sans-serif !default;
@@ -91,7 +91,7 @@ $color-primaryNav-dropdown-link-hover:     $color-primaryNav-link-hover !default
 
 // Utility Navigation
 
-$borderWidth-utilityNav:                   $border-top !default;
+$border-width-utilityNav:                   $border-top !default;
 $font-size-utilityNav:                      $font-size-smaller !default;
 $color-utilityNav-link:                    $color-grayScale-7 !default;
 $color-utilityNav-link-hover:              $color-grayScale-0 !default;
@@ -107,7 +107,7 @@ $color-navToggle-alt-hover:                $color-grayScale-0 !default;
 
 // Search
 
-$borderWidth-quicksearch:                  $border-top !default;
+$border-width-quicksearch:                  $border-top !default;
 $color-quicksearch-border:                 $color-grayScale-d !default;
 $borderRadius-quicksearch-input:           20px 0 0 20px !default;
 $borderRadius-quicksearch-button:          0 20px 20px 0 !default;
@@ -187,7 +187,7 @@ $font-size-single-meta:                     $font-size-small !default;
 // News and Archive Template: Listing
 
 $border-news-post:                         $border-base !default;
-$borderWidth-news-post:                    $border-top !default;
+$border-width-news-post:                    $border-top !default;
 
 $font-family-news-meta:                     $font-family-sans-serif !default;
 $font-size-news-meta:                       $font-size-smaller !default;
@@ -198,7 +198,7 @@ $color-news-metaBefore:                    $color-grayScale-a !default;
 
 $padding-single-meta:                      20px !default;
 $border-single-meta:                       $border-message !default;
-$borderWidth-single-meta:                  $border-width-message !default;
+$border-width-single-meta:                  $border-width-message !default;
 $borderRadius-single-meta:                 $border-radius-message !default;
 $color-single-meta-bg:                     $color-grayScale-f0 !default;
 $color-single-meta-borderLeft:             $color-message-border-left !default;
@@ -206,9 +206,9 @@ $color-single-meta-borderLeft:             $color-message-border-left !default;
 $comment-margin:                           15px 0 !default;
 $comment-padding:                          0 0 0 30px !default;
 $border-comment:                           $border-base !default;
-$borderWidth-comment:                      $border-top !default;
+$border-width-comment:                      $border-top !default;
 $border-commentForm:                       1px solid $color-grayScale-e !default;
-$borderWidth-commentForm:                  3px !default;
+$border-width-commentForm:                  3px !default;
 $font-family-comment:                       $font-family-sans-serif !default;
 $color-comments:                           $color-base !default;
 $color-comment-reply:                      $color-grayScale-a !default;
@@ -240,7 +240,7 @@ $lineHeight-widget:								 $lineHeight-base !default;
 $font-family-widget-heading:                $font-family-sans-serif !default;
 $font-family-widgetTitle:                   $font-family-sans-serif !default;
 $border-widgetTitle:                       4px solid $color-grayScale-0 !default;
-$borderWidth-widgetTitle:                  0 0 4px 0 !default;
+$border-width-widgetTitle:                  0 0 4px 0 !default;
 $font-size-widgetTitle:                     $font-size-small !default;
 $lineHeight-widgetTitle:                   $lineHeight-large !default;
 $color-widgetTitle:                        $color-grayScale-0 !default;
@@ -265,9 +265,9 @@ $color-widget-calendarDateMonth:           $color-widget-calendarDate !default;
 // Navigation and Menu Widgets
 
 $border-widget-contentnav:                 $border-base !default;
-$borderWidth-widget-contentnav:            $border-bottom !default;
+$border-width-widget-contentnav:            $border-bottom !default;
 $border-widgetList:                        $border-base !default;
-$borderWidth-widgetList:                   $border-top !default;
+$border-width-widgetList:                   $border-top !default;
 $font-family-widget-contentnav:             $font-family-sans-serif !default;
 $font-size-widget-contentnav-link:          $font-size-small !default;
 $font-size-widget-contentnav-nestedLink:    $font-size-small !default;
@@ -299,7 +299,7 @@ $footbar-paddingBottom:                    20px !default;
 $color-footbar-bg:                         $color-grayScale-f5 !default;
 $color-footbar-border:                     $color-grayScale-c !default;
 $border-footbar:                           1px solid $color-footbar-border !default;
-$borderWidth-footbar:                      $border-top !default;
+$border-width-footbar:                      $border-top !default;
 $color-footbar-container-bg:               $color-footbar-bg !default;
 $color-footbar-widget-link:                $color-link !default;
 $color-footbar-widget-link-hover:          $color-link !default;

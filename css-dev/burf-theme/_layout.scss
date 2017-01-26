@@ -15,7 +15,7 @@ body {
 	@extend %clearfix;
 	position: relative;
 	border: $border-masthead;
-	border-width: $borderWidth-masthead;
+	border-width: $border-width-masthead;
 	background: $color-masthead-bg;
 }
 .masthead-container {
@@ -156,7 +156,7 @@ body {
 	width: 100%;
 	padding-bottom: $footbar-paddingBottom;
 	border: $border-footbar;
-	border-width: $borderWidth-footbar;
+	border-width: $border-width-footbar;
 	background: $color-footbar-bg;
 }
 .footbar-container {

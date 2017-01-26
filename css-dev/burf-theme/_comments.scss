@@ -19,7 +19,7 @@
 }
 .comment {
 	border: $border-comment;
-	border-width: $borderWidth-comment;
+	border-width: $border-width-comment;
 }
 .comment-body {
 	position: relative;
@@ -59,7 +59,7 @@
 	padding: 20px;
 	margin: 15px 0 20px;
 	border: $border-commentForm;
-	border-width: $borderWidth-commentForm;
+	border-width: $border-width-commentForm;
 	background: $color-commentForm-bg;
 }
 .comment-respond-title {

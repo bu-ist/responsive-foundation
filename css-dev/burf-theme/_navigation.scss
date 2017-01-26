@@ -196,7 +196,7 @@ nav a {
 	display: block;
 	padding: 10px 0;
 	border: 1px solid $color-primaryNav-border;
-	border-width: $borderWidth-primaryNav;
+	border-width: $border-width-primaryNav;
 	color: $color-primaryNav-link;
 	text-decoration: none;
 	@include breakpoint(sm) {
@@ -250,7 +250,7 @@ nav a {
 	padding: 20px 0 0;
 	margin: 0 10px;
 	border: 1px solid $color-primaryNav-border;
-	border-width: $borderWidth-utilityNav;
+	border-width: $border-width-utilityNav;
 	font-size: $font-size-utilityNav;
 }
 .masthead-container .utility-nav {
@@ -350,7 +350,7 @@ nav a {
 .l-side-nav .primary-nav-menu a {
 	padding: 10px 0;
 	border: 1px solid $color-primaryNav-border;
-	border-width: $borderWidth-primaryNav;
+	border-width: $border-width-primaryNav;
 	line-height: $lineHeight-base;
 }
 .l-side-nav .primary-nav-menu li:first-child a {
@@ -365,7 +365,7 @@ nav a {
 .l-side-nav #quicksearch {
 	@include breakpoint(sm) {
 		border: 1px solid $color-quicksearch-border;
-		border-width: $borderWidth-quicksearch;
+		border-width: $border-width-quicksearch;
 	}
 }
 .l-side-nav .brand .search-toggle,

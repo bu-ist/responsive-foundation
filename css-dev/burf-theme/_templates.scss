@@ -122,7 +122,7 @@
 	padding-top: 30px;
 	margin-top: 30px;
 	border: $border-news-post;
-	border-width: $borderWidth-news-post;
+	border-width: $border-width-news-post;
 }
 .news-posts .post:first-child,
 .archive .content-container article:first-child {
@@ -154,7 +154,7 @@
 	padding-top: 30px;
 	margin-top: 30px;
 	border: $border-news-post;
-	border-width: $borderWidth-news-post;
+	border-width: $border-width-news-post;
 }
 .paging-navigation .screen-reader-text {
 	display: none;
@@ -185,7 +185,7 @@
 	padding-top: 30px;
 	margin-top: 30px;
 	border: $border-news-post;
-	border-width: $borderWidth-news-post;
+	border-width: $border-width-news-post;
 	&:first-child {
 		border: none;
 	}
@@ -200,7 +200,7 @@
 	padding: $padding-single-meta;
 	margin-bottom: 30px;
 	border: $border-single-meta;
-	border-width: $borderWidth-single-meta;
+	border-width: $border-width-single-meta;
 	border-left-color: $color-single-meta-borderLeft;
 	background-color: $color-single-meta-bg;
 	font-size: $font-size-single-meta;
