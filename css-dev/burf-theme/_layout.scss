@@ -154,7 +154,7 @@ body {
 .footbar {
 	@extend %clearfix;
 	width: 100%;
-	padding-bottom: $footbar-paddingBottom;
+	padding-bottom: $footbar-padding-bottom;
 	border: $border-footbar;
 	border-width: $border-width-footbar;
 	background: $color-footbar-bg;
@@ -205,8 +205,8 @@ body {
 	display: block;
 	clear: both;
 	width: 100%;
-	padding: $padding-siteFooter;
-	background: $color-siteFooter-bg;
+	padding: $padding-site-footer;
+	background: $color-site-footer-bg;
 	font-family: $font-family-sans-serif;
 	font-size: $font-size-small;
 	line-height: $line-height-small;
@@ -222,12 +222,12 @@ body {
 	font-family: $font-family-sans-serif;
 	font-size: $font-size-small;
 	line-height: $line-height-small;
-	color: $color-siteFooter;
+	color: $color-site-footer;
 }
 .site-footer a {
-	color: $color-siteFooter-link;
+	color: $color-site-footer-link;
 	&:hover {
-		color: $color-siteFooter-link-hover;
+		color: $color-site-footer-link-hover;
 	}
 }
 .site-footer li {
