@@ -136,7 +136,7 @@
 .archive .content-container .tags,
 .archive .content-container .taxonomies {
 	margin-bottom: 20px;
-	font-family: $fontFamily-news-meta;
+	font-family: $font-family-news-meta;
 	font-size: $fontSize-news-meta;
 }
 .news-posts .meta span:before {
@@ -215,7 +215,7 @@
 }
 .single .meta p {
 	margin-bottom: 10px;
-	font-family: $fontFamily-news-meta;
+	font-family: $font-family-news-meta;
 }
 .single .meta p:last-child {
 	margin-bottom: 0;
@@ -262,7 +262,7 @@
 	width: 100%;
 }
 .month caption {
-	font-family: $fontFamily-calendarMonth-caption;
+	font-family: $font-family-calendarMonth-caption;
 	font-style: normal;
 	font-size: $fontSize-calendarMonth-caption;
 	color: $color-calendarMonth-caption;
@@ -271,7 +271,7 @@
 .month td {
 	width: 14.285714285%;
 	padding: $padding-monthCalendar-cell;
-	font-family: $fontFamily-calendarMonth-cell;
+	font-family: $font-family-calendarMonth-cell;
 	text-align: center;
 }
 .month th {
@@ -308,7 +308,7 @@
 ----------------------------------------------------------------- */
 
 .single-event .label {
-	font-family: $fontFamily-singleEvent-label;
+	font-family: $font-family-singleEvent-label;
 	font-weight: $fontWeight-calendar-label;
 	font-size: $fontSize-smaller;
 	color: $color-calendarSingle-label;

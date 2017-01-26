@@ -76,7 +76,7 @@
 	width: 100%;
 }
 .profile-listing .profile-name {
-	font-family: $fontFamily-profile-name;
+	font-family: $font-family-profile-name;
 	font-size: $fontSize-profile-name;
 	color: $color-profile-name;
 	text-decoration: underline;
@@ -87,7 +87,7 @@
 }
 .profile-listing .profile-title {
 	display: block;
-	font-family: $fontFamily-profile-title;
+	font-family: $font-family-profile-title;
 	font-size: $fontSize-profile-title;
 	color: $color-profile-title;
 }
@@ -146,7 +146,7 @@
 	padding-right: 15px;
 }
 .profile-listing .mini .name {
-	font-family: $fontFamily-profile-name;
+	font-family: $font-family-profile-name;
 	font-size: $fontSize-profile-mini-name;
 }
 .profile-listing .mini .email a {

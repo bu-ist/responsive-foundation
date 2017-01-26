@@ -45,8 +45,8 @@ $color-message-border-left:                 $color-grayScale-0 !default;
 
 // Wordpress WYSIWYG
 
-$margin-floatedContent: 						 10px !default;
-$fontFamily-caption:                       $font-family-sans-serif !default;
+$margin-floated-content: 						 10px !default;
+$font-family-caption:                       $font-family-sans-serif !default;
 $fontSize-caption:                         $fontSize-smaller !default;
 $color-caption:                            $color-grayScale-9 !default;
 $borderColor-table:                        $color-grayScale-d !default;
@@ -79,7 +79,7 @@ $color-unbranded:                            #cc0000;
 $borderWidth-primaryNav:                   $border-top !default;
 $border-primaryNav-desktop: 					 none !default;
 $color-primaryNav-border:                  $color-grayScale-3 !default;
-$fontFamily-navigation:                    $font-family-sans-serif !default;
+$font-family-navigation:                    $font-family-sans-serif !default;
 $fontSize-navigation:                      $fontSize-small !default;
 $color-primaryNav-bg:                      $color-grayScale-0 !default;
 $color-primaryNav-dropdown-bg:             $color-grayScale-0 !default;
@@ -142,13 +142,13 @@ $color-calendar-eventLink-hover:           $color-link !default;
 
 // Calendar Template: Sidebar
 
-$fontFamily-calendarMonth-caption:         $font-family-sans-serif !default;
+$font-family-calendarMonth-caption:         $font-family-sans-serif !default;
 $fontSize-calendarMonth-caption:           $fontSize-medium !default;
 $color-calendarMonth-caption:              $color-grayScale-7 !default;
 $color-calendarMonth-th-bg:                $color-grayScale-e !default;
 $color-calendarMonth-th:                   $color-grayScale-0 !default;
 $padding-monthCalendar-cell:               4px !default;
-$fontFamily-calendarMonth-cell:            $font-family-sans-serif !default;
+$font-family-calendarMonth-cell:            $font-family-sans-serif !default;
 $color-calendarMonth-cellLink:             $color-link !default;
 $color-calendarMonth-cellLink-hover:       $color-link !default;
 $color-calendarMonth-cellLinkOut-bg:       $color-grayScale-f5 !default;
@@ -158,7 +158,7 @@ $color-calendarMonth-cellLinkToday:        $color-grayScale-0 !default;
 
 // Calendar Template: Single
 
-$fontFamily-singleEvent-label:             $font-family-sans-serif !default;
+$font-family-singleEvent-label:             $font-family-sans-serif !default;
 $fontWeight-calendar-label:                700 !default;
 $color-calendarSingle-label:               $color-grayScale-9 !default;
 
@@ -166,10 +166,10 @@ $color-calendarSingle-label:               $color-grayScale-9 !default;
 
 $border-profiles:                          $border-base !default;
 $borderRadius-profile-figure:              50% !default;
-$fontFamily-profile-name:                  $font-family-sans-serif !default;
+$font-family-profile-name:                  $font-family-sans-serif !default;
 $fontSize-profile-name:                    $fontSize-medium !default;
 $color-profile-name:                       $color-link !default;
-$fontFamily-profile-title:                 $font-family-base !default;
+$font-family-profile-title:                 $font-family-base !default;
 $fontSize-profile-title:                   $fontSize-small !default;
 $color-profile-title:                      $color-base !default;
 $color-profile-info-label:                 $color-grayScale-a !default;
@@ -189,7 +189,7 @@ $fontSize-single-meta:                     $fontSize-small !default;
 $border-news-post:                         $border-base !default;
 $borderWidth-news-post:                    $border-top !default;
 
-$fontFamily-news-meta:                     $font-family-sans-serif !default;
+$font-family-news-meta:                     $font-family-sans-serif !default;
 $fontSize-news-meta:                       $fontSize-smaller !default;
 $color-news-metaEm:                        $color-grayScale-7 !default;
 $color-news-metaBefore:                    $color-grayScale-a !default;
@@ -209,7 +209,7 @@ $border-comment:                           $border-base !default;
 $borderWidth-comment:                      $border-top !default;
 $border-commentForm:                       1px solid $color-grayScale-e !default;
 $borderWidth-commentForm:                  3px !default;
-$fontFamily-comment:                       $font-family-sans-serif !default;
+$font-family-comment:                       $font-family-sans-serif !default;
 $color-comments:                           $color-base !default;
 $color-comment-reply:                      $color-grayScale-a !default;
 $color-comment-author:                     $color-grayScale-a !default;
@@ -237,8 +237,8 @@ $widget-marginBottom:                      40px !default;
 $fontSize-widget:                          $fontSize-small !default;
 $lineHeight-widget:								 $lineHeight-base !default;
 
-$fontFamily-widget-heading:                $font-family-sans-serif !default;
-$fontFamily-widgetTitle:                   $font-family-sans-serif !default;
+$font-family-widget-heading:                $font-family-sans-serif !default;
+$font-family-widgetTitle:                   $font-family-sans-serif !default;
 $border-widgetTitle:                       4px solid $color-grayScale-0 !default;
 $borderWidth-widgetTitle:                  0 0 4px 0 !default;
 $fontSize-widgetTitle:                     $fontSize-small !default;
@@ -253,7 +253,7 @@ $color-widget-link-hover:                  $color-link !default;
 
 // Calendar Widget
 
-$fontFamily-widget-calendar-date:          $font-family-sans-serif !default;
+$font-family-widget-calendar-date:          $font-family-sans-serif !default;
 $fontSize-widget-calendarDate:             $fontSize-smallest !default;
 $lineHeight-widget-calendarDate:           $lineHeight-large !default;
 $color-widget-calendarDate:                $color-grayScale-0 !default;
@@ -268,7 +268,7 @@ $border-widget-contentnav:                 $border-base !default;
 $borderWidth-widget-contentnav:            $border-bottom !default;
 $border-widgetList:                        $border-base !default;
 $borderWidth-widgetList:                   $border-top !default;
-$fontFamily-widget-contentnav:             $font-family-sans-serif !default;
+$font-family-widget-contentnav:             $font-family-sans-serif !default;
 $fontSize-widget-contentnav-link:          $fontSize-small !default;
 $fontSize-widget-contentnav-nestedLink:    $fontSize-small !default;
 $color-widget-contentnav:                  $color-link !default;

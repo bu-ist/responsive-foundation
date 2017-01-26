@@ -33,7 +33,7 @@
 	padding: 0 0 4px 0;
 	border: $border-widgetTitle;
 	border-width: $borderWidth-widgetTitle;
-	font-family: $fontFamily-widgetTitle;
+	font-family: $font-family-widgetTitle;
 	font-size: $fontSize-widgetTitle;
 	line-height: $lineHeight-widgetTitle;
 	color: $color-widgetTitle;
@@ -63,7 +63,7 @@
 .widget h4,
 .widget h5,
 .widget h6 {
-	font-family: $fontFamily-widget-heading;
+	font-family: $font-family-widget-heading;
 }
 
 /* BU Posts
@@ -123,7 +123,7 @@
 	li {
 		border: $border-widgetList;
 		border-width: $borderWidth-widgetList;
-		font-family: $fontFamily-widget-contentnav;
+		font-family: $font-family-widget-contentnav;
 		&:first-child {
 			border: none;
 		}
@@ -178,7 +178,7 @@ $width-calendarDate: 48px;
 	/* calendar: shared */
 	.date {
 		display: block;
-		font-family: $fontFamily-widget-calendar-date;
+		font-family: $font-family-widget-calendar-date;
 		color: $color-widget-calendarDate;
 		font-weight: 700;
 	}

@@ -84,8 +84,8 @@ $z-index-10:                                1000;
 
 $font-family-base:                          "TiemposText", Georgia, serif !default;
 $font-family-sans-serif:                     "Benton", Helvetica, sans-serif !default;
-$fontFamily-monospace:                     Consolas, "Liberation Mono", Courier, monospace !default;
-$fontFamily-icons:                     	 "bu-default-icons" !default;
+$font-family-monospace:                     Consolas, "Liberation Mono", Courier, monospace !default;
+$font-family-icons:                     	 "bu-default-icons" !default;
 
 $fontSize-base:                            18px !default;
 $fontSize-micro:                           11px !default;
@@ -161,7 +161,7 @@ $color-grayScale-f:                        #ffffff !default;
 
 $color-base:                               $color-grayScale-5 !default;
 
-$fontFamily-heading:                       $font-family-sans-serif !default;
+$font-family-heading:                       $font-family-sans-serif !default;
 $color-heading:                            $color-grayScale-0 !default;
 $color-heading-small:                      $color-grayScale-9 !default;
 $fontMargin-hgroup:                        $fontMargin-base !default;
@@ -170,7 +170,7 @@ $color-link:                               #0f69d7 !default;
 $color-link-visited:                       #7337af !default;
 $color-link-active:                        $color-grayScale-0 !default;
 
-$fontFamily-button:                        $font-family-sans-serif !default;
+$font-family-button:                        $font-family-sans-serif !default;
 $fontSize-button:                          $fontSize-small !default;
 $color-button-bg:                          $color-grayScale-e !default;
 $color-button-text:                        $color-grayScale-4 !default;
@@ -228,7 +228,7 @@ $color-table-stripes:                      #f6f9fc !default;
 // -----------------------------------------------------------------
 
 $form-margin:                              0 !default;
-$fontFamily-form:                          $font-family-sans-serif !default;
+$font-family-form:                          $font-family-sans-serif !default;
 $fontSize-form:                            $fontSize-small !default;
 
 $form-legend-border:                       1px solid #e5e5e5 !default;

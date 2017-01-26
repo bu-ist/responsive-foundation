@@ -20,7 +20,7 @@
 	border-radius: 2px;
 	background-color: $color-button-bg;
 	vertical-align: baseline;
-	font-family: $fontFamily-button;
+	font-family: $font-family-button;
 	font-size: $fontSize-button;
 	line-height: normal;
 	color: $color-button-text;
@@ -89,7 +89,7 @@
 form {
 	margin: $form-margin; /* 1 */
 	/* burf */
-	font-family: $fontFamily-form;
+	font-family: $font-family-form;
 	font-size: $fontSize-form;
 }
 /* Define consistent border, margin, and padding. */
