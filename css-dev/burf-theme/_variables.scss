@@ -254,13 +254,13 @@ $color-widget-link-hover:                  $color-link !default;
 // Calendar Widget
 
 $font-family-widget-calendar-date:          $font-family-sans-serif !default;
-$font-size-widget-calendarDate:             $font-size-smallest !default;
-$line-height-widget-calendarDate:           $line-height-large !default;
-$color-widget-calendarDate:                $color-grayScale-0 !default;
-$font-size-widget-calendarDateDay:          $font-size-large !default;
-$color-widget-calendarDateDay:             $color-widget-calendarDate !default;
-$font-size-widget-calendarDateMonth:        $font-size-smallest !default;
-$color-widget-calendarDateMonth:           $color-widget-calendarDate !default;
+$font-size-widget-calendar-date:             $font-size-smallest !default;
+$line-height-widget-calendar-date:           $line-height-large !default;
+$color-widget-calendar-date:                $color-grayScale-0 !default;
+$font-size-widget-calendar-dateDay:          $font-size-large !default;
+$color-widget-calendar-dateDay:             $color-widget-calendar-date !default;
+$font-size-widget-calendar-dateMonth:        $font-size-smallest !default;
+$color-widget-calendar-dateMonth:           $color-widget-calendar-date !default;
 
 // Navigation and Menu Widgets
 

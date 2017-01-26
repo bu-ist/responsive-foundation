@@ -157,7 +157,7 @@
 /* Calendar
 ----------------------------------------------------------------- */
 
-$width-calendarDate: 48px;
+$width-calendar-date: 48px;
 
 // A placeholder meant only for calendar.
 %calendar-absolutePositionDate {
@@ -165,7 +165,7 @@ $width-calendarDate: 48px;
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: $width-calendarDate;
+		width: $width-calendar-date;
 	}
 	a {
 		position: relative;
@@ -179,7 +179,7 @@ $width-calendarDate: 48px;
 	.date {
 		display: block;
 		font-family: $font-family-widget-calendar-date;
-		color: $color-widget-calendarDate;
+		color: $color-widget-calendar-date;
 		font-weight: 700;
 	}
 	li {
@@ -200,7 +200,7 @@ $width-calendarDate: 48px;
 	/* calendar: full-date */
 	.full-date {
 		.date {
-			font-size: $font-size-widget-calendarDate;
+			font-size: $font-size-widget-calendar-date;
 		}
 	}
 
@@ -209,20 +209,20 @@ $width-calendarDate: 48px;
 		@extend %calendar-absolutePositionDate;
 
 		a {
-			min-height: $width-calendarDate;
+			min-height: $width-calendar-date;
 		}
 		.date {
 			text-align: center;
-			line-height: $line-height-widget-calendarDate;
+			line-height: $line-height-widget-calendar-date;
 		}
 		.day {
 			display: block;
-			font-size: $font-size-widget-calendarDateDay;
-			color: $color-widget-calendarDateDay;
+			font-size: $font-size-widget-calendar-dateDay;
+			color: $color-widget-calendar-dateDay;
 		}
 		.month {
-			font-size: $font-size-widget-calendarDateMonth;
-			color: $color-widget-calendarDateMonth;
+			font-size: $font-size-widget-calendar-dateMonth;
+			color: $color-widget-calendar-dateMonth;
 			text-transform: uppercase;
 		}
 	}
