@@ -262,41 +262,41 @@
 	width: 100%;
 }
 .month caption {
-	font-family: $font-family-calendarMonth-caption;
+	font-family: $font-family-calendar-month-caption;
 	font-style: normal;
-	font-size: $font-size-calendarMonth-caption;
-	color: $color-calendarMonth-caption;
+	font-size: $font-size-calendar-month-caption;
+	color: $color-calendar-month-caption;
 }
 .month th,
 .month td {
 	width: 14.285714285%;
-	padding: $padding-monthCalendar-cell;
-	font-family: $font-family-calendarMonth-cell;
+	padding: $padding-calendar-month-cell;
+	font-family: $font-family-calendar-month-cell;
 	text-align: center;
 }
 .month th {
-	background: $color-calendarMonth-th-bg;
-	color: $color-calendarMonth-th;
+	background: $color-calendar-month-th-bg;
+	color: $color-calendar-month-th;
 }
 .month td a {
-	color: $color-calendarMonth-cellLink;
+	color: $color-calendar-month-cellLink;
 	&:hover,
 	&::focus {
-		color: $color-calendarMonth-cellLink-hover;
+		color: $color-calendar-month-cellLink-hover;
 	}
 }
 .month .out {
-	background: $color-calendarMonth-cellLinkOut-bg;
+	background: $color-calendar-month-cellLinkOut-bg;
 }
 .month .out a {
-	color: $color-calendarMonth-cellLinkOut;
+	color: $color-calendar-month-cellLinkOut;
 	text-decoration: none;
 }
 .month .today {
-	background: $color-calendarMonth-cellLinkToday-bg;
+	background: $color-calendar-month-cellLinkToday-bg;
 }
 .month .today a {
-	color: $color-calendarMonth-cellLinkToday;
+	color: $color-calendar-month-cellLinkToday;
 	text-decoration: none;
 }
 
