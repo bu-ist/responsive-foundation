@@ -33,25 +33,25 @@ body {
 	display: block;
 	margin: 0 auto;
 }
-.banner-container-windowWidth {
+.banner-container-window-width {
 	@include breakpoint(lg) {
 		padding: 20px;
 		background: $color-bannerContainer;
 	}
 }
-.banner-container-pageWidth {
+.banner-container-page-width {
 	margin: -15px 0 35px;
 	@include breakpoint(sm) {
 		margin: 0 0 60px;
 	}
 }
-.banner-container-pageWidth img {
+.banner-container-page-width img {
 	@include breakpoint(md) {
 		width: 100%;
 		background: $color-bannerContainer;
 	}
 }
-.banner-container-contentWidth {
+.banner-container-content-width {
 	padding: 0;
 	margin: -15px 0 35px;
 	background: none;
