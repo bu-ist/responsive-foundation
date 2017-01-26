@@ -177,7 +177,7 @@ $color-button-text:                        $color-grayscale-4 !default;
 $color-button-primary-bg:                  #0078e7 !default;
 $color-button-primary-text:                $color-grayscale-f !default;
 
-$fontPadding-code:                         0.2em 0.4em !default;
+$font-padding-code:                         0.2em 0.4em !default;
 $font-margin-code:                          30px 0 !default;
 $color-code:                               $color-grayscale-7 !default;
 $color-code-bg:                            $color-grayscale-f5 !default;
@@ -185,7 +185,7 @@ $color-code-bg:                            $color-grayscale-f5 !default;
 $font-margin-blockquote:                    1em 40px !default;
 
 $font-margin-list:                          $font-margin-base !default;
-$fontPadding-list:                         0 0 0 40px !default;
+$font-padding-list:                         0 0 0 40px !default;
 
 $font-margin-dd:                            0 0 0 40px !default;
 
@@ -232,7 +232,7 @@ $font-family-form:                          $font-family-sans-serif !default;
 $font-size-form:                            $font-size-small !default;
 
 $form-legend-border:                       1px solid #e5e5e5 !default;
-$form-legend-borderWidth:                  0 0 1px 0 !default;
+$form-legend-border-width:                  0 0 1px 0 !default;
 $form-legend-margin:                       0 0 20px !default;
 $form-legend-padding:                      0 0 4px !default;
 $font-size-legend:                          $font-size-large !default;
