@@ -87,16 +87,16 @@ $font-family-sans-serif:                     "Benton", Helvetica, sans-serif !de
 $font-family-monospace:                     Consolas, "Liberation Mono", Courier, monospace !default;
 $font-family-icons:                     	 "bu-default-icons" !default;
 
-$fontSize-base:                            18px !default;
-$fontSize-micro:                           11px !default;
-$fontSize-smallest:                        12px !default;
-$fontSize-smaller:                         14px !default;
-$fontSize-small:                           16px !default;
-$fontSize-medium:                          $fontSize-base !default;
-$fontSize-large:                           21px !default;
-$fontSize-larger:                          28px !default;
-$fontSize-largest:                         37px !default;
-$fontSize-jumbo:                           49px !default;
+$font-size-base:                            18px !default;
+$font-size-micro:                           11px !default;
+$font-size-smallest:                        12px !default;
+$font-size-smaller:                         14px !default;
+$font-size-small:                           16px !default;
+$font-size-medium:                          $font-size-base !default;
+$font-size-large:                           21px !default;
+$font-size-larger:                          28px !default;
+$font-size-largest:                         37px !default;
+$font-size-jumbo:                           49px !default;
 
 $lineHeight-base:                          1.6 !default;
 $lineHeight-micro:                         $lineHeight-base !default;
@@ -171,7 +171,7 @@ $color-link-visited:                       #7337af !default;
 $color-link-active:                        $color-grayScale-0 !default;
 
 $font-family-button:                        $font-family-sans-serif !default;
-$fontSize-button:                          $fontSize-small !default;
+$font-size-button:                          $font-size-small !default;
 $color-button-bg:                          $color-grayScale-e !default;
 $color-button-text:                        $color-grayScale-4 !default;
 $color-button-primary-bg:                  #0078e7 !default;
@@ -209,7 +209,7 @@ $color-table-head:                         $color-grayScale-0 !default;
 $color-table-head-bg:                      $color-grayScale-e !default;
 
 $table-caption-padding:                    0 0 10px !default;
-$fontSize-table-caption:                   $fontSize-small !default;
+$font-size-table-caption:                   $font-size-small !default;
 $color-table-caption:                      $color-grayScale-9 !default;
 
 $color-table-th-border:                    $color-grayScale-c !default;
@@ -229,13 +229,13 @@ $color-table-stripes:                      #f6f9fc !default;
 
 $form-margin:                              0 !default;
 $font-family-form:                          $font-family-sans-serif !default;
-$fontSize-form:                            $fontSize-small !default;
+$font-size-form:                            $font-size-small !default;
 
 $form-legend-border:                       1px solid #e5e5e5 !default;
 $form-legend-borderWidth:                  0 0 1px 0 !default;
 $form-legend-margin:                       0 0 20px !default;
 $form-legend-padding:                      0 0 4px !default;
-$fontSize-legend:                          $fontSize-large !default;
+$font-size-legend:                          $font-size-large !default;
 
 $form-fieldset-border:                     0 !default;
 $form-fieldset-margin:                     30px 0 !default;

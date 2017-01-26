@@ -105,7 +105,7 @@ body {
 
 %sidebar-styles {
 	@extend %col-md-#{$grid-number-columns*(1/$number-columns)};
-	font-size: $fontSize-small;
+	font-size: $font-size-small;
 	clear: none;
 
 	// TODO: sunset this in a future release - this padding should really only apply to .sidebar-location-right
@@ -208,7 +208,7 @@ body {
 	padding: $padding-siteFooter;
 	background: $color-siteFooter-bg;
 	font-family: $font-family-sans-serif;
-	font-size: $fontSize-small;
+	font-size: $font-size-small;
 	line-height: $lineHeight-small;
 	color: $color-grayScale-8;
 }
@@ -220,7 +220,7 @@ body {
 .site-footer h6 {
 	margin: 0 0 3px;
 	font-family: $font-family-sans-serif;
-	font-size: $fontSize-small;
+	font-size: $font-size-small;
 	line-height: $lineHeight-small;
 	color: $color-siteFooter;
 }

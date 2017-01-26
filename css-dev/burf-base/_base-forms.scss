@@ -21,7 +21,7 @@
 	background-color: $color-button-bg;
 	vertical-align: baseline;
 	font-family: $font-family-button;
-	font-size: $fontSize-button;
+	font-size: $font-size-button;
 	line-height: normal;
 	color: $color-button-text;
 	text-align: center;
@@ -90,7 +90,7 @@ form {
 	margin: $form-margin; /* 1 */
 	/* burf */
 	font-family: $font-family-form;
-	font-size: $fontSize-form;
+	font-size: $font-size-form;
 }
 /* Define consistent border, margin, and padding. */
 fieldset {

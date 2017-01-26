@@ -39,7 +39,7 @@ $border-message:                           $border-base !default;
 $border-width-message:                      1px 1px 1px 5px !default;
 $border-radius-message:                     3px !default;
 $padding-message:                          20px !default;
-$font-size-message:                         $fontSize-small !default;
+$font-size-message:                         $font-size-small !default;
 $color-message-bg:                         $color-grayScale-f0 !default;
 $color-message-border-left:                 $color-grayScale-0 !default;
 
@@ -47,7 +47,7 @@ $color-message-border-left:                 $color-grayScale-0 !default;
 
 $margin-floated-content: 						 10px !default;
 $font-family-caption:                       $font-family-sans-serif !default;
-$fontSize-caption:                         $fontSize-smaller !default;
+$font-size-caption:                         $font-size-smaller !default;
 $color-caption:                            $color-grayScale-9 !default;
 $borderColor-table:                        $color-grayScale-d !default;
 $borderColor-table-dark:                   $color-grayScale-9 !default;
@@ -80,7 +80,7 @@ $borderWidth-primaryNav:                   $border-top !default;
 $border-primaryNav-desktop: 					 none !default;
 $color-primaryNav-border:                  $color-grayScale-3 !default;
 $font-family-navigation:                    $font-family-sans-serif !default;
-$fontSize-navigation:                      $fontSize-small !default;
+$font-size-navigation:                      $font-size-small !default;
 $color-primaryNav-bg:                      $color-grayScale-0 !default;
 $color-primaryNav-dropdown-bg:             $color-grayScale-0 !default;
 $color-primaryNav-link:                    $color-grayScale-f !default;
@@ -92,7 +92,7 @@ $color-primaryNav-dropdown-link-hover:     $color-primaryNav-link-hover !default
 // Utility Navigation
 
 $borderWidth-utilityNav:                   $border-top !default;
-$fontSize-utilityNav:                      $fontSize-smaller !default;
+$font-size-utilityNav:                      $font-size-smaller !default;
 $color-utilityNav-link:                    $color-grayScale-7 !default;
 $color-utilityNav-link-hover:              $color-grayScale-0 !default;
 $color-utilityNav-inPrimaryNav-link:       $color-grayScale-a !default;
@@ -134,16 +134,16 @@ $backLink-before:                          "← " !default;
 
 // Calendar Template: Event List
 
-$fontSize-calendar-topic:                  $fontSize-large !default;
+$font-size-calendar-topic:                  $font-size-large !default;
 $color-calendar-headingDateRange:          $color-grayScale-9 !default;
-$fontSize-calendar-eventDate:              $fontSize-medium !default;
+$font-size-calendar-eventDate:              $font-size-medium !default;
 $color-calendar-eventLink:                 $color-link !default;
 $color-calendar-eventLink-hover:           $color-link !default;
 
 // Calendar Template: Sidebar
 
 $font-family-calendarMonth-caption:         $font-family-sans-serif !default;
-$fontSize-calendarMonth-caption:           $fontSize-medium !default;
+$font-size-calendarMonth-caption:           $font-size-medium !default;
 $color-calendarMonth-caption:              $color-grayScale-7 !default;
 $color-calendarMonth-th-bg:                $color-grayScale-e !default;
 $color-calendarMonth-th:                   $color-grayScale-0 !default;
@@ -167,22 +167,22 @@ $color-calendarSingle-label:               $color-grayScale-9 !default;
 $border-profiles:                          $border-base !default;
 $borderRadius-profile-figure:              50% !default;
 $font-family-profile-name:                  $font-family-sans-serif !default;
-$fontSize-profile-name:                    $fontSize-medium !default;
+$font-size-profile-name:                    $font-size-medium !default;
 $color-profile-name:                       $color-link !default;
 $font-family-profile-title:                 $font-family-base !default;
-$fontSize-profile-title:                   $fontSize-small !default;
+$font-size-profile-title:                   $font-size-small !default;
 $color-profile-title:                      $color-base !default;
 $color-profile-info-label:                 $color-grayScale-a !default;
 
 // Profiles Template: List Mini
 
 $color-profile-mini-border:                $color-grayScale-e !default;
-$fontSize-profile-mini-name:               $fontSize-small !default;
-$fontSize-profile-mini-email:              $fontSize-smaller !default;
+$font-size-profile-mini-name:               $font-size-small !default;
+$font-size-profile-mini-email:              $font-size-smaller !default;
 $lineHeight-profile-mini-email:            $lineHeight-medium !default;
 
 
-$fontSize-single-meta:                     $fontSize-small !default;
+$font-size-single-meta:                     $font-size-small !default;
 
 // News and Archive Template: Listing
 
@@ -190,7 +190,7 @@ $border-news-post:                         $border-base !default;
 $borderWidth-news-post:                    $border-top !default;
 
 $font-family-news-meta:                     $font-family-sans-serif !default;
-$fontSize-news-meta:                       $fontSize-smaller !default;
+$font-size-news-meta:                       $font-size-smaller !default;
 $color-news-metaEm:                        $color-grayScale-7 !default;
 $color-news-metaBefore:                    $color-grayScale-a !default;
 
@@ -234,14 +234,14 @@ $color-collapsible-after-border-hover:     $color-link !default;
 // All Widgets
 
 $widget-marginBottom:                      40px !default;
-$fontSize-widget:                          $fontSize-small !default;
+$font-size-widget:                          $font-size-small !default;
 $lineHeight-widget:								 $lineHeight-base !default;
 
 $font-family-widget-heading:                $font-family-sans-serif !default;
 $font-family-widgetTitle:                   $font-family-sans-serif !default;
 $border-widgetTitle:                       4px solid $color-grayScale-0 !default;
 $borderWidth-widgetTitle:                  0 0 4px 0 !default;
-$fontSize-widgetTitle:                     $fontSize-small !default;
+$font-size-widgetTitle:                     $font-size-small !default;
 $lineHeight-widgetTitle:                   $lineHeight-large !default;
 $color-widgetTitle:                        $color-grayScale-0 !default;
 $widgetTitle-link-after:                   " →" !default;
@@ -254,12 +254,12 @@ $color-widget-link-hover:                  $color-link !default;
 // Calendar Widget
 
 $font-family-widget-calendar-date:          $font-family-sans-serif !default;
-$fontSize-widget-calendarDate:             $fontSize-smallest !default;
+$font-size-widget-calendarDate:             $font-size-smallest !default;
 $lineHeight-widget-calendarDate:           $lineHeight-large !default;
 $color-widget-calendarDate:                $color-grayScale-0 !default;
-$fontSize-widget-calendarDateDay:          $fontSize-large !default;
+$font-size-widget-calendarDateDay:          $font-size-large !default;
 $color-widget-calendarDateDay:             $color-widget-calendarDate !default;
-$fontSize-widget-calendarDateMonth:        $fontSize-smallest !default;
+$font-size-widget-calendarDateMonth:        $font-size-smallest !default;
 $color-widget-calendarDateMonth:           $color-widget-calendarDate !default;
 
 // Navigation and Menu Widgets
@@ -269,20 +269,20 @@ $borderWidth-widget-contentnav:            $border-bottom !default;
 $border-widgetList:                        $border-base !default;
 $borderWidth-widgetList:                   $border-top !default;
 $font-family-widget-contentnav:             $font-family-sans-serif !default;
-$fontSize-widget-contentnav-link:          $fontSize-small !default;
-$fontSize-widget-contentnav-nestedLink:    $fontSize-small !default;
+$font-size-widget-contentnav-link:          $font-size-small !default;
+$font-size-widget-contentnav-nestedLink:    $font-size-small !default;
 $color-widget-contentnav:                  $color-link !default;
 $color-widget-contentnav-hover:            $color-link !default;
 $color-widget-contentnav-active:           $color-link-active !default;
 
 // BU Posts Widget
 
-$fontSize-widget-postHeadline:             $fontSize-small !default;
+$font-size-widget-postHeadline:             $font-size-small !default;
 $lineHeight-widget-postHeadline:           1.4 !default;
-$fontSize-widget-postExcerpt:              $fontSize-small !default;
+$font-size-widget-postExcerpt:              $font-size-small !default;
 $lineHeight-widget-postExcerpt:            $lineHeight-medium !default;
-$fontSize-widget-postDate:                 $fontSize-smallest !default;
-$fontSize-widget-postMeta:                 $fontSize-smallest !default;
+$font-size-widget-postDate:                 $font-size-smallest !default;
+$font-size-widget-postMeta:                 $font-size-smallest !default;
 $color-widget-postMeta:                    $color-grayScale-a !default;
 
 // -----------------------------------------------------------------

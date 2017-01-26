@@ -3,7 +3,7 @@
 
 nav {
 	font-family: $font-family-navigation;
-	font-size: $fontSize-navigation;
+	font-size: $font-size-navigation;
 }
 nav a {
 	text-decoration: none;
@@ -251,7 +251,7 @@ nav a {
 	margin: 0 10px;
 	border: 1px solid $color-primaryNav-border;
 	border-width: $borderWidth-utilityNav;
-	font-size: $fontSize-utilityNav;
+	font-size: $font-size-utilityNav;
 }
 .masthead-container .utility-nav {
 	@include breakpoint(sm) {
@@ -292,7 +292,7 @@ nav a {
 .l-default .utility-nav {
 	@include breakpoint(sm) {
 		position: absolute;
-		top: ($height-brand / 2) - ($fontSize-utilityNav / 2);
+		top: ($height-brand / 2) - ($font-size-utilityNav / 2);
 		right: 20px;
 		line-height: 1;
 	}
@@ -430,7 +430,7 @@ nav a {
 .l-top-nav .utility-nav {
 	@include breakpoint(sm) {
 		position: absolute;
-		top: (($height-brand / 2) - ($fontSize-utilityNav / 2)) + 60;
+		top: (($height-brand / 2) - ($font-size-utilityNav / 2)) + 60;
 		right: 20px;
 		line-height: 1;
 	}
@@ -461,7 +461,7 @@ nav a {
 	display: none;
 	@include breakpoint(sm) {
 		position: absolute;
-		top: ($height-brand / 2) - ($fontSize-utilityNav / 2) - 5;
+		top: ($height-brand / 2) - ($font-size-utilityNav / 2) - 5;
 		right: 80px;
 		display: block;
 	}

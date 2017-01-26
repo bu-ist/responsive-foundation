@@ -77,7 +77,7 @@
 }
 .profile-listing .profile-name {
 	font-family: $font-family-profile-name;
-	font-size: $fontSize-profile-name;
+	font-size: $font-size-profile-name;
 	color: $color-profile-name;
 	text-decoration: underline;
 }
@@ -88,7 +88,7 @@
 .profile-listing .profile-title {
 	display: block;
 	font-family: $font-family-profile-title;
-	font-size: $fontSize-profile-title;
+	font-size: $font-size-profile-title;
 	color: $color-profile-title;
 }
 .profile-listing .basic {
@@ -147,11 +147,11 @@
 }
 .profile-listing .mini .name {
 	font-family: $font-family-profile-name;
-	font-size: $fontSize-profile-mini-name;
+	font-size: $font-size-profile-mini-name;
 }
 .profile-listing .mini .email a {
 	margin-top: 5px;
-	font-size: $fontSize-profile-mini-email;
+	font-size: $font-size-profile-mini-email;
 	line-height: $lineHeight-profile-mini-email;
 	text-decoration: underline;
 	word-wrap: break-word;
@@ -163,7 +163,7 @@
 }
 .profile-listing .mini .summary {
 	margin-top: 5px;
-	font-size: $fontSize-profile-mini-email;
+	font-size: $font-size-profile-mini-email;
 	line-height: $lineHeight-profile-mini-email;
 	word-wrap: break-word;
 }
@@ -218,14 +218,14 @@
 .profile-info li {
 	margin: 0 0 20px 0;
 	list-style: none;
-	font-size: $fontSize-small;
+	font-size: $font-size-small;
 	word-wrap: break-word;
 }
 .profile-info .label {
 	display: block;
 	font-family: $font-family-sans-serif;
 	font-weight: 700;
-	font-size: $fontSize-smaller;
+	font-size: $font-size-smaller;
 	color: $color-profile-info-label;
 	text-transform: uppercase;
 }

@@ -1600,7 +1600,7 @@
 
 .site-footer-social i {
 	@extend %icon;
-	font-size: $fontSize-large;
+	font-size: $font-size-large;
 }
 .site-footer-social a[href*="dropbox.com"] i {
 	@extend %icon-dropbox;
