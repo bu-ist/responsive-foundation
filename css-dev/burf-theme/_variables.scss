@@ -10,7 +10,7 @@
 
 // Color and Typography
 
-$color-body-bg:                            $color-grayScale-0 !default;
+$color-body-bg:                            $color-grayscale-0 !default;
 $font-family-base:                          "Benton", sans-serif !default;
 $font-family-serif:                         "TiemposText", Georgia, serif !default;
 $font-family-sans-serif:                     "Benton", "Helvetica", sans-serif !default;
@@ -29,7 +29,7 @@ $column-padding-bottom-large-screen:         35px !default;
 
 // Borders
 
-$border-base:										 1px solid $color-grayScale-d !default;
+$border-base:										 1px solid $color-grayscale-d !default;
 $border-top:										 1px 0 0 0;
 $border-bottom:									 0 0 1px 0;
 
@@ -40,18 +40,18 @@ $border-width-message:                      1px 1px 1px 5px !default;
 $border-radius-message:                     3px !default;
 $padding-message:                          20px !default;
 $font-size-message:                         $font-size-small !default;
-$color-message-bg:                         $color-grayScale-f0 !default;
-$color-message-border-left:                 $color-grayScale-0 !default;
+$color-message-bg:                         $color-grayscale-f0 !default;
+$color-message-border-left:                 $color-grayscale-0 !default;
 
 // Wordpress WYSIWYG
 
 $margin-floated-content: 						 10px !default;
 $font-family-caption:                       $font-family-sans-serif !default;
 $font-size-caption:                         $font-size-smaller !default;
-$color-caption:                            $color-grayScale-9 !default;
-$border-color-table:                        $color-grayScale-d !default;
-$border-color-table-dark:                   $color-grayScale-9 !default;
-$box-shadow-table:                          inset -20px 0px 20px -10px $color-grayScale-f0 !default;
+$color-caption:                            $color-grayscale-9 !default;
+$border-color-table:                        $color-grayscale-d !default;
+$border-color-table-dark:                   $color-grayscale-9 !default;
+$box-shadow-table:                          inset -20px 0px 20px -10px $color-grayscale-f0 !default;
 
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
@@ -67,25 +67,25 @@ $box-shadow-table:                          inset -20px 0px 20px -10px $color-gr
 
 $border-masthead:                          $border-base !default;
 $border-width-masthead:                     $border-bottom !default;
-$color-masthead-bg:                        $color-grayScale-f !default;
+$color-masthead-bg:                        $color-grayscale-f !default;
 $font-family-brand-sponsored:               $font-family-brand !default;
 $font-family-brand-unbranded:               $font-family-sans-serif !default;
 $height-brand:                             120px !default;
-$color-brand:                              $color-grayScale-0 !default;
+$color-brand:                              $color-grayscale-0 !default;
 $color-unbranded:                            #cc0000;
 
 // Primary Navigation
 
 $border-width-primary-nav:                   $border-top !default;
 $border-primary-nav-desktop: 					 none !default;
-$color-primary-nav-border:                  $color-grayScale-3 !default;
+$color-primary-nav-border:                  $color-grayscale-3 !default;
 $font-family-navigation:                    $font-family-sans-serif !default;
 $font-size-navigation:                      $font-size-small !default;
-$color-primary-nav-bg:                      $color-grayScale-0 !default;
-$color-primary-nav-dropdown-bg:             $color-grayScale-0 !default;
-$color-primary-nav-link:                    $color-grayScale-f !default;
-$color-primary-nav-link-hover:              $color-grayScale-a !default;
-$color-primary-nav-link-current:            $color-grayScale-9 !default;
+$color-primary-nav-bg:                      $color-grayscale-0 !default;
+$color-primary-nav-dropdown-bg:             $color-grayscale-0 !default;
+$color-primary-nav-link:                    $color-grayscale-f !default;
+$color-primary-nav-link-hover:              $color-grayscale-a !default;
+$color-primary-nav-link-current:            $color-grayscale-9 !default;
 $color-primary-nav-dropdown-link:           $color-primary-nav-link !default;
 $color-primary-nav-dropdown-link-hover:     $color-primary-nav-link-hover !default;
 
@@ -93,27 +93,27 @@ $color-primary-nav-dropdown-link-hover:     $color-primary-nav-link-hover !defau
 
 $border-width-utility-nav:                   $border-top !default;
 $font-size-utility-nav:                      $font-size-smaller !default;
-$color-utility-nav-link:                    $color-grayScale-7 !default;
-$color-utility-nav-link-hover:              $color-grayScale-0 !default;
-$color-utility-nav-in-primary-link:       $color-grayScale-a !default;
-$color-utility-nav-in-primary-link-hover: $color-grayScale-f !default;
+$color-utility-nav-link:                    $color-grayscale-7 !default;
+$color-utility-nav-link-hover:              $color-grayscale-0 !default;
+$color-utility-nav-in-primary-link:       $color-grayscale-a !default;
+$color-utility-nav-in-primary-link-hover: $color-grayscale-f !default;
 
 // Navigation and Search Toggles
 
-$color-nav-toggle:                          $color-grayScale-f !default;
-$color-nav-toggle-hover:                    $color-grayScale-a !default;
-$color-nav-toggle-alt:                      $color-grayScale-9 !default;
-$color-nav-toggle-alt-hover:                $color-grayScale-0 !default;
+$color-nav-toggle:                          $color-grayscale-f !default;
+$color-nav-toggle-hover:                    $color-grayscale-a !default;
+$color-nav-toggle-alt:                      $color-grayscale-9 !default;
+$color-nav-toggle-alt-hover:                $color-grayscale-0 !default;
 
 // Search
 
 $border-width-quicksearch:                  $border-top !default;
-$color-quicksearch-border:                 $color-grayScale-d !default;
+$color-quicksearch-border:                 $color-grayscale-d !default;
 $border-radius-quicksearch-input:           20px 0 0 20px !default;
 $border-radius-quicksearch-button:          0 20px 20px 0 !default;
 $border-search:                            0 !default;
-$color-search-bg:                          $color-grayScale-f5 !default;
-$color-search-text:                        $color-grayScale-0 !default;
+$color-search-bg:                          $color-grayscale-f5 !default;
+$color-search-text:                        $color-grayscale-0 !default;
 
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
@@ -127,15 +127,15 @@ $color-search-text:                        $color-grayScale-0 !default;
 
 // All content and templates
 
-$color-bannerContainer:                    $color-grayScale-f0 !default;
-$color-content-bg:                         $color-grayScale-f !default;
-$color-back-link-before:                    $color-grayScale-f !default;
+$color-bannerContainer:                    $color-grayscale-f0 !default;
+$color-content-bg:                         $color-grayscale-f !default;
+$color-back-link-before:                    $color-grayscale-f !default;
 $back-link-before:                          "← " !default;
 
 // Calendar Template: Event List
 
 $font-size-calendar-topic:                  $font-size-large !default;
-$color-calendar-heading-date-range:          $color-grayScale-9 !default;
+$color-calendar-heading-date-range:          $color-grayscale-9 !default;
 $font-size-calendar-event-date:              $font-size-medium !default;
 $color-calendar-event-link:                 $color-link !default;
 $color-calendar-event-link-hover:           $color-link !default;
@@ -144,23 +144,23 @@ $color-calendar-event-link-hover:           $color-link !default;
 
 $font-family-calendar-month-caption:         $font-family-sans-serif !default;
 $font-size-calendar-month-caption:           $font-size-medium !default;
-$color-calendar-month-caption:              $color-grayScale-7 !default;
-$color-calendar-month-th-bg:                $color-grayScale-e !default;
-$color-calendar-month-th:                   $color-grayScale-0 !default;
+$color-calendar-month-caption:              $color-grayscale-7 !default;
+$color-calendar-month-th-bg:                $color-grayscale-e !default;
+$color-calendar-month-th:                   $color-grayscale-0 !default;
 $padding-calendar-month-cell:               4px !default;
 $font-family-calendar-month-cell:            $font-family-sans-serif !default;
 $color-calendar-month-link:             $color-link !default;
 $color-calendar-month-link-hover:       $color-link !default;
-$color-calendar-month-link-out-bg:       $color-grayScale-f5 !default;
-$color-calendar-month-link-out:          $color-grayScale-9 !default;
-$color-calendar-month-link-today-bg:     $color-grayScale-e !default;
-$color-calendar-month-link-today:        $color-grayScale-0 !default;
+$color-calendar-month-link-out-bg:       $color-grayscale-f5 !default;
+$color-calendar-month-link-out:          $color-grayscale-9 !default;
+$color-calendar-month-link-today-bg:     $color-grayscale-e !default;
+$color-calendar-month-link-today:        $color-grayscale-0 !default;
 
 // Calendar Template: Single
 
 $font-family-single-event-label:             $font-family-sans-serif !default;
 $font-weight-calendar-label:                700 !default;
-$color-single-event-label:               $color-grayScale-9 !default;
+$color-single-event-label:               $color-grayscale-9 !default;
 
 // Profiles Template: List
 
@@ -172,11 +172,11 @@ $color-profile-name:                       $color-link !default;
 $font-family-profile-title:                 $font-family-base !default;
 $font-size-profile-title:                   $font-size-small !default;
 $color-profile-title:                      $color-base !default;
-$color-profile-info-label:                 $color-grayScale-a !default;
+$color-profile-info-label:                 $color-grayscale-a !default;
 
 // Profiles Template: List Mini
 
-$color-profile-mini-border:                $color-grayScale-e !default;
+$color-profile-mini-border:                $color-grayscale-e !default;
 $font-size-profile-mini-name:               $font-size-small !default;
 $font-size-profile-mini-email:              $font-size-smaller !default;
 $line-height-profile-mini-email:            $line-height-medium !default;
@@ -191,8 +191,8 @@ $border-width-news-post:                    $border-top !default;
 
 $font-family-news-meta:                     $font-family-sans-serif !default;
 $font-size-news-meta:                       $font-size-smaller !default;
-$color-news-meta-em:                        $color-grayScale-7 !default;
-$color-news-meta-before:                    $color-grayScale-a !default;
+$color-news-meta-em:                        $color-grayscale-7 !default;
+$color-news-meta-before:                    $color-grayscale-a !default;
 
 // News and Archive Template: Single
 
@@ -200,25 +200,25 @@ $padding-single-meta:                      20px !default;
 $border-single-meta:                       $border-message !default;
 $border-width-single-meta:                  $border-width-message !default;
 $border-radius-single-meta:                 $border-radius-message !default;
-$color-single-meta-bg:                     $color-grayScale-f0 !default;
+$color-single-meta-bg:                     $color-grayscale-f0 !default;
 $color-single-meta-border-left:             $color-message-border-left !default;
 
 $comment-margin:                           15px 0 !default;
 $comment-padding:                          0 0 0 30px !default;
 $border-comment:                           $border-base !default;
 $border-width-comment:                      $border-top !default;
-$border-comment-form:                       1px solid $color-grayScale-e !default;
+$border-comment-form:                       1px solid $color-grayscale-e !default;
 $border-width-comment-form:                  3px !default;
 $font-family-comment:                       $font-family-sans-serif !default;
 $color-comments:                           $color-base !default;
-$color-comment-reply:                      $color-grayScale-a !default;
-$color-comment-author:                     $color-grayScale-a !default;
-$color-comment-author-name:                 $color-grayScale-0 !default;
-$color-comment-form-bg:                     $color-grayScale-f5 !default;
+$color-comment-reply:                      $color-grayscale-a !default;
+$color-comment-author:                     $color-grayscale-a !default;
+$color-comment-author-name:                 $color-grayscale-0 !default;
+$color-comment-form-bg:                     $color-grayscale-f5 !default;
 
 // Plugins and Shortcodes
 
-$color-collapsible-after-border:           $color-grayScale-c !default;
+$color-collapsible-after-border:           $color-grayscale-c !default;
 $color-collapsible-after-border-hover:     $color-link !default;
 
 /// -----------------------------------------------------------------
@@ -239,14 +239,14 @@ $line-height-widget:								 $line-height-base !default;
 
 $font-family-widget-heading:                $font-family-sans-serif !default;
 $font-family-widget-title:                   $font-family-sans-serif !default;
-$border-widget-title:                       4px solid $color-grayScale-0 !default;
+$border-widget-title:                       4px solid $color-grayscale-0 !default;
 $border-width-widget-title:                  0 0 4px 0 !default;
 $font-size-widget-title:                     $font-size-small !default;
 $line-height-widget-title:                   $line-height-large !default;
-$color-widget-title:                        $color-grayScale-0 !default;
+$color-widget-title:                        $color-grayscale-0 !default;
 $widget-title-link-after:                   " →" !default;
-$color-widget-title-link-after:             $color-grayScale-a !default;
-$color-widget-title-link-after-hover:       $color-grayScale-0 !default;
+$color-widget-title-link-after:             $color-grayscale-a !default;
+$color-widget-title-link-after-hover:       $color-grayscale-0 !default;
 
 $color-widget-link:                        $color-link !default;
 $color-widget-link-hover:                  $color-link !default;
@@ -256,7 +256,7 @@ $color-widget-link-hover:                  $color-link !default;
 $font-family-widget-calendar-date:          $font-family-sans-serif !default;
 $font-size-widget-calendar-date:             $font-size-smallest !default;
 $line-height-widget-calendar-date:           $line-height-large !default;
-$color-widget-calendar-date:                $color-grayScale-0 !default;
+$color-widget-calendar-date:                $color-grayscale-0 !default;
 $font-size-widget-calendar-dateDay:          $font-size-large !default;
 $color-widget-calendar-dateDay:             $color-widget-calendar-date !default;
 $font-size-widget-calendar-dateMonth:        $font-size-smallest !default;
@@ -283,7 +283,7 @@ $font-size-widget-post-excerpt:              $font-size-small !default;
 $line-height-widget-post-excerpt:            $line-height-medium !default;
 $font-size-widget-post-date:                 $font-size-smallest !default;
 $font-size-widget-post-meta:                 $font-size-smallest !default;
-$color-widget-post-meta:                    $color-grayScale-a !default;
+$color-widget-post-meta:                    $color-grayscale-a !default;
 
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
@@ -296,8 +296,8 @@ $color-widget-post-meta:                    $color-grayScale-a !default;
 // -----------------------------------------------------------------
 
 $footbar-padding-bottom:                    20px !default;
-$color-footbar-bg:                         $color-grayScale-f5 !default;
-$color-footbar-border:                     $color-grayScale-c !default;
+$color-footbar-bg:                         $color-grayscale-f5 !default;
+$color-footbar-border:                     $color-grayscale-c !default;
 $border-footbar:                           1px solid $color-footbar-border !default;
 $border-width-footbar:                      $border-top !default;
 $color-footbar-container-bg:               $color-footbar-bg !default;
@@ -305,10 +305,10 @@ $color-footbar-widget-link:                $color-link !default;
 $color-footbar-widget-link-hover:          $color-link !default;
 
 $padding-site-footer:                       40px 20px 5px !default;
-$color-site-footer-bg:                      $color-grayScale-0 !default;
-$color-site-footer:								 $color-grayScale-f !default;
-$color-site-footer-link:							 $color-grayScale-8 !default;
-$color-site-footer-link-hover:					 $color-grayScale-f !default;
+$color-site-footer-bg:                      $color-grayscale-0 !default;
+$color-site-footer:								 $color-grayscale-f !default;
+$color-site-footer-link:							 $color-grayscale-8 !default;
+$color-site-footer-link-hover:					 $color-grayscale-f !default;
 
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------

@@ -247,7 +247,7 @@ input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
 	@extend %form-input-focusShadow;
-	outline: thin dotted $color-grayScale-3;
+	outline: thin dotted $color-grayscale-3;
 	outline: 1px auto $color-input-focusBorder;
 }
 .checkbox,
