@@ -250,8 +250,8 @@ nav a {
 	padding: 20px 0 0;
 	margin: 0 10px;
 	border: 1px solid $color-primary-nav-border;
-	border-width: $border-width-utilityNav;
-	font-size: $font-size-utilityNav;
+	border-width: $border-width-utility-nav;
+	font-size: $font-size-utility-nav;
 }
 .masthead-container .utility-nav {
 	@include breakpoint(sm) {
@@ -272,17 +272,17 @@ nav a {
 	}
 }
 .utility-nav a {
-	color: $color-utilityNav-link;
+	color: $color-utility-nav-link;
 	text-decoration: none;
 	&:hover {
-		color: $color-utilityNav-link-hover;
+		color: $color-utility-nav-link-hover;
 	}
 }
 // Required for mobile styles, when utility nav is in primary nav menu
 .primary-nav .utility-nav a {
-	color: $color-utilityNav-inPrimaryNav-link;
+	color: $color-utility-nav-inPrimaryNav-link;
 	&:hover {
-		color: $color-utilityNav-inPrimaryNav-link-hover;
+		color: $color-utility-nav-inPrimaryNav-link-hover;
 	}
 }
 
@@ -292,7 +292,7 @@ nav a {
 .l-default .utility-nav {
 	@include breakpoint(sm) {
 		position: absolute;
-		top: ($height-brand / 2) - ($font-size-utilityNav / 2);
+		top: ($height-brand / 2) - ($font-size-utility-nav / 2);
 		right: 20px;
 		line-height: 1;
 	}
@@ -430,7 +430,7 @@ nav a {
 .l-top-nav .utility-nav {
 	@include breakpoint(sm) {
 		position: absolute;
-		top: (($height-brand / 2) - ($font-size-utilityNav / 2)) + 60;
+		top: (($height-brand / 2) - ($font-size-utility-nav / 2)) + 60;
 		right: 20px;
 		line-height: 1;
 	}
@@ -461,7 +461,7 @@ nav a {
 	display: none;
 	@include breakpoint(sm) {
 		position: absolute;
-		top: ($height-brand / 2) - ($font-size-utilityNav / 2) - 5;
+		top: ($height-brand / 2) - ($font-size-utility-nav / 2) - 5;
 		right: 80px;
 		display: block;
 	}
