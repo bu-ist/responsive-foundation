@@ -12,9 +12,9 @@
 
 $color-body-bg:                            $color-grayScale-0 !default;
 $font-family-base:                          "Benton", sans-serif !default;
-$fontFamily-serif:                         "TiemposText", Georgia, serif !default;
+$font-family-serif:                         "TiemposText", Georgia, serif !default;
 $font-family-sans-serif:                     "Benton", "Helvetica", sans-serif !default;
-$fontFamily-brand:                         "Whitney SSm A", "Whitney SSm B", $font-family-sans-serif !default;
+$font-family-brand:                         "Whitney SSm A", "Whitney SSm B", $font-family-sans-serif !default;
 $color-icons:										 unset;
 
 // Grid
@@ -68,8 +68,8 @@ $boxShadow-table:                          inset -20px 0px 20px -10px $color-gra
 $border-masthead:                          $border-base !default;
 $borderWidth-masthead:                     $border-bottom !default;
 $color-masthead-bg:                        $color-grayScale-f !default;
-$fontFamily-brand-sponsored:               $fontFamily-brand !default;
-$fontFamily-brand-unbranded:               $font-family-sans-serif !default;
+$font-family-brand-sponsored:               $font-family-brand !default;
+$font-family-brand-unbranded:               $font-family-sans-serif !default;
 $height-brand:                             120px !default;
 $color-brand:                              $color-grayScale-0 !default;
 $color-unbranded:                            #cc0000;
