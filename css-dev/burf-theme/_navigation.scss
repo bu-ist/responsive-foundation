@@ -280,9 +280,9 @@ nav a {
 }
 // Required for mobile styles, when utility nav is in primary nav menu
 .primary-nav .utility-nav a {
-	color: $color-utility-nav-inPrimaryNav-link;
+	color: $color-utility-nav-in-primary-link;
 	&:hover {
-		color: $color-utility-nav-inPrimaryNav-link-hover;
+		color: $color-utility-nav-in-primary-link-hover;
 	}
 }
 
