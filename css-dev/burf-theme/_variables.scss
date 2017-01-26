@@ -201,20 +201,20 @@ $border-single-meta:                       $border-message !default;
 $border-width-single-meta:                  $border-width-message !default;
 $border-radius-single-meta:                 $border-radius-message !default;
 $color-single-meta-bg:                     $color-grayScale-f0 !default;
-$color-single-meta-borderLeft:             $color-message-border-left !default;
+$color-single-meta-border-left:             $color-message-border-left !default;
 
 $comment-margin:                           15px 0 !default;
 $comment-padding:                          0 0 0 30px !default;
 $border-comment:                           $border-base !default;
 $border-width-comment:                      $border-top !default;
-$border-commentForm:                       1px solid $color-grayScale-e !default;
-$border-width-commentForm:                  3px !default;
+$border-comment-form:                       1px solid $color-grayScale-e !default;
+$border-width-comment-form:                  3px !default;
 $font-family-comment:                       $font-family-sans-serif !default;
 $color-comments:                           $color-base !default;
 $color-comment-reply:                      $color-grayScale-a !default;
 $color-comment-author:                     $color-grayScale-a !default;
 $color-comment-authorName:                 $color-grayScale-0 !default;
-$color-commentForm-bg:                     $color-grayScale-f5 !default;
+$color-comment-form-bg:                     $color-grayScale-f5 !default;
 
 // Plugins and Shortcodes
 
