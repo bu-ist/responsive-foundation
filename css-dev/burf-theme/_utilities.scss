@@ -9,15 +9,15 @@
 }
 
 /* back link */
-%backlink-styles {
-	/* These classes are using %backlink-styles. */
+%back-link-styles {
+	/* These classes are using %back-link-styles. */
 	&:before {
-		content: $backLink-before;
-		color: $color-backLink-before;
+		content: $back-link-before;
+		color: $color-back-link-before;
 	}
 }
-.backLink {
-	@extend %backlink-styles;
+.back-link {
+	@extend %back-link-styles;
 }
 
 /* message */
