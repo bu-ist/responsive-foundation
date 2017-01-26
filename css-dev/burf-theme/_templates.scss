@@ -258,44 +258,44 @@
 }
 
 /* sidebar */
-.monthCalendar {
+.month {
 	width: 100%;
 }
-.monthCalendar caption {
+.month caption {
 	font-family: $fontFamily-calendarMonth-caption;
 	font-style: normal;
 	font-size: $fontSize-calendarMonth-caption;
 	color: $color-calendarMonth-caption;
 }
-.monthCalendar th,
-.monthCalendar td {
+.month th,
+.month td {
 	width: 14.285714285%;
 	padding: $padding-monthCalendar-cell;
 	font-family: $fontFamily-calendarMonth-cell;
 	text-align: center;
 }
-.monthCalendar th {
+.month th {
 	background: $color-calendarMonth-th-bg;
 	color: $color-calendarMonth-th;
 }
-.monthCalendar td a {
+.month td a {
 	color: $color-calendarMonth-cellLink;
 	&:hover,
 	&::focus {
 		color: $color-calendarMonth-cellLink-hover;
 	}
 }
-.monthCalendar .out {
+.month .out {
 	background: $color-calendarMonth-cellLinkOut-bg;
 }
-.monthCalendar .out a {
+.month .out a {
 	color: $color-calendarMonth-cellLinkOut;
 	text-decoration: none;
 }
-.monthCalendar .today {
+.month .today {
 	background: $color-calendarMonth-cellLinkToday-bg;
 }
-.monthCalendar .today a {
+.month .today a {
 	color: $color-calendarMonth-cellLinkToday;
 	text-decoration: none;
 }
