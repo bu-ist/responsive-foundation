@@ -207,7 +207,7 @@ body {
 	width: 100%;
 	padding: $padding-siteFooter;
 	background: $color-siteFooter-bg;
-	font-family: $fontFamily-sansSerif;
+	font-family: $font-family-sans-serif;
 	font-size: $fontSize-small;
 	line-height: $lineHeight-small;
 	color: $color-grayScale-8;
@@ -219,7 +219,7 @@ body {
 .site-footer h5,
 .site-footer h6 {
 	margin: 0 0 3px;
-	font-family: $fontFamily-sansSerif;
+	font-family: $font-family-sans-serif;
 	font-size: $fontSize-small;
 	line-height: $lineHeight-small;
 	color: $color-siteFooter;
