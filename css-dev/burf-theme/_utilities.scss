@@ -23,13 +23,13 @@
 /* message */
 %message-styles {
 	/* These classes are using %message-styles. */
-	@include border-radius($borderRadius-message);
+	@include border-radius($border-radius-message);
 	padding: $padding-message;
 	border: $border-message;
-	border-width: $borderWidth-message;
-	border-left-color: $color-message-borderLeft;
+	border-width: $border-width-message;
+	border-left-color: $color-message-border-left;
 	background-color: $color-message-bg;
-	font-size: $fontSize-message;
+	font-size: $font-size-message;
 }
 .message {
 	@extend %message-styles;

@@ -36,12 +36,12 @@ $border-bottom:									 0 0 1px 0;
 // Message
 
 $border-message:                           $border-base !default;
-$borderWidth-message:                      1px 1px 1px 5px !default;
-$borderRadius-message:                     3px !default;
+$border-width-message:                      1px 1px 1px 5px !default;
+$border-radius-message:                     3px !default;
 $padding-message:                          20px !default;
-$fontSize-message:                         $fontSize-small !default;
+$font-size-message:                         $fontSize-small !default;
 $color-message-bg:                         $color-grayScale-f0 !default;
-$color-message-borderLeft:                 $color-grayScale-0 !default;
+$color-message-border-left:                 $color-grayScale-0 !default;
 
 // Wordpress WYSIWYG
 
@@ -198,10 +198,10 @@ $color-news-metaBefore:                    $color-grayScale-a !default;
 
 $padding-single-meta:                      20px !default;
 $border-single-meta:                       $border-message !default;
-$borderWidth-single-meta:                  $borderWidth-message !default;
-$borderRadius-single-meta:                 $borderRadius-message !default;
+$borderWidth-single-meta:                  $border-width-message !default;
+$borderRadius-single-meta:                 $border-radius-message !default;
 $color-single-meta-bg:                     $color-grayScale-f0 !default;
-$color-single-meta-borderLeft:             $color-message-borderLeft !default;
+$color-single-meta-borderLeft:             $color-message-border-left !default;
 
 $comment-margin:                           15px 0 !default;
 $comment-padding:                          0 0 0 30px !default;
