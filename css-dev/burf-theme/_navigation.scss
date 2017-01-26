@@ -158,7 +158,7 @@ nav a {
 	@extend %clearfix;
 	display: block;
 	padding: 0 10px;
-	background: $color-primaryNav-bg;
+	background: $color-primary-nav-bg;
 }
 .masthead-container .primary-nav .utility-nav {
 	@include breakpoint(sm) {
@@ -195,23 +195,23 @@ nav a {
 .primary-nav-menu a {
 	display: block;
 	padding: 10px 0;
-	border: 1px solid $color-primaryNav-border;
-	border-width: $border-width-primaryNav;
-	color: $color-primaryNav-link;
+	border: 1px solid $color-primary-nav-border;
+	border-width: $border-width-primary-nav;
+	color: $color-primary-nav-link;
 	text-decoration: none;
 	@include breakpoint(sm) {
 		padding: 0 10px;
-		border: $border-primaryNav-desktop;
+		border: $border-primary-nav-desktop;
 		line-height: 60px;
 	}
 	&:hover,
 	&:focus {
-		color: $color-primaryNav-link-hover;
+		color: $color-primary-nav-link-hover;
 	}
 }
 .primary-nav-menu li a.active,
 .primary-nav-menu li a.active_section {
-	color: $color-primaryNav-link-current;
+	color: $color-primary-nav-link-current;
 }
 .primary-nav-menu ul {
 	display: none;
@@ -221,7 +221,7 @@ nav a {
 		z-index: 2;
 		display: block;
 		width: 240px;
-		background: $color-primaryNav-dropdown-bg;
+		background: $color-primary-nav-dropdown-bg;
 	}
 }
 .primary-nav-menu li:hover ul,
@@ -235,10 +235,10 @@ nav a {
 .primary-nav-menu li li a {
 	padding: 10px 0;
 	line-height: $lineHeight-base;
-	color: $color-primaryNav-dropdown-link;
+	color: $color-primary-nav-dropdown-link;
 	&:hover,
 	&:focus {
-		color: $color-primaryNav-dropdown-link-hover;
+		color: $color-primary-nav-dropdown-link-hover;
 	}
 }
 
@@ -249,7 +249,7 @@ nav a {
 	display: none;
 	padding: 20px 0 0;
 	margin: 0 10px;
-	border: 1px solid $color-primaryNav-border;
+	border: 1px solid $color-primary-nav-border;
 	border-width: $border-width-utilityNav;
 	font-size: $font-size-utilityNav;
 }
@@ -302,7 +302,7 @@ nav a {
 ----------------------------------------------------------------- */
 
 .l-side-nav .wrapper {
-	background: $color-primaryNav-bg;
+	background: $color-primary-nav-bg;
 }
 .l-side-nav .content {
 	@include breakpoint(sm) {
@@ -349,8 +349,8 @@ nav a {
 }
 .l-side-nav .primary-nav-menu a {
 	padding: 10px 0;
-	border: 1px solid $color-primaryNav-border;
-	border-width: $border-width-primaryNav;
+	border: 1px solid $color-primary-nav-border;
+	border-width: $border-width-primary-nav;
 	line-height: $lineHeight-base;
 }
 .l-side-nav .primary-nav-menu li:first-child a {
