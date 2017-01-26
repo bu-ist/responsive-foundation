@@ -23,56 +23,56 @@ a:hover {
 
 %font-jumbo {
 	/* These classes are using %font-jumbo. */
-	margin: $fontMargin-jumbo;
+	margin: $font-margin-jumbo;
 	font-size: $font-size-jumbo;
 	line-height: $line-height-jumbo;
 }
 %font-largest {
 	/* These classes are using %font-largest. */
-	margin: $fontMargin-largest;
+	margin: $font-margin-largest;
 	font-size: $font-size-largest;
 	line-height: $line-height-largest;
 }
 %font-larger {
 	/* These classes are using %font-larger. */
-	margin: $fontMargin-larger;
+	margin: $font-margin-larger;
 	font-size: $font-size-larger;
 	line-height: $line-height-larger;
 }
 %font-large {
 	/* These classes are using %font-large. */
-	margin: $fontMargin-large;
+	margin: $font-margin-large;
 	font-size: $font-size-large;
 	line-height: $line-height-large;
 }
 %font-medium {
 	/* These classes are using %font-medium. */
-	margin: $fontMargin-medium;
+	margin: $font-margin-medium;
 	font-size: $font-size-medium;
 	line-height: $line-height-medium;
 }
 %font-small {
 	/* These classes are using %font-small. */
-	margin: $fontMargin-small;
+	margin: $font-margin-small;
 	font-size: $font-size-small;
 	line-height: $line-height-small;
 }
 /* Generic font size classes */
 %font-smaller {
 	/* These classes are using %font-smaller. */
-	margin: $fontMargin-smaller;
+	margin: $font-margin-smaller;
 	font-size: $font-size-smaller;
 	line-height: $line-height-smaller;
 }
 %font-smallest {
 	/* These classes are using %font-smallest. */
-	margin: $fontMargin-smallest;
+	margin: $font-margin-smallest;
 	font-size: $font-size-smallest;
 	line-height: $line-height-smallest;
 }
 %font-micro {
 	/* These classes are using %font-micro. */
-	margin: $fontMargin-micro;
+	margin: $font-margin-micro;
 	font-size: $font-size-micro;
 	line-height: $line-height-micro;
 }
@@ -117,7 +117,7 @@ h6 small {
 	color: $color-heading-small;
 }
 hgroup {
-	margin: $fontMargin-hgroup;
+	margin: $font-margin-hgroup;
 }
 /* remove margins from headings within hgroup */
 hgroup h1,
@@ -141,7 +141,7 @@ strong {
 	font-weight: bold;
 }
 blockquote {
-	margin: $fontMargin-blockquote;
+	margin: $font-margin-blockquote;
 }
 /* Address styling not present in Safari 5 and Chrome. */
 dfn {
@@ -161,7 +161,7 @@ mark {
 /* Address margins set differently in IE 6/7. */
 p,
 pre {
-	margin: $fontMargin-base;
+	margin: $font-margin-base;
 }
 /* Correct font family set oddly in IE 6, Safari 4/5, and Chrome. */
 code,
@@ -218,10 +218,10 @@ dl,
 menu,
 ol,
 ul {
-	margin: $fontMargin-list;
+	margin: $font-margin-list;
 }
 dd {
-	margin: $fontMargin-dd;
+	margin: $font-margin-dd;
 }
 /* Address paddings set differently in IE 6/7. */
 menu,
@@ -261,7 +261,7 @@ code {
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
 	padding: 20px;
-	margin: $fontMargin-code;
+	margin: $font-margin-code;
 	border: 1px solid $color-grayScale-e;
 	background: $color-code-bg;
 }

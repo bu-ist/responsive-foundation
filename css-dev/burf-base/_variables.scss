@@ -109,16 +109,16 @@ $line-height-larger:                        1.25 !default;
 $line-height-largest:                       1.15 !default;
 $line-height-jumbo:                         1.05 !default;
 
-$fontMargin-base:                          0 0 25px 0 !default;
-$fontMargin-micro:                         $fontMargin-base !default;
-$fontMargin-smallest:                      $fontMargin-base !default;
-$fontMargin-smaller:                       $fontMargin-base !default;
-$fontMargin-small:                         $fontMargin-base !default;
-$fontMargin-medium:                        $fontMargin-base !default;
-$fontMargin-large:                         $fontMargin-base !default;
-$fontMargin-larger:                        $fontMargin-base !default;
-$fontMargin-largest:                       0 0 27px 0 !default;
-$fontMargin-jumbo:                         0 0 25px 0 !default;
+$font-margin-base:                          0 0 25px 0 !default;
+$font-margin-micro:                         $font-margin-base !default;
+$font-margin-smallest:                      $font-margin-base !default;
+$font-margin-smaller:                       $font-margin-base !default;
+$font-margin-small:                         $font-margin-base !default;
+$font-margin-medium:                        $font-margin-base !default;
+$font-margin-large:                         $font-margin-base !default;
+$font-margin-larger:                        $font-margin-base !default;
+$font-margin-largest:                       0 0 27px 0 !default;
+$font-margin-jumbo:                         0 0 25px 0 !default;
 
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
@@ -164,7 +164,7 @@ $color-base:                               $color-grayScale-5 !default;
 $font-family-heading:                       $font-family-sans-serif !default;
 $color-heading:                            $color-grayScale-0 !default;
 $color-heading-small:                      $color-grayScale-9 !default;
-$fontMargin-hgroup:                        $fontMargin-base !default;
+$font-margin-hgroup:                        $font-margin-base !default;
 
 $color-link:                               #0f69d7 !default;
 $color-link-visited:                       #7337af !default;
@@ -178,16 +178,16 @@ $color-button-primary-bg:                  #0078e7 !default;
 $color-button-primary-text:                $color-grayScale-f !default;
 
 $fontPadding-code:                         0.2em 0.4em !default;
-$fontMargin-code:                          30px 0 !default;
+$font-margin-code:                          30px 0 !default;
 $color-code:                               $color-grayScale-7 !default;
 $color-code-bg:                            $color-grayScale-f5 !default;
 
-$fontMargin-blockquote:                    1em 40px !default;
+$font-margin-blockquote:                    1em 40px !default;
 
-$fontMargin-list:                          $fontMargin-base !default;
+$font-margin-list:                          $font-margin-base !default;
 $fontPadding-list:                         0 0 0 40px !default;
 
-$fontMargin-dd:                            0 0 0 40px !default;
+$font-margin-dd:                            0 0 0 40px !default;
 
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
