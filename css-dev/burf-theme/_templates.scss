@@ -237,10 +237,10 @@
 	font-size: $font-size-calendar-topic;
 }
 .calendar-range {
-	color: $color-calendar-headingDateRange;
+	color: $color-calendar-heading-date-range;
 }
 .event-list .event-date {
-	font-size: $font-size-calendar-eventDate;
+	font-size: $font-size-calendar-event-date;
 }
 .event-list ul {
 	padding: 0;
@@ -250,10 +250,10 @@
 }
 
 .event-list .event-link a {
-	color: $color-calendar-eventLink;
+	color: $color-calendar-event-link;
 	&:hover,
 	&:focus {
-		color: $color-calendar-eventLink-hover;
+		color: $color-calendar-event-link-hover;
 	}
 }
 
