@@ -36,8 +36,8 @@
 }
 
 /* .responsive-video */
-%responsiveVideo-styles {
-	/* These classes are using %responsiveVideo-styles. */
+%responsive-video-styles {
+	/* These classes are using %responsive-video-styles. */
 	position: relative;
 	padding-top: 45px;
 	padding-bottom: 56.25%;
@@ -54,7 +54,7 @@
 	}
 }
 .responsive-video {
-	@extend %responsiveVideo-styles;
+	@extend %responsive-video-styles;
 }
 
 
