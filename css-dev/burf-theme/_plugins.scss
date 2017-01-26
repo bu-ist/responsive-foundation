@@ -69,7 +69,7 @@
 }
 .profile-listing figure,
 .single-profile .profile-thumb figure  {
-	@include border-radius($borderRadius-profile-figure);
+	@include border-radius($border-radius-profile-figure);
 	line-height: 0;
 }
 .profile-listing figure img {

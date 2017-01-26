@@ -216,7 +216,7 @@ textarea {
 	padding: $form-input-padding;
 	border: $form-input-border;
 	@include	box-shadow($form-input-shadow);
-	@include border-radius($form-input-borderRadius);
+	@include border-radius($form-input-border-radius);
 }
 %form-input-focusShadow {
 	@include box-shadow($form-input-focusShadow);

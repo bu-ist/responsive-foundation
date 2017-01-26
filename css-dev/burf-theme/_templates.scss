@@ -196,7 +196,7 @@
 
 .single .content-area .meta {
 	@extend %message-styles;
-	@include border-radius($borderRadius-single-meta);
+	@include border-radius($border-radius-single-meta);
 	padding: $padding-single-meta;
 	margin-bottom: 30px;
 	border: $border-single-meta;

@@ -38,7 +38,7 @@ nav a {
 }
 #quicksearch .button {
 	@extend %button-styles-primary;
-	@include border-radius($borderRadius-quicksearch-button);
+	@include border-radius($border-radius-quicksearch-button);
 	width: 25%;
 	padding:11px 0 12px 0;
 	float:right;
@@ -51,7 +51,7 @@ nav a {
 	border-bottom: $border-search;
 }
 #q {
-	@include border-radius($borderRadius-quicksearch-input);
+	@include border-radius($border-radius-quicksearch-input);
 	width: 75%;
 	padding-right: 10px;
 	padding-left: 10px;
