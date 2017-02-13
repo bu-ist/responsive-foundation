@@ -107,8 +107,8 @@
 /* Content Nav
 ----------------------------------------------------------------- */
 
-.widget_bu_pages,
-.widget_nav_menu {
+.widget-bu-pages,
+.widget-nav-menu {
 	h3 {
 		margin-bottom: 0;
 	}
@@ -149,8 +149,8 @@
 	}
 }
 
-.widget_bu_pages .active,
-.widget_nav_menu .current_page_item a {
+.widget-bu-pages .active,
+.widget-nav-menu .current-page-item a {
 	color: $color-widget-contentnav-active;
 }
 
