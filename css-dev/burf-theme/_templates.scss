@@ -54,8 +54,8 @@
 	@extend %template-narrow;
 
 	// Layouts
-	&.sidebarLocation-left,
-	&.sidebarLocation-right {
+	&.sidebar-location-left,
+	&.sidebar-location-right {
 		@extend %remove-template-narrow;
 	}
 }
@@ -103,8 +103,8 @@
 	@extend %template-narrow-sidebar;
 
 	// Layouts
-	.sidebarLocation-left &,
-	.sidebarLocation-right & {
+	.sidebar-location-left &,
+	.sidebar-location-right & {
 		@extend %remove-template-narrow-sidebar;
 	}
 }
