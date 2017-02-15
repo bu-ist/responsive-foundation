@@ -13,7 +13,7 @@
 
 	@include breakpoint(sm) {
 		max-width: $container-SM;
-		padding: $grid-container-padding-largeScreen;
+		padding: $grid-container-padding-large-screen;
 	}
 	@include breakpoint(md) {
 		max-width: $container-MD;

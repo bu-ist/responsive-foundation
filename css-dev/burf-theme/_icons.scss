@@ -15,7 +15,7 @@
 	display: inline-block;
 	padding-bottom: 0.2em; /* Accomodate for inline icons */
 	vertical-align: middle;
-	font-family: $fontFamily-icons;
+	font-family: $font-family-icons;
 	font-weight: normal !important;
 	font-style: normal !important;
 	font-variant: normal !important;
@@ -1594,82 +1594,81 @@
 
 /* Footer links */
 
-.siteFooter-social a {
+.site-footer-social a {
 	@include transition(color 200ms ease-in-out 0s);
 }
-
-.siteFooter-social i {
+.site-footer-social i {
 	@extend %icon;
-	font-size: $fontSize-large;
+	font-size: $font-size-large;
 }
-.siteFooter-social a[href*="dropbox.com"] i {
+.site-footer-social a[href*="dropbox.com"] i {
 	@extend %icon-dropbox;
 }
-.siteFooter-social a[href*="facebook.com"] i {
+.site-footer-social a[href*="facebook.com"] i {
 	@extend %icon-facebook;
 }
-.siteFooter-social a[href*="flickr.com"] i {
+.site-footer-social a[href*="flickr.com"] i {
 	@extend %icon-flickr;
 }
-.siteFooter-social a[href*="foursquare.com"] i {
+.site-footer-social a[href*="foursquare.com"] i {
 	@extend %icon-foursquare;
 }
-.siteFooter-social a[href*="github.com"] i {
+.site-footer-social a[href*="github.com"] i {
 	@extend %icon-github;
 }
-.siteFooter-social a[href*="instagram.com"] i {
+.site-footer-social a[href*="instagram.com"] i {
 	@extend %icon-instagram;
 }
-.siteFooter-social a[href*="kickstarter.com"] i {
+.site-footer-social a[href*="kickstarter.com"] i {
 	@extend %icon-kickstarter;
 }
-.siteFooter-social a[href*="linkedin.com"] i {
+.site-footer-social a[href*="linkedin.com"] i {
 	@extend %icon-linkedin;
 }
-.siteFooter-social a[href*="pinterest.com"] i {
+.site-footer-social a[href*="pinterest.com"] i {
 	@extend %icon-pinterest;
 }
-.siteFooter-social a[href*="plus.google.com"] i {
+.site-footer-social a[href*="plus.google.com"] i {
 	@extend %icon-googleplus;
 }
-.siteFooter-social a[href*="getpocket.com"] i {
+.site-footer-social a[href*="getpocket.com"] i {
 	@extend %icon-pocket;
 }
-.siteFooter-social a[href*="reddit.com"] i {
+.site-footer-social a[href*="reddit.com"] i {
 	@extend %icon-reddit;
 }
-.siteFooter-social a[href*="tumblr.com"] i {
+.site-footer-social a[href*="tumblr.com"] i {
 	@extend %icon-tumblr;
 }
-.siteFooter-social a[href*="twitter.com"] i {
+.site-footer-social a[href*="twitter.com"] i {
 	@extend %icon-twitter;
 }
-.siteFooter-social a[href*="vimeo.com"] i {
+.site-footer-social a[href*="vimeo.com"] i {
 	@extend %icon-vimeo;
 }
-.siteFooter-social a[href*="vine.co"] i {
+.site-footer-social a[href*="vine.co"] i {
 	@extend %icon-vine;
 }
-.siteFooter-social a[href*="youtube.com"] i {
+.site-footer-social a[href*="youtube.com"] i {
 	@extend %icon-youtube;
 }
 /* hide labels */
-.siteFooter-social a[href*="dropbox.com"] span,
-.siteFooter-social a[href*="facebook.com"] span,
-.siteFooter-social a[href*="flickr.com"] span,
-.siteFooter-social a[href*="foursquare.com"] span,
-.siteFooter-social a[href*="github.com"] span,
-.siteFooter-social a[href*="instagram.com"] span,
-.siteFooter-social a[href*="kickstarter.com"] span,
-.siteFooter-social a[href*="linkedin.com"] span,
-.siteFooter-social a[href*="pinterest.com"] span,
-.siteFooter-social a[href*="plus.google.com"] span,
-.siteFooter-social a[href*="getpocket.com"] span,
-.siteFooter-social a[href*="reddit.com"] span,
-.siteFooter-social a[href*="tumblr.com"] span,
-.siteFooter-social a[href*="twitter.com"] span,
-.siteFooter-social a[href*="vimeo.com"] span,
-.siteFooter-social a[href*="vine.co"] span,
-.siteFooter-social a[href*="youtube.com"] span {
+.site-footer-social a[href*="dropbox.com"] span,
+.site-footer-social a[href*="facebook.com"] span,
+.site-footer-social a[href*="flickr.com"] span,
+.site-footer-social a[href*="foursquare.com"] span,
+.site-footer-social a[href*="github.com"] span,
+.site-footer-social a[href*="instagram.com"] span,
+.site-footer-social a[href*="kickstarter.com"] span,
+.site-footer-social a[href*="linkedin.com"] span,
+.site-footer-social a[href*="pinterest.com"] span,
+.site-footer-social a[href*="plus.google.com"] span,
+.site-footer-social a[href*="getpocket.com"] span,
+.site-footer-social a[href*="reddit.com"] span,
+.site-footer-social a[href*="tumblr.com"] span,
+.site-footer-social a[href*="twitter.com"] span,
+.site-footer-social a[href*="vimeo.com"] span,
+.site-footer-social a[href*="vine.co"] span,
+.site-footer-social a[href*="youtube.com"] span {
 	display: none;
 }

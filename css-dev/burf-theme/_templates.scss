@@ -13,8 +13,8 @@
 /* Narrow Content Column
 ----------------------------------------------------------------- */
 
-%templateNarrow {
-	/* These classes are using %templateNarrow. */
+%template-narrow {
+	/* These classes are using %template-narrow. */
 	.content-container {
 		max-width: $container-SM;
 	}
@@ -24,8 +24,8 @@
 }
 
 // A utility class to easily undo narrow column widths.
-// Always overrides %templateNarrow.
-%removeTemplateNarrow {
+// Always overrides %template-narrow.
+%remove-template-narrow {
 	.content-container {
 		max-width: $container-LG;
 	}
@@ -38,7 +38,7 @@
 }
 // Does not have a sidebar.
 .single-calendar {
-	@extend %templateNarrow;
+	@extend %template-narrow;
 
 	.content-area {
 		left: 0;
@@ -51,12 +51,12 @@
 .page-template-profiles,
 .single-profile,
 .post-type-archive-profile {
-	@extend %templateNarrow;
+	@extend %template-narrow;
 
 	// Layouts
 	&.sidebarLocation-left,
 	&.sidebarLocation-right {
-		@extend %removeTemplateNarrow;
+		@extend %remove-template-narrow;
 	}
 }
 
@@ -64,14 +64,14 @@
 ----------------------------------------------------------------- */
 
 // A utility class to style sidebars on narrow width templates.
-%templateNarrowSidebar {
-	/* These classes are using %templateNarrowSidebar. */
+%template-narrow-sidebar {
+	/* These classes are using %template-narrow-sidebar. */
 	@extend %clearfix;
 	@extend %col-sm-margin-parent;
 	width: auto;
 	float: none;
 	clear: both;
-	margin-bottom: $widget-marginBottom;
+	margin-bottom: $widget-margin-bottom;
 
 	.widget {
 		@extend %col-sm-margin-half;
@@ -82,8 +82,8 @@
 }
 
 // A utility class to easily undo narrow width sidebar styles.
-// Always overrides %templateNarrowSidebar.
-%removeTemplateNarrowSidebar {
+// Always overrides %template-narrow-sidebar.
+%remove-template-narrow-sidebar {
 	@extend %sidebar-styles;
 	@extend %container-styles;
 	@include breakpoint(md) {
@@ -94,18 +94,18 @@
 	.widget {
 		width: 100%;
 		margin-left: 0;
-		margin-bottom: $widget-marginBottom;
+		margin-bottom: $widget-margin-bottom;
 	}
 }
 
 .sidebar-posts,
 .sidebar-profiles {
-	@extend %templateNarrowSidebar;
+	@extend %template-narrow-sidebar;
 
 	// Layouts
 	.sidebarLocation-left &,
 	.sidebarLocation-right & {
-		@extend %removeTemplateNarrowSidebar;
+		@extend %remove-template-narrow-sidebar;
 	}
 }
 
@@ -122,7 +122,7 @@
 	padding-top: 30px;
 	margin-top: 30px;
 	border: $border-news-post;
-	border-width: $borderWidth-news-post;
+	border-width: $border-width-news-post;
 }
 .news-posts .post:first-child,
 .archive .content-container article:first-child {
@@ -136,25 +136,25 @@
 .archive .content-container .tags,
 .archive .content-container .taxonomies {
 	margin-bottom: 20px;
-	font-family: $fontFamily-news-meta;
-	font-size: $fontSize-news-meta;
+	font-family: $font-family-news-meta;
+	font-size: $font-size-news-meta;
 }
 .news-posts .meta span:before {
 	content: "\a0\b7\a0";
-	color: $color-news-metaBefore;
+	color: $color-news-meta-before;
 }
 .news-posts .meta span:first-child:before {
 	content: "";
 }
 .news-posts .meta em {
-	color: $color-news-metaEm;
+	color: $color-news-meta-em;
 }
 .paging-navigation {
 	@extend %clearfix;
 	padding-top: 30px;
 	margin-top: 30px;
 	border: $border-news-post;
-	border-width: $borderWidth-news-post;
+	border-width: $border-width-news-post;
 }
 .paging-navigation .screen-reader-text {
 	display: none;
@@ -185,7 +185,7 @@
 	padding-top: 30px;
 	margin-top: 30px;
 	border: $border-news-post;
-	border-width: $borderWidth-news-post;
+	border-width: $border-width-news-post;
 	&:first-child {
 		border: none;
 	}
@@ -196,14 +196,14 @@
 
 .single .content-area .meta {
 	@extend %message-styles;
-	@include border-radius($borderRadius-single-meta);
+	@include border-radius($border-radius-single-meta);
 	padding: $padding-single-meta;
 	margin-bottom: 30px;
 	border: $border-single-meta;
-	border-width: $borderWidth-single-meta;
-	border-left-color: $color-single-meta-borderLeft;
+	border-width: $border-width-single-meta;
+	border-left-color: $color-single-meta-border-left;
 	background-color: $color-single-meta-bg;
-	font-size: $fontSize-single-meta;
+	font-size: $font-size-single-meta;
 }
 .single .meta .post-title {
 	margin-bottom: 10px;
@@ -211,22 +211,22 @@
 .single .meta .byline {
 	margin-bottom: 10px;
 	font-weight: normal;
-	font-size: $fontSize-single-meta;
+	font-size: $font-size-single-meta;
 }
 .single .meta p {
 	margin-bottom: 10px;
-	font-family: $fontFamily-news-meta;
+	font-family: $font-family-news-meta;
 }
 .single .meta p:last-child {
 	margin-bottom: 0;
 }
 .single .meta em {
-	color: $color-news-metaEm;
+	color: $color-news-meta-em;
 }
 .archive-link {
 	@extend %button-styles;
 	@extend %button-styles-primary;
-	@extend %backlink-styles;
+	@extend %back-link-styles;
 	width: 100%;
 }
 
@@ -234,13 +234,13 @@
 ----------------------------------------------------------------- */
 
 .calendar-topic {
-	font-size: $fontSize-calendar-topic;
+	font-size: $font-size-calendar-topic;
 }
 .calendar-range {
-	color: $color-calendar-headingDateRange;
+	color: $color-calendar-heading-date-range;
 }
 .event-list .event-date {
-	font-size: $fontSize-calendar-eventDate;
+	font-size: $font-size-calendar-event-date;
 }
 .event-list ul {
 	padding: 0;
@@ -250,53 +250,53 @@
 }
 
 .event-list .event-link a {
-	color: $color-calendar-eventLink;
+	color: $color-calendar-event-link;
 	&:hover,
 	&:focus {
-		color: $color-calendar-eventLink-hover;
+		color: $color-calendar-event-link-hover;
 	}
 }
 
 /* sidebar */
-.monthCalendar {
+.month {
 	width: 100%;
 }
-.monthCalendar caption {
-	font-family: $fontFamily-calendarMonth-caption;
+.month caption {
+	font-family: $font-family-calendar-month-caption;
 	font-style: normal;
-	font-size: $fontSize-calendarMonth-caption;
-	color: $color-calendarMonth-caption;
+	font-size: $font-size-calendar-month-caption;
+	color: $color-calendar-month-caption;
 }
-.monthCalendar th,
-.monthCalendar td {
+.month th,
+.month td {
 	width: 14.285714285%;
-	padding: $padding-monthCalendar-cell;
-	font-family: $fontFamily-calendarMonth-cell;
+	padding: $padding-calendar-month-cell;
+	font-family: $font-family-calendar-month-cell;
 	text-align: center;
 }
-.monthCalendar th {
-	background: $color-calendarMonth-th-bg;
-	color: $color-calendarMonth-th;
+.month th {
+	background: $color-calendar-month-th-bg;
+	color: $color-calendar-month-th;
 }
-.monthCalendar td a {
-	color: $color-calendarMonth-cellLink;
+.month td a {
+	color: $color-calendar-month-link;
 	&:hover,
 	&::focus {
-		color: $color-calendarMonth-cellLink-hover;
+		color: $color-calendar-month-link-hover;
 	}
 }
-.monthCalendar .out {
-	background: $color-calendarMonth-cellLinkOut-bg;
+.month .out {
+	background: $color-calendar-month-link-out-bg;
 }
-.monthCalendar .out a {
-	color: $color-calendarMonth-cellLinkOut;
+.month .out a {
+	color: $color-calendar-month-link-out;
 	text-decoration: none;
 }
-.monthCalendar .today {
-	background: $color-calendarMonth-cellLinkToday-bg;
+.month .today {
+	background: $color-calendar-month-link-today-bg;
 }
-.monthCalendar .today a {
-	color: $color-calendarMonth-cellLinkToday;
+.month .today a {
+	color: $color-calendar-month-link-today;
 	text-decoration: none;
 }
 
@@ -308,10 +308,10 @@
 ----------------------------------------------------------------- */
 
 .single-event .label {
-	font-family: $fontFamily-singleEvent-label;
-	font-weight: $fontWeight-calendar-label;
-	font-size: $fontSize-smaller;
-	color: $color-calendarSingle-label;
+	font-family: $font-family-single-event-label;
+	font-weight: $font-weight-calendar-label;
+	font-size: $font-size-smaller;
+	color: $color-single-event-label;
 	text-transform: uppercase;
 }
 .date-summary {
@@ -343,11 +343,11 @@
 .date-summary .time {
 	display: block;
 	font-weight: bold;
-	font-size: $fontSize-medium;
+	font-size: $font-size-medium;
 	color: #000000;
 }
 .single-event .description {
-	margin: $fontMargin-base;
+	margin: $font-margin-base;
 }
 
 .single-event .additional-details dd {

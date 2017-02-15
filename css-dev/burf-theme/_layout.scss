@@ -15,7 +15,7 @@ body {
 	@extend %clearfix;
 	position: relative;
 	border: $border-masthead;
-	border-width: $borderWidth-masthead;
+	border-width: $border-width-masthead;
 	background: $color-masthead-bg;
 }
 .masthead-container {
@@ -33,25 +33,25 @@ body {
 	display: block;
 	margin: 0 auto;
 }
-.bannerContainer-windowWidth {
+.banner-container-window-width {
 	@include breakpoint(lg) {
 		padding: 20px;
 		background: $color-bannerContainer;
 	}
 }
-.bannerContainer-pageWidth {
+.banner-container-page-width {
 	margin: -15px 0 35px;
 	@include breakpoint(sm) {
 		margin: 0 0 60px;
 	}
 }
-.bannerContainer-pageWidth img {
+.banner-container-page-width img {
 	@include breakpoint(md) {
 		width: 100%;
 		background: $color-bannerContainer;
 	}
 }
-.bannerContainer-contentWidth {
+.banner-container-content-width {
 	padding: 0;
 	margin: -15px 0 35px;
 	background: none;
@@ -65,13 +65,13 @@ body {
 
 .content-area {
 	@extend %col-md-#{$grid-number-columns*((($number-columns)-1)/$number-columns)};
-	padding-bottom: $column-paddingBottom;
+	padding-bottom: $column-padding-bottom;
 	@include breakpoint(sm) {
-		padding-bottom: $column-paddingBottom-largeScreen;
+		padding-bottom: $column-padding-bottom-large-screen;
 	}
 
 	// Left layout
-	.sidebarLocation-left & {
+	.sidebar-location-left & {
 		@extend %col-md-push-#{$grid-number-columns*(1/$number-columns)};
 	}
 	.page-template-no-sidebars & {
@@ -81,8 +81,8 @@ body {
 }
 
 // Bottom layout
-.sidebarLocation-bottom {
-	@extend %templateNarrow;
+.sidebar-location-bottom {
+	@extend %template-narrow;
 
 	.sidebar {
 		@extend %col-sm-margin-parent;
@@ -91,7 +91,7 @@ body {
 		width: auto;
 		float: none;
 		padding-left: 0;
-		margin-bottom: $widget-marginBottom;
+		margin-bottom: $widget-margin-bottom;
 
 		.widget {
 			@extend %col-sm-margin-half;
@@ -105,16 +105,16 @@ body {
 
 %sidebar-styles {
 	@extend %col-md-#{$grid-number-columns*(1/$number-columns)};
-	font-size: $fontSize-small;
+	font-size: $font-size-small;
 	clear: none;
 
-	// TODO: sunset this in a future release - this padding should really only apply to .sidebarLocation-right
+	// TODO: sunset this in a future release - this padding should really only apply to .sidebar-location-right
 	@include breakpoint(md) {
 		padding-left: $sidebar-padding;
 	}
 
 	// Left layout
-	.sidebarLocation-left & {
+	.sidebar-location-left & {
 		@extend %col-md-pull-#{$grid-number-columns*(1-(1/$number-columns))};
 
 		@include breakpoint(md) {
@@ -133,7 +133,7 @@ body {
 ----------------------------------------------------------------- */
 
 // Left layout
-.sidebarLocation-left {
+.sidebar-location-left {
 	.sidebar {
 		@extend %col-md-pull-#{$grid-number-columns*(1-(1/$number-columns))};
 
@@ -144,7 +144,7 @@ body {
 		}
 	}
 	.sidebar-posts {
-		@extend %removeTemplateNarrowSidebar;
+		@extend %remove-template-narrow-sidebar;
 	}
 }
 
@@ -154,16 +154,16 @@ body {
 .footbar {
 	@extend %clearfix;
 	width: 100%;
-	padding-bottom: $footbar-paddingBottom;
+	padding-bottom: $footbar-padding-bottom;
 	border: $border-footbar;
-	border-width: $borderWidth-footbar;
+	border-width: $border-width-footbar;
 	background: $color-footbar-bg;
 }
 .footbar-container {
 	@extend %container-styles;
 	background: $color-footbar-container-bg;
 	@include breakpoint(md) {
-		padding: $grid-container-padding-largeScreen;
+		padding: $grid-container-padding-large-screen;
 	}
 }
 .footbar-container .widget {
@@ -205,12 +205,12 @@ body {
 	display: block;
 	clear: both;
 	width: 100%;
-	padding: $padding-siteFooter;
-	background: $color-siteFooter-bg;
-	font-family: $fontFamily-sansSerif;
-	font-size: $fontSize-small;
-	line-height: $lineHeight-small;
-	color: $color-grayScale-8;
+	padding: $padding-site-footer;
+	background: $color-site-footer-bg;
+	font-family: $font-family-sans-serif;
+	font-size: $font-size-small;
+	line-height: $line-height-small;
+	color: $color-grayscale-8;
 }
 .site-footer h1,
 .site-footer h2,
@@ -219,15 +219,15 @@ body {
 .site-footer h5,
 .site-footer h6 {
 	margin: 0 0 3px;
-	font-family: $fontFamily-sansSerif;
-	font-size: $fontSize-small;
-	line-height: $lineHeight-small;
-	color: $color-siteFooter;
+	font-family: $font-family-sans-serif;
+	font-size: $font-size-small;
+	line-height: $line-height-small;
+	color: $color-site-footer;
 }
 .site-footer a {
-	color: $color-siteFooter-link;
+	color: $color-site-footer-link;
 	&:hover {
-		color: $color-siteFooter-link-hover;
+		color: $color-site-footer-link-hover;
 	}
 }
 .site-footer li {
