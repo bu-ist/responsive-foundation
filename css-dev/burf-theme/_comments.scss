@@ -19,16 +19,16 @@
 }
 .comment {
 	border: $border-comment;
-	border-width: $borderWidth-comment;
+	border-width: $border-width-comment;
 }
 .comment-body {
 	position: relative;
 	margin: $comment-margin;
-	font-family: $fontFamily-comment;
-	font-size: $fontSize-smaller;
+	font-family: $font-family-comment;
+	font-size: $font-size-smaller;
 }
 .comment-reply-link {
-	font-size: $fontSize-smallest;
+	font-size: $font-size-smallest;
 	color: $color-comment-reply;
 }
 .comment-author {
@@ -39,8 +39,8 @@
 	display: none;
 }
 .comment-author .fn {
-	font-size: $fontSize-small;
-	color: $color-comment-authorName;
+	font-size: $font-size-small;
+	color: $color-comment-author-name;
 }
 // TODO: change markup, then style
 .comment-metadata time {
@@ -58,13 +58,13 @@
 	position: relative;
 	padding: 20px;
 	margin: 15px 0 20px;
-	border: $border-commentForm;
-	border-width: $borderWidth-commentForm;
-	background: $color-commentForm-bg;
+	border: $border-comment-form;
+	border-width: $border-width-comment-form;
+	background: $color-comment-form-bg;
 }
 .comment-respond-title {
 	margin: 0 0 20px;
-	font-size: $fontSize-medium;
+	font-size: $font-size-medium;
 }
 .comment-respond fieldset {
 	padding: 0;
@@ -78,7 +78,7 @@
 	margin: 15px 0 0;
 }
 .form-tip {
-	font-size: $fontSize-smallest;
+	font-size: $font-size-smallest;
 	@include breakpoint(sm) {
 		display: block;
 	}
@@ -116,5 +116,5 @@
 	top: 20px;
 	right: 20px;
 	display: inline-block;
-	font-size: $fontSize-smallest;
+	font-size: $font-size-smallest;
 }

@@ -23,58 +23,58 @@ a:hover {
 
 %font-jumbo {
 	/* These classes are using %font-jumbo. */
-	margin: $fontMargin-jumbo;
-	font-size: $fontSize-jumbo;
-	line-height: $lineHeight-jumbo;
+	margin: $font-margin-jumbo;
+	font-size: $font-size-jumbo;
+	line-height: $line-height-jumbo;
 }
 %font-largest {
 	/* These classes are using %font-largest. */
-	margin: $fontMargin-largest;
-	font-size: $fontSize-largest;
-	line-height: $lineHeight-largest;
+	margin: $font-margin-largest;
+	font-size: $font-size-largest;
+	line-height: $line-height-largest;
 }
 %font-larger {
 	/* These classes are using %font-larger. */
-	margin: $fontMargin-larger;
-	font-size: $fontSize-larger;
-	line-height: $lineHeight-larger;
+	margin: $font-margin-larger;
+	font-size: $font-size-larger;
+	line-height: $line-height-larger;
 }
 %font-large {
 	/* These classes are using %font-large. */
-	margin: $fontMargin-large;
-	font-size: $fontSize-large;
-	line-height: $lineHeight-large;
+	margin: $font-margin-large;
+	font-size: $font-size-large;
+	line-height: $line-height-large;
 }
 %font-medium {
 	/* These classes are using %font-medium. */
-	margin: $fontMargin-medium;
-	font-size: $fontSize-medium;
-	line-height: $lineHeight-medium;
+	margin: $font-margin-medium;
+	font-size: $font-size-medium;
+	line-height: $line-height-medium;
 }
 %font-small {
 	/* These classes are using %font-small. */
-	margin: $fontMargin-small;
-	font-size: $fontSize-small;
-	line-height: $lineHeight-small;
+	margin: $font-margin-small;
+	font-size: $font-size-small;
+	line-height: $line-height-small;
 }
 /* Generic font size classes */
 %font-smaller {
 	/* These classes are using %font-smaller. */
-	margin: $fontMargin-smaller;
-	font-size: $fontSize-smaller;
-	line-height: $lineHeight-smaller;
+	margin: $font-margin-smaller;
+	font-size: $font-size-smaller;
+	line-height: $line-height-smaller;
 }
 %font-smallest {
 	/* These classes are using %font-smallest. */
-	margin: $fontMargin-smallest;
-	font-size: $fontSize-smallest;
-	line-height: $lineHeight-smallest;
+	margin: $font-margin-smallest;
+	font-size: $font-size-smallest;
+	line-height: $line-height-smallest;
 }
 %font-micro {
 	/* These classes are using %font-micro. */
-	margin: $fontMargin-micro;
-	font-size: $fontSize-micro;
-	line-height: $lineHeight-micro;
+	margin: $font-margin-micro;
+	font-size: $font-size-micro;
+	line-height: $line-height-micro;
 }
 
 /* Address font sizes and margins set differently in IE 6/7. Address font sizes within `section` and `article` in Firefox 4+, Safari 5, and Chrome. */
@@ -103,7 +103,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $fontFamily-heading;
+	font-family: $font-family-heading;
 	color: $color-heading;
 }
 h1 small,
@@ -117,7 +117,7 @@ h6 small {
 	color: $color-heading-small;
 }
 hgroup {
-	margin: $fontMargin-hgroup;
+	margin: $font-margin-hgroup;
 }
 /* remove margins from headings within hgroup */
 hgroup h1,
@@ -141,7 +141,7 @@ strong {
 	font-weight: bold;
 }
 blockquote {
-	margin: $fontMargin-blockquote;
+	margin: $font-margin-blockquote;
 }
 /* Address styling not present in Safari 5 and Chrome. */
 dfn {
@@ -161,15 +161,15 @@ mark {
 /* Address margins set differently in IE 6/7. */
 p,
 pre {
-	margin: $fontMargin-base;
+	margin: $font-margin-base;
 }
 /* Correct font family set oddly in IE 6, Safari 4/5, and Chrome. */
 code,
 kbd,
 pre,
 samp {
-	font-family: $fontFamily-monospace;
-	font-size: $fontSize-base;
+	font-family: $font-family-monospace;
+	font-size: $font-size-base;
 }
 /* Improve readability of pre-formatted text in all browsers. */
 pre {
@@ -218,16 +218,16 @@ dl,
 menu,
 ol,
 ul {
-	margin: $fontMargin-list;
+	margin: $font-margin-list;
 }
 dd {
-	margin: $fontMargin-dd;
+	margin: $font-margin-dd;
 }
 /* Address paddings set differently in IE 6/7. */
 menu,
 ol,
 ul {
-	padding: $fontPadding-list;
+	padding: $font-padding-list;
 }
 /* Correct list images handled incorrectly in IE 7. */
 nav ul,
@@ -249,7 +249,7 @@ ol ol {
 ----------------------------------------------------------------- */
 
 code {
-	padding: $fontPadding-code;
+	padding: $font-padding-code;
 	background: $color-code-bg;
 	color: $color-code;
 	white-space: nowrap;
@@ -261,8 +261,8 @@ code {
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
 	padding: 20px;
-	margin: $fontMargin-code;
-	border: 1px solid $color-grayScale-e;
+	margin: $font-margin-code;
+	border: 1px solid $color-grayscale-e;
 	background: $color-code-bg;
 }
 .code + .code {

@@ -11,9 +11,9 @@
 ----------------------------------------------------------------- */
 
 .widget {
-	margin-bottom: $widget-marginBottom;
-	font-size: $fontSize-widget;
-	line-height: $lineHeight-widget;
+	margin-bottom: $widget-margin-bottom;
+	font-size: $font-size-widget;
+	line-height: $line-height-widget;
 }
 .widget a {
 	color: $color-widget-link;
@@ -31,24 +31,24 @@
 }
 .widget-title {
 	padding: 0 0 4px 0;
-	border: $border-widgetTitle;
-	border-width: $borderWidth-widgetTitle;
-	font-family: $fontFamily-widgetTitle;
-	font-size: $fontSize-widgetTitle;
-	line-height: $lineHeight-widgetTitle;
-	color: $color-widgetTitle;
+	border: $border-widget-title;
+	border-width: $border-width-widget-title;
+	font-family: $font-family-widget-title;
+	font-size: $font-size-widget-title;
+	line-height: $line-height-widget-title;
+	color: $color-widget-title;
 }
 .widget-title a {
-	color: $color-widgetTitle;
+	color: $color-widget-title;
 	text-decoration: none;
 	&:after {
-		content: $widgetTitle-link-after;
-		color: $color-widgetTitle-link-after;
+		content: $widget-title-link-after;
+		color: $color-widget-title-link-after;
 	}
 }
 .widget-title a:hover {
 	&:after {
-		color: $color-widgetTitle-link-after-hover;
+		color: $color-widget-title-link-after-hover;
 	}
 }
 .widget ul {
@@ -63,7 +63,7 @@
 .widget h4,
 .widget h5,
 .widget h6 {
-	font-family: $fontFamily-widget-heading;
+	font-family: $font-family-widget-heading;
 }
 
 /* BU Posts
@@ -80,13 +80,13 @@
 }
 .widget-bu-posts .headline {
 	margin: 0;
-	font-size: $fontSize-widget-postHeadline;
-	line-height: $lineHeight-widget-postHeadline;
+	font-size: $font-size-widget-post-headline;
+	line-height: $line-height-widget-post-headline;
 }
 .widget-bu-posts .excerpt {
 	margin: 4px 0 0;
-	font-size: $fontSize-widget-postExcerpt;
-	line-height: $lineHeight-widget-postExcerpt;
+	font-size: $font-size-widget-post-excerpt;
+	line-height: $line-height-widget-post-excerpt;
 }
 .widget-bu-posts .thumb {
 	display: block;
@@ -95,12 +95,12 @@
 	margin: 5px 15px 15px 0;
 }
 .widget-bu-posts .published {
-	font-size: $fontSize-widget-postDate;
+	font-size: $font-size-widget-post-date;
 }
 .widget-bu-posts .meta {
 	margin: 0;
-	font-size: $fontSize-widget-postMeta;
-	color: $color-widget-postMeta;
+	font-size: $font-size-widget-post-meta;
+	color: $color-widget-post-meta;
 }
 
 
@@ -114,16 +114,16 @@
 	}
 	ul {
 		border: $border-widget-contentnav;
-		border-width: $borderWidth-widget-contentnav;
+		border-width: $border-width-widget-contentnav;
 		ul {
 			margin: 0;
 			border: none;
 		}
 	}
 	li {
-		border: $border-widgetList;
-		border-width: $borderWidth-widgetList;
-		font-family: $fontFamily-widget-contentnav;
+		border: $border-widget-list;
+		border-width: $border-width-widget-list;
+		font-family: $font-family-widget-contentnav;
 		&:first-child {
 			border: none;
 		}
@@ -131,13 +131,13 @@
 			padding: 0 0 0 20px;
 			border: none;
 			a {
-				font-size: $fontSize-widget-contentnav-nestedLink;
+				font-size: $font-size-widget-contentnav-nested-link;
 			}
 		}
 		a {
 			display: block;
 			padding: 10px 0;
-			font-size: $fontSize-widget-contentnav-link;
+			font-size: $font-size-widget-contentnav-link;
 			color: $color-widget-contentnav;
 
 			&:hover,
@@ -157,7 +157,7 @@
 /* Calendar
 ----------------------------------------------------------------- */
 
-$width-calendarDate: 48px;
+$width-calendar-date: 48px;
 
 // A placeholder meant only for calendar.
 %calendar-absolutePositionDate {
@@ -165,7 +165,7 @@ $width-calendarDate: 48px;
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: $width-calendarDate;
+		width: $width-calendar-date;
 	}
 	a {
 		position: relative;
@@ -178,14 +178,14 @@ $width-calendarDate: 48px;
 	/* calendar: shared */
 	.date {
 		display: block;
-		font-family: $fontFamily-widget-calendar-date;
-		color: $color-widget-calendarDate;
+		font-family: $font-family-widget-calendar-date;
+		color: $color-widget-calendar-date;
 		font-weight: 700;
 	}
 	li {
 		padding: 10px 0;
-		border: $border-widgetList;
-		border-width: $borderWidth-widgetList;
+		border: $border-widget-list;
+		border-width: $border-width-widget-list;
 		&:first-child {
 			padding: 0 0 10px;
 			border: none;
@@ -200,7 +200,7 @@ $width-calendarDate: 48px;
 	/* calendar: full-date */
 	.full-date {
 		.date {
-			font-size: $fontSize-widget-calendarDate;
+			font-size: $font-size-widget-calendar-date;
 		}
 	}
 
@@ -209,20 +209,20 @@ $width-calendarDate: 48px;
 		@extend %calendar-absolutePositionDate;
 
 		a {
-			min-height: $width-calendarDate;
+			min-height: $width-calendar-date;
 		}
 		.date {
 			text-align: center;
-			line-height: $lineHeight-widget-calendarDate;
+			line-height: $line-height-widget-calendar-date;
 		}
 		.day {
 			display: block;
-			font-size: $fontSize-widget-calendarDateDay;
-			color: $color-widget-calendarDateDay;
+			font-size: $font-size-widget-calendar-dateDay;
+			color: $color-widget-calendar-dateDay;
 		}
 		.month {
-			font-size: $fontSize-widget-calendarDateMonth;
-			color: $color-widget-calendarDateMonth;
+			font-size: $font-size-widget-calendar-dateMonth;
+			color: $color-widget-calendar-dateMonth;
 			text-transform: uppercase;
 		}
 	}
