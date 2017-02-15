@@ -187,7 +187,10 @@ nav a {
 	@include breakpoint(sm) {
 		display: inline-block;
 		border: none;
-		display: inline;
+
+		.lt-ie8 & {
+			display: inline;
+		}
 	}
 }
 .primary-nav-menu a {

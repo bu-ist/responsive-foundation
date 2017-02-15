@@ -71,7 +71,7 @@ body {
 	}
 
 	// Left layout
-	.sidebarLocation-left & {
+	.sidebar-location-left & {
 		@extend %col-md-push-#{$grid-number-columns*(1/$number-columns)};
 	}
 	.page-template-no-sidebars & {
@@ -81,8 +81,8 @@ body {
 }
 
 // Bottom layout
-.sidebarLocation-bottom {
-	@extend %templateNarrow;
+.sidebar-location-bottom {
+	@extend %template-narrow;
 
 	.sidebar {
 		@extend %col-sm-margin-parent;
@@ -108,13 +108,13 @@ body {
 	font-size: $fontSize-small;
 	clear: none;
 
-	// TODO: sunset this in a future release - this padding should really only apply to .sidebarLocation-right
+	// TODO: sunset this in a future release - this padding should really only apply to .sidebar-location-right
 	@include breakpoint(md) {
 		padding-left: $sidebar-padding;
 	}
 
 	// Left layout
-	.sidebarLocation-left & {
+	.sidebar-location-left & {
 		@extend %col-md-pull-#{$grid-number-columns*(1-(1/$number-columns))};
 
 		@include breakpoint(md) {
@@ -133,7 +133,7 @@ body {
 ----------------------------------------------------------------- */
 
 // Left layout
-.sidebarLocation-left {
+.sidebar-location-left {
 	.sidebar {
 		@extend %col-md-pull-#{$grid-number-columns*(1-(1/$number-columns))};
 
@@ -144,7 +144,7 @@ body {
 		}
 	}
 	.sidebar-posts {
-		@extend %removeTemplateNarrowSidebar;
+		@extend %remove-template-narrow-sidebar;
 	}
 }
 
