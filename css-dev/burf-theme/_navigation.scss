@@ -187,6 +187,7 @@ nav a {
 	@include breakpoint(sm) {
 		display: inline-block;
 		border: none;
+
 		.lt-ie8 & {
 			display: inline;
 		}
