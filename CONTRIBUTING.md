@@ -6,13 +6,13 @@ Make sure that you've reviewed the [BU Coding Standards](https://github.com/bu-i
 
 All development should occur in the `develop` branch, or in specialized [topic branches](http://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows#Topic-Branches) which are merged in to `develop` as they are completed.
 
-When a feature or bug fix is ready for release, changes should be merged from `develop` in to the `master` branch and given a unique release tag. Release tags should follow [semantic versioning](http://semver.org/):
+When a feature or bug fix is ready for release, changes should be merged from `develop` in to the `master` branch and given a unique release tag. Release tags should follow [semantic versioning](http://semver.org/).
 
-> Given a version number MAJOR.MINOR.PATCH, increment the:
->
-> 1. MAJOR version when you make incompatible API changes,
-> 2. MINOR version when you add functionality in a backwards-compatible manner, and
-> 3. PATCH version when you make backwards-compatible bug fixes.
+Given a version number MAJOR.MINOR.PATCH, increment the:
+
+1. MAJOR version when you make incompatible API changes,
+2. MINOR version when you add functionality in a backwards-compatible manner, and
+3. PATCH version when you make backwards-compatible bug fixes.
 
 Before a release is tagged, the [change log](CHANGELOG.md) should be updated to highlight changes since the previous release, and all version references in source files should be bumped to reflect the new version. (Just run `grunt version`).
 
@@ -39,7 +39,7 @@ The theme layer is importable by way of [css-dev/burf-theme.scss](css-dev/burf-t
 
 ## Style Guide
 
-A visual style guide for this repository is hosted at https://bu-ist.github.io/responsive-foundation/. This site is powered by [Github Pages](https://pages.github.com/), which is simply a static HTML site committed to the [gh-pages branch](https://github.com/bu-ist/responsive-foundation/tree/gh-pages) of this repository. This is intended to be a **living** style guide, so be sure that any significant changes to the code in this repository gets a cooresponding update in the style guide.
+A visual style guide for this repository is hosted at <https://bu-ist.github.io/responsive-foundation/>. This site is powered by [Github Pages](https://pages.github.com/), which is simply a static HTML site committed to the [gh-pages branch](https://github.com/bu-ist/responsive-foundation/tree/gh-pages) of this repository. This is intended to be a **living** style guide, so be sure that any significant changes to the code in this repository gets a cooresponding update in the style guide.
 
 Source files for the visual style guide live in the [_docs](_docs) directory. Currently this consists of static HTML files as well as a Sass file ([_docs/css-dev/docs.scss](_docs/css-dev/docs.scss)) that `@import`'s the Foundation files and adds styles specific to the guide. Also included is [Prism.js](http://prismjs.com/) for syntax highlighting.
 
