@@ -475,3 +475,37 @@ nav a {
 .l-no-nav #quicksearch {
 	border-top: 1px solid $color-grayscale-d;
 }
+
+@include breakpoint(sm) {
+	.l-side-nav {
+		background-color: purple;
+
+		.masthead:after {
+			display: none;
+		}
+		.primary-nav {
+			@include breakpoint(sm) {
+				position: relative;
+				float: left;
+				width: 60px;
+				top: 0;
+
+				&.is-open {
+					width: 240px;
+				}
+			}
+			@include breakpoint(md) {
+				position: static;
+			}
+			@include breakpoint(lg) {
+				width: 240px;
+			}
+		}
+		.content {
+			margin-left: 0;
+		}
+		&.nav-open .content {
+			left: 0;
+		}
+	}
+}
