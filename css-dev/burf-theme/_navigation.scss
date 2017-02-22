@@ -323,20 +323,24 @@ nav a {
 	top: $height-brand + 30px;
 	right: 0;
 	color: $color-grayscale-f;
+
 	@include breakpoint(sm) {
 		right: 10px;
 		display: block;
+		position: relative;
 		@include vertical-center;
+		color: $color-nav-toggle-alt;
 	}
+
 	&:visited {
 		color: currentColor;
 	}
 	&:hover {
 		color: currentColor;
-	}
 
-	@include breakpoint(sm) {
-		position: static;
+		@include breakpoint(sm) {
+			color: $color-nav-toggle-alt-hover;
+		}
 	}
 }
 .search-open.l-side-nav .primary-nav {
@@ -383,7 +387,6 @@ nav a {
 		border-width: $border-width-quicksearch;
 	}
 }
-.l-side-nav .brand .search-toggle,
 .l-no-nav .brand .search-toggle {
 	color: $color-nav-toggle-alt;
 	@include breakpoint(sm) {
