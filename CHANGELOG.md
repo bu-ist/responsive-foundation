@@ -1,8 +1,10 @@
-# 1.4.1
+## Changelog
+
+## 1.4.1
 
 * Fixes a typo in classes for BUMC branding
 
-# 1.4.0
+## 1.4.0
 
 * Adds styles and support for new [bu-branding](https://github.com/bu-ist/bu-branding) options
 * Adds styles for the new sidebar placement options
@@ -11,16 +13,16 @@
 * Fixes a number of other minor bugs
 * *Breaking change:* `$sidebar-padding` switches to a single value from the padding shorthand
 
-# 1.3.2
+## 1.3.2
 
 * Removes typo in class on `_grid.scss`
 
-# 1.3.1
+## 1.3.1
 
 * Fixes for margin classes in `_grid.scss`
 * Adds `col-margin-parent` classes and placeholders
 
-# 1.3.0
+## 1.3.0
 
 * Grid fixes for the `lg` breakpoint
 * Added support for SSL
@@ -29,13 +31,13 @@
 * Many edits for Branding considerations
 
 
-# 1.2.1
+## 1.2.1
 
 * Merging branch `develop` into `master`
 * Additional styles for "latest posts" front page display
 * Re-enabled push/pull grid classes
 
-# 1.2.0
+## 1.2.0
 
 * Merging branch `ashley` into `develop`
 * Bug fixes
@@ -45,32 +47,32 @@
 * Variables organized by templates
 * [Full List of Changes](/bu-ist/responsive-foundation/pull/10)
 
-# 1.1.0
+## 1.1.0
 
 * Responsi-as-a-Service beta release (1.3.0-beta)
 * Customizer font palette updates
 * Footer styles for BUMC logo and disclaimer link
 
-# 1.0.5
+## 1.0.5
 
 * Add fallback for branding (#34). Props ashleykolodziej.
 
-# 1.0.4
+## 1.0.4
 
 * Add alternate social icons from [BU Icon Font](https://github.com/bu-ist/bu-icon-font)
 * Add social footer link selectors for Dropbox, Pocket, Reddit, Vimeo and Vine
 * Fix social footer link selector for Google+
 * Fix Flickr / Vine glyphs (Fixes [bu-ist/responsive-framework#19](/bu-ist/responsive-framework/issues/19))
 
-# 1.0.3
+## 1.0.3
 
 * Fix issue with .button font-family (#7). Props ashleykolodziej.
 
-# 1.0.2
+## 1.0.2
 
 * Adding push, pull, and offset classes back into grid.scss
 
-# 1.0.1
+## 1.0.1
 
 * Lots of new variables (see b6ac547505e5ec16508f815a25efffa1a50a2f0d)
 * Theme: Fix content width for no-sidebars template
@@ -79,10 +81,10 @@
 * Theme: Refactor header styles
 * Base: Remove `unicode-range` property from icons to fix compile issues with `grunt-sass`
 
-# 1.0.0
+## 1.0.0
 
 * Deemed stable for child theme development
 
-# 0.1.0
+## 0.1.0
 
 * Initial release
