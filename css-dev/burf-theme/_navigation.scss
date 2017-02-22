@@ -160,11 +160,6 @@ nav a {
 	padding: 0 10px;
 	background: $color-primary-nav-bg;
 }
-.masthead-container .primary-nav .utility-nav {
-	@include breakpoint(sm) {
-		display: none;
-	}
-}
 .primary-nav.is-open {
 	height: auto;
 	padding-bottom: 20px;
@@ -273,17 +268,19 @@ nav a {
 	}
 }
 .utility-nav a {
-	color: $color-utility-nav-link;
+	color: $color-utility-nav-mobile-link;
 	text-decoration: none;
-	&:hover {
-		color: $color-utility-nav-link-hover;
+
+	@include breakpoint(sm) {
+		color: $color-utility-nav-link;
 	}
-}
-// Required for mobile styles, when utility nav is in primary nav menu
-.primary-nav .utility-nav a {
-	color: $color-utility-nav-in-primary-link;
+
 	&:hover {
-		color: $color-utility-nav-in-primary-link-hover;
+		color: $color-utility-nav-mobile-link-hover;
+
+		@include breakpoint(sm) {
+			color: $color-utility-nav-link-hover;
+		}
 	}
 }
 
