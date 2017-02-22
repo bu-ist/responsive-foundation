@@ -10,7 +10,7 @@
 
 .brand {
 	@extend %vertical-center-child;
-	overflow: hidden;
+	//overflow: hidden;
 	height: $height-brand;
 	padding: 0 0 0 20px;
 	font-family: $font-family-brand;

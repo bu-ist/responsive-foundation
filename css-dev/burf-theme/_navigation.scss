@@ -9,10 +9,6 @@ nav a {
 	text-decoration: none;
 }
 
-/* .search-toggle appears only when header is small and above, otherwise it's hidden */
-.brand .search-toggle {
-	display: none;
-}
 .brand .site-description {
 	float: left;
 	width: auto;
@@ -320,6 +316,27 @@ nav a {
 	@include breakpoint(lg) {
 		display: block;
 		padding: 20px 10px;
+	}
+}
+.l-side-nav .search-toggle {
+	position: absolute;
+	top: $height-brand + 30px;
+	right: 0;
+	color: $color-grayscale-f;
+	@include breakpoint(sm) {
+		right: 10px;
+		display: block;
+		@include vertical-center;
+	}
+	&:visited {
+		color: currentColor;
+	}
+	&:hover {
+		color: currentColor;
+	}
+
+	@include breakpoint(sm) {
+		position: static;
 	}
 }
 .search-open.l-side-nav .primary-nav {
