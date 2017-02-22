@@ -1,5 +1,4 @@
-/* Branding
------------------------------------------------------------------ */
+// Branding
 
 %vertical-center-child {
 	@include vertical-center-child;
@@ -10,12 +9,11 @@
 
 .brand {
 	@extend %vertical-center-child;
-	//overflow: hidden;
-	height: $height-brand;
-	padding: 0 0 0 20px;
 	font-family: $font-family-brand;
 	font-size: 18px;
+	height: $height-brand;
 	line-height: 1.3;
+	padding: 0 0 0 20px;
 
 	> .has-parent {
 		font-size:16px;
@@ -26,10 +24,10 @@
 }
 .brand-container {
 	@extend %vertical-center;
+	color: $color-brand;
 	display: block;
 	float: left;
 	font-weight: 400;
-	color: $color-brand;
 	text-decoration: none;
 
 	&:visited {
@@ -45,19 +43,20 @@
 .brand-site-description {
 	@extend %vertical-center;
 	display: none;
+
 	@include breakpoint(md) {
+		color: $color-grayscale-9;
 		display: block;
 		font-family: $font-family-base;
 		font-size: $font-size-small;
-		color: $color-grayscale-9;
 	}
 }
 
-/* Sub-brand signature */
+// Sub-brand signature
 .brand-signature {
-	padding: 10px 30px 9px 56px;
-	min-height: 35px;
 	background: url($image-subbrand) no-repeat 0 49%;
+	min-height: 35px;
+	padding: 10px 30px 9px 56px;
 
 	@include retina {
 		background-image: url($image-subbrand-retina);
@@ -65,13 +64,13 @@
 	}
 
 	&.has-parent {
-		padding-top: 0;
-		padding-bottom: 0;
 		background-position: 0 3px;
+		padding-bottom: 0;
+		padding-top: 0;
 	}
 }
 
-/* Sponsored branding */
+// Sponsored branding
 .brand-part-sitename {
 	display: block;
 
@@ -81,9 +80,9 @@
 }
 .brand-unbranded {
 	@extend %brand-strong;
+	color: $color-unbranded;
 	font-family: $font-family-brand-unbranded;
 	font-size: 20px;
-	color: $color-unbranded;
 
 	&:visited {
 		color: $color-unbranded;
@@ -101,13 +100,13 @@
 }
 
 
-/* Master logo in footer */
+// Master logo in footer
 .brand-masterplate {
 	@extend %hide-text;
-	display: block;
-	width: 112px;
-	height: 50px;
 	background: url($image-masterplate) no-repeat 0 0;
+	display: block;
+	height: 50px;
+	width: 112px;
 
 	@include retina {
 		background-image: url($image-masterplate-retina);
@@ -115,13 +114,13 @@
 	}
 }
 
-/* BUMC logo in footer */
+// BUMC logo in footer
 .brand-bumclogo {
 	@extend %hide-text;
-	display: block;
 	background: url($image-bumclogo) no-repeat 0 0;
-	width: 96px;
+	display: block;
 	height: 40px;
+	width: 96px;
 
 	@include retina {
 		background-image: url($image-bumclogo-retina);
