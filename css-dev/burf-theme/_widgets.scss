@@ -14,12 +14,18 @@
 	margin-bottom: $widget-margin-bottom;
 	font-size: $font-size-widget;
 	line-height: $line-height-widget;
-}
-.widget a {
-	color: $color-widget-link;
-	&:hover,
-	&:focus {
-		color: $color-widget-link-hover;
+	a {
+		color: $color-widget-link;
+		&:hover,
+		&:focus {
+			color: $color-widget-link-hover;
+		}
+	}
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		list-style-image: none;
 	}
 }
 .footbar a {
@@ -37,25 +43,19 @@
 	font-size: $font-size-widget-title;
 	line-height: $line-height-widget-title;
 	color: $color-widget-title;
-}
-.widget-title a {
-	color: $color-widget-title;
-	text-decoration: none;
-	&:after {
-		content: $widget-title-link-after;
-		color: $color-widget-title-link-after;
+	a {
+		color: $color-widget-title;
+		text-decoration: none;
+		&:after {
+			content: $widget-title-link-after;
+			color: $color-widget-title-link-after;
+		}
 	}
 }
 .widget-title a:hover {
 	&:after {
 		color: $color-widget-title-link-after-hover;
 	}
-}
-.widget ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	list-style-image: none;
 }
 .widget h1,
 .widget h2,
@@ -69,40 +69,40 @@
 /* BU Posts
 ----------------------------------------------------------------- */
 
-
-.widget-bu-posts .post {
-	margin-bottom: 25px;
-	@extend %clearfix;
-	&:last-child {
-		//border-bottom: none;
-		margin-bottom: 0;
+.widget-bu-posts {
+	.post {
+		margin-bottom: 25px;
+		@extend %clearfix;
+		&:last-child {
+			//border-bottom: none;
+			margin-bottom: 0;
+		}
+	}
+	.headline {
+		margin: 0;
+		font-size: $font-size-widget-post-headline;
+		line-height: $line-height-widget-post-headline;
+	}
+	.excerpt {
+		margin: 4px 0 0;
+		font-size: $font-size-widget-post-excerpt;
+		line-height: $line-height-widget-post-excerpt;
+	}
+	.thumb {
+		display: block;
+		float: left;
+		max-width: 45%;
+		margin: 5px 15px 15px 0;
+	}
+	.published {
+		font-size: $font-size-widget-post-date;
+	}
+	.meta {
+		margin: 0;
+		font-size: $font-size-widget-post-meta;
+		color: $color-widget-post-meta;
 	}
 }
-.widget-bu-posts .headline {
-	margin: 0;
-	font-size: $font-size-widget-post-headline;
-	line-height: $line-height-widget-post-headline;
-}
-.widget-bu-posts .excerpt {
-	margin: 4px 0 0;
-	font-size: $font-size-widget-post-excerpt;
-	line-height: $line-height-widget-post-excerpt;
-}
-.widget-bu-posts .thumb {
-	display: block;
-	float: left;
-	max-width: 45%;
-	margin: 5px 15px 15px 0;
-}
-.widget-bu-posts .published {
-	font-size: $font-size-widget-post-date;
-}
-.widget-bu-posts .meta {
-	margin: 0;
-	font-size: $font-size-widget-post-meta;
-	color: $color-widget-post-meta;
-}
-
 
 /* Content Nav
 ----------------------------------------------------------------- */
