@@ -52,103 +52,124 @@
 
 .profile-listing {
 	@extend %clearfix;
-}
-.profile-listing ul {
-	padding: 0;
-}
-.profile-listing li {
-	position: relative;
-	margin-bottom: 25px;
-	list-style: none;
-}
-.profile-listing p {
-	margin-bottom: 0;
-}
-.profile-listing a {
-	text-decoration: none;
+	ul {
+		padding: 0;
+	}
+	li {
+		position: relative;
+		margin-bottom: 25px;
+		list-style: none;
+	}
+	p {
+		margin-bottom: 0;
+	}
+	a {
+		text-decoration: none;
+	}
+	.profile-title {
+		display: block;
+		font-family: $font-family-profile-title;
+		font-size: $font-size-profile-title;
+		color: $color-profile-title;
+	}
+	.profile-name {
+		font-family: $font-family-profile-name;
+		font-size: $font-size-profile-name;
+		color: $color-profile-name;
+		text-decoration: underline;
+	}
+	.basic {
+		border-top: $border-profiles;
+		li {
+			min-height: 100px;
+			padding: 25px 65px 25px 0;
+			margin-bottom: 0;
+			border-bottom: $border-profiles;
+		}
+		figure {
+			position: absolute;
+			right: 0;
+			overflow: hidden;
+			width: 50px;
+			height: 50px;
+		}
+	}
+	figure {
+		img {
+			width: 100%;
+		}
+	}
+	.advanced {
+		@extend %clearfix;
+		li {
+			@extend %col-md-third;
+		}
+		a {
+			display: block;
+			padding: 0 15px;
+			text-align: center;
+		}
+		figure {
+			overflow: hidden;
+			width: 150px;
+			height: 150px;
+			margin: 0 auto 15px;
+		}
+		li:nth-child(3n+1) {
+			clear: left;
+		}
+	}
+	.mini {
+		@extend %clearfix;
+		 li {
+			@extend %col-md-6;
+			min-height: 90px;
+			padding: 0 0 15px 75px;
+			margin: 0;
+
+			@include breakpoint(md) {
+				padding: 0 0 15px 95px;
+				min-height: 110px;
+			}
+		}
+		li:nth-child(2n+1) {
+			clear: left;
+			padding-right: 15px;
+		}
+		.name {
+			font-family: $font-family-profile-name;
+			font-size: $font-size-profile-mini-name;
+		}
+		.summary {
+			margin-top: 5px;
+			font-size: $font-size-profile-mini-email;
+			line-height: $line-height-profile-mini-email;
+			word-wrap: break-word;
+		}
+		figure {
+			position: absolute;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+			width: 60px;
+			height: 60px;
+			@include breakpoint(md) {
+				width: 80px;
+				height: 80px;
+			}
+		}
+	}
 }
 .profile-listing figure,
 .single-profile .profile-thumb figure  {
 	@include border-radius($border-radius-profile-figure);
 	line-height: 0;
 }
-.profile-listing figure img {
-	width: 100%;
-}
-.profile-listing .profile-name {
-	font-family: $font-family-profile-name;
-	font-size: $font-size-profile-name;
-	color: $color-profile-name;
-	text-decoration: underline;
-}
 .profile-listing a:hover .profile-name,
 .profile-listing a:focus .profile-name {
 	text-decoration: none;
 }
-.profile-listing .profile-title {
-	display: block;
-	font-family: $font-family-profile-title;
-	font-size: $font-size-profile-title;
-	color: $color-profile-title;
-}
-.profile-listing .basic {
-	border-top: $border-profiles;
-}
-.profile-listing .basic li {
-	min-height: 100px;
-	padding: 25px 65px 25px 0;
-	margin-bottom: 0;
-	border-bottom: $border-profiles;
-}
-.profile-listing .basic figure {
-	position: absolute;
-	right: 0;
-	overflow: hidden;
-	width: 50px;
-	height: 50px;
-}
-.profile-listing .advanced {
-	@extend %clearfix;
-}
-.profile-listing .advanced li {
-	@extend %col-md-third;
-}
-.profile-listing .advanced li:nth-child(3n+1) {
-	clear: left;
-}
-.profile-listing .advanced a {
-	display: block;
-	padding: 0 15px;
-	text-align: center;
-}
-.profile-listing .advanced figure {
-	overflow: hidden;
-	width: 150px;
-	height: 150px;
-	margin: 0 auto 15px;
-}
-.profile-listing .mini {
-	@extend %clearfix;
-}
-.profile-listing .mini li {
-	@extend %col-md-6;
-	min-height: 90px;
-	padding: 0 0 15px 75px;
-	margin: 0;
 
-	@include breakpoint(md) {
-		padding: 0 0 15px 95px;
-		min-height: 110px;
-	}
-}
-.profile-listing .mini li:nth-child(2n+1) {
-	clear: left;
-	padding-right: 15px;
-}
-.profile-listing .mini .name {
-	font-family: $font-family-profile-name;
-	font-size: $font-size-profile-mini-name;
-}
 .profile-listing .mini .email a {
 	margin-top: 5px;
 	font-size: $font-size-profile-mini-email;
@@ -161,47 +182,37 @@
 		text-decoration: none;
 	}
 }
-.profile-listing .mini .summary {
-	margin-top: 5px;
-	font-size: $font-size-profile-mini-email;
-	line-height: $line-height-profile-mini-email;
-	word-wrap: break-word;
-}
-.profile-listing .mini figure {
-	position: absolute;
-	top: 0;
-	left: 0;
-	overflow: hidden;
-	width: 60px;
-	height: 60px;
-	@include breakpoint(md) {
-		width: 80px;
-		height: 80px;
+
+/* single profile */
+.single-profile {
+	.content-area {
+		h1 {
+			padding-top: 145px;
+			margin-bottom: 0;
+			text-align: center;
+		}
+		h2 {
+			text-align: center;
+		}
+	}
+	.profile-thumb {
+		figure {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			overflow: hidden;
+			width: 120px;
+			height: 120px;
+			margin-left: -60px;
+		}
+	}
+	.figure {
+		img {
+			width: 100%;
+		}
 	}
 }
 
-/* single profile */
-
-.single-profile .content-area h1 {
-	padding-top: 145px;
-	margin-bottom: 0;
-	text-align: center;
-}
-.single-profile .content-area h2 {
-	text-align: center;
-}
-.single-profile .profile-thumb figure {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	overflow: hidden;
-	width: 120px;
-	height: 120px;
-	margin-left: -60px;
-}
-.single-profile figure img {
-	width: 100%;
-}
 .profile-info {
 	@extend %message-styles;
 	margin: 0 0 20px 0;
@@ -210,24 +221,24 @@
 		width: 33.33333333333333%;
 		margin: 0 0 20px 20px;
 	}
-}
-.profile-info ul {
-	padding: 0;
-	margin: 0;
-}
-.profile-info li {
-	margin: 0 0 20px 0;
-	list-style: none;
-	font-size: $font-size-small;
-	word-wrap: break-word;
-}
-.profile-info .label {
-	display: block;
-	font-family: $font-family-sans-serif;
-	font-weight: 700;
-	font-size: $font-size-smaller;
-	color: $color-profile-info-label;
-	text-transform: uppercase;
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+	li {
+		margin: 0 0 20px 0;
+		list-style: none;
+		font-size: $font-size-small;
+		word-wrap: break-word;
+	}
+	.label {
+		display: block;
+		font-family: $font-family-sans-serif;
+		font-weight: 700;
+		font-size: $font-size-smaller;
+		color: $color-profile-info-label;
+		text-transform: uppercase;
+	}
 }
 
 /* Course Feeds
