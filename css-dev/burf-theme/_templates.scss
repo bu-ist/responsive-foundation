@@ -155,73 +155,81 @@
 	margin-top: 30px;
 	border: $border-news-post;
 	border-width: $border-width-news-post;
-}
-.paging-navigation .screen-reader-text {
-	display: none;
-}
-.paging-navigation a {
-	@extend %button-styles;
-	@extend %button-styles-primary;
-}
-.paging-navigation .nav-previous {
-	float: left;
-}
-.paging-navigation .nav-next {
-	float: right;
+	.screen-reader-text {
+		display: none;
+	}
+	a {
+		@extend %button-styles;
+		@extend %button-styles-primary;
+	}
+	.nav-previous {
+		float: left;
+	}
+	.nav-next {
+		float: right;
+	}
 }
 
 /* Homepage set to show Posts
 ----------------------------------------------------------------- */
-
-.home.blog .paging-navigation {
-	margin-bottom:30px;
-}
-
-.home.blog .tags {
-	margin-bottom:24px;
-}
-.home.blog .content-container article {
-	position: relative;
-	padding-top: 30px;
-	margin-top: 30px;
-	border: $border-news-post;
-	border-width: $border-width-news-post;
-	&:first-child {
-		border: none;
+.home.blog {
+	.paging-navigation {
+		margin-bottom:30px;
+	}
+	.tags {
+		margin-bottom:24px;
+	}
+	.content-container {
+		article {
+			position: relative;
+			padding-top: 30px;
+			margin-top: 30px;
+			border: $border-news-post;
+			border-width: $border-width-news-post;
+			&:first-child {
+				border: none;
+			}
+		}
 	}
 }
 
 /* Single Post
 ----------------------------------------------------------------- */
+.single {
+	.content-area {
+		.meta {
+			@extend %message-styles;
+			@include border-radius($border-radius-single-meta);
+			padding: $padding-single-meta;
+			margin-bottom: 30px;
+			border: $border-single-meta;
+			border-width: $border-width-single-meta;
+			border-left-color: $color-single-meta-border-left;
+			background-color: $color-single-meta-bg;
+			font-size: $font-size-single-meta;
+		}
+	}
+	.meta {
+		.post-title {
+			margin-bottom: 10px;
+		}
+		.byline {
+			margin-bottom: 10px;
+			font-weight: normal;
+			font-size: $font-size-single-meta;
+		}
+		p {
+			margin-bottom: 10px;
+			font-family: $font-family-news-meta;
+		}
+		em {
+			color: $color-news-meta-em;
+		}
+	}
+}
 
-.single .content-area .meta {
-	@extend %message-styles;
-	@include border-radius($border-radius-single-meta);
-	padding: $padding-single-meta;
-	margin-bottom: 30px;
-	border: $border-single-meta;
-	border-width: $border-width-single-meta;
-	border-left-color: $color-single-meta-border-left;
-	background-color: $color-single-meta-bg;
-	font-size: $font-size-single-meta;
-}
-.single .meta .post-title {
-	margin-bottom: 10px;
-}
-.single .meta .byline {
-	margin-bottom: 10px;
-	font-weight: normal;
-	font-size: $font-size-single-meta;
-}
-.single .meta p {
-	margin-bottom: 10px;
-	font-family: $font-family-news-meta;
-}
 .single .meta p:last-child {
 	margin-bottom: 0;
-}
-.single .meta em {
-	color: $color-news-meta-em;
 }
 .archive-link {
 	@extend %button-styles;
@@ -239,67 +247,70 @@
 .calendar-range {
 	color: $color-calendar-heading-date-range;
 }
-.event-list .event-date {
-	font-size: $font-size-calendar-event-date;
-}
-.event-list ul {
-	padding: 0;
-}
-.event-list li {
-	list-style: none;
-}
-
-.event-list .event-link a {
-	color: $color-calendar-event-link;
-	&:hover,
-	&:focus {
-		color: $color-calendar-event-link-hover;
+.event-list {
+	.event-date {
+		font-size: $font-size-calendar-event-date;
+	}
+	ul {
+		padding: 0;
+	}
+	li {
+		list-style: none;
+	}
+	.event-link {
+		a {
+			color: $color-calendar-event-link;
+			&:hover,
+			&:focus {
+				color: $color-calendar-event-link-hover;
+			}
+		}
 	}
 }
 
 /* sidebar */
 .month {
 	width: 100%;
-}
-.month caption {
-	font-family: $font-family-calendar-month-caption;
-	font-style: normal;
-	font-size: $font-size-calendar-month-caption;
-	color: $color-calendar-month-caption;
-}
-.month th,
-.month td {
-	width: 14.285714285%;
-	padding: $padding-calendar-month-cell;
-	font-family: $font-family-calendar-month-cell;
-	text-align: center;
-}
-.month th {
-	background: $color-calendar-month-th-bg;
-	color: $color-calendar-month-th;
-}
-.month td a {
-	color: $color-calendar-month-link;
-	&:hover,
-	&::focus {
-		color: $color-calendar-month-link-hover;
+	caption {
+		font-family: $font-family-calendar-month-caption;
+		font-style: normal;
+		font-size: $font-size-calendar-month-caption;
+		color: $color-calendar-month-caption;
+	}
+	th, td {
+		width: 14.285714285%;
+		padding: $padding-calendar-month-cell;
+		font-family: $font-family-calendar-month-cell;
+		text-align: center;
+	}
+	th {
+		background: $color-calendar-month-th-bg;
+		color: $color-calendar-month-th;
+	}
+	td {
+		a {
+			color: $color-calendar-month-link;
+			&:hover,
+			&::focus {
+				color: $color-calendar-month-link-hover;
+			}
+		}
+	}
+	.out {
+		background: $color-calendar-month-link-out-bg;
+		a {
+			color: $color-calendar-month-link-out;
+			text-decoration: none;
+		}
+	}
+	.today {
+		background: $color-calendar-month-link-today-bg;
+		a {
+			color: $color-calendar-month-link-today;
+			text-decoration: none;
+		}
 	}
 }
-.month .out {
-	background: $color-calendar-month-link-out-bg;
-}
-.month .out a {
-	color: $color-calendar-month-link-out;
-	text-decoration: none;
-}
-.month .today {
-	background: $color-calendar-month-link-today-bg;
-}
-.month .today a {
-	color: $color-calendar-month-link-today;
-	text-decoration: none;
-}
-
 .calendar-topics ul {
 	padding-left: 20px;
 }
@@ -322,29 +333,29 @@
 		width: 33.33333333333333%;
 		margin: 0 0 20px 20px;
 	}
-}
-.date-summary ul {
-	padding: 0;
-	margin: 0;
-}
-.date-summary li {
-	margin-top: 10px;
-	list-style: none;
-	&:first-child {
-		margin-top: 0;
+	ul {
+		padding: 0;
+		margin: 0;
 	}
-}
-.date-summary .label {
-	display: block;
-}
-.date-summary li em {
-	display: none;
-}
-.date-summary .time {
-	display: block;
-	font-weight: bold;
-	font-size: $font-size-medium;
-	color: #000000;
+	li {
+		margin-top: 10px;
+		list-style: none;
+		&:first-child {
+			margin-top: 0;
+		}
+		em {
+			display: none;
+		}
+	}
+	.label {
+		display: block;
+	}
+	.time {
+		display: block;
+		font-weight: bold;
+		font-size: $font-size-medium;
+		color: #000000;
+	}
 }
 .single-event .description {
 	margin: $font-margin-base;
