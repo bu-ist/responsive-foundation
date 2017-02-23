@@ -308,32 +308,43 @@ nav {
 ----------------------------------------------------------------- */
 
 .l-side-nav {
+	.masthead:after {
+		@include breakpoint(sm) {
+			display: none;
+		}
+	}
 	.wrapper {
 		background: $color-primary-nav-bg;
 	}
-	.content {
-		@include breakpoint(sm) {
-			margin-left: 60px;
-		}
-		@include breakpoint(lg) {
-			margin-left: $width-side-nav;
-		}
-	}
 	.primary-nav {
 		@include breakpoint(sm) {
-			position: absolute;
-			top: $height-brand;
+			position: relative;
+			top: 0;
 			width: $width-side-nav;
 			background: none;
+			float: left;
+			margin-left: -$width-side-nav + 60px;
+			left: 0;
+
+			&.is-open {
+				left: $width-side-nav - 60px;
+
+				@include breakpoint(lg) {
+					left: 0;
+				}
+			}
 		}
 		@include breakpoint(lg) {
+			margin-left: 0;
 			display: block;
+			width: $width-side-nav;
 			padding: 20px 10px;
 		}
 	}
 	.nav-toggle {
 		@include breakpoint(sm) {
-			margin-left: -10px;
+			float: right;
+			margin-right: -10px;
 		}
 	}
 	.primary-nav-menu {
@@ -367,7 +378,6 @@ nav {
 	}
 }
 
-
 .search-open.l-side-nav .primary-nav {
 	@include breakpoint(sm) {
 		top: $height-brand + 98px; /* adds the height of the open search form */
@@ -388,6 +398,20 @@ nav {
 				display: none;
 			}
 		}
+	}
+}
+.l-side-nav.nav-open {
+	.content {
+		@include breakpoint(sm) {
+			left: $width-side-nav - 60px;
+		}
+		@include breakpoint(lg) {
+			left: 0;
+		}
+	}
+	.nav-toggle {
+		float: left;
+		margin-left: -10px;
 	}
 }
 
@@ -426,16 +450,6 @@ nav {
 .l-side-nav .utility-nav li {
 	display: block;
 	padding-left: 0;
-}
-.l-side-nav.nav-open .content {
-	@include breakpoint(sm) {
-		left: 240px;
-		margin-left: 0;
-	}
-	@include breakpoint(lg) {
-		left: 0;
-		margin-left: 240px;
-	}
 }
 .l-side-nav.nav-open .primary-nav-menu,
 .l-side-nav.nav-open .utility-nav {
@@ -494,40 +508,6 @@ nav {
 				right: 80px;
 				display: block;
 			}
-		}
-	}
-}
-
-@include breakpoint(sm) {
-	.l-side-nav {
-		background-color: purple;
-
-		.masthead:after {
-			display: none;
-		}
-		.primary-nav {
-			@include breakpoint(sm) {
-				position: relative;
-				float: left;
-				width: 60px;
-				top: 0;
-
-				&.is-open {
-					width: 240px;
-				}
-			}
-			@include breakpoint(md) {
-				position: static;
-			}
-			@include breakpoint(lg) {
-				width: 240px;
-			}
-		}
-		.content {
-			margin-left: 0;
-		}
-		&.nav-open .content {
-			left: 0;
 		}
 	}
 }
