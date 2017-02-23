@@ -4,21 +4,22 @@
 nav {
 	font-family: $font-family-navigation;
 	font-size: $font-size-navigation;
-}
-nav a {
-	text-decoration: none;
+	a {
+		text-decoration: none;
+	}
 }
 
 /* .search-toggle appears only when header is small and above, otherwise it's hidden */
-.brand .search-toggle {
-	display: none;
+.brand {
+	.search-toggle {
+		display: none;
+	}
+	.site-description {
+		float: left;
+		width: auto;
+		margin-left: 50px;
+	}
 }
-.brand .site-description {
-	float: left;
-	width: auto;
-	margin-left: 50px;
-}
-
 /* quicksearch (use WordPress plugin class name)
 ----------------------------------------------------------------- */
 #quicksearch {
@@ -27,25 +28,26 @@ nav a {
 	padding: 30px 20px;
 	margin: 0;
 	background: $color-search-bg;
-}
-#quicksearch fieldset {
-	margin: 0;
-	@include breakpoint(sm) {
-		max-width: $container-SM;
-		padding: 0 20px;
-		margin: 0 auto;
+	fieldset {
+		margin: 0;
+		@include breakpoint(sm) {
+			max-width: $container-SM;
+			padding: 0 20px;
+			margin: 0 auto;
+		}
+	}
+	.button {
+		@extend %button-styles-primary;
+		@include border-radius($border-radius-quicksearch-button);
+		width: 25%;
+		padding:11px 0 12px 0;
+		float:right;
+		@include breakpoint(sm) {
+			width: 15%;
+		}
 	}
 }
-#quicksearch .button {
-	@extend %button-styles-primary;
-	@include border-radius($border-radius-quicksearch-button);
-	width: 25%;
-	padding:11px 0 12px 0;
-	float:right;
-	@include breakpoint(sm) {
-		width: 15%;
-	}
-}
+
 #quicksearch.is-open {
 	display: block;
 	border-bottom: $border-search;
@@ -80,9 +82,9 @@ nav a {
 	&:hover {
 		color: $color-nav-toggle-hover;
 	}
-}
-.search-toggle span {
-	display: none;
+	span {
+		display: none;
+	}
 }
 
 .search-toggle.is-open {
@@ -180,51 +182,53 @@ nav a {
 		margin: 0;
 		border: none;
 	}
-}
-.primary-nav-menu li {
-	display: block;
-	zoom: 1;
-	@include breakpoint(sm) {
-		display: inline-block;
-		border: none;
+	li {
+		display: block;
+		zoom: 1;
+		@include breakpoint(sm) {
+			display: inline-block;
+			border: none;
 
-		.lt-ie8 & {
-			display: inline;
+			.lt-ie8 & {
+				display: inline;
+			}
+		}
+	}
+	a {
+		display: block;
+		padding: 10px 0;
+		border: 1px solid $color-primary-nav-border;
+		border-width: $border-width-primary-nav;
+		color: $color-primary-nav-link;
+		text-decoration: none;
+		@include breakpoint(sm) {
+			padding: 0 10px;
+			border: $border-primary-nav-desktop;
+			line-height: 60px;
+		}
+		&:hover,
+		&:focus {
+			color: $color-primary-nav-link-hover;
+		}
+	}
+	ul {
+		display: none;
+		@include breakpoint(sm) {
+			position: absolute;
+			left: -9999px;
+			z-index: 2;
+			display: block;
+			width: 240px;
+			background: $color-primary-nav-dropdown-bg;
 		}
 	}
 }
-.primary-nav-menu a {
-	display: block;
-	padding: 10px 0;
-	border: 1px solid $color-primary-nav-border;
-	border-width: $border-width-primary-nav;
-	color: $color-primary-nav-link;
-	text-decoration: none;
-	@include breakpoint(sm) {
-		padding: 0 10px;
-		border: $border-primary-nav-desktop;
-		line-height: 60px;
-	}
-	&:hover,
-	&:focus {
-		color: $color-primary-nav-link-hover;
-	}
-}
+
 .primary-nav-menu li a.active,
 .primary-nav-menu li a.active_section {
 	color: $color-primary-nav-link-current;
 }
-.primary-nav-menu ul {
-	display: none;
-	@include breakpoint(sm) {
-		position: absolute;
-		left: -9999px;
-		z-index: 2;
-		display: block;
-		width: 240px;
-		background: $color-primary-nav-dropdown-bg;
-	}
-}
+
 .primary-nav-menu li:hover ul,
 .primary-nav-menu li:focus ul {
 	left: auto;
@@ -253,6 +257,23 @@ nav a {
 	border: 1px solid $color-primary-nav-border;
 	border-width: $border-width-utility-nav;
 	font-size: $font-size-utility-nav;
+	li {
+		padding: 0;
+		border: none;
+		@include breakpoint(sm) {
+			display: inline-block;
+			padding-left: 10px;
+			border: none;
+			*display: inline;
+		}
+	}
+	a {
+		color: $color-utility-nav-link;
+		text-decoration: none;
+		&:hover {
+			color: $color-utility-nav-link-hover;
+		}
+	}
 }
 .masthead-container .utility-nav {
 	@include breakpoint(sm) {
@@ -262,23 +283,7 @@ nav a {
 		border: none;
 	}
 }
-.utility-nav li {
-	padding: 0;
-	border: none;
-	@include breakpoint(sm) {
-		display: inline-block;
-		padding-left: 10px;
-		border: none;
-		*display: inline;
-	}
-}
-.utility-nav a {
-	color: $color-utility-nav-link;
-	text-decoration: none;
-	&:hover {
-		color: $color-utility-nav-link-hover;
-	}
-}
+
 // Required for mobile styles, when utility nav is in primary nav menu
 .primary-nav .utility-nav a {
 	color: $color-utility-nav-in-primary-link;
@@ -302,73 +307,90 @@ nav a {
 /* side-nav
 ----------------------------------------------------------------- */
 
-.l-side-nav .wrapper {
-	background: $color-primary-nav-bg;
+.l-side-nav {
+	.wrapper {
+		background: $color-primary-nav-bg;
+	}
+	.content {
+		@include breakpoint(sm) {
+			margin-left: 60px;
+		}
+		@include breakpoint(lg) {
+			margin-left: $width-side-nav;
+		}
+	}
+	.primary-nav {
+		@include breakpoint(sm) {
+			position: absolute;
+			top: $height-brand;
+			width: $width-side-nav;
+			background: none;
+		}
+		@include breakpoint(lg) {
+			display: block;
+			padding: 20px 10px;
+		}
+	}
+	.nav-toggle {
+		@include breakpoint(sm) {
+			margin-left: -10px;
+		}
+	}
+	.primary-nav-menu {
+		@include breakpoint(sm) {
+			display: none;
+			margin: 0 10px;
+		}
+		@include breakpoint(lg) {
+			display: block;
+		}
+		li {
+			display: block;
+			padding: 0;
+		}
+		a {
+			padding: 10px 0;
+			border: 1px solid $color-primary-nav-border;
+			border-width: $border-width-primary-nav;
+			line-height: $line-height-base;
+		}
+		ul {
+			display: none;
+		}
+		li:first-child {
+			a {
+				@include breakpoint(lg) {
+					border: 0;
+				}
+			}
+		}
+	}
 }
-.l-side-nav .content {
-	@include breakpoint(sm) {
-		margin-left: 60px;
-	}
-	@include breakpoint(lg) {
-		margin-left: $width-side-nav;
-	}
-}
-.l-side-nav .primary-nav {
-	@include breakpoint(sm) {
-		position: absolute;
-		top: $height-brand;
-		width: $width-side-nav;
-		background: none;
-	}
-	@include breakpoint(lg) {
-		display: block;
-		padding: 20px 10px;
-	}
-}
+
+
 .search-open.l-side-nav .primary-nav {
 	@include breakpoint(sm) {
 		top: $height-brand + 98px; /* adds the height of the open search form */
 	}
 }
-.l-side-nav .nav-toggle {
-	@include breakpoint(sm) {
-		margin-left: -10px;
-	}
-}
-.l-side-nav .primary-nav-menu {
-	@include breakpoint(sm) {
-		display: none;
-		margin: 0 10px;
-	}
-	@include breakpoint(lg) {
-		display: block;
-	}
-}
-.l-side-nav .primary-nav-menu li {
-	display: block;
-	padding: 0;
-}
-.l-side-nav .primary-nav-menu a {
-	padding: 10px 0;
-	border: 1px solid $color-primary-nav-border;
-	border-width: $border-width-primary-nav;
-	line-height: $line-height-base;
-}
-.l-side-nav .primary-nav-menu li:first-child a {
-	@include breakpoint(lg) {
-		border: 0;
-	}
-}
-.l-side-nav .primary-nav-menu ul {
-	display: none;
-}
+
 /* side-nav and no-nav: quicksearch */
-.l-side-nav #quicksearch {
-	@include breakpoint(sm) {
-		border: 1px solid $color-quicksearch-border;
-		border-width: $border-width-quicksearch;
+.l-side-nav {
+	#quicksearch {
+		@include breakpoint(sm) {
+			border: 1px solid $color-quicksearch-border;
+			border-width: $border-width-quicksearch;
+		}
 	}
-}
+	.primary-nav {
+		.search-toggle {
+			@include breakpoint(sm) {
+				display: none;
+			}
+		}
+	}
+} 
+
 .l-side-nav .brand .search-toggle,
 .l-no-nav .brand .search-toggle {
 	color: $color-nav-toggle-alt;
@@ -384,11 +406,7 @@ nav a {
 		color: $color-nav-toggle-alt-hover;
 	}
 }
-.l-side-nav .primary-nav .search-toggle {
-	@include breakpoint(sm) {
-		display: none;
-	}
-}
+
 /* side-nav: nav-toggle */
 .l-side-nav .nav-toggle {
 	display: block;
@@ -428,50 +446,54 @@ nav a {
 /* top nav
 ----------------------------------------------------------------- */
 
-.l-top-nav .utility-nav {
-	@include breakpoint(sm) {
-		position: absolute;
-		top: (($height-brand / 2) - ($font-size-utility-nav / 2)) + 60;
-		right: 20px;
-		line-height: 1;
+.l-top-nav {
+	.utility-nav {
+		@include breakpoint(sm) {
+			position: absolute;
+			top: (($height-brand / 2) - ($font-size-utility-nav / 2)) + 60;
+			right: 20px;
+			line-height: 1;
+		}
+	}
+	#quicksearch {
+		border-bottom: 1px solid $color-grayscale-d;
 	}
 }
-
 .l-top-nav.search-open .utility-nav {
 	@include breakpoint(sm) {
 		top: 209px;
 	}
 }
 
-.l-top-nav #quicksearch {
-	border-bottom: 1px solid $color-grayscale-d;
-}
-
 /* no-nav
 ----------------------------------------------------------------- */
 
-.l-no-nav .primary-nav {
-	@include breakpoint(sm) {
-		display: none;
+.l-no-nav {
+	.primary-nav {
+		@include breakpoint(sm) {
+			display: none;
+		}
 	}
-}
-.l-no-nav .brand {
-	padding-right: 60px;
-}
-.l-no-nav .masthead-container .utility-nav {
-	display: none;
-	@include breakpoint(sm) {
-		position: absolute;
-		top: ($height-brand / 2) - ($font-size-utility-nav / 2) - 5;
-		right: 80px;
-		display: block;
+	.brand {
+		padding-right: 60px;
+		.search-toggle {
+			display: block;
+			margin: 0 -60px 0 0;
+			font-size: 24px;
+		}
 	}
-}
-.l-no-nav .brand .search-toggle {
-	display: block;
-	margin: 0 -60px 0 0;
-	font-size: 24px;
-}
-.l-no-nav #quicksearch {
-	border-top: 1px solid $color-grayscale-d;
+	#quicksearch {
+		border-top: 1px solid $color-grayscale-d;
+	}
+	.masthead-container{
+		.utility-nav {
+			display: none;
+			@include breakpoint(sm) {
+				position: absolute;
+				top: ($height-brand / 2) - ($font-size-utility-nav / 2) - 5;
+				right: 80px;
+				display: block;
+			}
+		}
+	} 
 }
