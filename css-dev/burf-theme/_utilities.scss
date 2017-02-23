@@ -125,13 +125,15 @@ h6.bu_collapsible {
 	line-height: 1.4;
 	color: $color-caption;
 }
-.wp-caption p {
-	clear: both;
-}
-.wp-caption img {
-	display: block;
-	margin-top: 0;
-	margin-bottom: 10px;
+.wp-caption{
+	p {
+		clear: both;
+	}
+	img {
+		display: block;
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
 }
 
 /* slideshows */
