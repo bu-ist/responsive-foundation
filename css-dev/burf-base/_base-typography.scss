@@ -120,14 +120,16 @@ hgroup {
 	margin: $font-margin-hgroup;
 }
 /* remove margins from headings within hgroup */
-hgroup h1,
-hgroup h2,
-hgroup h3,
-hgroup h4,
-hgroup h5,
-hgroup h6,
-hgroup p, {
-	margin: 0;
+hgroup {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p, {
+		margin: 0;
+	}
 }
 
 /* Address styling not present in IE 7/8/9, Safari 5, and Chrome. */

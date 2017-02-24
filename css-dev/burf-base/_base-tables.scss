@@ -8,40 +8,41 @@ table {
 	border-spacing: 0; /* 1 */
 	border-collapse: collapse; /* 1 */
 	empty-cells: show;
+	caption {
+		padding: $table-caption-padding;
+		font-style: italic;
+		font-size: $font-size-table-caption;
+		color: $color-table-caption;
+		text-align: center;
+	}
+	td,
+	th {
+		overflow: visible; /*to make ths where the title is really long work*/
+		padding: $table-padding;
+		margin: 0;
+		border-width: 0 0 0 1px;
+		border-left: 1px solid $color-table-border;
+		font-size: inherit;
+	}
+	th {
+		border-bottom: 1px solid $color-table-border;
+	}
+	td {
+		background-color: transparent;
+		vertical-align: top;
+	}
+	td:first-child,
+	th:first-child {
+		border-left-width: 0;
+	}
+	thead {
+		background: $color-table-head-bg;
+		vertical-align: bottom;
+		color: $color-table-head;
+		text-align: left;
+	}
 }
-table caption {
-	padding: $table-caption-padding;
-	font-style: italic;
-	font-size: $font-size-table-caption;
-	color: $color-table-caption;
-	text-align: center;
-}
-table td,
-table th {
-	overflow: visible; /*to make ths where the title is really long work*/
-	padding: $table-padding;
-	margin: 0;
-	border-width: 0 0 0 1px;
-	border-left: 1px solid $color-table-border;
-	font-size: inherit;
-}
-table th {
-	border-bottom: 1px solid $color-table-border;
-}
-table td {
-	background-color: transparent;
-	vertical-align: top;
-}
-table td:first-child,
-table th:first-child {
-	border-left-width: 0;
-}
-table thead {
-	background: $color-table-head-bg;
-	vertical-align: bottom;
-	color: $color-table-head;
-	text-align: left;
-}
+
 /* tables that use grid width classes */
 table col[class*="col-"] {
 	display: table-column;
@@ -65,8 +66,10 @@ table th[class*="col-"] {
 /* Bordered tables
 ----------------------------------------------------------------- */
 
-.table-bordered td {
-	border-bottom: 1px solid $color-table-border;
+.table-bordered {
+	td {
+		border-bottom: 1px solid $color-table-border;
+	}
 }
 .table-bordered tbody > tr:last-child td,
 .table-horizontal tbody > tr:last-child td {
@@ -76,10 +79,12 @@ table th[class*="col-"] {
 /* Horizontal tables
 ----------------------------------------------------------------- */
 
-.table-horizontal td,
-.table-horizontal th {
-	border-width: 0 0 1px 0;
-	border-bottom: 1px solid $color-table-border;
+.table-horizontal {
+	td,
+	th {
+		border-width: 0 0 1px 0;
+		border-bottom: 1px solid $color-table-border;
+	}
 }
 .table-horizontal tbody > tr:last-child td {
 	border-bottom-width: 0;
