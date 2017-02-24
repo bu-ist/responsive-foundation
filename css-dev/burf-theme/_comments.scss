@@ -34,10 +34,6 @@
 .comment-author {
 	color: $color-comment-author;
 }
-// TODO: probably shouldn't be outputting gravatar markup and hiding here...
-.comment-author img {
-	display: none;
-}
 .comment-author .fn {
 	font-size: $font-size-small;
 	color: $color-comment-author-name;
