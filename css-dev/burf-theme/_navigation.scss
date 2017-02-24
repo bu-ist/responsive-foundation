@@ -389,7 +389,7 @@ nav {
 			}
 		}
 	}
-} 
+}
 
 .l-side-nav .brand .search-toggle,
 .l-no-nav .brand .search-toggle {
@@ -485,15 +485,15 @@ nav {
 	#quicksearch {
 		border-top: 1px solid $color-grayscale-d;
 	}
-	.masthead-container{
+	.masthead-container {
 		.utility-nav {
 			display: none;
 			@include breakpoint(sm) {
-				position: absolute;
-				top: ($height-brand / 2) - ($font-size-utility-nav / 2) - 5;
-				right: 80px;
-				display: block;
+			position: absolute;
+			top: ($height-brand / 2) - ($font-size-utility-nav / 2) - 5;
+			right: 80px;
+			display: block;
 			}
 		}
-	} 
+	}
 }

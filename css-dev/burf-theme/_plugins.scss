@@ -121,7 +121,7 @@
 	}
 	.mini {
 		@extend %clearfix;
-		 li {
+		li {
 			@extend %col-md-6;
 			min-height: 90px;
 			padding: 0 0 15px 75px;
