@@ -489,10 +489,10 @@ nav {
 		.utility-nav {
 			display: none;
 			@include breakpoint(sm) {
-			position: absolute;
-			top: ($height-brand / 2) - ($font-size-utility-nav / 2) - 5;
-			right: 80px;
-			display: block;
+				position: absolute;
+				top: ($height-brand / 2) - ($font-size-utility-nav / 2) - 5;
+				right: 80px;
+				display: block;
 			}
 		}
 	}
