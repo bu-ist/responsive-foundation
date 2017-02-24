@@ -391,44 +391,46 @@ select[multiple] {
 		*zoom: 1;
 	}
 
-	.form-aligned textarea {
-		vertical-align: top;
-	}
-
-	.form-aligned .form-row label {
-		display: inline-block;
-		margin: 0 20px 0 0;
-		text-align: right;
-		vertical-align: middle;
-		width: 200px;
-	}
-
-	.form-aligned .form-row-checkbox,
-	.form-aligned .form-row-radio {
-		margin: $form-row-margin;
-		margin-left: 220px;
-	}
-
-	.form-aligned .form-controls {
-		margin-left: 220px;
+	.form-aligned {
+		textarea {
+			vertical-align: top;
+		}
+		.form-row {
+			label {
+				display: inline-block;
+				margin: 0 20px 0 0;
+				text-align: right;
+				vertical-align: middle;
+				width: 200px;
+			}
+		}
+		.form-row-checkbox,
+		.form-row-radio {
+			margin: $form-row-margin;
+			margin-left: 220px;
+		}
+		.form-controls {
+			margin-left: 220px;
+		}
 	}
 }
 
 // Gravity Forms
 // -----------------------------------------------------------------
-
-.gform_wrapper li {
-	list-style: none;
-}
-.gform_wrapper li:before {
-	content: "";
-	font-size: 0;
-}
-.gform_wrapper table {
-	table-layout: initial;
-}
-.gform_wrapper input[type="radio"] {
-	margin-left: 1px;
+.gform_wrapper {
+	li {
+		list-style: none;
+	}
+	li:before {
+		content: "";
+		font-size: 0;
+	}
+	table {
+		table-layout: initial;
+	}
+	input[type="radio"] {
+		margin-left: 1px;
+	}
 }
 
 // buttons
