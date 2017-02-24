@@ -9,10 +9,6 @@ nav a {
 	text-decoration: none;
 }
 
-/* .search-toggle appears only when header is small and above, otherwise it's hidden */
-.brand .search-toggle {
-	display: none;
-}
 .brand .site-description {
 	float: left;
 	width: auto;
@@ -160,11 +156,6 @@ nav a {
 	padding: 0 10px;
 	background: $color-primary-nav-bg;
 }
-.masthead-container .primary-nav .utility-nav {
-	@include breakpoint(sm) {
-		display: none;
-	}
-}
 .primary-nav.is-open {
 	height: auto;
 	padding-bottom: 20px;
@@ -273,17 +264,19 @@ nav a {
 	}
 }
 .utility-nav a {
-	color: $color-utility-nav-link;
+	color: $color-utility-nav-mobile-link;
 	text-decoration: none;
-	&:hover {
-		color: $color-utility-nav-link-hover;
+
+	@include breakpoint(sm) {
+		color: $color-utility-nav-link;
 	}
-}
-// Required for mobile styles, when utility nav is in primary nav menu
-.primary-nav .utility-nav a {
-	color: $color-utility-nav-in-primary-link;
+
 	&:hover {
-		color: $color-utility-nav-in-primary-link-hover;
+		color: $color-utility-nav-mobile-link-hover;
+
+		@include breakpoint(sm) {
+			color: $color-utility-nav-link-hover;
+		}
 	}
 }
 
@@ -323,6 +316,31 @@ nav a {
 	@include breakpoint(lg) {
 		display: block;
 		padding: 20px 10px;
+	}
+}
+.l-side-nav .search-toggle {
+	position: absolute;
+	top: $height-brand + 30px;
+	right: 0;
+	color: $color-grayscale-f;
+
+	@include breakpoint(sm) {
+		right: 10px;
+		display: block;
+		position: relative;
+		@include vertical-center;
+		color: $color-nav-toggle-alt;
+	}
+
+	&:visited {
+		color: currentColor;
+	}
+	&:hover {
+		color: currentColor;
+
+		@include breakpoint(sm) {
+			color: $color-nav-toggle-alt-hover;
+		}
 	}
 }
 .search-open.l-side-nav .primary-nav {
@@ -369,7 +387,6 @@ nav a {
 		border-width: $border-width-quicksearch;
 	}
 }
-.l-side-nav .brand .search-toggle,
 .l-no-nav .brand .search-toggle {
 	color: $color-nav-toggle-alt;
 	@include breakpoint(sm) {
