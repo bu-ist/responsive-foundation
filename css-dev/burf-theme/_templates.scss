@@ -16,7 +16,7 @@
 %template-narrow {
 	/* These classes are using %template-narrow. */
 	.content-container {
-		max-width: $container-SM;
+		max-width: $container-sm;
 	}
 	.content-area {
 		@extend %col-md-full;
@@ -27,7 +27,7 @@
 // Always overrides %template-narrow.
 %remove-template-narrow {
 	.content-container {
-		max-width: $container-LG;
+		max-width: $container-lg;
 	}
 	.content-area {
 		@include breakpoint(md) {

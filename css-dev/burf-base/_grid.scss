@@ -12,14 +12,14 @@
 	width: 100%;
 
 	@include breakpoint( sm ) {
-		max-width: $container-SM;
+		max-width: $container-sm;
 		padding: $grid-container-padding-large-screen;
 	}
 	@include breakpoint( md ) {
-		max-width: $container-MD;
+		max-width: $container-md;
 	}
 	@include breakpoint( lg ) {
-		max-width: $container-LG;
+		max-width: $container-lg;
 	}
 }
 %row-styles {

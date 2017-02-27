@@ -154,7 +154,7 @@ h6.bu_collapsible {
 			border: 1px solid $border-color-table;
 		}
 	}
-	@include breakpoint("max-width: #{$container_MD}") {
+	@include breakpoint("max-width: #{$container_md}") {
 		overflow-x: auto;
 		overflow-y: hidden;
 		-webkit-overflow-scrolling: touch;
