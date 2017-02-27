@@ -208,29 +208,29 @@
 	) {
 		@error 'The breakpoint shorthand "#{$point}" is no longer supported as of Responsive 1.2.0. Use "xs", "sm", "md", or "lg" instead.';
 	}
-	@if ($MQs) {
+	@if ($mqs) {
 		@if ($point == xs) {
-			@media screen and (min-width:$XS) {
+			@media screen and (min-width:$xs) {
 				@content;
 			}
 		}
 		@else if ($point == sm) {
-			@media screen and (min-width:$SM) {
+			@media screen and (min-width:$sm) {
 				@content;
 			}
 		}
 		@else if ($point == md) {
-			@media screen and (min-width:$MD) {
+			@media screen and (min-width:$md) {
 				@content;
 			}
 		}
 		@else if ($point == lg) {
-			@media screen and (min-width:$LG) {
+			@media screen and (min-width:$lg) {
 				@content;
 			}
 		}
 		@else if ($point == xl) {
-			@media screen and (min-width:$XL) {
+			@media screen and (min-width:$xl) {
 				@content;
 			}
 		}
