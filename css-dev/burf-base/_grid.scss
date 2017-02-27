@@ -4,6 +4,7 @@
 	/* These classes are using %wrapper-styles. */
 	overflow: hidden;
 }
+
 %container-styles {
 	@extend %clearfix;
 	/* These classes are using %container-styles. */
@@ -15,13 +16,16 @@
 		max-width: $container-sm;
 		padding: $grid-container-padding-large-screen;
 	}
+
 	@include breakpoint( md ) {
 		max-width: $container-md;
 	}
+
 	@include breakpoint( lg ) {
 		max-width: $container-lg;
 	}
 }
+
 %row-styles {
 	@extend %clearfix;
 	/* These classes are using %row-styles. */
@@ -31,14 +35,17 @@
 		margin-right: 0;
 	}
 }
+
 %row-child-styles {
 	/* These classes are using %row-child-styles. */
 	padding: $grid-column-padding;
 }
+
 %equal-height-parent {
 	/* These classes are using %equal-height-parent. */
 	overflow: hidden;
 }
+
 %equal-height-child {
 	@include breakpoint( md ) {
 		/* These classes are using %equal-height-child. */
@@ -57,18 +64,23 @@
 .wrapper {
 	@extend %wrapper-styles;
 }
+
 .content {
 	position: relative;
 }
+
 .container {
 	@extend %container-styles;
 }
+
 .row {
 	@extend %row-styles;
 }
+
 .row [class*="col-"] {
 	@extend %row-child-styles;
 }
+
 .row .row:nth-last-of-type(1) {
 	margin-bottom: 0;
 }
@@ -142,20 +154,24 @@
 	/* These classes are using %col-float. */
 	float: left;
 }
+
 %col-base {
 	/* These classes are using %col-base. */
 	position: relative;
 	min-height: 1px;
 }
+
 %col-margin-base {
 	/* These classes are using %col-margin-base. */
 	margin-bottom: $grid-margin-width#{"%"};
 	margin-top: 0;
 	padding: 20px;
 }
+
 %col-noleftmargin {
 	margin-left: 0;
 }
+
 .col-margin-parent,
 %col-margin-parent {
 	margin-left: -$grid-margin-width#{"%"};
@@ -206,6 +222,7 @@ $grid-widths-margins: ();
 			}
 		}
 	}
+
 	@for $i from 1 through $grid-number-columns {
 		// Add to base styles
 		%col-#{$breakpoint} {
@@ -220,6 +237,7 @@ $grid-widths-margins: ();
 			}
 		}
 	}
+
 	@include breakpoint( $breakpoint, false ) {
 		@for $i from 1 through length($grid-widths) {
 			// Get percentage from earlier
@@ -231,24 +249,28 @@ $grid-widths-margins: ();
 					@include gridBuild(width, $percentage);
 					float: left;
 				}
+
 				@if $grid-push {
 					&-push-#{$i} {
 						/* These classes are using %col-#{$breakpoint}-push-#{$i}. */
 						@include gridBuild(left, $percentage);
 					}
 				}
+
 				@if $grid-pull {
 					&-pull-#{$i} {
 						/* These classes are using %col-#{$breakpoint}-pull-#{$i}. */
 						@include gridBuild(right, $percentage);
 					}
 				}
+
 				@if $grid-offset {
 					&-offset-#{$i} {
 						/* These classes are using %col-#{$breakpoint}-offset-#{$i}. */
 						@include gridBuild(margin-left, $percentage);
 					}
 				}
+
 				@if $grid-margins {
 					&-margin-#{$i} {
 						/* These classes are using %col-#{$breakpoint}-margin-#{$i}. */
@@ -276,18 +298,23 @@ $three-quarter:		$grid-number-columns * (3/4);
 	&-quarter {
 		@extend %col-#{$quarter};
 	}
+
 	&-third {
 		@extend %col-#{$third};
 	}
+
 	&-half {
 		@extend %col-#{$half};
 	}
+
 	&-two-third {
 		@extend %col-#{$two-third};
 	}
+
 	&-three-quarter {
 		@extend %col-#{$three-quarter};
 	}
+
 	&-full {
 		@extend %col-#{$grid-number-columns};
 	}
@@ -299,18 +326,23 @@ $three-quarter:		$grid-number-columns * (3/4);
 		&-quarter {
 			@extend %col-#{$breakpoint}-#{$quarter};
 		}
+
 		&-third {
 			@extend %col-#{$breakpoint}-#{$third};
 		}
+
 		&-half {
 			@extend %col-#{$breakpoint}-#{$half};
 		}
+
 		&-two-third {
 			@extend %col-#{$breakpoint}-#{$two-third};
 		}
+
 		&-three-quarter {
 			@extend %col-#{$breakpoint}-#{$three-quarter};
 		}
+
 		&-full {
 			@extend %col-#{$breakpoint}-#{$grid-number-columns};
 		}
@@ -319,18 +351,23 @@ $three-quarter:		$grid-number-columns * (3/4);
 			&-margin-quarter {
 				@extend %col-#{$breakpoint}-margin-#{$quarter};
 			}
+
 			&-margin-third {
 				@extend %col-#{$breakpoint}-margin-#{$third};
 			}
+
 			&-margin-half {
 				@extend %col-#{$breakpoint}-margin-#{$half};
 			}
+
 			&-margin-two-third {
 				@extend %col-#{$breakpoint}-margin-#{$two-third};
 			}
+
 			&-margin-three-quarter {
 				@extend %col-#{$breakpoint}-margin-#{$three-quarter};
 			}
+
 			&-margin-full {
 				@extend %col-#{$breakpoint}-margin-#{$grid-number-columns};
 			}
@@ -339,18 +376,23 @@ $three-quarter:		$grid-number-columns * (3/4);
 			&-push-quarter {
 				@extend %col-#{$breakpoint}-push-#{$quarter};
 			}
+
 			&-push-third {
 				@extend %col-#{$breakpoint}-push-#{$third};
 			}
+
 			&-push-half {
 				@extend %col-#{$breakpoint}-push-#{$half};
 			}
+
 			&-push-two-third {
 				@extend %col-#{$breakpoint}-push-#{$two-third};
 			}
+
 			&-push-three-quarter {
 				@extend %col-#{$breakpoint}-push-#{$three-quarter};
 			}
+
 			&-push-full {
 				@extend %col-#{$breakpoint}-push-#{$grid-number-columns};
 			}
@@ -359,18 +401,23 @@ $three-quarter:		$grid-number-columns * (3/4);
 			&-pull-quarter {
 				@extend %col-#{$breakpoint}-pull-#{$quarter};
 			}
+
 			&-pull-third {
 				@extend %col-#{$breakpoint}-pull-#{$third};
 			}
+
 			&-pull-half {
 				@extend %col-#{$breakpoint}-pull-#{$half};
 			}
+
 			&-pull-two-third {
 				@extend %col-#{$breakpoint}-pull-#{$two-third};
 			}
+
 			&-pull-three-quarter {
 				@extend %col-#{$breakpoint}-pull-#{$three-quarter};
 			}
+
 			&-pull-full {
 				@extend %col-#{$breakpoint}-pull-#{$grid-number-columns};
 			}
@@ -379,18 +426,23 @@ $three-quarter:		$grid-number-columns * (3/4);
 			&-offset-quarter {
 				@extend %col-#{$breakpoint}-offset-#{$quarter};
 			}
+
 			&-offset-third {
 				@extend %col-#{$breakpoint}-offset-#{$third};
 			}
+
 			&-offset-half {
 				@extend %col-#{$breakpoint}-offset-#{$half};
 			}
+
 			&-offset-two-third {
 				@extend %col-#{$breakpoint}-offset-#{$two-third};
 			}
+
 			&-offset-three-quarter {
 				@extend %col-#{$breakpoint}-offset-#{$three-quarter};
 			}
+
 			&-offset-full {
 				@extend %col-#{$breakpoint}-offset-#{$grid-number-columns};
 			}
@@ -408,21 +460,25 @@ $three-quarter:		$grid-number-columns * (3/4);
 				&-#{$i} {
 					@extend %col-#{$breakpoint}-#{$i};
 				}
+
 				@if $grid-margins {
 					&-margin-#{$i} {
 						@extend %col-#{$breakpoint}-margin-#{$i};
 					}
 				}
+
 				@if $grid-push {
 					&-push-#{$i} {
 						@extend %col-#{$breakpoint}-push-#{$i};
 					}
 				}
+
 				@if $grid-pull {
 					&-pull-#{$i} {
 						@extend %col-#{$breakpoint}-pull-#{$i};
 					}
 				}
+
 				@if $grid-offset {
 					&-offset-#{$i} {
 						@extend %col-#{$breakpoint}-offset-#{$i};
