@@ -36,10 +36,7 @@
 }
 .comment-author {
 	color: $color-comment-author;
-	// TODO: probably shouldn't be outputting gravatar markup and hiding here...
-	img {
-		display: none;
-	}
+
 	.fn {
 		font-size: $font-size-small;
 		color: $color-comment-author-name;
@@ -52,13 +49,16 @@
 		display: none;
 	}
 }
+
 .comment-content p {
 	margin: 12px 0;
 }
+
 .comment-content p:first-child {
 	margin-top: 1px;
 }
-/* comment form */
+
+// comment form
 .comment-respond {
 	@include border-radius(5px);
 	position: relative;
@@ -67,17 +67,21 @@
 	border: $border-comment-form;
 	border-width: $border-width-comment-form;
 	background: $color-comment-form-bg;
+
 	fieldset {
 		padding: 0;
 		margin: 0;
 		border: 0;
 	}
+
 	p {
 		margin: 0 0 20px;
 	}
+
 	label {
 		display: block;
 		margin: 0 0 2px;
+
 		@include breakpoint(sm) {
 			float: left;
 			width: 25%;
