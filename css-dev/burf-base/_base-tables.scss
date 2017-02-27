@@ -1,12 +1,9 @@
-/* Tables
------------------------------------------------------------------ */
+// Tables
+// -----------------------------------------------------------------
 
-/* 1. From normalize.css: removes most spacing between table cells. */
 table {
 	margin: $table-margin;
 	border: $table-border;
-	border-spacing: 0; /* 1 */
-	border-collapse: collapse; /* 1 */
 	empty-cells: show;
 
 	caption {
@@ -19,7 +16,7 @@ table {
 
 	td,
 	th {
-		overflow: visible; /*to make ths where the title is really long work*/
+		overflow: visible; // to make ths where the title is really long work
 		padding: $table-padding;
 		margin: 0;
 		border-width: 0 0 0 1px;
@@ -49,7 +46,7 @@ table {
 	}
 }
 
-/* tables that use grid width classes */
+// tables that use grid width classes
 table col[class*="col-"] {
 	display: table-column;
 	float: none;
@@ -60,17 +57,16 @@ table th[class*="col-"] {
 	float: none;
 }
 
-/* Striped tables
------------------------------------------------------------------ */
+// Striped tables
 
-/* nth-child selector for modern browsers, otherwise apply .u-odd class to markup */
+// nth-child selector for modern browsers, otherwise apply .u-odd class to markup
 .table-striped tr:nth-child(2n-1) td,
 .u-odd td {
 	background-color: $color-table-stripes;
 }
 
-/* Bordered tables
------------------------------------------------------------------ */
+// Bordered tables
+// -----------------------------------------------------------------
 
 .table-bordered {
 	td {
@@ -82,8 +78,8 @@ table th[class*="col-"] {
 	border-bottom-width: 0;
 }
 
-/* Horizontal tables
------------------------------------------------------------------ */
+// Horizontal tables
+// -----------------------------------------------------------------
 
 .table-horizontal {
 	td,
