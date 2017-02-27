@@ -131,24 +131,24 @@ $font-margin-jumbo:                         0 0 25px 0 !default;
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
 
-$color-grayscale-0:                        #000000 !default;
+$color-grayscale-0:                        #000 !default;
 $color-grayscale-1:                        #151515 !default;
-$color-grayscale-2:                        #222222 !default;
-$color-grayscale-3:                        #333333 !default;
-$color-grayscale-4:                        #444444 !default;
-$color-grayscale-5:                        #555555 !default;
-$color-grayscale-6:                        #666666 !default;
+$color-grayscale-2:                        #222 !default;
+$color-grayscale-3:                        #333 !default;
+$color-grayscale-4:                        #444 !default;
+$color-grayscale-5:                        #555 !default;
+$color-grayscale-6:                        #666 !default;
 $color-grayscale-7:                        #7a7a7a !default;
-$color-grayscale-8:                        #888888 !default;
+$color-grayscale-8:                        #888 !default;
 $color-grayscale-9:                        #9f9f9f !default;
-$color-grayscale-a:                        #aaaaaa !default;
-$color-grayscale-b:                        #bbbbbb !default;
-$color-grayscale-c:                        #cccccc !default;
-$color-grayscale-d:                        #dddddd !default;
-$color-grayscale-e:                        #eeeeee !default;
+$color-grayscale-a:                        #aaa !default;
+$color-grayscale-b:                        #bbb !default;
+$color-grayscale-c:                        #ccc !default;
+$color-grayscale-d:                        #ddd !default;
+$color-grayscale-e:                        #eee !default;
 $color-grayscale-f5:                       #f5f5f5 !default;
 $color-grayscale-f0:                       #f0f0f0 !default;
-$color-grayscale-f:                        #ffffff !default;
+$color-grayscale-f:                        #fff !default;
 
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
@@ -232,7 +232,7 @@ $form-margin:                              0 !default;
 $font-family-form:                          $font-family-sans-serif !default;
 $font-size-form:                            $font-size-small !default;
 
-$form-legend-border:                       1px solid #e5e5e5 !default;
+$form-legend-border:                       1px solid $color-grayscale-e !default;
 $form-legend-border-width:                  0 0 1px 0 !default;
 $form-legend-margin:                       0 0 20px !default;
 $form-legend-padding:                      0 0 4px !default;
@@ -248,8 +248,8 @@ $form-row-margin:                          0 0 10px !default;
 
 $form-input-margin:                        0.25em 0 !default;
 $form-input-padding:                       0.5em 0.6em !default;
-$form-input-border:                        1px solid #ccc !default;
-$form-input-shadow:                        inset 0 1px 3px #eee !default;
+$form-input-border:                        1px solid $color-grayscale-c !default;
+$form-input-shadow:                        inset 0 1px 3px $color-grayscale-e !default;
 $form-input-border-radius:                  0 !default;
-$form-input-focus-shadow:                   0 0 4px 0 rgba(18 ,159 ,234 ,0.2) !default;
+$form-input-focus-shadow:                   0 0 4px 0 rgba( 18, 159, 234, 0.2 ) !default;
 $color-input-focus-border:                  #129fea !default;
