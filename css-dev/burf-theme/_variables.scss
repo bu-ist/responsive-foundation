@@ -23,7 +23,7 @@ $number-columns: 									 3 !default;
 $margin-width: 			  					    5.2% !default;
 $number-widgets-footbar: 						 $number-columns !default;
 $width-side-nav:                            240px !default;
-$sidebar-padding:                          ($margin-width - $margin-width*(1/($number-widgets-footbar))) !default;
+$sidebar-padding:                          ( $margin-width - $margin-width * ( 1 / ( $number-widgets-footbar ) ) ) !default;
 $column-padding-bottom:                     10px !default;
 $column-padding-bottom-large-screen:         35px !default;
 
@@ -51,7 +51,7 @@ $font-size-caption:                         $font-size-smaller !default;
 $color-caption:                            $color-grayscale-9 !default;
 $border-color-table:                        $color-grayscale-d !default;
 $border-color-table-dark:                   $color-grayscale-9 !default;
-$box-shadow-table:                          inset -20px 0px 20px -10px $color-grayscale-f0 !default;
+$box-shadow-table:                          inset -20px 0 20px -10px $color-grayscale-f0 !default;
 
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
@@ -72,7 +72,7 @@ $font-family-brand-sponsored:               $font-family-brand !default;
 $font-family-brand-unbranded:               $font-family-sans-serif !default;
 $height-brand:                             120px !default;
 $color-brand:                              $color-grayscale-0 !default;
-$color-unbranded:                            #cc0000;
+$color-unbranded:                            #c00;
 
 // Primary Navigation
 
@@ -127,7 +127,7 @@ $color-search-text:                        $color-grayscale-0 !default;
 
 // All content and templates
 
-$color-bannerContainer:                    $color-grayscale-f0 !default;
+$color-banner-container:                    $color-grayscale-f0 !default;
 $color-content-bg:                         $color-grayscale-f !default;
 $color-back-link-before:                    $color-grayscale-f !default;
 $back-link-before:                          "← " !default;
@@ -257,10 +257,10 @@ $font-family-widget-calendar-date:          $font-family-sans-serif !default;
 $font-size-widget-calendar-date:             $font-size-smallest !default;
 $line-height-widget-calendar-date:           $line-height-large !default;
 $color-widget-calendar-date:                $color-grayscale-0 !default;
-$font-size-widget-calendar-dateDay:          $font-size-large !default;
-$color-widget-calendar-dateDay:             $color-widget-calendar-date !default;
-$font-size-widget-calendar-dateMonth:        $font-size-smallest !default;
-$color-widget-calendar-dateMonth:           $color-widget-calendar-date !default;
+$font-size-widget-calendar-date-day:          $font-size-large !default;
+$color-widget-calendar-date-day:             $color-widget-calendar-date !default;
+$font-size-widget-calendar-date-month:        $font-size-smallest !default;
+$color-widget-calendar-date-month:           $color-widget-calendar-date !default;
 
 // Navigation and Menu Widgets
 

@@ -217,12 +217,12 @@ $width-calendar-date: 48px;
 		}
 		.day {
 			display: block;
-			font-size: $font-size-widget-calendar-dateDay;
-			color: $color-widget-calendar-dateDay;
+			font-size: $font-size-widget-calendar-date-day;
+			color: $color-widget-calendar-date-day;
 		}
 		.month {
-			font-size: $font-size-widget-calendar-dateMonth;
-			color: $color-widget-calendar-dateMonth;
+			font-size: $font-size-widget-calendar-date-month;
+			color: $color-widget-calendar-date-month;
 			text-transform: uppercase;
 		}
 	}

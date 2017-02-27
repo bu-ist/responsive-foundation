@@ -36,7 +36,7 @@ body {
 .banner-container-window-width {
 	@include breakpoint(lg) {
 		padding: 20px;
-		background: $color-bannerContainer;
+		background: $color-banner-container;
 	}
 }
 .banner-container-page-width {
@@ -47,7 +47,7 @@ body {
 	img {
 		@include breakpoint(md) {
 			width: 100%;
-			background: $color-bannerContainer;
+			background: $color-banner-container;
 		}
 	}
 }
