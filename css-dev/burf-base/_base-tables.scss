@@ -15,6 +15,7 @@ table {
 		color: $color-table-caption;
 		text-align: center;
 	}
+
 	td,
 	th {
 		overflow: visible; /*to make ths where the title is really long work*/
@@ -24,17 +25,21 @@ table {
 		border-left: 1px solid $color-table-border;
 		font-size: inherit;
 	}
+
 	th {
 		border-bottom: 1px solid $color-table-border;
 	}
+
 	td {
 		background-color: transparent;
 		vertical-align: top;
 	}
+
 	td:first-child,
 	th:first-child {
 		border-left-width: 0;
 	}
+	
 	thead {
 		background: $color-table-head-bg;
 		vertical-align: bottom;

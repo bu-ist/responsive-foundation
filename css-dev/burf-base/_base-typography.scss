@@ -118,9 +118,7 @@ h6 small {
 }
 hgroup {
 	margin: $font-margin-hgroup;
-}
-/* remove margins from headings within hgroup */
-hgroup {
+	/* remove margins from headings within hgroup */
 	h1,
 	h2,
 	h3,
@@ -259,6 +257,9 @@ code {
 .content p code {
 	font-size: 90%;
 }
+.code + .code {
+	margin-top: -15px;
+}
 .code {
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
@@ -266,14 +267,11 @@ code {
 	margin: $font-margin-code;
 	border: 1px solid $color-grayscale-e;
 	background: $color-code-bg;
-}
-.code + .code {
-	margin-top: -15px;
-}
-.code code {
-	padding: 0;
-	background: none;
-	font-size: 95%;
-	white-space: pre;
-	word-wrap: normal;
+	code {
+		padding: 0;
+		background: none;
+		font-size: 95%;
+		white-space: pre;
+		word-wrap: normal;
+	}
 }

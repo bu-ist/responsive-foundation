@@ -47,8 +47,10 @@
 }
 
 // TODO: change markup, then style
-.comment-metadata time {
-	display: none;
+.comment-metadata {
+	time {
+		display: none;
+	}
 }
 .comment-content p {
 	margin: 12px 0;

@@ -155,6 +155,7 @@
 	margin-top: 30px;
 	border: $border-news-post;
 	border-width: $border-width-news-post;
+	// TODO: probably shouldn't be using visibility hidden here...
 	.screen-reader-text {
 		display: none;
 	}
@@ -218,6 +219,9 @@
 			font-weight: normal;
 			font-size: $font-size-single-meta;
 		}
+		p:last-child {
+			margin-bottom: 0;
+		}
 		p {
 			margin-bottom: 10px;
 			font-family: $font-family-news-meta;
@@ -226,10 +230,6 @@
 			color: $color-news-meta-em;
 		}
 	}
-}
-
-.single .meta p:last-child {
-	margin-bottom: 0;
 }
 .archive-link {
 	@extend %button-styles;

@@ -395,6 +395,7 @@ select[multiple] {
 		textarea {
 			vertical-align: top;
 		}
+
 		.form-row {
 			label {
 				display: inline-block;
@@ -404,11 +405,13 @@ select[multiple] {
 				width: 200px;
 			}
 		}
+
 		.form-row-checkbox,
 		.form-row-radio {
 			margin: $form-row-margin;
 			margin-left: 220px;
 		}
+
 		.form-controls {
 			margin-left: 220px;
 		}
@@ -421,13 +424,16 @@ select[multiple] {
 	li {
 		list-style: none;
 	}
+
 	li:before {
 		content: "";
 		font-size: 0;
 	}
+
 	table {
 		table-layout: initial;
 	}
+	
 	input[type="radio"] {
 		margin-left: 1px;
 	}
