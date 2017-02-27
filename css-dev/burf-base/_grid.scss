@@ -7,18 +7,18 @@
 %container-styles {
 	@extend %clearfix;
 	/* These classes are using %container-styles. */
-	width: 100%;
-	padding: $grid-container-padding;
 	margin: 0 auto;
+	padding: $grid-container-padding;
+	width: 100%;
 
-	@include breakpoint(sm) {
+	@include breakpoint( sm ) {
 		max-width: $container-SM;
 		padding: $grid-container-padding-large-screen;
 	}
-	@include breakpoint(md) {
+	@include breakpoint( md ) {
 		max-width: $container-MD;
 	}
-	@include breakpoint(lg) {
+	@include breakpoint( lg ) {
 		max-width: $container-LG;
 	}
 }
@@ -27,7 +27,7 @@
 	/* These classes are using %row-styles. */
 	margin: $grid-row-margin;
 
-	@include breakpoint(sm) {
+	@include breakpoint( sm ) {
 		margin-right: 0;
 	}
 }
@@ -40,7 +40,7 @@
 	overflow: hidden;
 }
 %equal-height-child {
-	@include breakpoint(md) {
+	@include breakpoint( md ) {
 		/* These classes are using %equal-height-child. */
 		padding-bottom: 99999px;
 		margin-bottom: -99999px;
@@ -195,13 +195,13 @@ $grid-widths-margins: ();
 	// If margins, build a margin placeholder for that breakpoint
 	@if $grid-margins {
 		%col-#{$breakpoint}-margin-base {
-			@include breakpoint($breakpoint, false) {
+			@include breakpoint( $breakpoint, false ) {
 				margin-left: $grid-margin-width#{"%"};
 			}
 		}
 		.col-#{$breakpoint}-margin-parent,
 		%col-#{$breakpoint}-margin-parent {
-			@include breakpoint($breakpoint, false) {
+			@include breakpoint( $breakpoint, false ) {
 				margin-left: -$grid-margin-width#{"%"};
 			}
 		}
@@ -220,7 +220,7 @@ $grid-widths-margins: ();
 			}
 		}
 	}
-	@include breakpoint($breakpoint, false) {
+	@include breakpoint( $breakpoint, false ) {
 		@for $i from 1 through length($grid-widths) {
 			// Get percentage from earlier
 			$percentage: nth($grid-widths, $i);
