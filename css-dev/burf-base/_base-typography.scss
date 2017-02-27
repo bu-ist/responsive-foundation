@@ -1,5 +1,5 @@
-/* Links
------------------------------------------------------------------ */
+// Links
+// -----------------------------------------------------------------
 
 a {
 	color: $color-link;
@@ -7,19 +7,15 @@ a {
 a:visited {
 	color: $color-link-visited;
 }
-/* Address `outline` inconsistency between Chrome and other browsers. */
-a:focus {
-	outline: thin dotted;
-}
-/* Improve readability when focused and also mouse hovered in all browsers. */
+
+// Improve readability when focused and also mouse hovered in all browsers.
 a:active,
 a:hover {
-	outline: 0;
 	text-decoration: none;
 }
 
-/* Typography
------------------------------------------------------------------ */
+// Typography
+// -----------------------------------------------------------------
 
 %font-jumbo {
 	/* These classes are using %font-jumbo. */
@@ -77,7 +73,6 @@ a:hover {
 	line-height: $line-height-micro;
 }
 
-/* Address font sizes and margins set differently in IE 6/7. Address font sizes within `section` and `article` in Firefox 4+, Safari 5, and Chrome. */
 h1 {
 	@extend %font-jumbo;
 }
@@ -106,6 +101,7 @@ h6 {
 	font-family: $font-family-heading;
 	color: $color-heading;
 }
+
 h1 small,
 h2 small,
 h3 small,
@@ -116,9 +112,11 @@ h6 small {
 	font-size: 0.75em;
 	color: $color-heading-small;
 }
+
 hgroup {
 	margin: $font-margin-hgroup;
-	/* remove margins from headings within hgroup */
+
+	// remove margins from headings within hgroup
 	h1,
 	h2,
 	h3,
@@ -130,40 +128,20 @@ hgroup {
 	}
 }
 
-/* Address styling not present in IE 7/8/9, Safari 5, and Chrome. */
+// Adds the help cursor on hover to abbreviations
 abbr[title] {
-	border-bottom: 1px dotted;
 	cursor: help;
 }
-/* Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome. */
-b,
-strong {
-	font-weight: bold;
-}
+
 blockquote {
 	margin: $font-margin-blockquote;
 }
-/* Address styling not present in Safari 5 and Chrome. */
-dfn {
-	font-style: italic;
-}
-/* Address differences between Firefox and other browsers. Known issue:no IE 6/7 normalization. */
-hr {
-	-moz-box-sizing: content-box;
-	     box-sizing: content-box;
-	height: 0;
-}
-/* Address styling not present in IE 6/7/8/9. */
-mark {
-	background: #ffff00;
-	color: #000000;
-}
-/* Address margins set differently in IE 6/7. */
+
 p,
 pre {
 	margin: $font-margin-base;
 }
-/* Correct font family set oddly in IE 6, Safari 4/5, and Chrome. */
+
 code,
 kbd,
 pre,
@@ -171,73 +149,41 @@ samp {
 	font-family: $font-family-monospace;
 	font-size: $font-size-base;
 }
-/* Improve readability of pre-formatted text in all browsers. */
-pre {
-	white-space: pre;
-	white-space: pre-wrap;
-	word-wrap: break-word;
-}
-/* Address CSS quotes not supported in IE 6/7. */
-q {
-	quotes: none;
-}
-/* Address `quotes` property not supported in Safari 4. */
-q:before,
-q:after {
-	content: "";
-	content: none;
-}
-/* Address inconsistent and variable font size in all browsers. */
-small {
-	font-size: 80%;
-}
-/* Prevent `sub` and `sup` affecting `line-height` in all browsers. */
-sub,
-sup {
-	position: relative;
-	vertical-align: baseline;
-	font-size: .75em;
-	line-height: 0;
-}
-sup {
-	top: -0.5em;
-}
-sub {
-	bottom: -0.25em;
-}
-/* Always hide an element when it has the `hidden` HTML attribute. */
+
+/* Always hide an element when it has the `hidden` HTML attribute.
+TODO: Find out if the important here is actually necessary.
 [hidden] {
 	display: none !important;
 }
+*/
 
-/* Lists
------------------------------------------------------------------ */
+// Lists
+// -----------------------------------------------------------------
 
-/* Address margins set differently in IE 6/7. */
 dl,
 menu,
 ol,
 ul {
 	margin: $font-margin-list;
 }
+
 dd {
 	margin: $font-margin-dd;
 }
-/* Address paddings set differently in IE 6/7. */
+
 menu,
 ol,
 ul {
 	padding: $font-padding-list;
 }
-/* Correct list images handled incorrectly in IE 7. */
+
 nav ul,
 nav ol {
 	padding: 0;
 	margin: 0;
-	list-style: none;
-	list-style-image: none;
 }
-/* remove margin from nested lists */
+
+// remove margin from nested lists
 ul ul,
 ul ol,
 ol ul,
@@ -245,8 +191,8 @@ ol ol {
 	margin: 0;
 }
 
-/* Code
------------------------------------------------------------------ */
+// Code
+// -----------------------------------------------------------------
 
 code {
 	padding: $font-padding-code;
