@@ -260,10 +260,6 @@
 	.event-link {
 		a {
 			color: $color-calendar-event-link;
-			&:hover,
-			&:focus {
-				color: $color-calendar-event-link-hover;
-			}
 		}
 	}
 	.event-link-hover {
