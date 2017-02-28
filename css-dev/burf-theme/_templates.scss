@@ -266,6 +266,12 @@
 			}
 		}
 	}
+	.event-link-hover {
+		&:hover,
+		&:focus {
+			color: $color-calendar-event-link-hover;
+		}
+	}
 }
 
 /* sidebar */
