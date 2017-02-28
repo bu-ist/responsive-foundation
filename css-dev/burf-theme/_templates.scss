@@ -257,14 +257,13 @@
 	li {
 		list-style: none;
 	}
-	.event-link {
-		a {
-			color: $color-calendar-event-link;
-			&:hover,
-			&:focus {
-				color: $color-calendar-event-link-hover;
-			}
-		}
+}
+
+.event-link {
+	color: $color-calendar-event-link;
+	&:hover,
+	&:focus {
+		color: $color-calendar-event-link-hover;
 	}
 }
 

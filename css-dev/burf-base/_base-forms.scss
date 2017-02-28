@@ -109,11 +109,11 @@ fieldset {
 legend {
 	border: $form-legend-border;
 	border-width: $form-legend-border-width;
+	display: block;
 	font-weight: 700;
 	margin: $form-legend-margin;
 	padding: $form-legend-padding;
 	width: 100%;
-	display: block;
 }
 
 label {
