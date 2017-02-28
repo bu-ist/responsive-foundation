@@ -27,8 +27,8 @@ audio,
 canvas,
 video {
 	display: inline-block;
-	*display: inline;
 	*zoom: 1;
+	*display: inline;
 }
 
 // Prevent modern browsers from displaying `audio` without controls.
