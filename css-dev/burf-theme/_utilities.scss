@@ -41,7 +41,7 @@
 /// @access public
 /// @since 1.0.0
 
-%message-styles {
+%card-styles {
 	@include border-radius($border-radius-message);
 	background-color: $color-message-bg;
 	border: $border-message;
@@ -52,7 +52,7 @@
 }
 
 .message {
-	@extend %message-styles;
+	@extend %card-styles;
 }
 
 %responsive-video-styles {
