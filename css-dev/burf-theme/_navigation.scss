@@ -1,6 +1,9 @@
 // Navigation contents:
 
-//	1.
+//	1. Global Styles
+//	2. Search
+//	3. Nav Toggle
+//	4. Primary Navigation
 
 // -----------------------------------------------------------------
 
@@ -18,15 +21,6 @@ nav {
 	}
 }
 
-/// Handles style for the search toggle in the masthead area.
-/// @group navigation
-/// @access public
-/// @since 1.0.0
-
-.search-toggle {
-	display: none; // hidden until small breakpoint
-}
-
 /// Handles styling for the WordPress site description.
 /// @group navigation
 /// @access public
@@ -38,57 +32,13 @@ nav {
 	width: auto;
 }
 
-/// Handles styling for the search form in the navigation.
+// Search
+// -----------------------------------------------------------------
+
+/// Handles styling for the search toggle.
 /// @group navigation
 /// @access public
 /// @since 1.0.0
-
-#quicksearch {
-	background: $color-search-bg;
-	display: none;
-	margin: 0;
-	padding: 30px 20px;
-	position: relative;
-
-	fieldset {
-		margin: 0 auto;
-
-		@include breakpoint(sm) {
-			max-width: $container-sm;
-			padding: 0 20px;
-		}
-	}
-}
-
-.search-submit {
-	@extend %button-styles-primary;
-	@include border-radius($border-radius-quicksearch-button);
-	float: right;
-	padding: 11px 0 12px 0;
-	width: 25%;
-
-	@include breakpoint(sm) {
-		width: 15%;
-	}
-}
-
-#quicksearch.is-open {
-	display: block;
-	border-bottom: $border-search;
-}
-#q {
-	@include border-radius($border-radius-quicksearch-input);
-	width: 75%;
-	padding-right: 10px;
-	padding-left: 10px;
-	color: $color-search-text;
-
-	@include breakpoint(sm) {
-		width: 85%;
-	}
-}
-
-// search-toggle
 
 .search-toggle {
 	@extend %icon-search;
@@ -109,26 +59,101 @@ nav {
 		color: $color-nav-toggle-hover;
 	}
 
+	&.is-open {
+		@extend %icon-close;
+	}
+
 	span {
 		display: none;
 	}
 }
 
-.search-toggle.is-open {
+/// Handles styling for the search form in the navigation.
+/// @group navigation
+/// @access public
+/// @since 1.0.0
+
+#quicksearch {
+	background: $color-search-bg;
+	display: none;
+	margin: 0;
+	padding: 30px 20px;
+	position: relative;
+
 	&.is-open {
-		@extend %icon-close;
+		display: block;
+		border-bottom: $border-search;
+	}
+
+	fieldset {
+		margin: 0 auto;
+
+		@include breakpoint(sm) {
+			max-width: $container-sm;
+			padding: 0 20px;
+		}
 	}
 }
 
-// when nav or search are opened
-.is-open .primary-nav-menu,
-.is-open .utility-nav {
-	display: block;
-	clear: left;
+/// Handles styling for the search field in search forms.
+/// @group navigation
+/// @access public
+/// @since 1.0.0
+
+.search-field {
+	@include border-radius($border-radius-quicksearch-input);
+	color: $color-search-text;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 75%;
+
+	@include breakpoint(sm) {
+		width: 85%;
+	}
 }
 
+/// Handles styling for the search button in search forms.
+/// @group navigation
+/// @access public
+/// @since 1.0.0
 
-// nav-toggle
+.search-submit {
+	@extend %button-styles-primary;
+	@include border-radius($border-radius-quicksearch-button);
+	float: right;
+	padding: 11px 0 12px 0;
+	width: 25%;
+
+	@include breakpoint(sm) {
+		width: 15%;
+	}
+}
+
+// Nav Toggle
+// -----------------------------------------------------------------
+
+/// Handles nav icon shared styles.
+/// @group navigation
+/// @access private
+/// @since 1.0.0
+
+%_nav-icon-shared {
+	@include transition(all 250ms ease-in-out 0s);
+	background: $color-nav-toggle;
+	content: "";
+	cursor: pointer;
+	display: block;
+	height: 4px;
+	left: 15px;
+	position: absolute;
+	top: 28px;
+	width: 30px;
+}
+
+/// Handles styling for the nav toggle height, width, and placement.
+/// @group navigation
+/// @access public
+/// @since 1.0.0
 
 .nav-toggle {
 	@extend %hide-text;
@@ -142,98 +167,117 @@ nav {
 		display: none;
 	}
 }
-.nav-toggle span,
-.nav-toggle span:before,
-.nav-toggle span:after {
-	position: absolute;
-	top: 28px;
-	left: 15px;
-	display: block;
-	width: 30px;
-	height: 4px;
-	background: $color-nav-toggle;
-	content: "";
-	cursor: pointer;
-}
-.nav-toggle span:before {
-	top: -10px;
-	left: 0;
-}
-.nav-toggle span:after {
-	top: 10px;
-	left: 0;
-}
-.nav-toggle span,
-.nav-toggle span:before,
-.nav-toggle span:after {
-	@include transition(all, 250ms, ease-in-out, 0s);
-}
-.nav-toggle.is-open span {
-	background-color: transparent;
-}
-.nav-toggle.is-open span:before,
-.nav-toggle.is-open span:after {
-	top: 0;
-}
-.nav-toggle.is-open span:before {
-	@include rotate (45);
-}
-.nav-toggle.is-open span:after {
-	@include rotate (-45);
+
+/// Handles styling for the nav toggle icon.
+/// @group navigation
+/// @access public
+/// @since 1.0.0
+
+.nav-toggle-icon {
+	@extend %_nav-icon-shared;
+
+	&::before {
+		@extend %_nav-icon-shared;
+		top: -10px;
+		left: 0;
+	}
+
+	&::after {
+		@extend %_nav-icon-shared;
+		top: 10px;
+		left: 0;
+	}
+
+	.is-open & {
+		background-color: transparent;
+
+		&::before {
+			top: 0;
+			@include rotate( 45 );
+		}
+
+		&::after {
+			top: 0;
+			@include rotate( -45 );
+		}
+	}
 }
 
-// primaryNav and menu
+// Primary Navigation
+// -----------------------------------------------------------------
+
+/// Handles styling for the primary navigation bar.
+/// @group navigation
+/// @access public
+/// @since 1.0.0
 
 .primary-nav {
 	@extend %clearfix;
+	background: $color-primary-nav-bg;
 	display: block;
 	padding: 0 10px;
-	background: $color-primary-nav-bg;
-}
 
-.primary-nav.is-open {
-	height: auto;
-	padding-bottom: 20px;
-	@include breakpoint(sm) {
-		padding-bottom: 0;
+	&.is-open {
+		height: auto;
+		padding-bottom: 20px;
+
+		@include breakpoint( sm ) {
+			padding-bottom: 0;
+		}
 	}
 }
+
+/// Handles styling for the menu inside primary navigation.
+/// @group navigation
+/// @access public
+/// @since 1.0.0
 
 .primary-nav-menu {
 	display: none;
 	margin: 40px 10px 0 10px;
 
-	@include breakpoint(sm) {
+	@include breakpoint( sm ) {
+		border: none;
 		display: inline;
 		margin: 0;
-		border: none;
+	}
+
+	.is-open & {
+		clear: left;
+		display: block;
 	}
 
 	li {
 		display: block;
 		zoom: 1;
 
-		@include breakpoint(sm) {
-			display: inline-block;
+		@include breakpoint( sm ) {
 			border: none;
+			display: inline-block;
 
 			.lt-ie8 & {
 				display: inline;
 			}
 		}
 	}
+
 	a {
-		display: block;
-		padding: 10px 0;
 		border: 1px solid $color-primary-nav-border;
 		border-width: $border-width-primary-nav;
 		color: $color-primary-nav-link;
+		display: block;
+		padding: 10px 0;
 		text-decoration: none;
 
 		@include breakpoint(sm) {
-			padding: 0 10px;
 			border: $border-primary-nav-desktop;
 			line-height: 60px;
+			padding: 0 10px;
+		}
+
+		&.active,
+		&.active_section {
+			color: $color-primary-nav-link-current;
 		}
 
 		&:hover,
@@ -246,19 +290,14 @@ nav {
 		display: none;
 
 		@include breakpoint(sm) {
-			position: absolute;
-			left: -9999px;
-			z-index: 2;
-			display: block;
-			width: 240px;
 			background: $color-primary-nav-dropdown-bg;
+			display: block;
+			left: -9999px;
+			position: absolute;
+			width: 240px;
+			z-index: 2;
 		}
 	}
-}
-
-.primary-nav-menu li a.active,
-.primary-nav-menu li a.active_section {
-	color: $color-primary-nav-link-current;
 }
 
 .primary-nav-menu li:hover ul,
@@ -270,9 +309,9 @@ nav {
 	padding: 0 10px;
 }
 .primary-nav-menu li li a {
-	padding: 10px 0;
-	line-height: $line-height-base;
 	color: $color-primary-nav-dropdown-link;
+	line-height: $line-height-base;
+	padding: 10px 0;
 
 	&:hover,
 	&:focus {
@@ -280,28 +319,34 @@ nav {
 	}
 }
 
-/* utilityNav
------------------------------------------------------------------ */
+// utilityNav
+// -----------------------------------------------------------------
 
 .utility-nav {
-	display: none;
-	padding: 20px 0 0;
-	margin: 0 10px;
 	border: 1px solid $color-primary-nav-border;
 	border-width: $border-width-utility-nav;
+	display: none;
 	font-size: $font-size-utility-nav;
+	margin: 0 10px;
+	padding: 20px 0 0;
+
+	.is-open & {
+		clear: left;
+		display: block;
+	}
 
 	li {
-		padding: 0;
 		border: none;
+		padding: 0;
 
 		@include breakpoint(sm) {
-			display: inline-block;
-			padding-left: 10px;
 			border: none;
 			*display: inline;
+			display: inline-block;
+			padding-left: 10px;
 		}
 	}
+
 	a {
 		color: $color-utility-nav-link;
 		text-decoration: none;
@@ -313,10 +358,10 @@ nav {
 }
 .masthead-container .utility-nav {
 	@include breakpoint(sm) {
-		display: block;
-		padding: 0;
-		margin: 0;
 		border: none;
+		display: block;
+		margin: 0;
+		padding: 0;
 	}
 }
 
@@ -349,8 +394,8 @@ nav {
 	}
 }
 
-/* default
------------------------------------------------------------------ */
+// default
+// -----------------------------------------------------------------
 
 .l-default .utility-nav {
 	@include breakpoint(sm) {
@@ -361,8 +406,8 @@ nav {
 	}
 }
 
-/* side-nav
------------------------------------------------------------------ */
+// side-nav
+// -----------------------------------------------------------------
 
 .l-side-nav {
 	.masthead:after {
@@ -447,7 +492,7 @@ nav {
 
 .l-side-nav .search-toggle {
 	position: absolute;
-	//top: $height-brand + 30px;
+	top: $height-brand + 30px;
 	right: 0;
 	color: $color-grayscale-f;
 
@@ -566,8 +611,8 @@ $_search-height: 103px;
 	float: none;
 }
 
-/* top nav
------------------------------------------------------------------ */
+// top nav
+// -----------------------------------------------------------------
 
 .l-top-nav {
 	.utility-nav {
@@ -589,8 +634,8 @@ $_search-height: 103px;
 	}
 }
 
-/* no-nav
------------------------------------------------------------------ */
+// no-nav
+// -----------------------------------------------------------------
 
 .l-no-nav {
 	.primary-nav {
