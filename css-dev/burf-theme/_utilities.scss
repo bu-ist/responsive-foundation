@@ -36,13 +36,14 @@
 }
 
 /// Controls card-like styles used throughout Foundation.
-/// Use this class to only style CSS with the back link. Use the placeholder
+/// By default, this controls single profile info styling in the sidebar,
+/// the metadata styling at the bottom of single posts, and the date summary.
 /// @group utilities
 /// @access public
 /// @since 1.0.0
 
 %card-styles {
-	@include border-radius($border-radius-message);
+	@include border-radius( $border-radius-message );
 	background-color: $color-message-bg;
 	border: $border-message;
 	border-left-color: $color-message-border-left;
@@ -51,9 +52,25 @@
 	padding: $padding-message;
 }
 
+/// Controls the styling for messages.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
 .message {
 	@extend %card-styles;
 }
+
+/// A placeholder for responsive video styles.
+/// Use this placeholder if you need something to support responsive video,
+/// but you need a separate, unique class from responsive-video.
+/// You may also use this to enable responsive behavior on other types of
+/// embedded media that don't have a video aspect ratio by extending this
+/// to a unique class, and adjusting the padding-bottom value on that class
+/// to match the aspect ratio you're looking for.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
 
 %responsive-video-styles {
 	margin-bottom: 14px;
@@ -73,12 +90,23 @@
 	}
 }
 
+/// The default class which enables responsive video.
+/// Wrap this around any video or iframe which is not supported by oEmbed,
+/// or if you are manually putting in HTML for a video for some reason.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
 .responsive-video {
 	@extend %responsive-video-styles;
 }
 
 
-// collapsibles (class name requires underscore due to dependency on front-end library)
+/// Styles the header on a collapsible item.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
 .bu_collapsible {
 	margin-bottom: 0;
 }
