@@ -116,8 +116,11 @@
 // WordPress content area markup
 // -----------------------------------------------------------------
 
+/// A placeholder just for align. Not meant to be extended elsewhere.
+/// @group utilities
+/// @access private
+/// @since 1.2.0
 
-// A placeholder just for align. Not meant to be extended elsewhere.
 %_align-styles {
 	margin-bottom: $margin-floated-content;
 	max-width: 100%;
@@ -126,6 +129,12 @@
 		max-width: 50%;
 	}
 }
+
+/// The class WordPress generates when you align something right in the
+/// visual editor.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
 
 .alignright {
 	@extend %_align-styles;
@@ -136,6 +145,12 @@
 	}
 }
 
+/// The class WordPress generates when you align something left in the
+/// visual editor.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
 .alignleft {
 	@extend %_align-styles;
 
@@ -145,10 +160,21 @@
 	}
 }
 
+/// The class WordPress generates when you center something in the
+/// visual editor.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
 .aligncenter {
 	display: block;
 	margin: 0 auto $margin-floated-content;
 }
+
+/// The class WordPress generates for caption text on images in the visual editor.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
 
 .wp-caption-text {
 	clear: both;
@@ -157,6 +183,7 @@
 	font-size: $font-size-caption;
 	line-height: 1.4;
 }
+
 
 // slideshows
 .bu-slideshow-container {
