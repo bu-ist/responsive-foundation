@@ -101,18 +101,24 @@
 	@extend %responsive-video-styles;
 }
 
-// WordPress accessibility classes
-// Hide visually but not from screen readers
+/// WordPress accessibility classes for screen readers.
+/// Not really something you should be overriding.
+/// @group utilities
+/// @access private
+/// @since 1.0.0
+
 .screen-reader-text,
 .screen-reader-text span,
 .ui-helper-hidden-accessible {
 	@extend %visuallyhidden;
 }
 
-// WordPress inline align classes (use WP standard class names)
+// WordPress content area markup
+// -----------------------------------------------------------------
+
 
 // A placeholder just for align. Not meant to be extended elsewhere.
-%align-styles {
+%_align-styles {
 	margin-bottom: $margin-floated-content;
 	max-width: 100%;
 
@@ -122,7 +128,7 @@
 }
 
 .alignright {
-	@extend %align-styles;
+	@extend %_align-styles;
 
 	@include breakpoint(xs) {
 		float: right;
@@ -131,7 +137,7 @@
 }
 
 .alignleft {
-	@extend %align-styles;
+	@extend %_align-styles;
 
 	@include breakpoint(xs) {
 		float: left;
