@@ -18,46 +18,53 @@ nav {
 	}
 }
 
-/// Handles styling shared across all types of navigation.
+/// Handles style for the search toggle in the masthead area.
 /// @group navigation
 /// @access public
 /// @since 1.0.0
 
-// .search-toggle appears only when header is small and above, otherwise it's hidden
 .search-toggle {
-	display: none;
+	display: none; // hidden until small breakpoint
 }
+
+/// Handles styling for the WordPress site description.
+/// @group navigation
+/// @access public
+/// @since 1.0.0
 
 .site-description {
 	float: left;
-	width: auto;
 	margin-left: 50px;
+	width: auto;
 }
 
-// quicksearch (use WordPress plugin class name)
+/// Handles styling for the search form in the navigation.
+/// @group navigation
+/// @access public
+/// @since 1.0.0
 
 #quicksearch {
-	position: relative;
-	display: none;
-	padding: 30px 20px;
-	margin: 0;
 	background: $color-search-bg;
+	display: none;
+	margin: 0;
+	padding: 30px 20px;
+	position: relative;
 
 	fieldset {
-		margin: 0;
+		margin: 0 auto;
 
 		@include breakpoint(sm) {
-			margin: 0 auto;
 			max-width: $container-sm;
 			padding: 0 20px;
 		}
 	}
+
 	.button {
 		@extend %button-styles-primary;
 		@include border-radius($border-radius-quicksearch-button);
-		width: 25%;
-		padding: 11px 0 12px 0;
 		float: right;
+		padding: 11px 0 12px 0;
+		width: 25%;
 
 		@include breakpoint(sm) {
 			width: 15%;
