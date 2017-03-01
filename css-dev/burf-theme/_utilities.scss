@@ -184,7 +184,16 @@
 	line-height: 1.4;
 }
 
-// Must be a class that wraps around a table to work properly.
+/// A placeholder which controls responsive styling for tables.
+/// You may want to extend this if you can't use the responsive-table class
+/// for some reason, or if you need to make significant overrides and want to
+/// leave the base styles intact.
+/// You must wrap the class this uses around a table for it to work. It will
+/// not work if you just put it on the table.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
 %resposive-table-styles {
 	position: relative;
 
@@ -218,11 +227,23 @@
 	}
 }
 
+/// A class for responsive styling on tables.
+/// This class will make the table scrollable below the medium breakpoint.
+/// You must wrap the table in a div with this class. It will not work if you
+/// put it directly on the table.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
 .responsive-table {
 	@extend %resposive-table-styles;
 }
 
-// Special overrides for the bordered tables
+/// Styles for the bordered table in the WordPress visual editor.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
 .table-bordered {
 	border: 0;
 
@@ -241,9 +262,9 @@
 	// Only nuke the last row's bottom-border in `tbody` and `tfoot` since
 	// chances are there will be only one `tr` in a `thead` and that would
 	// remove the border altogether.
+
 	tbody,
 	tfoot {
-
 		tr:last-child {
 			th,
 			td {
