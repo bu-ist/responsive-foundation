@@ -23,33 +23,33 @@
 // message
 %message-styles {
 	@include border-radius($border-radius-message);
-	padding: $padding-message;
-	border: $border-message;
-	border-width: $border-width-message;
-	border-left-color: $color-message-border-left;
 	background-color: $color-message-bg;
+	border: $border-message;
+	border-left-color: $color-message-border-left;
+	border-width: $border-width-message;
 	font-size: $font-size-message;
+	padding: $padding-message;
 }
+
 .message {
 	@extend %message-styles;
 }
 
-// .responsive-video
 %responsive-video-styles {
-	position: relative;
-	padding-top: 45px;
-	padding-bottom: 56.25%;
 	margin-bottom: 14px;
+	padding-bottom: 56.25%;
+	padding-top: 45px;
+	position: relative;
 
 	div,
 	embed,
 	object,
 	iframe {
+		height: 100% !important;
+		left: 0;
 		position: absolute;
 		top: 0;
-		left: 0;
 		width: 100% !important;
-		height: 100% !important;
 	}
 }
 
@@ -68,67 +68,50 @@
 .screen-reader-text,
 .screen-reader-text span,
 .ui-helper-hidden-accessible {
-  position: absolute;
-  margin: -1px;
-  padding: 0;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  border: 0;
+	@extend %visuallyhidden;
 }
 
 // WordPress inline align classes (use WP standard class names)
 
 // A placeholder just for align. Not meant to be extended elsewhere.
 %align-styles {
-	max-width: 100%;
 	margin-bottom: $margin-floated-content;
-	p {
-		margin-bottom: 0;
-	}
-	img {
-		margin-bottom: $margin-floated-content / 2;
-	}
+	max-width: 100%;
+
 	@include breakpoint(xs) {
 		max-width: 50%;
 	}
 }
+
 .alignright {
 	@extend %align-styles;
+
 	@include breakpoint(xs) {
 		float: right;
-		margin: 0.0 0 $margin-floated-content $margin-floated-content;
+		margin: 0 0 $margin-floated-content $margin-floated-content;
 	}
 }
+
 .alignleft {
 	@extend %align-styles;
+
 	@include breakpoint(xs) {
 		float: left;
 		margin: 0 $margin-floated-content $margin-floated-content 0;
 	}
 }
+
 .aligncenter {
 	display: block;
 	margin: 0 auto $margin-floated-content;
 }
 
-.wp-caption,
 .wp-caption-text {
+	clear: both;
+	color: $color-caption;
 	font-family: $font-family-caption;
 	font-size: $font-size-caption;
 	line-height: 1.4;
-	color: $color-caption;
-}
-.wp-caption {
-	p {
-		clear: both;
-	}
-	img {
-		display: block;
-		margin-top: 0;
-		margin-bottom: 10px;
-	}
 }
 
 // slideshows
