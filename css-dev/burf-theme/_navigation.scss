@@ -1,4 +1,13 @@
-// common
+// Navigation contents:
+
+//	1.
+
+// -----------------------------------------------------------------
+
+/// Handles styling shared across all types of navigation.
+/// @group navigation
+/// @access public
+/// @since 1.0.0
 
 nav {
 	font-family: $font-family-navigation;
@@ -9,18 +18,22 @@ nav {
 	}
 }
 
-// .search-toggle appears only when header is small and above, otherwise it's hidden
-.brand {
-	.search-toggle {
-		display: none;
-	}
+/// Handles styling shared across all types of navigation.
+/// @group navigation
+/// @access public
+/// @since 1.0.0
 
-	.site-description {
-		float: left;
-		width: auto;
-		margin-left: 50px;
-	}
+// .search-toggle appears only when header is small and above, otherwise it's hidden
+.search-toggle {
+	display: none;
 }
+
+.site-description {
+	float: left;
+	width: auto;
+	margin-left: 50px;
+}
+
 // quicksearch (use WordPress plugin class name)
 
 #quicksearch {
