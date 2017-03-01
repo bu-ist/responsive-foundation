@@ -927,31 +927,161 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 // News and Archive Template: Single
 // -----------------------------------------------------------------
 
+/// Controls the padding of the metadata card at the bottom of news posts
+/// on the single post template.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $padding-single-meta:                      20px !default;
+
+/// Controls the border style on the metadata card at the bottom of news posts
+/// on the single post template.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $border-single-meta:                       $border-message !default;
+
+/// Controls the border width on the metadata card at the bottom of news posts
+/// on the single post template.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $border-width-single-meta:                  $border-width-message !default;
+
+/// Controls the amount of rounding applied to corners of the metadata card
+/// at the bottom of the single post template.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $border-radius-single-meta:                 $border-radius-message !default;
+
+/// Controls the font size in the metadata card at the bottom of the single
+/// post template.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $font-size-single-meta:                     $font-size-small !default;
+
+/// Controls the background of the metadata card at the bottom of the single
+/// post template.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $color-single-meta-bg:                     $color-grayscale-f0 !default;
+
+/// Controls the color of the left border in the metadata card
+/// at the bottom of the single post template.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $color-single-meta-border-left:             $color-message-border-left !default;
 
+/// Controls the amount of spacing between comments on a post.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $comment-margin:                           15px 0 !default;
+
+/// Controls the amount of padding on comments on a post.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $comment-padding:                          0 0 0 30px !default;
+
+/// Controls the border style between comments on a post.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $border-comment:                           $border-base !default;
+
+/// Controls the border width between comments on a post.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $border-width-comment:                      $border-top !default;
-$border-comment-form:                       1px solid $color-grayscale-e !default;
-$border-width-comment-form:                  3px !default;
+
+/// Controls the font family used for comments on a post.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $font-family-comment:                       $font-family-sans-serif !default;
+
+/// Controls the color of comments on a post.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $color-comments:                           $color-base !default;
+
+/// Controls the color of replies to comments on a post.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $color-comment-reply:                      $color-grayscale-a !default;
-$color-comment-author:                     $color-grayscale-a !default;
+
+/// Controls the color of the author name in a comment.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $color-comment-author-name:                 $color-grayscale-0 !default;
+
+/// Controls the color of the "says" text after author name in a comment.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$color-comment-author:                     $color-grayscale-a !default;
+
+/// Controls the background color of the comment submission form.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $color-comment-form-bg:                     $color-grayscale-f5 !default;
+
+/// Controls the border style on the comment submission form.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$border-comment-form:                       1px solid $color-grayscale-e !default;
+
+/// Controls the border width on the comment submission form.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$border-width-comment-form:                  3px !default;
 
 // Plugins and Shortcodes
 // -----------------------------------------------------------------
 
+/// Controls the color of borders on collapsibles.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
 $color-collapsible-after-border:           $color-grayscale-c !default;
+
+/// Controls the color of borders on collapsibles when you hover.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
 $color-collapsible-after-border-hover:     $color-link !default;
 
 /// -----------------------------------------------------------------
@@ -967,59 +1097,303 @@ $color-collapsible-after-border-hover:     $color-link !default;
 // All Widgets
 // -----------------------------------------------------------------
 
-$widget-margin-bottom:                      40px !default;
-$font-size-widget:                          $font-size-small !default;
-$line-height-widget:								 $line-height-base !default;
+/// Controls the spacing between widgets in the sidebar.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
 
-$font-family-widget-heading:                $font-family-sans-serif !default;
+$widget-margin-bottom:                      40px !default;
+
+/// Controls the font family used for the widget title.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $font-family-widget-title:                   $font-family-sans-serif !default;
+
+/// Controls the border style used on the widget title.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $border-widget-title:                       4px solid $color-grayscale-0 !default;
+
+/// Controls the border width used on the widget title.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $border-width-widget-title:                  0 0 4px 0 !default;
+
+/// Controls the font size used on the widget title.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $font-size-widget-title:                     $font-size-small !default;
+
+/// Controls the line height of the widget title.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $line-height-widget-title:                   $line-height-large !default;
+
+/// Controls the color of the widget title.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $color-widget-title:                        $color-grayscale-0 !default;
+
+/// Controls the shape which shows after the widget title if it is a link.
+/// By default, this is set to be an arrow.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $widget-title-link-after:                   " →" !default;
+
+/// Controls the color of the shape which shows after the widget title
+/// if it is a link.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $color-widget-title-link-after:             $color-grayscale-a !default;
+
+/// Controls the color of the shape which shows after the widget title
+/// when you hover.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $color-widget-title-link-after-hover:       $color-grayscale-0 !default;
 
+/// Controls the font size in all widgets.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+$font-size-widget:                          $font-size-small !default;
+
+/// Controls the line height in all widgets.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+$line-height-widget:								 $line-height-base !default;
+
+/// Controls the font family used for headings in widget content.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+$font-family-widget-heading:                $font-family-sans-serif !default;
+
+/// Controls the color of links in the widget content.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $color-widget-link:                        $color-link !default;
+
+/// Controls the color of links when you hover in the widget content.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $color-widget-link-hover:                  $color-link !default;
 
 // Calendar Widget
 // -----------------------------------------------------------------
 
+/// Controls the font family used on dates in the calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $font-family-widget-calendar-date:          $font-family-sans-serif !default;
+
+/// Controls the font size used on dates in the calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $font-size-widget-calendar-date:             $font-size-smallest !default;
+
+/// Controls the line height used on dates in the calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $line-height-widget-calendar-date:           $line-height-large !default;
+
+/// Controls the color of dates in the calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $color-widget-calendar-date:                $color-grayscale-0 !default;
+
+/// Controls the size of the day when using the graphic style in the
+/// calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $font-size-widget-calendar-date-day:          $font-size-large !default;
+
+/// Controls the color of the day when using the graphic style in the
+/// calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $color-widget-calendar-date-day:             $color-widget-calendar-date !default;
+
+/// Controls the size of the month when using the graphic style in the
+/// calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $font-size-widget-calendar-date-month:        $font-size-smallest !default;
+
+/// Controls the color of the month when using the graphic style in the
+/// calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $color-widget-calendar-date-month:           $color-widget-calendar-date !default;
 
 // Navigation and Menu Widgets
 // -----------------------------------------------------------------
 
+/// Controls the style of border used on the content navigation list.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $border-widget-contentnav:                 $border-base !default;
+
+/// Controls the width of border used on the content navigation list.
+/// By default, this will put a border after all other nav items in the widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $border-width-widget-contentnav:            $border-bottom !default;
+
+/// Controls the style of border used between nav items in the content navigation widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $border-widget-list:                        $border-base !default;
+
+/// Controls the width of border used between nav items in the content navigation widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $border-width-widget-list:                   $border-top !default;
+
+/// Controls the font family used in the content navigation widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $font-family-widget-contentnav:             $font-family-sans-serif !default;
+
+/// Controls the font size used for items on the first level in the
+/// content navigation widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $font-size-widget-contentnav-link:          $font-size-small !default;
+
+/// Controls the font size used for items below the first level in the
+/// content navigation widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $font-size-widget-contentnav-nested-link:    $font-size-small !default;
+
+/// Controls the color of nav items in the content navigation widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $color-widget-contentnav:                  $color-link !default;
+
+/// Controls the color of nav items when you hover in the content navigation widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $color-widget-contentnav-hover:            $color-link !default;
+
+/// Controls the active color of nav items in the content navigation widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $color-widget-contentnav-active:           $color-link-active !default;
 
 // BU Posts Widget
 // -----------------------------------------------------------------
 
+/// Controls the font size of headlines in the BU posts widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $font-size-widget-post-headline:             $font-size-small !default;
+
+/// Controls the line height of headlines in the BU posts widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $line-height-widget-post-headline:           1.4 !default;
+
+/// Controls the font size of the excerpt in the BU posts widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $font-size-widget-post-excerpt:              $font-size-small !default;
+
+/// Controls the line height of the excerpt in the BU posts widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $line-height-widget-post-excerpt:            $line-height-medium !default;
+
+/// Controls the font size of the post date in the BU posts widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $font-size-widget-post-date:                 $font-size-smallest !default;
+
+/// Controls the font size of the metadata in the BU posts widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $font-size-widget-post-meta:                 $font-size-smallest !default;
+
+/// Controls the color of the metadata in the BU posts widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $color-widget-post-meta:                    $color-grayscale-a !default;
 
 // -----------------------------------------------------------------
