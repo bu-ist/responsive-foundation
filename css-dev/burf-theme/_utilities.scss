@@ -101,16 +101,6 @@
 	@extend %responsive-video-styles;
 }
 
-
-/// Styles the header on a collapsible item.
-/// @group content
-/// @access public
-/// @since 1.0.0
-
-.bu_collapsible {
-	margin-bottom: 0;
-}
-
 // WordPress accessibility classes
 // Hide visually but not from screen readers
 .screen-reader-text,
