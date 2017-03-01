@@ -10,6 +10,11 @@
 // Basic Widgets
 // -----------------------------------------------------------------
 
+/// Handles global widget styling.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 .widget {
 	font-size: $font-size-widget;
 	line-height: $line-height-widget;
@@ -41,6 +46,11 @@
 	}
 }
 
+/// Handles styling for widgets in the footer.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 .footbar {
 	a {
 		color: $color-footbar-widget-link;
@@ -51,6 +61,11 @@
 		}
 	}
 }
+
+/// Handles title styles for all widgets.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
 
 .widget-title {
 	border: $border-widget-title;
@@ -78,6 +93,11 @@
 
 // BU Posts
 // -----------------------------------------------------------------
+
+/// Handles styling for the BU Posts widget (news widget).
+/// @group widgets
+/// @access public
+/// @since 1.0.0
 
 .widget-bu-posts {
 	.post {
@@ -122,6 +142,11 @@
 // Content Nav
 // -----------------------------------------------------------------
 
+/// Handles styling for content navigation widgets (BU Pages and Content Navigation, aka side nav).
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 .widget_bu_pages,
 .widget_nav_menu {
 	h3 {
@@ -133,11 +158,12 @@
 		border-width: $border-width-widget-contentnav;
 
 		ul {
-			margin: 0;
 			border: 0;
+			margin: 0;
 		}
 
 	}
+
 	li {
 		border: $border-widget-list;
 		border-width: $border-width-widget-list;
@@ -169,25 +195,37 @@
 			}
 		}
 	}
-}
 
-.widget_bu_pages .active,
-.widget_nav_menu .current_page_item a {
-	color: $color-widget-contentnav-active;
+	.active,
+	.current_page_item a {
+		color: $color-widget-contentnav-active;
+	}
 }
 
 // Calendar
 // -----------------------------------------------------------------
 
-$width-calendar-date: 48px;
+/// A helper variable for %_calendar-absolute-position-date.
+/// Sets the width of the calendar date.
+/// @group widgets
+/// @access private
+/// @since 1.2.0
+/// @see %_calendar-absolute-position-date
 
-// A placeholder meant only for calendar.
+$_width-calendar-date: 48px;
+
+/// A placeholder meant only for calendar.
+/// This placeholder positions the date absolutely in calendar widgets.
+/// @group widgets
+/// @access private
+/// @since 1.2.0
+
 %_calendar-absolute-position-date {
 	.date {
 		left: 0;
 		position: absolute;
 		top: 0;
-		width: $width-calendar-date;
+		width: $_width-calendar-date;
 	}
 	a {
 		display: block;
@@ -195,6 +233,11 @@ $width-calendar-date: 48px;
 		position: relative;
 	}
 }
+
+/// Styles the BU Calendar widgets.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
 
 .widget-bu-calendar {
 	// calendar: shared
@@ -233,7 +276,7 @@ $width-calendar-date: 48px;
 		@extend %_calendar-absolute-position-date;
 
 		a {
-			min-height: $width-calendar-date;
+			min-height: $_width-calendar-date;
 		}
 
 		.date {
