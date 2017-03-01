@@ -18,7 +18,7 @@
 /// @since 1.0.0
 
 %back-link-styles {
-	&:before {
+	&::before {
 		color: $color-back-link-before;
 		content: $back-link-before;
 	}
