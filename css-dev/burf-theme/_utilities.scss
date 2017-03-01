@@ -8,8 +8,8 @@
 
 .edit-link {
 	position: absolute;
-	top: 0;
 	right: 0;
+	top: 0;
 }
 
 /// A placeholder to mimic the styles of the "Back" link on archive pages.
@@ -19,8 +19,8 @@
 
 %back-link-styles {
 	&:before {
-		content: $back-link-before;
 		color: $color-back-link-before;
+		content: $back-link-before;
 	}
 }
 
@@ -82,11 +82,11 @@
 	embed,
 	object,
 	iframe {
-		height: 100% !important;
+		height: 100% !important; // Required to override inline styles on embeds
 		left: 0;
 		position: absolute;
 		top: 0;
-		width: 100% !important;
+		width: 100% !important; // Required to override inline styles on embeds
 	}
 }
 
@@ -125,7 +125,7 @@
 	margin-bottom: $margin-floated-content;
 	max-width: 100%;
 
-	@include breakpoint(xs) {
+	@include breakpoint( xs ) {
 		max-width: 50%;
 	}
 }
@@ -139,7 +139,7 @@
 .alignright {
 	@extend %_align-styles;
 
-	@include breakpoint(xs) {
+	@include breakpoint( xs ) {
 		float: right;
 		margin: 0 0 $margin-floated-content $margin-floated-content;
 	}
@@ -154,7 +154,7 @@
 .alignleft {
 	@extend %_align-styles;
 
-	@include breakpoint(xs) {
+	@include breakpoint( xs ) {
 		float: left;
 		margin: 0 $margin-floated-content $margin-floated-content 0;
 	}
@@ -197,22 +197,13 @@
 %resposive-table-styles {
 	position: relative;
 
-	table {
-		border: 1px solid $border-color-table;
-
-		td,
-		th {
-			border: 1px solid $border-color-table;
-		}
-	}
-
 	@include breakpoint( "max-width: #{$container_md}" ) {
 		margin: 35px 0;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
 		overflow-x: auto;
 		overflow-y: hidden;
 		width: 100%;
-		-webkit-overflow-scrolling: touch;
-		-ms-overflow-style: -ms-autohiding-scrollbar;
 
 		// Tighten up spacing
 		table {
@@ -223,6 +214,15 @@
 				border: 1px solid $border-color-table;
 				white-space: nowrap; // Ensure the content doesn't wrap
 			}
+		}
+	}
+
+	table {
+		border: 1px solid $border-color-table;
+
+		td,
+		th {
+			border: 1px solid $border-color-table;
 		}
 	}
 }
@@ -237,39 +237,4 @@
 
 .responsive-table {
 	@extend %resposive-table-styles;
-}
-
-/// Styles for the bordered table in the WordPress visual editor.
-/// @group utilities
-/// @access public
-/// @since 1.0.0
-
-.table-bordered {
-	border: 0;
-
-	// Nuke the appropriate borders so that the parent can handle them
-	th,
-	td {
-		&:first-child {
-			border-left: 0;
-		}
-
-		&:last-child {
-			border-right: 0;
-		}
-	}
-
-	// Only nuke the last row's bottom-border in `tbody` and `tfoot` since
-	// chances are there will be only one `tr` in a `thead` and that would
-	// remove the border altogether.
-
-	tbody,
-	tfoot {
-		tr:last-child {
-			th,
-			td {
-				border-bottom: 0;
-			}
-		}
-	}
 }
