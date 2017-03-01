@@ -184,8 +184,8 @@
 	/* These classes are using %visuallyhidden. */
 	position: absolute;
 	overflow: hidden;
-	clip: rect(0 0 0 0);
-	clip: rect(0, 0, 0, 0);
+	clip: rect( 0, 0, 0, 0 ); // Deprecated. Remove when clip-path support is better.
+	clip-path: inset( 50% );
 	width: 1px;
 	height: 1px;
 	padding: 0;
