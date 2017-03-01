@@ -1,28 +1,27 @@
-/* components
------------------------------------------------------------------ */
+// components
+// -----------------------------------------------------------------
 
-/* edit link */
+// edit link
 .edit-link {
 	position: absolute;
 	top: 0;
 	right: 0;
 }
 
-/* back link */
+// back link
 %back-link-styles {
-	/* These classes are using %back-link-styles. */
 	&:before {
 		content: $back-link-before;
 		color: $color-back-link-before;
 	}
 }
+
 .back-link {
 	@extend %back-link-styles;
 }
 
-/* message */
+// message
 %message-styles {
-	/* These classes are using %message-styles. */
 	@include border-radius($border-radius-message);
 	padding: $padding-message;
 	border: $border-message;
@@ -35,13 +34,13 @@
 	@extend %message-styles;
 }
 
-/* .responsive-video */
+// .responsive-video
 %responsive-video-styles {
-	/* These classes are using %responsive-video-styles. */
 	position: relative;
 	padding-top: 45px;
 	padding-bottom: 56.25%;
 	margin-bottom: 14px;
+
 	div,
 	embed,
 	object,
@@ -53,12 +52,13 @@
 		height: 100% !important;
 	}
 }
+
 .responsive-video {
 	@extend %responsive-video-styles;
 }
 
 
-/* collapsibles (class name requires underscore due to dependency on front-end library) */
+// collapsibles (class name requires underscore due to dependency on front-end library)
 h1.bu_collapsible,
 h2.bu_collapsible,
 h3.bu_collapsible,
@@ -68,8 +68,8 @@ h6.bu_collapsible {
 	margin-bottom: 0;
 }
 
-/* WordPress accessibility classes */
-/* Hide visually but not from screen readers */
+// WordPress accessibility classes
+// Hide visually but not from screen readers
 .screen-reader-text,
 .screen-reader-text span,
 .ui-helper-hidden-accessible {
@@ -83,7 +83,7 @@ h6.bu_collapsible {
   border: 0;
 }
 
-/* WordPress inline align classes (use WP standard class names) */
+// WordPress inline align classes (use WP standard class names)
 
 // A placeholder just for align. Not meant to be extended elsewhere.
 %align-styles {
@@ -136,7 +136,7 @@ h6.bu_collapsible {
 	}
 }
 
-/* slideshows */
+// slideshows
 .bu-slideshow-container {
 	z-index: 1;
 	margin-bottom: 30px;
@@ -145,7 +145,6 @@ h6.bu_collapsible {
 
 // Must be a class that wraps around a table to work properly.
 %resposive-table-styles {
-	/* These classes are using %resposive-table-styles. */
 	position: relative;
 	table {
 		border: 1px solid $border-color-table;
