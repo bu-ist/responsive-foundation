@@ -1,13 +1,13 @@
-/* Plugins contents:
+// Plugins contents:
 
-	1. Collapsible divs
-	2. Profiles
-	3. Course feeds
+//	1. Collapsible divs
+//	2. Profiles
+//	3. Course feeds
 
------------------------------------------------------------------ */
+// -----------------------------------------------------------------
 
-/* Collapsible Divs
------------------------------------------------------------------ */
+// Collapsible Divs
+// -----------------------------------------------------------------
 
 /// Styles the header on a collapsible item.
 /// @group content
@@ -16,36 +16,49 @@
 
 .bu_collapsible {
 	margin-bottom: 0;
-	position: relative;
 	padding-right: 30px;
-}
-.bu_collapsible:after {
-	position: absolute;
-	top: 50%;
-	right: 0;
-	width: 0;
-	height: 0;
-	margin-top: -4px;
-	border: 8px solid transparent;
-	border-top-color: $color-collapsible-after-border;
-	content: "";
-}
-.bu_collapsible_open .bu_collapsible:after {
-	margin-top: -12px;
-	border-top-color: transparent;
-	border-bottom-color: $color-collapsible-after-border;
-}
-.bu_collapsible:hover:after,
-.bu_collapsible:focus:after {
-	border-top-color: $color-collapsible-after-border-hover;
-}
-.bu_collapsible_open .bu_collapsible:hover:after,
-.bu_collapsible_open .bu_collapsible:focus:after {
-	border-top-color: transparent;
-	border-bottom-color: $color-collapsible-after-border-hover;
+	position: relative;
+
+	&::after {
+		border: 8px solid transparent;
+		border-top-color: $color-collapsible-after-border;
+		content: "";
+		height: 0;
+		margin-top: -4px;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		width: 0;
+
+		.bu_collapsible_open & {
+			border-bottom-color: $color-collapsible-after-border;
+			border-top-color: transparent;
+			margin-top: -12px;
+		}
+	}
 }
 
-// Print styles for collapsibles
+/// Styles the shape after the collapsible title.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+.bu_collapsible:hover,
+.bu_collapsible:focus {
+	&::after {
+		border-top-color: $color-collapsible-after-border-hover;
+
+		.bu_collapsible_open & {
+			border-bottom-color: $color-collapsible-after-border-hover;
+			border-top-color: transparent;
+		}
+	}
+}
+
+/// Print styles for collapsibles.
+/// @group content
+/// @access public
+/// @since 1.0.0
 
 @media print {
 	.bu_collapsible_section {
@@ -53,52 +66,68 @@
 	}
 }
 
-// slideshows
+// Slideshow
+// -----------------------------------------------------------------
+
+/// BU Slideshow styles.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
 .bu-slideshow-container {
 	z-index: 1;
 	margin-bottom: 30px;
 	text-align: center;
 }
 
-/* Profiles
------------------------------------------------------------------ */
+// Profiles
+// -----------------------------------------------------------------
 
 .profile-listing {
 	@extend %clearfix;
+
 	ul {
 		padding: 0;
 	}
+
 	li {
 		position: relative;
 		margin-bottom: 25px;
 		list-style: none;
 	}
+
 	p {
 		margin-bottom: 0;
 	}
+
 	a {
 		text-decoration: none;
 	}
+
 	.profile-title {
 		display: block;
 		font-family: $font-family-profile-title;
 		font-size: $font-size-profile-title;
 		color: $color-profile-title;
 	}
+
 	.profile-name {
 		font-family: $font-family-profile-name;
 		font-size: $font-size-profile-name;
 		color: $color-profile-name;
 		text-decoration: underline;
 	}
+
 	.basic {
 		border-top: $border-profiles;
+
 		li {
 			min-height: 100px;
 			padding: 25px 65px 25px 0;
 			margin-bottom: 0;
 			border-bottom: $border-profiles;
 		}
+
 		figure {
 			position: absolute;
 			right: 0;
@@ -107,33 +136,41 @@
 			height: 50px;
 		}
 	}
+
 	figure {
 		img {
 			width: 100%;
 		}
 	}
+
 	.advanced {
 		@extend %clearfix;
+
 		li {
 			@extend %col-md-third;
 		}
+
 		a {
 			display: block;
 			padding: 0 15px;
 			text-align: center;
 		}
+
 		figure {
 			overflow: hidden;
 			width: 150px;
 			height: 150px;
 			margin: 0 auto 15px;
 		}
+
 		li:nth-child(3n+1) {
 			clear: left;
 		}
 	}
+
 	.mini {
 		@extend %clearfix;
+
 		li {
 			@extend %col-md-6;
 			min-height: 90px;
@@ -145,20 +182,24 @@
 				min-height: 110px;
 			}
 		}
+
 		li:nth-child(2n+1) {
 			clear: left;
 			padding-right: 15px;
 		}
+
 		.name {
 			font-family: $font-family-profile-name;
 			font-size: $font-size-profile-mini-name;
 		}
+
 		.summary {
 			margin-top: 5px;
 			font-size: $font-size-profile-mini-email;
 			line-height: $line-height-profile-mini-email;
 			word-wrap: break-word;
 		}
+
 		figure {
 			position: absolute;
 			top: 0;
@@ -173,11 +214,13 @@
 		}
 	}
 }
+
 .profile-listing figure,
 .single-profile .profile-thumb figure  {
 	@include border-radius($border-radius-profile-figure);
 	line-height: 0;
 }
+
 .profile-listing a:hover .profile-name,
 .profile-listing a:focus .profile-name {
 	text-decoration: none;
@@ -196,12 +239,12 @@
 	}
 }
 
-/* single profile */
+// single profile
 .single-profile {
 	.content-area {
 		h1 {
-			padding-top: 145px;
 			margin-bottom: 0;
+			padding-top: 145px;
 			text-align: center;
 		}
 		h2 {
@@ -210,13 +253,13 @@
 	}
 	.profile-thumb {
 		figure {
+			height: 120px;
+			left: 50%;
+			margin-left: -60px;
+			overflow: hidden;
 			position: absolute;
 			top: 0;
-			left: 50%;
-			overflow: hidden;
 			width: 120px;
-			height: 120px;
-			margin-left: -60px;
 		}
 	}
 	.figure {
@@ -229,33 +272,37 @@
 .profile-info {
 	@extend %card-styles;
 	margin: 0 0 20px 0;
+
 	@include breakpoint(sm) {
 		float: right;
-		width: 33.33333333333333%;
 		margin: 0 0 20px 20px;
+		width: 33.33333333333333%;
 	}
+
 	ul {
-		padding: 0;
 		margin: 0;
+		padding: 0;
 	}
+
 	li {
-		margin: 0 0 20px 0;
-		list-style: none;
 		font-size: $font-size-small;
+		list-style: none;
+		margin: 0 0 20px 0;
 		word-wrap: break-word;
 	}
+
 	.label {
+		color: $color-profile-info-label;
 		display: block;
 		font-family: $font-family-sans-serif;
-		font-weight: 700;
 		font-size: $font-size-smaller;
-		color: $color-profile-info-label;
+		font-weight: 700;
 		text-transform: uppercase;
 	}
 }
 
-/* Course Feeds
------------------------------------------------------------------ */
+// Course Feeds
+// -----------------------------------------------------------------
 
 .cf-course table {
 	width: 100%;
