@@ -1,144 +1,166 @@
-/* widget contents:
+// Widget contents:
 
-	1. Basic Widgets
-	2. BU Posts
-	3. Content Nav
-	4. Calendar
+//	1. Basic Widgets
+//	2. BU Posts
+//	3. Content Nav
+//	4. Calendar
 
------------------------------------------------------------------ */
+// -----------------------------------------------------------------
 
-/* Basic Widgets
------------------------------------------------------------------ */
+// Basic Widgets
+// -----------------------------------------------------------------
 
 .widget {
-	margin-bottom: $widget-margin-bottom;
 	font-size: $font-size-widget;
 	line-height: $line-height-widget;
+	margin-bottom: $widget-margin-bottom;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: $font-family-widget-heading;
+	}
+
 	a {
 		color: $color-widget-link;
+
 		&:hover,
 		&:focus {
 			color: $color-widget-link-hover;
 		}
 	}
+
 	ul {
-		padding: 0;
-		margin: 0;
 		list-style: none;
 		list-style-image: none;
+		margin: 0;
+		padding: 0;
 	}
 }
-.footbar a {
-	color: $color-footbar-widget-link;
-	&:hover,
-	&:focus {
-		color: $color-footbar-widget-link-hover;
+
+.footbar {
+	a {
+		color: $color-footbar-widget-link;
+
+		&:hover,
+		&:focus {
+			color: $color-footbar-widget-link-hover;
+		}
 	}
 }
+
 .widget-title {
-	padding: 0 0 4px 0;
 	border: $border-widget-title;
 	border-width: $border-width-widget-title;
+	color: $color-widget-title;
 	font-family: $font-family-widget-title;
 	font-size: $font-size-widget-title;
 	line-height: $line-height-widget-title;
-	color: $color-widget-title;
+	padding: 0 0 4px;
+
 	a {
 		color: $color-widget-title;
 		text-decoration: none;
-		&:after {
-			content: $widget-title-link-after;
+
+		&::after {
 			color: $color-widget-title-link-after;
+			content: $widget-title-link-after;
+		}
+
+		&:hover::after {
+			color: $color-widget-title-link-after-hover;
 		}
 	}
 }
-.widget-title a:hover {
-	&:after {
-		color: $color-widget-title-link-after-hover;
-	}
-}
-.widget h1,
-.widget h2,
-.widget h3,
-.widget h4,
-.widget h5,
-.widget h6 {
-	font-family: $font-family-widget-heading;
-}
 
-/* BU Posts
------------------------------------------------------------------ */
+// BU Posts
+// -----------------------------------------------------------------
 
 .widget-bu-posts {
 	.post {
-		margin-bottom: 25px;
 		@extend %clearfix;
+		margin-bottom: 25px;
+
 		&:last-child {
-			//border-bottom: none;
 			margin-bottom: 0;
 		}
 	}
+
 	.headline {
-		margin: 0;
 		font-size: $font-size-widget-post-headline;
 		line-height: $line-height-widget-post-headline;
+		margin: 0;
 	}
+
 	.excerpt {
-		margin: 4px 0 0;
 		font-size: $font-size-widget-post-excerpt;
 		line-height: $line-height-widget-post-excerpt;
+		margin: 4px 0 0;
 	}
+
 	.thumb {
 		display: block;
 		float: left;
-		max-width: 45%;
 		margin: 5px 15px 15px 0;
+		max-width: 45%;
 	}
+
 	.published {
 		font-size: $font-size-widget-post-date;
 	}
+
 	.meta {
-		margin: 0;
-		font-size: $font-size-widget-post-meta;
 		color: $color-widget-post-meta;
+		font-size: $font-size-widget-post-meta;
+		margin: 0;
 	}
 }
 
-/* Content Nav
------------------------------------------------------------------ */
+// Content Nav
+// -----------------------------------------------------------------
 
 .widget_bu_pages,
 .widget_nav_menu {
 	h3 {
 		margin-bottom: 0;
 	}
+
 	ul {
 		border: $border-widget-contentnav;
 		border-width: $border-width-widget-contentnav;
+
 		ul {
 			margin: 0;
-			border: none;
+			border: 0;
 		}
+
 	}
 	li {
 		border: $border-widget-list;
 		border-width: $border-width-widget-list;
 		font-family: $font-family-widget-contentnav;
+
 		&:first-child {
-			border: none;
+			border: 0;
 		}
+
 		li {
+			border: 0;
 			padding: 0 0 0 20px;
-			border: none;
+
 			a {
 				font-size: $font-size-widget-contentnav-nested-link;
 			}
 		}
+
 		a {
-			display: block;
-			padding: 10px 0;
-			font-size: $font-size-widget-contentnav-link;
 			color: $color-widget-contentnav;
+			display: block;
+			font-size: $font-size-widget-contentnav-link;
+			padding: 10px 0;
 
 			&:hover,
 			&:focus {
@@ -154,72 +176,77 @@
 	color: $color-widget-contentnav-active;
 }
 
-/* Calendar
------------------------------------------------------------------ */
+// Calendar
+// -----------------------------------------------------------------
 
 $width-calendar-date: 48px;
 
 // A placeholder meant only for calendar.
-%calendar-absolutePositionDate {
+%_calendar-absolute-position-date {
 	.date {
+		left: 0;
 		position: absolute;
 		top: 0;
-		left: 0;
 		width: $width-calendar-date;
 	}
 	a {
-		position: relative;
 		display: block;
 		padding-left: 60px;
+		position: relative;
 	}
 }
 
 .widget-bu-calendar {
-	/* calendar: shared */
+	// calendar: shared
 	.date {
+		color: $color-widget-calendar-date;
 		display: block;
 		font-family: $font-family-widget-calendar-date;
-		color: $color-widget-calendar-date;
 		font-weight: 700;
 	}
+
 	li {
-		padding: 10px 0;
 		border: $border-widget-list;
 		border-width: $border-width-widget-list;
+		padding: 10px 0;
+
 		&:first-child {
+			border: 0;
 			padding: 0 0 10px;
-			border: none;
 		}
 	}
 
-	/* calendar: default */
+	// calendar: default
 	.default {
-		@extend %calendar-absolutePositionDate;
+		@extend %_calendar-absolute-position-date;
 	}
 
-	/* calendar: full-date */
+	// calendar: full-date
 	.full-date {
 		.date {
 			font-size: $font-size-widget-calendar-date;
 		}
 	}
 
-	/* calendar: graphic */
+	// calendar: graphic
 	.graphic {
-		@extend %calendar-absolutePositionDate;
+		@extend %_calendar-absolute-position-date;
 
 		a {
 			min-height: $width-calendar-date;
 		}
+
 		.date {
-			text-align: center;
 			line-height: $line-height-widget-calendar-date;
+			text-align: center;
 		}
+
 		.day {
+			color: $color-widget-calendar-date-day;
 			display: block;
 			font-size: $font-size-widget-calendar-date-day;
-			color: $color-widget-calendar-date-day;
 		}
+
 		.month {
 			color: $color-widget-calendar-date-month;
 			font-size: $font-size-widget-calendar-date-month;
