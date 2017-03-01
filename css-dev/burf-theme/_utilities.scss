@@ -124,28 +124,32 @@
 // Must be a class that wraps around a table to work properly.
 %resposive-table-styles {
 	position: relative;
+
 	table {
 		border: 1px solid $border-color-table;
+
 		td,
 		th {
 			border: 1px solid $border-color-table;
 		}
 	}
-	@include breakpoint("max-width: #{$container_md}") {
+
+	@include breakpoint( "max-width: #{$container_md}" ) {
+		margin: 35px 0;
 		overflow-x: auto;
 		overflow-y: hidden;
-		-webkit-overflow-scrolling: touch;
 		width: 100%;
-		margin: 35px 0;
+		-webkit-overflow-scrolling: touch;
 		-ms-overflow-style: -ms-autohiding-scrollbar;
+
 		// Tighten up spacing
 		table {
 			margin: 0;
 			table-layout: auto;
-			// Ensure the content doesn't wrap
+
 			td {
 				border: 1px solid $border-color-table;
-				white-space: nowrap;
+				white-space: nowrap; // Ensure the content doesn't wrap
 			}
 		}
 	}
@@ -154,24 +158,29 @@
 .responsive-table {
 	@extend %resposive-table-styles;
 }
+
 // Special overrides for the bordered tables
 .table-bordered {
 	border: 0;
+
 	// Nuke the appropriate borders so that the parent can handle them
 	th,
 	td {
 		&:first-child {
 			border-left: 0;
 		}
+
 		&:last-child {
 			border-right: 0;
 		}
 	}
+
 	// Only nuke the last row's bottom-border in `tbody` and `tfoot` since
 	// chances are there will be only one `tr` in a `thead` and that would
 	// remove the border altogether.
 	tbody,
 	tfoot {
+
 		tr:last-child {
 			th,
 			td {
