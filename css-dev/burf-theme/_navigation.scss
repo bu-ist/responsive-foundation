@@ -246,69 +246,79 @@ nav {
 		clear: left;
 		display: block;
 	}
+}
 
-	li {
-		display: block;
-		zoom: 1;
+.primary-nav-menu li, // Remove when navigation plugin is updated
+.primary-nav-menu-item,
+.primary-nav-menu-section-item {
+	display: block;
+	zoom: 1;
 
-		@include breakpoint( sm ) {
-			border: none;
-			display: inline-block;
+	@include breakpoint( sm ) {
+		border: none;
+		display: inline-block;
 
-			.lt-ie8 & {
-				display: inline;
-			}
+		.lt-ie8 & {
+			display: inline;
 		}
 	}
 
-	a {
-		border: 1px solid $color-primary-nav-border;
-		border-width: $border-width-primary-nav;
-		color: $color-primary-nav-link;
-		display: block;
-		padding: 10px 0;
-		text-decoration: none;
-
-		@include breakpoint(sm) {
-			border: $border-primary-nav-desktop;
-			line-height: 60px;
-			padding: 0 10px;
-		}
-
-		&.active,
-		&.active_section {
-			color: $color-primary-nav-link-current;
-		}
-
-		&:hover,
-		&:focus {
-			color: $color-primary-nav-link-hover;
-		}
-	}
-
-	ul {
-		display: none;
-
-		@include breakpoint(sm) {
-			background: $color-primary-nav-dropdown-bg;
-			display: block;
-			left: -9999px;
-			position: absolute;
-			width: 240px;
-			z-index: 2;
+	&:hover,
+	&:focus {
+		ul {
+			left: auto;
 		}
 	}
 }
 
-.primary-nav-menu li:hover ul,
-.primary-nav-menu li:focus ul {
-	left: auto;
+.primary-nav-menu a, // Remove when navigation plugin is updated
+.primary-nav-menu-link,
+.primary-nav-menu-section-link {
+	border: 1px solid $color-primary-nav-border;
+	border-width: $border-width-primary-nav;
+	color: $color-primary-nav-link;
+	display: block;
+	padding: 10px 0;
+	text-decoration: none;
+
+	@include breakpoint(sm) {
+		border: $border-primary-nav-desktop;
+		line-height: 60px;
+		padding: 0 10px;
+	}
+
+	&.active,
+	&.active_section {
+		color: $color-primary-nav-link-current;
+	}
+
+	&:hover,
+	&:focus {
+		color: $color-primary-nav-link-hover;
+	}
 }
-.primary-nav-menu li li {
+
+.primary-nav-menu	ul, // Remove when navigation plugin is updated
+.primary-nav-menu-section {
+	display: none;
+
+	@include breakpoint(sm) {
+		background: $color-primary-nav-dropdown-bg;
+		display: block;
+		left: -9999px;
+		position: absolute;
+		width: 240px;
+		z-index: 2;
+	}
+}
+
+.primary-nav-menu li li, // Remove when navigation plugin is updated
+.primary-nav-menu-section-item {
 	display: block;
 	padding: 0 10px;
 }
-.primary-nav-menu li li a {
+.primary-nav-menu li li a, // Remove when navigation plugin is updated
+.primary-nav-menu-section-link {
 	color: $color-primary-nav-dropdown-link;
 	line-height: $line-height-base;
 	padding: 10px 0;
