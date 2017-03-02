@@ -236,10 +236,10 @@ nav {
 
 .primary-nav-menu {
 	display: none;
-	margin: 40px 10px 0 10px;
+	margin: 40px 10px 0;
 
 	@include breakpoint( sm ) {
-		border: none;
+		border: 0;
 		display: inline;
 		margin: 0;
 	}
@@ -262,7 +262,7 @@ nav {
 	zoom: 1;
 
 	@include breakpoint( sm ) {
-		border: none;
+		border: 0;
 		display: inline-block;
 
 		.lt-ie8 & {
@@ -294,7 +294,7 @@ nav {
 	padding: 10px 0;
 	text-decoration: none;
 
-	@include breakpoint(sm) {
+	@include breakpoint( sm ) {
 		border: $border-primary-nav-desktop;
 		line-height: 60px;
 		padding: 0 10px;
@@ -320,7 +320,7 @@ nav {
 .primary-nav-menu-section {
 	display: none;
 
-	@include breakpoint(sm) {
+	@include breakpoint( sm ) {
 		background: $color-primary-nav-dropdown-bg;
 		display: block;
 		left: -9999px;
@@ -361,6 +361,8 @@ nav {
 // Utility Navigation
 // -----------------------------------------------------------------
 
+$_utility-nav-position: ($height-brand / 2) - ($font-size-utility-nav / 2);
+
 /// Handles styling for the utility navigation.
 /// @group navigation
 /// @access public
@@ -375,10 +377,14 @@ nav {
 	padding: 20px 0 0;
 
 	@include breakpoint( sm ) {
-		border: none;
+		border: 0;
 		display: block;
+		line-height: 1;
 		margin: 0;
 		padding: 0;
+		position: absolute;
+		right: 20px;
+		top: $_utility-nav-position;
 	}
 
 	.is-open & {
@@ -387,11 +393,11 @@ nav {
 	}
 
 	li {
-		border: none;
+		border: 0;
 		padding: 0;
 
 		@include breakpoint( sm ) {
-			border: none;
+			border: 0;
 			*display: inline;
 			display: inline-block;
 			padding-left: 10px;
@@ -416,17 +422,9 @@ nav {
 	}
 }
 
-// default
+// Default Navigation Layout
 // -----------------------------------------------------------------
 
-.l-default .utility-nav {
-	@include breakpoint( sm ) {
-		position: absolute;
-		top: ($height-brand / 2) - ($font-size-utility-nav / 2);
-		right: 20px;
-		line-height: 1;
-	}
-}
 
 // side-nav
 // -----------------------------------------------------------------
@@ -639,10 +637,7 @@ $_search-height: 103px;
 .l-top-nav {
 	.utility-nav {
 		@include breakpoint( sm ) {
-			position: absolute;
-			top: (($height-brand / 2) - ($font-size-utility-nav / 2)) + 60;
-			right: 20px;
-			line-height: 1;
+			top: $_utility-nav-position + 60;
 		}
 	}
 
@@ -679,16 +674,10 @@ $_search-height: 103px;
 		border-top: 1px solid $color-grayscale-d;
 	}
 
-	.masthead-container {
-		.utility-nav {
-			display: none;
-
-			@include breakpoint( sm ) {
-				position: absolute;
-				top: ($height-brand / 2) - ($font-size-utility-nav / 2) - 5;
-				right: 80px;
-				display: block;
-			}
+	.utility-nav {
+		@include breakpoint( sm ) {
+			top: $_utility-nav-position - 5;
+			right: 80px;
 		}
 	}
 }
