@@ -376,7 +376,7 @@ nav {
 		border: none;
 		padding: 0;
 
-		@include breakpoint(sm) {
+		@include breakpoint( sm ) {
 			border: none;
 			*display: inline;
 			display: inline-block;
@@ -394,7 +394,7 @@ nav {
 	}
 }
 .masthead-container .utility-nav {
-	@include breakpoint(sm) {
+	@include breakpoint( sm ) {
 		border: none;
 		display: block;
 		margin: 0;
@@ -406,7 +406,7 @@ nav {
 	padding: 0;
 	border: none;
 
-	@include breakpoint(sm) {
+	@include breakpoint( sm ) {
 		display: inline-block;
 		padding-left: 10px;
 		border: none;
@@ -418,14 +418,14 @@ nav {
 	color: $color-utility-nav-mobile-link;
 	text-decoration: none;
 
-	@include breakpoint(sm) {
+	@include breakpoint( sm ) {
 		color: $color-utility-nav-link;
 	}
 
 	&:hover {
 		color: $color-utility-nav-mobile-link-hover;
 
-		@include breakpoint(sm) {
+		@include breakpoint( sm ) {
 			color: $color-utility-nav-link-hover;
 		}
 	}
@@ -435,7 +435,7 @@ nav {
 // -----------------------------------------------------------------
 
 .l-default .utility-nav {
-	@include breakpoint(sm) {
+	@include breakpoint( sm ) {
 		position: absolute;
 		top: ($height-brand / 2) - ($font-size-utility-nav / 2);
 		right: 20px;
@@ -448,7 +448,7 @@ nav {
 
 .l-side-nav {
 	.masthead:after {
-		@include breakpoint(sm) {
+		@include breakpoint( sm ) {
 			display: none;
 		}
 	}
@@ -458,7 +458,7 @@ nav {
 	}
 
 	.primary-nav {
-		@include breakpoint(sm) {
+		@include breakpoint( sm ) {
 			position: relative;
 			top: 0;
 			width: $width-side-nav;
@@ -470,13 +470,13 @@ nav {
 			&.is-open {
 				left: $width-side-nav - 60px;
 
-				@include breakpoint(lg) {
+				@include breakpoint( lg ) {
 					left: 0;
 				}
 			}
 		}
 
-		@include breakpoint(lg) {
+		@include breakpoint( lg ) {
 			margin-left: 0;
 			display: block;
 			width: $width-side-nav;
@@ -485,19 +485,19 @@ nav {
 	}
 
 	.nav-toggle {
-		@include breakpoint(sm) {
+		@include breakpoint( sm ) {
 			float: right;
 			margin-right: -10px;
 		}
 	}
 
 	.primary-nav-menu {
-		@include breakpoint(sm) {
+		@include breakpoint( sm ) {
 			display: none;
 			margin: 0 10px;
 		}
 
-		@include breakpoint(lg) {
+		@include breakpoint( lg ) {
 			display: block;
 		}
 
@@ -507,7 +507,7 @@ nav {
 
 			&:first-child {
 				a {
-					@include breakpoint(lg) {
+					@include breakpoint( lg ) {
 						border: 0;
 					}
 				}
@@ -533,7 +533,7 @@ nav {
 	right: 0;
 	color: $color-grayscale-f;
 
-	@include breakpoint(sm) {
+	@include breakpoint( sm ) {
 		right: 10px;
 		display: block;
 		position: relative;
@@ -548,7 +548,7 @@ nav {
 	&:hover {
 		color: currentColor;
 
-		@include breakpoint(sm) {
+		@include breakpoint( sm ) {
 			color: $color-nav-toggle-alt-hover;
 		}
 	}
@@ -558,12 +558,12 @@ $_search-height: 103px;
 
 .search-open.l-side-nav {
 	.primary-nav {
-		@include breakpoint(sm) {
+		@include breakpoint( sm ) {
 			top: $_search-height; // adds the height of the open search form
 		}
 	}
 	.content {
-		@include breakpoint(sm) {
+		@include breakpoint( sm ) {
 			margin-top: $_search-height; // adds the height of the open search form
 		}
 	}
@@ -572,7 +572,7 @@ $_search-height: 103px;
 // side-nav and no-nav: quicksearch
 .l-side-nav {
 	#quicksearch {
-		@include breakpoint(sm) {
+		@include breakpoint( sm ) {
 			position: absolute;
 			width: 100%;
 			border: 1px solid $color-quicksearch-border;
@@ -582,7 +582,7 @@ $_search-height: 103px;
 
 	.primary-nav {
 		.search-toggle {
-			@include breakpoint(sm) {
+			@include breakpoint( sm ) {
 				display: none;
 			}
 		}
@@ -591,10 +591,10 @@ $_search-height: 103px;
 
 .l-side-nav.nav-open {
 	.content {
-		@include breakpoint(sm) {
+		@include breakpoint( sm ) {
 			left: $width-side-nav - 60px;
 		}
-		@include breakpoint(lg) {
+		@include breakpoint( lg ) {
 			left: 0;
 		}
 	}
@@ -606,7 +606,7 @@ $_search-height: 103px;
 
 .l-no-nav .brand .search-toggle {
 	color: $color-nav-toggle-alt;
-	@include breakpoint(sm) {
+	@include breakpoint( sm ) {
 		right: 10px;
 		display: block;
 		@include vertical-center;
@@ -622,14 +622,14 @@ $_search-height: 103px;
 // side-nav: nav-toggle
 .l-side-nav .nav-toggle {
 	display: block;
-	@include breakpoint(lg) {
+	@include breakpoint( lg ) {
 		display: none;
 	}
 }
 .l-side-nav .masthead-container .utility-nav {
 	margin: 0 10px;
 
-	@include breakpoint(lg) {
+	@include breakpoint( lg ) {
 		position: relative;
 		top: auto;
 		right: auto;
@@ -653,7 +653,7 @@ $_search-height: 103px;
 
 .l-top-nav {
 	.utility-nav {
-		@include breakpoint(sm) {
+		@include breakpoint( sm ) {
 			position: absolute;
 			top: (($height-brand / 2) - ($font-size-utility-nav / 2)) + 60;
 			right: 20px;
@@ -666,7 +666,7 @@ $_search-height: 103px;
 	}
 }
 .l-top-nav.search-open .utility-nav {
-	@include breakpoint(sm) {
+	@include breakpoint( sm ) {
 		top: 209px;
 	}
 }
@@ -676,7 +676,7 @@ $_search-height: 103px;
 
 .l-no-nav {
 	.primary-nav {
-		@include breakpoint(sm) {
+		@include breakpoint( sm ) {
 			display: none;
 		}
 	}
@@ -698,7 +698,7 @@ $_search-height: 103px;
 		.utility-nav {
 			display: none;
 
-			@include breakpoint(sm) {
+			@include breakpoint( sm ) {
 				position: absolute;
 				top: ($height-brand / 2) - ($font-size-utility-nav / 2) - 5;
 				right: 80px;
