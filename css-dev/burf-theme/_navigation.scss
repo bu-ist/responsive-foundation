@@ -430,7 +430,7 @@ $_utility-nav-position: ($height-brand / 2) - ($font-size-utility-nav / 2);
 // -----------------------------------------------------------------
 
 .l-side-nav {
-	.masthead:after {
+	.masthead::after {
 		@include breakpoint( sm ) {
 			display: none;
 		}
@@ -438,40 +438,6 @@ $_utility-nav-position: ($height-brand / 2) - ($font-size-utility-nav / 2);
 
 	.wrapper {
 		background: $color-primary-nav-bg;
-	}
-
-	.primary-nav {
-		@include breakpoint( sm ) {
-			position: relative;
-			top: 0;
-			width: $width-side-nav;
-			background: none;
-			float: left;
-			margin-left: -$width-side-nav + 60px;
-			left: 0;
-
-			&.is-open {
-				left: $width-side-nav - 60px;
-
-				@include breakpoint( lg ) {
-					left: 0;
-				}
-			}
-		}
-
-		@include breakpoint( lg ) {
-			margin-left: 0;
-			display: block;
-			width: $width-side-nav;
-			padding: 20px 10px;
-		}
-	}
-
-	.nav-toggle {
-		@include breakpoint( sm ) {
-			float: right;
-			margin-right: -10px;
-		}
 	}
 
 	.primary-nav-menu {
@@ -510,7 +476,14 @@ $_utility-nav-position: ($height-brand / 2) - ($font-size-utility-nav / 2);
 	}
 }
 
-.l-side-nav .search-toggle {
+.nav-toggle-sidenav {
+	@include breakpoint( sm ) {
+		float: right;
+		margin-right: -10px;
+	}
+}
+
+.search-toggle-sidenav {
 	position: absolute;
 	top: $height-brand + 30px;
 	right: 0;
@@ -540,11 +513,6 @@ $_utility-nav-position: ($height-brand / 2) - ($font-size-utility-nav / 2);
 $_search-height: 103px;
 
 .search-open.l-side-nav {
-	.primary-nav {
-		@include breakpoint( sm ) {
-			top: $_search-height; // adds the height of the open search form
-		}
-	}
 	.content {
 		@include breakpoint( sm ) {
 			margin-top: $_search-height; // adds the height of the open search form
@@ -562,12 +530,41 @@ $_search-height: 103px;
 			border-width: $border-width-quicksearch;
 		}
 	}
+}
 
-	.primary-nav {
-		.search-toggle {
-			@include breakpoint( sm ) {
-				display: none;
-			}
+.primary-nav-sidenav {
+	@include breakpoint( sm ) {
+		position: relative;
+		top: 0;
+		width: $width-side-nav;
+		background: none;
+		float: left;
+		margin-left: -$width-side-nav + 60px;
+		left: 0;
+
+		.search-open & {
+			top: $_search-height; // adds the height of the open search form
+		}
+	}
+
+	@include breakpoint( lg ) {
+		margin-left: 0;
+		display: block;
+		width: $width-side-nav;
+		padding: 20px 10px;
+	}
+
+	&.is-open {
+		left: $width-side-nav - 60px;
+
+		@include breakpoint( lg ) {
+			left: 0;
+		}
+	}
+
+	.search-toggle {
+		@include breakpoint( sm ) {
+			display: none;
 		}
 	}
 }
@@ -587,7 +584,7 @@ $_search-height: 103px;
 	}
 }
 
-.l-no-nav .brand .search-toggle {
+.l-no-nav .search-toggle {
 	color: $color-nav-toggle-alt;
 	@include breakpoint( sm ) {
 		right: 10px;
@@ -609,7 +606,7 @@ $_search-height: 103px;
 		display: none;
 	}
 }
-.l-side-nav .masthead-container .utility-nav {
+.l-side-nav .utility-nav {
 	margin: 0 10px;
 
 	@include breakpoint( lg ) {
