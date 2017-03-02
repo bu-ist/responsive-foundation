@@ -248,6 +248,11 @@ nav {
 	}
 }
 
+/// Handles styling for list items and drop downs in primary navigation.
+/// @group navigation
+/// @access public
+/// @since 2.0.0
+
 .primary-nav-menu li, // Remove when navigation plugin is updated
 .primary-nav-menu-item,
 .primary-nav-menu-section-item {
@@ -270,6 +275,12 @@ nav {
 		}
 	}
 }
+
+
+/// Handles styling for links in primary navigation.
+/// @group navigation
+/// @access public
+/// @since 2.0.0
 
 .primary-nav-menu a, // Remove when navigation plugin is updated
 .primary-nav-menu-link,
@@ -298,6 +309,11 @@ nav {
 	}
 }
 
+/// Handles styling for sections of children within the primary navigation.
+/// @group navigation
+/// @access public
+/// @since 2.0.0
+
 .primary-nav-menu	ul, // Remove when navigation plugin is updated
 .primary-nav-menu-section {
 	display: none;
@@ -312,11 +328,22 @@ nav {
 	}
 }
 
+/// Handles styling for child page containers in primary navigation.
+/// @group navigation
+/// @access public
+/// @since 2.0.0
+
 .primary-nav-menu li li, // Remove when navigation plugin is updated
 .primary-nav-menu-section-item {
 	display: block;
 	padding: 0 10px;
 }
+
+/// Handles styling for child page links within a section in primary navigation.
+/// @group navigation
+/// @access public
+/// @since 2.0.0
+
 .primary-nav-menu li li a, // Remove when navigation plugin is updated
 .primary-nav-menu-section-link {
 	color: $color-primary-nav-dropdown-link;
