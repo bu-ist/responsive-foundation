@@ -6,6 +6,11 @@
 %vertical-center {
 	@include vertical-center;
 }
+%_brand-print {
+	@media print {
+		-webkit-print-color-adjust: exact;
+	}
+}
 
 .brand {
 	@extend %vertical-center-child;
@@ -54,6 +59,7 @@
 
 // Sub-brand signature
 .brand-signature {
+	@extend %_brand-print;
 	background: url($image-subbrand) no-repeat 0 49%;
 	min-height: 35px;
 	padding: 10px 30px 9px 56px;
@@ -102,6 +108,7 @@
 
 // Master logo in footer
 .brand-masterplate {
+	@extend %_brand-print;
 	@extend %hide-text;
 	background: url($image-masterplate) no-repeat 0 0;
 	display: block;
@@ -116,6 +123,7 @@
 
 // BUMC logo in footer
 .brand-bumclogo {
+	@extend %_brand-print;
 	@extend %hide-text;
 	background: url($image-bumclogo) no-repeat 0 0;
 	display: block;
