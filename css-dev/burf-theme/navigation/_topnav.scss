@@ -13,12 +13,53 @@
 	}
 }
 
-#primary-nav-menu-topnav {
-
-}
-
 .l-top-nav.search-open .utility-nav {
 	@include breakpoint( sm ) {
 		top: 209px;
 	}
+}
+
+/// Handles styling for the primary navigation in the top navigation layout.
+/// @group navigation
+/// @access public
+/// @since 2.0.0
+
+#primary-nav-menu-topnav {
+	@extend %primary-nav-menu;
+}
+
+/// Handles styling for top-level primary navigation items in the top navigation layout.
+/// @group navigation
+/// @access public
+/// @since 2.0.0
+
+.primary-nav-menu-topnav-item {
+	@extend %primary-nav-menu-item;
+	@extend %primary-nav-menu-item-inline;
+}
+
+/// Handles styling for top-level primary navigation links in the top navigation layout.
+/// @group navigation
+/// @access public
+/// @since 2.0.0
+
+.primary-nav-menu-topnav-link {
+	@extend %primary-nav-menu-link;
+}
+
+/// Handles styling for second-level primary navigation items in the top navigation layout.
+/// @group navigation
+/// @access public
+/// @since 2.0.0
+
+.primary-nav-menu-topnav-section {
+	@extend %primary-nav-menu-section;
+}
+
+.primary-nav-menu-topnav-section-item {
+	@extend %primary-nav-menu-section-item;
+}
+
+.primary-nav-menu-topnav-section-link {
+	@extend %primary-nav-menu-section-link;
 }
