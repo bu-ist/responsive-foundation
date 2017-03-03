@@ -1,0 +1,24 @@
+// top nav
+// -----------------------------------------------------------------
+
+.l-top-nav {
+	#quicksearch {
+		border-bottom: 1px solid $color-grayscale-d;
+	}
+}
+
+.utility-nav-topnav {
+	@include breakpoint( sm ) {
+		top: $_utility-nav-position + 60;
+	}
+}
+
+#primary-nav-menu-topnav {
+
+}
+
+.l-top-nav.search-open .utility-nav {
+	@include breakpoint( sm ) {
+		top: 209px;
+	}
+}
