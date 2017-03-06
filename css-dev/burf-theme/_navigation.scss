@@ -58,17 +58,17 @@ nav {
 			padding: 0 20px;
 		}
 	}
+}
 
-	.button {
-		@extend %button-styles-primary;
-		@include border-radius($border-radius-quicksearch-button);
-		float: right;
-		padding: 11px 0 12px 0;
-		width: 25%;
+.search-submit {
+	@extend %button-styles-primary;
+	@include border-radius($border-radius-quicksearch-button);
+	float: right;
+	padding: 11px 0 12px 0;
+	width: 25%;
 
-		@include breakpoint(sm) {
-			width: 15%;
-		}
+	@include breakpoint(sm) {
+		width: 15%;
 	}
 }
 
