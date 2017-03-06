@@ -1,0 +1,607 @@
+// common
+
+nav {
+	font-family: $font-family-navigation;
+	font-size: $font-size-navigation;
+
+	a {
+		text-decoration: none;
+	}
+}
+
+// .search-toggle appears only when header is small and above, otherwise it's hidden
+.brand {
+	.search-toggle {
+		display: none;
+	}
+
+	.site-description {
+		float: left;
+		width: auto;
+		margin-left: 50px;
+	}
+}
+// quicksearch (use WordPress plugin class name)
+
+#quicksearch {
+	position: relative;
+	display: none;
+	padding: 30px 20px;
+	margin: 0;
+	background: $color-search-bg;
+
+	fieldset {
+		margin: 0;
+
+		@include breakpoint(sm) {
+			margin: 0 auto;
+			max-width: $container-sm;
+			padding: 0 20px;
+		}
+	}
+	.button {
+		@extend %button-styles-primary;
+		@include border-radius($border-radius-quicksearch-button);
+		width: 25%;
+		padding: 11px 0 12px 0;
+		float: right;
+
+		@include breakpoint(sm) {
+			width: 15%;
+		}
+	}
+}
+
+#quicksearch.is-open {
+	display: block;
+	border-bottom: $border-search;
+}
+#q {
+	@include border-radius($border-radius-quicksearch-input);
+	width: 75%;
+	padding-right: 10px;
+	padding-left: 10px;
+	color: $color-search-text;
+
+	@include breakpoint(sm) {
+		width: 85%;
+	}
+}
+
+// search-toggle
+
+.search-toggle {
+	@extend %icon-search;
+	@include transition(color 200ms ease-in-out 0s);
+	float: right;
+	width: 60px;
+	height: 60px;
+	padding: 0;
+	font-size: 31px;
+	line-height: 60px;
+	color: $color-nav-toggle;
+	text-align: center;
+
+	&:visited {
+		color: $color-nav-toggle;
+	}
+	&:hover {
+		color: $color-nav-toggle-hover;
+	}
+
+	span {
+		display: none;
+	}
+}
+
+.search-toggle.is-open {
+	&.is-open {
+		@extend %icon-close;
+	}
+}
+
+// when nav or search are opened
+.is-open .primary-nav-menu,
+.is-open .utility-nav {
+	display: block;
+	clear: left;
+}
+
+
+// nav-toggle
+
+.nav-toggle {
+	@extend %hide-text;
+	position: relative;
+	float: left;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+
+	@include breakpoint(sm) {
+		display: none;
+	}
+}
+.nav-toggle span,
+.nav-toggle span:before,
+.nav-toggle span:after {
+	position: absolute;
+	top: 28px;
+	left: 15px;
+	display: block;
+	width: 30px;
+	height: 4px;
+	background: $color-nav-toggle;
+	content: "";
+	cursor: pointer;
+}
+.nav-toggle span:before {
+	top: -10px;
+	left: 0;
+}
+.nav-toggle span:after {
+	top: 10px;
+	left: 0;
+}
+.nav-toggle span,
+.nav-toggle span:before,
+.nav-toggle span:after {
+	@include transition(all, 250ms, ease-in-out, 0s);
+}
+.nav-toggle.is-open span {
+	background-color: transparent;
+}
+.nav-toggle.is-open span:before,
+.nav-toggle.is-open span:after {
+	top: 0;
+}
+.nav-toggle.is-open span:before {
+	@include rotate (45);
+}
+.nav-toggle.is-open span:after {
+	@include rotate (-45);
+}
+
+// primaryNav and menu
+
+.primary-nav {
+	@extend %clearfix;
+	display: block;
+	padding: 0 10px;
+	background: $color-primary-nav-bg;
+}
+
+.primary-nav.is-open {
+	height: auto;
+	padding-bottom: 20px;
+	@include breakpoint(sm) {
+		padding-bottom: 0;
+	}
+}
+
+.primary-nav-menu {
+	display: none;
+	margin: 40px 10px 0 10px;
+
+	@include breakpoint(sm) {
+		display: inline;
+		margin: 0;
+		border: none;
+	}
+
+	li {
+		display: block;
+		zoom: 1;
+
+		@include breakpoint(sm) {
+			display: inline-block;
+			border: none;
+
+			.lt-ie8 & {
+				display: inline;
+			}
+		}
+	}
+	a {
+		display: block;
+		padding: 10px 0;
+		border: 1px solid $color-primary-nav-border;
+		border-width: $border-width-primary-nav;
+		color: $color-primary-nav-link;
+		text-decoration: none;
+
+		@include breakpoint(sm) {
+			padding: 0 10px;
+			border: $border-primary-nav-desktop;
+			line-height: 60px;
+		}
+
+		&:hover,
+		&:focus {
+			color: $color-primary-nav-link-hover;
+		}
+	}
+
+	ul {
+		display: none;
+
+		@include breakpoint(sm) {
+			position: absolute;
+			left: -9999px;
+			z-index: 2;
+			display: block;
+			width: 240px;
+			background: $color-primary-nav-dropdown-bg;
+		}
+	}
+}
+
+.primary-nav-menu li a.active,
+.primary-nav-menu li a.active_section {
+	color: $color-primary-nav-link-current;
+}
+
+.primary-nav-menu li:hover ul,
+.primary-nav-menu li:focus ul {
+	left: auto;
+}
+.primary-nav-menu li li {
+	display: block;
+	padding: 0 10px;
+}
+.primary-nav-menu li li a {
+	padding: 10px 0;
+	line-height: $line-height-base;
+	color: $color-primary-nav-dropdown-link;
+
+	&:hover,
+	&:focus {
+		color: $color-primary-nav-dropdown-link-hover;
+	}
+}
+
+/* utilityNav
+----------------------------------------------------------------- */
+
+.utility-nav {
+	display: none;
+	padding: 20px 0 0;
+	margin: 0 10px;
+	border: 1px solid $color-primary-nav-border;
+	border-width: $border-width-utility-nav;
+	font-size: $font-size-utility-nav;
+
+	li {
+		padding: 0;
+		border: none;
+
+		@include breakpoint(sm) {
+			display: inline-block;
+			padding-left: 10px;
+			border: none;
+			*display: inline;
+		}
+	}
+	a {
+		color: $color-utility-nav-link;
+		text-decoration: none;
+
+		&:hover {
+			color: $color-utility-nav-link-hover;
+		}
+	}
+}
+.masthead-container .utility-nav {
+	@include breakpoint(sm) {
+		display: block;
+		padding: 0;
+		margin: 0;
+		border: none;
+	}
+}
+
+.utility-nav li {
+	padding: 0;
+	border: none;
+
+	@include breakpoint(sm) {
+		display: inline-block;
+		padding-left: 10px;
+		border: none;
+		*display: inline;
+	}
+}
+
+.utility-nav a {
+	color: $color-utility-nav-mobile-link;
+	text-decoration: none;
+
+	@include breakpoint(sm) {
+		color: $color-utility-nav-link;
+	}
+
+	&:hover {
+		color: $color-utility-nav-mobile-link-hover;
+
+		@include breakpoint(sm) {
+			color: $color-utility-nav-link-hover;
+		}
+	}
+}
+
+/* default
+----------------------------------------------------------------- */
+
+.l-default .utility-nav {
+	@include breakpoint(sm) {
+		position: absolute;
+		top: ($height-brand / 2) - ($font-size-utility-nav / 2);
+		right: 20px;
+		line-height: 1;
+	}
+}
+
+/* side-nav
+----------------------------------------------------------------- */
+
+.l-side-nav {
+	.masthead:after {
+		@include breakpoint(sm) {
+			display: none;
+		}
+	}
+
+	.wrapper {
+		background: $color-primary-nav-bg;
+	}
+
+	.primary-nav {
+		@include breakpoint(sm) {
+			position: relative;
+			top: 0;
+			width: $width-side-nav;
+			background: none;
+			float: left;
+			margin-left: -$width-side-nav + 60px;
+			left: 0;
+
+			&.is-open {
+				left: $width-side-nav - 60px;
+
+				@include breakpoint(lg) {
+					left: 0;
+				}
+			}
+		}
+
+		@include breakpoint(lg) {
+			margin-left: 0;
+			display: block;
+			width: $width-side-nav;
+			padding: 20px 10px;
+		}
+	}
+
+	.nav-toggle {
+		@include breakpoint(sm) {
+			float: right;
+			margin-right: -10px;
+		}
+	}
+
+	.primary-nav-menu {
+		@include breakpoint(sm) {
+			display: none;
+			margin: 0 10px;
+		}
+
+		@include breakpoint(lg) {
+			display: block;
+		}
+
+		li {
+			display: block;
+			padding: 0;
+
+			&:first-child {
+				a {
+					@include breakpoint(lg) {
+						border: 0;
+					}
+				}
+			}
+		}
+
+		a {
+			padding: 10px 0;
+			border: 1px solid $color-primary-nav-border;
+			border-width: $border-width-primary-nav;
+			line-height: $line-height-base;
+		}
+
+		ul {
+			display: none;
+		}
+	}
+}
+
+.l-side-nav .search-toggle {
+	position: absolute;
+	//top: $height-brand + 30px;
+	right: 0;
+	color: $color-grayscale-f;
+
+	@include breakpoint(sm) {
+		right: 10px;
+		display: block;
+		position: relative;
+		@include vertical-center;
+		color: $color-nav-toggle-alt;
+	}
+
+	&:active,
+	&:visited {
+		color: currentColor;
+	}
+	&:hover {
+		color: currentColor;
+
+		@include breakpoint(sm) {
+			color: $color-nav-toggle-alt-hover;
+		}
+	}
+}
+
+$_search-height: 103px;
+
+.search-open.l-side-nav {
+	.primary-nav {
+		@include breakpoint(sm) {
+			top: $_search-height; // adds the height of the open search form
+		}
+	}
+	.content {
+		@include breakpoint(sm) {
+			margin-top: $_search-height; // adds the height of the open search form
+		}
+	}
+}
+
+// side-nav and no-nav: quicksearch
+.l-side-nav {
+	#quicksearch {
+		@include breakpoint(sm) {
+			position: absolute;
+			width: 100%;
+			border: 1px solid $color-quicksearch-border;
+			border-width: $border-width-quicksearch;
+		}
+	}
+
+	.primary-nav {
+		.search-toggle {
+			@include breakpoint(sm) {
+				display: none;
+			}
+		}
+	}
+}
+
+.l-side-nav.nav-open {
+	.content {
+		@include breakpoint(sm) {
+			left: $width-side-nav - 60px;
+		}
+		@include breakpoint(lg) {
+			left: 0;
+		}
+	}
+	.nav-toggle {
+		float: left;
+		margin-left: -10px;
+	}
+}
+
+.l-no-nav .brand .search-toggle {
+	color: $color-nav-toggle-alt;
+	@include breakpoint(sm) {
+		right: 10px;
+		display: block;
+		@include vertical-center;
+	}
+	&:visited {
+		color: $color-nav-toggle-alt;
+	}
+	&:hover {
+		color: $color-nav-toggle-alt-hover;
+	}
+}
+
+// side-nav: nav-toggle
+.l-side-nav .nav-toggle {
+	display: block;
+	@include breakpoint(lg) {
+		display: none;
+	}
+}
+.l-side-nav .masthead-container .utility-nav {
+	margin: 0 10px;
+
+	@include breakpoint(lg) {
+		position: relative;
+		top: auto;
+		right: auto;
+		display: block;
+	}
+}
+
+.l-side-nav .utility-nav li {
+	display: block;
+	padding-left: 0;
+}
+
+.l-side-nav.nav-open .primary-nav-menu,
+.l-side-nav.nav-open .utility-nav {
+	display: block;
+	float: none;
+}
+
+/* top nav
+----------------------------------------------------------------- */
+
+.l-top-nav {
+	.utility-nav {
+		@include breakpoint(sm) {
+			position: absolute;
+			top: (($height-brand / 2) - ($font-size-utility-nav / 2)) + 60;
+			right: 20px;
+			line-height: 1;
+		}
+	}
+
+	#quicksearch {
+		border-bottom: 1px solid $color-grayscale-d;
+	}
+}
+.l-top-nav.search-open .utility-nav {
+	@include breakpoint(sm) {
+		top: 209px;
+	}
+}
+
+/* no-nav
+----------------------------------------------------------------- */
+
+.l-no-nav {
+	.primary-nav {
+		@include breakpoint(sm) {
+			display: none;
+		}
+	}
+
+	.brand {
+		padding-right: 60px;
+		.search-toggle {
+			display: block;
+			margin: 0 -60px 0 0;
+			font-size: 24px;
+		}
+	}
+
+	#quicksearch {
+		border-top: 1px solid $color-grayscale-d;
+	}
+
+	.masthead-container {
+		.utility-nav {
+			display: none;
+
+			@include breakpoint(sm) {
+				position: absolute;
+				top: ($height-brand / 2) - ($font-size-utility-nav / 2) - 5;
+				right: 80px;
+				display: block;
+			}
+		}
+	}
+}
