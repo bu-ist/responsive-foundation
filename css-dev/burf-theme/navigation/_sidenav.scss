@@ -117,6 +117,12 @@ $_search-height: 103px;
 	display: none;
 }
 
+/// Handles styling for the nav toggle height, width, and placement
+/// in the left navigation layout.
+/// @group navigation
+/// @access public
+/// @since 2.0.0
+
 .nav-toggle-sidenav {
 	display: block;
 
@@ -134,6 +140,12 @@ $_search-height: 103px;
 		margin-left: -10px;
 	}
 }
+
+/// Handles styling for the search toggle height, width, and placement
+/// in the left navigation layout.
+/// @group navigation
+/// @access public
+/// @since 2.0.0
 
 .search-toggle-sidenav {
 	position: absolute;
