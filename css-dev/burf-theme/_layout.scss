@@ -318,8 +318,8 @@ $_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( (
 
 			&:first-child,
 			&:nth-child(#{$number-widgets-footbar}n+1) {
-				margin-left: 0;
 				clear: left;
+				margin-left: 0;
 			}
 		}
 	}
@@ -369,11 +369,11 @@ $_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( (
 	h4,
 	h5,
 	h6 {
-		margin: 0 0 3px;
+		color: $color-site-footer;
 		font-family: $font-family-sans-serif;
 		font-size: $font-size-small;
 		line-height: $line-height-small;
-		color: $color-site-footer;
+		margin: 0 0 3px;
 	}
 }
 
@@ -442,14 +442,14 @@ $_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( (
 
 		@include breakpoint( xs ) {
 			display: inline-block;
-			vertical-align: middle;
-			margin-right: 30px;
 			height: 50px;
+			margin-right: 30px;
+			vertical-align: middle;
 		}
 
 		@include breakpoint( sm ) {
-			text-align: left;
 			float: left;
+			text-align: left;
 		}
 	}
 }
@@ -525,9 +525,9 @@ $_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( (
 /// @since 1.0.0
 
 .site-footer-info {
-	margin-bottom: 30px;
-	display: block;
 	clear: both;
+	display: block;
+	margin-bottom: 30px;
 
 	@include breakpoint( sm ) {
 		padding-right: 30px;
@@ -535,9 +535,9 @@ $_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( (
 
 	.brand-masterplate + & {
 		@include breakpoint( sm ) {
-			max-width: 60%;
 			clear: none;
 			float: left;
+			max-width: 60%;
 		}
 
 		@include breakpoint( md ) {
@@ -547,9 +547,9 @@ $_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( (
 
 	.brand-bumclogo + & {
 		@include breakpoint( md ) {
-			max-width: 50%;
 			clear: none;
 			float: left;
+			max-width: 50%;
 		}
 
 		@include breakpoint( lg ) {
@@ -559,9 +559,9 @@ $_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( (
 
 	.disclaimer + & {
 		@include breakpoint( md ) {
-			max-width: 33%;
 			clear: none;
 			float: left;
+			max-width: 33%;
 		}
 
 		@include breakpoint( lg ) {
