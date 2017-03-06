@@ -106,6 +106,9 @@ $_search-height: 103px;
 
 /// Handles styling for second-level primary navigation items in the side navigation layout.
 /// By default, these are not supported, so they are set to not display.
+/// If you enable it, you may also wish to add these to your Sass on the item and link classes:
+/// `@extend %primary-nav-menu-section-item;`
+/// `@extend %primary-nav-menu-section-link;`
 /// @group navigation
 /// @access public
 /// @since 2.0.0
