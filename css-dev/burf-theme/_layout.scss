@@ -238,197 +238,154 @@ body {
 	}
 }
 
-.site-footer-info {
-	@extend %col-sm-half;
-
-	@include breakpoint(sm) {
-		padding: 0 0 10px 30px;
-		text-align:left;
-	}
-}
-.site-footer-links,
-.site-footer-social {
-	@extend %col-sm-quarter;
-	padding: 0 0 30px;
-	@include breakpoint(sm) {
-		padding-left: 30px;
-	}
-}
-.site-footer-social {
-	text-align: center;
-	@include breakpoint(sm) {
-		text-align: left;
-	}
-}
-
-
-/* utility class for displaying lists of links inline. Use @extend */
 %u-list-inlineLinks {
-	/* These classes are using %u-list-inlineLinks. */
 	display: inline-block;
-	padding: 0;
 	margin-right: 20px;
+	padding: 0;
+
 	&:last-child {
 		margin-right: 0;
 	}
 }
 
-/* Add master logo if specified by theme */
-.has-branding {
-	min-height: 140px;
-	.site-footer-brand {
-		width: 112px;
-		margin: 6px auto 35px;
+.site-footer-social {
+	@extend %col-sm-half;
+	text-align: center;
+
+	@include breakpoint(sm) {
+		float: right;
+		text-align: right;
+	}
+
+	.has-branding &,
+	.has-footer-info & {
 		@include breakpoint(sm) {
-			position: absolute;
-			top: 40px;
-			left: 20px;
+			text-align: left;
+		}
+	}
+
+	li {
+		@extend %u-list-inlineLinks;
+	}
+}
+
+.site-footer-brandassets {
+	@extend %col-sm-half;
+	text-align: center;
+
+	@include breakpoint(sm) {
+		text-align: left;
+	}
+
+	.has-branding & {
+		@extend %col-md-two-third;
+	}
+
+	a {
+		display: block;
+		margin: 0 auto 30px;
+
+		@include breakpoint(xs) {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 30px;
+			height: 50px;
+		}
+
+		@include breakpoint(sm) {
+			text-align: left;
+			float: left;
 		}
 	}
 }
 
-.site-footer-brand + .site-footer-content {
-	@include breakpoint(sm) {
-		margin: 0 0 0 112px;
+.disclaimer {
+	line-height: 50px;
+}
+
+.site-footer-menus {
+	clear: both;
+
+	.has-footer-info & {
+		@extend %col-sm-half;
+		clear: none;
+
+		@include breakpoint(sm) {
+			float: right;
+		}
+	}
+
+	.has-branding & {
+		@extend %col-sm-half;
+		@extend %col-md-third;
+		clear: none;
+
+		@include breakpoint(sm) {
+			float: right;
+		}
 	}
 }
 
-/* Add BUMC logo if specified by theme */
-.site-footer-bumc {
-	width: 96px;
-	margin: 6px auto 35px;
-
-	@include breakpoint(sm) {
-		margin:0;
-		position: absolute;
-		top: 40px;
-		left: 20px;
-	}
-}
-.site-footer-brand + .site-footer-bumc {
-	@include breakpoint(sm) {
-		position: absolute;
-		top: 48px;
-		left: 162px;
-	}
-}
-.site-footer-bumc + .site-footer-content {
-	@include breakpoint(sm) {
-		margin: 0 0 0 112px;
-	}
-}
-.site-footer-brand + .site-footer-bumc + .site-footer-content {
-	@include breakpoint(sm) {
-		margin: 0 0 0 234px;
-	}
-}
-
-/* Add disclaimer if specified by theme */
-.site-footer-disclaimer {
-	margin-bottom:20px;
-	text-align:center;
-
-	@include breakpoint(sm) {
-		margin-bottom:0;
-		position: absolute;
-	}
-}
-.has-branding .site-footer-disclaimer,
-.site-footer-bumc + .site-footer-disclaimer {
-
-	@include breakpoint(sm) {
-		position: absolute;
-		top: 48px;
-		left: 162px;
-	}
-}
-.site-footer-disclaimer + .site-footer-content {
-	@include breakpoint(sm) {
-		margin: 0 0 0 112px;
-	}
-}
-.site-footer-brand + .site-footer-disclaimer + .site-footer-content,
-.site-footer-bumc + .site-footer-disclaimer + .site-footer-content {
-	@include breakpoint(sm) {
-		margin: 0 0 0 234px;
-	}
-}
-.site-footer-brand + .site-footer-bumc + .site-footer-content {
-	@include breakpoint(sm) {
-		margin: 0 0 0 234px;
-	}
-}
-.site-footer-brand + .site-footer-bumc + .site-footer-disclaimer {
-	@include breakpoint(sm) {
-		left: 282px;
-	}
-}
-.site-footer-brand + .site-footer-bumc + .site-footer-disclaimer + .site-footer-content {
-	@include breakpoint(sm) {
-		margin: 0 0 0 344px;
-	}
-}
-
-
-/* Has only HTML info */
-.has-info .site-footer-info {
-	@extend %col-sm-full;
-}
-
-/* Has only general links */
-.has-links .site-footer-links {
-	@extend %col-sm-full;
-}
-.has-links .site-footer-links li {
-	@extend %u-list-inlineLinks;
-}
-
-/* Has general + social media links */
-.has-social .site-footer-social {
-	@extend %col-sm-full;
-}
-.has-social .site-footer-social li {
-	@extend %u-list-inlineLinks;
-}
-.has-links-social .site-footer-links,
-.has-links-social .site-footer-social {
+.site-footer-links {
 	@extend %col-sm-half;
-}
-.has-links-social .site-footer-links li,
-.has-links-social .site-footer-social li {
-	@extend %u-list-inlineLinks;
+	margin-bottom: 30px;
+	text-align: center;
+
+	@include breakpoint(sm) {
+		text-align: left;
+	}
+
+	li {
+		@extend %u-list-inlineLinks;
+
+		.has-branding & {
+			display: block;
+		}
+	}
 }
 
-/* Has info + general links */
-.has-info-links .site-footer-info {
-	@extend %col-sm-three-quarter;
-}
-.has-info-links .site-footer-links {
-	@extend %col-sm-quarter;
-}
-.has-info-links .site-footer-links li {
-	@extend %u-list-inlineLinks;
-}
-/* Has info + social media links */
-.has-info-social .site-footer-info {
-	@extend %col-sm-three-quarter;
-}
-.has-info-social .site-footer-social {
-	@extend %col-sm-quarter;
-}
-.has-info-social .site-footer-social li {
-	@extend %u-list-inlineLinks;
-}
+.site-footer-info {
+	margin-bottom: 30px;
+	display: block;
+	clear: both;
 
-/* Has all three */
-.has-info-links-social .site-footer-info {
-	@extend %col-sm-half;
-}
-.has-info-links-social .site-footer-links,
-.has-info-links-social .site-footer-social {
-	@extend %col-sm-quarter;
-}
-// .has-info-links-social .site-footer-links li, Doesn't always look good.
-.has-info-links-social .site-footer-social li  {
-    @extend %u-list-inlineLinks;
+	@include breakpoint(sm) {
+		padding-right: 30px;
+	}
+
+	.brand-masterplate + & {
+		@include breakpoint(sm) {
+			max-width: 60%;
+			clear: none;
+			float: left;
+		}
+
+		@include breakpoint(md) {
+			max-width: 75%;
+		}
+	}
+
+	.brand-bumclogo + & {
+		@include breakpoint(md) {
+			max-width: 50%;
+			clear: none;
+			float: left;
+		}
+
+		@include breakpoint(lg) {
+			max-width: 65%;
+		}
+	}
+
+	.disclaimer + & {
+		@include breakpoint(md) {
+			max-width: 33%;
+			clear: none;
+			float: left;
+		}
+
+		@include breakpoint(lg) {
+			max-width: 50%;
+		}
+	}
 }
