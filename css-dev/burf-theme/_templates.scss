@@ -52,12 +52,12 @@
 .single-profile,
 .post-type-archive-profile {
 	@extend %template-narrow;
+}
 
-	// Layouts
-	&.sidebar-location-left,
-	&.sidebar-location-right {
-		@extend %remove-template-narrow;
-	}
+// Layouts
+.sidebar-location-left,
+.sidebar-location-right {
+	@extend %remove-template-narrow;
 }
 
 /* Narrow Sidebar
