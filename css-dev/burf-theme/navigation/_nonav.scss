@@ -9,7 +9,7 @@
 
 .utility-nav-nonav {
 	@include breakpoint( sm ) {
-		top: $_utility-nav-position - 5;
+		top: $_utility-nav-position;
 		right: 80px;
 	}
 }
@@ -17,11 +17,9 @@
 .search-toggle-nonav {
 	color: $color-nav-toggle-alt;
 	display: block;
-	margin: 0 -60px 0 0;
-	font-size: 24px;
 
 	@include breakpoint( sm ) {
-		right: 10px;
+		right: -10px;
 		display: block;
 		@include vertical-center;
 	}

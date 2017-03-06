@@ -142,7 +142,7 @@ $_search-height: 103px;
 	color: $color-grayscale-f;
 
 	@include breakpoint( sm ) {
-		right: 10px;
+		right: -10px;
 		display: block;
 		position: relative;
 		@include vertical-center;
