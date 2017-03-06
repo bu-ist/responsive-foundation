@@ -11,11 +11,11 @@
 	@include breakpoint( sm ) {
 		top: $_utility-nav-position + 60;
 	}
-}
 
-.l-top-nav.search-open .utility-nav {
-	@include breakpoint( sm ) {
-		top: 209px;
+	.search-open & {
+		@include breakpoint( sm ) {
+			top: 209px;
+		}
 	}
 }
 
@@ -28,7 +28,8 @@
 	@extend %primary-nav-menu;
 }
 
-/// Handles styling for top-level primary navigation items in the top navigation layout.
+/// Handles styling for top-level primary navigation items
+/// in the top navigation layout.
 /// @group navigation
 /// @access public
 /// @since 2.0.0
@@ -38,7 +39,8 @@
 	@extend %primary-nav-menu-item-inline;
 }
 
-/// Handles styling for top-level primary navigation links in the top navigation layout.
+/// Handles styling for top-level primary navigation links
+/// in the top navigation layout.
 /// @group navigation
 /// @access public
 /// @since 2.0.0
@@ -47,7 +49,8 @@
 	@extend %primary-nav-menu-link;
 }
 
-/// Handles styling for second-level primary navigation items in the top navigation layout.
+/// Handles styling for second-level primary navigation items
+/// in the top navigation layout.
 /// @group navigation
 /// @access public
 /// @since 2.0.0
@@ -56,9 +59,21 @@
 	@extend %primary-nav-menu-section;
 }
 
+/// Handles styling for child page containers in primary navigation
+/// in the top navigation layout.
+/// @group navigation
+/// @access public
+/// @since 2.0.0
+
 .primary-nav-menu-topnav-section-item {
 	@extend %primary-nav-menu-section-item;
 }
+
+/// Handles styling for child page links within a section
+/// in primary navigation in the top navigation layout.
+/// @group navigation
+/// @access public
+/// @since 2.0.0
 
 .primary-nav-menu-topnav-section-link {
 	@extend %primary-nav-menu-section-link;
