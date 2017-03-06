@@ -198,6 +198,12 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 // Sidebar
 // -----------------------------------------------------------------
 
+/// Controls styles for the sidebar.
+/// You may extend this class if you can't use .sidebar for some reason.
+/// @group layout
+/// @access public
+/// @since 1.2.0
+
 %sidebar-styles {
 	@extend %col-md-#{$_sidebar-width};
 	clear: none;
@@ -210,7 +216,7 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 
 	// Left layout
 	.sidebar-location-left & {
-		@extend %col-md-pull-#{$grid-number-columns*(1-(1/$number-columns))};
+		@extend %col-md-pull-#{$_content-width};
 
 		@include breakpoint( md ) {
 			// TODO: sunset in a future release
@@ -219,6 +225,11 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 		}
 	}
 }
+
+/// The default class for styling sidebars.
+/// @group layout
+/// @access public
+/// @since 1.0.0
 
 .sidebar {
 	@extend %sidebar-styles;
@@ -243,42 +254,61 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 	}
 }
 
-// .footbar
+// Footbar
 // -----------------------------------------------------------------
+
+/// The width a widget should take up, including the margin, in the footbar.
+/// First, width gets equally divided among widgets.
+/// Next, calculate the amount of margin you need to subtract from the width.
+/// You need to split the margin equally, but the first margin in every row
+/// will always be left out.
+/// So if there are 3 widgets in the footbar, you only need to account for margin on two,
+/// which makes the basic formula something like this: width - (margin * 2/3).
+/// @group layout
+/// @access private
+/// @since 1.0.0
+
+$_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( ( $number-widgets-footbar - 1 ) / $number-widgets-footbar );
+
+/// Controls styling for the footbar.
+/// @group layout
+/// @access public
+/// @since 1.0.0
 
 .footbar {
 	@extend %clearfix;
-	width: 100%;
-	padding-bottom: $footbar-padding-bottom;
+	background: $color-footbar-bg;
 	border: $border-footbar;
 	border-width: $border-width-footbar;
-	background: $color-footbar-bg;
+	padding-bottom: $footbar-padding-bottom;
+	width: 100%;
 }
+
+/// Controls styling for the footbar container and width of widgets inside.
+/// Often used to put a maximum width on the footbar without affecting the background.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
 .footbar-container {
 	@extend %container-styles;
 	background: $color-footbar-container-bg;
+
 	@include breakpoint( md ) {
 		padding: $grid-container-padding-large-screen;
 	}
+
 	.widget {
 		@extend %col-base;
 		@extend %col-float;
 		width: 100%;
 
 		@include breakpoint( md ) {
-			// Bet you're really reconsidering overriding this width now!
-			// Don't worry, it's not so bad.
-			// First, width gets equally divided among widgets.
-			// Next, calculate the amount of margin you need to subtract from the width.
-			// You need to split the margin equally, but the first margin in every row will always be left out.
-			// So if there are 3 widgets in the footbar, you only need to account for margin on two:
-			// width - (margin * 2/3)
-			// See? Totally fine.
-			width: (100%/$number-widgets-footbar) - $margin-width * ((($number-widgets-footbar)-1)/$number-widgets-footbar);
 			float: left;
 			margin-left: $margin-width;
 			margin-top: 0;
 			padding: 0;
+			width: $_footbar-widget-width;
 
 			&:first-child,
 			&:nth-child(#{$number-widgets-footbar}n+1) {
@@ -289,36 +319,44 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 	}
 }
 
-// footer
+// Footer
 // -----------------------------------------------------------------
+
+/// Controls styling for the site footer - branding, address, and social links.
+/// @group layout
+/// @access public
+/// @since 1.0.0
 
 .site-footer {
 	@extend %clearfix;
-	position: relative;
-	display: block;
-	clear: both;
-	width: 100%;
-	padding: $padding-site-footer;
 	background: $color-site-footer-bg;
+	clear: both;
+	color: $color-grayscale-8;
+	display: block;
 	font-family: $font-family-sans-serif;
 	font-size: $font-size-small;
 	line-height: $line-height-small;
-	color: $color-grayscale-8;
+	padding: $padding-site-footer;
+	position: relative;
+	width: 100%;
+
 	a {
 		color: $color-site-footer-link;
+
 		&:hover {
 			color: $color-site-footer-link-hover;
 		}
 	}
+
 	li {
-		margin: 0 0 5px;
 		line-height: 1.4;
+		margin: 0 0 5px;
+
 		&:last-child {
 			margin: 0;
 		}
 	}
-}
-.site-footer {
+
 	h1,
 	h2,
 	h3,
@@ -333,7 +371,12 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 	}
 }
 
-%u-list-inlineLinks {
+/// A helper placeholder for listing links in an inline style.
+/// @group layout
+/// @access private
+/// @since 1.0.0
+
+%_u-list-inlineLinks {
 	display: inline-block;
 	margin-right: 20px;
 	padding: 0;
@@ -342,6 +385,12 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 		margin-right: 0;
 	}
 }
+
+/// Styles the social media links menu in the footer based on
+/// the content around it.
+/// @group layout
+/// @access public
+/// @since 1.0.0
 
 .site-footer-social {
 	@extend %col-sm-half;
@@ -360,9 +409,14 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 	}
 
 	li {
-		@extend %u-list-inlineLinks;
+		@extend %_u-list-inlineLinks;
 	}
 }
+
+/// Styles the container which holds branding assets in the site footer.
+/// @group layout
+/// @access public
+/// @since 2.0.0
 
 .site-footer-brandassets {
 	@extend %col-sm-half;
@@ -394,9 +448,20 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 	}
 }
 
+/// Styles the disclaimer, which shows in the site footer.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
 .disclaimer {
 	line-height: 50px;
 }
+
+/// Styles the container which holds menus (footer links and social) in the site footer
+/// based on the content around it.
+/// @group layout
+/// @access public
+/// @since 2.0.0
 
 .site-footer-menus {
 	clear: both;
@@ -421,6 +486,12 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 	}
 }
 
+/// Styles the container which holds footer links
+/// based on the content around it.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
 .site-footer-links {
 	@extend %col-sm-half;
 	margin-bottom: 30px;
@@ -431,13 +502,21 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 	}
 
 	li {
-		@extend %u-list-inlineLinks;
+		@extend %_u-list-inlineLinks;
 
 		.has-branding & {
 			display: block;
 		}
 	}
 }
+
+/// Styles the container which holds footer information
+/// based on the content around it.
+/// Note: this is slated to be controlled by the branding plugin
+/// in a future release.
+/// @group layout
+/// @access public
+/// @since 1.0.0
 
 .site-footer-info {
 	margin-bottom: 30px;
