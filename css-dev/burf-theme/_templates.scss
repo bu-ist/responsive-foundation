@@ -36,14 +36,7 @@
 		}
 	}
 }
-// Does not have a sidebar.
-.single-calendar {
-	@extend %template-narrow;
 
-	.content-area {
-		left: 0;
-	}
-}
 .home.blog,
 .archive,
 .page-template-news,
@@ -52,6 +45,16 @@
 .single-profile,
 .post-type-archive-profile {
 	@extend %template-narrow;
+}
+
+// Does not have a sidebar.
+.single-calendar {
+	@extend %template-narrow;
+
+	.content-area {
+		float: none;
+		margin: 0 auto;
+	}
 }
 
 // Layouts
