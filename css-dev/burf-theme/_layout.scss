@@ -13,11 +13,12 @@ body {
 
 .masthead {
 	@extend %clearfix;
-	position: relative;
+	background: $color-masthead-bg;
 	border: $border-masthead;
 	border-width: $border-width-masthead;
-	background: $color-masthead-bg;
+	position: relative;
 }
+
 .masthead-container {
 	position: relative;
 }
@@ -34,18 +35,18 @@ body {
 	}
 }
 .banner-container-window-width {
-	@include breakpoint(lg) {
+	@include breakpoint( lg ) {
 		padding: 20px;
 		background: $color-banner-container;
 	}
 }
 .banner-container-page-width {
 	margin: -15px 0 35px;
-	@include breakpoint(sm) {
+	@include breakpoint( sm ) {
 		margin: 0 0 60px;
 	}
 	img {
-		@include breakpoint(md) {
+		@include breakpoint( md ) {
 			width: 100%;
 			background: $color-banner-container;
 		}
@@ -55,7 +56,7 @@ body {
 	padding: 0;
 	margin: -15px 0 35px;
 	background: none;
-	@include breakpoint(sm) {
+	@include breakpoint( sm ) {
 		margin-top: 0;
 	}
 }
@@ -66,7 +67,7 @@ body {
 .content-area {
 	@extend %col-md-#{$grid-number-columns*((($number-columns)-1)/$number-columns)};
 	padding-bottom: $column-padding-bottom;
-	@include breakpoint(sm) {
+	@include breakpoint( sm ) {
 		padding-bottom: $column-padding-bottom-large-screen;
 	}
 
@@ -109,7 +110,7 @@ body {
 	clear: none;
 
 	// TODO: sunset this in a future release - this padding should really only apply to .sidebar-location-right
-	@include breakpoint(md) {
+	@include breakpoint( md ) {
 		padding-left: $sidebar-padding;
 	}
 
@@ -117,7 +118,7 @@ body {
 	.sidebar-location-left & {
 		@extend %col-md-pull-#{$grid-number-columns*(1-(1/$number-columns))};
 
-		@include breakpoint(md) {
+		@include breakpoint( md ) {
 			// TODO: sunset in a future release
 			padding: 0;
 			padding-right: $sidebar-padding;
@@ -137,7 +138,7 @@ body {
 	.sidebar {
 		@extend %col-md-pull-#{$grid-number-columns*(1-(1/$number-columns))};
 
-		@include breakpoint(md) {
+		@include breakpoint( md ) {
 			// TODO: sunset in a future release
 			padding: 0;
 			padding-right: $sidebar-padding;
@@ -162,7 +163,7 @@ body {
 .footbar-container {
 	@extend %container-styles;
 	background: $color-footbar-container-bg;
-	@include breakpoint(md) {
+	@include breakpoint( md ) {
 		padding: $grid-container-padding-large-screen;
 	}
 	.widget {
@@ -170,7 +171,7 @@ body {
 		@extend %col-float;
 		width: 100%;
 
-		@include breakpoint(md) {
+		@include breakpoint( md ) {
 			// Bet you're really reconsidering overriding this width now!
 			// Don't worry, it's not so bad.
 			// First, width gets equally divided among widgets.
@@ -252,14 +253,14 @@ body {
 	@extend %col-sm-half;
 	text-align: center;
 
-	@include breakpoint(sm) {
+	@include breakpoint( sm ) {
 		float: right;
 		text-align: right;
 	}
 
 	.has-branding &,
 	.has-footer-info & {
-		@include breakpoint(sm) {
+		@include breakpoint( sm ) {
 			text-align: left;
 		}
 	}
@@ -273,7 +274,7 @@ body {
 	@extend %col-sm-half;
 	text-align: center;
 
-	@include breakpoint(sm) {
+	@include breakpoint( sm ) {
 		text-align: left;
 	}
 
@@ -285,14 +286,14 @@ body {
 		display: block;
 		margin: 0 auto 30px;
 
-		@include breakpoint(xs) {
+		@include breakpoint( xs ) {
 			display: inline-block;
 			vertical-align: middle;
 			margin-right: 30px;
 			height: 50px;
 		}
 
-		@include breakpoint(sm) {
+		@include breakpoint( sm ) {
 			text-align: left;
 			float: left;
 		}
@@ -310,7 +311,7 @@ body {
 		@extend %col-sm-half;
 		clear: none;
 
-		@include breakpoint(sm) {
+		@include breakpoint( sm ) {
 			float: right;
 		}
 	}
@@ -320,7 +321,7 @@ body {
 		@extend %col-md-third;
 		clear: none;
 
-		@include breakpoint(sm) {
+		@include breakpoint( sm ) {
 			float: right;
 		}
 	}
@@ -331,7 +332,7 @@ body {
 	margin-bottom: 30px;
 	text-align: center;
 
-	@include breakpoint(sm) {
+	@include breakpoint( sm ) {
 		text-align: left;
 	}
 
@@ -349,42 +350,42 @@ body {
 	display: block;
 	clear: both;
 
-	@include breakpoint(sm) {
+	@include breakpoint( sm ) {
 		padding-right: 30px;
 	}
 
 	.brand-masterplate + & {
-		@include breakpoint(sm) {
+		@include breakpoint( sm ) {
 			max-width: 60%;
 			clear: none;
 			float: left;
 		}
 
-		@include breakpoint(md) {
+		@include breakpoint( md ) {
 			max-width: 75%;
 		}
 	}
 
 	.brand-bumclogo + & {
-		@include breakpoint(md) {
+		@include breakpoint( md ) {
 			max-width: 50%;
 			clear: none;
 			float: left;
 		}
 
-		@include breakpoint(lg) {
+		@include breakpoint( lg ) {
 			max-width: 65%;
 		}
 	}
 
 	.disclaimer + & {
-		@include breakpoint(md) {
+		@include breakpoint( md ) {
 			max-width: 33%;
 			clear: none;
 			float: left;
 		}
 
-		@include breakpoint(lg) {
+		@include breakpoint( lg ) {
 			max-width: 50%;
 		}
 	}
