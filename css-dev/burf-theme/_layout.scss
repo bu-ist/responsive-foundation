@@ -1,15 +1,34 @@
 body {
 	background: $color-body-bg;
 }
+
+/// Controls styling for all content, from the masthead to the site footer.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
 .content {
 	background: $color-content-bg;
 }
+
+/// A wrapper to contain content to a certain size. Sits just below the window
+/// width banner and just above the footbar.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
 .content-container {
 	@extend %container-styles;
 }
 
-// masthead
+// Masthead
 // -----------------------------------------------------------------
+
+/// Controls all styling related to the masthead. This includes
+/// navigation, branding, and search.
+/// @group layout
+/// @access public
+/// @since 1.0.0
 
 .masthead {
 	@extend %clearfix;
@@ -19,45 +38,86 @@ body {
 	position: relative;
 }
 
+/// A wrapper for items in the masthead. Often used to restrict the
+/// masthead to a certain width without interfering with the background.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
 .masthead-container {
 	position: relative;
 }
 
-// .bannerContainer
+// Content Banner
 // -----------------------------------------------------------------
+
+/// General styles for all content banner positions.
+/// @group layout
+/// @access public
+/// @since 1.0.0
 
 .banner-container {
 	padding: 0;
 	text-align: center;
+
 	img {
 		display: block;
 		margin: 0 auto;
 	}
 }
+
+/// Styles for the window-width content banner position.
+/// Sits outside of `.content-container`.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
 .banner-container-window-width {
 	@include breakpoint( lg ) {
-		padding: 20px;
 		background: $color-banner-container;
+		padding: 20px;
 	}
 }
+
+/// Styles for the page-width content banner position.
+/// Sits directly inside `.content-container` and just
+/// outside of `.content-area`.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
 .banner-container-page-width {
-	margin: -15px 0 35px;
+	margin: -$grid-container-padding;
+	margin-bottom: $grid-container-padding;
+
 	@include breakpoint( sm ) {
 		margin: 0 0 60px;
 	}
+
 	img {
 		@include breakpoint( md ) {
-			width: 100%;
 			background: $color-banner-container;
+			width: 100%;
 		}
 	}
 }
+
+/// Styles for the content-width content banner position.
+/// Sits directly inside `.content-area`.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
 .banner-container-content-width {
-	padding: 0;
-	margin: -15px 0 35px;
 	background: none;
+	margin: -$grid-container-padding;
+	margin-bottom: ( 1.5 * $grid-container-padding );
+	padding: 0;
+
 	@include breakpoint( sm ) {
 		margin-top: 0;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
