@@ -1,23 +1,23 @@
-/* template contents:
+// template contents:
 
-	1. Narrow Content Column
-	2. Narrow Sidebar
-	3. News & Archive Template
-	4. Single Post
-	5. Calendar Template
-	6. Calendar Single Event
-	7. 404 page
+//	1. Narrow Content Column
+//	2. Narrow Sidebar
+//	3. News & Archive Template
+//	4. Single Post
+//	5. Calendar Template
+//	6. Calendar Single Event
+//	7. 404 page
 
------------------------------------------------------------------ */
+// -----------------------------------------------------------------
 
-/* Narrow Content Column
------------------------------------------------------------------ */
+// Narrow Content Column
+// -----------------------------------------------------------------
 
 %template-narrow {
-	/* These classes are using %template-narrow. */
 	.content-container {
 		max-width: $container-sm;
 	}
+
 	.content-area {
 		@extend %col-md-full;
 	}
@@ -29,10 +29,11 @@
 	.content-container {
 		max-width: $container-lg;
 	}
+
 	.content-area {
 		@include breakpoint(md) {
+		float: left;
 			width: 66.66667%;
-    		float: left;
 		}
 	}
 }
@@ -63,12 +64,11 @@
 	@extend %remove-template-narrow;
 }
 
-/* Narrow Sidebar
------------------------------------------------------------------ */
+// Narrow Sidebar
+// -----------------------------------------------------------------
 
 // A utility class to style sidebars on narrow width templates.
 %template-narrow-sidebar {
-	/* These classes are using %template-narrow-sidebar. */
 	@extend %clearfix;
 	@extend %col-sm-margin-parent;
 	width: auto;
@@ -112,8 +112,8 @@
 	}
 }
 
-/* News & Archive Template
------------------------------------------------------------------ */
+// News & Archive Template
+// -----------------------------------------------------------------
 
 .news-posts h2,
 .archive .content-container h2 {
@@ -174,8 +174,8 @@
 	}
 }
 
-/* Homepage set to show Posts
------------------------------------------------------------------ */
+// Homepage set to show Posts
+// -----------------------------------------------------------------
 .home.blog {
 	.paging-navigation {
 		margin-bottom:30px;
@@ -197,8 +197,8 @@
 	}
 }
 
-/* Single Post
------------------------------------------------------------------ */
+// Single Post
+// -----------------------------------------------------------------
 .single {
 	.content-area {
 		.meta {
@@ -241,8 +241,8 @@
 	width: 100%;
 }
 
-/* Calendar Template
------------------------------------------------------------------ */
+// Calendar Template
+// -----------------------------------------------------------------
 
 .calendar-topic {
 	font-size: $font-size-calendar-topic;
@@ -318,8 +318,8 @@
 	padding-left: 20px;
 }
 
-/* Calendar Single Event
------------------------------------------------------------------ */
+// Calendar Single Event
+// -----------------------------------------------------------------
 
 .single-event .label {
 	font-family: $font-family-single-event-label;
