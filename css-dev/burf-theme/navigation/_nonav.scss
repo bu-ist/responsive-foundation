@@ -2,25 +2,15 @@
 // -----------------------------------------------------------------
 
 .l-no-nav {
-	.primary-nav {
-		@include breakpoint( sm ) {
-			display: none;
-		}
-	}
-
-	.brand {
-		padding-right: 60px;
-	}
-
 	#quicksearch {
 		border-top: 1px solid $color-grayscale-d;
 	}
+}
 
-	.utility-nav {
-		@include breakpoint( sm ) {
-			top: $_utility-nav-position - 5;
-			right: 80px;
-		}
+.utility-nav-nonav {
+	@include breakpoint( sm ) {
+		top: $_utility-nav-position - 5;
+		right: 80px;
 	}
 }
 
