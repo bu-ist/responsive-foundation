@@ -115,33 +115,67 @@ body {
 	padding: 0;
 
 	@include breakpoint( sm ) {
-		margin-top: 0;
 		margin-left: auto;
 		margin-right: auto;
+		margin-top: 0;
 	}
 }
 
-// content
+// Content Area
 // -----------------------------------------------------------------
 
+/// A helper variable to figure out the proper width for the content
+/// based on the desired number of columns in the design.
+/// Note that this is different from the number of columns supported in
+/// the grid.
+/// By default, the width is one less than the number of columns.
+/// @group layout
+/// @access private
+/// @since 1.0.0
+
+$_content-width: $grid-number-columns * ( ($number-columns - 1) / $number-columns );
+
+/// A helper variable to figure out the proper width for the sidebar
+/// based on the desired number of columns in the design.
+/// Note that this is different from the number of columns supported in
+/// the grid.
+/// By default, the width is one column.
+/// @group layout
+/// @access private
+/// @since 1.0.0
+
+$_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
+
+/// Styles for the content area (formerly styled by article[role=main]).
+/// Sits next to the sidebar.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
 .content-area {
-	@extend %col-md-#{$grid-number-columns*((($number-columns)-1)/$number-columns)};
+	@extend %col-md-#{$_content-width};
 	padding-bottom: $column-padding-bottom;
+
 	@include breakpoint( sm ) {
 		padding-bottom: $column-padding-bottom-large-screen;
 	}
 
 	// Left layout
 	.sidebar-location-left & {
-		@extend %col-md-push-#{$grid-number-columns*(1/$number-columns)};
+		@extend %col-md-push-#{$_sidebar-width};
 	}
+
 	.page-template-no-sidebars & {
 		left: 0;
 		width: 100%;
 	}
 }
 
-// Bottom layout
+/// Styles for the bottom sidebar location.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
 .sidebar-location-bottom {
 	@extend %template-narrow;
 
@@ -161,13 +195,13 @@ body {
 }
 
 
-// sidebar
+// Sidebar
 // -----------------------------------------------------------------
 
 %sidebar-styles {
-	@extend %col-md-#{$grid-number-columns*(1/$number-columns)};
-	font-size: $font-size-small;
+	@extend %col-md-#{$_sidebar-width};
 	clear: none;
+	font-size: $font-size-small;
 
 	// TODO: sunset this in a future release - this padding should really only apply to .sidebar-location-right
 	@include breakpoint( md ) {
