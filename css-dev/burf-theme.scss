@@ -14,11 +14,7 @@
 @import 'burf-theme/icons';
 
 // navigation
-@import 'burf-theme/navigation/base'; // Required
-	@import 'burf-theme/navigation/default';
-	@import 'burf-theme/navigation/topnav';
-	@import 'burf-theme/navigation/sidenav';
-	@import 'burf-theme/navigation/nonav';
+@import 'burf-theme/navigation';
 
 // utilities
 @import 'burf-theme/utilities';

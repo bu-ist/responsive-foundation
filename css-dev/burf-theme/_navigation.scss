@@ -34,7 +34,7 @@ nav {
 		margin: 0;
 
 		@include breakpoint(sm) {
-			max-width: $container-SM;
+			max-width: $container-sm;
 			padding: 0 20px;
 			margin: 0 auto;
 		}
