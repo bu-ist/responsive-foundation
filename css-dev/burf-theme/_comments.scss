@@ -94,8 +94,8 @@
 /// @since 1.0.0
 
 .comment-author {
-	font-size: $font-size-small;
 	color: $color-comment-author-name;
+	font-size: $font-size-small;
 }
 
 /// Controls styling for the "says" text after comment author.
@@ -134,7 +134,7 @@
 /// @since 1.0.0
 
 .comment-content {
-	margin: .5em 0;
+	margin: 0.5em 0;
 
 	p:last-child {
 		margin-bottom: 0;
@@ -156,9 +156,9 @@
 	position: relative;
 
 	fieldset {
-		padding: 0;
-		margin: 0;
 		border: 0;
+		margin: 0;
+		padding: 0;
 	}
 
 	p {
@@ -221,18 +221,18 @@
 /// @since 2.0.0
 
 #comment {
-	@include transition(height 50ms ease-in-out 0s);
-	width: 100%;
+	@include transition( height 50ms ease-in-out 0s );
 	height: 6em;
-
-	&:focus,
-	&:valid {
-		@include transition(height 50ms ease-in-out 0s);
-		height: 12em;
-	}
+	width: 100%;
 
 	@include breakpoint( sm ) {
 		width: 75%;
+	}
+
+	&:focus,
+	&:valid {
+		@include transition( height 50ms ease-in-out 0s );
+		height: 12em;
 	}
 }
 
@@ -256,9 +256,9 @@
 /// @since 2.0.0
 
 .cancel-comment-reply {
-	position: absolute;
-	top: 20px;
-	right: 20px;
 	display: inline-block;
 	font-size: $font-size-smallest;
+	position: absolute;
+	right: 20px;
+	top: 20px;
 }
