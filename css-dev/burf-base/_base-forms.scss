@@ -1,25 +1,22 @@
-// TODO: Needs cleanup
-
-// placeholders for theme use
+// Placeholders for Forms
 // -----------------------------------------------------------------
 
-// Classes used to replicate pseudo-classes may be built on a case by case basis in child themes.
-// To do so, create your own class and extend the pseudo-class you would like to replicate.
-
-// .yourClass-hover {
-// 	@extend %button-styles:hover;
-// }
-// .yourInput-active {
-// 	@extend %button-styles:active;
-// }
+/// Controls button styles globally.
+/// Extend this class for custom buttons or for elements whose HTML
+/// and CSS you don't have control over.
+/// May be used on both form element tags and regular links to make
+/// them look like buttons.
+/// @group forms
+/// @access public
+/// @since 1.2.0
 
 %button-styles {
-	/* These classes are using %button-styles. */
 	background-color: $color-button-bg;
-	border: 1px solid #999999;  // IE 6/7/8
-	border: none rgba(0, 0, 0, 0);  // IE9 + everything else
 	border-radius: 2px;
+	border: 1px solid $color-grayscale-9;  // IE 6/7/8
+	border: none rgba( $color-grayscale-0, 0 );  // IE9 + everything else
 	color: $color-button-text;
+	display: inline-block;
 	font-family: $font-family-button;
 	font-size: $font-size-button;
 	line-height: normal;
@@ -27,31 +24,37 @@
 	text-align: center;
 	text-decoration: none;
 	vertical-align: baseline;
-	display: inline-block;
 
 	&:hover {
-		@include linear-gradient(transparent, rgba(0,0,0, 0.10));
+		@include linear-gradient( transparent, rgba( $color-grayscale-0, 0.10 ) );
 	}
 
 	&:active {
-		@include box-shadow(0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset);
+		@include box-shadow(
+			0 0 0 1px rgba( $color-grayscale-0, 0.15 ) inset,
+			0 0 6px rgba( $color-grayscale-0, 0.20 ) inset
+		);
 	}
 }
 
-// Additional styles for inputs
+/// Controls button styles for input tags globally.
+/// Only to be used with form element tags.
+/// @group forms
+/// @access public
+/// @since 1.2.0
+
 %button-styles-input {
-	/* These classes are using %button-styles-input. */
 	cursor: pointer;
-	zoom: 1;
-	white-space: nowrap;
 	*display: inline; // IE 6/7
-	-webkit-user-drag: none;
-	-webkit-user-select: none;
-	   -moz-user-select: none;
-	    -ms-user-select: none;
-	        user-select: none;
 	*font-size: 90%; // IE 6/7 - To reduce IE's oversized button text
 	*overflow: visible; // IE 6/7 - Because of IE's overly large left/right padding on buttons
+	user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	white-space: nowrap;
+	zoom: 1;
 
 	&:focus {
 		@extend %button-styles:hover;
@@ -69,10 +72,10 @@
 	&-disabled:hover,
 	&-disabled:focus,
 	&-disabled:active {
-		@include box-shadow(none);
-		@include opacity(0.4);
+		@include box-shadow( none );
+		@include opacity( 0.4 );
 		background-image: none;
-		border: none;
+		border: 0;
 		cursor: not-allowed;
 	}
 
@@ -81,8 +84,13 @@
 	}
 }
 
+/// Styles buttons in a "primary" way so as to look more important
+/// when there are multiple buttons near each other.
+/// @group forms
+/// @access public
+/// @since 1.2.0
+
 %button-styles-primary {
-	/* These classes are using %button-styles-primary. */
 	color: $color-button-primary-text;
 	background-color: $color-button-primary-bg;
 
@@ -96,17 +104,36 @@
 // Forms
 // -----------------------------------------------------------------
 
+/// The general styles for forms.
+/// @group forms
+/// @access public
+/// @since 1.0.0
+
 form {
+	font-family: $font-family-form;
 	font-size: $font-size-form;
 	margin: $form-margin;
-	font-family: $font-family-form;
 }
+
+/// The general styles for the fieldset element.
+/// Wraps around sets of controls within a form.
+/// See [MDN on fieldset](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset).
+/// @group forms
+/// @access public
+/// @since 1.0.0
 
 fieldset {
 	border: $form-fieldset-border;
 	margin: $form-fieldset-margin;
 	padding: $form-fieldset-padding;
 }
+
+/// The general styles for the legend element, which holds a caption for the
+/// fieldset element.
+/// See [MDN on legend](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend).
+/// @group forms
+/// @access public
+/// @since 1.0.0
 
 legend {
 	border: $form-legend-border;
@@ -118,9 +145,20 @@ legend {
 	width: 100%;
 }
 
+/// The general styles for labels on form fields.
+/// See [MDN on label](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label).
+/// @group forms
+/// @access public
+/// @since 1.0.0
+
 label {
 	margin: $form-label-margin;
 }
+
+/// The general styles for inputs which should look like buttons.
+/// @group forms
+/// @access public
+/// @since 1.0.0
 
 button,
 [type="button"],
@@ -140,63 +178,73 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 // Forms: Style (adapted from Pure CSS v0.5.0)
 // -----------------------------------------------------------------
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="url"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="week"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
+/// A helper for form input focus shadows.
+/// @group forms
+/// @access private
+/// @since 1.0.0
+
+%_form-input-focus-shadow {
+	@include box-shadow( $form-input-focus-shadow );
+}
+
+/// Styles user inputs in forms.
+/// From Pure v0.5.0.
+/// @group forms
+/// @access private
+/// @since 1.0.0
+
+[type="text"],
+[type="password"],
+[type="email"],
+[type="url"],
+[type="date"],
+[type="month"],
+[type="time"],
+[type="datetime"],
+[type="datetime-local"],
+[type="week"],
+[type="number"],
+[type="search"],
+[type="tel"],
+[type="color"],
 select,
 textarea {
-	@include	box-shadow($form-input-shadow);
-	@include border-radius($form-input-border-radius);
+	@include	box-shadow( $form-input-shadow );
+	@include border-radius( $form-input-border-radius );
 	border: $form-input-border;
 	display: inline-block;
 	padding: $form-input-padding;
+
+	&:focus {
+		@extend %_form-input-focus-shadow;
+		border-color: $color-input-focus-border;
+		outline: 0;
+		outline: thin dotted \9; // IE6-9
+		outline: 1px auto $color-input-focus-border;
+	}
 }
 
-%form-input-focus-shadow {
-	@include box-shadow($form-input-focus-shadow);
+/// Styles checkbox and radio inputs in forms.
+/// From Pure v0.5.0.
+/// @group forms
+/// @access private
+/// @since 1.0.0
+
+[type="file"],
+[type="radio"],
+[type="checkbox"] {
+	&:focus {
+		@extend %_form-input-focus-shadow;
+		outline: thin dotted $color-grayscale-3;
+		outline: 1px auto $color-input-focus-border;
+	}
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="week"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="color"]:focus,
-select:focus,
-textarea:focus {
-	@extend %form-input-focus-shadow;
-	border-color: $color-input-focus-border;
-	outline: 0;
-	outline: thin dotted \9; // IE6-9
-	outline: 1px auto $color-input-focus-border;
-}
-
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus {
-	@extend %form-input-focus-shadow;
-	outline: thin dotted $color-grayscale-3;
-	outline: 1px auto $color-input-focus-border;
-}
+/// Styles checkboxes and radio buttons in forms.
+/// From Pure v0.5.0.
+/// @group forms
+/// @access private
+/// @since 1.0.0
 
 .checkbox,
 .radio {
@@ -204,24 +252,9 @@ input[type="checkbox"]:focus {
 	margin: 0.5em 0;
 }
 
-input[type="text"][disabled],
-input[type="password"][disabled],
-input[type="email"][disabled],
-input[type="url"][disabled],
-input[type="date"][disabled],
-input[type="month"][disabled],
-input[type="time"][disabled],
-input[type="datetime"][disabled],
-input[type="datetime-local"][disabled],
-input[type="week"][disabled],
-input[type="number"][disabled],
-input[type="search"][disabled],
-input[type="tel"][disabled],
-input[type="color"][disabled],
-select[disabled],
-textarea[disabled] {
-	background-color: #eaeded;
-	color: #cad2d3;
+[disabled] {
+	background-color: $color-grayscale-e;
+	color: $color-grayscale-c;
 	cursor: not-allowed;
 }
 
