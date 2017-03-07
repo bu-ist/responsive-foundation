@@ -1,9 +1,9 @@
 @font-face {
 	font-family: "bu-default-icons";
-	src: url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot?") format("embedded-opentype");
-	src: url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.woff") format("woff"),
-		url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.ttf") format("truetype"),
-		url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.svg#bu-default-icons") format("svg");
+	src: url( "https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot?" ) format( "embedded-opentype" );
+	src: url( "https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.woff" ) format( "woff" ),
+		url( "https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.ttf" ) format( "truetype" ),
+		url( "https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.svg#bu-default-icons" ) format( "svg" );
 	font-weight: normal;
 	font-style: normal;
 }
@@ -43,12 +43,12 @@
 	color: $color-icons;
 	display: inline-block;
 	font-family: $font-family-icons;
-	font-style: normal !important;
-	font-variant: normal !important;
-	font-weight: normal !important;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	-webkit-font-smoothing: antialiased;
+	font-style: normal !important;
+	font-variant: normal !important;
+	font-weight: normal !important;
 	line-height: 1;
 	padding-bottom: 0.2em; // Accomodate for inline icons
 	speak: none;
@@ -59,915 +59,7 @@
 	white-space: nowrap;
 }
 
-/// The dropbox icon.
-/// @example scss - Add the dropbox icon to a menu item
-/// .menu-item {
-///    @extend %icon-dropbox;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
 
-%icon-dropbox {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F653";
-	}
-}
-
-/// The dropbox alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-dropbox-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F65A";
-	}
-}
-
-/// The facebook icon.
-/// @example scss - Add the facebook icon to a menu item
-/// .menu-item {
-///    @extend %icon-facebook;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-facebook {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F610";
-	}
-}
-
-/// The facebook alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-facebook-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F61A";
-	}
-}
-
-/// The flickr icon.
-/// @example scss - Add the flickr icon to a menu item
-/// .menu-item {
-///    @extend %icon-flickr;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-flickr {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F640";
-	}
-}
-
-/// The flickr alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-flickr-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F644";
-	}
-}
-
-/// The foursquare icon.
-/// @example scss - Add the foursquare icon to a menu item
-/// .menu-item {
-///    @extend %icon-foursquare;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-foursquare {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F690";
-	}
-}
-
-/// The icon alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-foursquare-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F691";
-	}
-}
-
-/// The github icon.
-/// @example scss - Add the github icon to a menu item
-/// .menu-item {
-///    @extend %icon-github;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-github {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F670";
-	}
-}
-
-/// The github alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-github-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F671";
-	}
-}
-
-/// The googleplus icon.
-/// @example scss - Add the googleplus icon to a menu item
-/// .menu-item {
-///    @extend %icon-googleplus;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-googleplus {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F613";
-	}
-}
-
-/// The icon alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-googleplus-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F614";
-	}
-}
-
-/// The instagram icon.
-/// @example scss - Add the instagram icon to a menu item
-/// .menu-item {
-///    @extend %icon-instagram;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-instagram {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F641";
-	}
-}
-
-/// The instagram alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-instagram-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F64A";
-	}
-}
-
-/// The kickstarter icon.
-/// @example scss - Add the kickstarter icon to a menu item
-/// .menu-item {
-///    @extend %icon-kickstarter;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-kickstarter {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F681";
-	}
-}
-
-/// The icon alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-kickstarter-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F68A";
-	}
-}
-
-/// The linkedin icon.
-/// @example scss - Add the linkedin icon to a menu item
-/// .menu-item {
-///    @extend %icon-linkedin;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-linkedin {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F612";
-	}
-}
-
-/// The linkedin alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-linkedin-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F61E";
-	}
-}
-
-/// The paypal icon.
-/// @example scss - Add the paypal icon to a menu item
-/// .menu-item {
-///    @extend %icon-paypal;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-paypal {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F680";
-	}
-}
-
-/// The paypal alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-paypal-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F68B";
-	}
-}
-
-/// The pinterest icon.
-/// @example scss - Add the pinterest icon to a menu item
-/// .menu-item {
-///    @extend %icon-pinterest;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-pinterest {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F650";
-	}
-}
-
-/// The pinterest alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-pinterest-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F651";
-	}
-}
-
-/// The pocket icon.
-/// @example scss - Add the pocket icon to a menu item
-/// .menu-item {
-///    @extend %icon-pocket;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-pocket {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F634";
-	}
-}
-
-/// The pocket alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-pocket-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F635";
-	}
-}
-
-/// The reddit icon.
-/// @example scss - Add the reddit icon to a menu item
-/// .menu-item {
-///    @extend %icon-reddit;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-reddit {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F616";
-	}
-}
-
-/// The reddit alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-reddit-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F617";
-	}
-}
-
-/// The renren icon.
-/// @example scss - Add the renren icon to a menu item
-/// .menu-item {
-///    @extend %icon-renren;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-renren {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F61C";
-	}
-}
-
-/// The retweet icon.
-/// @example scss - Add the retweet icon to a menu item
-/// .menu-item {
-///    @extend %icon-retweet;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-retweet {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F600";
-	}
-}
-
-/// The soundcloud icon.
-/// @example scss - Add the soundcloud icon to a menu item
-/// .menu-item {
-///    @extend %icon-soundcloud;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-soundcloud {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F6B3";
-	}
-}
-
-/// The icon alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-soundcloud-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F6B4";
-	}
-}
-
-/// The spotify icon.
-/// @example scss - Add the spotify icon to a menu item
-/// .menu-item {
-///    @extend %icon-spotify;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-spotify {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F6B1";
-	}
-}
-
-/// The stackexchange icon.
-/// @example scss - Add the stackexchange icon to a menu item
-/// .menu-item {
-///    @extend %icon-stackexchange;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-stackexchange {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F673";
-	}
-}
-
-/// The icon alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-stackexchange-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F67B";
-	}
-}
-
-/// The stackoverflow icon.
-/// @example scss - Add the stackoverflow icon to a menu item
-/// .menu-item {
-///    @extend %icon-stackoverflow;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-stackoverflow {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F672";
-	}
-}
-
-/// The icon alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-stackoverflow-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F67A";
-	}
-}
-
-/// The stumbleupon icon.
-/// @example scss - Add the stumbleupon icon to a menu item
-/// .menu-item {
-///    @extend %icon-stumbleupon;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-stumbleupon {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F63A"
-	}
-}
-
-/// The icon alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-stumbleupon-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F63D"
-	}
-}
-
-/// The twitter icon.
-/// @example scss - Add the twitter icon to a menu item
-/// .menu-item {
-///    @extend %icon-twitter;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-twitter {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F611";
-	}
-}
-
-/// The twitter alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-twitter-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F62B";
-	}
-}
-
-/// The tumblr icon.
-/// @example scss - Add the tumblr icon to a menu item
-/// .menu-item {
-///    @extend %icon-tumblr;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-tumblr {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F620";
-	}
-}
-
-/// The tumblr alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-tumblr-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F62A";
-	}
-}
-
-/// The vimeo icon.
-/// @example scss - Add the vimeo icon to a menu item
-/// .menu-item {
-///    @extend %icon-vimeo;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-vimeo {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F631";
-	}
-}
-
-/// The alt alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-vimeo-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F63C";
-	}
-}
-
-/// The vine icon.
-/// @example scss - Add the vine icon to a menu item
-/// .menu-item {
-///    @extend %icon-vine;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-vine {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F633";
-	}
-}
-
-/// The alt alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-vine-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F63B";
-	}
-}
-
-/// The weibo icon.
-/// @example scss - Add the weibo icon to a menu item
-/// .menu-item {
-///    @extend %icon-weibo;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-weibo {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F61B";
-	}
-}
-
-/// The alt alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-weibo-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F61D";
-	}
-}
-
-/// The wordpress icon.
-/// @example scss - Add the wordpress icon to a menu item
-/// .menu-item {
-///    @extend %icon-wordpress;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-wordpress {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F621";
-	}
-}
-
-/// The youtube icon.
-/// @example scss - Add the youtube icon to a menu item
-/// .menu-item {
-///    @extend %icon-youtube;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-youtube {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F630";
-	}
-}
-
-/// The youtube alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-youtube-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F632";
-	}
-}
-
-
-%icon-action {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\EE00";
-	}
-}
 
 /// The alert icon.
 /// @example scss - Add the alert icon to a menu item
@@ -981,7 +73,7 @@
 %icon-alert {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\26A0";
 	}
@@ -999,7 +91,7 @@
 %icon-android {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\F6F3";
 	}
@@ -1017,7 +109,7 @@
 %icon-appleinc {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\F8FF";
 	}
@@ -1035,7 +127,7 @@
 %icon-burst {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\F552";
 	}
@@ -1053,7 +145,7 @@
 %icon-calculator {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\E551";
 	}
@@ -1071,7 +163,7 @@
 %icon-cart {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\E500";
 	}
@@ -1089,7 +181,7 @@
 %icon-code {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\E780";
 	}
@@ -1107,7 +199,7 @@
 %icon-compass {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\E671";
 	}
@@ -1125,7 +217,7 @@
 %icon-contract {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\EE01";
 	}
@@ -1143,63 +235,9 @@
 %icon-dashboard {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\F000";
-	}
-}
-
-/// The download icon.
-/// @example scss - Add the download icon to a menu item
-/// .menu-item {
-///    @extend %icon-download;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-download {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\EB01";
-	}
-}
-
-/// The downloadbox icon.
-/// @example scss - Add the downloadbox icon to a menu item
-/// .menu-item {
-///    @extend %icon-downloadbox;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-downloadbox {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\EB02";
-	}
-}
-
-/// The ban icon.
-/// @example scss - Add the ban icon to a menu item
-/// .menu-item {
-///    @extend %icon-ban;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-ban {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\1F6AB";
 	}
 }
 
@@ -1215,7 +253,7 @@
 %icon-barchart {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F4CA";
 	}
@@ -1233,7 +271,7 @@
 %icon-bike {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F6B2";
 	}
@@ -1251,27 +289,9 @@
 %icon-book {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F4D5";
-	}
-}
-
-/// The bookmark icon.
-/// @example scss - Add the bookmark icon to a menu item
-/// .menu-item {
-///    @extend %icon-bookmark;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-bookmark {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\1F516";
 	}
 }
 
@@ -1287,7 +307,7 @@
 %icon-box {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F4E6";
 	}
@@ -1305,7 +325,7 @@
 %icon-briefcase {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F4BC";
 	}
@@ -1323,7 +343,7 @@
 %icon-bug {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F41B";
 	}
@@ -1341,7 +361,7 @@
 %icon-calendar {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F4C5";
 	}
@@ -1359,7 +379,7 @@
 %icon-camera {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F4F7";
 	}
@@ -1377,7 +397,7 @@
 %icon-car {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F698";
 	}
@@ -1395,7 +415,7 @@
 %icon-chat {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F4AC";
 	}
@@ -1413,27 +433,9 @@
 %icon-check {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\2713";
-	}
-}
-
-/// The close icon.
-/// @example scss - Add the close icon to a menu item
-/// .menu-item {
-///    @extend %icon-close;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-close {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\E421";
 	}
 }
 
@@ -1449,7 +451,7 @@
 %icon-clipboard {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F4CB";
 	}
@@ -1467,7 +469,7 @@
 %icon-clock {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\23F2";
 	}
@@ -1485,7 +487,7 @@
 %icon-cloud {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\2601";
 	}
@@ -1503,7 +505,7 @@
 %icon-compose {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F4DD";
 	}
@@ -1521,7 +523,7 @@
 %icon-contacts {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F4C7";
 	}
@@ -1539,27 +541,9 @@
 %icon-crosshair {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\2316";
-	}
-}
-
-/// The delete icon.
-/// @example scss - Add the delete icon to a menu item
-/// .menu-item {
-///    @extend %icon-delete;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-delete {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\2421";
 	}
 }
 
@@ -1575,7 +559,7 @@
 %icon-desktop {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F4BB";
 	}
@@ -1593,7 +577,7 @@
 %icon-directleft {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\25C3";
 	}
@@ -1611,7 +595,7 @@
 %icon-directright {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\25B9";
 	}
@@ -1629,27 +613,9 @@
 %icon-directup {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\25B4";
-	}
-}
-
-/// The dislike icon.
-/// @example scss - Add the dislike icon to a menu item
-/// .menu-item {
-///    @extend %icon-dislike;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-dislike {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\1F44E";
 	}
 }
 
@@ -1665,7 +631,7 @@
 %icon-down {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\2B07";
 	}
@@ -1683,7 +649,7 @@
 %icon-dropdown {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\25BE";
 	}
@@ -1701,7 +667,7 @@
 %icon-emptycart {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\E507";
 	}
@@ -1719,7 +685,7 @@
 %icon-grid {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\E9A0";
 	}
@@ -1737,7 +703,7 @@
 %icon-index {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\E902";
 	}
@@ -1755,7 +721,7 @@
 %icon-envelope {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\2709";
 	}
@@ -1773,7 +739,7 @@
 %icon-expand {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\2922";
 	}
@@ -1791,7 +757,7 @@
 %icon-fastforward {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\29E3";
 	}
@@ -1809,7 +775,7 @@
 %icon-file {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F4C4";
 	}
@@ -1827,7 +793,7 @@
 %icon-files {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\EC00";
 	}
@@ -1845,7 +811,7 @@
 %icon-flag {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\2691";
 	}
@@ -1863,7 +829,7 @@
 %icon-flask {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\F4C0";
 	}
@@ -1881,7 +847,7 @@
 %icon-folder {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F4C1";
 	}
@@ -1899,7 +865,7 @@
 %icon-globe {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F310";
 	}
@@ -1917,7 +883,7 @@
 %icon-headphones {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F3A7";
 	}
@@ -1935,7 +901,7 @@
 %icon-heart {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\2665";
 	}
@@ -1953,29 +919,12 @@
 %icon-home {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\2302";
 	}
 }
 
-/// The hyphen icon.
-/// @example scss - Add the hyphen icon to a menu item
-/// .menu-item {
-///    @extend %icon-hyphen;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-hyphen {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\002D";
-	}
-}
 
 /// The infinity icon.
 /// @example scss - Add the infinity icon to a menu item
@@ -1989,7 +938,7 @@
 %icon-infinity {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\221E";
 	}
@@ -2007,7 +956,7 @@
 %icon-info {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\2139";
 	}
@@ -2025,7 +974,7 @@
 %icon-key {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F511";
 	}
@@ -2043,7 +992,7 @@
 %icon-laptop {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\EA00";
 	}
@@ -2061,7 +1010,7 @@
 %icon-layers {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\E202";
 	}
@@ -2079,7 +1028,7 @@
 %icon-layout {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\E202";
 	}
@@ -2097,7 +1046,7 @@
 %icon-left {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\2B05";
 	}
@@ -2115,7 +1064,7 @@
 %icon-lightbulb {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F4A1";
 	}
@@ -2133,45 +1082,9 @@
 %icon-lightning {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\2607";
-	}
-}
-
-/// The like icon.
-/// @example scss - Add the like icon to a menu item
-/// .menu-item {
-///    @extend %icon-like;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-like {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\1F44D";
-	}
-}
-
-/// The alt alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-like-alt {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\1F44B";
 	}
 }
 
@@ -2187,7 +1100,7 @@
 %icon-link {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F51B";
 	}
@@ -2205,7 +1118,7 @@
 %icon-link-alt {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\F699";
 	}
@@ -2223,7 +1136,7 @@
 %icon-list {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\ED50";
 	}
@@ -2241,7 +1154,7 @@
 %icon-location {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\E6D0";
 	}
@@ -2259,7 +1172,7 @@
 %icon-lock {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F512";
 	}
@@ -2277,7 +1190,7 @@
 %icon-map {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\E673";
 	}
@@ -2295,27 +1208,9 @@
 %icon-megaphone {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F4E2";
-	}
-}
-
-/// The menu icon.
-/// @example scss - Add the menu icon to a menu item
-/// .menu-item {
-///    @extend %icon-menu;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-menu {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\E9A1";
 	}
 }
 
@@ -2331,7 +1226,7 @@
 %icon-mic {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F3A4";
 	}
@@ -2349,7 +1244,7 @@
 %icon-music {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\266B";
 	}
@@ -2367,7 +1262,7 @@
 %icon-navigate {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\E670";
 	}
@@ -2385,7 +1280,7 @@
 %icon-navigateleft {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\25C5";
 	}
@@ -2403,7 +1298,7 @@
 %icon-navigateright {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\25BB";
 	}
@@ -2421,7 +1316,7 @@
 %icon-navigatedown {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\F501";
 	}
@@ -2439,7 +1334,7 @@
 %icon-navigateup {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\F500";
 	}
@@ -2457,7 +1352,7 @@
 %icon-notebook {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F4D3";
 	}
@@ -2475,7 +1370,7 @@
 %icon-notifications {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F514";
 	}
@@ -2493,7 +1388,7 @@
 %icon-pause {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\E8A0";
 	}
@@ -2511,7 +1406,7 @@
 %icon-phone {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F4DE";
 	}
@@ -2529,7 +1424,7 @@
 %icon-picture {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F304";
 	}
@@ -2547,7 +1442,7 @@
 %icon-piechart {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\E570";
 	}
@@ -2565,7 +1460,7 @@
 %icon-pinboard {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\F654";
 	}
@@ -2583,7 +1478,7 @@
 %icon-pin {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F4CD";
 	}
@@ -2601,7 +1496,7 @@
 %icon-plane {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\2708";
 	}
@@ -2619,7 +1514,7 @@
 %icon-planet {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\F280";
 	}
@@ -2637,27 +1532,9 @@
 %icon-play {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\25B6";
-	}
-}
-
-/// The plus icon.
-/// @example scss - Add the plus icon to a menu item
-/// .menu-item {
-///    @extend %icon-plus;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-plus {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\002B";
 	}
 }
 
@@ -2673,27 +1550,9 @@
 %icon-poo {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F4A9";
-	}
-}
-
-/// The print icon.
-/// @example scss - Add the print icon to a menu item
-/// .menu-item {
-///    @extend %icon-print;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-print {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\2399";
 	}
 }
 
@@ -2709,7 +1568,7 @@
 %icon-puzzle {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\E710";
 	}
@@ -2727,7 +1586,7 @@
 %icon-record {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\25CF";
 	}
@@ -2745,7 +1604,7 @@
 %icon-rss {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\E310";
 	}
@@ -2763,63 +1622,9 @@
 %icon-rss-alt {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\E31A";
-	}
-}
-
-/// The redirect icon.
-/// @example scss - Add the redirect icon to a menu item
-/// .menu-item {
-///    @extend %icon-redirect;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-redirect {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\21AA";
-	}
-}
-
-/// The refresh icon.
-/// @example scss - Add the refresh icon to a menu item
-/// .menu-item {
-///    @extend %icon-refresh;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-refresh {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\21BB";
-	}
-}
-
-/// The replay icon.
-/// @example scss - Add the replay icon to a menu item
-/// .menu-item {
-///    @extend %icon-replay;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-replay {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\21BA";
 	}
 }
 
@@ -2835,7 +1640,7 @@
 %icon-reply {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\21A9";
 	}
@@ -2853,7 +1658,7 @@
 %icon-rewind {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\23EA";
 	}
@@ -2871,7 +1676,7 @@
 %icon-right {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\27A1";
 	}
@@ -2889,7 +1694,7 @@
 %icon-rotaryphone {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\260E";
 	}
@@ -2907,7 +1712,7 @@
 %icon-scaledown {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\EE05";
 	}
@@ -2925,7 +1730,7 @@
 %icon-scaleup {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\EE04";
 	}
@@ -2943,27 +1748,9 @@
 %icon-screwdriver {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\F037";
-	}
-}
-
-/// The share icon.
-/// @example scss - Add the share icon to a menu item
-/// .menu-item {
-///    @extend %icon-share;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-share {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\F601";
 	}
 }
 
@@ -2979,7 +1766,7 @@
 %icon-signpost {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\E672";
 	}
@@ -2997,45 +1784,9 @@
 %icon-smartphone {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\EA02";
-	}
-}
-
-/// The search icon.
-/// @example scss - Add the search icon to a menu item
-/// .menu-item {
-///    @extend %icon-search;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-search {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\1F50E";
-	}
-}
-
-/// The settings icon.
-/// @example scss - Add the settings icon to a menu item
-/// .menu-item {
-///    @extend %icon-settings;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-settings {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\2699";
 	}
 }
 
@@ -3051,7 +1802,7 @@
 %icon-skipback {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\23EE";
 	}
@@ -3069,27 +1820,9 @@
 %icon-skipforward {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\23ED";
-	}
-}
-
-/// The star icon.
-/// @example scss - Add the star icon to a menu item
-/// .menu-item {
-///    @extend %icon-star;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-star {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\22C6";
 	}
 }
 
@@ -3105,7 +1838,7 @@
 %icon-stop {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\25A0";
 	}
@@ -3123,7 +1856,7 @@
 %icon-stock {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\E579";
 	}
@@ -3141,27 +1874,9 @@
 %icon-storagebox {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\E901";
-	}
-}
-
-/// The sync icon.
-/// @example scss - Add the sync icon to a menu item
-/// .menu-item {
-///    @extend %icon-sync;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-sync {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\EB82";
 	}
 }
 
@@ -3177,27 +1892,9 @@
 %icon-tablet {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\EA01";
-	}
-}
-
-/// The tag icon.
-/// @example scss - Add the tag icon to a menu item
-/// .menu-item {
-///    @extend %icon-tag;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-tag {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\E100";
 	}
 }
 
@@ -3213,7 +1910,7 @@
 %icon-thermometer {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\F201";
 	}
@@ -3231,7 +1928,7 @@
 %icon-thumbnails {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\E9A3";
 	}
@@ -3249,7 +1946,7 @@
 %icon-toolbox {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\F030";
 	}
@@ -3267,7 +1964,7 @@
 %icon-tv {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F4FA";
 	}
@@ -3285,7 +1982,7 @@
 %icon-unlock {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F513";
 	}
@@ -3303,45 +2000,9 @@
 %icon-up {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\2806";
-	}
-}
-
-/// The upload icon.
-/// @example scss - Add the upload icon to a menu item
-/// .menu-item {
-///    @extend %icon-upload;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-upload {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\EB41";
-	}
-}
-
-/// The uploadcloud icon.
-/// @example scss - Add the uploadcloud icon to a menu item
-/// .menu-item {
-///    @extend %icon-uploadcloud;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-uploadcloud {
-	@extend %icon-base;
-
-	&:before {
-		@extend %icon-content;
-		content: "\EB40";
 	}
 }
 
@@ -3357,7 +2018,7 @@
 %icon-user {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F464";
 	}
@@ -3375,7 +2036,7 @@
 %icon-users {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F465";
 	}
@@ -3393,7 +2054,7 @@
 %icon-utensils {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F374";
 	}
@@ -3411,7 +2072,7 @@
 %icon-video {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F4F9";
 	}
@@ -3429,7 +2090,7 @@
 %icon-view {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F440";
 	}
@@ -3447,7 +2108,7 @@
 %icon-volume {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F508";
 	}
@@ -3465,7 +2126,7 @@
 %icon-watch {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\231A";
 	}
@@ -3483,7 +2144,7 @@
 %icon-wrench {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\1F527";
 	}
@@ -3501,7 +2162,7 @@
 %icon-write {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\270E";
 	}
@@ -3519,7 +2180,7 @@
 %icon-wifi {
 	@extend %icon-base;
 
-	&:before {
+	&::before {
 		@extend %icon-content;
 		content: "\EB84";
 	}

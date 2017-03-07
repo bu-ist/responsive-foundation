@@ -11,7 +11,9 @@
 @import 'burf-theme/branding';
 
 // icons
-@import 'burf-theme/icons';
+@import 'burf-theme/icons/base'; // Required
+	@import 'burf-theme/icons/social'; // Required
+	@import 'burf-theme/icons/actions'; // Required
 
 // navigation
 @import 'burf-theme/navigation';
