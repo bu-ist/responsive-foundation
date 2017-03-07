@@ -136,24 +136,6 @@
 	}
 }
 
-/// The compass icon.
-/// @example scss - Add the compass icon to a menu item
-/// .menu-item {
-///    @extend %icon-compass;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-compass {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E671";
-	}
-}
-
 /// The dashboard icon.
 /// @example scss - Add the dashboard icon to a menu item
 /// .menu-item {
@@ -424,24 +406,6 @@
 	}
 }
 
-/// The crosshair icon.
-/// @example scss - Add the crosshair icon to a menu item
-/// .menu-item {
-///    @extend %icon-crosshair;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-crosshair {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2316";
-	}
-}
-
 /// The desktop icon.
 /// @example scss - Add the desktop icon to a menu item
 /// .menu-item {
@@ -493,24 +457,6 @@
 	&::before {
 		@extend %icon-content;
 		content: "\F4C0";
-	}
-}
-
-/// The globe icon.
-/// @example scss - Add the globe icon to a menu item
-/// .menu-item {
-///    @extend %icon-globe;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-globe {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F310";
 	}
 }
 
@@ -677,24 +623,6 @@
 	}
 }
 
-/// The location icon.
-/// @example scss - Add the location icon to a menu item
-/// .menu-item {
-///    @extend %icon-location;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-location {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E6D0";
-	}
-}
-
 /// The lock icon.
 /// @example scss - Add the lock icon to a menu item
 /// .menu-item {
@@ -710,24 +638,6 @@
 	&::before {
 		@extend %icon-content;
 		content: "\1F512";
-	}
-}
-
-/// The map icon.
-/// @example scss - Add the map icon to a menu item
-/// .menu-item {
-///    @extend %icon-map;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-map {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E673";
 	}
 }
 
@@ -782,24 +692,6 @@
 	&::before {
 		@extend %icon-content;
 		content: "\266B";
-	}
-}
-
-/// The navigate icon.
-/// @example scss - Add the navigate icon to a menu item
-/// .menu-item {
-///    @extend %icon-navigate;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-navigate {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E670";
 	}
 }
 
@@ -1052,24 +944,6 @@
 	&::before {
 		@extend %icon-content;
 		content: "\F037";
-	}
-}
-
-/// The signpost icon.
-/// @example scss - Add the signpost icon to a menu item
-/// .menu-item {
-///    @extend %icon-signpost;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-signpost {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E672";
 	}
 }
 
