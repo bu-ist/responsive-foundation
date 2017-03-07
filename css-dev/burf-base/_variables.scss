@@ -151,8 +151,8 @@ $color-grayscale-b:                        #bbb !default;
 $color-grayscale-c:                        #ccc !default;
 $color-grayscale-d:                        #ddd !default;
 $color-grayscale-e:                        #eee !default;
-$color-grayscale-f5:                       #f5f5f5 !default;
 $color-grayscale-f0:                       #f0f0f0 !default;
+$color-grayscale-f5:                       #f5f5f5 !default;
 $color-grayscale-f:                        #fff !default;
 
 // -----------------------------------------------------------------
@@ -221,7 +221,7 @@ $color-table-caption:                      $color-grayscale-9 !default;
 $color-table-th-border:                    $color-grayscale-c !default;
 $color-table-td-border:                    $color-grayscale-c !default;
 
-$color-table-stripes:                      #f6f9fc !default;
+$color-table-stripes:                      $color-grayscale-f5 !default;
 
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------

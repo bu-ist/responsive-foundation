@@ -1,7 +1,10 @@
-// TODO: Needs documentation
-
 // Tables
 // -----------------------------------------------------------------
+
+/// Controls base styling for tables.
+/// @group global
+/// @access public
+/// @since 1.0.0
 
 table {
 	margin: $table-margin;
@@ -24,6 +27,15 @@ table {
 		border-width: 0 0 0 1px;
 		border-left: 1px solid $color-table-border;
 		font-size: inherit;
+
+		&:first-child {
+			border-left-width: 0;
+		}
+
+		&[class*="col-"] {
+			display: table-cell;
+			float: none;
+		}
 	}
 
 	th {
@@ -35,53 +47,52 @@ table {
 		vertical-align: top;
 	}
 
-	td:first-child,
-	th:first-child {
-		border-left-width: 0;
-	}
-
 	thead {
 		background: $color-table-head-bg;
 		vertical-align: bottom;
 		color: $color-table-head;
 		text-align: left;
 	}
+
+	col[class*="col-"] {
+		display: table-column;
+		float: none;
+	}
 }
 
-// tables that use grid width classes
-table col[class*="col-"] {
-	display: table-column;
-	float: none;
-}
-table td[class*="col-"],
-table th[class*="col-"] {
-	display: table-cell;
-	float: none;
-}
+/// Adds stripes to tables.
+/// @group global
+/// @access public
+/// @since 1.0.0
 
-// Striped tables
-
-// nth-child selector for modern browsers, otherwise apply .u-odd class to markup
-.table-striped tr:nth-child(2n-1) td,
-.u-odd td {
-	background-color: $color-table-stripes;
+.table-striped tr:nth-child(2n-1),
+.u-odd {
+	 td {
+		background-color: $color-table-stripes;
+	}
 }
 
 // Bordered tables
 // -----------------------------------------------------------------
+
+/// Adds both horizontal and vertical borders.
+/// @group global
+/// @access public
+/// @since 1.0.0
 
 .table-bordered {
 	td {
 		border-bottom: 1px solid $color-table-border;
 	}
 }
-.table-bordered tbody > tr:last-child td,
-.table-horizontal tbody > tr:last-child td {
-	border-bottom-width: 0;
-}
 
 // Horizontal tables
 // -----------------------------------------------------------------
+
+/// Switches the border on tables from vertical to horizontal.
+/// @group global
+/// @access public
+/// @since 1.0.0
 
 .table-horizontal {
 	td,
@@ -91,10 +102,14 @@ table th[class*="col-"] {
 	}
 }
 
+.table-bordered,
+.table-horizontal,
 .section-row {
-	tr:last-child {
-		td {
-			border-bottom-width: 0;
+	tbody > {
+		tr:last-child {
+			td {
+				border-bottom-width: 0;
+			}
 		}
 	}
 }
