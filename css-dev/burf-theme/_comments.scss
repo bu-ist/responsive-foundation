@@ -247,7 +247,14 @@
 	}
 }
 
-// TODO: The link below this is hidden with a style attribute in markup. Intentional?
+/// Styles the cancel comment reply link.
+/// WordPress hides this on the comment form with an inline attribute when
+/// the comment is not a reply to another comment. To test this, hit the "Reply"
+/// link on any comment. You should be be able to see it.
+/// @group comments
+/// @access public
+/// @since 2.0.0
+
 .cancel-comment-reply {
 	position: absolute;
 	top: 20px;
