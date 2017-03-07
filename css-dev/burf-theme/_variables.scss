@@ -988,14 +988,14 @@ $color-single-meta-border-left:             $color-message-border-left !default;
 /// @access public
 /// @since 1.0.0
 
-$comment-margin:                           30px !default;
+$comment-margin:                           20px !default;
 
 /// Controls the amount of spacing between comment threads on a post on mobile.
 /// @group news
 /// @access public
 /// @since 2.0.0
 
-$comment-margin-mobile:               (1/2) * $comment-margin !default;
+$comment-margin-mobile:               $comment-margin / 2 !default;
 
 /// Controls the amount of spacing between comments within a thread on desktop.
 /// By default, there is no margin between comments on mobile.
@@ -1017,7 +1017,7 @@ $comment-reply-depth:                      15px !default;
 /// @access public
 /// @since 2.0.0
 
-$comment-reply-depth-mobile:               (1/3) * $comment-reply-depth !default;
+$comment-reply-depth-mobile:               $comment-reply-depth / 3 !default;
 
 /// Controls the border style between comments on a post.
 /// @group news
@@ -1038,7 +1038,14 @@ $border-width-comment:                      1px 1px 1px 5px !default;
 /// @access public
 /// @since 1.0.0
 
-$comment-padding:                           10px !default;
+$comment-padding:                           15px !default;
+
+/// Controls the amount of spacing within comments on mobile.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$comment-padding-mobile:                           10px !default;
 
 /// Controls the font family used for comments on a post.
 /// @group news
@@ -1059,7 +1066,7 @@ $color-comments:                           $color-base !default;
 /// @access public
 /// @since 1.0.0
 
-$color-comment-reply:                      $color-grayscale-a !default;
+$color-comment-reply:                      $color-grayscale-8 !default;
 
 /// Controls the color of the author name in a comment.
 /// @group news

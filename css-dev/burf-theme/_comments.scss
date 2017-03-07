@@ -63,11 +63,12 @@
 	border-width: $border-width-comment;
 	font-family: $font-family-comment;
 	font-size: $font-size-smaller;
-	padding: $comment-padding;
+	padding: $comment-padding-mobile;
 	position: relative;
 
 	@include breakpoint( sm ) {
 		margin: $comment-reply-margin 0;
+		padding: $comment-padding;
 	}
 
 	.children & {
@@ -118,27 +119,41 @@
 .comment-metadata {
 	font-size: $font-size-smallest;
 	position: absolute;
-	top: $comment-padding;
-	right: $comment-padding;
+	right: $comment-padding-mobile;
+	top: $comment-padding-mobile;
+
+	@include breakpoint( sm ) {
+		right: $comment-padding;
+		top: $comment-padding;
+	}
 }
 
-.comment-content p {
-	margin: 12px 0;
+/// Styles the container which holds the comment content.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
+.comment-content {
+	margin: .5em 0;
+
+	p:last-child {
+		margin-bottom: 0;
+	}
 }
 
-.comment-content p:first-child {
-	margin-top: 1px;
-}
+/// Styles the comment form container.
+/// @group comments
+/// @access public
+/// @since 1.0.0
 
-// comment form
 .comment-respond {
-	@include border-radius(5px);
-	position: relative;
-	padding: 20px;
-	margin: 15px 0 20px;
+	@include border-radius( 5px );
+	background: $color-comment-form-bg;
 	border: $border-comment-form;
 	border-width: $border-width-comment-form;
-	background: $color-comment-form-bg;
+	margin: 15px 0 20px;
+	padding: 20px;
+	position: relative;
 
 	fieldset {
 		padding: 0;
@@ -156,27 +171,47 @@
 
 		@include breakpoint( sm ) {
 			float: left;
-			width: 25%;
-			padding-right: 10px;
 			margin: $form-label-margin;
+			padding-right: 10px;
+			width: 25%;
 		}
 	}
 }
+
+/// Styles the comment form title.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
 .comment-respond-title {
-	margin: 0 0 20px;
 	font-size: $font-size-medium;
+	margin: 0 0 20px;
 }
+
+/// Styles the container around the comment form submit button.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
 .comment-form-submit {
 	margin: 15px 0 0;
 }
+
+/// Styles "view guidelines" and other helper text in the comment form.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
 .form-tip {
-	color: #aaaaaa;
+	color: $color-grayscale-8;
 	font-size: $font-size-smallest;
+
 	@include breakpoint( sm ) {
 		display: block;
 	}
+
 	a {
-		color: #aaaaaa;
+		color: inherit;
 	}
 }
 
@@ -186,10 +221,18 @@
 			margin-left: 25%;
 		}
 	}
+
 	textarea {
-		@include transition(height 5ms ease-in-out 0s); // TODO: expand height on focus, but don't shrink if it contains content
+		@include transition(height 50ms ease-in-out 0s); // TODO: expand height on focus, but don't shrink if it contains content
 		width: 100%;
 		height: 6em;
+
+		&:focus,
+		&:valid {
+			@include transition(height 50ms ease-in-out 0s); // TODO: expand height on focus, but don't shrink if it contains content
+			height: 12em;
+		}
+
 		@include breakpoint( sm ) {
 			width: 75%;
 		}
