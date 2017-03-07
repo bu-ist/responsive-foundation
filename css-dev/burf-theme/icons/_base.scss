@@ -62,26 +62,6 @@
 	white-space: nowrap;
 }
 
-
-
-/// The alert icon.
-/// @example scss - Add the alert icon to a menu item
-/// .menu-item {
-///    @extend %icon-alert;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-alert {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\26A0";
-	}
-}
-
 /// The android icon.
 /// @example scss - Add the android icon to a menu item
 /// .menu-item {
@@ -172,24 +152,6 @@
 	}
 }
 
-/// The check icon.
-/// @example scss - Add the check icon to a menu item
-/// .menu-item {
-///    @extend %icon-check;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-check {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2713";
-	}
-}
-
 /// The clock icon.
 /// @example scss - Add the clock icon to a menu item
 /// .menu-item {
@@ -262,24 +224,6 @@
 	}
 }
 
-/// The info icon.
-/// @example scss - Add the info icon to a menu item
-/// .menu-item {
-///    @extend %icon-info;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-info {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2139";
-	}
-}
-
 /// The laptop icon.
 /// @example scss - Add the laptop icon to a menu item
 /// .menu-item {
@@ -295,24 +239,6 @@
 	&::before {
 		@extend %icon-content;
 		content: "\EA00";
-	}
-}
-
-/// The megaphone icon.
-/// @example scss - Add the megaphone icon to a menu item
-/// .menu-item {
-///    @extend %icon-megaphone;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-megaphone {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4E2";
 	}
 }
 
