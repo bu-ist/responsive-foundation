@@ -417,6 +417,79 @@ $_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( (
 	li {
 		@extend %_u-list-inlineLinks;
 	}
+
+	a {
+		@include transition( color 200ms ease-in-out 0s );
+		font-size: $font-size-large;
+	}
+
+	[href*="dropbox.com"] {
+		@extend %icon-dropbox;
+	}
+
+	[href*="facebook.com"] {
+		@extend %icon-facebook;
+	}
+
+	[href*="flickr.com"] {
+		@extend %icon-flickr;
+	}
+
+	[href*="foursquare.com"] {
+		@extend %icon-foursquare;
+	}
+
+	[href*="github.com"] {
+		@extend %icon-github;
+	}
+
+	[href*="instagram.com"] {
+		@extend %icon-instagram;
+	}
+
+	[href*="kickstarter.com"] {
+		@extend %icon-kickstarter;
+	}
+
+	[href*="linkedin.com"] {
+		@extend %icon-linkedin;
+	}
+
+	[href*="pinterest.com"] {
+		@extend %icon-pinterest;
+	}
+
+	[href*="plus.google.com"] {
+		@extend %icon-googleplus;
+	}
+
+	[href*="getpocket.com"] {
+		@extend %icon-pocket;
+	}
+
+	[href*="reddit.com"] {
+		@extend %icon-reddit;
+	}
+
+	[href*="tumblr.com"] {
+		@extend %icon-tumblr;
+	}
+
+	[href*="twitter.com"] {
+		@extend %icon-twitter;
+	}
+
+	[href*="vimeo.com"] {
+		@extend %icon-vimeo;
+	}
+
+	[href*="vine.co"] {
+		@extend %icon-vine;
+	}
+
+	[href*="youtube.com"] {
+		@extend %icon-youtube;
+	}
 }
 
 /// Styles the container which holds branding assets in the site footer.
