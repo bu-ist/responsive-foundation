@@ -26,57 +26,57 @@ a {
 // TODO: Come back to these when we rework variables and generate similar to grid based on map
 
 %font-jumbo {
-	margin: $font-margin-jumbo;
 	font-size: $font-size-jumbo;
 	line-height: $line-height-jumbo;
+	margin: $font-margin-jumbo;
 }
 
 %font-largest {
-	margin: $font-margin-largest;
 	font-size: $font-size-largest;
 	line-height: $line-height-largest;
+	margin: $font-margin-largest;
 }
 
 %font-larger {
-	margin: $font-margin-larger;
 	font-size: $font-size-larger;
 	line-height: $line-height-larger;
+	margin: $font-margin-larger;
 }
 
 %font-large {
-	margin: $font-margin-large;
 	font-size: $font-size-large;
 	line-height: $line-height-large;
+	margin: $font-margin-large;
 }
 
 %font-medium {
-	margin: $font-margin-medium;
 	font-size: $font-size-medium;
 	line-height: $line-height-medium;
+	margin: $font-margin-medium;
 }
 
 %font-small {
-	margin: $font-margin-small;
 	font-size: $font-size-small;
 	line-height: $line-height-small;
+	margin: $font-margin-small;
 }
 
 %font-smaller {
-	margin: $font-margin-smaller;
 	font-size: $font-size-smaller;
 	line-height: $line-height-smaller;
+	margin: $font-margin-smaller;
 }
 
 %font-smallest {
-	margin: $font-margin-smallest;
 	font-size: $font-size-smallest;
 	line-height: $line-height-smallest;
+	margin: $font-margin-smallest;
 }
 
 %font-micro {
-	margin: $font-margin-micro;
 	font-size: $font-size-micro;
 	line-height: $line-height-micro;
+	margin: $font-margin-micro;
 }
 
 /// Controls base styles for all heading tags.
@@ -85,13 +85,13 @@ a {
 /// @since 1.0.0
 
 %heading-base {
-	font-family: $font-family-heading;
 	color: $color-heading;
+	font-family: $font-family-heading;
 
 	small {
-		font-weight: normal;
-		font-size: 0.75em;
 		color: $color-heading-small;
+		font-size: 0.75em;
+		font-weight: normal;
 	}
 }
 
@@ -101,7 +101,7 @@ a {
 /// @since 1.0.0
 
 h1 {
-@extend %heading-base;
+	@extend %heading-base;
 	@extend %font-jumbo;
 }
 
@@ -160,14 +160,29 @@ abbr[title] {
 	cursor: help;
 }
 
+/// Styles for all blockquotes.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 blockquote {
 	margin: $font-margin-blockquote;
 }
+
+/// Styles for all paragraphs and preformatted content.
+/// @group global
+/// @access public
+/// @since 1.0.0
 
 p,
 pre {
 	margin: $font-margin-base;
 }
+
+/// Styles for all preformatted and code content.
+/// @group global
+/// @access public
+/// @since 1.0.0
 
 code,
 kbd,
@@ -177,15 +192,18 @@ samp {
 	font-size: $font-size-base;
 }
 
-/* Always hide an element when it has the `hidden` HTML attribute.
-TODO: Find out if the important here is actually necessary.
+// Always hide an element when it has the `hidden` HTML attribute.
 [hidden] {
 	display: none !important;
 }
-*/
 
 // Lists
 // -----------------------------------------------------------------
+
+/// Styles for all lists and list-like content.
+/// @group global
+/// @access public
+/// @since 1.0.0
 
 dl,
 menu,
@@ -194,9 +212,19 @@ ul {
 	margin: $font-margin-list;
 }
 
+/// Styles for definition stuff.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 dd {
 	margin: $font-margin-dd;
 }
+
+/// Styles menus and lists.
+/// @group global
+/// @access public
+/// @since 1.0.0
 
 menu,
 ol,
@@ -204,10 +232,17 @@ ul {
 	padding: $font-padding-list;
 }
 
-nav ul,
-nav ol {
-	padding: 0;
-	margin: 0;
+/// Styles for navigation.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
+nav {
+	ul,
+	ol {
+		margin: 0;
+		padding: 0;
+	}
 }
 
 // remove margin from nested lists
@@ -221,30 +256,40 @@ ol ol {
 // Code
 // -----------------------------------------------------------------
 
+/// Styles for code element.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 code {
-	padding: $font-padding-code;
 	background: $color-code-bg;
 	color: $color-code;
+	padding: $font-padding-code;
 	white-space: nowrap;
 }
-.content p code {
-	font-size: 90%;
-}
-.code + .code {
-	margin-top: -15px;
-}
+
+/// Styles for the code wrapper class.
+/// Adding this class around a code element enables scrolling on mobile devices.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 .code {
-	overflow-x: auto;
-	-webkit-overflow-scrolling: touch;
-	padding: 20px;
-	margin: $font-margin-code;
-	border: 1px solid $color-grayscale-e;
 	background: $color-code-bg;
+	border: 1px solid $color-grayscale-e;
+	margin: $font-margin-code;
+	-webkit-overflow-scrolling: touch;
+	overflow-x: auto;
+	padding: 20px;
+
+	& + & {
+		margin-top: -15px;
+	}
 
 	code {
-		padding: 0;
 		background: none;
 		font-size: 95%;
+		padding: 0;
 		white-space: pre;
 		word-wrap: normal;
 	}

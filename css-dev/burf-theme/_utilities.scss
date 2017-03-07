@@ -238,3 +238,12 @@
 .responsive-table {
 	@extend %resposive-table-styles;
 }
+
+/// For code within the WordPress content area.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
+.content p code {
+	font-size: 90%;
+}
