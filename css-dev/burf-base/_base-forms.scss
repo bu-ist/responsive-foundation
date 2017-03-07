@@ -91,8 +91,8 @@
 /// @since 1.2.0
 
 %button-styles-primary {
-	color: $color-button-primary-text;
 	background-color: $color-button-primary-bg;
+	color: $color-button-primary-text;
 
 	&:hover,
 	&:active,
@@ -308,83 +308,127 @@ select {
 	}
 }
 
-input[type="file"]:focus:invalid,
-input[type="radio"]:focus:invalid,
-input[type="checkbox"]:focus:invalid {
-	outline-color: $_invalid-border-color;
+/// Styles elements which do not accept text with an invalid state
+/// as long as the element is invalid. Focus state is targeted for
+/// the benefit of keyboard users.
+/// From Pure v0.5.0.
+/// @group forms
+/// @access private
+/// @since 1.0.0
+
+[type="file"],
+[type="radio"],
+[type="checkbox"] {
+	&:focus:invalid {
+		outline-color: $_invalid-border-color;
+	}
 }
+
+/// Styles select and multi-select elements.
+/// From Pure v0.5.0.
+/// @group forms
+/// @access private
+/// @since 1.0.0
 
 select {
-	background-color: white;
-	border: 1px solid #cccccc;
+	background-color: $color-grayscale-f;
+	border: 1px solid $color-grayscale-c;
+
+	&[multiple] {
+		height: auto;
+	}
 }
 
-select[multiple] {
-	height: auto;
-}
+/// Styles form rows, if you are not using Gravity Forms.
+/// From Pure v0.5.0.
+/// @group forms
+/// @access public
+/// @since 1.0.0
 
 .form-row {
 	margin: $form-row-margin;
 }
 
+/// Styles form controls, if you are not using Gravity Forms.
+/// From Pure v0.5.0.
+/// @group forms
+/// @access public
+/// @since 1.0.0
+
 .form-controls {
 	margin: 20px 0 0;
 }
 
+/// Styles required items, if you are not using Gravity Forms.
+/// From Pure v0.5.0.
+/// @group forms
+/// @access public
+/// @since 1.0.0
+
 .required {
-	color: #cc0000 !important;
+	color: #cc0;
 }
 
-// Form Stacked
-.form-stacked input[type="text"],
-.form-stacked input[type="password"],
-.form-stacked input[type="email"],
-.form-stacked input[type="url"],
-.form-stacked input[type="date"],
-.form-stacked input[type="month"],
-.form-stacked input[type="time"],
-.form-stacked input[type="datetime"],
-.form-stacked input[type="datetime-local"],
-.form-stacked input[type="week"],
-.form-stacked input[type="number"],
-.form-stacked input[type="search"],
-.form-stacked input[type="tel"],
-.form-stacked input[type="color"],
-.form-stacked select,
-.form-stacked label,
-.form-stacked textarea,
-.form-aligned select,
-.form-aligned label,
-.form-aligned textarea {
-	// Aligned forms should stack on small screens
-	display: block;
-	margin: $form-input-margin;
-}
+/// Styles inputs and labels in the stacked and aligned layouts,
+/// if you are not using Gravity Forms.
+/// From Pure v0.5.0.
+/// @group forms
+/// @access public
+/// @since 1.0.0
 
-// Aligned Forms
-@include breakpoint(md) {
-	.form-aligned input,
-	.form-aligned textarea,
-	.form-aligned select {
-		display: inline-block;
-		vertical-align: middle;
-		*display: inline;
-		*zoom: 1;
+[type="text"],
+[type="password"],
+[type="email"],
+[type="url"],
+[type="date"],
+[type="month"],
+[type="time"],
+[type="datetime"],
+[type="datetime-local"],
+[type="week"],
+[type="number"],
+[type="search"],
+[type="tel"],
+[type="color"],
+select,
+label,
+textarea {
+	.form-stacked &,
+	.form-aligned & {
+		// Aligned forms should stack on small screens
+		display: block;
+		margin: $form-input-margin;
 	}
+}
 
+/// Styles inputs and labels in the aligned layout at desktop sizes,
+/// if you are not using Gravity Forms.
+/// From Pure v0.5.0.
+/// @group forms
+/// @access public
+/// @since 1.0.0
+
+@include breakpoint( md ) {
 	.form-aligned {
+		input,
+		textarea,
+		select {
+			display: inline-block;
+			*display: inline;
+			vertical-align: middle;
+			*zoom: 1;
+		}
+
 		textarea {
 			vertical-align: top;
 		}
 
-		.form-row {
-			label {
-				display: inline-block;
-				margin: 0 20px 0 0;
-				text-align: right;
-				vertical-align: middle;
-				width: 200px;
-			}
+		label {
+			display: inline-block;
+			margin: 0 20px 0 0;
+			text-align: right;
+			vertical-align: middle;
+			width: 200px;
 		}
 
 		.form-row-checkbox,
@@ -401,14 +445,20 @@ select[multiple] {
 
 // Gravity Forms
 // -----------------------------------------------------------------
+
+/// Styles Gravity Forms.
+/// @group forms
+/// @access public
+/// @since 1.0.0
+
 .gform_wrapper {
 	li {
 		list-style: none;
-	}
 
-	li:before {
-		content: "";
-		font-size: 0;
+		&::before {
+			content: "";
+			font-size: 0;
+		}
 	}
 
 	table {
@@ -420,12 +470,26 @@ select[multiple] {
 	}
 }
 
-// buttons
+// Buttons
 // -----------------------------------------------------------------
+
+/// The basic style for a button. Preferred over the extend if
+/// you have control over HTML and do not need any styles for your
+/// button in particular.
+/// @group forms
+/// @access public
+/// @since 1.0.0
 
 .button {
 	@extend %button-styles;
 }
+
+/// The basic style for a primary and selected button. Preferred over the extend if
+/// you have control over HTML and do not need any styles for your
+/// button in particular.
+/// @group forms
+/// @access public
+/// @since 1.0.0
 
 .button-primary,
 .button-selected {
