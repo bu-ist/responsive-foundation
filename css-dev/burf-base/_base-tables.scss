@@ -7,26 +7,26 @@
 /// @since 1.0.0
 
 table {
-	margin: $table-margin;
 	border: $table-border;
 	empty-cells: show;
+	margin: $table-margin;
 
 	caption {
-		padding: $table-caption-padding;
-		font-style: italic;
-		font-size: $font-size-table-caption;
 		color: $color-table-caption;
+		font-size: $font-size-table-caption;
+		font-style: italic;
+		padding: $table-caption-padding;
 		text-align: center;
 	}
 
 	td,
 	th {
+		border-left: 1px solid $color-table-border;
+		border-width: 0 0 0 1px;
+		font-size: inherit;
+		margin: 0;
 		overflow: visible; // to make ths where the title is really long work
 		padding: $table-padding;
-		margin: 0;
-		border-width: 0 0 0 1px;
-		border-left: 1px solid $color-table-border;
-		font-size: inherit;
 
 		&:first-child {
 			border-left-width: 0;
@@ -49,12 +49,12 @@ table {
 
 	thead {
 		background: $color-table-head-bg;
-		vertical-align: bottom;
 		color: $color-table-head;
 		text-align: left;
+		vertical-align: bottom;
 	}
 
-	col[class*="col-"] {
+	col[class*="col-"] { // Despite what CodeClimate says this is necessary.
 		display: table-column;
 		float: none;
 	}
@@ -67,7 +67,7 @@ table {
 
 .table-striped tr:nth-child(2n-1),
 .u-odd {
-	 td {
+	td {
 		background-color: $color-table-stripes;
 	}
 }
@@ -97,7 +97,7 @@ table {
 .table-horizontal {
 	td,
 	th {
-		border-width: 0 0 1px 0;
+		border: 0;
 		border-bottom: 1px solid $color-table-border;
 	}
 }
