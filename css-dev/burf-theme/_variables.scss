@@ -983,19 +983,41 @@ $color-single-meta-bg:                     $color-grayscale-f0 !default;
 
 $color-single-meta-border-left:             $color-message-border-left !default;
 
-/// Controls the amount of spacing between comments on a post.
+/// Controls the amount of spacing between comment threads on a post.
 /// @group news
 /// @access public
 /// @since 1.0.0
 
-$comment-margin:                           15px 0 !default;
+$comment-margin:                           30px !default;
 
-/// Controls the amount of padding on comments on a post.
+/// Controls the amount of spacing between comment threads on a post on mobile.
 /// @group news
 /// @access public
-/// @since 1.0.0
+/// @since 2.0.0
 
-$comment-padding:                          0 0 0 30px !default;
+$comment-margin-mobile:               (1/2) * $comment-margin !default;
+
+/// Controls the amount of spacing between comments within a thread on desktop.
+/// By default, there is no margin between comments on mobile.
+/// @group news
+/// @access public
+/// @since 2.0.0
+
+$comment-reply-margin:                      10px !default;
+
+/// Controls the amount of space a reply comment is indented from the parent.
+/// @group news
+/// @access public
+/// @since 2.0.0
+
+$comment-reply-depth:                      15px !default;
+
+/// Controls the amount of space a reply comment is indented from the parent on mobile.
+/// @group news
+/// @access public
+/// @since 2.0.0
+
+$comment-reply-depth-mobile:               (1/3) * $comment-reply-depth !default;
 
 /// Controls the border style between comments on a post.
 /// @group news
@@ -1009,7 +1031,14 @@ $border-comment:                           $border-base !default;
 /// @access public
 /// @since 1.0.0
 
-$border-width-comment:                      $border-top !default;
+$border-width-comment:                      1px 1px 1px 5px !default;
+
+/// Controls the amount of spacing within comments.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$comment-padding:                           10px !default;
 
 /// Controls the font family used for comments on a post.
 /// @group news
