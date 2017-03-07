@@ -262,24 +262,6 @@
 	}
 }
 
-/// The camera icon.
-/// @example scss - Add the camera icon to a menu item
-/// .menu-item {
-///    @extend %icon-camera;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-camera {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4F7";
-	}
-}
-
 /// The car icon.
 /// @example scss - Add the car icon to a menu item
 /// .menu-item {
@@ -424,24 +406,6 @@
 	}
 }
 
-/// The fastforward icon.
-/// @example scss - Add the fastforward icon to a menu item
-/// .menu-item {
-///    @extend %icon-fastforward;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-fastforward {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\29E3";
-	}
-}
-
 /// The flask icon.
 /// @example scss - Add the flask icon to a menu item
 /// .menu-item {
@@ -457,24 +421,6 @@
 	&::before {
 		@extend %icon-content;
 		content: "\F4C0";
-	}
-}
-
-/// The headphones icon.
-/// @example scss - Add the headphones icon to a menu item
-/// .menu-item {
-///    @extend %icon-headphones;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-headphones {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F3A7";
 	}
 }
 
@@ -659,42 +605,6 @@
 	}
 }
 
-/// The mic icon.
-/// @example scss - Add the mic icon to a menu item
-/// .menu-item {
-///    @extend %icon-mic;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-mic {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F3A4";
-	}
-}
-
-/// The music icon.
-/// @example scss - Add the music icon to a menu item
-/// .menu-item {
-///    @extend %icon-music;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-music {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\266B";
-	}
-}
-
 /// The notebook icon.
 /// @example scss - Add the notebook icon to a menu item
 /// .menu-item {
@@ -728,42 +638,6 @@
 	&::before {
 		@extend %icon-content;
 		content: "\1F514";
-	}
-}
-
-/// The pause icon.
-/// @example scss - Add the pause icon to a menu item
-/// .menu-item {
-///    @extend %icon-pause;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-pause {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E8A0";
-	}
-}
-
-/// The picture icon.
-/// @example scss - Add the picture icon to a menu item
-/// .menu-item {
-///    @extend %icon-picture;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-picture {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F304";
 	}
 }
 
@@ -839,24 +713,6 @@
 	}
 }
 
-/// The play icon.
-/// @example scss - Add the play icon to a menu item
-/// .menu-item {
-///    @extend %icon-play;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-play {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\25B6";
-	}
-}
-
 /// The poo icon.
 /// @example scss - Add the poo icon to a menu item
 /// .menu-item {
@@ -893,42 +749,6 @@
 	}
 }
 
-/// The record icon.
-/// @example scss - Add the record icon to a menu item
-/// .menu-item {
-///    @extend %icon-record;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-record {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\25CF";
-	}
-}
-
-/// The rewind icon.
-/// @example scss - Add the rewind icon to a menu item
-/// .menu-item {
-///    @extend %icon-rewind;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-rewind {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\23EA";
-	}
-}
-
 /// The screwdriver icon.
 /// @example scss - Add the screwdriver icon to a menu item
 /// .menu-item {
@@ -962,60 +782,6 @@
 	&::before {
 		@extend %icon-content;
 		content: "\EA02";
-	}
-}
-
-/// The skipback icon.
-/// @example scss - Add the skipback icon to a menu item
-/// .menu-item {
-///    @extend %icon-skipback;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-skipback {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\23EE";
-	}
-}
-
-/// The skipforward icon.
-/// @example scss - Add the skipforward icon to a menu item
-/// .menu-item {
-///    @extend %icon-skipforward;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-skipforward {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\23ED";
-	}
-}
-
-/// The stop icon.
-/// @example scss - Add the stop icon to a menu item
-/// .menu-item {
-///    @extend %icon-stop;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-stop {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\25A0";
 	}
 }
 
@@ -1163,24 +929,6 @@
 	}
 }
 
-/// The video icon.
-/// @example scss - Add the video icon to a menu item
-/// .menu-item {
-///    @extend %icon-video;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-video {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4F9";
-	}
-}
-
 /// The view icon.
 /// @example scss - Add the view icon to a menu item
 /// .menu-item {
@@ -1196,24 +944,6 @@
 	&::before {
 		@extend %icon-content;
 		content: "\1F440";
-	}
-}
-
-/// The volume icon.
-/// @example scss - Add the volume icon to a menu item
-/// .menu-item {
-///    @extend %icon-volume;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-volume {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F508";
 	}
 }
 
