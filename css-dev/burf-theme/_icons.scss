@@ -6,1593 +6,3523 @@
 		url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.svg#bu-default-icons") format("svg");
 	font-weight: normal;
 	font-style: normal;
-	 // unicode-range: U+??????; /* Include all Unicode possiblities */
 }
-// Basic icon styles. Replaces .icon.
-// Helpful if you don't want to use :before or you're some mad scientist with content we don't know about
+
+/// Provides base icon styles normalized across browsers and optimized
+/// for accessibility.
+/// Use this placeholder on :before or :after if you are loading your own
+/// font library and can't use the built-in icons because the content is different.
+/// You will also need the %icon-iefix placeholder on your hoverable element if you
+/// need compatibility before IE9.
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon {
-	/* These classes are using %icon. */
+	color: $color-icons;
 	display: inline-block;
-	padding-bottom: 0.2em; /* Accomodate for inline icons */
-	vertical-align: middle;
 	font-family: $font-family-icons;
-	font-weight: normal !important;
 	font-style: normal !important;
 	font-variant: normal !important;
-	color: $color-icons;
-	line-height: 1;
-	text-decoration: none !important;
-	text-transform: none !important;
-	white-space: nowrap;
-	speak: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
+	font-weight: normal !important;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-	// Hide labels. Replaces [class^="icon-"] span and [class*=" icon-"] span
+	-webkit-font-smoothing: antialiased;
+	line-height: 1;
+	padding-bottom: 0.2em; // Accomodate for inline icons
+	speak: none;
+	text-decoration: none !important;
+	text-rendering: optimizeLegibility;
+	text-transform: none !important;
+	vertical-align: middle;
+	white-space: nowrap;
+
 	span {
-		display: none;
+		display: none; // Hide labels
 	}
 }
+
+/// Provides base icon styles normalized across browsers and optimized
+/// for accessibility.
+/// Use this placeholder if you are loading your own font library
+/// and can't use the built-in icons because the content is different.
+/// This should go on your base element. The complimentary placeholder,
+/// `%icon`, needs to go on a `:before` or `:after` underneath.
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-iefix {
 	.lt-ie9:hover & {
-		/* These classes are using %icon-iefix. */
-		// This triggers a redraw in IE to Fix IE8"s :before content rendering.
+		// This triggers a redraw in IE to Fix IE8's :before content rendering.
 		-ms-zoom: 1;
 	}
 }
-// Choose which icon you'd like to use. Based off %icon.
 
-/* social icons */
+/// The icon.
+/// @example scss - Add the icon to a menu item
+/// .menu-item {
+///    @extend %icon-;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-dropbox {
 	@extend %icon-iefix;
 	&:before {
-		/* These classes are using %icon-dropbox. */
 		@extend %icon;
 		content: "\F653";
 	}
 }
+
+/// The dropbox alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-dropbox-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-dropbox-alt. */
 		@extend %icon;
 		content: "\F65A";
 	}
 }
+
+/// The facebook icon.
+/// @example scss - Add the facebook icon to a menu item
+/// .menu-item {
+///    @extend %icon-facebook;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-facebook {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-facebook. */
 		@extend %icon;
 		content: "\F610";
 	}
 }
+
+/// The facebook alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-facebook-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-facebook-alt. */
 		@extend %icon;
 		content: "\F61A";
 	}
 }
+
+/// The flickr icon.
+/// @example scss - Add the flickr icon to a menu item
+/// .menu-item {
+///    @extend %icon-flickr;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-flickr {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-flickr. */
 		@extend %icon;
 		content: "\F640";
 	}
 }
+
+/// The flickr alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-flickr-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-flickr-alt. */
 		@extend %icon;
 		content: "\F644";
 	}
 }
+
+/// The foursquare icon.
+/// @example scss - Add the foursquare icon to a menu item
+/// .menu-item {
+///    @extend %icon-foursquare;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-foursquare {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-foursquare. */
 		@extend %icon;
 		content: "\F690";
 	}
 }
+
+/// The icon alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-foursquare-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-foursquare-alt. */
 		@extend %icon;
 		content: "\F691";
 	}
 }
+
+/// The github icon.
+/// @example scss - Add the github icon to a menu item
+/// .menu-item {
+///    @extend %icon-github;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-github {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-github. */
 		@extend %icon;
 		content: "\F670";
 	}
 }
+
+/// The github alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-github-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-github-alt. */
 		@extend %icon;
 		content: "\F671";
 	}
 }
+
+/// The googleplus icon.
+/// @example scss - Add the googleplus icon to a menu item
+/// .menu-item {
+///    @extend %icon-googleplus;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-googleplus {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-googleplus. */
 		@extend %icon;
 		content: "\F613";
 	}
 }
+
+/// The icon alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-googleplus-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-googleplus-alt. */
 		@extend %icon;
 		content: "\F614";
 	}
 }
+
+/// The instagram icon.
+/// @example scss - Add the instagram icon to a menu item
+/// .menu-item {
+///    @extend %icon-instagram;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-instagram {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-instagram. */
 		@extend %icon;
 		content: "\F641";
 	}
 }
+
+/// The instagram alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-instagram-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-instagram-alt. */
 		@extend %icon;
 		content: "\F64A";
 	}
 }
+
+/// The kickstarter icon.
+/// @example scss - Add the kickstarter icon to a menu item
+/// .menu-item {
+///    @extend %icon-kickstarter;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-kickstarter {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-kickstarter. */
 		@extend %icon;
 		content: "\F681";
 	}
 }
+
+/// The icon alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-kickstarter-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-kickstarter-alt. */
 		@extend %icon;
 		content: "\F68A";
 	}
 }
+
+/// The linkedin icon.
+/// @example scss - Add the linkedin icon to a menu item
+/// .menu-item {
+///    @extend %icon-linkedin;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-linkedin {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-linkedin. */
 		@extend %icon;
 		content: "\F612";
 	}
 }
+
+/// The linkedin alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-linkedin-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-linkedin-alt. */
 		@extend %icon;
 		content: "\F61E";
 	}
 }
+
+/// The paypal icon.
+/// @example scss - Add the paypal icon to a menu item
+/// .menu-item {
+///    @extend %icon-paypal;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-paypal {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-paypal. */
 		@extend %icon;
 		content: "\F680";
 	}
 }
+
+/// The paypal alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-paypal-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-paypal-alt. */
 		@extend %icon;
 		content: "\F68B";
 	}
 }
+
+/// The pinterest icon.
+/// @example scss - Add the pinterest icon to a menu item
+/// .menu-item {
+///    @extend %icon-pinterest;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-pinterest {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-pinterest. */
 		@extend %icon;
 		content: "\F650";
 	}
 }
+
+/// The pinterest alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-pinterest-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-pinterest-alt. */
 		@extend %icon;
 		content: "\F651";
 	}
 }
+
+/// The pocket icon.
+/// @example scss - Add the pocket icon to a menu item
+/// .menu-item {
+///    @extend %icon-pocket;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-pocket {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-pocket. */
 		@extend %icon;
 		content: "\F634";
 	}
 }
+
+/// The pocket alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-pocket-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-pocket-alt. */
 		@extend %icon;
 		content: "\F635";
 	}
 }
+
+/// The reddit icon.
+/// @example scss - Add the reddit icon to a menu item
+/// .menu-item {
+///    @extend %icon-reddit;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-reddit {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-reddit. */
 		@extend %icon;
 		content: "\F616";
 	}
 }
+
+/// The reddit alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-reddit-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-reddit-alt. */
 		@extend %icon;
 		content: "\F617";
 	}
 }
+
+/// The renren icon.
+/// @example scss - Add the renren icon to a menu item
+/// .menu-item {
+///    @extend %icon-renren;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-renren {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-renren. */
 		@extend %icon;
 		content: "\F61C";
 	}
 }
+
+/// The retweet icon.
+/// @example scss - Add the retweet icon to a menu item
+/// .menu-item {
+///    @extend %icon-retweet;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-retweet {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-retweet. */
 		@extend %icon;
 		content: "\F600";
 	}
 }
+
+/// The soundcloud icon.
+/// @example scss - Add the soundcloud icon to a menu item
+/// .menu-item {
+///    @extend %icon-soundcloud;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-soundcloud {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-soundcloud. */
 		@extend %icon;
 		content: "\F6B3";
 	}
 }
+
+/// The icon alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-soundcloud-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-soundcloud-alt. */
 		@extend %icon;
 		content: "\F6B4";
 	}
 }
+
+/// The spotify icon.
+/// @example scss - Add the spotify icon to a menu item
+/// .menu-item {
+///    @extend %icon-spotify;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-spotify {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-spotify. */
 		@extend %icon;
 		content: "\F6B1";
 	}
 }
+
+/// The stackexchange icon.
+/// @example scss - Add the stackexchange icon to a menu item
+/// .menu-item {
+///    @extend %icon-stackexchange;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-stackexchange {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-stackexchange. */
 		@extend %icon;
 		content: "\F673";
 	}
 }
+
+/// The icon alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-stackexchange-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-stackexchange-alt. */
 		@extend %icon;
 		content: "\F67B";
 	}
 }
+
+/// The stackoverflow icon.
+/// @example scss - Add the stackoverflow icon to a menu item
+/// .menu-item {
+///    @extend %icon-stackoverflow;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-stackoverflow {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-stackoverflow. */
 		@extend %icon;
 		content: "\F672";
 	}
 }
+
+/// The icon alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-stackoverflow-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-stackoverflow-alt. */
 		@extend %icon;
 		content: "\F67A";
 	}
 }
+
+/// The stumbleupon icon.
+/// @example scss - Add the stumbleupon icon to a menu item
+/// .menu-item {
+///    @extend %icon-stumbleupon;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-stumbleupon {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-stumbleupon. */
 		@extend %icon;
 		content: "\F63A"
 	}
 }
+
+/// The icon alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-stumbleupon-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-stumbleupon-alt. */
 		@extend %icon;
 		content: "\F63D"
 	}
 }
+
+/// The twitter icon.
+/// @example scss - Add the twitter icon to a menu item
+/// .menu-item {
+///    @extend %icon-twitter;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-twitter {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-twitter. */
 		@extend %icon;
 		content: "\F611";
 	}
 }
+
+/// The twitter alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-twitter-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-twitter-alt. */
 		@extend %icon;
 		content: "\F62B";
 	}
 }
+
+/// The tumblr icon.
+/// @example scss - Add the tumblr icon to a menu item
+/// .menu-item {
+///    @extend %icon-tumblr;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-tumblr {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-tumblr. */
 		@extend %icon;
 		content: "\F620";
 	}
 }
+
+/// The tumblr alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-tumblr-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-tumblr-alt. */
 		@extend %icon;
 		content: "\F62A";
 	}
 }
+
+/// The vimeo icon.
+/// @example scss - Add the vimeo icon to a menu item
+/// .menu-item {
+///    @extend %icon-vimeo;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-vimeo {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-vimeo. */
 		@extend %icon;
 		content: "\F631";
 	}
 }
+
+/// The alt alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-vimeo-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-vimeo-alt. */
 		@extend %icon;
 		content: "\F63C";
 	}
 }
+
+/// The vine icon.
+/// @example scss - Add the vine icon to a menu item
+/// .menu-item {
+///    @extend %icon-vine;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-vine {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-vine. */
 		@extend %icon;
 		content: "\F633";
 	}
 }
+
+/// The alt alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-vine-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-vine-alt. */
 		@extend %icon;
 		content: "\F63B";
 	}
 }
+
+/// The weibo icon.
+/// @example scss - Add the weibo icon to a menu item
+/// .menu-item {
+///    @extend %icon-weibo;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-weibo {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-weibo. */
 		@extend %icon;
 		content: "\F61B";
 	}
 }
+
+/// The alt alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-weibo-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-weibo-alt. */
 		@extend %icon;
 		content: "\F61D";
 	}
 }
+
+/// The wordpress icon.
+/// @example scss - Add the wordpress icon to a menu item
+/// .menu-item {
+///    @extend %icon-wordpress;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-wordpress {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-wordpress. */
 		@extend %icon;
 		content: "\F621";
 	}
 }
+
+/// The youtube icon.
+/// @example scss - Add the youtube icon to a menu item
+/// .menu-item {
+///    @extend %icon-youtube;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-youtube {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-youtube. */
 		@extend %icon;
 		content: "\F630";
 	}
 }
+
+/// The youtube alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-youtube-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-youtube-alt. */
 		@extend %icon;
 		content: "\F632";
 	}
 }
 
-/* general icons */
 
 %icon-action {
 	@extend %icon-iefix;
 	&:before {
-		/* These classes are using %icon-action. */
 		@extend %icon;
 		content: "\EE00";
 	}
 }
+
+/// The alert icon.
+/// @example scss - Add the alert icon to a menu item
+/// .menu-item {
+///    @extend %icon-alert;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-alert {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-alert. */
 		@extend %icon;
 		content: "\26A0";
 	}
 }
+
+/// The android icon.
+/// @example scss - Add the android icon to a menu item
+/// .menu-item {
+///    @extend %icon-android;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-android {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-android. */
 		@extend %icon;
 		content: "\F6F3";
 	}
 }
+
+/// The appleinc icon.
+/// @example scss - Add the appleinc icon to a menu item
+/// .menu-item {
+///    @extend %icon-appleinc;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-appleinc {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-appleinc. */
 		@extend %icon;
 		content: "\F8FF";
 	}
 }
+
+/// The burst icon.
+/// @example scss - Add the burst icon to a menu item
+/// .menu-item {
+///    @extend %icon-burst;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-burst {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-burst. */
 		@extend %icon;
 		content: "\F552";
 	}
 }
+
+/// The calculator icon.
+/// @example scss - Add the calculator icon to a menu item
+/// .menu-item {
+///    @extend %icon-calculator;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-calculator {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-calculator. */
 		@extend %icon;
 		content: "\E551";
 	}
 }
+
+/// The cart icon.
+/// @example scss - Add the cart icon to a menu item
+/// .menu-item {
+///    @extend %icon-cart;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-cart {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-cart. */
 		@extend %icon;
 		content: "\E500";
 	}
 }
+
+/// The code icon.
+/// @example scss - Add the code icon to a menu item
+/// .menu-item {
+///    @extend %icon-code;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-code {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-code. */
 		@extend %icon;
 		content: "\E780";
 	}
 }
+
+/// The compass icon.
+/// @example scss - Add the compass icon to a menu item
+/// .menu-item {
+///    @extend %icon-compass;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-compass {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-compass. */
 		@extend %icon;
 		content: "\E671";
 	}
 }
+
+/// The contract icon.
+/// @example scss - Add the contract icon to a menu item
+/// .menu-item {
+///    @extend %icon-contract;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-contract {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-contract. */
 		@extend %icon;
 		content: "\EE01";
 	}
 }
+
+/// The dashboard icon.
+/// @example scss - Add the dashboard icon to a menu item
+/// .menu-item {
+///    @extend %icon-dashboard;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-dashboard {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-dashboard. */
 		@extend %icon;
 		content: "\F000";
 	}
 }
+
+/// The download icon.
+/// @example scss - Add the download icon to a menu item
+/// .menu-item {
+///    @extend %icon-download;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-download {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-download. */
 		@extend %icon;
 		content: "\EB01";
 	}
 }
+
+/// The downloadbox icon.
+/// @example scss - Add the downloadbox icon to a menu item
+/// .menu-item {
+///    @extend %icon-downloadbox;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-downloadbox {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-downloadbox. */
 		@extend %icon;
 		content: "\EB02";
 	}
 }
+
+/// The ban icon.
+/// @example scss - Add the ban icon to a menu item
+/// .menu-item {
+///    @extend %icon-ban;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-ban {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-ban. */
 		@extend %icon;
 		content: "\1F6AB";
 	}
 }
+
+/// The barchart icon.
+/// @example scss - Add the barchart icon to a menu item
+/// .menu-item {
+///    @extend %icon-barchart;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-barchart {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-barchart. */
 		@extend %icon;
 		content: "\1F4CA";
 	}
 }
+
+/// The bike icon.
+/// @example scss - Add the bike icon to a menu item
+/// .menu-item {
+///    @extend %icon-bike;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-bike {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-bike. */
 		@extend %icon;
 		content: "\1F6B2";
 	}
 }
+
+/// The book icon.
+/// @example scss - Add the book icon to a menu item
+/// .menu-item {
+///    @extend %icon-book;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-book {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-book. */
 		@extend %icon;
 		content: "\1F4D5";
 	}
 }
+
+/// The bookmark icon.
+/// @example scss - Add the bookmark icon to a menu item
+/// .menu-item {
+///    @extend %icon-bookmark;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-bookmark {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-bookmark. */
 		@extend %icon;
 		content: "\1F516";
 	}
 }
+
+/// The box icon.
+/// @example scss - Add the box icon to a menu item
+/// .menu-item {
+///    @extend %icon-box;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-box {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-box. */
 		@extend %icon;
 		content: "\1F4E6";
 	}
 }
+
+/// The briefcase icon.
+/// @example scss - Add the briefcase icon to a menu item
+/// .menu-item {
+///    @extend %icon-briefcase;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-briefcase {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-briefcase. */
 		@extend %icon;
 		content: "\1F4BC";
 	}
 }
+
+/// The bug icon.
+/// @example scss - Add the bug icon to a menu item
+/// .menu-item {
+///    @extend %icon-bug;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-bug {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-bug. */
 		@extend %icon;
 		content: "\1F41B";
 	}
 }
+
+/// The calendar icon.
+/// @example scss - Add the calendar icon to a menu item
+/// .menu-item {
+///    @extend %icon-calendar;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-calendar {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-calendar. */
 		@extend %icon;
 		content: "\1F4C5";
 	}
 }
+
+/// The camera icon.
+/// @example scss - Add the camera icon to a menu item
+/// .menu-item {
+///    @extend %icon-camera;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-camera {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-camera. */
 		@extend %icon;
 		content: "\1F4F7";
 	}
 }
+
+/// The car icon.
+/// @example scss - Add the car icon to a menu item
+/// .menu-item {
+///    @extend %icon-car;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-car {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-car. */
 		@extend %icon;
 		content: "\1F698";
 	}
 }
+
+/// The chat icon.
+/// @example scss - Add the chat icon to a menu item
+/// .menu-item {
+///    @extend %icon-chat;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-chat {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-chat. */
 		@extend %icon;
 		content: "\1F4AC";
 	}
 }
+
+/// The check icon.
+/// @example scss - Add the check icon to a menu item
+/// .menu-item {
+///    @extend %icon-check;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-check {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-check. */
 		@extend %icon;
 		content: "\2713";
 	}
 }
+
+/// The close icon.
+/// @example scss - Add the close icon to a menu item
+/// .menu-item {
+///    @extend %icon-close;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-close {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-close. */
 		@extend %icon;
 		content: "\E421";
 	}
 }
+
+/// The clipboard icon.
+/// @example scss - Add the clipboard icon to a menu item
+/// .menu-item {
+///    @extend %icon-clipboard;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-clipboard {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-clipboard. */
 		@extend %icon;
 		content: "\1F4CB";
 	}
 }
+
+/// The clock icon.
+/// @example scss - Add the clock icon to a menu item
+/// .menu-item {
+///    @extend %icon-clock;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-clock {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-clock. */
 		@extend %icon;
 		content: "\23F2";
 	}
 }
+
+/// The cloud icon.
+/// @example scss - Add the cloud icon to a menu item
+/// .menu-item {
+///    @extend %icon-cloud;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-cloud {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-cloud. */
 		@extend %icon;
 		content: "\2601";
 	}
 }
+
+/// The compose icon.
+/// @example scss - Add the compose icon to a menu item
+/// .menu-item {
+///    @extend %icon-compose;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-compose {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-compose. */
 		@extend %icon;
 		content: "\1F4DD";
 	}
 }
+
+/// The contacts icon.
+/// @example scss - Add the contacts icon to a menu item
+/// .menu-item {
+///    @extend %icon-contacts;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-contacts {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-contacts. */
 		@extend %icon;
 		content: "\1F4C7";
 	}
 }
+
+/// The crosshair icon.
+/// @example scss - Add the crosshair icon to a menu item
+/// .menu-item {
+///    @extend %icon-crosshair;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-crosshair {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-crosshair. */
 		@extend %icon;
 		content: "\2316";
 	}
 }
+
+/// The delete icon.
+/// @example scss - Add the delete icon to a menu item
+/// .menu-item {
+///    @extend %icon-delete;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-delete {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-delete. */
 		@extend %icon;
 		content: "\2421";
 	}
 }
+
+/// The desktop icon.
+/// @example scss - Add the desktop icon to a menu item
+/// .menu-item {
+///    @extend %icon-desktop;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-desktop {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-desktop. */
 		@extend %icon;
 		content: "\1F4BB";
 	}
 }
+
+/// The directleft icon.
+/// @example scss - Add the directleft icon to a menu item
+/// .menu-item {
+///    @extend %icon-directleft;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-directleft {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-directleft. */
 		@extend %icon;
 		content: "\25C3";
 	}
 }
+
+/// The directright icon.
+/// @example scss - Add the directright icon to a menu item
+/// .menu-item {
+///    @extend %icon-directright;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-directright {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-directright. */
 		@extend %icon;
 		content: "\25B9";
 	}
 }
+
+/// The directup icon.
+/// @example scss - Add the directup icon to a menu item
+/// .menu-item {
+///    @extend %icon-directup;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-directup {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-directup. */
 		@extend %icon;
 		content: "\25B4";
 	}
 }
+
+/// The dislike icon.
+/// @example scss - Add the dislike icon to a menu item
+/// .menu-item {
+///    @extend %icon-dislike;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-dislike {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-dislike. */
 		@extend %icon;
 		content: "\1F44E";
 	}
 }
+
+/// The down icon.
+/// @example scss - Add the down icon to a menu item
+/// .menu-item {
+///    @extend %icon-down;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-down {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-down. */
 		@extend %icon;
 		content: "\2B07";
 	}
 }
+
+/// The dropdown icon.
+/// @example scss - Add the dropdown icon to a menu item
+/// .menu-item {
+///    @extend %icon-dropdown;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-dropdown {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-dropdown. */
 		@extend %icon;
 		content: "\25BE";
 	}
 }
+
+/// The emptycart icon.
+/// @example scss - Add the emptycart icon to a menu item
+/// .menu-item {
+///    @extend %icon-emptycart;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-emptycart {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-emptycart. */
 		@extend %icon;
 		content: "\E507";
 	}
 }
+
+/// The grid icon.
+/// @example scss - Add the grid icon to a menu item
+/// .menu-item {
+///    @extend %icon-grid;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-grid {
-	/* These classes are %icon-grid. */
+
 	@extend %icon-iefix;
 	&:before {
 		@extend %icon;
 		content: "\E9A0";
 	}
 }
+
+/// The index icon.
+/// @example scss - Add the index icon to a menu item
+/// .menu-item {
+///    @extend %icon-index;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-index {
-	/* These classes are %icon-index. */
+
 	@extend %icon-iefix;
 	&:before {
 		@extend %icon;
 		content: "\E902";
 	}
 }
+
+/// The envelope icon.
+/// @example scss - Add the envelope icon to a menu item
+/// .menu-item {
+///    @extend %icon-envelope;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-envelope {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-envelope. */
 		@extend %icon;
 		content: "\2709";
 	}
 }
+
+/// The expand icon.
+/// @example scss - Add the expand icon to a menu item
+/// .menu-item {
+///    @extend %icon-expand;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-expand {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-expand. */
 		@extend %icon;
 		content: "\2922";
 	}
 }
+
+/// The fastforward icon.
+/// @example scss - Add the fastforward icon to a menu item
+/// .menu-item {
+///    @extend %icon-fastforward;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-fastforward {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-fastforward. */
 		@extend %icon;
 		content: "\29E3";
 	}
 }
+
+/// The file icon.
+/// @example scss - Add the file icon to a menu item
+/// .menu-item {
+///    @extend %icon-file;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-file {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-file. */
 		@extend %icon;
 		content: "\1F4C4";
 	}
 }
+
+/// The files icon.
+/// @example scss - Add the files icon to a menu item
+/// .menu-item {
+///    @extend %icon-files;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-files {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-files. */
 		@extend %icon;
 		content: "\EC00";
 	}
 }
+
+/// The flag icon.
+/// @example scss - Add the flag icon to a menu item
+/// .menu-item {
+///    @extend %icon-flag;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-flag {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-flag. */
 		@extend %icon;
 		content: "\2691";
 	}
 }
+
+/// The flask icon.
+/// @example scss - Add the flask icon to a menu item
+/// .menu-item {
+///    @extend %icon-flask;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-flask {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-flask. */
 		@extend %icon;
 		content: "\F4C0";
 	}
 }
+
+/// The folder icon.
+/// @example scss - Add the folder icon to a menu item
+/// .menu-item {
+///    @extend %icon-folder;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-folder {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-folder. */
 		@extend %icon;
 		content: "\1F4C1";
 	}
 }
+
+/// The globe icon.
+/// @example scss - Add the globe icon to a menu item
+/// .menu-item {
+///    @extend %icon-globe;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-globe {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-globe. */
 		@extend %icon;
 		content: "\1F310";
 	}
 }
+
+/// The headphones icon.
+/// @example scss - Add the headphones icon to a menu item
+/// .menu-item {
+///    @extend %icon-headphones;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-headphones {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-headphones. */
 		@extend %icon;
 		content: "\1F3A7";
 	}
 }
+
+/// The heart icon.
+/// @example scss - Add the heart icon to a menu item
+/// .menu-item {
+///    @extend %icon-heart;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-heart {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-heart. */
 		@extend %icon;
 		content: "\2665";
 	}
 }
+
+/// The home icon.
+/// @example scss - Add the home icon to a menu item
+/// .menu-item {
+///    @extend %icon-home;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-home {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-home. */
 		@extend %icon;
 		content: "\2302";
 	}
 }
+
+/// The hyphen icon.
+/// @example scss - Add the hyphen icon to a menu item
+/// .menu-item {
+///    @extend %icon-hyphen;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-hyphen {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-hyphen. */
 		@extend %icon;
 		content: "\002D";
 	}
 }
+
+/// The infinity icon.
+/// @example scss - Add the infinity icon to a menu item
+/// .menu-item {
+///    @extend %icon-infinity;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-infinity {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-infinity. */
 		@extend %icon;
 		content: "\221E";
 	}
 }
+
+/// The info icon.
+/// @example scss - Add the info icon to a menu item
+/// .menu-item {
+///    @extend %icon-info;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-info {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-info. */
 		@extend %icon;
 		content: "\2139";
 	}
 }
+
+/// The key icon.
+/// @example scss - Add the key icon to a menu item
+/// .menu-item {
+///    @extend %icon-key;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-key {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-key. */
 		@extend %icon;
 		content: "\1F511";
 	}
 }
+
+/// The laptop icon.
+/// @example scss - Add the laptop icon to a menu item
+/// .menu-item {
+///    @extend %icon-laptop;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-laptop {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-laptop. */
 		@extend %icon;
 		content: "\EA00";
 	}
 }
+
+/// The layers icon.
+/// @example scss - Add the layers icon to a menu item
+/// .menu-item {
+///    @extend %icon-layers;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-layers {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-layers. */
 		@extend %icon;
 		content: "\E202";
 	}
 }
+
+/// The layout icon.
+/// @example scss - Add the layout icon to a menu item
+/// .menu-item {
+///    @extend %icon-layout;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-layout {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-layout. */
 		@extend %icon;
 		content: "\E202";
 	}
 }
+
+/// The left icon.
+/// @example scss - Add the left icon to a menu item
+/// .menu-item {
+///    @extend %icon-left;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-left {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-left. */
 		@extend %icon;
 		content: "\2B05";
 	}
 }
+
+/// The lightbulb icon.
+/// @example scss - Add the lightbulb icon to a menu item
+/// .menu-item {
+///    @extend %icon-lightbulb;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-lightbulb {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-lightbulb. */
 		@extend %icon;
 		content: "\1F4A1";
 	}
 }
+
+/// The lightning icon.
+/// @example scss - Add the lightning icon to a menu item
+/// .menu-item {
+///    @extend %icon-lightning;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-lightning {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-lightning. */
 		@extend %icon;
 		content: "\2607";
 	}
 }
+
+/// The like icon.
+/// @example scss - Add the like icon to a menu item
+/// .menu-item {
+///    @extend %icon-like;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-like {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-like. */
 		@extend %icon;
 		content: "\1F44D";
 	}
 }
+
+/// The alt alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-like-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-like-alt. */
 		@extend %icon;
 		content: "\1F44B";
 	}
 }
+
+/// The link icon.
+/// @example scss - Add the link icon to a menu item
+/// .menu-item {
+///    @extend %icon-link;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-link {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-link. */
 		@extend %icon;
 		content: "\1F51B";
 	}
 }
+
+/// The alt alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-link-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-link-alt. */
 		@extend %icon;
 		content: "\F699";
 	}
 }
+
+/// The list icon.
+/// @example scss - Add the list icon to a menu item
+/// .menu-item {
+///    @extend %icon-list;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-list {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-list. */
 		@extend %icon;
 		content: "\ED50";
 	}
 }
+
+/// The location icon.
+/// @example scss - Add the location icon to a menu item
+/// .menu-item {
+///    @extend %icon-location;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-location {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-location. */
 		@extend %icon;
 		content: "\E6D0";
 	}
 }
+
+/// The lock icon.
+/// @example scss - Add the lock icon to a menu item
+/// .menu-item {
+///    @extend %icon-lock;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-lock {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-lock. */
 		@extend %icon;
 		content: "\1F512";
 	}
 }
+
+/// The map icon.
+/// @example scss - Add the map icon to a menu item
+/// .menu-item {
+///    @extend %icon-map;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-map {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-map. */
 		@extend %icon;
 		content: "\E673";
 	}
 }
+
+/// The megaphone icon.
+/// @example scss - Add the megaphone icon to a menu item
+/// .menu-item {
+///    @extend %icon-megaphone;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-megaphone {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-megaphone. */
 		@extend %icon;
 		content: "\1F4E2";
 	}
 }
+
+/// The menu icon.
+/// @example scss - Add the menu icon to a menu item
+/// .menu-item {
+///    @extend %icon-menu;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-menu {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-menu. */
 		@extend %icon;
 		content: "\E9A1";
 	}
 }
+
+/// The mic icon.
+/// @example scss - Add the mic icon to a menu item
+/// .menu-item {
+///    @extend %icon-mic;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-mic {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-mic. */
 		@extend %icon;
 		content: "\1F3A4";
 	}
 }
+
+/// The music icon.
+/// @example scss - Add the music icon to a menu item
+/// .menu-item {
+///    @extend %icon-music;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-music {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-music. */
 		@extend %icon;
 		content: "\266B";
 	}
 }
+
+/// The navigate icon.
+/// @example scss - Add the navigate icon to a menu item
+/// .menu-item {
+///    @extend %icon-navigate;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-navigate {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-navigate. */
 		@extend %icon;
 		content: "\E670";
 	}
 }
+
+/// The navigateleft icon.
+/// @example scss - Add the navigateleft icon to a menu item
+/// .menu-item {
+///    @extend %icon-navigateleft;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-navigateleft {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-navigateleft. */
 		@extend %icon;
 		content: "\25C5";
 	}
 }
+
+/// The navigateright icon.
+/// @example scss - Add the navigateright icon to a menu item
+/// .menu-item {
+///    @extend %icon-navigateright;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-navigateright {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-navigateright. */
 		@extend %icon;
 		content: "\25BB";
 	}
 }
+
+/// The navigatedown icon.
+/// @example scss - Add the navigatedown icon to a menu item
+/// .menu-item {
+///    @extend %icon-navigatedown;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-navigatedown {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-navigatedown. */
 		@extend %icon;
 		content: "\F501";
 	}
 }
+
+/// The navigateup icon.
+/// @example scss - Add the navigateup icon to a menu item
+/// .menu-item {
+///    @extend %icon-navigateup;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-navigateup {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-navigateup. */
 		@extend %icon;
 		content: "\F500";
 	}
 }
+
+/// The notebook icon.
+/// @example scss - Add the notebook icon to a menu item
+/// .menu-item {
+///    @extend %icon-notebook;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-notebook {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-notebook. */
 		@extend %icon;
 		content: "\1F4D3";
 	}
 }
+
+/// The notifications icon.
+/// @example scss - Add the notifications icon to a menu item
+/// .menu-item {
+///    @extend %icon-notifications;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-notifications {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-notifications. */
 		@extend %icon;
 		content: "\1F514";
 	}
 }
+
+/// The pause icon.
+/// @example scss - Add the pause icon to a menu item
+/// .menu-item {
+///    @extend %icon-pause;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-pause {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-pause. */
 		@extend %icon;
 		content: "\E8A0";
 	}
 }
+
+/// The phone icon.
+/// @example scss - Add the phone icon to a menu item
+/// .menu-item {
+///    @extend %icon-phone;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-phone {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-phone. */
 		@extend %icon;
 		content: "\1F4DE";
 	}
 }
+
+/// The picture icon.
+/// @example scss - Add the picture icon to a menu item
+/// .menu-item {
+///    @extend %icon-picture;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-picture {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-picture. */
 		@extend %icon;
 		content: "\1F304";
 	}
 }
+
+/// The piechart icon.
+/// @example scss - Add the piechart icon to a menu item
+/// .menu-item {
+///    @extend %icon-piechart;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-piechart {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-piechart. */
 		@extend %icon;
 		content: "\E570";
 	}
 }
+
+/// The pinboard icon.
+/// @example scss - Add the pinboard icon to a menu item
+/// .menu-item {
+///    @extend %icon-pinboard;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-pinboard {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-pinboard. */
 		@extend %icon;
 		content: "\F654";
 	}
 }
+
+/// The pin icon.
+/// @example scss - Add the pin icon to a menu item
+/// .menu-item {
+///    @extend %icon-pin;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-pin {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-pin. */
 		@extend %icon;
 		content: "\1F4CD";
 	}
 }
+
+/// The plane icon.
+/// @example scss - Add the plane icon to a menu item
+/// .menu-item {
+///    @extend %icon-plane;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-plane {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-plane. */
 		@extend %icon;
 		content: "\2708";
 	}
 }
+
+/// The planet icon.
+/// @example scss - Add the planet icon to a menu item
+/// .menu-item {
+///    @extend %icon-planet;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-planet {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-planet. */
 		@extend %icon;
 		content: "\F280";
 	}
 }
+
+/// The play icon.
+/// @example scss - Add the play icon to a menu item
+/// .menu-item {
+///    @extend %icon-play;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-play {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-play. */
 		@extend %icon;
 		content: "\25B6";
 	}
 }
+
+/// The plus icon.
+/// @example scss - Add the plus icon to a menu item
+/// .menu-item {
+///    @extend %icon-plus;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-plus {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-plus. */
 		@extend %icon;
 		content: "\002B";
 	}
 }
+
+/// The poo icon.
+/// @example scss - Add the poo icon to a menu item
+/// .menu-item {
+///    @extend %icon-poo;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-poo {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-poo. */
 		@extend %icon;
 		content: "\1F4A9";
 	}
 }
+
+/// The print icon.
+/// @example scss - Add the print icon to a menu item
+/// .menu-item {
+///    @extend %icon-print;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-print {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-print. */
 		@extend %icon;
 		content: "\2399";
 	}
 }
+
+/// The puzzle icon.
+/// @example scss - Add the puzzle icon to a menu item
+/// .menu-item {
+///    @extend %icon-puzzle;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-puzzle {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-puzzle. */
 		@extend %icon;
 		content: "\E710";
 	}
 }
+
+/// The record icon.
+/// @example scss - Add the record icon to a menu item
+/// .menu-item {
+///    @extend %icon-record;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-record {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-record. */
 		@extend %icon;
 		content: "\25CF";
 	}
 }
+
+/// The rss icon.
+/// @example scss - Add the rss icon to a menu item
+/// .menu-item {
+///    @extend %icon-rss;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-rss {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-rss. */
 		@extend %icon;
 		content: "\E310";
 	}
 }
+
+/// The alt alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-rss-alt {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-rss-alt. */
 		@extend %icon;
 		content: "\E31A";
 	}
 }
+
+/// The redirect icon.
+/// @example scss - Add the redirect icon to a menu item
+/// .menu-item {
+///    @extend %icon-redirect;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-redirect {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-redirect. */
 		@extend %icon;
 		content: "\21AA";
 	}
 }
+
+/// The refresh icon.
+/// @example scss - Add the refresh icon to a menu item
+/// .menu-item {
+///    @extend %icon-refresh;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-refresh {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-refresh. */
 		@extend %icon;
 		content: "\21BB";
 	}
 }
+
+/// The replay icon.
+/// @example scss - Add the replay icon to a menu item
+/// .menu-item {
+///    @extend %icon-replay;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-replay {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-replay. */
 		@extend %icon;
 		content: "\21BA";
 	}
 }
+
+/// The reply icon.
+/// @example scss - Add the reply icon to a menu item
+/// .menu-item {
+///    @extend %icon-reply;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-reply {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-reply. */
 		@extend %icon;
 		content: "\21A9";
 	}
 }
+
+/// The rewind icon.
+/// @example scss - Add the rewind icon to a menu item
+/// .menu-item {
+///    @extend %icon-rewind;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-rewind {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-rewind. */
 		@extend %icon;
 		content: "\23EA";
 	}
 }
+
+/// The right icon.
+/// @example scss - Add the right icon to a menu item
+/// .menu-item {
+///    @extend %icon-right;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-right {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-right. */
 		@extend %icon;
 		content: "\27A1";
 	}
 }
+
+/// The rotaryphone icon.
+/// @example scss - Add the rotaryphone icon to a menu item
+/// .menu-item {
+///    @extend %icon-rotaryphone;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-rotaryphone {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-rotaryphone. */
 		@extend %icon;
 		content: "\260E";
 	}
 }
+
+/// The scaledown icon.
+/// @example scss - Add the scaledown icon to a menu item
+/// .menu-item {
+///    @extend %icon-scaledown;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-scaledown {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-scaledown. */
 		@extend %icon;
 		content: "\EE05";
 	}
 }
+
+/// The scaleup icon.
+/// @example scss - Add the scaleup icon to a menu item
+/// .menu-item {
+///    @extend %icon-scaleup;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-scaleup {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-scaleup. */
 		@extend %icon;
 		content: "\EE04";
 	}
 }
+
+/// The screwdriver icon.
+/// @example scss - Add the screwdriver icon to a menu item
+/// .menu-item {
+///    @extend %icon-screwdriver;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-screwdriver {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-screwdriver. */
 		@extend %icon;
 		content: "\F037";
 	}
 }
+
+/// The share icon.
+/// @example scss - Add the share icon to a menu item
+/// .menu-item {
+///    @extend %icon-share;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-share {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-share. */
 		@extend %icon;
 		content: "\F601";
 	}
 }
+
+/// The signpost icon.
+/// @example scss - Add the signpost icon to a menu item
+/// .menu-item {
+///    @extend %icon-signpost;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-signpost {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-signpost. */
 		@extend %icon;
 		content: "\E672";
 	}
 }
+
+/// The smartphone icon.
+/// @example scss - Add the smartphone icon to a menu item
+/// .menu-item {
+///    @extend %icon-smartphone;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-smartphone {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-smartphone. */
 		@extend %icon;
 		content: "\EA02";
 	}
 }
+
+/// The search icon.
+/// @example scss - Add the search icon to a menu item
+/// .menu-item {
+///    @extend %icon-search;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-search {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-search. */
 		@extend %icon;
 		content: "\1F50E";
 	}
 }
+
+/// The settings icon.
+/// @example scss - Add the settings icon to a menu item
+/// .menu-item {
+///    @extend %icon-settings;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-settings {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-settings. */
 		@extend %icon;
 		content: "\2699";
 	}
 }
+
+/// The skipback icon.
+/// @example scss - Add the skipback icon to a menu item
+/// .menu-item {
+///    @extend %icon-skipback;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-skipback {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-skipback. */
 		@extend %icon;
 		content: "\23EE";
 	}
 }
+
+/// The skipforward icon.
+/// @example scss - Add the skipforward icon to a menu item
+/// .menu-item {
+///    @extend %icon-skipforward;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-skipforward {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-skipforward. */
 		@extend %icon;
 		content: "\23ED";
 	}
 }
+
+/// The star icon.
+/// @example scss - Add the star icon to a menu item
+/// .menu-item {
+///    @extend %icon-star;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-star {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-star. */
 		@extend %icon;
 		content: "\22C6";
 	}
 }
+
+/// The stop icon.
+/// @example scss - Add the stop icon to a menu item
+/// .menu-item {
+///    @extend %icon-stop;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-stop {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-stop. */
 		@extend %icon;
 		content: "\25A0";
 	}
 }
+
+/// The stock icon.
+/// @example scss - Add the stock icon to a menu item
+/// .menu-item {
+///    @extend %icon-stock;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-stock {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-stock. */
 		@extend %icon;
 		content: "\E579";
 	}
 }
+
+/// The storagebox icon.
+/// @example scss - Add the storagebox icon to a menu item
+/// .menu-item {
+///    @extend %icon-storagebox;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-storagebox {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-storagebox. */
 		@extend %icon;
 		content: "\E901";
 	}
 }
+
+/// The sync icon.
+/// @example scss - Add the sync icon to a menu item
+/// .menu-item {
+///    @extend %icon-sync;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-sync {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-sync. */
 		@extend %icon;
 		content: "\EB82";
 	}
 }
+
+/// The tablet icon.
+/// @example scss - Add the tablet icon to a menu item
+/// .menu-item {
+///    @extend %icon-tablet;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-tablet {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-tablet. */
 		@extend %icon;
 		content: "\EA01";
 	}
 }
+
+/// The tag icon.
+/// @example scss - Add the tag icon to a menu item
+/// .menu-item {
+///    @extend %icon-tag;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-tag {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-tag. */
 		@extend %icon;
 		content: "\E100";
 	}
 }
+
+/// The thermometer icon.
+/// @example scss - Add the thermometer icon to a menu item
+/// .menu-item {
+///    @extend %icon-thermometer;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-thermometer {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-thermometer. */
 		@extend %icon;
 		content: "\F201";
 	}
 }
+
+/// The thumbnails icon.
+/// @example scss - Add the thumbnails icon to a menu item
+/// .menu-item {
+///    @extend %icon-thumbnails;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-thumbnails {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-thumbnails. */
 		@extend %icon;
 		content: "\E9A3";
 	}
 }
+
+/// The toolbox icon.
+/// @example scss - Add the toolbox icon to a menu item
+/// .menu-item {
+///    @extend %icon-toolbox;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-toolbox {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-toolbox. */
 		@extend %icon;
 		content: "\F030";
 	}
 }
+
+/// The tv icon.
+/// @example scss - Add the tv icon to a menu item
+/// .menu-item {
+///    @extend %icon-tv;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-tv {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-tv. */
 		@extend %icon;
 		content: "\1F4FA";
 	}
 }
+
+/// The unlock icon.
+/// @example scss - Add the unlock icon to a menu item
+/// .menu-item {
+///    @extend %icon-unlock;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-unlock {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-unlock. */
 		@extend %icon;
 		content: "\1F513";
 	}
 }
+
+/// The up icon.
+/// @example scss - Add the up icon to a menu item
+/// .menu-item {
+///    @extend %icon-up;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-up {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-up. */
 		@extend %icon;
 		content: "\2806";
 	}
 }
+
+/// The upload icon.
+/// @example scss - Add the upload icon to a menu item
+/// .menu-item {
+///    @extend %icon-upload;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-upload {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-upload. */
 		@extend %icon;
 		content: "\EB41";
 	}
 }
+
+/// The uploadcloud icon.
+/// @example scss - Add the uploadcloud icon to a menu item
+/// .menu-item {
+///    @extend %icon-uploadcloud;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-uploadcloud {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-uploadcloud. */
 		@extend %icon;
 		content: "\EB40";
 	}
 }
+
+/// The user icon.
+/// @example scss - Add the user icon to a menu item
+/// .menu-item {
+///    @extend %icon-user;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-user {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-user. */
 		@extend %icon;
 		content: "\1F464";
 	}
 }
+
+/// The users icon.
+/// @example scss - Add the users icon to a menu item
+/// .menu-item {
+///    @extend %icon-users;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-users {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-users. */
 		@extend %icon;
 		content: "\1F465";
 	}
 }
+
+/// The utensils icon.
+/// @example scss - Add the utensils icon to a menu item
+/// .menu-item {
+///    @extend %icon-utensils;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-utensils {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-utensils. */
 		@extend %icon;
 		content: "\1F374";
 	}
 }
+
+/// The video icon.
+/// @example scss - Add the video icon to a menu item
+/// .menu-item {
+///    @extend %icon-video;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-video {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-video. */
 		@extend %icon;
 		content: "\1F4F9";
 	}
 }
+
+/// The view icon.
+/// @example scss - Add the view icon to a menu item
+/// .menu-item {
+///    @extend %icon-view;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-view {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-view. */
 		@extend %icon;
 		content: "\1F440";
 	}
 }
+
+/// The volume icon.
+/// @example scss - Add the volume icon to a menu item
+/// .menu-item {
+///    @extend %icon-volume;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-volume {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-volume. */
 		@extend %icon;
 		content: "\1F508";
 	}
 }
+
+/// The watch icon.
+/// @example scss - Add the watch icon to a menu item
+/// .menu-item {
+///    @extend %icon-watch;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-watch {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-watch. */
 		@extend %icon;
 		content: "\231A";
 	}
 }
+
+/// The wrench icon.
+/// @example scss - Add the wrench icon to a menu item
+/// .menu-item {
+///    @extend %icon-wrench;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-wrench {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-wrench. */
 		@extend %icon;
 		content: "\1F527";
 	}
 }
+
+/// The write icon.
+/// @example scss - Add the write icon to a menu item
+/// .menu-item {
+///    @extend %icon-write;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-write {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-write. */
 		@extend %icon;
 		content: "\270E";
 	}
 }
+
+/// The wifi icon.
+/// @example scss - Add the wifi icon to a menu item
+/// .menu-item {
+///    @extend %icon-wifi;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
 %icon-wifi {
 	@extend %icon-iefix;
+
 	&:before {
-		/* These classes are using %icon-wifi. */
 		@extend %icon;
 		content: "\EB84";
 	}
 }
 
-/* Footer links */
 
 .site-footer-social a {
 	@include transition(color 200ms ease-in-out 0s);
@@ -1652,7 +3582,6 @@
 .site-footer-social a[href*="youtube.com"] i {
 	@extend %icon-youtube;
 }
-/* hide labels */
 .site-footer-social a[href*="dropbox.com"] span,
 .site-footer-social a[href*="facebook.com"] span,
 .site-footer-social a[href*="flickr.com"] span,
