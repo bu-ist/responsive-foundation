@@ -118,42 +118,6 @@
 	}
 }
 
-/// The burst icon.
-/// @example scss - Add the burst icon to a menu item
-/// .menu-item {
-///    @extend %icon-burst;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-burst {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F552";
-	}
-}
-
-/// The cart icon.
-/// @example scss - Add the cart icon to a menu item
-/// .menu-item {
-///    @extend %icon-cart;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-cart {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E500";
-	}
-}
-
 /// The code icon.
 /// @example scss - Add the code icon to a menu item
 /// .menu-item {
@@ -511,24 +475,6 @@
 	&::before {
 		@extend %icon-content;
 		content: "\1F4BB";
-	}
-}
-
-/// The emptycart icon.
-/// @example scss - Add the emptycart icon to a menu item
-/// .menu-item {
-///    @extend %icon-emptycart;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-emptycart {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E507";
 	}
 }
 
