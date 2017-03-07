@@ -252,37 +252,66 @@ textarea {
 	margin: 0.5em 0;
 }
 
+/// Styles elements with the "disabled" attribute.
+/// From Pure v0.5.0.
+/// @group forms
+/// @access private
+/// @since 1.0.0
+
 [disabled] {
 	background-color: $color-grayscale-e;
 	color: $color-grayscale-c;
 	cursor: not-allowed;
 }
 
-input[readonly],
-select[readonly],
-textarea[readonly] {
-	background: #eeeeee;
-	border-color: #cccccc;
-	color: #777777;
+/// Styles elements with the "readonly" attribute.
+/// From Pure v0.5.0.
+/// @group forms
+/// @access private
+/// @since 1.0.0
+
+[readonly] {
+	background: $color-grayscale-e;
+	border-color: $color-grayscale-c;
+	color: $color-grayscale-7;
 }
 
-input:focus:invalid,
-textarea:focus:invalid,
-select:focus:invalid {
-	border-color: #ee5f5b;
-	color: #b94a48;
+/// The color to use on borders and outlines in the invalid state.
+/// From Pure v0.5.0.
+/// @group forms
+/// @access private
+/// @since 1.0.0
+
+$_invalid-border-color: #e9322d;
+
+/// The color to use on text in the invalid state.
+/// From Pure v0.5.0.
+/// @group forms
+/// @access private
+/// @since 1.0.0
+
+$_invalid-text-color: #b94a48;
+
+/// Styles elements which accept text with an invalid state
+/// until the user types something valid.
+/// From Pure v0.5.0.
+/// @group forms
+/// @access private
+/// @since 1.0.0
+
+input,
+textarea,
+select {
+	&:focus:invalid {
+		border-color: $_invalid-border-color;
+		color: $_invalid-text-color;
+	}
 }
 
-input:focus:invalid:focus,
-textarea:focus:invalid:focus,
-select:focus:invalid:focus {
-	border-color: #e9322d;
-}
-
-input[type="file"]:focus:invalid:focus,
-input[type="radio"]:focus:invalid:focus,
-input[type="checkbox"]:focus:invalid:focus {
-	outline-color: #e9322d;
+input[type="file"]:focus:invalid,
+input[type="radio"]:focus:invalid,
+input[type="checkbox"]:focus:invalid {
+	outline-color: $_invalid-border-color;
 }
 
 select {
