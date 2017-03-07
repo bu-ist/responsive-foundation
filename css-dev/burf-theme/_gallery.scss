@@ -1,6 +1,15 @@
-// Styles for WordPress gallery shortcode.
+/// A helper variable to control the number of columns a gallery
+/// supports in our WordPress environment.
+/// @group content
+/// @access priavte
+/// @since 1.4.0
 
-$wp-supported-gallery-columns: 9;
+$_wp-supported-gallery-columns: 9;
+
+/// Base styles for the gallery shortcode in WordPress.
+/// @group content
+/// @access public
+/// @since 1.4.0
 
 .gallery {
 	@extend %clearfix;
@@ -16,14 +25,19 @@ $wp-supported-gallery-columns: 9;
 	}
 }
 
-@for $i from 1 through $wp-supported-gallery-columns {
+/// Styles for each supported number of columns in the WordPress gallery shortcode.
+/// @group content
+/// @access public
+/// @since 1.4.0
+
+@for $i from 1 through $_wp-supported-gallery-columns {
 	.gallery-columns-#{$i} {
 		.gallery-item {
 			float: left;
 			width: 33.33%;
 
-			@include breakpoint(xs) {
-				width: 100/$i#{"%"};
+			@include breakpoint( xs ) {
+				width: 100 / $i#{"%"};
 
 				&:nth-child(#{$i + 1}) {
 					clear: left;
