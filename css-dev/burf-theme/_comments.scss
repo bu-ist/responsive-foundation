@@ -215,27 +215,35 @@
 	}
 }
 
-.comment-form {
-	.button {
-		@include breakpoint( sm ) {
-			margin-left: 25%;
-		}
+/// Styles the comment text area in the comments form.
+/// @group comments
+/// @access public
+/// @since 2.0.0
+
+#comment {
+	@include transition(height 50ms ease-in-out 0s);
+	width: 100%;
+	height: 6em;
+
+	&:focus,
+	&:valid {
+		@include transition(height 50ms ease-in-out 0s);
+		height: 12em;
 	}
 
-	textarea {
-		@include transition(height 50ms ease-in-out 0s);
-		width: 100%;
-		height: 6em;
+	@include breakpoint( sm ) {
+		width: 75%;
+	}
+}
 
-		&:focus,
-		&:valid {
-			@include transition(height 50ms ease-in-out 0s);
-			height: 12em;
-		}
+/// Styles the comment form submit button.
+/// @group comments
+/// @access public
+/// @since 2.0.0
 
-		@include breakpoint( sm ) {
-			width: 75%;
-		}
+.comment-submit {
+	@include breakpoint( sm ) {
+		margin-left: 25%;
 	}
 }
 
