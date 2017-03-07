@@ -1,29 +1,46 @@
-/* comments
------------------------------------------------------------------ */
+// comments
+// -----------------------------------------------------------------
+
+/// Controls styling for the comments section on posts.
+/// @group comments
+/// @access public
+/// @since 1.0.0
 
 .comments-area {
 	color: $color-comments;
+
 	// Remove defaults for all OL on this page
 	ol {
-		padding: 0;
-		margin: 0;
 		list-style: none;
+		margin: 0;
+		padding: 0;
 	}
 }
+
+/// Controls styling for comment threads on posts.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
 .comments-list {
-	border-bottom: 1px solid #dddddd;
-	// Nested padding
-	li {
-		li {
-			padding: $comment-padding;
-		}
-	}
+	border-bottom: 1px solid $color-grayscale-d;
 }
+
+/// Controls styling for individual comments on posts.
+/// @group comments
+/// @access public
+/// @since 1.0.0
 
 .comment {
 	border: $border-comment;
 	border-width: $border-width-comment;
+	padding: $comment-padding;
+
+	&.depth-1 {
+		padding: 0;
+	}
 }
+
 .comment-body {
 	position: relative;
 	margin: $comment-margin;
