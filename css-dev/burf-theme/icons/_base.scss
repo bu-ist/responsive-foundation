@@ -406,24 +406,6 @@
 	}
 }
 
-/// The compose icon.
-/// @example scss - Add the compose icon to a menu item
-/// .menu-item {
-///    @extend %icon-compose;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-compose {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4DD";
-	}
-}
-
 /// The contacts icon.
 /// @example scss - Add the contacts icon to a menu item
 /// .menu-item {
@@ -478,24 +460,6 @@
 	}
 }
 
-/// The grid icon.
-/// @example scss - Add the grid icon to a menu item
-/// .menu-item {
-///    @extend %icon-grid;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-grid {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E9A0";
-	}
-}
-
 /// The fastforward icon.
 /// @example scss - Add the fastforward icon to a menu item
 /// .menu-item {
@@ -511,24 +475,6 @@
 	&::before {
 		@extend %icon-content;
 		content: "\29E3";
-	}
-}
-
-/// The flag icon.
-/// @example scss - Add the flag icon to a menu item
-/// .menu-item {
-///    @extend %icon-flag;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-flag {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2691";
 	}
 }
 
@@ -695,42 +641,6 @@
 	}
 }
 
-/// The layers icon.
-/// @example scss - Add the layers icon to a menu item
-/// .menu-item {
-///    @extend %icon-layers;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-layers {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E202";
-	}
-}
-
-/// The layout icon.
-/// @example scss - Add the layout icon to a menu item
-/// .menu-item {
-///    @extend %icon-layout;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-layout {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E202";
-	}
-}
-
 /// The lightbulb icon.
 /// @example scss - Add the lightbulb icon to a menu item
 /// .menu-item {
@@ -764,24 +674,6 @@
 	&::before {
 		@extend %icon-content;
 		content: "\2607";
-	}
-}
-
-/// The list icon.
-/// @example scss - Add the list icon to a menu item
-/// .menu-item {
-///    @extend %icon-list;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-list {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\ED50";
 	}
 }
 
@@ -1127,24 +1019,6 @@
 	}
 }
 
-/// The reply icon.
-/// @example scss - Add the reply icon to a menu item
-/// .menu-item {
-///    @extend %icon-reply;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-reply {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\21A9";
-	}
-}
-
 /// The rewind icon.
 /// @example scss - Add the rewind icon to a menu item
 /// .menu-item {
@@ -1304,24 +1178,6 @@
 	&::before {
 		@extend %icon-content;
 		content: "\F201";
-	}
-}
-
-/// The thumbnails icon.
-/// @example scss - Add the thumbnails icon to a menu item
-/// .menu-item {
-///    @extend %icon-thumbnails;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-thumbnails {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E9A3";
 	}
 }
 
@@ -1520,24 +1376,6 @@
 	&::before {
 		@extend %icon-content;
 		content: "\1F527";
-	}
-}
-
-/// The write icon.
-/// @example scss - Add the write icon to a menu item
-/// .menu-item {
-///    @extend %icon-write;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-write {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\270E";
 	}
 }
 
