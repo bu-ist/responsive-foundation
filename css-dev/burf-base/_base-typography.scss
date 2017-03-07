@@ -155,21 +155,6 @@ h6 {
 	@extend %font-small;
 }
 
-hgroup {
-	margin: $font-margin-hgroup;
-
-	// remove margins from headings within hgroup
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	p, {
-		margin: 0;
-	}
-}
-
 // Adds the help cursor on hover to abbreviations
 abbr[title] {
 	cursor: help;
