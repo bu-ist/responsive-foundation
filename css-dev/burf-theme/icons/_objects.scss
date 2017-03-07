@@ -452,3 +452,129 @@
 		content: "\F037";
 	}
 }
+
+/// The thermometer icon.
+/// @example scss - Add the thermometer icon to a menu item
+/// .menu-item {
+///    @extend %icon-thermometer;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-thermometer {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F201";
+	}
+}
+
+/// The toolbox icon.
+/// @example scss - Add the toolbox icon to a menu item
+/// .menu-item {
+///    @extend %icon-toolbox;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-toolbox {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F030";
+	}
+}
+
+/// The user icon.
+/// @example scss - Add the user icon to a menu item
+/// .menu-item {
+///    @extend %icon-user;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-user {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\1F464";
+	}
+}
+
+/// The users icon.
+/// @example scss - Add the users icon to a menu item
+/// .menu-item {
+///    @extend %icon-users;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-users {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\1F465";
+	}
+}
+
+/// The utensils icon.
+/// @example scss - Add the utensils icon to a menu item
+/// .menu-item {
+///    @extend %icon-utensils;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-utensils {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\1F374";
+	}
+}
+
+/// The view icon.
+/// @example scss - Add the view icon to a menu item
+/// .menu-item {
+///    @extend %icon-view;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-view {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\1F440";
+	}
+}
+
+/// The wrench icon.
+/// @example scss - Add the wrench icon to a menu item
+/// .menu-item {
+///    @extend %icon-wrench;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-wrench {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\1F527";
+	}
+}
