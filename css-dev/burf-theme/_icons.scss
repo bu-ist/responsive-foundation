@@ -10,15 +10,36 @@
 
 /// Provides base icon styles normalized across browsers and optimized
 /// for accessibility.
+/// Use this placeholder if you are loading your own font library
+/// and can't use the built-in icons because the content is different.
+/// This should go on your base element. The complimentary placeholder,
+/// `%icon`, needs to go on a `:before` or `:after` underneath.
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-base {
+	.lt-ie9:hover & {
+		// This triggers a redraw in IE to Fix IE8's :before content rendering.
+		-ms-zoom: 1;
+	}
+
+	span {
+		display: none; // Hide labels
+	}
+}
+
+/// Provides base icon styles normalized across browsers and optimized
+/// for accessibility.
 /// Use this placeholder on :before or :after if you are loading your own
 /// font library and can't use the built-in icons because the content is different.
-/// You will also need the %icon-iefix placeholder on your hoverable element if you
+/// You will also need the %icon-base placeholder on your hoverable element if you
 /// need compatibility before IE9.
 /// @group icons
 /// @access public
 /// @since 1.2.0
 
-%icon {
+%icon-content {
 	color: $color-icons;
 	display: inline-block;
 	font-family: $font-family-icons;
@@ -36,42 +57,22 @@
 	text-transform: none !important;
 	vertical-align: middle;
 	white-space: nowrap;
-
-	span {
-		display: none; // Hide labels
-	}
 }
 
-/// Provides base icon styles normalized across browsers and optimized
-/// for accessibility.
-/// Use this placeholder if you are loading your own font library
-/// and can't use the built-in icons because the content is different.
-/// This should go on your base element. The complimentary placeholder,
-/// `%icon`, needs to go on a `:before` or `:after` underneath.
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-iefix {
-	.lt-ie9:hover & {
-		// This triggers a redraw in IE to Fix IE8's :before content rendering.
-		-ms-zoom: 1;
-	}
-}
-
-/// The icon.
-/// @example scss - Add the icon to a menu item
+/// The dropbox icon.
+/// @example scss - Add the dropbox icon to a menu item
 /// .menu-item {
-///    @extend %icon-;
+///    @extend %icon-dropbox;
 /// }
 /// @group icons
 /// @access public
 /// @since 1.2.0
 
 %icon-dropbox {
-	@extend %icon-iefix;
+	@extend %icon-base;
+
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F653";
 	}
 }
@@ -86,10 +87,10 @@
 /// @since 1.2.0
 
 %icon-dropbox-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F65A";
 	}
 }
@@ -104,10 +105,10 @@
 /// @since 1.2.0
 
 %icon-facebook {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F610";
 	}
 }
@@ -122,10 +123,10 @@
 /// @since 1.2.0
 
 %icon-facebook-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F61A";
 	}
 }
@@ -140,10 +141,10 @@
 /// @since 1.2.0
 
 %icon-flickr {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F640";
 	}
 }
@@ -158,10 +159,10 @@
 /// @since 1.2.0
 
 %icon-flickr-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F644";
 	}
 }
@@ -176,10 +177,10 @@
 /// @since 1.2.0
 
 %icon-foursquare {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F690";
 	}
 }
@@ -194,10 +195,10 @@
 /// @since 1.2.0
 
 %icon-foursquare-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F691";
 	}
 }
@@ -212,10 +213,10 @@
 /// @since 1.2.0
 
 %icon-github {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F670";
 	}
 }
@@ -230,10 +231,10 @@
 /// @since 1.2.0
 
 %icon-github-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F671";
 	}
 }
@@ -248,10 +249,10 @@
 /// @since 1.2.0
 
 %icon-googleplus {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F613";
 	}
 }
@@ -266,10 +267,10 @@
 /// @since 1.2.0
 
 %icon-googleplus-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F614";
 	}
 }
@@ -284,10 +285,10 @@
 /// @since 1.2.0
 
 %icon-instagram {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F641";
 	}
 }
@@ -302,10 +303,10 @@
 /// @since 1.2.0
 
 %icon-instagram-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F64A";
 	}
 }
@@ -320,10 +321,10 @@
 /// @since 1.2.0
 
 %icon-kickstarter {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F681";
 	}
 }
@@ -338,10 +339,10 @@
 /// @since 1.2.0
 
 %icon-kickstarter-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F68A";
 	}
 }
@@ -356,10 +357,10 @@
 /// @since 1.2.0
 
 %icon-linkedin {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F612";
 	}
 }
@@ -374,10 +375,10 @@
 /// @since 1.2.0
 
 %icon-linkedin-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F61E";
 	}
 }
@@ -392,10 +393,10 @@
 /// @since 1.2.0
 
 %icon-paypal {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F680";
 	}
 }
@@ -410,10 +411,10 @@
 /// @since 1.2.0
 
 %icon-paypal-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F68B";
 	}
 }
@@ -428,10 +429,10 @@
 /// @since 1.2.0
 
 %icon-pinterest {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F650";
 	}
 }
@@ -446,10 +447,10 @@
 /// @since 1.2.0
 
 %icon-pinterest-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F651";
 	}
 }
@@ -464,10 +465,10 @@
 /// @since 1.2.0
 
 %icon-pocket {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F634";
 	}
 }
@@ -482,10 +483,10 @@
 /// @since 1.2.0
 
 %icon-pocket-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F635";
 	}
 }
@@ -500,10 +501,10 @@
 /// @since 1.2.0
 
 %icon-reddit {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F616";
 	}
 }
@@ -518,10 +519,10 @@
 /// @since 1.2.0
 
 %icon-reddit-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F617";
 	}
 }
@@ -536,10 +537,10 @@
 /// @since 1.2.0
 
 %icon-renren {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F61C";
 	}
 }
@@ -554,10 +555,10 @@
 /// @since 1.2.0
 
 %icon-retweet {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F600";
 	}
 }
@@ -572,10 +573,10 @@
 /// @since 1.2.0
 
 %icon-soundcloud {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F6B3";
 	}
 }
@@ -590,10 +591,10 @@
 /// @since 1.2.0
 
 %icon-soundcloud-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F6B4";
 	}
 }
@@ -608,10 +609,10 @@
 /// @since 1.2.0
 
 %icon-spotify {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F6B1";
 	}
 }
@@ -626,10 +627,10 @@
 /// @since 1.2.0
 
 %icon-stackexchange {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F673";
 	}
 }
@@ -644,10 +645,10 @@
 /// @since 1.2.0
 
 %icon-stackexchange-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F67B";
 	}
 }
@@ -662,10 +663,10 @@
 /// @since 1.2.0
 
 %icon-stackoverflow {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F672";
 	}
 }
@@ -680,10 +681,10 @@
 /// @since 1.2.0
 
 %icon-stackoverflow-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F67A";
 	}
 }
@@ -698,10 +699,10 @@
 /// @since 1.2.0
 
 %icon-stumbleupon {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F63A"
 	}
 }
@@ -716,10 +717,10 @@
 /// @since 1.2.0
 
 %icon-stumbleupon-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F63D"
 	}
 }
@@ -734,10 +735,10 @@
 /// @since 1.2.0
 
 %icon-twitter {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F611";
 	}
 }
@@ -752,10 +753,10 @@
 /// @since 1.2.0
 
 %icon-twitter-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F62B";
 	}
 }
@@ -770,10 +771,10 @@
 /// @since 1.2.0
 
 %icon-tumblr {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F620";
 	}
 }
@@ -788,10 +789,10 @@
 /// @since 1.2.0
 
 %icon-tumblr-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F62A";
 	}
 }
@@ -806,10 +807,10 @@
 /// @since 1.2.0
 
 %icon-vimeo {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F631";
 	}
 }
@@ -824,10 +825,10 @@
 /// @since 1.2.0
 
 %icon-vimeo-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F63C";
 	}
 }
@@ -842,10 +843,10 @@
 /// @since 1.2.0
 
 %icon-vine {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F633";
 	}
 }
@@ -860,10 +861,10 @@
 /// @since 1.2.0
 
 %icon-vine-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F63B";
 	}
 }
@@ -878,10 +879,10 @@
 /// @since 1.2.0
 
 %icon-weibo {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F61B";
 	}
 }
@@ -896,10 +897,10 @@
 /// @since 1.2.0
 
 %icon-weibo-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F61D";
 	}
 }
@@ -914,10 +915,10 @@
 /// @since 1.2.0
 
 %icon-wordpress {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F621";
 	}
 }
@@ -932,10 +933,10 @@
 /// @since 1.2.0
 
 %icon-youtube {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F630";
 	}
 }
@@ -950,19 +951,20 @@
 /// @since 1.2.0
 
 %icon-youtube-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F632";
 	}
 }
 
 
 %icon-action {
-	@extend %icon-iefix;
+	@extend %icon-base;
+
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\EE00";
 	}
 }
@@ -977,10 +979,10 @@
 /// @since 1.2.0
 
 %icon-alert {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\26A0";
 	}
 }
@@ -995,10 +997,10 @@
 /// @since 1.2.0
 
 %icon-android {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F6F3";
 	}
 }
@@ -1013,10 +1015,10 @@
 /// @since 1.2.0
 
 %icon-appleinc {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F8FF";
 	}
 }
@@ -1031,10 +1033,10 @@
 /// @since 1.2.0
 
 %icon-burst {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F552";
 	}
 }
@@ -1049,10 +1051,10 @@
 /// @since 1.2.0
 
 %icon-calculator {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E551";
 	}
 }
@@ -1067,10 +1069,10 @@
 /// @since 1.2.0
 
 %icon-cart {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E500";
 	}
 }
@@ -1085,10 +1087,10 @@
 /// @since 1.2.0
 
 %icon-code {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E780";
 	}
 }
@@ -1103,10 +1105,10 @@
 /// @since 1.2.0
 
 %icon-compass {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E671";
 	}
 }
@@ -1121,10 +1123,10 @@
 /// @since 1.2.0
 
 %icon-contract {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\EE01";
 	}
 }
@@ -1139,10 +1141,10 @@
 /// @since 1.2.0
 
 %icon-dashboard {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F000";
 	}
 }
@@ -1157,10 +1159,10 @@
 /// @since 1.2.0
 
 %icon-download {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\EB01";
 	}
 }
@@ -1175,10 +1177,10 @@
 /// @since 1.2.0
 
 %icon-downloadbox {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\EB02";
 	}
 }
@@ -1193,10 +1195,10 @@
 /// @since 1.2.0
 
 %icon-ban {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F6AB";
 	}
 }
@@ -1211,10 +1213,10 @@
 /// @since 1.2.0
 
 %icon-barchart {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F4CA";
 	}
 }
@@ -1229,10 +1231,10 @@
 /// @since 1.2.0
 
 %icon-bike {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F6B2";
 	}
 }
@@ -1247,10 +1249,10 @@
 /// @since 1.2.0
 
 %icon-book {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F4D5";
 	}
 }
@@ -1265,10 +1267,10 @@
 /// @since 1.2.0
 
 %icon-bookmark {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F516";
 	}
 }
@@ -1283,10 +1285,10 @@
 /// @since 1.2.0
 
 %icon-box {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F4E6";
 	}
 }
@@ -1301,10 +1303,10 @@
 /// @since 1.2.0
 
 %icon-briefcase {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F4BC";
 	}
 }
@@ -1319,10 +1321,10 @@
 /// @since 1.2.0
 
 %icon-bug {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F41B";
 	}
 }
@@ -1337,10 +1339,10 @@
 /// @since 1.2.0
 
 %icon-calendar {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F4C5";
 	}
 }
@@ -1355,10 +1357,10 @@
 /// @since 1.2.0
 
 %icon-camera {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F4F7";
 	}
 }
@@ -1373,10 +1375,10 @@
 /// @since 1.2.0
 
 %icon-car {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F698";
 	}
 }
@@ -1391,10 +1393,10 @@
 /// @since 1.2.0
 
 %icon-chat {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F4AC";
 	}
 }
@@ -1409,10 +1411,10 @@
 /// @since 1.2.0
 
 %icon-check {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\2713";
 	}
 }
@@ -1427,10 +1429,10 @@
 /// @since 1.2.0
 
 %icon-close {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E421";
 	}
 }
@@ -1445,10 +1447,10 @@
 /// @since 1.2.0
 
 %icon-clipboard {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F4CB";
 	}
 }
@@ -1463,10 +1465,10 @@
 /// @since 1.2.0
 
 %icon-clock {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\23F2";
 	}
 }
@@ -1481,10 +1483,10 @@
 /// @since 1.2.0
 
 %icon-cloud {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\2601";
 	}
 }
@@ -1499,10 +1501,10 @@
 /// @since 1.2.0
 
 %icon-compose {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F4DD";
 	}
 }
@@ -1517,10 +1519,10 @@
 /// @since 1.2.0
 
 %icon-contacts {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F4C7";
 	}
 }
@@ -1535,10 +1537,10 @@
 /// @since 1.2.0
 
 %icon-crosshair {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\2316";
 	}
 }
@@ -1553,10 +1555,10 @@
 /// @since 1.2.0
 
 %icon-delete {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\2421";
 	}
 }
@@ -1571,10 +1573,10 @@
 /// @since 1.2.0
 
 %icon-desktop {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F4BB";
 	}
 }
@@ -1589,10 +1591,10 @@
 /// @since 1.2.0
 
 %icon-directleft {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\25C3";
 	}
 }
@@ -1607,10 +1609,10 @@
 /// @since 1.2.0
 
 %icon-directright {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\25B9";
 	}
 }
@@ -1625,10 +1627,10 @@
 /// @since 1.2.0
 
 %icon-directup {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\25B4";
 	}
 }
@@ -1643,10 +1645,10 @@
 /// @since 1.2.0
 
 %icon-dislike {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F44E";
 	}
 }
@@ -1661,10 +1663,10 @@
 /// @since 1.2.0
 
 %icon-down {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\2B07";
 	}
 }
@@ -1679,10 +1681,10 @@
 /// @since 1.2.0
 
 %icon-dropdown {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\25BE";
 	}
 }
@@ -1697,10 +1699,10 @@
 /// @since 1.2.0
 
 %icon-emptycart {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E507";
 	}
 }
@@ -1715,10 +1717,10 @@
 /// @since 1.2.0
 
 %icon-grid {
+	@extend %icon-base;
 
-	@extend %icon-iefix;
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E9A0";
 	}
 }
@@ -1733,10 +1735,10 @@
 /// @since 1.2.0
 
 %icon-index {
+	@extend %icon-base;
 
-	@extend %icon-iefix;
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E902";
 	}
 }
@@ -1751,10 +1753,10 @@
 /// @since 1.2.0
 
 %icon-envelope {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\2709";
 	}
 }
@@ -1769,10 +1771,10 @@
 /// @since 1.2.0
 
 %icon-expand {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\2922";
 	}
 }
@@ -1787,10 +1789,10 @@
 /// @since 1.2.0
 
 %icon-fastforward {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\29E3";
 	}
 }
@@ -1805,10 +1807,10 @@
 /// @since 1.2.0
 
 %icon-file {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F4C4";
 	}
 }
@@ -1823,10 +1825,10 @@
 /// @since 1.2.0
 
 %icon-files {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\EC00";
 	}
 }
@@ -1841,10 +1843,10 @@
 /// @since 1.2.0
 
 %icon-flag {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\2691";
 	}
 }
@@ -1859,10 +1861,10 @@
 /// @since 1.2.0
 
 %icon-flask {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F4C0";
 	}
 }
@@ -1877,10 +1879,10 @@
 /// @since 1.2.0
 
 %icon-folder {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F4C1";
 	}
 }
@@ -1895,10 +1897,10 @@
 /// @since 1.2.0
 
 %icon-globe {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F310";
 	}
 }
@@ -1913,10 +1915,10 @@
 /// @since 1.2.0
 
 %icon-headphones {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F3A7";
 	}
 }
@@ -1931,10 +1933,10 @@
 /// @since 1.2.0
 
 %icon-heart {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\2665";
 	}
 }
@@ -1949,10 +1951,10 @@
 /// @since 1.2.0
 
 %icon-home {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\2302";
 	}
 }
@@ -1967,10 +1969,10 @@
 /// @since 1.2.0
 
 %icon-hyphen {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\002D";
 	}
 }
@@ -1985,10 +1987,10 @@
 /// @since 1.2.0
 
 %icon-infinity {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\221E";
 	}
 }
@@ -2003,10 +2005,10 @@
 /// @since 1.2.0
 
 %icon-info {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\2139";
 	}
 }
@@ -2021,10 +2023,10 @@
 /// @since 1.2.0
 
 %icon-key {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F511";
 	}
 }
@@ -2039,10 +2041,10 @@
 /// @since 1.2.0
 
 %icon-laptop {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\EA00";
 	}
 }
@@ -2057,10 +2059,10 @@
 /// @since 1.2.0
 
 %icon-layers {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E202";
 	}
 }
@@ -2075,10 +2077,10 @@
 /// @since 1.2.0
 
 %icon-layout {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E202";
 	}
 }
@@ -2093,10 +2095,10 @@
 /// @since 1.2.0
 
 %icon-left {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\2B05";
 	}
 }
@@ -2111,10 +2113,10 @@
 /// @since 1.2.0
 
 %icon-lightbulb {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F4A1";
 	}
 }
@@ -2129,10 +2131,10 @@
 /// @since 1.2.0
 
 %icon-lightning {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\2607";
 	}
 }
@@ -2147,10 +2149,10 @@
 /// @since 1.2.0
 
 %icon-like {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F44D";
 	}
 }
@@ -2165,10 +2167,10 @@
 /// @since 1.2.0
 
 %icon-like-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F44B";
 	}
 }
@@ -2183,10 +2185,10 @@
 /// @since 1.2.0
 
 %icon-link {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F51B";
 	}
 }
@@ -2201,10 +2203,10 @@
 /// @since 1.2.0
 
 %icon-link-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F699";
 	}
 }
@@ -2219,10 +2221,10 @@
 /// @since 1.2.0
 
 %icon-list {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\ED50";
 	}
 }
@@ -2237,10 +2239,10 @@
 /// @since 1.2.0
 
 %icon-location {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E6D0";
 	}
 }
@@ -2255,10 +2257,10 @@
 /// @since 1.2.0
 
 %icon-lock {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F512";
 	}
 }
@@ -2273,10 +2275,10 @@
 /// @since 1.2.0
 
 %icon-map {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E673";
 	}
 }
@@ -2291,10 +2293,10 @@
 /// @since 1.2.0
 
 %icon-megaphone {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F4E2";
 	}
 }
@@ -2309,10 +2311,10 @@
 /// @since 1.2.0
 
 %icon-menu {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E9A1";
 	}
 }
@@ -2327,10 +2329,10 @@
 /// @since 1.2.0
 
 %icon-mic {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F3A4";
 	}
 }
@@ -2345,10 +2347,10 @@
 /// @since 1.2.0
 
 %icon-music {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\266B";
 	}
 }
@@ -2363,10 +2365,10 @@
 /// @since 1.2.0
 
 %icon-navigate {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E670";
 	}
 }
@@ -2381,10 +2383,10 @@
 /// @since 1.2.0
 
 %icon-navigateleft {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\25C5";
 	}
 }
@@ -2399,10 +2401,10 @@
 /// @since 1.2.0
 
 %icon-navigateright {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\25BB";
 	}
 }
@@ -2417,10 +2419,10 @@
 /// @since 1.2.0
 
 %icon-navigatedown {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F501";
 	}
 }
@@ -2435,10 +2437,10 @@
 /// @since 1.2.0
 
 %icon-navigateup {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F500";
 	}
 }
@@ -2453,10 +2455,10 @@
 /// @since 1.2.0
 
 %icon-notebook {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F4D3";
 	}
 }
@@ -2471,10 +2473,10 @@
 /// @since 1.2.0
 
 %icon-notifications {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F514";
 	}
 }
@@ -2489,10 +2491,10 @@
 /// @since 1.2.0
 
 %icon-pause {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E8A0";
 	}
 }
@@ -2507,10 +2509,10 @@
 /// @since 1.2.0
 
 %icon-phone {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F4DE";
 	}
 }
@@ -2525,10 +2527,10 @@
 /// @since 1.2.0
 
 %icon-picture {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F304";
 	}
 }
@@ -2543,10 +2545,10 @@
 /// @since 1.2.0
 
 %icon-piechart {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E570";
 	}
 }
@@ -2561,10 +2563,10 @@
 /// @since 1.2.0
 
 %icon-pinboard {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F654";
 	}
 }
@@ -2579,10 +2581,10 @@
 /// @since 1.2.0
 
 %icon-pin {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F4CD";
 	}
 }
@@ -2597,10 +2599,10 @@
 /// @since 1.2.0
 
 %icon-plane {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\2708";
 	}
 }
@@ -2615,10 +2617,10 @@
 /// @since 1.2.0
 
 %icon-planet {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F280";
 	}
 }
@@ -2633,10 +2635,10 @@
 /// @since 1.2.0
 
 %icon-play {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\25B6";
 	}
 }
@@ -2651,10 +2653,10 @@
 /// @since 1.2.0
 
 %icon-plus {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\002B";
 	}
 }
@@ -2669,10 +2671,10 @@
 /// @since 1.2.0
 
 %icon-poo {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F4A9";
 	}
 }
@@ -2687,10 +2689,10 @@
 /// @since 1.2.0
 
 %icon-print {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\2399";
 	}
 }
@@ -2705,10 +2707,10 @@
 /// @since 1.2.0
 
 %icon-puzzle {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E710";
 	}
 }
@@ -2723,10 +2725,10 @@
 /// @since 1.2.0
 
 %icon-record {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\25CF";
 	}
 }
@@ -2741,10 +2743,10 @@
 /// @since 1.2.0
 
 %icon-rss {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E310";
 	}
 }
@@ -2759,10 +2761,10 @@
 /// @since 1.2.0
 
 %icon-rss-alt {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E31A";
 	}
 }
@@ -2777,10 +2779,10 @@
 /// @since 1.2.0
 
 %icon-redirect {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\21AA";
 	}
 }
@@ -2795,10 +2797,10 @@
 /// @since 1.2.0
 
 %icon-refresh {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\21BB";
 	}
 }
@@ -2813,10 +2815,10 @@
 /// @since 1.2.0
 
 %icon-replay {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\21BA";
 	}
 }
@@ -2831,10 +2833,10 @@
 /// @since 1.2.0
 
 %icon-reply {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\21A9";
 	}
 }
@@ -2849,10 +2851,10 @@
 /// @since 1.2.0
 
 %icon-rewind {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\23EA";
 	}
 }
@@ -2867,10 +2869,10 @@
 /// @since 1.2.0
 
 %icon-right {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\27A1";
 	}
 }
@@ -2885,10 +2887,10 @@
 /// @since 1.2.0
 
 %icon-rotaryphone {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\260E";
 	}
 }
@@ -2903,10 +2905,10 @@
 /// @since 1.2.0
 
 %icon-scaledown {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\EE05";
 	}
 }
@@ -2921,10 +2923,10 @@
 /// @since 1.2.0
 
 %icon-scaleup {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\EE04";
 	}
 }
@@ -2939,10 +2941,10 @@
 /// @since 1.2.0
 
 %icon-screwdriver {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F037";
 	}
 }
@@ -2957,10 +2959,10 @@
 /// @since 1.2.0
 
 %icon-share {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F601";
 	}
 }
@@ -2975,10 +2977,10 @@
 /// @since 1.2.0
 
 %icon-signpost {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E672";
 	}
 }
@@ -2993,10 +2995,10 @@
 /// @since 1.2.0
 
 %icon-smartphone {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\EA02";
 	}
 }
@@ -3011,10 +3013,10 @@
 /// @since 1.2.0
 
 %icon-search {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F50E";
 	}
 }
@@ -3029,10 +3031,10 @@
 /// @since 1.2.0
 
 %icon-settings {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\2699";
 	}
 }
@@ -3047,10 +3049,10 @@
 /// @since 1.2.0
 
 %icon-skipback {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\23EE";
 	}
 }
@@ -3065,10 +3067,10 @@
 /// @since 1.2.0
 
 %icon-skipforward {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\23ED";
 	}
 }
@@ -3083,10 +3085,10 @@
 /// @since 1.2.0
 
 %icon-star {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\22C6";
 	}
 }
@@ -3101,10 +3103,10 @@
 /// @since 1.2.0
 
 %icon-stop {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\25A0";
 	}
 }
@@ -3119,10 +3121,10 @@
 /// @since 1.2.0
 
 %icon-stock {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E579";
 	}
 }
@@ -3137,10 +3139,10 @@
 /// @since 1.2.0
 
 %icon-storagebox {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E901";
 	}
 }
@@ -3155,10 +3157,10 @@
 /// @since 1.2.0
 
 %icon-sync {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\EB82";
 	}
 }
@@ -3173,10 +3175,10 @@
 /// @since 1.2.0
 
 %icon-tablet {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\EA01";
 	}
 }
@@ -3191,10 +3193,10 @@
 /// @since 1.2.0
 
 %icon-tag {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E100";
 	}
 }
@@ -3209,10 +3211,10 @@
 /// @since 1.2.0
 
 %icon-thermometer {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F201";
 	}
 }
@@ -3227,10 +3229,10 @@
 /// @since 1.2.0
 
 %icon-thumbnails {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\E9A3";
 	}
 }
@@ -3245,10 +3247,10 @@
 /// @since 1.2.0
 
 %icon-toolbox {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\F030";
 	}
 }
@@ -3263,10 +3265,10 @@
 /// @since 1.2.0
 
 %icon-tv {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F4FA";
 	}
 }
@@ -3281,10 +3283,10 @@
 /// @since 1.2.0
 
 %icon-unlock {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F513";
 	}
 }
@@ -3299,10 +3301,10 @@
 /// @since 1.2.0
 
 %icon-up {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\2806";
 	}
 }
@@ -3317,10 +3319,10 @@
 /// @since 1.2.0
 
 %icon-upload {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\EB41";
 	}
 }
@@ -3335,10 +3337,10 @@
 /// @since 1.2.0
 
 %icon-uploadcloud {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\EB40";
 	}
 }
@@ -3353,10 +3355,10 @@
 /// @since 1.2.0
 
 %icon-user {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F464";
 	}
 }
@@ -3371,10 +3373,10 @@
 /// @since 1.2.0
 
 %icon-users {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F465";
 	}
 }
@@ -3389,10 +3391,10 @@
 /// @since 1.2.0
 
 %icon-utensils {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F374";
 	}
 }
@@ -3407,10 +3409,10 @@
 /// @since 1.2.0
 
 %icon-video {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F4F9";
 	}
 }
@@ -3425,10 +3427,10 @@
 /// @since 1.2.0
 
 %icon-view {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F440";
 	}
 }
@@ -3443,10 +3445,10 @@
 /// @since 1.2.0
 
 %icon-volume {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F508";
 	}
 }
@@ -3461,10 +3463,10 @@
 /// @since 1.2.0
 
 %icon-watch {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\231A";
 	}
 }
@@ -3479,10 +3481,10 @@
 /// @since 1.2.0
 
 %icon-wrench {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\1F527";
 	}
 }
@@ -3497,10 +3499,10 @@
 /// @since 1.2.0
 
 %icon-write {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\270E";
 	}
 }
@@ -3515,10 +3517,10 @@
 /// @since 1.2.0
 
 %icon-wifi {
-	@extend %icon-iefix;
+	@extend %icon-base;
 
 	&:before {
-		@extend %icon;
+		@extend %icon-content;
 		content: "\EB84";
 	}
 }
@@ -3528,7 +3530,7 @@
 	@include transition(color 200ms ease-in-out 0s);
 }
 .site-footer-social i {
-	@extend %icon;
+	@extend %icon-content;
 	font-size: $font-size-large;
 }
 .site-footer-social a[href*="dropbox.com"] i {
@@ -3581,23 +3583,4 @@
 }
 .site-footer-social a[href*="youtube.com"] i {
 	@extend %icon-youtube;
-}
-.site-footer-social a[href*="dropbox.com"] span,
-.site-footer-social a[href*="facebook.com"] span,
-.site-footer-social a[href*="flickr.com"] span,
-.site-footer-social a[href*="foursquare.com"] span,
-.site-footer-social a[href*="github.com"] span,
-.site-footer-social a[href*="instagram.com"] span,
-.site-footer-social a[href*="kickstarter.com"] span,
-.site-footer-social a[href*="linkedin.com"] span,
-.site-footer-social a[href*="pinterest.com"] span,
-.site-footer-social a[href*="plus.google.com"] span,
-.site-footer-social a[href*="getpocket.com"] span,
-.site-footer-social a[href*="reddit.com"] span,
-.site-footer-social a[href*="tumblr.com"] span,
-.site-footer-social a[href*="twitter.com"] span,
-.site-footer-social a[href*="vimeo.com"] span,
-.site-footer-social a[href*="vine.co"] span,
-.site-footer-social a[href*="youtube.com"] span {
-	display: none;
 }
