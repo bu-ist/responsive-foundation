@@ -48,7 +48,6 @@
 	font-family: $font-family-icons;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-	-webkit-font-smoothing: antialiased;
 	font-style: normal !important;
 	font-variant: normal !important;
 	font-weight: normal !important;
@@ -62,61 +61,87 @@
 	white-space: nowrap;
 }
 
-.site-footer-social a {
-	@include transition(color 200ms ease-in-out 0s);
-}
-.site-footer-social i {
-	@extend %icon-content;
-	font-size: $font-size-large;
-}
-.site-footer-social a[href*="dropbox.com"] i {
-	@extend %icon-dropbox;
-}
-.site-footer-social a[href*="facebook.com"] i {
-	@extend %icon-facebook;
-}
-.site-footer-social a[href*="flickr.com"] i {
-	@extend %icon-flickr;
-}
-.site-footer-social a[href*="foursquare.com"] i {
-	@extend %icon-foursquare;
-}
-.site-footer-social a[href*="github.com"] i {
-	@extend %icon-github;
-}
-.site-footer-social a[href*="instagram.com"] i {
-	@extend %icon-instagram;
-}
-.site-footer-social a[href*="kickstarter.com"] i {
-	@extend %icon-kickstarter;
-}
-.site-footer-social a[href*="linkedin.com"] i {
-	@extend %icon-linkedin;
-}
-.site-footer-social a[href*="pinterest.com"] i {
-	@extend %icon-pinterest;
-}
-.site-footer-social a[href*="plus.google.com"] i {
-	@extend %icon-googleplus;
-}
-.site-footer-social a[href*="getpocket.com"] i {
-	@extend %icon-pocket;
-}
-.site-footer-social a[href*="reddit.com"] i {
-	@extend %icon-reddit;
-}
-.site-footer-social a[href*="tumblr.com"] i {
-	@extend %icon-tumblr;
-}
-.site-footer-social a[href*="twitter.com"] i {
-	@extend %icon-twitter;
-}
-.site-footer-social a[href*="vimeo.com"] i {
-	@extend %icon-vimeo;
-}
-.site-footer-social a[href*="vine.co"] i {
-	@extend %icon-vine;
-}
-.site-footer-social a[href*="youtube.com"] i {
-	@extend %icon-youtube;
+/// Provides base icon styles normalized across browsers and optimized
+/// for accessibility.
+/// Use this placeholder on :before or :after if you are loading your own
+/// font library and can't use the built-in icons because the content is different.
+/// You will also need the %icon-base placeholder on your hoverable element if you
+/// need compatibility before IE9.
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+.site-footer-social {
+	a {
+		@include transition( color 200ms ease-in-out 0s );
+		font-size: $font-size-large;
+	}
+
+	[href*="dropbox.com"] {
+		@extend %icon-dropbox;
+	}
+
+	[href*="facebook.com"] {
+		@extend %icon-facebook;
+	}
+
+	[href*="flickr.com"] {
+		@extend %icon-flickr;
+	}
+
+	[href*="foursquare.com"] {
+		@extend %icon-foursquare;
+	}
+
+	[href*="github.com"] {
+		@extend %icon-github;
+	}
+
+	[href*="instagram.com"] {
+		@extend %icon-instagram;
+	}
+
+	[href*="kickstarter.com"] {
+		@extend %icon-kickstarter;
+	}
+
+	[href*="linkedin.com"] {
+		@extend %icon-linkedin;
+	}
+
+	[href*="pinterest.com"] {
+		@extend %icon-pinterest;
+	}
+
+	[href*="plus.google.com"] {
+		@extend %icon-googleplus;
+	}
+
+	[href*="getpocket.com"] {
+		@extend %icon-pocket;
+	}
+
+	[href*="reddit.com"] {
+		@extend %icon-reddit;
+	}
+
+	[href*="tumblr.com"] {
+		@extend %icon-tumblr;
+	}
+
+	[href*="twitter.com"] {
+		@extend %icon-twitter;
+	}
+
+	[href*="vimeo.com"] {
+		@extend %icon-vimeo;
+	}
+
+	[href*="vine.co"] {
+		@extend %icon-vine;
+	}
+
+	[href*="youtube.com"] {
+		@extend %icon-youtube;
+	}
 }
