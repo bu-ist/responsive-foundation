@@ -26,7 +26,7 @@
 	border-bottom: 1px solid $color-grayscale-d;
 }
 
-/// Controls styling for individual comments on posts.
+/// Controls styling for the comment container.
 /// @group comments
 /// @access public
 /// @since 1.0.0
@@ -41,23 +41,40 @@
 	}
 }
 
+/// Controls styling for individual comments on posts.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
 .comment-body {
-	position: relative;
-	margin: $comment-margin;
 	font-family: $font-family-comment;
 	font-size: $font-size-smaller;
+	margin: $comment-margin;
+	position: relative;
 }
-.comment-reply-link {
-	font-size: $font-size-smallest;
-	color: $color-comment-reply;
-}
-.comment-author {
-	color: $color-comment-author;
 
-	.fn {
-		font-size: $font-size-small;
-		color: $color-comment-author-name;
-	}
+/// Controls styling for the comment reply link.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
+.comment-reply-link {
+	color: $color-comment-reply;
+	font-size: $font-size-smallest;
+}
+
+/// Controls styling for the comment author.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
+.comment-author {
+	font-size: $font-size-small;
+	color: $color-comment-author-name;
+}
+
+.says {
+	color: $color-comment-author-says;
 }
 
 // TODO: change markup, then style

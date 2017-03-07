@@ -22,17 +22,17 @@ engines:
   csslint:
     enabled: false
   duplication:
-    enabled: false
+    enabled: true
     config:
       languages:
       - javascript
   eslint:
-    enabled: false
+    enabled: true
     channel: eslint-3
   fixme:
-    enabled: false
+    enabled: true
   markdownlint:
-    enabled: false
+    enabled: true
   phpcodesniffer:
     enabled: false
   phpmd:
