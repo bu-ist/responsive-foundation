@@ -1,118 +1,158 @@
-// TODO: Needs cleanup
-
 // Links
 // -----------------------------------------------------------------
 
+/// Controls base styling for all links.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 a {
 	color: $color-link;
-}
-a:visited {
-	color: $color-link-visited;
-}
 
-// Improve readability when focused and also mouse hovered in all browsers.
-a:active,
-a:hover {
-	text-decoration: none;
+	&:visited {
+		color: $color-link-visited;
+	}
+
+	// Improve readability when focused and also mouse hovered in all browsers.
+	&:hover,
+	&:active {
+		text-decoration: none;
+	}
 }
 
 // Typography
 // -----------------------------------------------------------------
 
+// TODO: Come back to these when we rework variables and generate similar to grid based on map
+
 %font-jumbo {
-	/* These classes are using %font-jumbo. */
 	margin: $font-margin-jumbo;
 	font-size: $font-size-jumbo;
 	line-height: $line-height-jumbo;
 }
+
 %font-largest {
-	/* These classes are using %font-largest. */
 	margin: $font-margin-largest;
 	font-size: $font-size-largest;
 	line-height: $line-height-largest;
 }
+
 %font-larger {
-	/* These classes are using %font-larger. */
 	margin: $font-margin-larger;
 	font-size: $font-size-larger;
 	line-height: $line-height-larger;
 }
+
 %font-large {
-	/* These classes are using %font-large. */
 	margin: $font-margin-large;
 	font-size: $font-size-large;
 	line-height: $line-height-large;
 }
+
 %font-medium {
-	/* These classes are using %font-medium. */
 	margin: $font-margin-medium;
 	font-size: $font-size-medium;
 	line-height: $line-height-medium;
 }
+
 %font-small {
-	/* These classes are using %font-small. */
 	margin: $font-margin-small;
 	font-size: $font-size-small;
 	line-height: $line-height-small;
 }
-/* Generic font size classes */
+
 %font-smaller {
-	/* These classes are using %font-smaller. */
 	margin: $font-margin-smaller;
 	font-size: $font-size-smaller;
 	line-height: $line-height-smaller;
 }
+
 %font-smallest {
-	/* These classes are using %font-smallest. */
 	margin: $font-margin-smallest;
 	font-size: $font-size-smallest;
 	line-height: $line-height-smallest;
 }
+
 %font-micro {
-	/* These classes are using %font-micro. */
 	margin: $font-margin-micro;
 	font-size: $font-size-micro;
 	line-height: $line-height-micro;
 }
 
-h1 {
-	@extend %font-jumbo;
-}
-h2 {
-	@extend %font-largest;
-}
-h3 {
-	@extend %font-larger;
-}
-h4 {
-	@extend %font-large;
-}
-h5 {
-	@extend %font-medium;
-}
-h6 {
-	@extend %font-small;
-}
+/// Controls base styles for all heading tags.
+/// @group global
+/// @access public
+/// @since 1.0.0
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+%heading-base {
 	font-family: $font-family-heading;
 	color: $color-heading;
+
+	small {
+		font-weight: normal;
+		font-size: 0.75em;
+		color: $color-heading-small;
+	}
 }
 
-h1 small,
-h2 small,
-h3 small,
-h4 small,
-h5 small,
-h6 small {
-	font-weight: normal;
-	font-size: 0.75em;
-	color: $color-heading-small;
+/// Styles for all h1 tags.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
+h1 {
+@extend %heading-base;
+	@extend %font-jumbo;
+}
+
+/// Styles for all h2 tags.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
+h2 {
+	@extend %heading-base;
+	@extend %font-largest;
+}
+
+/// Styles for all h3 tags.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
+h3 {
+	@extend %heading-base;
+	@extend %font-larger;
+}
+
+/// Styles for all h4 tags.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
+h4 {
+	@extend %heading-base;
+	@extend %font-large;
+}
+
+/// Styles for all h5 tags.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
+h5 {
+	@extend %heading-base;
+	@extend %font-medium;
+}
+
+/// Styles for all h6 tags.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
+h6 {
+	@extend %heading-base;
+	@extend %font-small;
 }
 
 hgroup {
