@@ -73,14 +73,31 @@
 	color: $color-comment-author-name;
 }
 
+/// Controls styling for the "says" text after comment author.
+/// @group comments
+/// @access public
+/// @since 2.0.0
+
 .says {
 	color: $color-comment-author-says;
 }
 
-// TODO: change markup, then style
+/// Controls styling for the date and time of comments.
+/// This was hidden in the past, but in emergency situations, comments
+/// are often used as a means of communication, both officially and unofficially.
+/// Readers need to know how recent the last reliable update was should this happen.
+/// Disable or hide only with great caution, only using the `%visually-hidden` placeholder.
+/// @group comments
+/// @access public
+/// @since 2.0.0
+
 .comment-metadata {
-	time {
-		display: none;
+	font-size: $font-size-smallest;
+
+	@include breakpoint(sm) {
+		position: absolute;
+		top: 0;
+		right: 0;
 	}
 }
 
