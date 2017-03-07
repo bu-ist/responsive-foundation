@@ -568,24 +568,6 @@
 	}
 }
 
-/// The envelope icon.
-/// @example scss - Add the envelope icon to a menu item
-/// .menu-item {
-///    @extend %icon-envelope;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-envelope {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2709";
-	}
-}
-
 /// The fastforward icon.
 /// @example scss - Add the fastforward icon to a menu item
 /// .menu-item {
@@ -1145,24 +1127,6 @@
 	}
 }
 
-/// The phone icon.
-/// @example scss - Add the phone icon to a menu item
-/// .menu-item {
-///    @extend %icon-phone;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-phone {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4DE";
-	}
-}
-
 /// The picture icon.
 /// @example scss - Add the picture icon to a menu item
 /// .menu-item {
@@ -1325,42 +1289,6 @@
 	}
 }
 
-/// The rss icon.
-/// @example scss - Add the rss icon to a menu item
-/// .menu-item {
-///    @extend %icon-rss;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-rss {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E310";
-	}
-}
-
-/// The alt alt icon.
-/// @example scss - Add the alt icon to a menu item
-/// .menu-item {
-///    @extend %icon-alt;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-rss-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E31A";
-	}
-}
-
 /// The reply icon.
 /// @example scss - Add the reply icon to a menu item
 /// .menu-item {
@@ -1394,24 +1322,6 @@
 	&::before {
 		@extend %icon-content;
 		content: "\23EA";
-	}
-}
-
-/// The rotaryphone icon.
-/// @example scss - Add the rotaryphone icon to a menu item
-/// .menu-item {
-///    @extend %icon-rotaryphone;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-rotaryphone {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\260E";
 	}
 }
 

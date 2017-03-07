@@ -1,0 +1,92 @@
+// Communication Icons
+// -----------------------------------------------------------------
+
+/// The envelope icon.
+/// @example scss - Add the envelope icon to a menu item
+/// .menu-item {
+///    @extend %icon-envelope;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-envelope {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\2709";
+	}
+}
+
+/// The phone icon.
+/// @example scss - Add the phone icon to a menu item
+/// .menu-item {
+///    @extend %icon-phone;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-phone {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\1F4DE";
+	}
+}
+
+/// The rss icon.
+/// @example scss - Add the rss icon to a menu item
+/// .menu-item {
+///    @extend %icon-rss;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-rss {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\E310";
+	}
+}
+
+/// The rss alt icon.
+/// @example scss - Add the rss alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-rss-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-rss-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\E31A";
+	}
+}
+
+/// The rotaryphone icon.
+/// @example scss - Add the rotaryphone icon to a menu item
+/// .menu-item {
+///    @extend %icon-rotaryphone;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-rotaryphone {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\260E";
+	}
+}
