@@ -1,3 +1,6 @@
+// Base Icon Styles
+// -----------------------------------------------------------------
+
 @font-face {
 	font-family: "bu-default-icons";
 	src: url( "https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot?" ) format( "embedded-opentype" );
@@ -133,24 +136,6 @@
 	}
 }
 
-/// The calculator icon.
-/// @example scss - Add the calculator icon to a menu item
-/// .menu-item {
-///    @extend %icon-calculator;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-calculator {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E551";
-	}
-}
-
 /// The cart icon.
 /// @example scss - Add the cart icon to a menu item
 /// .menu-item {
@@ -220,24 +205,6 @@
 	&::before {
 		@extend %icon-content;
 		content: "\F000";
-	}
-}
-
-/// The barchart icon.
-/// @example scss - Add the barchart icon to a menu item
-/// .menu-item {
-///    @extend %icon-barchart;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-barchart {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4CA";
 	}
 }
 
@@ -1214,24 +1181,6 @@
 	}
 }
 
-/// The piechart icon.
-/// @example scss - Add the piechart icon to a menu item
-/// .menu-item {
-///    @extend %icon-piechart;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-piechart {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E570";
-	}
-}
-
 /// The pinboard icon.
 /// @example scss - Add the pinboard icon to a menu item
 /// .menu-item {
@@ -1571,24 +1520,6 @@
 	&::before {
 		@extend %icon-content;
 		content: "\25A0";
-	}
-}
-
-/// The stock icon.
-/// @example scss - Add the stock icon to a menu item
-/// .menu-item {
-///    @extend %icon-stock;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-stock {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E579";
 	}
 }
 
