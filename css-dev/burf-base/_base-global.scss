@@ -1,40 +1,32 @@
-// TODO: Needs documentation
+// Base
+// =================================================================
 
-/* base
-================================================================= */
-
-/* Box model
------------------------------------------------------------------ */
+// Box model
+// -----------------------------------------------------------------
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
 	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-/* Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11. */
 figure {
 	margin: 0;
 }
 
-/* Base
------------------------------------------------------------------ */
+// Base
+// -----------------------------------------------------------------
 
-/* 3. Normalize font rendering in Firefox */
 html {
-	-moz-osx-font-smoothing: grayscale; /* 3 */
+	-moz-osx-font-smoothing: grayscale; // Normalizes font rendering in Firefox
 }
 
-/* Address `font-family` inconsistency between `textarea` and other form elements. */
-html,
-button,
-input,
-select,
-textarea {
-	font-family: inherit;
-}
+/// Base styles and typography for all HTML elements.
+/// @group global
+/// @access public
+/// @since 1.0.0
 
 body {
 	color: $color-base;
@@ -43,8 +35,13 @@ body {
 	line-height: $line-height-base;
 }
 
+/// Controls spacing between section tags.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 section {
-	margin: 60px 0 0 0;
+	margin: 60px 0 0;
 }
 
 img,

@@ -145,6 +145,11 @@ legend {
 	width: 100%;
 }
 
+select,
+textarea {
+	font-family: inherit; // Address `font-family` inconsistency between `textarea` and other form elements.
+}
+
 /// The general styles for labels on form fields.
 /// See [MDN on label](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label).
 /// @group forms
