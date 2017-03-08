@@ -1,454 +1,79 @@
-// Object Icons
-// -----------------------------------------------------------------
+// =================================================================
+// Status Icons
+	// alert
+	// check
+	// info
+	// megaphone
+// =================================================================
 
-/// The book icon.
-/// @example scss - Add the book icon to a menu item
+/// The alert icon.
+/// @example scss - Add the alert icon to a menu item
 /// .menu-item {
-///    @extend %icon-book;
+///    @extend %icon-alert;
 /// }
 /// @group icons
 /// @access public
 /// @since 1.2.0
 
-%icon-book {
+%icon-alert {
 	@extend %icon-base;
 
 	&::before {
 		@extend %icon-content;
-		content: "\1F4D5";
+		content: "\26A0";
 	}
 }
 
-/// The box icon.
-/// @example scss - Add the box icon to a menu item
+/// The check icon.
+/// @example scss - Add the check icon to a menu item
 /// .menu-item {
-///    @extend %icon-box;
+///    @extend %icon-check;
 /// }
 /// @group icons
 /// @access public
 /// @since 1.2.0
 
-%icon-box {
+%icon-check {
 	@extend %icon-base;
 
 	&::before {
 		@extend %icon-content;
-		content: "\1F4E6";
+		content: "\2713";
 	}
 }
 
-/// The briefcase icon.
-/// @example scss - Add the briefcase icon to a menu item
+/// The info icon.
+/// @example scss - Add the info icon to a menu item
 /// .menu-item {
-///    @extend %icon-briefcase;
+///    @extend %icon-info;
 /// }
 /// @group icons
 /// @access public
 /// @since 1.2.0
 
-%icon-briefcase {
+%icon-info {
 	@extend %icon-base;
 
 	&::before {
 		@extend %icon-content;
-		content: "\1F4BC";
+		content: "\2139";
 	}
 }
 
-/// The bug icon.
-/// @example scss - Add the bug icon to a menu item
+/// The megaphone icon.
+/// @example scss - Add the megaphone icon to a menu item
 /// .menu-item {
-///    @extend %icon-bug;
+///    @extend %icon-megaphone;
 /// }
 /// @group icons
 /// @access public
 /// @since 1.2.0
 
-%icon-bug {
+%icon-megaphone {
 	@extend %icon-base;
 
 	&::before {
 		@extend %icon-content;
-		content: "\1F41B";
-	}
-}
-
-/// The chat icon.
-/// @example scss - Add the chat icon to a menu item
-/// .menu-item {
-///    @extend %icon-chat;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-chat {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4AC";
-	}
-}
-
-/// The clipboard icon.
-/// @example scss - Add the clipboard icon to a menu item
-/// .menu-item {
-///    @extend %icon-clipboard;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-clipboard {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4CB";
-	}
-}
-
-/// The code icon.
-/// @example scss - Add the code icon to a menu item
-/// .menu-item {
-///    @extend %icon-code;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-code {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E780";
-	}
-}
-
-/// The contacts icon.
-/// @example scss - Add the contacts icon to a menu item
-/// .menu-item {
-///    @extend %icon-contacts;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-contacts {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4C7";
-	}
-}
-
-/// The dashboard icon.
-/// @example scss - Add the dashboard icon to a menu item
-/// .menu-item {
-///    @extend %icon-dashboard;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-dashboard {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F000";
-	}
-}
-
-
-/// The flask icon.
-/// @example scss - Add the flask icon to a menu item
-/// .menu-item {
-///    @extend %icon-flask;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-flask {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F4C0";
-	}
-}
-
-/// The heart icon.
-/// @example scss - Add the heart icon to a menu item
-/// .menu-item {
-///    @extend %icon-heart;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-heart {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2665";
-	}
-}
-
-/// The home icon.
-/// @example scss - Add the home icon to a menu item
-/// .menu-item {
-///    @extend %icon-home;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-home {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2302";
-	}
-}
-
-/// The key icon.
-/// @example scss - Add the key icon to a menu item
-/// .menu-item {
-///    @extend %icon-key;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-key {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F511";
-	}
-}
-
-/// The lightbulb icon.
-/// @example scss - Add the lightbulb icon to a menu item
-/// .menu-item {
-///    @extend %icon-lightbulb;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-lightbulb {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4A1";
-	}
-}
-
-/// The lightning icon.
-/// @example scss - Add the lightning icon to a menu item
-/// .menu-item {
-///    @extend %icon-lightning;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-lightning {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2607";
-	}
-}
-
-/// The lock icon.
-/// @example scss - Add the lock icon to a menu item
-/// .menu-item {
-///    @extend %icon-lock;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-lock {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F512";
-	}
-}
-
-/// The unlock icon.
-/// @example scss - Add the unlock icon to a menu item
-/// .menu-item {
-///    @extend %icon-unlock;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-unlock {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F513";
-	}
-}
-
-/// The notebook icon.
-/// @example scss - Add the notebook icon to a menu item
-/// .menu-item {
-///    @extend %icon-notebook;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-notebook {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4D3";
-	}
-}
-
-/// The notifications icon.
-/// @example scss - Add the notifications icon to a menu item
-/// .menu-item {
-///    @extend %icon-notifications;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-notifications {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F514";
-	}
-}
-
-/// The pin icon.
-/// @example scss - Add the pin icon to a menu item
-/// .menu-item {
-///    @extend %icon-pin;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-pin {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4CD";
-	}
-}
-
-/// The pinboard icon.
-/// @example scss - Add the pinboard icon to a menu item
-/// .menu-item {
-///    @extend %icon-pinboard;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-pinboard {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F654";
-	}
-}
-
-
-/// The planet icon.
-/// @example scss - Add the planet icon to a menu item
-/// .menu-item {
-///    @extend %icon-planet;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-planet {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F280";
-	}
-}
-
-/// The poo icon.
-/// @example scss - Add the poo icon to a menu item
-/// .menu-item {
-///    @extend %icon-poo;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-poo {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4A9";
-	}
-}
-
-/// The puzzle icon.
-/// @example scss - Add the puzzle icon to a menu item
-/// .menu-item {
-///    @extend %icon-puzzle;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-puzzle {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E710";
-	}
-}
-
-/// The screwdriver icon.
-/// @example scss - Add the screwdriver icon to a menu item
-/// .menu-item {
-///    @extend %icon-screwdriver;
-/// }
-/// @group icons
-/// @access public
-/// @since 1.2.0
-
-%icon-screwdriver {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F037";
+		content: "\1F4E2";
 	}
 }
