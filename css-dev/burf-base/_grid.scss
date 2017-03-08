@@ -5,11 +5,23 @@
 // TODO: Needs documentation
 // TODO: Needs col-0 classes
 
-// placeholders for theme use
-// -----------------------------------------------------------------
+/// Base styles for all wrapper elements.
+/// @group global
+/// @access public
+/// @since 1.2.0
+
 %wrapper-styles {
 	overflow: hidden;
 }
+
+/// Base styles for all container elements.
+/// You may wish to extend this on a page where you can't use
+/// `.content-container` for some reason - such as on a landing
+/// page where you are overriding that class to use the full width
+/// of the screen.
+/// @group global
+/// @access public
+/// @since 1.2.0
 
 %container-styles {
 	@extend %clearfix;
@@ -31,6 +43,13 @@
 	}
 }
 
+/// Base styles for containers that hold grid elements.
+/// A negative margin is included to counteract the grid item
+/// margins.
+/// @group global
+/// @access public
+/// @since 1.2.0
+
 %row-styles {
 	@extend %clearfix;
 	margin: $grid-row-margin;
@@ -40,13 +59,34 @@
 	}
 }
 
+/// Base styles for children of a row.
+/// Usually used for grid items.
+/// @group global
+/// @access public
+/// @since 1.2.0
+
 %row-child-styles {
 	padding: $grid-column-padding;
 }
 
+/// Base styles for a container whose children should
+/// be equal heights.
+/// @group utilities
+/// @access public
+/// @since 1.2.0
+
 %equal-height-parent {
 	overflow: hidden;
 }
+
+/// Base styles for children of the equal-height-parent.
+/// These styles will make children appear to be equal heights,
+/// even if the actual content is different heights.
+/// If you need padding on the bottom of the child items, you might have to adjust
+/// the margin-bottom to be lower.
+/// @group utilities
+/// @access public
+/// @since 1.2.0
 
 %equal-height-child {
 	@include breakpoint( md ) {
@@ -91,15 +131,6 @@
 // Builds placeholder classes for the grid.
 // Available classes follow the pattern below.
 
-// Friendly classes for common column needs, avaiable for the following breakpoints and sizes:
-// 	Breakpoints: sm, md
-// 	Sizes: 1/4, 1/3, 1/2, 2/3, 3/4, whole column
-// 	Examples:
-// 		Make something take up 1/2 of available space starting at the small breakpoint:
-// 			@extend %col-sm-one-half;
-// 		Make something take up 3/4 of available space starting at the medium breakpoint:
-// 			@extend %col-md-three-quarter;
-
 // For your less obvious grid needs:
 // 	Basic usage (no breakpoints):
 // 		@extend %col-3;
@@ -119,36 +150,6 @@
 // 	Pull: position ___ number of columns to the pull (does not affect document flow)
 // 		Example: Position something 6 columns to the pull without affecting anything else
 // 		Usage: @extend %col-md-pull-6;
-
-//	Grid controls (see _variables.scss)
-//		$grid-number-columns
-//			Controls number of columns in grid.
-//			Required: Columns must be neatly divisible by 2, 3, and 4.
-//			Default: 12
-//		$grid-breakpoints
-//			The breakpoints you want grids to begin at.
-//			Required: Small and medium if you use burf-theme. Large is optional.
-//			Default: "small", "medium"
-//		$grid-margins
-//			Turn on optional margin classes.
-//			Default: false
-//		$grid-margin-width
-//			Your desired grid margin, in %. Default value works out to 20px on large screens.
-//			Relies on $grid-margins being set to "true".
-//			Default: 2.6
-//		$grid-push
-//			Turn on optional push classes.
-//			Default: false
-//		$grid-pull
-//			Turn on optional pull classes.
-//			Default: false
-//		$grid-offset
-//			Turn on optional offset classes.
-//			Default: false
-//		$grid-classes
-//			Choose to output numeric grid classes (ie, .col-sm-5)
-//			Note that friendly grid classes always print.
-//			Default: true
 
 // Base styles
 %col-float {
@@ -183,7 +184,7 @@
 // Initial grid setup
 $grid-widths: ();
 
-@for $i from 1 through $grid-number-columns {
+@for $i from 0 through $grid-number-columns {
 	// Determine current base width
 	$percentage: ($i / $grid-number-columns)*100;
 	// Create a list of widths for gridBuild to use later
@@ -191,16 +192,19 @@ $grid-widths: ();
 
 	// Create basic grid classes, no breakpoints
 	// Example output: %col-1
-	%col-#{$i} {
-		@extend %col-base;
-		@extend %col-float;
-		@include gridBuild(width, $percentage);
+
+	@if ($i != 0) {
+		%col-#{$i} {
+			@extend %col-base;
+			@extend %col-float;
+			@include gridBuild(width, $percentage);
+		}
 	}
 }
 
 $grid-widths-margins: ();
 
-@for $i from 1 through $grid-number-columns {
+@for $i from 0 through $grid-number-columns {
 	$percentage: ($i / $grid-number-columns)*100;
 	$grid-widths-margins: append($grid-widths-margins, ($percentage - $grid-margin-width), comma);
 }
@@ -208,7 +212,7 @@ $grid-widths-margins: ();
 // Breakpoints time
 
 @each $breakpoint in $grid-breakpoints {
-	@for $i from 1 through $grid-number-columns {
+	@for $i from 0 through $grid-number-columns {
 		// Add to base styles
 		%col-#{$breakpoint}-#{$i} {
 			@extend %col-base;
@@ -225,14 +229,16 @@ $grid-widths-margins: ();
 			margin-left: -$grid-margin-width#{"%"};
 		}
 
-		@for $i from 1 through length($grid-widths) {
+		@for $i from 0 to length($grid-widths) {
 			// Get percentage from earlier
-			$percentage: nth($grid-widths, $i);
+			$percentage: nth($grid-widths, ($i + 1));
 
 			%col-#{$breakpoint} {
-				&-#{$i} {
-					@include gridBuild(width, $percentage);
-					float: left;
+				@if ($i != 0) {
+					&-#{$i} {
+						@include gridBuild(width, $percentage);
+						float: left;
+					}
 				}
 
 				@if map-get($grid-supports, push) {
@@ -249,13 +255,13 @@ $grid-widths-margins: ();
 
 				@if map-get($grid-supports, offset) {
 					&-offset-#{$i} {
-						@include gridBuild(margin-left, $percentage);
+						@include gridBuild( margin-left, $percentage );
 					}
 				}
-				@if map-get($grid-supports, margin) {
+				@if map-get($grid-supports, margin) and ($i != 0) {
 					&-margin-#{$i} {
-						$margin-percentage: nth($grid-widths-margins, $i);
-						@include gridBuild(width, $margin-percentage);
+						$margin-percentage: nth( $grid-widths-margins, $i + 1 );
+						@include gridBuild( width, $margin-percentage );
 						float: left;
 					}
 				}
@@ -273,15 +279,21 @@ $widths: (
 	half:				$grid-number-columns * (1/2),
 	two-third:		$grid-number-columns * (2/3),
 	three-quarter:	$grid-number-columns * (3/4),
-	full: 			$grid-number-columns
+	full: 			$grid-number-columns,
+	remove: 			0
 );
 
-// Creates friendly classes and placeholders
+/// Creates friendly classes and placeholders.
+/// @example
+/// 		Make something take up 1/2 of available space starting at the small breakpoint:
+/// 			@extend %col-sm-one-half;
+/// 		Make something take up 3/4 of available space starting at the medium breakpoint:
+/// 			@extend %col-md-three-quarter;
 
 @each $width, $columns in $widths {
 	.col-#{$width},
 	%col-#{$width} {
-		@extend %col-#{$columns};
+		@extend %col-#{$columns} !optional;
 	}
 
 	@each $breakpoint in $grid-breakpoints {
@@ -289,13 +301,13 @@ $widths: (
 		%col-#{$breakpoint} {
 
 			&-#{$width} {
-				@extend %col-#{$breakpoint}-#{$columns};
+				@extend %col-#{$breakpoint}-#{$columns} !optional;
 			}
 
 			@each $feature, $supported in $grid-supports {
 				@if $supported {
 					&-#{$feature}-#{$width} {
-						@extend %col-#{$breakpoint}-#{$feature}-#{$columns};
+						@extend %col-#{$breakpoint}-#{$feature}-#{$columns} !optional;
 					}
 				}
 			}
@@ -304,20 +316,20 @@ $widths: (
 }
 
 @if $grid-classes {
-	@for $i from 1 through $grid-number-columns {
+	@for $i from 0 through $grid-number-columns {
 		.col-#{$i} {
-			@extend %col-#{$i};
+			@extend %col-#{$i} !optional;
 		}
 		@each $breakpoint in $grid-breakpoints {
 			.col-#{$breakpoint} {
 				&-#{$i} {
-					@extend %col-#{$breakpoint}-#{$i};
+					@extend %col-#{$breakpoint}-#{$i} !optional;
 				}
 
 				@each $feature, $supported in $grid-supports {
 					@if $supported {
 						&-#{$feature}-#{$i} {
-							@extend %col-#{$breakpoint}-#{$feature}-#{$i};
+							@extend %col-#{$breakpoint}-#{$feature}-#{$i} !optional;
 						}
 					}
 				}
