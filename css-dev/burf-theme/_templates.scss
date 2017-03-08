@@ -121,43 +121,45 @@
 // News & Archive Template
 // -----------------------------------------------------------------
 
-.news-posts h2,
-.archive .content-container h2 {
+.post-headline {
 	margin-bottom: 10px;
 }
-.news-posts .post,
-.archive .content-container article {
+
+.post {
 	position: relative;
 	padding-top: 30px;
 	margin-top: 30px;
 	border: $border-news-post;
 	border-width: $border-width-news-post;
+
+	&:first-child {
+		padding-top: 0;
+		margin-top: 0;
+		border-top: none;
+	}
 }
-.news-posts .post:first-child,
-.archive .content-container article:first-child {
-	padding-top: 0;
-	margin-top: 0;
-	border-top: none;
-}
-.news-posts .meta,
-.archive .content-container .entry-meta,
-.archive .content-container .categories,
-.archive .content-container .tags,
-.archive .content-container .taxonomies {
+
+.meta {
 	margin-bottom: 20px;
 	font-family: $font-family-news-meta;
 	font-size: $font-size-news-meta;
+
+	span {
+		&:before {
+			content: "\a0\b7\a0";
+			color: $color-news-meta-before;
+		}
+
+		&:first-child:before {
+			content: "";
+		}
+	}
+
+	em {
+		color: $color-news-meta-em;
+	}
 }
-.news-posts .meta span:before {
-	content: "\a0\b7\a0";
-	color: $color-news-meta-before;
-}
-.news-posts .meta span:first-child:before {
-	content: "";
-}
-.news-posts .meta em {
-	color: $color-news-meta-em;
-}
+
 .paging-navigation {
 	@extend %clearfix;
 	padding-top: 30px;
