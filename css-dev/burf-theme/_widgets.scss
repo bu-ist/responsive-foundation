@@ -47,8 +47,6 @@
 	ul {
 		list-style: none;
 		list-style-image: none;
-		margin: 0;
-		padding: 0;
 	}
 }
 
@@ -343,14 +341,24 @@ $_width-calendar-date: 48px;
 	}
 }
 
+.widgetnav,
+.widget_archive ul,
+.widget_categories ul { // maybe not though, there are nested categories
+	padding: 0;
+	margin: 0;
+}
+
 /// Styles the BU Calendar list page date picker.
 /// @group calendar
 /// @access public
-/// @since 1.0.0
+/// @since 2.0.0
 
-.month {
+.widget-calendar-picker {
 	color: $color-calendar-month-link;
-	width: 100%;
+
+	.month {
+		width: 100%;
+	}
 
 	caption {
 		color: $color-calendar-month-caption;
@@ -390,5 +398,18 @@ $_width-calendar-date: 48px;
 	.today {
 		background: $color-calendar-month-link-today-bg;
 		color: $color-calendar-month-link-today;
+	}
+}
+
+/// Styles the BU Calendar list page topics widget.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.calendar-topics {
+	padding: 0;
+
+	ul {
+		padding-left: 20px;
 	}
 }
