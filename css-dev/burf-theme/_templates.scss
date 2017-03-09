@@ -372,6 +372,12 @@
 	position: absolute;
 }
 
+/// Handles styling for the link to an individual event
+/// in the calendar listing page.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
 .calendar-list-event-link {
 	color: $color-calendar-event-link;
 	display: block;
@@ -383,50 +389,6 @@
 	}
 }
 
-/* sidebar */
-.month {
-	width: 100%;
-	caption {
-		font-family: $font-family-calendar-month-caption;
-		font-style: normal;
-		font-size: $font-size-calendar-month-caption;
-		color: $color-calendar-month-caption;
-	}
-	th,
-	td {
-		width: 14.285714285%;
-		padding: $padding-calendar-month-cell;
-		font-family: $font-family-calendar-month-cell;
-		text-align: center;
-	}
-	th {
-		background: $color-calendar-month-th-bg;
-		color: $color-calendar-month-th;
-	}
-	td {
-		a {
-			color: $color-calendar-month-link;
-			&:hover,
-			&::focus {
-				color: $color-calendar-month-link-hover;
-			}
-		}
-	}
-	.out {
-		background: $color-calendar-month-link-out-bg;
-		a {
-			color: $color-calendar-month-link-out;
-			text-decoration: none;
-		}
-	}
-	.today {
-		background: $color-calendar-month-link-today-bg;
-		a {
-			color: $color-calendar-month-link-today;
-			text-decoration: none;
-		}
-	}
-}
 .calendar-topics ul {
 	padding-left: 20px;
 }
