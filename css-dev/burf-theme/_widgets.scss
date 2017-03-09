@@ -107,21 +107,8 @@
 
 .widget-bu-posts {
 
-	.thumb {
-		display: block;
-		float: left;
-		margin: 5px 15px 15px 0;
-		max-width: 45%;
-	}
-
 	.published {
 		font-size: $font-size-widget-post-date;
-	}
-
-	.meta {
-		color: $color-widget-post-meta;
-		font-size: $font-size-widget-post-meta;
-		margin: 0;
 	}
 }
 
@@ -146,9 +133,21 @@
 /// @access public
 /// @since 1.0.0
 
-.widget-headline {
+.widget-post-headline {
 	font-size: $font-size-widget-post-headline;
 	line-height: $line-height-widget-post-headline;
+	margin: 0;
+}
+
+/// Handles styling for metadata in the
+/// BU Posts widget (news widget).
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+.widget-post-meta {
+	color: $color-widget-post-meta;
+	font-size: $font-size-widget-post-meta;
 	margin: 0;
 }
 
@@ -158,10 +157,22 @@
 /// @access public
 /// @since 1.0.0
 
-.widget-excerpt {
+.widget-post-excerpt {
 	font-size: $font-size-widget-post-excerpt;
 	line-height: $line-height-widget-post-excerpt;
 	margin: 4px 0 0;
+}
+
+/// Handles styling for the thumbnail in the
+/// BU Posts widget (news widget).
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+.widget-post-thumbnail {
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 10px;
 }
 
 // Content Nav
