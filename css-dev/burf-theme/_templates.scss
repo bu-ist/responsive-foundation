@@ -139,6 +139,10 @@
 	}
 }
 
+.post-thumb {
+	float: right;
+}
+
 .meta {
 	margin-bottom: 20px;
 	font-family: $font-family-news-meta;
@@ -189,18 +193,6 @@
 	}
 	.tags {
 		margin-bottom:24px;
-	}
-	.content-container {
-		article {
-			position: relative;
-			padding-top: 30px;
-			margin-top: 30px;
-			border: $border-news-post;
-			border-width: $border-width-news-post;
-			&:first-child {
-				border: none;
-			}
-		}
 	}
 }
 
