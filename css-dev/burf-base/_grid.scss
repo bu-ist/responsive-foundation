@@ -212,12 +212,6 @@ $grid-widths-margins: ();
 // Breakpoints time
 
 @each $breakpoint in $grid-breakpoints {
-	@for $i from 0 through $grid-number-columns {
-		// Add to base styles
-		%col-#{$breakpoint}-#{$i} {
-			@extend %col-base;
-		}
-	}
 
 	@include breakpoint( $breakpoint, false ) {
 		%col-#{$breakpoint}-margin-base {
@@ -265,6 +259,21 @@ $grid-widths-margins: ();
 						float: left;
 					}
 				}
+			}
+		}
+	}
+
+	@for $i from 0 through $grid-number-columns {
+		// Add to base styles
+		%col-#{$breakpoint}-#{$i} {
+			@extend %col-base;
+		}
+
+		@if map-get($grid-supports, margin) and ($i != 0) {
+			// Add to base styles
+			%col-#{$breakpoint}-margin-#{$i} {
+				@extend %col-margin-base;
+				@extend %col-#{$breakpoint}-margin-base;
 			}
 		}
 	}
