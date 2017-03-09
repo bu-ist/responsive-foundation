@@ -125,7 +125,7 @@
 	margin-bottom: 10px;
 }
 
-.post {
+.post-part {
 	position: relative;
 	padding-top: 30px;
 	margin-top: 30px;
@@ -171,12 +171,14 @@
 		@extend %button-styles;
 		@extend %button-styles-primary;
 	}
-	.nav-previous {
-		float: left;
-	}
-	.nav-next {
-		float: right;
-	}
+}
+
+.nav-previous {
+	float: left;
+}
+
+.nav-next {
+	float: right;
 }
 
 // Homepage set to show Posts
@@ -204,19 +206,21 @@
 
 // Single Post
 // -----------------------------------------------------------------
+.single-meta {
+	@extend %card-styles;
+	@include border-radius($border-radius-single-meta);
+	padding: $padding-single-meta;
+	margin-bottom: 30px;
+	border: $border-single-meta;
+	border-width: $border-width-single-meta;
+	border-left-color: $color-single-meta-border-left;
+	background-color: $color-single-meta-bg;
+	font-size: $font-size-single-meta;
+}
+
 .single {
 	.content-area {
-		.meta {
-			@extend %card-styles;
-			@include border-radius($border-radius-single-meta);
-			padding: $padding-single-meta;
-			margin-bottom: 30px;
-			border: $border-single-meta;
-			border-width: $border-width-single-meta;
-			border-left-color: $color-single-meta-border-left;
-			background-color: $color-single-meta-bg;
-			font-size: $font-size-single-meta;
-		}
+
 	}
 	.meta {
 		.post-title {
