@@ -392,45 +392,51 @@
 // Calendar Single Event
 // -----------------------------------------------------------------
 
-.single-event .label {
-	font-family: $font-family-single-event-label;
-	font-weight: $font-weight-calendar-label;
-	font-size: $font-size-smaller;
-	color: $color-single-event-label;
-	text-transform: uppercase;
-}
-.date-summary {
+.single-event-schedule {
 	@extend %card-styles;
 	margin: 0 0 20px 0;
+
 	@include breakpoint(sm) {
 		float: right;
 		width: 33.33333333333333%;
 		margin: 0 0 20px 20px;
 	}
+
 	ul {
 		padding: 0;
 		margin: 0;
 	}
+
 	li {
 		margin-top: 10px;
 		list-style: none;
+
 		&:first-child {
 			margin-top: 0;
 		}
+
 		em {
 			display: none;
 		}
 	}
-	.label {
-		display: block;
-	}
-	.time {
-		display: block;
-		font-weight: bold;
-		font-size: $font-size-medium;
-		color: #000000;
-	}
 }
+
+.single-event-label {
+	color: $color-single-event-label;
+	display: block;
+	font-family: $font-family-single-event-label;
+	font-size: $font-size-smaller;
+	font-weight: $font-weight-calendar-label;
+	text-transform: uppercase;
+}
+
+.single-event-time {
+	display: block;
+	font-weight: bold;
+	font-size: $font-size-medium;
+	color: #000000;
+}
+
 .single-event .description {
 	margin: $font-margin-base;
 }
