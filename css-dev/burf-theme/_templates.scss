@@ -238,18 +238,6 @@
 	margin-top: 10px;
 }
 
-.single {
-	.meta {
-
-
-		p:last-child {
-			margin-bottom: 0;
-		}
-		p {
-			margin-bottom: 10px;
-		}
-	}
-}
 .archive-link {
 	@extend %button-styles;
 	@extend %button-styles-primary;
