@@ -84,9 +84,6 @@
 
 	.widget {
 		@extend %col-sm-margin-half;
-		@include breakpoint(sm) {
-			padding: 0;
-		}
 	}
 }
 
@@ -121,9 +118,18 @@
 // News & Archive Template
 // -----------------------------------------------------------------
 
-.post-headline {
-	margin-bottom: 10px;
+.meta {
+	font-family: $font-family-news-meta;
+
+	em {
+		color: $color-news-meta-em;
+	}
 }
+
+/// Handles styling for posts in news listings and archive pages.
+/// @group news
+/// @access public
+/// @since 2.0.0
 
 .post-part {
 	position: relative;
@@ -139,11 +145,32 @@
 	}
 }
 
+/// Handles styling for headlines in the post template partial,
+/// usually used on post listings and archive pages.
+/// @group news
+/// @access public
+/// @since 2.0.0
+
+.post-headline {
+	margin-bottom: 10px;
+}
+
+/// Handles styling for thumbnails in the post template partial,
+/// usually used on post listings and archive pages.
+/// @group news
+/// @access public
+/// @since 2.0.0
+
 .post-thumb {
 	float: right;
 }
 
-.meta {
+/// Handles styling for metadata in post parts.
+/// @group news
+/// @access public
+/// @since 2.0.0
+
+.post-part-meta {
 	margin-bottom: 20px;
 	font-family: $font-family-news-meta;
 	font-size: $font-size-news-meta;
@@ -157,10 +184,6 @@
 		&:first-child:before {
 			content: "";
 		}
-	}
-
-	em {
-		color: $color-news-meta-em;
 	}
 }
 
@@ -189,38 +212,41 @@
 // -----------------------------------------------------------------
 .single-meta {
 	@extend %card-styles;
-	@include border-radius($border-radius-single-meta);
-	padding: $padding-single-meta;
-	margin-bottom: 30px;
-	border: $border-single-meta;
-	border-width: $border-width-single-meta;
-	border-left-color: $color-single-meta-border-left;
+	@include border-radius( $border-radius-single-meta );
+
 	background-color: $color-single-meta-bg;
+	border-left-color: $color-single-meta-border-left;
+	border-width: $border-width-single-meta;
+	border: $border-single-meta;
+	font-size: $font-size-single-meta;
+	margin-bottom: 30px;
+	padding: $padding-single-meta;
+}
+
+.single-meta-post-title {
+	margin-bottom: 10px;
+}
+
+.single-meta-byline {
+	margin-bottom: 10px;
+	font-weight: normal;
 	font-size: $font-size-single-meta;
 }
 
-.single {
-	.content-area {
+.single-meta-info {
+	margin-bottom: 0;
+	margin-top: 10px;
+}
 
-	}
+.single {
 	.meta {
-		.post-title {
-			margin-bottom: 10px;
-		}
-		.byline {
-			margin-bottom: 10px;
-			font-weight: normal;
-			font-size: $font-size-single-meta;
-		}
+
+
 		p:last-child {
 			margin-bottom: 0;
 		}
 		p {
 			margin-bottom: 10px;
-			font-family: $font-family-news-meta;
-		}
-		em {
-			color: $color-news-meta-em;
 		}
 	}
 }
