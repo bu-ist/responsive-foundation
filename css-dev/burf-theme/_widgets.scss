@@ -100,18 +100,6 @@
 // BU Posts
 // -----------------------------------------------------------------
 
-/// Handles styling for the BU Posts widget (news widget).
-/// @group widgets
-/// @access public
-/// @since 1.0.0
-
-.widget-bu-posts {
-
-	.published {
-		font-size: $font-size-widget-post-date;
-	}
-}
-
 /// Handles styling for posts in the BU Posts widget (news widget).
 /// We put the margin on top because the markup displayed when "random"
 /// is selected (specifically, the script and noscript tags it outputs)
@@ -137,6 +125,16 @@
 	font-size: $font-size-widget-post-headline;
 	line-height: $line-height-widget-post-headline;
 	margin: 0;
+}
+
+/// Handles styling for the published date in the
+/// BU Posts widget (news widget).
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+.widget-posts-published {
+	font-size: $font-size-widget-post-date;
 }
 
 /// Handles styling for metadata in the
@@ -170,6 +168,16 @@
 /// @since 1.0.0
 
 .widget-post-thumbnail {
+	margin-bottom: 10px;
+}
+
+/// Handles styling for the thumbnail in the
+/// BU Posts widget (news widget) in the title and date format.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+.widget-post-thumbnail-title-date {
 	float: right;
 	margin-left: 10px;
 	margin-bottom: 10px;
