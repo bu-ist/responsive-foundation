@@ -10,9 +10,20 @@
 
 .meta {
 	font-family: $font-family-news-meta;
+	font-size: $font-size-news-meta;
+	margin-bottom: 20px;
+}
 
-	em {
-		color: $color-news-meta-em;
+.post-meta {
+	span {
+		&::before {
+			color: $color-news-meta-before;
+			content: "\a0\b7\a0";
+		}
+
+		&:first-child::before {
+			content: "";
+		}
 	}
 }
 
@@ -89,26 +100,4 @@
 
 .post-thumb {
 	float: right;
-}
-
-/// Handles styling for metadata in post parts.
-/// @group news
-/// @access public
-/// @since 2.0.0
-
-.post-part-meta {
-	font-family: $font-family-news-meta;
-	font-size: $font-size-news-meta;
-	margin-bottom: 20px;
-
-	span {
-		&::before {
-			color: $color-news-meta-before;
-			content: "\a0\b7\a0";
-		}
-
-		&:first-child::before {
-			content: "";
-		}
-	}
 }
