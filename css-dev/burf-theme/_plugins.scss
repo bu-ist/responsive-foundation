@@ -89,12 +89,14 @@
 // Profiles
 // -----------------------------------------------------------------
 
-.profile-listing {
+.profile-listing,
+.profile-shortcode {
 	@extend %clearfix;
+	padding: 0;
+}
 
-	ul {
-		padding: 0;
-	}
+.profile-listing,
+.profile-shortcode {
 
 	li {
 		position: relative;
@@ -124,7 +126,7 @@
 		text-decoration: underline;
 	}
 
-	.basic {
+	&.basic {
 		border-top: $border-profiles;
 
 		li {
@@ -149,7 +151,7 @@
 		}
 	}
 
-	.advanced {
+	&.advanced {
 		@extend %clearfix;
 
 		li {
@@ -174,7 +176,7 @@
 		}
 	}
 
-	.mini {
+	&.mini {
 		@extend %clearfix;
 
 		li {
