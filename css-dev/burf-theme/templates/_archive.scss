@@ -14,19 +14,6 @@
 	margin-bottom: 20px;
 }
 
-.post-meta {
-	span {
-		&::before {
-			color: $color-news-meta-before;
-			content: "\a0\b7\a0";
-		}
-
-		&:first-child::before {
-			content: "";
-		}
-	}
-}
-
 /// Handles the previous and next links at the bottom of post listings.
 /// @group news
 /// @access public
@@ -90,6 +77,25 @@
 
 .post-headline {
 	margin-bottom: 10px;
+}
+
+/// Handles styling for metadata in the post template partial,
+/// usually used on post listings and archive pages.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+.post-meta {
+	span {
+		&::before {
+			color: $color-news-meta-before;
+			content: "\a0\b7\a0";
+		}
+
+		&:first-child::before {
+			content: "";
+		}
+	}
 }
 
 /// Handles styling for thumbnails in the post template partial,
