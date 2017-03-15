@@ -1110,19 +1110,26 @@ $border-width-comment-form:                  3px !default;
 // Plugins and Shortcodes
 // -----------------------------------------------------------------
 
-/// Controls the color of borders on collapsibles.
+/// Controls the color of icons on collapsibles.
 /// @group content
 /// @access public
-/// @since 1.0.0
+/// @since 2.0.0
 
-$color-collapsible-after-border:           $color-grayscale-c !default;
+$color-collapsible-icon:           $color-icons !default;
 
-/// Controls the color of borders on collapsibles when you hover.
+/// Controls the color of icons on collapsibles when you hover.
 /// @group content
 /// @access public
-/// @since 1.0.0
+/// @since 2.0.0
 
-$color-collapsible-after-border-hover:     $color-link !default;
+$color-collapsible-icon-hover:     $color-link !default;
+
+/// Controls the border between collapsibles.
+/// @group content
+/// @access public
+/// @since 2.0.0
+
+$border-collapsible:     1px solid $color-grayscale-c !default;
 
 /// -----------------------------------------------------------------
 // -----------------------------------------------------------------

@@ -15,49 +15,49 @@
 // Collapsible Divs
 // -----------------------------------------------------------------
 
+/// Styles a collapsible item.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+.bu_collapsible_container {
+	padding: .5em 0;
+	position: relative;
+
+	& + & {
+		border-top: $border-collapsible;
+	}
+}
+
 /// Styles the header on a collapsible item.
 /// @group content
 /// @access public
 /// @since 1.0.0
 
 .bu_collapsible {
+	@extend %icon-plus;
 	margin-bottom: 0;
 	padding-right: 30px;
 	position: relative;
 
-	&::after {
-		border: 8px solid transparent;
-		border-top-color: $color-collapsible-after-border;
-		content: "";
-		height: 0;
-		margin-top: -4px;
+	&::before {
+		color: $color-collapsible-icon;
 		position: absolute;
-		right: 0;
+		right: 7px;
 		top: 50%;
-		width: 0;
+		margin-top: -10px;
+		font-size: 16px;
+	}
 
-		.bu_collapsible_open & {
-			border-bottom-color: $color-collapsible-after-border;
-			border-top-color: transparent;
-			margin-top: -12px;
+	&:hover,
+	&:focus {
+		&::before {
+			color: $color-collapsible-icon-hover;
 		}
 	}
-}
 
-/// Styles the shape after the collapsible title.
-/// @group content
-/// @access public
-/// @since 1.0.0
-
-.bu_collapsible:hover,
-.bu_collapsible:focus {
-	&::after {
-		border-top-color: $color-collapsible-after-border-hover;
-
-		.bu_collapsible_open & {
-			border-bottom-color: $color-collapsible-after-border-hover;
-			border-top-color: transparent;
-		}
+	.bu_collapsible_open & {
+		@extend %icon-hyphen;
 	}
 }
 
