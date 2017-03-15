@@ -37,8 +37,8 @@
 	}
 
 	.content-area {
-		@include breakpoint(md) {
-		float: left;
+		@include breakpoint( md ) {
+			float: left;
 			width: 66.66667%;
 		}
 	}
@@ -77,10 +77,10 @@
 %template-narrow-sidebar {
 	@extend %clearfix;
 	@extend %col-sm-margin-parent;
-	width: auto;
-	float: none;
 	clear: both;
+	float: none;
 	margin-bottom: $widget-margin-bottom;
+	width: auto;
 
 	.widget {
 		@extend %col-sm-margin-half;
@@ -92,15 +92,16 @@
 %remove-template-narrow-sidebar {
 	@extend %sidebar-styles;
 	@extend %container-styles;
-	@include breakpoint(md) {
-		float: left;
+
+	@include breakpoint( md ) {
 		clear: none;
+		float: left;
 	}
 
 	.widget {
-		width: 100%;
-		margin-left: 0;
 		margin-bottom: $widget-margin-bottom;
+		margin-left: 0;
+		width: 100%;
 	}
 }
 
@@ -133,10 +134,10 @@
 
 .paging-navigation {
 	@extend %clearfix;
-	padding-top: 30px;
-	margin-top: 30px;
 	border: $border-news-post;
 	border-width: $border-width-news-post;
+	margin-top: 30px;
+	padding-top: 30px;
 
 	a {
 		@extend %button-styles;
@@ -168,16 +169,16 @@
 /// @since 2.0.0
 
 .post-part {
-	position: relative;
-	padding-top: 30px;
-	margin-top: 30px;
 	border: $border-news-post;
 	border-width: $border-width-news-post;
+	margin-top: 30px;
+	padding-top: 30px;
+	position: relative;
 
 	&:first-child {
-		padding-top: 0;
+		border-top: 0;
 		margin-top: 0;
-		border-top: none;
+		padding-top: 0;
 	}
 }
 
@@ -207,17 +208,17 @@
 /// @since 2.0.0
 
 .post-part-meta {
-	margin-bottom: 20px;
 	font-family: $font-family-news-meta;
 	font-size: $font-size-news-meta;
+	margin-bottom: 20px;
 
 	span {
-		&:before {
-			content: "\a0\b7\a0";
+		&::before {
 			color: $color-news-meta-before;
+			content: "\a0\b7\a0";
 		}
 
-		&:first-child:before {
+		&:first-child::before {
 			content: "";
 		}
 	}
@@ -235,9 +236,9 @@
 	@extend %card-styles;
 	@include border-radius( $border-radius-single-meta );
 	background-color: $color-single-meta-bg;
+	border: $border-single-meta;
 	border-left-color: $color-single-meta-border-left;
 	border-width: $border-width-single-meta;
-	border: $border-single-meta;
 	font-size: $font-size-single-meta;
 	margin-bottom: 30px;
 	padding: $padding-single-meta;
@@ -258,9 +259,9 @@
 /// @since 2.0.0
 
 .single-meta-byline {
-	margin-bottom: 10px;
-	font-weight: normal;
 	font-size: inherit;
+	font-weight: normal;
+	margin-bottom: 10px;
 }
 
 /// Handles styling for categories and tags in the metadata card at the bottom of posts.
@@ -331,8 +332,8 @@
 /// @since 2.0.0
 
 .calendar-list-events {
-	padding: 0;
 	margin-bottom: 3em;
+	padding: 0;
 }
 
 /// Handles styling for an individual event on a given day
@@ -342,10 +343,10 @@
 /// @since 2.0.0
 
 .calendar-list-event {
-	list-style: none;
-	font-size: .9em;
+	font-size: 0.9em;
 	line-height: 1.3;
-	margin-bottom: .5em;
+	list-style: none;
+	margin-bottom: 0.5em;
 }
 
 /// Handles styling for the first event in a group of events at
@@ -356,8 +357,8 @@
 
 .calendar-list-event-first-at-time {
 	border-top: 1px dotted $color-grayscale-c;
-	padding-top: .75em;
-	margin-bottom: .75em;
+	margin-bottom: 0.75em;
+	padding-top: 0.75em;
 }
 
 /// Handles styling for an individual event on a given day
@@ -394,22 +395,22 @@
 
 .single-event-schedule {
 	@extend %card-styles;
-	margin: 0 0 20px 0;
+	margin: 0 0 20px;
 
-	@include breakpoint(sm) {
+	@include breakpoint( sm ) {
 		float: right;
-		width: 33.33333333333333%;
 		margin: 0 0 20px 20px;
+		width: 33.33333333333333%;
 	}
 
 	ul {
-		padding: 0;
 		margin: 0;
+		padding: 0;
 	}
 
 	li {
-		margin-top: 10px;
 		list-style: none;
+		margin-top: 10px;
 
 		&:first-child {
 			margin-top: 0;
@@ -431,10 +432,10 @@
 }
 
 .single-event-time {
+	color: $color-grayscale-0;
 	display: block;
-	font-weight: bold;
 	font-size: $font-size-medium;
-	color: #000000;
+	font-weight: bold;
 }
 
 .single-event .description {
@@ -442,21 +443,21 @@
 }
 
 .single-event .additional-details dd {
-	margin: 0 0 20px 0;
+	margin: 0 0 20px;
 }
 
 // 404 page
 
 .error-404 {
 	#quicksearch {
-		position: static;
-		display: block;
 		background: transparent !important; // required to override Responsive layout styles
-		border: none;
-		padding: 0;
+		border: 0;
+		display: block;
+		font-size: 16.5px;
 		margin: 50px 0;
 		max-width: 500px;
-		font-size: 16.5px;
+		padding: 0;
+		position: static;
 
 		fieldset {
 			padding: 0;
