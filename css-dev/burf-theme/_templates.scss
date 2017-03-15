@@ -836,8 +836,114 @@
 	@extend %single-event-info;
 }
 
+/// Handles styling for the registration label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
 
-// 404 page
+.single-event-registration-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for registration information in the single calendar
+/// event schedule. If you set color on this class, you may wish to add
+/// `color: inherit;` to `.single-event-registration-link`, which controls
+/// the link style for this type of information.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-registration-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the contact organization label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-contact-org-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for contact organization information in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-contact-org-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the contact name label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-contact-name-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for contact name information in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-contact-name-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the contact email label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-contact-email-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for contact email information in the single calendar
+/// event schedule. If you set color on this class, you may wish to add
+/// `color: inherit;` to `.single-event-contact-email-link`, which controls
+/// the link style for this type of information.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-contact-email-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the contact phone label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-contact-phone-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for contact phone information in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-contact-phone-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the 404 page.
+/// @group templates
+/// @access public
+/// @since 2.0.0
 
 .error-404 {
 	#quicksearch {
