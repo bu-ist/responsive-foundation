@@ -198,6 +198,7 @@
 	ul {
 		border: $border-widget-contentnav;
 		border-width: $border-width-widget-contentnav;
+		padding: 0;
 
 		ul {
 			border: 0;
@@ -412,4 +413,13 @@ $_width-calendar-date: 48px;
 	ul {
 		padding-left: 20px;
 	}
+}
+
+/// Styles the blog list in the blogroll widget.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.blogroll {
+	padding: 0;
 }
