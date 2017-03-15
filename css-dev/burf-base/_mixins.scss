@@ -198,6 +198,16 @@
 	width: 1px;
 }
 
+%remove-visually-hidden {
+	clip: auto;
+	clip-path: none;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+
 // If primary stylesheet indicates media query support (e.g. style.scss), output media queries. If not (e.g. ie.scss), output the block WITHOUT @media wrapper.
 // Usage: @include breakpoint(md) {...}
 // $skiplgMQforIE tells this mixin whether or not to skip the lg point styles on THIS set of styles for IE8.
