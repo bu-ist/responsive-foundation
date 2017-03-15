@@ -440,6 +440,7 @@
 /// Controls whether or not to make the event time into a sentence.
 /// By default, this is visually hidden so screen readers still read
 /// it as a sentence, but it is displayed as list information.
+/// You can override this with `@extend %remove-visually-hidden`.
 /// @group calendar
 /// @access public
 /// @since 2.0.0
@@ -468,7 +469,12 @@
 	@extend %single-event-schedule-list-item;
 }
 
-.single-event-label {
+/// Handles styling for all single calendar labels.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+%single-event-label {
 	color: $color-single-event-label;
 	display: block;
 	font-family: $font-family-single-event-label;
@@ -477,12 +483,34 @@
 	text-transform: uppercase;
 }
 
+/// Handles styling for labels in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for times in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
 .single-event-time {
 	color: $color-grayscale-0;
 	display: block;
 	font-size: $font-size-medium;
 	font-weight: bold;
 }
+
+/// Handles styling for times in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
 
 .single-event .description {
 	margin: $font-margin-base;
@@ -491,6 +519,157 @@
 .single-event .additional-details dd {
 	margin: 0 0 20px;
 }
+
+/// Handles styling for speakers in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-speakers {
+	@extend %single-event-label;
+}
+
+/// Handles styling for the audience in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-audience {
+	@extend %single-event-label;
+}
+
+/// Handles styling for departments in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-departments {
+	@extend %single-event-label;
+}
+
+/// Handles styling for location in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-location {
+	@extend %single-event-label;
+}
+
+/// Handles styling for building location in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-location-building {
+	@extend %single-event-label;
+}
+
+/// Handles styling for room location in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-location-room {
+	@extend %single-event-label;
+}
+
+/// Handles styling for multiple fees in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fees {
+	@extend %single-event-label;
+}
+
+/// Handles styling for a single fee in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee {
+	@extend %single-event-label;
+}
+
+/// Handles styling for the general fee in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-general {
+	@extend %single-event-label;
+}
+
+/// Handles styling for the public fee in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-public {
+	@extend %single-event-label;
+}
+
+/// Handles styling for the staff fee in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-staff {
+	@extend %single-event-label;
+}
+
+/// Handles styling for the student fee in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-student {
+	@extend %single-event-label;
+}
+
+/// Handles styling for the BU student fee in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-bu-student {
+	@extend %single-event-label;
+}
+
+/// Handles styling for senior fee in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-senior {
+	@extend %single-event-label;
+}
+
+/// Handles styling for deadlines in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-deadline {
+	@extend %single-event-label;
+}
+
 
 // 404 page
 
