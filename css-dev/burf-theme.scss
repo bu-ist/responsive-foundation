@@ -39,7 +39,13 @@
 @import 'burf-theme/comments';
 
 // templates
-@import 'burf-theme/templates';
+@import 'burf-theme/templates/base';
+	@import 'burf-theme/templates/archive'; // News and archive
+	@import 'burf-theme/templates/single'; // Single post
+	@import 'burf-theme/templates/calendar-archive'; // Calendar listing
+	@import 'burf-theme/templates/calendar-single'; // Calendar event
+	@import 'burf-theme/templates/profile-archive'; // Profiles listing
+	@import 'burf-theme/templates/profile-single'; // Single profile
 
 // widgets
 @import 'burf-theme/widgets';
