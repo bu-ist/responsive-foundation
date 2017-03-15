@@ -393,33 +393,79 @@
 // Calendar Single Event
 // -----------------------------------------------------------------
 
+/// Handles styling for the container around start and end times on
+/// a single calendar event.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
 .single-event-schedule {
 	@extend %card-styles;
+	@extend %col-sm-third;
 	margin: 0 0 20px;
 
 	@include breakpoint( sm ) {
 		float: right;
-		margin: 0 0 20px 20px;
-		width: 33.33333333333333%;
+		margin-left: $grid-margin-width#{"%"};
 	}
+}
 
-	ul {
-		margin: 0;
-		padding: 0;
+/// Handles styling for the list of start and end times on
+/// a single calendar event.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-schedule-list {
+	margin: 0;
+	padding: 0;
+}
+
+/// Handles styling for list items in the schedule of
+/// a single calendar event. Use if you need to add something to the
+/// calendar schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+%single-event-schedule-list-item {
+	list-style: none;
+	margin-top: 10px;
+
+	&:first-child {
+		margin-top: 0;
 	}
+}
 
-	li {
-		list-style: none;
-		margin-top: 10px;
+/// Controls whether or not to make the event time into a sentence.
+/// By default, this is visually hidden so screen readers still read
+/// it as a sentence, but it is displayed as list information.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
 
-		&:first-child {
-			margin-top: 0;
-		}
+.event-time-make-sentence {
+	@extend %visuallyhidden;
+}
 
-		em {
-			display: none;
-		}
-	}
+/// Handles styling for start time in the schedule of
+/// a single calendar event.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-schedule-start {
+	@extend %single-event-schedule-list-item;
+}
+
+/// Handles styling for end time in the schedule of
+/// a single calendar event.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-schedule-end {
+	@extend %single-event-schedule-list-item;
 }
 
 .single-event-label {
