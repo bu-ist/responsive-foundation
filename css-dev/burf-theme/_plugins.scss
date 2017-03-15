@@ -97,7 +97,6 @@
 
 .profile-listing,
 .profile-shortcode {
-
 	li {
 		position: relative;
 		margin-bottom: 25px;
@@ -126,99 +125,99 @@
 		text-decoration: underline;
 	}
 
-	&.basic {
-		border-top: $border-profiles;
-
-		li {
-			min-height: 100px;
-			padding: 25px 65px 25px 0;
-			margin-bottom: 0;
-			border-bottom: $border-profiles;
-		}
-
-		figure {
-			position: absolute;
-			right: 0;
-			overflow: hidden;
-			width: 50px;
-			height: 50px;
-		}
-	}
-
 	figure {
 		img {
 			width: 100%;
 		}
 	}
+}
 
-	&.advanced {
-		@extend %clearfix;
+.profile-format-basic {
+	border-top: $border-profiles;
 
-		li {
-			@extend %col-md-third;
-		}
+	li {
+		min-height: 100px;
+		padding: 25px 65px 25px 0;
+		margin-bottom: 0;
+		border-bottom: $border-profiles;
+	}
 
-		a {
-			display: block;
-			padding: 0 15px;
-			text-align: center;
-		}
+	figure {
+		position: absolute;
+		right: 0;
+		overflow: hidden;
+		width: 50px;
+		height: 50px;
+	}
+}
 
-		figure {
-			overflow: hidden;
-			width: 150px;
-			height: 150px;
-			margin: 0 auto 15px;
-		}
+.profile-format-advanced {
+	@extend %clearfix;
 
-		li:nth-child(3n+1) {
-			clear: left;
+	li {
+		@extend %col-md-third;
+	}
+
+	a {
+		display: block;
+		padding: 0 15px;
+		text-align: center;
+	}
+
+	figure {
+		overflow: hidden;
+		width: 150px;
+		height: 150px;
+		margin: 0 auto 15px;
+	}
+
+	li:nth-child(3n+1) {
+		clear: left;
+	}
+}
+
+.profile-format-mini {
+	@extend %clearfix;
+
+	li {
+		@extend %col-md-6;
+		min-height: 90px;
+		padding: 0 0 15px 75px;
+		margin: 0;
+
+		@include breakpoint(md) {
+			padding: 0 0 15px 95px;
+			min-height: 110px;
 		}
 	}
 
-	&.mini {
-		@extend %clearfix;
+	li:nth-child(2n+1) {
+		clear: left;
+		padding-right: 15px;
+	}
 
-		li {
-			@extend %col-md-6;
-			min-height: 90px;
-			padding: 0 0 15px 75px;
-			margin: 0;
+	.name {
+		font-family: $font-family-profile-name;
+		font-size: $font-size-profile-mini-name;
+	}
 
-			@include breakpoint(md) {
-				padding: 0 0 15px 95px;
-				min-height: 110px;
-			}
-		}
+	.summary {
+		margin-top: 5px;
+		font-size: $font-size-profile-mini-email;
+		line-height: $line-height-profile-mini-email;
+		word-wrap: break-word;
+	}
 
-		li:nth-child(2n+1) {
-			clear: left;
-			padding-right: 15px;
-		}
-
-		.name {
-			font-family: $font-family-profile-name;
-			font-size: $font-size-profile-mini-name;
-		}
-
-		.summary {
-			margin-top: 5px;
-			font-size: $font-size-profile-mini-email;
-			line-height: $line-height-profile-mini-email;
-			word-wrap: break-word;
-		}
-
-		figure {
-			position: absolute;
-			top: 0;
-			left: 0;
-			overflow: hidden;
-			width: 60px;
-			height: 60px;
-			@include breakpoint(md) {
-				width: 80px;
-				height: 80px;
-			}
+	figure {
+		position: absolute;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		width: 60px;
+		height: 60px;
+		@include breakpoint(md) {
+			width: 80px;
+			height: 80px;
 		}
 	}
 }
