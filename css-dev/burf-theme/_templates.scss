@@ -506,168 +506,334 @@
 	font-weight: bold;
 }
 
-/// Handles styling for times in the single calendar
-/// event schedule.
+/// Handles styling for the event description in the single calendar
+/// event template.
 /// @group calendar
 /// @access public
 /// @since 2.0.0
 
-.single-event .description {
+.single-event-description {
 	margin: $font-margin-base;
 }
 
-.single-event .additional-details dd {
+/// Handles styling for additional details in the single calendar
+/// event template.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-additional-details {
 	margin: 0 0 20px;
 }
 
-/// Handles styling for speakers in the single calendar
+/// Handles styling for additional details information in the
+/// single calendar event template.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+%single-event-info {
+	margin: 0 0 20px;
+}
+
+/// Handles styling for the speakers label in the single calendar
 /// event schedule.
 /// @group calendar
 /// @access public
 /// @since 2.0.0
 
-.single-event-speakers {
+.single-event-speakers-label {
 	@extend %single-event-label;
 }
 
-/// Handles styling for the audience in the single calendar
+/// Handles styling for speaker information in the single calendar
 /// event schedule.
 /// @group calendar
 /// @access public
 /// @since 2.0.0
 
-.single-event-audience {
+.single-event-speakers-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the audience label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-audience-label {
 	@extend %single-event-label;
 }
 
-/// Handles styling for departments in the single calendar
+/// Handles styling for audience information in the single calendar
 /// event schedule.
 /// @group calendar
 /// @access public
 /// @since 2.0.0
 
-.single-event-departments {
+.single-event-audience-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the departments label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-departments-label {
 	@extend %single-event-label;
 }
 
-/// Handles styling for location in the single calendar
+/// Handles styling for department information in the single calendar
 /// event schedule.
 /// @group calendar
 /// @access public
 /// @since 2.0.0
 
-.single-event-location {
+.single-event-departments-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the location label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-location-label {
 	@extend %single-event-label;
 }
 
-/// Handles styling for building location in the single calendar
+/// Handles styling for location information in the single calendar
 /// event schedule.
 /// @group calendar
 /// @access public
 /// @since 2.0.0
 
-.single-event-location-building {
+.single-event-location-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the building location label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-location-building-label {
 	@extend %single-event-label;
 }
 
-/// Handles styling for room location in the single calendar
+/// Handles styling for building location information in the single calendar
 /// event schedule.
 /// @group calendar
 /// @access public
 /// @since 2.0.0
 
-.single-event-location-room {
+.single-event-location-building-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the room location label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-location-room-label {
 	@extend %single-event-label;
 }
 
-/// Handles styling for multiple fees in the single calendar
+/// Handles styling for room location information in the single calendar
 /// event schedule.
 /// @group calendar
 /// @access public
 /// @since 2.0.0
 
-.single-event-fees {
+.single-event-location-room-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the multiple fees label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fees-label {
 	@extend %single-event-label;
 }
 
-/// Handles styling for a single fee in the single calendar
+/// Handles styling for multiple fee information in the single calendar
 /// event schedule.
 /// @group calendar
 /// @access public
 /// @since 2.0.0
 
-.single-event-fee {
+.single-event-fees-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the a single fee label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-label {
 	@extend %single-event-label;
 }
 
-/// Handles styling for the general fee in the single calendar
+/// Handles styling for a single fee information in the single calendar
 /// event schedule.
 /// @group calendar
 /// @access public
 /// @since 2.0.0
 
-.single-event-fee-general {
+.single-event-fee-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the general fee label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-general-label {
 	@extend %single-event-label;
 }
 
-/// Handles styling for the public fee in the single calendar
+/// Handles styling for general fee information in the single calendar
 /// event schedule.
 /// @group calendar
 /// @access public
 /// @since 2.0.0
 
-.single-event-fee-public {
+.single-event-fee-general-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the public fee label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-public-label {
 	@extend %single-event-label;
 }
 
-/// Handles styling for the staff fee in the single calendar
+/// Handles styling for public fee information in the single calendar
 /// event schedule.
 /// @group calendar
 /// @access public
 /// @since 2.0.0
 
-.single-event-fee-staff {
+.single-event-fee-public-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the staff fee label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-staff-label {
 	@extend %single-event-label;
 }
 
-/// Handles styling for the student fee in the single calendar
+/// Handles styling for staff fee information in the single calendar
 /// event schedule.
 /// @group calendar
 /// @access public
 /// @since 2.0.0
 
-.single-event-fee-student {
+.single-event-fee-staff-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the student fee label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-student-label {
 	@extend %single-event-label;
 }
 
-/// Handles styling for the BU student fee in the single calendar
+/// Handles styling for student fee information in the single calendar
 /// event schedule.
 /// @group calendar
 /// @access public
 /// @since 2.0.0
 
-.single-event-fee-bu-student {
+.single-event-fee-student-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the BU student fee label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-bu-student-label {
 	@extend %single-event-label;
 }
 
-/// Handles styling for senior fee in the single calendar
+/// Handles styling for BU student fee information in the single calendar
 /// event schedule.
 /// @group calendar
 /// @access public
 /// @since 2.0.0
 
-.single-event-fee-senior {
+.single-event-fee-bu-student-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the senior fee label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-senior-label {
 	@extend %single-event-label;
 }
 
-/// Handles styling for deadlines in the single calendar
+/// Handles styling for senior fee information in the single calendar
 /// event schedule.
 /// @group calendar
 /// @access public
 /// @since 2.0.0
 
-.single-event-deadline {
+.single-event-fee-senior-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the deadlines label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-deadline-label {
 	@extend %single-event-label;
+}
+
+/// Handles styling for deadline information in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-deadline-info {
+	@extend %single-event-info;
 }
 
 
