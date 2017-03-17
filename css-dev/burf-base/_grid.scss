@@ -184,11 +184,16 @@
 // Initial grid setup
 $grid-widths: ();
 
+$grid-widths-margins: ();
+
 @for $i from 0 through $grid-number-columns {
 	// Determine current base width
 	$percentage: ($i / $grid-number-columns)*100;
 	// Create a list of widths for gridBuild to use later
 	$grid-widths: append($grid-widths, $percentage, comma);
+
+	$percentage: ($i / $grid-number-columns)*100;
+	$grid-widths-margins: append($grid-widths-margins, ($percentage - $grid-margin-width), comma);
 
 	// Create basic grid classes, no breakpoints
 	// Example output: %col-1
@@ -202,12 +207,46 @@ $grid-widths: ();
 	}
 }
 
-$grid-widths-margins: ();
+@for $i from 0 to length($grid-widths) {
+	// Get percentage from earlier
+	$percentage: nth($grid-widths, ($i + 1));
 
-@for $i from 0 through $grid-number-columns {
-	$percentage: ($i / $grid-number-columns)*100;
-	$grid-widths-margins: append($grid-widths-margins, ($percentage - $grid-margin-width), comma);
+	%col {
+		@if ($i != 0) {
+			&-#{$i} {
+				@include gridBuild(width, $percentage);
+				float: left;
+			}
+		}
+
+		@if map-get($grid-supports, push) {
+			&-push-#{$i} {
+				@include gridBuild(left, $percentage);
+			}
+		}
+
+		@if map-get($grid-supports, pull) {
+			&-pull-#{$i} {
+				@include gridBuild(right, $percentage);
+			}
+		}
+
+		@if map-get($grid-supports, offset) {
+			&-offset-#{$i} {
+				@include gridBuild( margin-left, $percentage );
+			}
+		}
+
+		@if map-get($grid-supports, margin) and ($i != 0) {
+			&-margin-#{$i} {
+				$margin-percentage: nth( $grid-widths-margins, $i + 1 );
+				@include gridBuild( width, $margin-percentage );
+				float: left;
+			}
+		}
+	}
 }
+
 
 // Breakpoints time
 
@@ -305,6 +344,15 @@ $widths: (
 		@extend %col-#{$columns} !optional;
 	}
 
+	@each $feature, $supported in $grid-supports {
+		@if $supported {
+			.col-#{$feature}-#{$width},
+			%col-#{$feature}-#{$width} {
+				@extend %col-#{$feature}-#{$columns} !optional;
+			}
+		}
+	}
+
 	@each $breakpoint in $grid-breakpoints {
 		.col-#{$breakpoint},
 		%col-#{$breakpoint} {
@@ -328,6 +376,13 @@ $widths: (
 	@for $i from 0 through $grid-number-columns {
 		.col-#{$i} {
 			@extend %col-#{$i} !optional;
+		}
+		@each $feature, $supported in $grid-supports {
+			@if $supported {
+				.col-#{$feature}-#{$i} {
+					@extend %col-#{$feature}-#{$i} !optional;
+				}
+			}
 		}
 		@each $breakpoint in $grid-breakpoints {
 			.col-#{$breakpoint} {
