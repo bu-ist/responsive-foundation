@@ -89,91 +89,87 @@
 // Profiles
 // -----------------------------------------------------------------
 
-.profile-listing,
-.profile-shortcode {
+.profile-listing {
 	@extend %clearfix;
 	padding: 0;
 }
 
-.profile-listing,
-.profile-shortcode {
-	li {
-		position: relative;
-		margin-bottom: 25px;
-		list-style: none;
-	}
+.profile-item {
+	position: relative;
+	margin-bottom: 25px;
+	list-style: none;
+}
 
-	p {
-		margin-bottom: 0;
-	}
-
-	a {
-		text-decoration: none;
-	}
-
-	.profile-title {
-		display: block;
-		font-family: $font-family-profile-title;
-		font-size: $font-size-profile-title;
-		color: $color-profile-title;
-	}
-
-	.profile-name {
-		font-family: $font-family-profile-name;
-		font-size: $font-size-profile-name;
-		color: $color-profile-name;
-		text-decoration: underline;
-	}
-
-	figure {
-		img {
-			width: 100%;
-		}
+.profile-photo {
+	img {
+		width: 100%;
 	}
 }
 
-.profile-format-basic {
+.profile-title {
+	display: block;
+	font-family: $font-family-profile-title;
+	font-size: $font-size-profile-title;
+	color: $color-profile-title;
+}
+
+.profile-name {
+	font-family: $font-family-profile-name;
+	font-size: $font-size-profile-name;
+	color: $color-profile-name;
+	text-decoration: underline;
+	margin-bottom: 0;
+}
+
+.profile-link {
+	text-decoration: none;
+}
+
+.profile-format-basic,
+.profile-format-default {
 	border-top: $border-profiles;
+}
 
-	li {
-		min-height: 100px;
-		padding: 25px 65px 25px 0;
-		margin-bottom: 0;
-		border-bottom: $border-profiles;
-	}
+.profile-item-basic,
+.profile-item-default {
+	min-height: 100px;
+	padding: 25px 65px 25px 0;
+	margin-bottom: 0;
+	border-bottom: $border-profiles;
+}
 
-	figure {
-		position: absolute;
-		right: 0;
-		overflow: hidden;
-		width: 50px;
-		height: 50px;
-	}
+.profile-photo-basic,
+.profile-photo-default {
+	position: absolute;
+	right: 0;
+	overflow: hidden;
+	width: 50px;
+	height: 50px;
 }
 
 .profile-format-advanced {
 	@extend %clearfix;
+}
 
-	li {
-		@extend %col-md-third;
-	}
+.profile-item-advanced {
+	@extend %col-md-third;
 
-	a {
-		display: block;
-		padding: 0 15px;
-		text-align: center;
-	}
-
-	figure {
-		overflow: hidden;
-		width: 150px;
-		height: 150px;
-		margin: 0 auto 15px;
-	}
-
-	li:nth-child(3n+1) {
+	&:nth-child(3n+1) {
 		clear: left;
 	}
+}
+
+.profile-link-advanced {
+	display: block;
+	padding: 0 15px;
+	text-align: center;
+}
+
+.profile-photo-advanced {
+	overflow: hidden;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto 15px;
 }
 
 .profile-format-mini {
