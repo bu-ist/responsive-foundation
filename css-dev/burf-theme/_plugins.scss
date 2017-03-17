@@ -151,11 +151,25 @@
 	@extend %clearfix;
 }
 
-.profile-item-advanced {
-	@extend %col-md-third;
+$_profile-adv-cols-xs: $grid-number-columns / $profiles-advanced-cols-xs;
+$_profile-adv-cols-md: $grid-number-columns / $profiles-advanced-cols-md;
 
-	&:nth-child(3n+1) {
+.profile-item-advanced {
+	@extend %col-xs-#{$_profile-adv-cols-xs};
+	@extend %col-md-#{$_profile-adv-cols-md};
+
+	&:nth-child( #{$profiles-advanced-cols-xs}n+1 ) {
 		clear: left;
+
+		@include breakpoint(md) {
+			clear: none;
+		}
+	}
+
+	@include breakpoint(md) {
+		&:nth-child( #{$profiles-advanced-cols-md}n+1 ) {
+			clear: left;
+		}
 	}
 }
 
