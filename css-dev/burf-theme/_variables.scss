@@ -861,6 +861,14 @@ $profiles-advanced-cols-xs:			2 !default;
 
 $profiles-advanced-cols-md:			3 !default;
 
+/// Controls the number of profiles in a row in the mini format.
+/// Kicks in at the small breakpoint.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+$profiles-mini-cols-sm:			2 !default;
+
 // Profiles Template: List Mini
 // -----------------------------------------------------------------
 
@@ -880,21 +888,21 @@ $color-profile-mini-border:                $color-grayscale-e !default;
 
 $font-size-profile-mini-name:               $font-size-small !default;
 
-/// Controls the font size of emails on the mini profile format
+/// Controls the font size of descriptions on the mini profile format
 /// in the profiles shortcode.
 /// @group profiles
 /// @access public
 /// @since 1.0.0
 
-$font-size-profile-mini-email:              $font-size-smaller !default;
+$font-size-profile-mini-description:              $font-size-smaller !default;
 
-/// Controls the spacing between name and email on the mini profile format
+/// Controls the spacing between name and description on the mini profile format
 /// in the profiles shortcode.
 /// @group profiles
 /// @access public
 /// @since 1.0.0
 
-$line-height-profile-mini-email:            $line-height-medium !default;
+$line-height-profile-mini-description:            $line-height-medium !default;
 
 // News and Archive Template: Listing
 // -----------------------------------------------------------------

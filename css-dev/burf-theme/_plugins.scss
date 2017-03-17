@@ -89,10 +89,20 @@
 // Profiles
 // -----------------------------------------------------------------
 
+/// Styles for all profile listings.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
 .profile-listing {
 	@extend %clearfix;
 	padding: 0;
 }
+
+/// Styles for all profile items in a listing.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
 
 .profile-item {
 	position: relative;
@@ -100,11 +110,26 @@
 	list-style: none;
 }
 
+/// Styles for all profile photos.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
 .profile-photo {
+	@include border-radius( $border-radius-profile-figure );
+	overflow: hidden;
+
 	img {
+		display: block;
 		width: 100%;
+		height: auto;
 	}
 }
+
+/// Styles for all profile titles.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
 
 .profile-title {
 	display: block;
@@ -122,7 +147,15 @@
 }
 
 .profile-link {
+	display: block;
 	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		.profile-name {
+			text-decoration: none;
+		}
+	}
 }
 
 .profile-format-basic,
@@ -186,108 +219,64 @@ $_profile-adv-cols-md: $grid-number-columns / $profiles-advanced-cols-md;
 	margin: 0 auto 15px;
 }
 
-.profile-format-mini {
+.profile-item-mini {
 	@extend %clearfix;
+}
 
-	li {
-		@extend %col-md-6;
-		min-height: 90px;
-		padding: 0 0 15px 75px;
-		margin: 0;
+$_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 
-		@include breakpoint(md) {
-			padding: 0 0 15px 95px;
-			min-height: 110px;
-		}
-	}
+.profile-item-mini {
+	@extend %col-sm-#{$_profile-mini-cols-sm};
 
-	li:nth-child(2n+1) {
+	&:nth-child(#{$profiles-mini-cols-sm}n+1) {
 		clear: left;
 		padding-right: 15px;
 	}
-
-	.name {
-		font-family: $font-family-profile-name;
-		font-size: $font-size-profile-mini-name;
-	}
-
-	.summary {
-		margin-top: 5px;
-		font-size: $font-size-profile-mini-email;
-		line-height: $line-height-profile-mini-email;
-		word-wrap: break-word;
-	}
-
-	figure {
-		position: absolute;
-		top: 0;
-		left: 0;
-		overflow: hidden;
-		width: 60px;
-		height: 60px;
-		@include breakpoint(md) {
-			width: 80px;
-			height: 80px;
-		}
-	}
 }
 
-.profile-listing figure,
-.single-profile .profile-thumb figure  {
-	@include border-radius($border-radius-profile-figure);
-	line-height: 0;
+.profile-photo-mini {
+	@extend %col-2;
+	height: 0;
+	padding-bottom: 16%;
 }
 
-.profile-listing a:hover .profile-name,
-.profile-listing a:focus .profile-name {
+.profile-details-mini {
+	@extend %col-10;
+	padding-left: 20px;
+	font-size: $font-size-profile-mini-description;
+	line-height: $line-height-profile-mini-description;
+}
+
+.profile-name-mini {
+	font-size: $font-size-profile-mini-name;
+	color: inherit;
 	text-decoration: none;
 }
 
-.profile-listing .mini .email a {
-	margin-top: 5px;
-	font-size: $font-size-profile-mini-email;
-	line-height: $line-height-profile-mini-email;
-	text-decoration: underline;
+.profile-email-mini {
+	margin: 5px 0;
 	word-wrap: break-word;
-
-	&:hover,
-	&:focus {
-		text-decoration: none;
-	}
 }
 
 // single profile
-.single-profile {
-	.content-area {
-		h1 {
-			margin-bottom: 0;
-			padding-top: 145px;
-			text-align: center;
-		}
-		h2 {
-			text-align: center;
-		}
-	}
-	.profile-thumb {
-		figure {
-			height: 120px;
-			left: 50%;
-			margin-left: -60px;
-			overflow: hidden;
-			position: absolute;
-			top: 0;
-			width: 120px;
-		}
-	}
-	.figure {
-		img {
-			width: 100%;
-		}
-	}
+
+.profile-single-name {
+	margin-bottom: 0;
+	text-align: center;
 }
 
-.profile-info {
+.profile-single-title {
+	text-align: center;
+}
+
+.profile-single-photo {
+	width: 120px;
+	margin: 0 auto 20px;
+}
+
+.profile-single-details {
 	@extend %card-styles;
+	font-size: $font-size-small;
 	margin: 0 0 20px 0;
 
 	@include breakpoint(sm) {
@@ -295,27 +284,29 @@ $_profile-adv-cols-md: $grid-number-columns / $profiles-advanced-cols-md;
 		margin: 0 0 20px 20px;
 		width: 33.33333333333333%;
 	}
+}
 
-	ul {
-		margin: 0;
-		padding: 0;
-	}
+.label {
+	display: block;
+	font-family: $font-family-sans-serif;
+	font-size: $font-size-smaller;
+	font-weight: 700;
+	text-transform: uppercase;
+}
 
-	li {
-		font-size: $font-size-small;
-		list-style: none;
-		margin: 0 0 20px 0;
-		word-wrap: break-word;
-	}
+.profile-details-label {
+	color: $color-profile-info-label;
+}
 
-	.label {
-		color: $color-profile-info-label;
-		display: block;
-		font-family: $font-family-sans-serif;
-		font-size: $font-size-smaller;
-		font-weight: 700;
-		text-transform: uppercase;
-	}
+.profile-details-list {
+	margin: 0;
+	padding: 0;
+}
+
+.profile-details-item {
+	list-style: none;
+	margin: 0 0 20px 0;
+	word-wrap: break-word;
 }
 
 // Course Feeds

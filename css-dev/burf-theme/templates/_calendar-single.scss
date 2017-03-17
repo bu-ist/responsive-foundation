@@ -88,6 +88,16 @@
 	@extend %single-event-schedule-list-item;
 }
 
+/// Handles styling for all day events in the schedule of
+/// a single calendar event.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-schedule-allday {
+	@extend %single-event-schedule-list-item;
+}
+
 /// Handles styling for all single calendar labels.
 /// @group calendar
 /// @access public
