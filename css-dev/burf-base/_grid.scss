@@ -156,11 +156,6 @@
 	float: left;
 }
 
-%col-base {
-	position: relative;
-	min-height: 1px;
-}
-
 %col-margin-base {
 	margin-bottom: $grid-margin-width#{"%"};
 	margin-top: 0;
@@ -200,7 +195,6 @@ $grid-widths-margins: ();
 
 	@if ($i != 0) {
 		%col-#{$i} {
-			@extend %col-base;
 			@extend %col-float;
 			@include gridBuild(width, $percentage);
 		}
@@ -211,38 +205,30 @@ $grid-widths-margins: ();
 	// Get percentage from earlier
 	$percentage: nth($grid-widths, ($i + 1));
 
-	%col {
-		@if ($i != 0) {
-			&-#{$i} {
-				@include gridBuild(width, $percentage);
-				float: left;
-			}
+	@if map-get($grid-supports, push) {
+		%col-push-#{$i} {
+			@include gridBuild(left, $percentage);
 		}
+	}
 
-		@if map-get($grid-supports, push) {
-			&-push-#{$i} {
-				@include gridBuild(left, $percentage);
-			}
+	@if map-get($grid-supports, pull) {
+		%col-pull-#{$i} {
+			@include gridBuild(right, $percentage);
 		}
+	}
 
-		@if map-get($grid-supports, pull) {
-			&-pull-#{$i} {
-				@include gridBuild(right, $percentage);
-			}
+	@if map-get($grid-supports, offset) {
+		%col-offset-#{$i} {
+			@include gridBuild( margin-left, $percentage );
 		}
+	}
 
-		@if map-get($grid-supports, offset) {
-			&-offset-#{$i} {
-				@include gridBuild( margin-left, $percentage );
-			}
-		}
-
-		@if map-get($grid-supports, margin) and ($i != 0) {
-			&-margin-#{$i} {
-				$margin-percentage: nth( $grid-widths-margins, $i + 1 );
-				@include gridBuild( width, $margin-percentage );
-				float: left;
-			}
+	@if map-get($grid-supports, margin) and ($i != 0) {
+		%col-margin-#{$i} {
+			@extend %col-margin-base;
+			$margin-percentage: nth( $grid-widths-margins, $i + 1 );
+			@include gridBuild( width, $margin-percentage );
+			float: left;
 		}
 	}
 }
@@ -303,10 +289,6 @@ $grid-widths-margins: ();
 	}
 
 	@for $i from 0 through $grid-number-columns {
-		// Add to base styles
-		%col-#{$breakpoint}-#{$i} {
-			@extend %col-base;
-		}
 
 		@if map-get($grid-supports, margin) and ($i != 0) {
 			// Add to base styles

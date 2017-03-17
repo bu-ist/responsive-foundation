@@ -309,8 +309,6 @@ $_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( (
 	}
 
 	.widget {
-		@extend %col-base;
-		@extend %col-float;
 		width: 100%;
 
 		@include breakpoint( md ) {
