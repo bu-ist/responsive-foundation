@@ -21,7 +21,7 @@
 /// @since 1.0.0
 
 .bu_collapsible_container {
-	padding: .5em 0;
+	padding: 0.5em 0;
 	position: relative;
 
 	& + & {
@@ -42,11 +42,11 @@
 
 	&::before {
 		color: $color-collapsible-icon;
+		font-size: 16px;
+		margin-top: -10px;
 		position: absolute;
 		right: 7px;
 		top: 50%;
-		margin-top: -10px;
-		font-size: 16px;
 	}
 
 	&:hover,
@@ -81,9 +81,9 @@
 /// @since 1.0.0
 
 .cf-course {
+	border-top: $border-base;
 	margin-top: 2em;
 	padding-top: 2em;
-	border-top: $border-base;
 
 	&:first-child {
 		border: 0;
@@ -97,7 +97,7 @@
 /// @since 2.0.0
 
 .cf-course-title {
-	margin-bottom: .2em;
+	margin-bottom: 0.2em;
 }
 
 /// Controls the styling for the course id (college, department, and number) in a course feed.
@@ -108,11 +108,11 @@
 /// @since 2.0.0
 
 .cf-course-id {
-	display: block;
 	color: $color-grayscale-7;
-	font-size: .5em;
-	margin-bottom: .5em;
+	display: block;
 	font-family: $font-family-sans-serif;
+	font-size: 0.5em;
+	margin-bottom: 0.5em;
 }
 
 /// Controls the styling for course credits, availability, and prerequisites.
@@ -121,7 +121,7 @@
 /// @since 2.0.0
 
 .cf-course-info {
-	font-size: .8em;
+	font-size: 0.8em;
 }
 
 /// Controls the styling for the section table.
@@ -130,8 +130,8 @@
 /// @since 2.0.0
 
 .cf-table {
+	font-size: 0.8em;
 	width: 100%;
-	font-size: .8em;
 }
 
 /// Controls the styling for the section title.
@@ -140,10 +140,10 @@
 /// @since 2.0.0
 
 .cf-section-title {
-	font-weight: bold;
 	color: inherit;
-	text-align: left;
 	font-style: normal;
+	font-weight: bold;
+	text-align: left;
 }
 
 /// Controls the styling for the section start and end dates.
@@ -162,7 +162,7 @@
 /// @since 2.0.0
 
 .cf-course-offered {
-	&:not(:empty):before {
+	&:not(:empty)::before {
 		content: "Available during ";
 	}
 }
@@ -174,7 +174,7 @@
 /// @since 2.0.0
 
 .cf-course-prereqs {
-	&:not(:empty):before {
+	&:not(:empty)::before {
 		content: "Prerequisites: ";
 	}
 }
@@ -188,9 +188,9 @@
 /// @since 1.0.0
 
 .bu-slideshow-container {
-	z-index: 1;
 	margin-bottom: 30px;
 	text-align: center;
+	z-index: 1;
 }
 
 // Profiles
@@ -212,9 +212,9 @@
 /// @since 2.0.0
 
 .profile-item {
-	position: relative;
-	margin-bottom: 25px;
 	list-style: none;
+	margin-bottom: 25px;
+	position: relative;
 }
 
 /// Styles for all profile photos.
@@ -228,8 +228,8 @@
 
 	img {
 		display: block;
-		width: 100%;
 		height: auto;
+		width: 100%;
 	}
 }
 
@@ -239,11 +239,11 @@
 /// @since 2.0.0
 
 .profile-name {
+	color: $color-profile-name;
 	font-family: $font-family-profile-name;
 	font-size: $font-size-profile-name;
-	color: $color-profile-name;
-	text-decoration: underline;
 	margin-bottom: 0;
+	text-decoration: underline;
 }
 
 /// Styles for all profile titles.
@@ -252,10 +252,10 @@
 /// @since 2.0.0
 
 .profile-title {
+	color: $color-profile-title;
 	display: block;
 	font-family: $font-family-profile-title;
 	font-size: $font-size-profile-title;
-	color: $color-profile-title;
 }
 
 /// Styles for all profile links.
@@ -293,10 +293,10 @@
 /// @since 2.0.0
 
 .profile-item-default {
+	border-bottom: $border-profiles;
+	margin-bottom: 0;
 	min-height: 100px;
 	padding: 25px 65px 25px 0;
-	margin-bottom: 0;
-	border-bottom: $border-profiles;
 }
 
 /// Styles a default profile photo.
@@ -305,11 +305,11 @@
 /// @since 2.0.0
 
 .profile-photo-default {
+	height: 50px;
+	overflow: hidden;
 	position: absolute;
 	right: 0;
-	overflow: hidden;
 	width: 50px;
-	height: 50px;
 }
 
 /// Styles the basic profile format.
@@ -327,10 +327,10 @@
 /// @since 2.0.0
 
 .profile-item-basic {
+	border-bottom: $border-profiles;
+	margin-bottom: 0;
 	min-height: 100px;
 	padding: 25px 65px 25px 0;
-	margin-bottom: 0;
-	border-bottom: $border-profiles;
 }
 
 /// Styles a basic profile photo.
@@ -339,11 +339,11 @@
 /// @since 2.0.0
 
 .profile-photo-basic {
+	height: 50px;
+	overflow: hidden;
 	position: absolute;
 	right: 0;
-	overflow: hidden;
 	width: 50px;
-	height: 50px;
 }
 
 /// Styles the advanced profile format.
@@ -380,17 +380,17 @@ $_profile-adv-cols-md: $grid-number-columns / $profiles-advanced-cols-md;
 	@extend %col-xs-#{$_profile-adv-cols-xs};
 	@extend %col-md-#{$_profile-adv-cols-md};
 
-	&:nth-child( #{$profiles-advanced-cols-xs}n+1 ) {
-		clear: left;
-
-		@include breakpoint(md) {
-			clear: none;
+	@include breakpoint( md ) {
+		&:nth-child( #{$profiles-advanced-cols-md}n+1 ) {
+			clear: left;
 		}
 	}
 
-	@include breakpoint(md) {
-		&:nth-child( #{$profiles-advanced-cols-md}n+1 ) {
-			clear: left;
+	&:nth-child( #{$profiles-advanced-cols-xs}n+1 ) {
+		clear: left;
+
+		@include breakpoint( md ) {
+			clear: none;
 		}
 	}
 }
@@ -412,19 +412,10 @@ $_profile-adv-cols-md: $grid-number-columns / $profiles-advanced-cols-md;
 /// @since 2.0.0
 
 .profile-photo-advanced {
-	overflow: hidden;
-	width: 150px;
 	height: 150px;
 	margin: 0 auto 15px;
-}
-
-/// Styles the mini profile format.
-/// @group profiles
-/// @access public
-/// @since 2.0.0
-
-.profile-item-mini {
-	@extend %clearfix;
+	overflow: hidden;
+	width: 150px;
 }
 
 /// A helper variable to determine which grid class to extend
@@ -435,7 +426,13 @@ $_profile-adv-cols-md: $grid-number-columns / $profiles-advanced-cols-md;
 
 $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 
+/// Styles the mini profile format.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
 .profile-item-mini {
+	@extend %clearfix;
 	@extend %col-sm-#{$_profile-mini-cols-sm};
 
 	&:nth-child(#{$profiles-mini-cols-sm}n+1) {
@@ -462,9 +459,9 @@ $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 
 .profile-details-mini {
 	@extend %col-10;
-	padding-left: 20px;
 	font-size: $font-size-profile-mini-description;
 	line-height: $line-height-profile-mini-description;
+	padding-left: 20px;
 }
 
 /// Styles the mini profile name.
@@ -473,8 +470,8 @@ $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 /// @since 2.0.0
 
 .profile-name-mini {
-	font-size: $font-size-profile-mini-name;
 	color: inherit;
+	font-size: $font-size-profile-mini-name;
 	text-decoration: none;
 }
 
@@ -516,8 +513,8 @@ $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 /// @since 2.0.0
 
 .profile-single-photo {
-	width: 120px;
 	margin: 0 auto 20px;
+	width: 120px;
 }
 
 /// Styles the single profile details sidebar.
@@ -528,9 +525,9 @@ $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 .profile-single-details {
 	@extend %card-styles;
 	font-size: $font-size-small;
-	margin: 0 0 20px 0;
+	margin: 0 0 20px;
 
-	@include breakpoint(sm) {
+	@include breakpoint( sm ) {
 		float: right;
 		margin: 0 0 20px 20px;
 		width: 33.33333333333333%;
@@ -576,6 +573,6 @@ $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 
 .profile-details-item {
 	list-style: none;
-	margin: 0 0 20px 0;
+	margin: 0 0 20px;
 	word-wrap: break-word;
 }
