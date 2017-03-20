@@ -7,8 +7,8 @@
 // Plugins contents:
 
 //	1. Collapsible divs
-//	2. Profiles
-//	3. Course feeds
+//	2. Course feeds
+//	3. Profiles
 
 // -----------------------------------------------------------------
 
@@ -69,6 +69,64 @@
 @media print {
 	.bu_collapsible_section {
 		display: block !important; // important required to override inline styles added by JS
+	}
+}
+
+// Course Feeds
+// -----------------------------------------------------------------
+
+.cf-course {
+	margin-top: 2em;
+	padding-top: 2em;
+	border-top: $border-base;
+
+	&:first-child {
+		border: 0;
+		margin: 0;
+	}
+}
+
+.cf-course-title {
+	margin-bottom: .2em;
+}
+
+.cf-course-id {
+	display: block;
+	color: $color-grayscale-7;
+	font-size: .5em;
+	margin-bottom: .5em;
+	font-family: $font-family-sans-serif;
+}
+
+.cf-course-info {
+	font-size: .8em;
+}
+
+.cf-table {
+	width: 100%;
+	font-size: .8em;
+}
+
+.cf-section-title {
+	font-weight: bold;
+	color: inherit;
+	text-align: left;
+	font-style: normal;
+}
+
+.cf-section-dates {
+	float: right;
+}
+
+.cf-course-offered {
+	&:not(:empty):before {
+		content: "Available during ";
+	}
+}
+
+.cf-course-prereqs {
+	&:not(:empty):before {
+		content: "Prerequisites: ";
 	}
 }
 
@@ -307,11 +365,4 @@ $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 	list-style: none;
 	margin: 0 0 20px 0;
 	word-wrap: break-word;
-}
-
-// Course Feeds
-// -----------------------------------------------------------------
-
-.cf-course table {
-	width: 100%;
 }
