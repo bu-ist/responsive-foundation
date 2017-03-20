@@ -75,6 +75,11 @@
 // Course Feeds
 // -----------------------------------------------------------------
 
+/// Controls the styling for a single course in a course feed.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
 .cf-course {
 	margin-top: 2em;
 	padding-top: 2em;
@@ -86,9 +91,21 @@
 	}
 }
 
+/// Controls the styling for the course title in a course feed.
+/// @group content
+/// @access public
+/// @since 2.0.0
+
 .cf-course-title {
 	margin-bottom: .2em;
 }
+
+/// Controls the styling for the course id (college, department, and number) in a course feed.
+/// You may style each of these individually as well using `.cf-course-college`,
+/// `.cf-course-dept`, etc.
+/// @group content
+/// @access public
+/// @since 2.0.0
 
 .cf-course-id {
 	display: block;
@@ -98,14 +115,29 @@
 	font-family: $font-family-sans-serif;
 }
 
+/// Controls the styling for course credits, availability, and prerequisites.
+/// @group content
+/// @access public
+/// @since 2.0.0
+
 .cf-course-info {
 	font-size: .8em;
 }
+
+/// Controls the styling for the section table.
+/// @group content
+/// @access public
+/// @since 2.0.0
 
 .cf-table {
 	width: 100%;
 	font-size: .8em;
 }
+
+/// Controls the styling for the section title.
+/// @group content
+/// @access public
+/// @since 2.0.0
 
 .cf-section-title {
 	font-weight: bold;
@@ -114,15 +146,32 @@
 	font-style: normal;
 }
 
+/// Controls the styling for the section start and end dates.
+/// @group content
+/// @access public
+/// @since 2.0.0
+
 .cf-section-dates {
 	float: right;
 }
+
+/// Conditional styling to label course availability.
+/// There isn't currently a way to do this in the course template reliably.
+/// @group content
+/// @access public
+/// @since 2.0.0
 
 .cf-course-offered {
 	&:not(:empty):before {
 		content: "Available during ";
 	}
 }
+
+/// Conditional styling to label course prerequisites.
+/// There isn't currently a way to do this in the course template reliably.
+/// @group content
+/// @access public
+/// @since 2.0.0
 
 .cf-course-prereqs {
 	&:not(:empty):before {
