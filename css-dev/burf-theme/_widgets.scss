@@ -335,11 +335,6 @@ $_width-calendar-date: 48px;
 	font-size: $font-size-widget-calendar-date;
 }
 
-.widget-calendar-event-graphic {
-	min-height: $_width-calendar-date;
-	position: relative;
-}
-
 /// Styles links in the calendar widget graphic format.
 /// @group widgets
 /// @access public
@@ -350,6 +345,11 @@ $_width-calendar-date: 48px;
 	text-decoration: none;
 }
 
+/// Styles dates in the calendar widget graphic format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
 .widget-calendar-date-graphic {
 	display: table-cell;
 	width: $_width-calendar-date;
@@ -357,17 +357,32 @@ $_width-calendar-date: 48px;
 	text-align: center;
 }
 
+/// Styles the day of the month in the calendar widget graphic format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
 .widget-calendar-day-graphic {
 	color: $color-widget-calendar-date-day;
 	display: block;
 	font-size: $font-size-widget-calendar-date-day;
 }
 
+/// Styles the month in the calendar widget graphic format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
 .widget-calendar-month-graphic {
 	color: $color-widget-calendar-date-month;
 	font-size: $font-size-widget-calendar-date-month;
 	text-transform: uppercase;
 }
+
+/// Styles the title in the calendar widget graphic format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
 
 .widget-calendar-title-graphic {
 	display: table-cell;
