@@ -350,6 +350,7 @@ $_width-calendar-date: 48px;
 /// @since 2.0.0
 
 .widget-calendar-date-graphic {
+	color: $color-widget-calendar-date;
 	display: table-cell;
 	width: $_width-calendar-date;
 	line-height: $line-height-widget-calendar-date;

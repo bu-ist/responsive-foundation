@@ -1321,7 +1321,7 @@ $font-size-widget-calendar-date-day:          $font-size-large !default;
 /// @access public
 /// @since 1.0.0
 
-$color-widget-calendar-date-day:             $color-widget-calendar-date !default;
+$color-widget-calendar-date-day:             inherit !default;
 
 /// Controls the size of the month when using the graphic style in the
 /// calendar widget.
@@ -1337,7 +1337,7 @@ $font-size-widget-calendar-date-month:        $font-size-smallest !default;
 /// @access public
 /// @since 1.0.0
 
-$color-widget-calendar-date-month:           $color-widget-calendar-date !default;
+$color-widget-calendar-date-month:           inherit !default;
 
 // Navigation and Menu Widgets
 // -----------------------------------------------------------------
