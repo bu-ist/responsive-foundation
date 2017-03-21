@@ -248,98 +248,88 @@
 // Calendar
 // -----------------------------------------------------------------
 
-/// A helper variable for %_calendar-absolute-position-date.
+/// A helper variable for absolute positioning in formats which use it.
 /// Sets the width of the calendar date.
+/// By default, affects the default and graphic formats.
 /// @group widgets
 /// @access private
 /// @since 1.2.0
-/// @see %_calendar-absolute-position-date
 
 $_width-calendar-date: 48px;
-
-/// A placeholder meant only for calendar.
-/// This placeholder positions the date absolutely in calendar widgets.
-/// @group widgets
-/// @access private
-/// @since 1.2.0
-
-%_calendar-absolute-position-date {
-	.date {
-		left: 0;
-		position: absolute;
-		top: 0;
-		width: $_width-calendar-date;
-	}
-
-	a {
-		display: block;
-		padding-left: 60px;
-		position: relative;
-	}
-}
 
 /// Styles the BU Calendar widgets.
 /// @group widgets
 /// @access public
 /// @since 1.0.0
 
-.widget-bu-calendar {
-	// calendar: shared
-	.date {
-		color: $color-widget-calendar-date;
-		display: block;
-		font-family: $font-family-widget-calendar-date;
-		font-weight: 700;
+.widget-calendar-event {
+	border: $border-widget-list;
+	border-width: $border-width-widget-list;
+	padding: 10px 0;
+
+	&:first-child {
+		border: 0;
+		padding: 0 0 10px;
 	}
+}
 
-	li {
-		border: $border-widget-list;
-		border-width: $border-width-widget-list;
-		padding: 10px 0;
+.widget-calendar-date {
+	color: $color-widget-calendar-date;
+	display: block;
+	font-family: $font-family-widget-calendar-date;
+	font-weight: 700;
+}
 
-		&:first-child {
-			border: 0;
-			padding: 0 0 10px;
-		}
-	}
+// default
 
-	// calendar: default
-	.default {
-		@extend %_calendar-absolute-position-date;
-	}
+.widget-calendar-event-default {
+	position: relative;
+}
 
-	// calendar: full-date
-	.full-date {
-		.date {
-			font-size: $font-size-widget-calendar-date;
-		}
-	}
+.widget-calendar-date-default {
+	left: 0;
+	position: absolute;
+	top: auto;
+	width: $_width-calendar-date;
+}
 
-	// calendar: graphic
-	.graphic {
-		@extend %_calendar-absolute-position-date;
+.widget-calendar-link-default {
+	display: block;
+	padding-left: 60px;
+	position: relative;
+}
 
-		a {
-			min-height: $_width-calendar-date;
-		}
+// fulldate
 
-		.date {
-			line-height: $line-height-widget-calendar-date;
-			text-align: center;
-		}
+.widget-calednar-date-fulldate {
+	font-size: $font-size-widget-calendar-date;
+}
 
-		.day {
-			color: $color-widget-calendar-date-day;
-			display: block;
-			font-size: $font-size-widget-calendar-date-day;
-		}
+// graphic
 
-		.month {
-			color: $color-widget-calendar-date-month;
-			font-size: $font-size-widget-calendar-date-month;
-			text-transform: uppercase;
-		}
-	}
+.widget-calendar-link-graphic {
+	min-height: $_width-calendar-date;
+}
+
+.widget-calendar-date-graphic {
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: $_width-calendar-date;
+	line-height: $line-height-widget-calendar-date;
+	text-align: center;
+}
+
+.widget-calendar-day-graphic {
+	color: $color-widget-calendar-date-day;
+	display: block;
+	font-size: $font-size-widget-calendar-date-day;
+}
+
+.widget-calendar-month-graphic {
+	color: $color-widget-calendar-date-month;
+	font-size: $font-size-widget-calendar-date-month;
+	text-transform: uppercase;
 }
 
 .widgetnav,
