@@ -1231,7 +1231,7 @@ $widget-title-link-after:                   " →" !default;
 /// @access public
 /// @since 1.0.0
 
-$color-widget-title-link-after:             $color-grayscale-a !default;
+$color-widget-title-link-after:             currentColor !default;
 
 /// Controls the color of the shape which shows after the widget title
 /// when you hover.
