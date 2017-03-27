@@ -3,7 +3,8 @@
 // =================================================================
 
 // resets
-@import 'burf-base/normalize';
+@import 'library/normalize';
+@import '../bower_components/mathsass/dist/math';
 
 // variables
 @import 'burf-base/variables';

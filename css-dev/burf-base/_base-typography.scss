@@ -38,6 +38,99 @@ a {
 
 // TODO: Come back to these when we rework variables and generate similar to grid based on map
 
+//something between $font-size-base and 50px
+
+//h1 - h6
+
+// Font families (up to 3)
+$font-size-adjust: none;
+
+%font-family-1 {
+	//font-family: $font-family-1;
+	//font-size-adjust: $font-size-adjust;
+}
+
+$_depth-headings: 6;
+
+//$_font-size-adjust: ($_font-size-max - $font-size-base) / ($_depth-headings - 1);
+
+$_font-size: $font-size-base;
+
+$ratio: 2; // rate of growth
+$number-sizes: 6;
+
+//$min-font-size: $font-size-base;
+$min-font-size: 18px;
+$max-font-size: 50px;
+
+$max-ratio: $max-font-size / $min-font-size;
+
+//$scale ^ ($number-sizes - 1)/$number-sizes) = $max-font-size / $font-size-base;
+//$scale ^ 5/6 = 2.77;
+
+//(n-root($scale, 6)) ^ ($number-sizes - 1) = 2.77
+
+//log($scale) = log($max-font-size / $font-size-base) / (($number-sizes - 1)/$number-sizes));
+
+//max-font-size = font-size-base * scale^(($number-sizes - 1)/$number-sizes)
+
+//@for $i from 1 through $_depth-headings {
+//	%h#{$_depth-headings - $i}-styles {//
+
+//		@if $i == $_depth-headings {
+//			font-size: $font-size-base;
+//		} @else {
+//			font-size: pow($scale, ($i / ($_depth-headings - 1))) * $font-size-base;
+//		}//
+
+//	}//
+
+//	//$_font-size: $_font-size + $_font-size-adjust;
+//}
+
+$h: $_depth-headings;
+
+
+//50 = (6^2)*x + 18;
+//50 = 36x + 18;
+//($max-font-size - $min-font-size)/pow($h, 2) = $scale;
+$scale: ($max-font-size - $min-font-size)/pow($_depth-headings, 3);
+
+@while $h >= 0 {
+	.h#{$_depth-headings - $h}-styles {
+
+		@if $h == 0 {
+			font-size: $min-font-size / $font-size-base + em;
+		} @else {
+			//font-size: pow($scale, ($h / ($_depth-headings - 1))) * $min-font-size;
+			$font-size-em: (pow(($h + 1), 3)*$scale + $min-font-size) / $min-font-size;
+			font-size: $font-size-em + em;
+		}
+
+		//margin: 0 0 (1 / pow($scale, ($h / ($_depth-headings - 1)))) * 1.25em;
+		margin-top: 0;
+		//margin-bottom: (1.25em - (1 / pow($scale, ($h / ($_depth-headings - 1)))));
+		//line-height: (1 / pow($scale, ($h / ($_depth-headings - 1)))) + .6;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	$h: $h - 1;
+}
+
+//$ratio: $max-font-size / $font-size-base;
+
+//50 = 18 ^ x;
+
+//log(50) = x * log(18)
+
+// @mixin generate-font-props( $n ) {
+// 	font-size: $font-size-base * $ratio ^ ($n/$number-sizes);
+// }
+
+
 %font-jumbo {
 	font-size: $font-size-jumbo;
 	line-height: $line-height-jumbo;
@@ -115,7 +208,8 @@ a {
 
 h1 {
 	@extend %heading-base;
-	@extend %font-jumbo;
+	//@extend %font-jumbo;
+	@extend .h1-styles;
 }
 
 /// Styles for all h2 tags.
@@ -125,7 +219,8 @@ h1 {
 
 h2 {
 	@extend %heading-base;
-	@extend %font-largest;
+	//@extend %font-largest;
+	@extend .h2-styles;
 }
 
 /// Styles for all h3 tags.
@@ -135,7 +230,8 @@ h2 {
 
 h3 {
 	@extend %heading-base;
-	@extend %font-larger;
+	//@extend %font-larger;
+	@extend .h3-styles;
 }
 
 /// Styles for all h4 tags.
@@ -145,7 +241,8 @@ h3 {
 
 h4 {
 	@extend %heading-base;
-	@extend %font-large;
+	//@extend %font-large;
+	@extend .h4-styles;
 }
 
 /// Styles for all h5 tags.
@@ -155,7 +252,8 @@ h4 {
 
 h5 {
 	@extend %heading-base;
-	@extend %font-medium;
+	//@extend %font-medium;
+	@extend .h5-styles;
 }
 
 /// Styles for all h6 tags.
@@ -165,7 +263,8 @@ h5 {
 
 h6 {
 	@extend %heading-base;
-	@extend %font-small;
+	//@extend %font-small;
+	@extend .h6-styles;
 }
 
 // Adds the help cursor on hover to abbreviations

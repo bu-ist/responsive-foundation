@@ -23,5 +23,8 @@
     "**/.*",
     "node_modules",
     "bower_components"
-  ]
+  ],
+  "dependencies": {
+    "mathsass": "~0.9.5"
+  }
 }
