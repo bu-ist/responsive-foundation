@@ -25,6 +25,7 @@
     "bower_components"
   ],
   "dependencies": {
-    "mathsass": "~0.9.5"
+    "mathsass": "~0.9.5",
+    "normalize-css": "~5.0.0"
   }
 }
