@@ -38,8 +38,6 @@ a {
 
 // TODO: Come back to these when we rework variables and generate similar to grid based on map
 
-//something between $font-size-base and 50px
-
 $_depth-headings: 6;
 
 //$_font-size-adjust: ($_font-size-max - $font-size-base) / ($_depth-headings - 1);
@@ -78,6 +76,9 @@ $_scale: calc-scale( $min-font-size, $max-font-size, $_depth-headings, $growth-r
 // Use scaled if your minimums and maximums are already scaled units.
 // For example, you may use scaled with line-height, or if you specify
 // your mins and maxes in ems for font size.
+// Otherwise, use as is to divide by your minimum and come up with the
+// correct ratio to convert your font to a scaled size. This is great for
+// converting pixels to ems.
 
 @function calc-size( $level, $rate, $scale, $min, $scaled: false ) {
 	@if $scaled {
@@ -98,14 +99,9 @@ $_lh-scale: calc-scale( $min-line-height, $max-line-height, $_depth-headings, 1 
 			font-size: calc-size( $h + 1, $growth-rate, $_scale, $min-font-size ) + em;
 		}
 
-		//margin: 0 0 (1 / pow($_scale, ($h / ($_depth-headings - 1)))) * 1.25em;
-		margin-top: 0;
-
-		//margin-bottom: 1 / calc-size( $h + 1 ) + em;
 		line-height: calc-size( $_depth-headings - $h, 1, $_lh-scale, $min-line-height, true );
-
-		//margin-bottom: (1.25em - (1 / pow($_scale, ($h / ($_depth-headings - 1)))));
-		//line-height: (1 / pow($_scale, ($h / ($_depth-headings - 1)))) + .6;
+		margin-top: 1em;
+		margin-bottom: .6em;
 
 		&:first-child {
 			margin-top: 0;
@@ -114,17 +110,6 @@ $_lh-scale: calc-scale( $min-line-height, $max-line-height, $_depth-headings, 1 
 
 	$h: $h - 1;
 }
-
-//$ratio: $max-font-size / $font-size-base;
-
-//50 = 18 ^ x;
-
-//log(50) = x * log(18)
-
-// @mixin generate-font-props( $n ) {
-// 	font-size: $font-size-base * $ratio ^ ($n/$number-sizes);
-// }
-
 
 %font-jumbo {
 	font-size: $font-size-jumbo;
