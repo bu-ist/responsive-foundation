@@ -178,13 +178,6 @@ $border-radius-message:                     3px !default;
 
 $padding-message:                          20px !default;
 
-/// The font size in comments.
-/// @group comments
-/// @access public
-/// @since 1.0.0
-
-$font-size-message:                         $font-size-small !default;
-
 /// The background of comments.
 /// @group comments
 /// @access public
@@ -216,19 +209,12 @@ $margin-floated-content: 						 10px !default;
 
 $font-family-caption:                       $font-family-sans-serif !default;
 
-/// The font size to use for captions.
-/// @group content
-/// @access public
-/// @since 1.0.0
-
-$font-size-caption:                         $font-size-smaller !default;
-
 /// The color to use for captions.
 /// @group content
 /// @access public
 /// @since 1.0.0
 
-$color-caption:                            $color-grayscale-9 !default;
+$color-caption:                            $color-grayscale-6 !default;
 
 /// The border color to use in tables.
 /// @group content
