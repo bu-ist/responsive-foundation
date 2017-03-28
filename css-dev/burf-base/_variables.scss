@@ -193,63 +193,6 @@ $z-index-10:                                1000;
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
-// TODO: Typography
-//
-// base     = p
-// small    = h6
-// medium   = h5
-// large    = h4
-// larger   = h3
-// largest  = h2
-// jumbo    = h1
-//
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-
-$font-family-base:                          "TiemposText", Georgia, serif !default;
-$font-family-sans-serif:                     "Benton", Helvetica, sans-serif !default;
-$font-family-monospace:                     Consolas, "Liberation Mono", Courier, monospace !default;
-$font-family-icons:                     	 "bu-default-icons" !default;
-
-$font-size-base:                            18px !default;
-$font-size-micro:                           11px !default;
-$font-size-smallest:                        12px !default;
-$font-size-smaller:                         14px !default;
-$font-size-small:                           16px !default;
-$font-size-medium:                          $font-size-base !default;
-$font-size-large:                           21px !default;
-$font-size-larger:                          28px !default;
-$font-size-largest:                         37px !default;
-$font-size-jumbo:                           49px !default;
-
-$line-height-base:                          1.6 !default;
-$line-height-micro:                         $line-height-base !default;
-$line-height-smallest:                      $line-height-base !default;
-$line-height-smaller:                       $line-height-base !default;
-$line-height-small:                         1.5 !default;
-$line-height-medium:                        1.4 !default;
-$line-height-large:                         1.3 !default;
-$line-height-larger:                        1.25 !default;
-$line-height-largest:                       1.15 !default;
-$line-height-jumbo:                         1.1 !default;
-
-$font-margin-base:                          0 0 25px 0 !default;
-$font-margin-micro:                         $font-margin-base !default;
-$font-margin-smallest:                      $font-margin-base !default;
-$font-margin-smaller:                       $font-margin-base !default;
-$font-margin-small:                         $font-margin-base !default;
-$font-margin-medium:                        $font-margin-base !default;
-$font-margin-large:                         $font-margin-base !default;
-$font-margin-larger:                        $font-margin-base !default;
-$font-margin-largest:                       0 0 27px 0 !default;
-$font-margin-jumbo:                         0 0 25px 0 !default;
-
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
 // TODO: Colors
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
