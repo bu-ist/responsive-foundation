@@ -1404,20 +1404,6 @@ $color-widget-contentnav-active:           $color-link-active !default;
 // BU Posts Widget
 // -----------------------------------------------------------------
 
-/// Controls the font size of headlines in the BU posts widget.
-/// @group widgets
-/// @access public
-/// @since 1.0.0
-
-$font-size-widget-post-headline:             $font-size-small !default;
-
-/// Controls the line height of headlines in the BU posts widget.
-/// @group widgets
-/// @access public
-/// @since 1.0.0
-
-$line-height-widget-post-headline:           1.4 !default;
-
 /// Controls the font size of the excerpt in the BU posts widget.
 /// @group widgets
 /// @access public

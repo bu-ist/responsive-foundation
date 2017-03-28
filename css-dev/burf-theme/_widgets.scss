@@ -116,8 +116,7 @@
 /// @since 2.0.0
 
 .widget-post-headline {
-	font-size: $font-size-widget-post-headline;
-	line-height: $line-height-widget-post-headline;
+	@extend %h5-styles;
 	margin: 0;
 }
 
