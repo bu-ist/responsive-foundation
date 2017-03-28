@@ -100,12 +100,6 @@ $_lh-scale: calc-scale( $min-line-height, $max-line-height, $_depth-headings, 1 
 		}
 
 		line-height: calc-size( $_depth-headings - $h, 1, $_lh-scale, $min-line-height, true );
-		margin-top: 1em;
-		margin-bottom: .6em;
-
-		&:first-child {
-			margin-top: 0;
-		}
 	}
 
 	$h: $h - 1;
@@ -173,6 +167,12 @@ $_lh-scale: calc-scale( $min-line-height, $max-line-height, $_depth-headings, 1 
 %heading-base {
 	color: $color-heading;
 	font-family: $font-family-heading;
+	margin-top: 1em;
+	margin-bottom: .6em;
+
+	&:first-child {
+		margin-top: 0;
+	}
 
 	small {
 		color: $color-heading-small;
