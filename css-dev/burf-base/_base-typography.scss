@@ -40,17 +40,11 @@ a {
 
 $_depth-headings: 6;
 
-//$_font-size-adjust: ($_font-size-max - $font-size-base) / ($_depth-headings - 1);
-
-$_font-size: $font-size-base;
-
-$number-sizes: 6;
-
-$min-font-size: 18px;
+$min-font-size: $font-size-base;
 $max-font-size: 60px;
 
 $min-line-height: 1.15;
-$max-line-height: 1.6;
+$max-line-height: $line-height-base;
 
 $h: $_depth-headings;
 
@@ -88,76 +82,50 @@ $_scale: calc-scale( $min-font-size, $max-font-size, $_depth-headings, $growth-r
 	}
 }
 
-$_lh-scale: calc-scale( $min-line-height, $max-line-height, $_depth-headings, 1 );
+$_lh-scale: calc-scale( $min-line-height, $max-line-height, $_depth-headings, $growth-rate );
+
+$font-styles: ();
 
 @while $h >= 0 {
-	%h#{$_depth-headings - $h}-styles,
-	.h#{$_depth-headings - $h}-styles {
+	$font-style: ();
+	$size: null;
+	$lh: null;
 
-		@if $h == 0 {
-			font-size: $min-font-size / $font-size-base + em;
-		} @else {
-			font-size: calc-size( $h + 1, $growth-rate, $_scale, $min-font-size ) + em;
-		}
+	@if $h == 0 {
+		$size: $min-font-size / $font-size-base + em;
+	} @else {
+		$size: calc-size( $h + 1, $growth-rate, $_scale, $min-font-size ) + em;
+	}
 
-		line-height: calc-size( $_depth-headings - $h, 1, $_lh-scale, $min-line-height, true );
+	@if $h == $_depth-headings {
+		$lh: $min-line-height;
+	} @else {
+		$lh: calc-size( $_depth-headings - $h, $growth-rate, $_lh-scale, $min-line-height, true );
+	}
+
+	$font-style: (
+		"size-#{$h}": (
+			"font-size": $size,
+			"line-height": $lh
+		)
+	);
+
+	$font-styles: map_merge( $font-styles, $font-style );
+
+	$current-size: map-get($font-styles, "size-#{$h}");
+
+	.font-size-#{$_depth-headings - $h},
+	%font-size-#{$_depth-headings - $h} {
+		font-size: map-get( $current-size, "font-size" );
+		line-height: map-get( $current-size, "line-height" );
 	}
 
 	$h: $h - 1;
 }
 
-%font-jumbo {
-	font-size: $font-size-jumbo;
-	line-height: $line-height-jumbo;
-	margin: $font-margin-jumbo;
-}
-
-%font-largest {
-	font-size: $font-size-largest;
-	line-height: $line-height-largest;
-	margin: $font-margin-largest;
-}
-
-%font-larger {
-	font-size: $font-size-larger;
-	line-height: $line-height-larger;
-	margin: $font-margin-larger;
-}
-
-%font-large {
-	font-size: $font-size-large;
-	line-height: $line-height-large;
-	margin: $font-margin-large;
-}
-
-%font-medium {
-	font-size: $font-size-medium;
-	line-height: $line-height-medium;
-	margin: $font-margin-medium;
-}
-
-%font-small {
-	font-size: $font-size-small;
-	line-height: $line-height-small;
-	margin: $font-margin-small;
-}
-
-%font-smaller {
-	font-size: $font-size-smaller;
-	line-height: $line-height-smaller;
-	margin: $font-margin-smaller;
-}
-
-%font-smallest {
-	font-size: $font-size-smallest;
-	line-height: $line-height-smallest;
-	margin: $font-margin-smallest;
-}
-
-%font-micro {
-	font-size: $font-size-micro;
-	line-height: $line-height-micro;
-	margin: $font-margin-micro;
+%font-size-7 {
+	font-size: .75em;
+	line-height: $line-height-base;
 }
 
 /// Controls base styles for all heading tags.
@@ -189,8 +157,7 @@ $_lh-scale: calc-scale( $min-line-height, $max-line-height, $_depth-headings, 1 
 
 h1 {
 	@extend %heading-base;
-	//@extend %font-jumbo;
-	@extend .h1-styles;
+	@extend %font-size-1;
 }
 
 /// Styles for all h2 tags.
@@ -200,8 +167,7 @@ h1 {
 
 h2 {
 	@extend %heading-base;
-	//@extend %font-largest;
-	@extend .h2-styles;
+	@extend %font-size-2;
 }
 
 /// Styles for all h3 tags.
@@ -211,8 +177,7 @@ h2 {
 
 h3 {
 	@extend %heading-base;
-	//@extend %font-larger;
-	@extend .h3-styles;
+	@extend %font-size-3;
 }
 
 /// Styles for all h4 tags.
@@ -222,8 +187,7 @@ h3 {
 
 h4 {
 	@extend %heading-base;
-	//@extend %font-large;
-	@extend .h4-styles;
+	@extend %font-size-4;
 }
 
 /// Styles for all h5 tags.
@@ -233,8 +197,7 @@ h4 {
 
 h5 {
 	@extend %heading-base;
-	//@extend %font-medium;
-	@extend .h5-styles;
+	@extend %font-size-5;
 }
 
 /// Styles for all h6 tags.
@@ -244,8 +207,7 @@ h5 {
 
 h6 {
 	@extend %heading-base;
-	//@extend %font-small;
-	@extend .h6-styles;
+	@extend %font-size-6;
 }
 
 // Adds the help cursor on hover to abbreviations
