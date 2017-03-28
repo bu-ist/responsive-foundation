@@ -41,7 +41,7 @@ a {
 $_depth-headings: 6;
 
 $min-font-size: $font-size-base;
-$max-font-size: 60px;
+$max-font-size: 55px;
 
 $min-line-height: 1.15;
 $max-line-height: $line-height-base;
@@ -84,12 +84,23 @@ $_scale: calc-scale( $min-font-size, $max-font-size, $_depth-headings, $growth-r
 
 $_lh-scale: calc-scale( $min-line-height, $max-line-height, $_depth-headings, $growth-rate );
 
-$font-styles: ();
+$font-styles: (
+	"aside": (
+		"font-size": 16px,
+		"line-height": $min-line-height
+	),
+	"minimum": (
+		"font-size": 12px,
+		"line-height": $min-line-height
+	)
+);
 
 @while $h >= 0 {
 	$font-style: ();
 	$size: null;
 	$lh: null;
+	$name: null;
+	$heading-name: $_depth-headings - $h;
 
 	@if $h == 0 {
 		$size: $min-font-size / $font-size-base + em;
@@ -99,12 +110,14 @@ $font-styles: ();
 
 	@if $h == $_depth-headings {
 		$lh: $min-line-height;
+		$name: "maximum";
 	} @else {
-		$lh: calc-size( $_depth-headings - $h, $growth-rate, $_lh-scale, $min-line-height, true );
+		$lh: calc-size( $heading-name, $growth-rate, $_lh-scale, $min-line-height, true );
+		$name: $heading-name;
 	}
 
 	$font-style: (
-		"size-#{$h}": (
+		"#{$name}": (
 			"font-size": $size,
 			"line-height": $lh
 		)
@@ -112,20 +125,15 @@ $font-styles: ();
 
 	$font-styles: map_merge( $font-styles, $font-style );
 
-	$current-size: map-get($font-styles, "size-#{$h}");
-
-	.font-size-#{$_depth-headings - $h},
-	%font-size-#{$_depth-headings - $h} {
-		font-size: map-get( $current-size, "font-size" );
-		line-height: map-get( $current-size, "line-height" );
-	}
-
 	$h: $h - 1;
 }
 
-%font-size-7 {
-	font-size: .75em;
-	line-height: $line-height-base;
+@each $style, $settings in $font-styles {
+	.font-size-#{$style},
+	%font-size-#{$style} {
+		font-size: map-get( $settings, "font-size" );
+		line-height: map-get( $settings, "line-height" );;
+	}
 }
 
 /// Controls base styles for all heading tags.

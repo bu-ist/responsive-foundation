@@ -85,8 +85,8 @@
 /// @since 1.0.0
 
 .comment-reply-link {
+	@extend %font-size-minimum;
 	color: $color-comment-reply;
-	font-size: $font-size-smallest;
 }
 
 /// Controls styling for the comment author.
@@ -95,8 +95,8 @@
 /// @since 1.0.0
 
 .comment-author {
+	@extend %font-size-5;
 	color: $color-comment-author-name;
-	font-size: $font-size-small;
 }
 
 /// Controls styling for the "says" text after comment author.
@@ -204,8 +204,8 @@
 /// @since 1.0.0
 
 .form-tip {
+	@extend %font-size-minimum;
 	color: $color-grayscale-8;
-	font-size: $font-size-smallest;
 
 	@include breakpoint( sm ) {
 		display: block;
@@ -257,8 +257,8 @@
 /// @since 2.0.0
 
 .cancel-comment-reply {
+	@extend %font-size-minimum;
 	display: inline-block;
-	font-size: $font-size-smallest;
 	position: absolute;
 	right: 20px;
 	top: 20px;
