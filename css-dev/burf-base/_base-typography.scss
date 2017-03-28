@@ -91,6 +91,7 @@ $_scale: calc-scale( $min-font-size, $max-font-size, $_depth-headings, $growth-r
 $_lh-scale: calc-scale( $min-line-height, $max-line-height, $_depth-headings, 1 );
 
 @while $h >= 0 {
+	%h#{$_depth-headings - $h}-styles,
 	.h#{$_depth-headings - $h}-styles {
 
 		@if $h == 0 {
