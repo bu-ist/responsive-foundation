@@ -574,14 +574,6 @@ $color-back-link-before:                    $color-grayscale-f !default;
 // Calendar Template: Event List
 // -----------------------------------------------------------------
 
-/// Controls the size of the calendar topic, which lives right below the
-/// title on the calendar listing template.
-/// @group calendar
-/// @access public
-/// @since 1.0.0
-
-$font-size-calendar-topic:                  $font-size-large !default;
-
 /// Controls the color of the date range on the calendar listing template.
 /// By default, this is right after the topic.
 /// @group calendar
@@ -589,15 +581,6 @@ $font-size-calendar-topic:                  $font-size-large !default;
 /// @since 1.0.0
 
 $color-calendar-heading-date-range:          $color-grayscale-9 !default;
-
-/// Controls the size of the date heading on the calendar listing template.
-/// When there are multiple events on the same day, they will be grouped by
-/// day, so it is best to treat this like a heading.
-/// @group calendar
-/// @access public
-/// @since 1.0.0
-
-$font-size-calendar-event-date:              $font-size-medium !default;
 
 /// Controls the color of links on the calendar listing template.
 /// @group calendar
@@ -623,14 +606,6 @@ $color-calendar-event-link-hover:           $color-link !default;
 /// @since 1.0.0
 
 $font-family-calendar-month-caption:         $font-family-sans-serif !default;
-
-/// Controls the size of the selected month in the calendar picker
-/// in the sidebar of the calendar listing template.
-/// @group calendar
-/// @access public
-/// @since 1.0.0
-
-$font-size-calendar-month-caption:           $font-size-medium !default;
 
 /// Controls the color of the selected month in the calendar picker
 /// in the sidebar of the calendar listing template.
@@ -775,14 +750,6 @@ $border-radius-profile-figure:              50% !default;
 /// @since 1.0.0
 
 $font-family-profile-name:                  $font-family-sans-serif !default;
-
-/// Controls the font size used for profile names in the profile
-/// listing template.
-/// @group profiles
-/// @access public
-/// @since 1.0.0
-
-$font-size-profile-name:                    $font-size-medium !default;
 
 /// Controls the color used for profile names in the profile
 /// listing template.
