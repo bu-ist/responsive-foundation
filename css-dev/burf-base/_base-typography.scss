@@ -85,9 +85,9 @@ $_scale: calc-scale( $min-font-size, $max-font-size, $_depth-headings, $growth-r
 $_lh-scale: calc-scale( $min-line-height, $max-line-height, $_depth-headings, $growth-rate );
 
 $font-styles: (
-	"aside": (
+	"secondary": (
 		"font-size": 16px,
-		"line-height": $min-line-height
+		"line-height": 1.4
 	),
 	"minimum": (
 		"font-size": 13px,

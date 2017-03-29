@@ -20,8 +20,7 @@
 /// @since 1.0.0
 
 .widget {
-	font-size: $font-size-widget;
-	line-height: $line-height-widget;
+	@extend %font-size-secondary;
 	margin-bottom: $widget-margin-bottom;
 
 	h1,
@@ -400,16 +399,18 @@ $_width-calendar-date: 48px;
 
 .widget-calendar-picker {
 	color: $color-calendar-month-link;
+	line-height: 1.6;
 
 	.month {
 		width: 100%;
 	}
 
 	caption {
+		@extend %font-size-5;
 		color: $color-calendar-month-caption;
-		font-family: $font-family-calendar-month-caption;
-		font-size: $font-size-calendar-month-caption;
+		font-family: $font-family-sans-serif;
 		font-style: normal;
+		font-weight: bold;
 	}
 
 	th,
@@ -444,6 +445,12 @@ $_width-calendar-date: 48px;
 		background: $color-calendar-month-link-today-bg;
 		color: $color-calendar-month-link-today;
 	}
+}
+
+.prev-month,
+.next-month {
+	margin: 0 0.5em;
+	font-weight: normal;
 }
 
 /// Styles the BU Calendar list page topics widget.
