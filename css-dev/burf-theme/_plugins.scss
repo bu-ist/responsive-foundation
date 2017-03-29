@@ -455,9 +455,11 @@ $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 
 .profile-details-mini {
 	@extend %col-10;
-	font-size: $font-size-profile-mini-description;
-	line-height: $line-height-profile-mini-description;
 	padding-left: 20px;
+
+	p {
+		@extend %font-size-minimum;
+	}
 }
 
 /// Styles the mini profile name.
