@@ -36,17 +36,62 @@ a {
 // Headings
 // -----------------------------------------------------------------
 
-// TODO: Come back to these when we rework variables and generate similar to grid based on map
+/// The number of headings that are supported by the theme.
+/// It's highly unlikely this will ever change - it's a web standards thing.
+/// If you just want to give your top-level headings more contrast, it's
+/// better to adjust `$heading-growth-rate` up, which will weigh the font size distribution
+/// more heavily towards the top.
+/// @group global
+/// @access private
+/// @since 2.0.0
 
 $_depth-headings: 6;
 
-$min-font-size: $font-size-base;
-$max-font-size: 55px;
+/// The minimum font size in pixels for headings to use. Unless you're a designer
+/// and you know what you're doing, leave this at `$font-size-base`.
+/// Anything lower means you'll need to compensate with other design elements
+/// to preserve the visual hierarchy - think uppercasing, color, stuff like that.
+/// This directly affects the `<h6>` tag. It indirectly affects all other heading
+/// font sizes as well by serving as the lower limit to our scale.
+/// @group global
+/// @access public
+/// @since 2.0.0
+
+$min-size-headings: $font-size-base;
+
+/// The maximum font size in pixels for headings to use. This directly affects `<h1>`
+/// headings _within content_. Do not use a larger value, such as those you might find
+/// on a landing page or in a homepage slider, to determine this value. Be sure to
+/// test it against deeply nested pages, which tend to have longer page titles.
+/// It indirectly affects all other heading  font sizes as well by serving as the
+/// upper limit to our scale.
+/// @group global
+/// @access public
+/// @since 2.0.0
+
+$max-size-headings: 55px;
+
+/// The minimum line height ratio for headings to use. Do not use any units with
+/// this value. This value directly affects the `<h1>` tag and indirectly affects
+/// all other heading  font sizes as well by serving as the lower limit to our scale.
+/// In typography, the relationship between font-size and line-height is that larger
+/// font-sizes demand lower line-height values to preserve vertical rhythm.
+/// @group global
+/// @access public
+/// @since 2.0.0
 
 $min-line-height: 1.15;
-$max-line-height: $line-height-base;
 
-$h: $_depth-headings;
+/// The maximum line height ratio for headings to use. Do not use any units with
+/// this value. This value directly affects the `<h6>` tag and indirectly affects
+/// all other heading  font sizes as well by serving as the upper limit to our scale.
+/// Because we set the `<h6>` tag to be the same size as our body copy by default,
+/// it also gets the same line-height ratio by default.
+/// @group global
+/// @access public
+/// @since 2.0.0
+
+$max-line-height: $line-height-base;
 
 // Adjusts the rate of growth between font sizes.
 // 1 is a completely even rate of growth.
@@ -55,34 +100,70 @@ $h: $_depth-headings;
 // A higher number will adjust the font size more dramatically at larger sizes.
 // By default, this is optimized for heavy use of h1-h4, and minimal use of h5 and h6.
 
-$growth-rate: 3.5;
+$heading-growth-rate: 3.5;
 
-// Calculate the multiplier needed for growth between a minimum and maximum value
-// based on a given rate of growth.
+/// Calculates the multiplier needed for growth between a minimum and maximum value
+/// based on a given rate of growth.
+/// @param {int} $min - The minimum value to use. Units, if used, must match `$max`.
+/// @param {int} $max - The minimum value to use. Units, if used, must match `$min`.
+/// @param {int} $steps - The total number of values to calculate.
+/// @return {int} - A number to multiply by in an exponential equation to equal the
+/// maximum value on the last value calculated. Useful to calculate `$scale` for use
+/// in the `calc-size` function.
+/// @group global
+/// @access public
+/// @since 2.0.0
+/// @see calc-size
 
 @function calc-scale ( $min, $max, $steps, $rate ) {
 	@return ( $max - $min ) / pow( $steps, $rate );
 }
 
-$_scale: calc-scale( $min-font-size, $max-font-size, $_depth-headings, $growth-rate );
+/// Calculates a size, relative to a base size. By default, we use `$font-size-base` to
+/// assist with calculating the ratio for ems. However, you can pass your own base for
+/// using with your own unit standard. You can also choose _not_ to scale by passing
+/// 'true' to 'scaled'. You might choose to do this if your minimums and maximums
+/// are already scaled units, such as with line-height, or if you specify your min
+/// and max font-sizes in ems.
+/// @param {int} $step - The step within your scale you want to calculate.
+/// @param {int} $rate - The rate of growth at which your scale changes. Leave at 1 for even
+/// (linear) growth. Anything higher will create exponential growth.
+/// @param {int} $scale - A scaling number determined by your maximum value, if you have one.
+/// You may wish to use the `calc-scale` function to find this number. Leave at 1 if you do
+/// not need an upper limit.
+/// @param {int} $min - The minimum amount you need returned.
+/// @param {bool} $scaled - Whether or not to return a scaled value, using `$base` as the base
+/// unit. By default, this will scale to ems, returning a value based on `$font-size-base` equalling
+/// 1 em.
+/// @param {int} $base - A value to divide by in order to return a scaled value. The units on this
+/// value need to match `$min` - that is, if `$min` is in pixels, this needs to be in pixels as well.
+/// @return {int} - A unitless size.
+/// @group global
+/// @access public
+/// @since 2.0.0
+/// @see calc-scale
 
-// Calculates a font size in ems, relative to the base font size.
-// Use scaled if your minimums and maximums are already scaled units.
-// For example, you may use scaled with line-height, or if you specify
-// your mins and maxes in ems for font size.
-// Otherwise, use as is to divide by your minimum and come up with the
-// correct ratio to convert your font to a scaled size. This is great for
-// converting pixels to ems.
-
-@function calc-size( $level, $rate, $scale, $min, $scaled: false ) {
+@function calc-size( $step, $rate: 1, $scale: 1, $min: 0, $scaled: false, $base: $font-size-base ) {
 	@if $scaled {
-		@return pow( ( $level ), $rate ) * $scale + $min;
+		@return pow( ( $step ), $rate ) * $scale + $min;
 	} @else {
-		@return ( pow( ( $level ), $rate ) * $scale + $min ) / $min;
+		@return ( pow( ( $step ), $rate ) * $scale + $min ) / $base;
 	}
 }
 
-$_lh-scale: calc-scale( $min-line-height, $max-line-height, $_depth-headings, $growth-rate );
+/// Holds values for font-size and line-height for all font styles. Two special case
+/// scenarios, `font-size-secondary` and `font-size-minimum`, have pixel values. Secondary
+/// is used for information in a theme that is secondary to main content, such as widgets,
+/// asides, footbars, and shortcodes, and resets the base value which headings and paragraph
+/// text uses. `font-size-minimum` is the lowest allowable font size in pixels - it never gets
+/// scaled, because it should never be smaller than that amount.
+/// Other values, such as those used for headings (`font-size-1` for `<h1>`, `font-size-2` for
+/// `<h2>`, etc) are dynamically added after we generate the headings scale.
+/// These values are used to build the font-size placeholders. You can override invidividual
+/// values by redeclaring them in your own `$font-styles-override` map.
+/// @group global
+/// @access public
+/// @since 2.0.0
 
 $font-styles: (
 	"secondary": (
@@ -95,24 +176,50 @@ $font-styles: (
 	)
 );
 
-@while $h >= 0 {
+/// The multiplier needed to calculate the scale between minimum and maximum
+/// font sizes on headings. This value is dependent on the heading minimum, maximum,
+/// and growth rate; it should never be changed directly. Change those instead.
+/// @group global
+/// @access private
+/// @since 2.0.0
+
+$_heading-size-scale: calc-scale( $min-size-headings, $max-size-headings, $_depth-headings, $heading-growth-rate );
+
+/// The multiplier needed to calculate the scale between minimum and maximum
+/// line heights on headings. This value is dependent on the heading minimum, maximum,
+/// and growth rate; it should never be changed directly. Change those instead.
+/// @group global
+/// @access private
+/// @since 2.0.0
+
+$heading-lh-scale: calc-scale( $min-line-height, $max-line-height, $_depth-headings, $heading-growth-rate );
+
+/// A simple counter variable to help keep track of how many headings we have left
+/// to calculate.
+/// @group global
+/// @access private
+/// @since 2.0.0
+
+$_h: $_depth-headings;
+
+@while $_h >= 0 {
 	$font-style: ();
 	$size: null;
 	$lh: null;
 	$name: null;
-	$heading-name: $_depth-headings - $h;
+	$heading-name: $_depth-headings - $_h;
 
-	@if $h == 0 {
-		$size: $min-font-size / $font-size-base + em;
+	@if $_h == 0 {
+		$size: $min-size-headings / $font-size-base + em;
 	} @else {
-		$size: calc-size( $h + 1, $growth-rate, $_scale, $min-font-size ) + em;
+		$size: calc-size( $_h + 1, $heading-growth-rate, $_heading-size-scale, $min-size-headings ) + em;
 	}
 
-	@if $h == $_depth-headings {
+	@if $_h == $_depth-headings {
 		$lh: $min-line-height;
 		$name: "maximum";
 	} @else {
-		$lh: calc-size( $heading-name, $growth-rate, $_lh-scale, $min-line-height, true );
+		$lh: calc-size( $heading-name, $heading-growth-rate, $heading-lh-scale, $min-line-height, true );
 		$name: $heading-name;
 	}
 
@@ -125,7 +232,7 @@ $font-styles: (
 
 	$font-styles: map_merge( $font-styles, $font-style );
 
-	$h: $h - 1;
+	$_h: $_h - 1;
 }
 
 @each $style, $settings in $font-styles {
