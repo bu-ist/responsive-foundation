@@ -162,7 +162,8 @@ $heading-growth-rate: 3.5;
 /// Other values, such as those used for headings (`font-size-1` for `<h1>`, `font-size-2` for
 /// `<h2>`, etc) are dynamically added after we generate the headings scale.
 /// These values are used to build the font-size placeholders. You can override invidividual
-/// values by redeclaring them in your own `$font-styles-override` map.
+/// values and create your own custom values and placeholders by redeclaring values you want
+/// to override and adding new values in your own `$font-styles-theme` map.
 /// @group global
 /// @access public
 /// @since 2.0.0
@@ -240,6 +241,16 @@ $_h: $_depth-headings;
 	$font-styles: map_merge( $font-styles, $font-style );
 
 	$_h: $_h - 1;
+}
+
+// Merges custom styles and overrides with the default font size map.
+// $font-styles-theme must be set BEFORE this is called.
+// @group global
+// @access private
+// @since 2.0.0
+
+@if variable-exists(font-styles-theme) {
+	$font-styles: map_merge( $font-styles, $font-styles-theme );
 }
 
 // Creates placeholders for each font style, which are used by `<h>` tags
