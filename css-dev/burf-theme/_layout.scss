@@ -499,7 +499,7 @@ $_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( (
 /// @access public
 /// @since 2.0.0
 
-.site-footer-brandassets {
+.site-footer-brand-assets {
 	@extend %col-sm-half;
 	text-align: center;
 
