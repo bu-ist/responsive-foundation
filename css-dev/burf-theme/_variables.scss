@@ -819,22 +819,6 @@ $border-news-post:                         $border-base !default;
 
 $border-width-news-post:                    $border-top !default;
 
-/// Controls the font family of metadata (author, date, etc)
-/// on post listing templates.
-/// @group news
-/// @access public
-/// @since 1.0.0
-
-$font-family-news-meta:                     $font-family-sans-serif !default;
-
-/// Controls the font size of metadata (author, date, etc)
-/// on post listing templates.
-/// @group news
-/// @access public
-/// @since 1.0.0
-
-$font-size-news-meta:                       $font-size-smaller !default;
-
 /// Controls the color of the separators between metadata.
 /// @group news
 /// @access public
