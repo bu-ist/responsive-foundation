@@ -743,14 +743,6 @@ $border-profiles:                          $border-base !default;
 
 $border-radius-profile-figure:              50% !default;
 
-/// Controls the font family used for profile names in the profile
-/// listing template.
-/// @group profiles
-/// @access public
-/// @since 1.0.0
-
-$font-family-profile-name:                  $font-family-sans-serif !default;
-
 /// Controls the color used for profile names in the profile
 /// listing template.
 /// @group profiles
@@ -758,14 +750,6 @@ $font-family-profile-name:                  $font-family-sans-serif !default;
 /// @since 1.0.0
 
 $color-profile-name:                       $color-link !default;
-
-/// Controls the font family used for profile titles in the profile
-/// listing template.
-/// @group profiles
-/// @access public
-/// @since 1.0.0
-
-$font-family-profile-title:                 $font-family-base !default;
 
 /// Controls the color used for profile titles in the profile
 /// listing template.
