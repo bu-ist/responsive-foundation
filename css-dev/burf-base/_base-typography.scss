@@ -114,6 +114,7 @@ $heading-growth-rate: 3.5;
 /// @access public
 /// @since 2.0.0
 /// @see calc-size
+/// @requires pow - an exponential function in the mathsass library
 
 @function calc-scale ( $min, $max, $steps, $rate ) {
 	@return ( $max - $min ) / pow( $steps, $rate );
@@ -141,6 +142,7 @@ $heading-growth-rate: 3.5;
 /// @group global
 /// @access public
 /// @since 2.0.0
+/// @requires pow - an exponential function in the mathsass library
 /// @see calc-scale
 
 @function calc-size( $step, $rate: 1, $scale: 1, $min: 0, $scaled: false, $base: $font-size-base ) {
