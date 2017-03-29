@@ -202,6 +202,11 @@ $heading-lh-scale: calc-scale( $min-line-height, $max-line-height, $_depth-headi
 
 $_h: $_depth-headings;
 
+// Calculates font sizes and line heights for headings, and adds them to the `$font-styles` map.
+// @group global
+// @access private
+// @since 2.0.0
+
 @while $_h >= 0 {
 	$font-style: ();
 	$size: null;
@@ -235,6 +240,12 @@ $_h: $_depth-headings;
 	$_h: $_h - 1;
 }
 
+// Creates placeholders for each font style, which are used by `<h>` tags
+// as well as throughout the theme.
+// @group global
+// @access private
+// @since 2.0.0
+
 @each $style, $settings in $font-styles {
 	.font-size-#{$style},
 	%font-size-#{$style} {
@@ -244,7 +255,7 @@ $_h: $_depth-headings;
 }
 
 /// Controls base styles for all heading tags.
-/// @group global
+/// @group typography
 /// @access public
 /// @since 1.0.0
 
@@ -266,7 +277,7 @@ $_h: $_depth-headings;
 }
 
 /// Styles for all h1 tags.
-/// @group global
+/// @group typography
 /// @access public
 /// @since 1.0.0
 
@@ -276,7 +287,7 @@ h1 {
 }
 
 /// Styles for all h2 tags.
-/// @group global
+/// @group typography
 /// @access public
 /// @since 1.0.0
 
@@ -286,7 +297,7 @@ h2 {
 }
 
 /// Styles for all h3 tags.
-/// @group global
+/// @group typography
 /// @access public
 /// @since 1.0.0
 
@@ -296,7 +307,7 @@ h3 {
 }
 
 /// Styles for all h4 tags.
-/// @group global
+/// @group typography
 /// @access public
 /// @since 1.0.0
 
@@ -306,7 +317,7 @@ h4 {
 }
 
 /// Styles for all h5 tags.
-/// @group global
+/// @group typography
 /// @access public
 /// @since 1.0.0
 
@@ -316,7 +327,7 @@ h5 {
 }
 
 /// Styles for all h6 tags.
-/// @group global
+/// @group typography
 /// @access public
 /// @since 1.0.0
 
@@ -331,7 +342,7 @@ abbr[title] {
 }
 
 /// Styles for all blockquotes.
-/// @group global
+/// @group typography
 /// @access public
 /// @since 1.0.0
 
@@ -340,7 +351,7 @@ blockquote {
 }
 
 /// Styles for all paragraphs and preformatted content.
-/// @group global
+/// @group typography
 /// @access public
 /// @since 1.0.0
 
@@ -350,7 +361,7 @@ pre {
 }
 
 /// Styles for all preformatted and code content.
-/// @group global
+/// @group typography
 /// @access public
 /// @since 1.0.0
 
@@ -371,7 +382,7 @@ samp {
 // -----------------------------------------------------------------
 
 /// Styles for all lists and list-like content.
-/// @group global
+/// @group typography
 /// @access public
 /// @since 1.0.0
 
@@ -383,7 +394,7 @@ ul {
 }
 
 /// Styles for definition stuff.
-/// @group global
+/// @group typography
 /// @access public
 /// @since 1.0.0
 
@@ -392,7 +403,7 @@ dd {
 }
 
 /// Styles menus and lists.
-/// @group global
+/// @group typography
 /// @access public
 /// @since 1.0.0
 
@@ -403,7 +414,7 @@ ul {
 }
 
 /// Styles for navigation.
-/// @group global
+/// @group typography
 /// @access public
 /// @since 1.0.0
 
@@ -427,7 +438,7 @@ ol ol {
 // -----------------------------------------------------------------
 
 /// Styles for code element.
-/// @group global
+/// @group typography
 /// @access public
 /// @since 1.0.0
 
@@ -440,7 +451,7 @@ code {
 
 /// Styles for the code wrapper class.
 /// Adding this class around a code element enables scrolling on mobile devices.
-/// @group global
+/// @group typography
 /// @access public
 /// @since 1.0.0
 
