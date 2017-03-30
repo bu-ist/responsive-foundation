@@ -318,7 +318,7 @@ $_width-calendar-date: 48px;
 	color: $color-widget-calendar-date;
 	display: table-cell;
 	width: $_width-calendar-date;
-	line-height: $line-height-widget-calendar-date;
+	line-height: 1.1;
 	text-align: center;
 }
 
