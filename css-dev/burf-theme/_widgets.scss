@@ -94,18 +94,12 @@
 // -----------------------------------------------------------------
 
 /// Handles styling for posts in the BU Posts widget (news widget).
-/// We put the margin on top because the markup displayed when "random"
-/// is selected (specifically, the script and noscript tags it outputs)
-/// means that we can't rely on first- or last-child. But by putting a
-/// reasonable margin-top on instead, we can take advantage of margin
-/// collapsing with the title margin and avoid the issue altogether.
 /// @group widgets
 /// @access public
 /// @since 2.0.0
 
 .widget-post {
 	@extend %clearfix;
-	margin-top: 15px;
 }
 
 /// Handles styling for the post headline in the
@@ -116,7 +110,6 @@
 
 .widget-post-headline {
 	@extend %font-size-5;
-	margin: 0;
 }
 
 /// Handles styling for the published date in the
@@ -136,9 +129,8 @@
 /// @since 2.0.0
 
 .widget-post-meta {
+	@extend %font-size-minimum;
 	color: $color-widget-post-meta;
-	font-size: $font-size-widget-post-meta;
-	margin: 0;
 }
 
 /// Handles styling for the excerpt in the
@@ -148,9 +140,7 @@
 /// @since 2.0.0
 
 .widget-post-excerpt {
-	font-size: $font-size-widget-post-excerpt;
-	line-height: $line-height-widget-post-excerpt;
-	margin: 4px 0 0;
+	margin-top: -.5em;
 }
 
 /// Handles styling for the thumbnail in the
