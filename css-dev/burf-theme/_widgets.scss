@@ -112,16 +112,6 @@
 	@extend %font-size-5;
 }
 
-/// Handles styling for the published date in the
-/// BU Posts widget (news widget).
-/// @group widgets
-/// @access public
-/// @since 2.0.0
-
-.widget-posts-published {
-	font-size: $font-size-widget-post-date;
-}
-
 /// Handles styling for metadata in the
 /// BU Posts widget (news widget).
 /// @group widgets

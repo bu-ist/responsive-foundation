@@ -1264,20 +1264,6 @@ $color-widget-contentnav-active:           $color-link-active !default;
 // BU Posts Widget
 // -----------------------------------------------------------------
 
-/// Controls the font size of the post date in the BU posts widget.
-/// @group widgets
-/// @access public
-/// @since 1.0.0
-
-$font-size-widget-post-date:                 $font-size-smallest !default;
-
-/// Controls the font size of the metadata in the BU posts widget.
-/// @group widgets
-/// @access public
-/// @since 1.0.0
-
-$font-size-widget-post-meta:                 $font-size-smallest !default;
-
 /// Controls the color of the metadata in the BU posts widget.
 /// @group widgets
 /// @access public
