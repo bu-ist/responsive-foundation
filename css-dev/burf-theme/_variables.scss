@@ -1101,20 +1101,6 @@ $color-widget-title-link-after:             currentColor !default;
 
 $color-widget-title-link-after-hover:       $color-grayscale-0 !default;
 
-/// Controls the font size in all widgets.
-/// @group widgets
-/// @access public
-/// @since 1.0.0
-
-$font-size-widget:                          $font-size-small !default;
-
-/// Controls the line height in all widgets.
-/// @group widgets
-/// @access public
-/// @since 1.0.0
-
-$line-height-widget:								 $line-height-base !default;
-
 /// Controls the font family used for headings in widget content.
 /// @group widgets
 /// @access public
