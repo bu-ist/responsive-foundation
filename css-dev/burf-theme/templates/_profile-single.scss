@@ -47,7 +47,6 @@
 
 .profile-single-details {
 	@extend %card-styles;
-	font-size: $font-size-small;
 	margin: 0 0 20px;
 
 	@include breakpoint( sm ) {
@@ -63,9 +62,9 @@
 /// @since 1.0.0
 
 .label {
+	@extend %font-size-minimum;
 	display: block;
 	font-family: $font-family-sans-serif;
-	font-size: $font-size-smaller;
 	font-weight: 700;
 	text-transform: uppercase;
 }

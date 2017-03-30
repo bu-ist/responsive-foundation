@@ -60,10 +60,10 @@
 /// @since 1.0.0
 
 .comment-body {
+	@extend %font-size-secondary;
 	border: $border-comment;
 	border-width: $border-width-comment;
 	font-family: $font-family-comment;
-	font-size: $font-size-smaller;
 	padding: $comment-padding-mobile;
 	position: relative;
 
@@ -118,7 +118,7 @@
 /// @since 2.0.0
 
 .comment-metadata {
-	font-size: $font-size-smallest;
+	@extend %font-size-minimum;
 	position: absolute;
 	right: $comment-padding-mobile;
 	top: $comment-padding-mobile;
@@ -185,8 +185,7 @@
 /// @since 1.0.0
 
 .comment-respond-title {
-	font-size: $font-size-medium;
-	margin: 0 0 20px;
+	@extend %font-size-4;
 }
 
 /// Styles the container around the comment form submit button.

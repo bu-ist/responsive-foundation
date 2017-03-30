@@ -209,9 +209,9 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 /// @since 1.2.0
 
 %sidebar-styles {
+	@extend %font-size-secondary;
 	@extend %col-md-#{$_sidebar-width};
 	clear: none;
-	font-size: $font-size-small;
 
 	// TODO: sunset this in a future release -
 	// this padding should really only apply to .sidebar-location-right
@@ -336,14 +336,13 @@ $_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( (
 /// @since 1.0.0
 
 .site-footer {
+	@extend %font-size-secondary;
 	@extend %clearfix;
 	background: $color-site-footer-bg;
 	clear: both;
 	color: $color-grayscale-8;
 	display: block;
 	font-family: $font-family-sans-serif;
-	font-size: $font-size-small;
-	line-height: $line-height-small;
 	padding: $padding-site-footer;
 	position: relative;
 	width: 100%;
@@ -371,10 +370,9 @@ $_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( (
 	h4,
 	h5,
 	h6 {
+		@extend %font-size-secondary;
 		color: $color-site-footer;
 		font-family: $font-family-sans-serif;
-		font-size: $font-size-small;
-		line-height: $line-height-small;
 		margin: 0 0 3px;
 	}
 }
@@ -422,7 +420,7 @@ $_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( (
 
 	a {
 		@include transition( color 200ms ease-in-out 0s );
-		font-size: $font-size-large;
+		font-size: $font-size-icon;
 	}
 
 	[href*="dropbox.com"] {

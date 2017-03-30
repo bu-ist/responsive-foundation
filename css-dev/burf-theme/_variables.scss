@@ -408,7 +408,7 @@ $border-width-utility-nav:                   $border-top !default;
 /// @access public
 /// @since 1.0.0
 
-$font-size-utility-nav:                      $font-size-smaller !default;
+$font-size-utility-nav:                      14px !default;
 
 /// The color of links in the utility navigation.
 /// @group utility-navigation
@@ -1145,7 +1145,7 @@ $color-widget-calendar-date:                $color-grayscale-0 !default;
 /// @access public
 /// @since 1.0.0
 
-$font-size-widget-calendar-date-day:          $font-size-large !default;
+$font-size-widget-calendar-date-day:          22px !default;
 
 /// Controls the color of the day when using the graphic style in the
 /// calendar widget.
@@ -1161,7 +1161,7 @@ $color-widget-calendar-date-day:             inherit !default;
 /// @access public
 /// @since 1.0.0
 
-$font-size-widget-calendar-date-month:        $font-size-smallest !default;
+$font-size-widget-calendar-date-month:        12px !default;
 
 /// Controls the color of the month when using the graphic style in the
 /// calendar widget.
@@ -1415,3 +1415,11 @@ $image-bumclogo:         "https://www.bu.edu/cdn/images/logos/bumclogo96x40.png"
 /// @since 1.0.0
 
 $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-retina.png" !default;
+
+
+
+
+
+
+
+$font-size-icon: 21px !default;
