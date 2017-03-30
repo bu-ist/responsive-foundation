@@ -8,13 +8,14 @@
 /// @since 1.0.0
 
 table {
+	@extend %font-size-secondary;
 	border: $table-border;
 	empty-cells: show;
 	margin: $table-margin;
+	width: 100%;
 
 	caption {
 		color: $color-table-caption;
-		font-size: $font-size-table-caption;
 		font-style: italic;
 		padding: $table-caption-padding;
 		text-align: center;

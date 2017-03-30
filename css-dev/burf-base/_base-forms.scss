@@ -113,8 +113,8 @@
 /// @since 1.0.0
 
 form {
+	@extend %font-size-secondary;
 	font-family: $font-family-form;
-	font-size: $font-size-form;
 	margin: $form-margin;
 }
 

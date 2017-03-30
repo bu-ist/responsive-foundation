@@ -296,7 +296,7 @@ $color-link-visited:                       #7337af !default;
 $color-link-active:                        $color-grayscale-0 !default;
 
 $font-family-button:                        $font-family-sans-serif !default;
-$font-size-button:                          $font-size-small !default;
+$font-size-button:                          inherit !default;
 $color-button-bg:                          $color-grayscale-e !default;
 $color-button-text:                        $color-grayscale-4 !default;
 $color-button-primary-bg:                  #0078e7 !default;
@@ -334,7 +334,6 @@ $color-table-head:                         $color-grayscale-0 !default;
 $color-table-head-bg:                      $color-grayscale-e !default;
 
 $table-caption-padding:                    0 0 10px !default;
-$font-size-table-caption:                   $font-size-small !default;
 $color-table-caption:                      $color-grayscale-9 !default;
 
 $color-table-th-border:                    $color-grayscale-c !default;
@@ -354,7 +353,6 @@ $color-table-stripes:                      $color-grayscale-f5 !default;
 
 $form-margin:                              0 !default;
 $font-family-form:                          $font-family-sans-serif !default;
-$font-size-form:                            $font-size-small !default;
 
 $form-legend-border:                       1px solid $color-grayscale-e !default;
 $form-legend-border-width:                  0 0 1px 0 !default;
