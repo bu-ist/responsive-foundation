@@ -169,13 +169,13 @@ $heading-growth-rate: 3.5;
 /// @since 2.0.0
 
 $font-styles: (
-	"secondary": (
-		"font-size": 16px,
-		"line-height": $line-height-base
+	secondary: (
+		font-size: 16px,
+		line-height: $line-height-base
 	),
-	"minimum": (
-		"font-size": 13px,
-		"line-height": $min-line-height
+	minimum: (
+		font-size: 13px,
+		line-height: $min-line-height
 	)
 );
 
@@ -232,9 +232,9 @@ $_h: $_depth-headings;
 	}
 
 	$font-style: (
-		"#{$name}": (
-			"font-size": $size,
-			"line-height": $lh
+		#{$name}: (
+			font-size: $size,
+			line-height: $lh
 		)
 	);
 
@@ -262,8 +262,8 @@ $_h: $_depth-headings;
 @each $style, $settings in $font-styles {
 	.font-size-#{$style},
 	%font-size-#{$style} {
-		font-size: map-get( $settings, "font-size" );
-		line-height: map-get( $settings, "line-height" );;
+		font-size: map-get( $settings, font-size );
+		line-height: map-get( $settings, line-height );;
 	}
 }
 
