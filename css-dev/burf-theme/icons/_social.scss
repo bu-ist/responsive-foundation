@@ -1,0 +1,930 @@
+// =================================================================
+// Social Icons
+	// dropbox (two options)
+	// facebook (two options)
+	// flickr (two options)
+	// foursquare (two options)
+	// github (two options)
+	// googleplus (two options)
+	// instagram (two options)
+	// kickstarter (two options)
+	// linkedin (two options)
+	// paypal (two options)
+	// pinterest (two options)
+	// pocket (two options)
+	// reddit (two options)
+	// renren
+	// retweet
+	// soundcloud (two options)
+	// spotify
+	// stackexchange (two options)
+	// stackoverflow (two options)
+	// stumbleupon (two options)
+	// twitter (two options)
+	// tumblr (two options)
+	// vimeo (two options)
+	// vine (two options)
+	// weibo (two options)
+	// wordpress
+	// youtube (two options)
+// =================================================================
+
+/// The dropbox icon.
+/// @example scss - Add the dropbox icon to a menu item
+/// .menu-item {
+///    @extend %icon-dropbox;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-dropbox {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F653";
+	}
+}
+
+/// The dropbox alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-dropbox-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F65A";
+	}
+}
+
+/// The facebook icon.
+/// @example scss - Add the facebook icon to a menu item
+/// .menu-item {
+///    @extend %icon-facebook;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-facebook {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F610";
+	}
+}
+
+/// The facebook alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-facebook-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F61A";
+	}
+}
+
+/// The flickr icon.
+/// @example scss - Add the flickr icon to a menu item
+/// .menu-item {
+///    @extend %icon-flickr;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-flickr {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F640";
+	}
+}
+
+/// The flickr alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-flickr-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F644";
+	}
+}
+
+/// The foursquare icon.
+/// @example scss - Add the foursquare icon to a menu item
+/// .menu-item {
+///    @extend %icon-foursquare;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-foursquare {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F690";
+	}
+}
+
+/// The icon alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-foursquare-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F691";
+	}
+}
+
+/// The github icon.
+/// @example scss - Add the github icon to a menu item
+/// .menu-item {
+///    @extend %icon-github;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-github {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F670";
+	}
+}
+
+/// The github alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-github-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F671";
+	}
+}
+
+/// The googleplus icon.
+/// @example scss - Add the googleplus icon to a menu item
+/// .menu-item {
+///    @extend %icon-googleplus;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-googleplus {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F613";
+	}
+}
+
+/// The icon alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-googleplus-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F614";
+	}
+}
+
+/// The instagram icon.
+/// @example scss - Add the instagram icon to a menu item
+/// .menu-item {
+///    @extend %icon-instagram;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-instagram {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F641";
+	}
+}
+
+/// The instagram alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-instagram-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F64A";
+	}
+}
+
+/// The kickstarter icon.
+/// @example scss - Add the kickstarter icon to a menu item
+/// .menu-item {
+///    @extend %icon-kickstarter;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-kickstarter {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F681";
+	}
+}
+
+/// The icon alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-kickstarter-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F68A";
+	}
+}
+
+/// The linkedin icon.
+/// @example scss - Add the linkedin icon to a menu item
+/// .menu-item {
+///    @extend %icon-linkedin;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-linkedin {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F612";
+	}
+}
+
+/// The linkedin alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-linkedin-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F61E";
+	}
+}
+
+/// The paypal icon.
+/// @example scss - Add the paypal icon to a menu item
+/// .menu-item {
+///    @extend %icon-paypal;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-paypal {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F680";
+	}
+}
+
+/// The paypal alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-paypal-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F68B";
+	}
+}
+
+/// The pinterest icon.
+/// @example scss - Add the pinterest icon to a menu item
+/// .menu-item {
+///    @extend %icon-pinterest;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-pinterest {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F650";
+	}
+}
+
+/// The pinterest alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-pinterest-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F651";
+	}
+}
+
+/// The pocket icon.
+/// @example scss - Add the pocket icon to a menu item
+/// .menu-item {
+///    @extend %icon-pocket;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-pocket {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F634";
+	}
+}
+
+/// The pocket alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-pocket-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F635";
+	}
+}
+
+/// The reddit icon.
+/// @example scss - Add the reddit icon to a menu item
+/// .menu-item {
+///    @extend %icon-reddit;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-reddit {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F616";
+	}
+}
+
+/// The reddit alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-reddit-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F617";
+	}
+}
+
+/// The renren icon.
+/// @example scss - Add the renren icon to a menu item
+/// .menu-item {
+///    @extend %icon-renren;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-renren {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F61C";
+	}
+}
+
+/// The retweet icon.
+/// @example scss - Add the retweet icon to a menu item
+/// .menu-item {
+///    @extend %icon-retweet;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-retweet {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F600";
+	}
+}
+
+/// The soundcloud icon.
+/// @example scss - Add the soundcloud icon to a menu item
+/// .menu-item {
+///    @extend %icon-soundcloud;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-soundcloud {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F6B3";
+	}
+}
+
+/// The icon alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-soundcloud-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F6B4";
+	}
+}
+
+/// The spotify icon.
+/// @example scss - Add the spotify icon to a menu item
+/// .menu-item {
+///    @extend %icon-spotify;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-spotify {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F6B1";
+	}
+}
+
+/// The stackexchange icon.
+/// @example scss - Add the stackexchange icon to a menu item
+/// .menu-item {
+///    @extend %icon-stackexchange;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-stackexchange {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F673";
+	}
+}
+
+/// The icon alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-stackexchange-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F67B";
+	}
+}
+
+/// The stackoverflow icon.
+/// @example scss - Add the stackoverflow icon to a menu item
+/// .menu-item {
+///    @extend %icon-stackoverflow;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-stackoverflow {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F672";
+	}
+}
+
+/// The icon alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-stackoverflow-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F67A";
+	}
+}
+
+/// The stumbleupon icon.
+/// @example scss - Add the stumbleupon icon to a menu item
+/// .menu-item {
+///    @extend %icon-stumbleupon;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-stumbleupon {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F63A";
+	}
+}
+
+/// The icon alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-stumbleupon-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F63D";
+	}
+}
+
+/// The twitter icon.
+/// @example scss - Add the twitter icon to a menu item
+/// .menu-item {
+///    @extend %icon-twitter;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-twitter {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F611";
+	}
+}
+
+/// The twitter alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-twitter-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F62B";
+	}
+}
+
+/// The tumblr icon.
+/// @example scss - Add the tumblr icon to a menu item
+/// .menu-item {
+///    @extend %icon-tumblr;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-tumblr {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F620";
+	}
+}
+
+/// The tumblr alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-tumblr-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F62A";
+	}
+}
+
+/// The vimeo icon.
+/// @example scss - Add the vimeo icon to a menu item
+/// .menu-item {
+///    @extend %icon-vimeo;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-vimeo {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F631";
+	}
+}
+
+/// The alt alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-vimeo-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F63C";
+	}
+}
+
+/// The vine icon.
+/// @example scss - Add the vine icon to a menu item
+/// .menu-item {
+///    @extend %icon-vine;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-vine {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F633";
+	}
+}
+
+/// The alt alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-vine-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F63B";
+	}
+}
+
+/// The weibo icon.
+/// @example scss - Add the weibo icon to a menu item
+/// .menu-item {
+///    @extend %icon-weibo;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-weibo {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F61B";
+	}
+}
+
+/// The alt alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-weibo-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F61D";
+	}
+}
+
+/// The wordpress icon.
+/// @example scss - Add the wordpress icon to a menu item
+/// .menu-item {
+///    @extend %icon-wordpress;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-wordpress {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F621";
+	}
+}
+
+/// The youtube icon.
+/// @example scss - Add the youtube icon to a menu item
+/// .menu-item {
+///    @extend %icon-youtube;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-youtube {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F630";
+	}
+}
+
+/// The youtube alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-youtube-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\F632";
+	}
+}

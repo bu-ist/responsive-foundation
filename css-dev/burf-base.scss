@@ -1,5 +1,9 @@
-// basic framework elements
-// -----------------------------------------------------------------
+// =================================================================
+// Basic styling and resets which do not depend on WordPress
+// =================================================================
+
+// resets
+@import 'burf-base/normalize';
 
 // variables
 @import 'burf-base/variables';

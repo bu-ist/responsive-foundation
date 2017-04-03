@@ -1,0 +1,63 @@
+// =================================================================
+// Base Icon Styles
+// =================================================================
+
+@font-face {
+	font-family: "bu-default-icons";
+	src: url( "https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot?" ) format( "embedded-opentype" );
+	src: url( "https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.woff" ) format( "woff" ),
+		url( "https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.ttf" ) format( "truetype" ),
+		url( "https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.svg#bu-default-icons" ) format( "svg" );
+	font-weight: normal;
+	font-style: normal;
+}
+
+/// Provides base icon styles normalized across browsers and optimized
+/// for accessibility.
+/// Use this placeholder if you are loading your own font library
+/// and can't use the built-in icons because the content is different.
+/// This should go on your base element. The complimentary placeholder,
+/// `%icon`, needs to go on a `:before` or `:after` underneath.
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-base {
+	.lt-ie9:hover & {
+		// This triggers a redraw in IE to Fix IE8's :before content rendering.
+		-ms-zoom: 1;
+	}
+
+	span {
+		display: none; // Hide labels
+	}
+}
+
+/// Provides base icon styles normalized across browsers and optimized
+/// for accessibility.
+/// Use this placeholder on :before or :after if you are loading your own
+/// font library and can't use the built-in icons because the content is different.
+/// You will also need the %icon-base placeholder on your hoverable element if you
+/// need compatibility before IE9.
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-content {
+	color: $color-icons;
+	display: inline-block;
+	font-family: $font-family-icons;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1;
+	padding-bottom: 0.2em; // Accomodate for inline icons
+	speak: none;
+	text-decoration: none;
+	text-rendering: optimizeLegibility;
+	text-transform: none;
+	vertical-align: middle;
+	white-space: nowrap;
+}

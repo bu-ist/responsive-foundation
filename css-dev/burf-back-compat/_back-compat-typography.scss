@@ -10,34 +10,40 @@
 // @extends within your theme should be changed from CSS classes to their SASS placeholder equivalent.
 // For best performance, include only the typography classes your theme needs to use.
 
-/* Typography
------------------------------------------------------------------ */
+// Typography
 
 .font-jumbo {
 	@extend %font-jumbo;
 }
+
 .font-largest {
 	@extend %font-largest;
 }
+
 .font-larger {
 	@extend %font-larger;
 }
+
 .font-large {
 	@extend %font-large;
 }
+
 .font-medium {
 	@extend %font-medium;
 }
+
 .font-small {
 	@extend %font-small;
 }
-/* Generic font size classes */
+// Generic font size classes
 .font-smaller {
 	@extend %font-smaller;
 }
+
 .font-smallest {
 	@extend %font-smallest;
 }
+
 .font-micro {
 	@extend %font-micro;
 }

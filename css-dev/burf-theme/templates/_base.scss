@@ -1,0 +1,119 @@
+// =================================================================
+// Templates
+// =================================================================
+
+//	1. Narrow Content Column
+//	2. Narrow Sidebar
+//	3. 404 page
+
+// -----------------------------------------------------------------
+// Narrow Content Column
+// -----------------------------------------------------------------
+
+%template-narrow {
+	.content-container {
+		max-width: $container-sm;
+	}
+
+	.content-area {
+		@extend %col-md-full;
+	}
+}
+
+// A utility class to easily undo narrow column widths.
+// Always overrides %template-narrow.
+%remove-template-narrow {
+	.content-container {
+		max-width: $container-lg;
+	}
+
+	.content-area {
+		@include breakpoint( md ) {
+			float: left;
+			width: 66.66667%;
+		}
+	}
+}
+
+// Layouts
+.sidebar-location-left,
+.sidebar-location-right {
+	@extend %remove-template-narrow;
+}
+
+// -----------------------------------------------------------------
+// Narrow Sidebar
+// -----------------------------------------------------------------
+
+// A utility class to style sidebars on narrow width templates.
+%template-narrow-sidebar {
+	@extend %clearfix;
+	@extend %col-sm-margin-parent;
+	clear: both;
+	float: none;
+	margin-bottom: $widget-margin-bottom;
+	width: auto;
+
+	.widget {
+		@extend %col-sm-margin-half;
+	}
+}
+
+// A utility class to easily undo narrow width sidebar styles.
+// Always overrides %template-narrow-sidebar.
+%remove-template-narrow-sidebar {
+	@extend %sidebar-styles;
+	@extend %container-styles;
+
+	@include breakpoint( md ) {
+		clear: none;
+		float: left;
+	}
+
+	.widget {
+		margin-bottom: $widget-margin-bottom;
+		margin-left: 0;
+		width: 100%;
+	}
+}
+
+.sidebar-posts,
+.sidebar-profiles {
+	@extend %template-narrow-sidebar;
+
+	// Layouts
+	.sidebar-location-left &,
+	.sidebar-location-right & {
+		@extend %remove-template-narrow-sidebar;
+	}
+}
+
+// -----------------------------------------------------------------
+// 404 page
+// -----------------------------------------------------------------
+
+/// Handles styling for the 404 page.
+/// @group templates
+/// @access public
+/// @since 2.0.0
+
+.error-404 {
+	#quicksearch {
+		background: transparent !important; // required to override Responsive layout styles
+		border: 0;
+		display: block;
+		font-size: 16.5px;
+		margin: 50px 0;
+		max-width: 500px;
+		padding: 0;
+		position: static;
+
+		fieldset {
+			padding: 0;
+		}
+
+		select {
+			display: none;
+		}
+	}
+}

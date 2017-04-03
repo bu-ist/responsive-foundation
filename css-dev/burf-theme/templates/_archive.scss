@@ -1,0 +1,109 @@
+// -----------------------------------------------------------------
+// News & Archive Template
+// -----------------------------------------------------------------
+
+.blog,
+.archive,
+.page-template-news {
+	@extend %template-narrow;
+}
+
+.meta {
+	font-family: $font-family-news-meta;
+	font-size: $font-size-news-meta;
+	margin-bottom: 20px;
+}
+
+/// Handles the previous and next links at the bottom of post listings.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+.paging-navigation {
+	@extend %clearfix;
+	border: $border-news-post;
+	border-width: $border-width-news-post;
+	margin-top: 30px;
+	padding-top: 30px;
+
+	a {
+		@extend %button-styles;
+		@extend %button-styles-primary;
+	}
+}
+
+/// Handles the previous link at the bottom of post listings.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+.nav-previous {
+	float: left;
+}
+
+/// Handles the next link at the bottom of post listings.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+.nav-next {
+	float: right;
+}
+
+/// Handles styling for posts in news listings and archive pages.
+/// @group news
+/// @access public
+/// @since 2.0.0
+
+.post-part {
+	border: $border-news-post;
+	border-width: $border-width-news-post;
+	margin-top: 30px;
+	padding-top: 30px;
+	position: relative;
+
+	&:first-child {
+		border-top: 0;
+		margin-top: 0;
+		padding-top: 0;
+	}
+}
+
+/// Handles styling for headlines in the post template partial,
+/// usually used on post listings and archive pages.
+/// @group news
+/// @access public
+/// @since 2.0.0
+
+.post-headline {
+	margin-bottom: 10px;
+}
+
+/// Handles styling for metadata in the post template partial,
+/// usually used on post listings and archive pages.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+.post-meta {
+	span {
+		&::before {
+			color: $color-news-meta-before;
+			content: "\a0\b7\a0";
+		}
+
+		&:first-child::before {
+			content: "";
+		}
+	}
+}
+
+/// Handles styling for thumbnails in the post template partial,
+/// usually used on post listings and archive pages.
+/// @group news
+/// @access public
+/// @since 2.0.0
+
+.post-thumb {
+	float: right;
+}

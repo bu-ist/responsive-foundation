@@ -1,4 +1,8 @@
- // -----------------------------------------------------------------
+// =================================================================
+// Variables
+// =================================================================
+
+// -----------------------------------------------------------------
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
@@ -9,49 +13,243 @@
 // -----------------------------------------------------------------
 
 // Color and Typography
+// -----------------------------------------------------------------
+
+/// Affects the site footer background color as well as any other areas which
+/// do not have a background color.
+/// @group footer
+/// @access public
+/// @since 1.0.0
 
 $color-body-bg:                            $color-grayscale-0 !default;
+
+/// The default font for body copy.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 $font-family-base:                          "Benton", sans-serif !default;
+
+/// A serif font to use in your theme. This variable is not used by default.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 $font-family-serif:                         "TiemposText", Georgia, serif !default;
+
+/// A sans-serif font to use in your theme.
+/// By default, this affects the site footer and label text in profiles.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 $font-family-sans-serif:                     "Benton", "Helvetica", sans-serif !default;
+
+/// The font to use for branding.
+/// You may not change this unless you have permission from Marketing &amp; Communications.
+/// @group branding
+/// @access public
+/// @since 1.0.0
+
 $font-family-brand:                         "Whitney SSm A", "Whitney SSm B", $font-family-sans-serif !default;
+
+/// The color to use for icons across the site.
+/// By default, this will inherit the color of the text in the container the icon lives in.
+/// Setting this will keep the color of the icons consistent everywhere.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 $color-icons:										 unset;
 
 // Grid
+// -----------------------------------------------------------------
+
+/// The number of columns you would like to use in your layout.
+/// This controls the width of the content area vs. the sidebar.
+/// By default, setting this to 3 will make the sidebar take up 1 column,
+/// and the content area 2 columns.
+/// If you were to set this to 4, the sidebar would take up 1/4 of the space,
+/// while the content area would take up 3/4 of the space.
+/// By default, the number of supported widgets in your footer will match this number.
+/// @group grid
+/// @access public
+/// @since 1.2.0
 
 $number-columns: 									 3 !default;
+
+/// Sets the margin width for content and footbar widgets.
+/// @group grid
+/// @access public
+/// @since 1.2.0
+
 $margin-width: 			  					    5.2% !default;
+
+/// Sets the number of supported widgets in the footbar.
+/// Matches the number of columns in the theme by default.
+/// @group grid
+/// @access public
+/// @since 1.2.0
+
 $number-widgets-footbar: 						 $number-columns !default;
+
+/// The width of the side nav, if you are using the left hand layout.
+/// @group grid
+/// @access public
+/// @since 1.2.0
+
 $width-side-nav:                            240px !default;
-$sidebar-padding:                          ($margin-width - $margin-width*(1/($number-widgets-footbar))) !default;
+
+/// The amount of padding to add to the sidebar.
+/// Calculated based on the number of columns by default.
+/// @group grid
+/// @access public
+/// @since 1.2.0
+
+$sidebar-padding:                          ( $margin-width - $margin-width * ( 1 / ( $number-widgets-footbar ) ) ) !default;
+
+/// The amount of padding to add to columns on mobile.
+/// @group grid
+/// @access public
+/// @since 1.2.0
+
 $column-padding-bottom:                     10px !default;
+
+/// The amount of padding to add to columns on desktop.
+/// @group grid
+/// @access public
+/// @since 1.2.0
+
 $column-padding-bottom-large-screen:         35px !default;
 
 // Borders
+// -----------------------------------------------------------------
+
+/// The default border style.
+/// @group global
+/// @access public
+/// @since 1.2.0
 
 $border-base:										 1px solid $color-grayscale-d !default;
+
+/// The default width of the top border.
+/// @group global
+/// @access public
+/// @since 1.2.0
+
 $border-top:										 1px 0 0 0;
+
+/// The default width of the bottom border.
+/// @group global
+/// @access public
+/// @since 1.2.0
+
 $border-bottom:									 0 0 1px 0;
 
 // Message
+// -----------------------------------------------------------------
+
+/// The style of the border on comments.
+/// @group comments
+/// @access public
+/// @since 1.0.0
 
 $border-message:                           $border-base !default;
+
+/// The width of the border on comments.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
 $border-width-message:                      1px 1px 1px 5px !default;
+
+/// The amount of rounding (border radius) to apply to the corners
+/// of comments.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
 $border-radius-message:                     3px !default;
+
+/// The amount of padding to apply to comments.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
 $padding-message:                          20px !default;
+
+/// The font size in comments.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
 $font-size-message:                         $font-size-small !default;
+
+/// The background of comments.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
 $color-message-bg:                         $color-grayscale-f0 !default;
+
+/// The left border color of comments.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
 $color-message-border-left:                 $color-grayscale-0 !default;
 
 // Wordpress WYSIWYG
+// -----------------------------------------------------------------
+
+/// The margin to use around anything floated in the content area.
+/// @group content
+/// @access public
+/// @since 1.0.0
 
 $margin-floated-content: 						 10px !default;
+
+/// The font to use for captions.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
 $font-family-caption:                       $font-family-sans-serif !default;
+
+/// The font size to use for captions.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
 $font-size-caption:                         $font-size-smaller !default;
+
+/// The color to use for captions.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
 $color-caption:                            $color-grayscale-9 !default;
+
+/// The border color to use in tables.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
 $border-color-table:                        $color-grayscale-d !default;
+
+/// A darker border color to use in tables.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
 $border-color-table-dark:                   $color-grayscale-9 !default;
-$box-shadow-table:                          inset -20px 0px 20px -10px $color-grayscale-f0 !default;
+
+/// The shadow to use in tables.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$box-shadow-table:                          inset -20px 0 20px -10px $color-grayscale-f0 !default;
 
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
@@ -64,55 +262,289 @@ $box-shadow-table:                          inset -20px 0px 20px -10px $color-gr
 // -----------------------------------------------------------------
 
 // Masthead and Brand
+// -----------------------------------------------------------------
+
+/// The style of border to use on the masthead.
+/// This shows directly below navigation or brand depending on the layout
+/// you've chosen for your site.
+/// @group header
+/// @access public
+/// @since 1.0.0
 
 $border-masthead:                          $border-base !default;
+
+/// The placement and size of the border on the masthead.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
 $border-width-masthead:                     $border-bottom !default;
+
+/// The background color of the masthead.
+/// Bright colors are not recommended.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
 $color-masthead-bg:                        $color-grayscale-f !default;
+
+/// The font family to use for the sponsored branding type.
+/// @group branding
+/// @access public
+/// @since 1.0.0
+
 $font-family-brand-sponsored:               $font-family-brand !default;
+
+/// The font family to use for the unbranded branding type.
+/// @group branding
+/// @access public
+/// @since 1.0.0
+
 $font-family-brand-unbranded:               $font-family-sans-serif !default;
+
+/// The height of the branding area.
+/// @group branding
+/// @access public
+/// @since 1.0.0
+
 $height-brand:                             120px !default;
+
+/// The color used for the site name when a site is using BU branding.
+/// @group branding
+/// @access public
+/// @since 1.0.0
+
 $color-brand:                              $color-grayscale-0 !default;
-$color-unbranded:                            #cc0000;
+
+/// The color used for the site name when a site is not using BU branding.
+/// @group branding
+/// @access public
+/// @since 1.0.0
+
+$color-unbranded:                            #c00;
 
 // Primary Navigation
+// -----------------------------------------------------------------
+
+/// The style of border used on primary navigation.
+/// By default, this border shows above primary navigation on mobile only.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
 
 $border-width-primary-nav:                   $border-top !default;
-$border-primary-nav-desktop: 					 none !default;
+
+/// The width of border used on primary navigation at desktop sizes.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$border-primary-nav-desktop: 					 0 !default;
+
+/// The color of border used on primary navigation.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
 $color-primary-nav-border:                  $color-grayscale-3 !default;
+
+/// The font used in primary navigation.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
 $font-family-navigation:                    $font-family-sans-serif !default;
+
+/// The font size in primary navigation.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
 $font-size-navigation:                      $font-size-small !default;
+
+/// The color to use behind primary navigation.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
 $color-primary-nav-bg:                      $color-grayscale-0 !default;
-$color-primary-nav-dropdown-bg:             $color-grayscale-0 !default;
+
+/// The color of links in primary navigation.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
 $color-primary-nav-link:                    $color-grayscale-f !default;
+
+/// The color of links when you hover in primary navigation.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
 $color-primary-nav-link-hover:              $color-grayscale-a !default;
+
+/// The color of an active link in primary navigation - in other words, the
+/// color that a link will be when you are on that link's page.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
 $color-primary-nav-link-current:            $color-grayscale-9 !default;
+
+/// The color to use behind dropdown menus. Only affects non-mobile devices.
+/// This variable is not used in the left hand navigation layout as dropdowns
+/// are not supported.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-primary-nav-dropdown-bg:             $color-grayscale-0 !default;
+
+/// The color of links in dropdown menus.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
 $color-primary-nav-dropdown-link:           $color-primary-nav-link !default;
+
+/// The color of links in dropdown menus when you hover over them.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
 $color-primary-nav-dropdown-link-hover:     $color-primary-nav-link-hover !default;
 
 // Utility Navigation
+// -----------------------------------------------------------------
+
+/// The width and style of border used in the utility navigation.
+/// @group utility-navigation
+/// @access public
+/// @since 1.0.0
 
 $border-width-utility-nav:                   $border-top !default;
+
+/// The font size used in the utility navigation.
+/// @group utility-navigation
+/// @access public
+/// @since 1.0.0
+
 $font-size-utility-nav:                      $font-size-smaller !default;
+
+/// The color of links in the utility navigation.
+/// @group utility-navigation
+/// @access public
+/// @since 1.0.0
+
 $color-utility-nav-link:                    $color-grayscale-7 !default;
+
+/// The color of links when you hover in the utility navigation.
+/// @group utility-navigation
+/// @access public
+/// @since 1.0.0
+
 $color-utility-nav-link-hover:              $color-grayscale-0 !default;
+
+/// The color of links in the utility navigation on mobile.
+/// The placement of utility navigation on mobile usually means
+/// the utility navigation will be on a different background color,
+/// so it's important to double check that this is set correctly.
+/// @group utility-navigation
+/// @access public
+/// @since 1.0.0
+
 $color-utility-nav-mobile-link:       			$color-grayscale-a !default;
+
+/// The color of links in the utility navigation when you hover on mobile.
+/// @group utility-navigation
+/// @access public
+/// @since 1.0.0
+
 $color-utility-nav-mobile-link-hover: 			$color-grayscale-f !default;
 
 // Navigation and Search Toggles
+// -----------------------------------------------------------------
+
+/// Controls the color of toggles in the navigation at mobile sizes.
+/// By default, this affects both the menu and search toggles.
+/// @group header
+/// @access public
+/// @since 1.0.0
 
 $color-nav-toggle:                          $color-grayscale-f !default;
+
+/// Controls the color of toggles in the navigation at mobile sizes on hover.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
 $color-nav-toggle-hover:                    $color-grayscale-a !default;
+
+/// Controls the color of toggles in the navigation at desktop sizes.
+/// By default, this affects both the menu and search toggles.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
 $color-nav-toggle-alt:                      $color-grayscale-9 !default;
+
+/// Controls the color of toggles in the navigation at desktop sizes on hover.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
 $color-nav-toggle-alt-hover:                $color-grayscale-0 !default;
 
 // Search
+// -----------------------------------------------------------------
+
+/// Controls the width of the border used on the search pane.
+/// @group header
+/// @access public
+/// @since 1.0.0
 
 $border-width-quicksearch:                  $border-top !default;
+
+/// Controls the color of the border used on the search form.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
 $color-quicksearch-border:                 $color-grayscale-d !default;
+
+/// Controls how much rounding is applied to the search form field corners.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
 $border-radius-quicksearch-input:           20px 0 0 20px !default;
+
+/// Controls how much rounding is applied to the search form submit button.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
 $border-radius-quicksearch-button:          0 20px 20px 0 !default;
+
+/// Controls the width of the border used on the search field.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
 $border-search:                            0 !default;
+
+/// Controls the background color of the search field.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
 $color-search-bg:                          $color-grayscale-f5 !default;
+
+/// Controls the color of the text in the search field.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
 $color-search-text:                        $color-grayscale-0 !default;
 
 // -----------------------------------------------------------------
@@ -126,100 +558,602 @@ $color-search-text:                        $color-grayscale-0 !default;
 // -----------------------------------------------------------------
 
 // All content and templates
+// -----------------------------------------------------------------
 
-$color-bannerContainer:                    $color-grayscale-f0 !default;
+/// Controls the background color of the banner container.
+/// By default, this only affects the window width banner container.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$color-banner-container:                    $color-grayscale-f0 !default;
+
+/// Controls the background color of the content.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
 $color-content-bg:                         $color-grayscale-f !default;
-$color-back-link-before:                    $color-grayscale-f !default;
+
+/// Controls the shape used in "back" links, such as the links you
+/// see at the bottom of the page when viewing a single profile.
+/// By default, this is an arrow.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
 $back-link-before:                          "← " !default;
 
+/// Controls the color of the arrow in "back" links, such as the links you
+/// see at the bottom of the page when viewing a single profile.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$color-back-link-before:                    $color-grayscale-f !default;
+
 // Calendar Template: Event List
+// -----------------------------------------------------------------
+
+/// Controls the size of the calendar topic, which lives right below the
+/// title on the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
 
 $font-size-calendar-topic:                  $font-size-large !default;
+
+/// Controls the color of the date range on the calendar listing template.
+/// By default, this is right after the topic.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
 $color-calendar-heading-date-range:          $color-grayscale-9 !default;
+
+/// Controls the size of the date heading on the calendar listing template.
+/// When there are multiple events on the same day, they will be grouped by
+/// day, so it is best to treat this like a heading.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
 $font-size-calendar-event-date:              $font-size-medium !default;
+
+/// Controls the color of links on the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
 $color-calendar-event-link:                 $color-link !default;
+
+/// Controls the color of links on the calendar listing template when you hover.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
 $color-calendar-event-link-hover:           $color-link !default;
 
 // Calendar Template: Sidebar
+// -----------------------------------------------------------------
+
+/// Controls the font used in the calendar picker in the sidebar
+/// of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
 
 $font-family-calendar-month-caption:         $font-family-sans-serif !default;
+
+/// Controls the size of the selected month in the calendar picker
+/// in the sidebar of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
 $font-size-calendar-month-caption:           $font-size-medium !default;
+
+/// Controls the color of the selected month in the calendar picker
+/// in the sidebar of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
 $color-calendar-month-caption:              $color-grayscale-7 !default;
+
+/// Controls the background of day cells in the calendar picker
+/// in the sidebar of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
 $color-calendar-month-th-bg:                $color-grayscale-e !default;
+
+/// Controls the color of text in the day cells in the calendar picker
+/// in the sidebar of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
 $color-calendar-month-th:                   $color-grayscale-0 !default;
+
+/// Controls the spacing of day cells in the calendar picker
+/// in the sidebar of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
 $padding-calendar-month-cell:               4px !default;
+
+/// Controls the font family of day cells in the calendar picker
+/// in the sidebar of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
 $font-family-calendar-month-cell:            $font-family-sans-serif !default;
+
+/// Controls the color of links in the calendar picker
+/// in the sidebar of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
 $color-calendar-month-link:             $color-link !default;
+
+/// Controls the color of links when you hover in the calendar picker
+/// in the sidebar of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
 $color-calendar-month-link-hover:       $color-link !default;
+
+/// Controls the background of links in the calendar picker
+/// for days that are not in the current month (previous/next month)
+/// in the sidebar of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
 $color-calendar-month-link-out-bg:       $color-grayscale-f5 !default;
+
+/// Controls the color of links in the calendar picker
+/// for days that are not in the current month (previous/next month)
+/// in the sidebar of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
 $color-calendar-month-link-out:          $color-grayscale-9 !default;
+
+/// Controls the background of the current day's link in the calendar picker
+/// in the sidebar of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
 $color-calendar-month-link-today-bg:     $color-grayscale-e !default;
+
+/// Controls the color of the current day's link in the calendar picker
+/// in the sidebar of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
 $color-calendar-month-link-today:        $color-grayscale-0 !default;
 
 // Calendar Template: Single
+// -----------------------------------------------------------------
+
+/// Controls the font used for labels in the sidebar of the single
+/// calendar event template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
 
 $font-family-single-event-label:             $font-family-sans-serif !default;
+
+/// Controls the font weight used for labels in the sidebar of the single
+/// calendar event template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
 $font-weight-calendar-label:                700 !default;
+
+/// Controls the color of labels in the sidebar of the single
+/// calendar event template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
 $color-single-event-label:               $color-grayscale-9 !default;
 
 // Profiles Template: List
+// -----------------------------------------------------------------
+
+/// Controls the style of border used on profile callouts.
+/// By default, this applies to the basic format only.
+/// @group profiles
+/// @access public
+/// @since 1.0.0
 
 $border-profiles:                          $border-base !default;
+
+/// Controls the shape of the profile photo.
+/// By default, this is set to a circle.
+/// @group profiles
+/// @access public
+/// @since 1.0.0
+
 $border-radius-profile-figure:              50% !default;
+
+/// Controls the font family used for profile names in the profile
+/// listing template.
+/// @group profiles
+/// @access public
+/// @since 1.0.0
+
 $font-family-profile-name:                  $font-family-sans-serif !default;
+
+/// Controls the font size used for profile names in the profile
+/// listing template.
+/// @group profiles
+/// @access public
+/// @since 1.0.0
+
 $font-size-profile-name:                    $font-size-medium !default;
+
+/// Controls the color used for profile names in the profile
+/// listing template.
+/// @group profiles
+/// @access public
+/// @since 1.0.0
+
 $color-profile-name:                       $color-link !default;
+
+/// Controls the font family used for profile titles in the profile
+/// listing template.
+/// @group profiles
+/// @access public
+/// @since 1.0.0
+
 $font-family-profile-title:                 $font-family-base !default;
+
+/// Controls the font size used for profile titles in the profile
+/// listing template.
+/// @group profiles
+/// @access public
+/// @since 1.0.0
+
 $font-size-profile-title:                   $font-size-small !default;
+
+/// Controls the color used for profile titles in the profile
+/// listing template.
+/// @group profiles
+/// @access public
+/// @since 1.0.0
+
 $color-profile-title:                      $color-base !default;
+
+/// Controls the color used for labels in the single profile
+/// listing template sidebar.
+/// @group profiles
+/// @access public
+/// @since 1.0.0
+
 $color-profile-info-label:                 $color-grayscale-a !default;
 
+/// Controls the number of profiles in a row in the advanced format.
+/// Kicks in at the extra small breakpoint.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+$profiles-advanced-cols-xs:			2 !default;
+
+/// Controls the number of profiles in a row in the advanced format.
+/// Kicks in at the medium breakpoint.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+$profiles-advanced-cols-md:			3 !default;
+
+/// Controls the number of profiles in a row in the mini format.
+/// Kicks in at the small breakpoint.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+$profiles-mini-cols-sm:			2 !default;
+
 // Profiles Template: List Mini
+// -----------------------------------------------------------------
+
+/// Controls the color of the border on the mini profile format
+/// in the profiles shortcode.
+/// @group profiles
+/// @access public
+/// @since 1.0.0
 
 $color-profile-mini-border:                $color-grayscale-e !default;
+
+/// Controls the font size of names on the mini profile format
+/// in the profiles shortcode.
+/// @group profiles
+/// @access public
+/// @since 1.0.0
+
 $font-size-profile-mini-name:               $font-size-small !default;
-$font-size-profile-mini-email:              $font-size-smaller !default;
-$line-height-profile-mini-email:            $line-height-medium !default;
 
+/// Controls the font size of descriptions on the mini profile format
+/// in the profiles shortcode.
+/// @group profiles
+/// @access public
+/// @since 1.0.0
 
-$font-size-single-meta:                     $font-size-small !default;
+$font-size-profile-mini-description:              $font-size-smaller !default;
+
+/// Controls the spacing between name and description on the mini profile format
+/// in the profiles shortcode.
+/// @group profiles
+/// @access public
+/// @since 1.0.0
+
+$line-height-profile-mini-description:            $line-height-medium !default;
 
 // News and Archive Template: Listing
+// -----------------------------------------------------------------
+
+/// Controls the border style between posts on post listing templates.
+/// @group news
+/// @access public
+/// @since 1.0.0
 
 $border-news-post:                         $border-base !default;
+
+/// Controls the border width between posts on post listing templates.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $border-width-news-post:                    $border-top !default;
 
+/// Controls the font family of metadata (author, date, etc)
+/// on post listing templates.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $font-family-news-meta:                     $font-family-sans-serif !default;
+
+/// Controls the font size of metadata (author, date, etc)
+/// on post listing templates.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $font-size-news-meta:                       $font-size-smaller !default;
+
+/// Controls the color of the separators between metadata.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $color-news-meta-em:                        $color-grayscale-7 !default;
+
+/// Controls the shape of the separators between metadata.
+/// By default, this is set to a dot.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $color-news-meta-before:                    $color-grayscale-a !default;
 
 // News and Archive Template: Single
+// -----------------------------------------------------------------
+
+/// Controls the padding of the metadata card at the bottom of news posts
+/// on the single post template.
+/// @group news
+/// @access public
+/// @since 1.0.0
 
 $padding-single-meta:                      20px !default;
+
+/// Controls the border style on the metadata card at the bottom of news posts
+/// on the single post template.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $border-single-meta:                       $border-message !default;
+
+/// Controls the border width on the metadata card at the bottom of news posts
+/// on the single post template.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $border-width-single-meta:                  $border-width-message !default;
+
+/// Controls the amount of rounding applied to corners of the metadata card
+/// at the bottom of the single post template.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $border-radius-single-meta:                 $border-radius-message !default;
+
+/// Controls the font size in the metadata card at the bottom of the single
+/// post template.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$font-size-single-meta:                     $font-size-small !default;
+
+/// Controls the background of the metadata card at the bottom of the single
+/// post template.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $color-single-meta-bg:                     $color-grayscale-f0 !default;
+
+/// Controls the color of the left border in the metadata card
+/// at the bottom of the single post template.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $color-single-meta-border-left:             $color-message-border-left !default;
 
-$comment-margin:                           15px 0 !default;
-$comment-padding:                          0 0 0 30px !default;
+/// Controls the amount of spacing between comment threads on a post.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$comment-margin:                           20px !default;
+
+/// Controls the amount of spacing between comment threads on a post on mobile.
+/// @group news
+/// @access public
+/// @since 2.0.0
+
+$comment-margin-mobile:               $comment-margin / 2 !default;
+
+/// Controls the amount of spacing between comments within a thread on desktop.
+/// By default, there is no margin between comments on mobile.
+/// @group news
+/// @access public
+/// @since 2.0.0
+
+$comment-reply-margin:                      10px !default;
+
+/// Controls the amount of space a reply comment is indented from the parent.
+/// @group news
+/// @access public
+/// @since 2.0.0
+
+$comment-reply-depth:                      15px !default;
+
+/// Controls the amount of space a reply comment is indented from the parent on mobile.
+/// @group news
+/// @access public
+/// @since 2.0.0
+
+$comment-reply-depth-mobile:               $comment-reply-depth / 3 !default;
+
+/// Controls the border style between comments on a post.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $border-comment:                           $border-base !default;
-$border-width-comment:                      $border-top !default;
-$border-comment-form:                       1px solid $color-grayscale-e !default;
-$border-width-comment-form:                  3px !default;
+
+/// Controls the border width between comments on a post.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$border-width-comment:                      1px 1px 1px 5px !default;
+
+/// Controls the amount of spacing within comments.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$comment-padding:                           15px !default;
+
+/// Controls the amount of spacing within comments on mobile.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$comment-padding-mobile:                           10px !default;
+
+/// Controls the font family used for comments on a post.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $font-family-comment:                       $font-family-sans-serif !default;
+
+/// Controls the color of comments on a post.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $color-comments:                           $color-base !default;
-$color-comment-reply:                      $color-grayscale-a !default;
-$color-comment-author:                     $color-grayscale-a !default;
+
+/// Controls the color of replies to comments on a post.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$color-comment-reply:                      $color-grayscale-8 !default;
+
+/// Controls the color of the author name in a comment.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $color-comment-author-name:                 $color-grayscale-0 !default;
+
+/// Controls the color of the "says" text after author name in a comment.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$color-comment-author-says:                     $color-grayscale-8 !default;
+
+/// Controls the background color of the comment submission form.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
 $color-comment-form-bg:                     $color-grayscale-f5 !default;
 
-// Plugins and Shortcodes
+/// Controls the border style on the comment submission form.
+/// @group news
+/// @access public
+/// @since 1.0.0
 
-$color-collapsible-after-border:           $color-grayscale-c !default;
-$color-collapsible-after-border-hover:     $color-link !default;
+$border-comment-form:                       1px solid $color-grayscale-e !default;
+
+/// Controls the border width on the comment submission form.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$border-width-comment-form:                  3px !default;
+
+// Plugins and Shortcodes
+// -----------------------------------------------------------------
+
+/// Controls the color of icons on collapsibles.
+/// @group content
+/// @access public
+/// @since 2.0.0
+
+$color-collapsible-icon:           $color-icons !default;
+
+/// Controls the color of icons on collapsibles when you hover.
+/// @group content
+/// @access public
+/// @since 2.0.0
+
+$color-collapsible-icon-hover:     $color-link !default;
+
+/// Controls the border between collapsibles.
+/// @group content
+/// @access public
+/// @since 2.0.0
+
+$border-collapsible:     1px solid $color-grayscale-c !default;
 
 /// -----------------------------------------------------------------
 // -----------------------------------------------------------------
@@ -232,57 +1166,305 @@ $color-collapsible-after-border-hover:     $color-link !default;
 // -----------------------------------------------------------------
 
 // All Widgets
+// -----------------------------------------------------------------
+
+/// Controls the spacing between widgets in the sidebar.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
 
 $widget-margin-bottom:                      40px !default;
-$font-size-widget:                          $font-size-small !default;
-$line-height-widget:								 $line-height-base !default;
 
-$font-family-widget-heading:                $font-family-sans-serif !default;
+/// Controls the font family used for the widget title.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $font-family-widget-title:                   $font-family-sans-serif !default;
+
+/// Controls the border style used on the widget title.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $border-widget-title:                       4px solid $color-grayscale-0 !default;
+
+/// Controls the border width used on the widget title.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $border-width-widget-title:                  0 0 4px 0 !default;
-$font-size-widget-title:                     $font-size-small !default;
+
+/// Controls the font size used on the widget title.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+$font-size-widget-title:                     $font-size-large !default;
+
+/// Controls the line height of the widget title.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $line-height-widget-title:                   $line-height-large !default;
+
+/// Controls the color of the widget title.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $color-widget-title:                        $color-grayscale-0 !default;
+
+/// Controls the shape which shows after the widget title if it is a link.
+/// By default, this is set to be an arrow.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $widget-title-link-after:                   " →" !default;
-$color-widget-title-link-after:             $color-grayscale-a !default;
+
+/// Controls the color of the shape which shows after the widget title
+/// if it is a link.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+$color-widget-title-link-after:             currentColor !default;
+
+/// Controls the color of the shape which shows after the widget title
+/// when you hover.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $color-widget-title-link-after-hover:       $color-grayscale-0 !default;
 
+/// Controls the font size in all widgets.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+$font-size-widget:                          $font-size-small !default;
+
+/// Controls the line height in all widgets.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+$line-height-widget:								 $line-height-base !default;
+
+/// Controls the font family used for headings in widget content.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+$font-family-widget-heading:                $font-family-sans-serif !default;
+
+/// Controls the color of links in the widget content.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $color-widget-link:                        $color-link !default;
+
+/// Controls the color of links when you hover in the widget content.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $color-widget-link-hover:                  $color-link !default;
 
 // Calendar Widget
+// -----------------------------------------------------------------
+
+/// Controls the font family used on dates in the calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
 
 $font-family-widget-calendar-date:          $font-family-sans-serif !default;
+
+/// Controls the font size used on dates in the calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $font-size-widget-calendar-date:             $font-size-smallest !default;
+
+/// Controls the line height used on dates in the calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $line-height-widget-calendar-date:           $line-height-large !default;
+
+/// Controls the color of dates in the calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $color-widget-calendar-date:                $color-grayscale-0 !default;
-$font-size-widget-calendar-dateDay:          $font-size-large !default;
-$color-widget-calendar-dateDay:             $color-widget-calendar-date !default;
-$font-size-widget-calendar-dateMonth:        $font-size-smallest !default;
-$color-widget-calendar-dateMonth:           $color-widget-calendar-date !default;
+
+/// Controls the size of the day when using the graphic style in the
+/// calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+$font-size-widget-calendar-date-day:          $font-size-large !default;
+
+/// Controls the color of the day when using the graphic style in the
+/// calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+$color-widget-calendar-date-day:             inherit !default;
+
+/// Controls the size of the month when using the graphic style in the
+/// calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+$font-size-widget-calendar-date-month:        $font-size-smallest !default;
+
+/// Controls the color of the month when using the graphic style in the
+/// calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+$color-widget-calendar-date-month:           inherit !default;
 
 // Navigation and Menu Widgets
+// -----------------------------------------------------------------
+
+/// Controls the style of border used on the content navigation list.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
 
 $border-widget-contentnav:                 $border-base !default;
+
+/// Controls the width of border used on the content navigation list.
+/// By default, this will put a border after all other nav items in the widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $border-width-widget-contentnav:            $border-bottom !default;
+
+/// Controls the style of border used between nav items in the content navigation widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $border-widget-list:                        $border-base !default;
+
+/// Controls the width of border used between nav items in the content navigation widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $border-width-widget-list:                   $border-top !default;
+
+/// Controls the font family used in the content navigation widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $font-family-widget-contentnav:             $font-family-sans-serif !default;
+
+/// Controls the font size used for items on the first level in the
+/// content navigation widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $font-size-widget-contentnav-link:          $font-size-small !default;
+
+/// Controls the font size used for items below the first level in the
+/// content navigation widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $font-size-widget-contentnav-nested-link:    $font-size-small !default;
+
+/// Controls the color of nav items in the content navigation widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $color-widget-contentnav:                  $color-link !default;
+
+/// Controls the color of nav items when you hover in the content navigation widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $color-widget-contentnav-hover:            $color-link !default;
+
+/// Controls the active color of nav items in the content navigation widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $color-widget-contentnav-active:           $color-link-active !default;
 
 // BU Posts Widget
+// -----------------------------------------------------------------
+
+/// Controls the font size of headlines in the BU posts widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
 
 $font-size-widget-post-headline:             $font-size-small !default;
+
+/// Controls the line height of headlines in the BU posts widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $line-height-widget-post-headline:           1.4 !default;
+
+/// Controls the font size of the excerpt in the BU posts widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $font-size-widget-post-excerpt:              $font-size-small !default;
+
+/// Controls the line height of the excerpt in the BU posts widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $line-height-widget-post-excerpt:            $line-height-medium !default;
+
+/// Controls the font size of the post date in the BU posts widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $font-size-widget-post-date:                 $font-size-smallest !default;
+
+/// Controls the font size of the metadata in the BU posts widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $font-size-widget-post-meta:                 $font-size-smallest !default;
+
+/// Controls the color of the metadata in the BU posts widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $color-widget-post-meta:                    $color-grayscale-a !default;
 
 // -----------------------------------------------------------------
@@ -295,19 +1477,95 @@ $color-widget-post-meta:                    $color-grayscale-a !default;
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
 
+/// Controls the spacing at the bottom of the footer widget area.
+/// @group footer
+/// @access public
+/// @since 1.0.0
+
 $footbar-padding-bottom:                    20px !default;
+
+/// Controls the background color of the footer widget area.
+/// @group footer
+/// @access public
+/// @since 1.0.0
+
 $color-footbar-bg:                         $color-grayscale-f5 !default;
+
+/// Controls the border color of the footer widget area.
+/// @group footer
+/// @access public
+/// @since 1.0.0
+
 $color-footbar-border:                     $color-grayscale-c !default;
+
+/// Controls the border style of the footer widget area.
+/// @group footer
+/// @access public
+/// @since 1.0.0
+
 $border-footbar:                           1px solid $color-footbar-border !default;
+
+/// Controls the border width of the footer widget area.
+/// @group footer
+/// @access public
+/// @since 1.0.0
+
 $border-width-footbar:                      $border-top !default;
+
+/// Controls the background of the footer widget container.
+/// @group footer
+/// @access public
+/// @since 1.0.0
+
 $color-footbar-container-bg:               $color-footbar-bg !default;
+
+/// Controls the color of links in widgets in the footbar.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $color-footbar-widget-link:                $color-link !default;
+
+/// Controls the color of links in widgets in the footbar when you hover.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 $color-footbar-widget-link-hover:          $color-link !default;
 
+/// Controls the padding of the site footer.
+/// @group footer
+/// @access public
+/// @since 1.0.0
+
 $padding-site-footer:                       40px 20px 5px !default;
+
+/// Controls the background color of the site footer.
+/// @group footer
+/// @access public
+/// @since 1.0.0
+
 $color-site-footer-bg:                      $color-grayscale-0 !default;
+
+/// Controls the color of text in the site footer.
+/// @group footer
+/// @access public
+/// @since 1.0.0
+
 $color-site-footer:								 $color-grayscale-f !default;
+
+/// Controls the color of links in the site footer.
+/// @group footer
+/// @access public
+/// @since 1.0.0
+
 $color-site-footer-link:							 $color-grayscale-8 !default;
+
+/// Controls the color of links when you hover in the site footer.
+/// @group footer
+/// @access public
+/// @since 1.0.0
+
 $color-site-footer-link-hover:					 $color-grayscale-f !default;
 
 // -----------------------------------------------------------------
@@ -320,9 +1578,50 @@ $color-site-footer-link-hover:					 $color-grayscale-f !default;
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
 
+/// The image used for the BU Masterplate.
+/// Do not change this without permission from Marketing &amp; Communications.
+/// @group branding
+/// @access public
+/// @since 1.0.0
+
 $image-masterplate:         "https://www.bu.edu/cdn/images/logos/masterplate112x50.png" !default;
+
+/// The image used for the BU Masterplate on retina devices.
+/// Do not change this without permission from Marketing &amp; Communications.
+/// @group branding
+/// @access public
+/// @since 1.0.0
+
 $image-masterplate-retina:  "https://www.bu.edu/cdn/images/logos/masterplate112x50-retina.png" !default;
+
+/// The image used for the BU plate in the Signature style.
+/// Do not change this without permission from Marketing &amp; Communications.
+/// @group branding
+/// @access public
+/// @since 1.0.0
+
 $image-subbrand:            "https://www.bu.edu/cdn/images/logos/subbrand49x35.png" !default;
+
+/// The image used for the BU plate in the Signature style on retina devices.
+/// Do not change this without permission from Marketing &amp; Communications.
+/// @group branding
+/// @access public
+/// @since 1.0.0
+
 $image-subbrand-retina:     "https://www.bu.edu/cdn/images/logos/subbrand49x35-retina.png" !default;
+
+/// The image used for the BUMC logo.
+/// Do not change this without permission from Marketing &amp; Communications.
+/// @group branding
+/// @access public
+/// @since 1.0.0
+
 $image-bumclogo:         "https://www.bu.edu/cdn/images/logos/bumclogo96x40.png" !default;
+
+/// The image used for the BUMC logo on retina devices.
+/// Do not change this without permission from Marketing &amp; Communications.
+/// @group branding
+/// @access public
+/// @since 1.0.0
+
 $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-retina.png" !default;

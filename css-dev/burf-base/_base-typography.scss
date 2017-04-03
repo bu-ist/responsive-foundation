@@ -1,169 +1,202 @@
-/* Links
------------------------------------------------------------------ */
+// =================================================================
+// Typography
+// =================================================================
+
+// Links
+// -----------------------------------------------------------------
+
+/// Controls base styling for all links.
+/// @group global
+/// @access public
+/// @since 1.0.0
 
 a {
 	color: $color-link;
-}
-a:visited {
-	color: $color-link-visited;
-}
-/* Address `outline` inconsistency between Chrome and other browsers. */
-a:focus {
-	outline: thin dotted;
-}
-/* Improve readability when focused and also mouse hovered in all browsers. */
-a:active,
-a:hover {
-	outline: 0;
-	text-decoration: none;
+
+	&:visited {
+		color: $color-link-visited;
+	}
+
+	// Improve readability when focused and also mouse hovered in all browsers.
+	&:hover,
+	&:active {
+		text-decoration: none;
+	}
+
+	h1 &,
+	h2 &,
+	h3 &,
+	h4 &,
+	h5 &,
+	h6 & {
+		color: inherit;
+	}
 }
 
-/* Typography
------------------------------------------------------------------ */
+// Headings
+// -----------------------------------------------------------------
+
+// TODO: Come back to these when we rework variables and generate similar to grid based on map
 
 %font-jumbo {
-	/* These classes are using %font-jumbo. */
-	margin: $font-margin-jumbo;
 	font-size: $font-size-jumbo;
 	line-height: $line-height-jumbo;
-}
-%font-largest {
-	/* These classes are using %font-largest. */
-	margin: $font-margin-largest;
-	font-size: $font-size-largest;
-	line-height: $line-height-largest;
-}
-%font-larger {
-	/* These classes are using %font-larger. */
-	margin: $font-margin-larger;
-	font-size: $font-size-larger;
-	line-height: $line-height-larger;
-}
-%font-large {
-	/* These classes are using %font-large. */
-	margin: $font-margin-large;
-	font-size: $font-size-large;
-	line-height: $line-height-large;
-}
-%font-medium {
-	/* These classes are using %font-medium. */
-	margin: $font-margin-medium;
-	font-size: $font-size-medium;
-	line-height: $line-height-medium;
-}
-%font-small {
-	/* These classes are using %font-small. */
-	margin: $font-margin-small;
-	font-size: $font-size-small;
-	line-height: $line-height-small;
-}
-/* Generic font size classes */
-%font-smaller {
-	/* These classes are using %font-smaller. */
-	margin: $font-margin-smaller;
-	font-size: $font-size-smaller;
-	line-height: $line-height-smaller;
-}
-%font-smallest {
-	/* These classes are using %font-smallest. */
-	margin: $font-margin-smallest;
-	font-size: $font-size-smallest;
-	line-height: $line-height-smallest;
-}
-%font-micro {
-	/* These classes are using %font-micro. */
-	margin: $font-margin-micro;
-	font-size: $font-size-micro;
-	line-height: $line-height-micro;
+	margin: $font-margin-jumbo;
 }
 
-/* Address font sizes and margins set differently in IE 6/7. Address font sizes within `section` and `article` in Firefox 4+, Safari 5, and Chrome. */
+%font-largest {
+	font-size: $font-size-largest;
+	line-height: $line-height-largest;
+	margin: $font-margin-largest;
+}
+
+%font-larger {
+	font-size: $font-size-larger;
+	line-height: $line-height-larger;
+	margin: $font-margin-larger;
+}
+
+%font-large {
+	font-size: $font-size-large;
+	line-height: $line-height-large;
+	margin: $font-margin-large;
+}
+
+%font-medium {
+	font-size: $font-size-medium;
+	line-height: $line-height-medium;
+	margin: $font-margin-medium;
+}
+
+%font-small {
+	font-size: $font-size-small;
+	line-height: $line-height-small;
+	margin: $font-margin-small;
+}
+
+%font-smaller {
+	font-size: $font-size-smaller;
+	line-height: $line-height-smaller;
+	margin: $font-margin-smaller;
+}
+
+%font-smallest {
+	font-size: $font-size-smallest;
+	line-height: $line-height-smallest;
+	margin: $font-margin-smallest;
+}
+
+%font-micro {
+	font-size: $font-size-micro;
+	line-height: $line-height-micro;
+	margin: $font-margin-micro;
+}
+
+/// Controls base styles for all heading tags.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
+%heading-base {
+	color: $color-heading;
+	font-family: $font-family-heading;
+
+	small {
+		color: $color-heading-small;
+		font-size: 0.75em;
+		font-weight: normal;
+	}
+}
+
+/// Styles for all h1 tags.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 h1 {
+	@extend %heading-base;
 	@extend %font-jumbo;
 }
+
+/// Styles for all h2 tags.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 h2 {
+	@extend %heading-base;
 	@extend %font-largest;
 }
+
+/// Styles for all h3 tags.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 h3 {
+	@extend %heading-base;
 	@extend %font-larger;
 }
+
+/// Styles for all h4 tags.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 h4 {
+	@extend %heading-base;
 	@extend %font-large;
 }
+
+/// Styles for all h5 tags.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 h5 {
+	@extend %heading-base;
 	@extend %font-medium;
 }
+
+/// Styles for all h6 tags.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 h6 {
+	@extend %heading-base;
 	@extend %font-small;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: $font-family-heading;
-	color: $color-heading;
-}
-h1 small,
-h2 small,
-h3 small,
-h4 small,
-h5 small,
-h6 small {
-	font-weight: normal;
-	font-size: 0.75em;
-	color: $color-heading-small;
-}
-hgroup {
-	margin: $font-margin-hgroup;
-}
-/* remove margins from headings within hgroup */
-hgroup h1,
-hgroup h2,
-hgroup h3,
-hgroup h4,
-hgroup h5,
-hgroup h6,
-hgroup p, {
-	margin: 0;
-}
-
-/* Address styling not present in IE 7/8/9, Safari 5, and Chrome. */
+// Adds the help cursor on hover to abbreviations
 abbr[title] {
-	border-bottom: 1px dotted;
 	cursor: help;
 }
-/* Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome. */
-b,
-strong {
-	font-weight: bold;
-}
+
+/// Styles for all blockquotes.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 blockquote {
 	margin: $font-margin-blockquote;
 }
-/* Address styling not present in Safari 5 and Chrome. */
-dfn {
-	font-style: italic;
-}
-/* Address differences between Firefox and other browsers. Known issue:no IE 6/7 normalization. */
-hr {
-	-moz-box-sizing: content-box;
-	     box-sizing: content-box;
-	height: 0;
-}
-/* Address styling not present in IE 6/7/8/9. */
-mark {
-	background: #ffff00;
-	color: #000000;
-}
-/* Address margins set differently in IE 6/7. */
+
+/// Styles for all paragraphs and preformatted content.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 p,
 pre {
 	margin: $font-margin-base;
 }
-/* Correct font family set oddly in IE 6, Safari 4/5, and Chrome. */
+
+/// Styles for all preformatted and code content.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 code,
 kbd,
 pre,
@@ -171,73 +204,61 @@ samp {
 	font-family: $font-family-monospace;
 	font-size: $font-size-base;
 }
-/* Improve readability of pre-formatted text in all browsers. */
-pre {
-	white-space: pre;
-	white-space: pre-wrap;
-	word-wrap: break-word;
-}
-/* Address CSS quotes not supported in IE 6/7. */
-q {
-	quotes: none;
-}
-/* Address `quotes` property not supported in Safari 4. */
-q:before,
-q:after {
-	content: "";
-	content: none;
-}
-/* Address inconsistent and variable font size in all browsers. */
-small {
-	font-size: 80%;
-}
-/* Prevent `sub` and `sup` affecting `line-height` in all browsers. */
-sub,
-sup {
-	position: relative;
-	vertical-align: baseline;
-	font-size: .75em;
-	line-height: 0;
-}
-sup {
-	top: -0.5em;
-}
-sub {
-	bottom: -0.25em;
-}
-/* Always hide an element when it has the `hidden` HTML attribute. */
+
+// Always hide an element when it has the `hidden` HTML attribute.
 [hidden] {
 	display: none !important;
 }
 
-/* Lists
------------------------------------------------------------------ */
+// Lists
+// -----------------------------------------------------------------
 
-/* Address margins set differently in IE 6/7. */
+/// Styles for all lists and list-like content.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 dl,
 menu,
 ol,
 ul {
 	margin: $font-margin-list;
 }
+
+/// Styles for definition stuff.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 dd {
 	margin: $font-margin-dd;
 }
-/* Address paddings set differently in IE 6/7. */
+
+/// Styles menus and lists.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 menu,
 ol,
 ul {
 	padding: $font-padding-list;
 }
-/* Correct list images handled incorrectly in IE 7. */
-nav ul,
-nav ol {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	list-style-image: none;
+
+/// Styles for navigation.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
+nav {
+	ul,
+	ol {
+		margin: 0;
+		padding: 0;
+	}
 }
-/* remove margin from nested lists */
+
+// remove margin from nested lists
 ul ul,
 ul ol,
 ol ul,
@@ -245,33 +266,44 @@ ol ol {
 	margin: 0;
 }
 
-/* Code
------------------------------------------------------------------ */
+// Code
+// -----------------------------------------------------------------
+
+/// Styles for code element.
+/// @group global
+/// @access public
+/// @since 1.0.0
 
 code {
-	padding: $font-padding-code;
 	background: $color-code-bg;
 	color: $color-code;
+	padding: $font-padding-code;
 	white-space: nowrap;
 }
-.content p code {
-	font-size: 90%;
-}
+
+/// Styles for the code wrapper class.
+/// Adding this class around a code element enables scrolling on mobile devices.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 .code {
-	overflow-x: auto;
-	-webkit-overflow-scrolling: touch;
-	padding: 20px;
-	margin: $font-margin-code;
-	border: 1px solid $color-grayscale-e;
 	background: $color-code-bg;
-}
-.code + .code {
-	margin-top: -15px;
-}
-.code code {
-	padding: 0;
-	background: none;
-	font-size: 95%;
-	white-space: pre;
-	word-wrap: normal;
+	border: 1px solid $color-grayscale-e;
+	margin: $font-margin-code;
+	-webkit-overflow-scrolling: touch;
+	overflow-x: auto;
+	padding: 20px;
+
+	& + & {
+		margin-top: -15px;
+	}
+
+	code {
+		background: none;
+		font-size: 95%;
+		padding: 0;
+		white-space: pre;
+		word-wrap: normal;
+	}
 }

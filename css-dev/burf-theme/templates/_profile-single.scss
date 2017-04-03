@@ -1,0 +1,101 @@
+// -----------------------------------------------------------------
+// Profile Listing and Archive Templates
+// -----------------------------------------------------------------
+
+/// Styles the single profile template.
+/// @group profiles
+/// @access public
+/// @since 1.0.0
+
+.single-profile {
+	@extend %template-narrow;
+}
+
+/// Styles the single profile name - typically the title of the page.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-single-name {
+	margin-bottom: 0;
+	text-align: center;
+}
+
+/// Styles the single profile title - typically the subtitle of the page.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-single-title {
+	text-align: center;
+}
+
+/// Styles the single profile photo.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-single-photo {
+	margin: 0 auto 20px;
+	width: 120px;
+}
+
+/// Styles the single profile details sidebar.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-single-details {
+	@extend %card-styles;
+	font-size: $font-size-small;
+	margin: 0 0 20px;
+
+	@include breakpoint( sm ) {
+		float: right;
+		margin: 0 0 20px 20px;
+		width: 33.33333333333333%;
+	}
+}
+
+/// General styles for labels.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+.label {
+	display: block;
+	font-family: $font-family-sans-serif;
+	font-size: $font-size-smaller;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+/// Styles the single profile details labels.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-details-label {
+	color: $color-profile-info-label;
+}
+
+/// Styles the single profile details list.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-details-list {
+	margin: 0;
+	padding: 0;
+}
+
+/// Styles the single profile details items.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-details-item {
+	list-style: none;
+	margin: 0 0 20px;
+	word-wrap: break-word;
+}
