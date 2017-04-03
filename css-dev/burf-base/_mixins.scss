@@ -2,17 +2,11 @@
 // Mixins
 // =================================================================
 
-// TODO: Needs cleanup
-
-/* mixins
------------------------------------------------------------------ */
-
 // clearfix
 // Usage: @extend %clearfix;
 
 %clearfix {
-	&:after {
-		/* These classes are using %clearfix. */
+	&::after {
 		display: table;
 		clear: both;
 		content: "";
@@ -20,7 +14,7 @@
 }
 
 // border-radius
-// Usage: @include border-radius(3px)
+// Usage: @include border-radius( 3px )
 @mixin border-radius( $radius ) {
 	-webkit-border-radius: $radius;
 	-moz-border-radius: $radius;
@@ -29,8 +23,8 @@
 }
 
 // box-shadow
-// Usage: @include box-shadow(0 0 1px 3px #000000)
-@mixin box-shadow($shadow...) {
+// Usage: @include box-shadow( 0 0 1px 3px #000000 )
+@mixin box-shadow( $shadow... ) {
 	-webkit-box-shadow: $shadow;
 	-moz-box-shadow: $shadow;
 	-ms-box-shadow: $shadow;
@@ -39,32 +33,30 @@
 }
 
 // linear-gradient
-// Usage: @include linear-gradient($fromColor, $toColor);
-// where $fromColor and $toColor are valid colors or variables which hold a color
+// Usage: @include linear-gradient( $from-color, $to-color );
+// where $from-color and $to-color are valid colors or variables which hold a color
 // Note: you should always specify a backup background-color when using this.
-@mixin linear-gradient( $fromColor: NULL, $toColor: NULL ) {
+@mixin linear-gradient( $from-color: NULL, $to-color: NULL ) {
 	// Both variables must be defined colors
 	@if (
-			type_of( $fromColor ) == color and
-			type_of( $toColor ) == color
+			type_of( $from-color ) == color and
+			type_of( $to-color ) == color
 		) {
-		background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
-		background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
-		background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
-		background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
-		background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
-		background-image:         linear-gradient(top, $fromColor, $toColor);
-		filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
-	}
-	@else {
-		@error 'The linear gradient mixin requires two valid colors or variables which hold colors. \a Example usage: @include linear-gradient($fromColor, $toColor);';
+		background-image: -webkit-gradient(linear, left top, left bottom, from( $from-color), to( $to-color)); /* Saf4+, Chrome */
+		background-image: -webkit-linear-gradient(top, $from-color, $to-color); /* Chrome 10+, Saf5.1+, iOS 5+ */
+		background-image: -moz-linear-gradient(top, $from-color, $to-color); /* FF3.6 */
+		background-image: -ms-linear-gradient(top, $from-color, $to-color); /* IE10 */
+		background-image: -o-linear-gradient(top, $from-color, $to-color); /* Opera 11.10+ */
+		background-image: linear-gradient(top, $from-color, $to-color);
+		filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$from-color}', EndColorStr='#{$to-color}');
+	} @else {
+		@error 'The linear gradient mixin requires two valid colors or variables which hold colors. \a Example usage: @include linear-gradient( $from-color, $to-color);';
 	}
 }
 
 // hide text. Uses Sass placeholder selector (%).
 // Usage: @extend hide-text
 %hide-text {
-	/* These classes are using %hide-text. */
 	overflow: hidden;
 	text-indent: 100%;
 	white-space: nowrap;
@@ -78,54 +70,56 @@
 		$opacity-ie: $opacity * 100;
 		opacity: $opacity;
 		filter: alpha(opacity=$opacity-ie); //IE8
-	}
-	@else {
+	} @else {
 		@error 'Opacity must be specified as a decimal value. \a Example usage: @include opacity(0.5);';
 	}
 }
 
 // transition
-// Usage: @include transitions(all 250ms ease-in-out 0s)
-@mixin transition($transitions...) {
+// Usage: @include transitions( all 250ms ease-in-out 0s )
+@mixin transition( $transitions... ) {
 	-webkit-transition: $transitions;
-	   -moz-transition: $transitions;
-	    -ms-transition: $transitions;
-	     -o-transition: $transitions;
-	        transition: $transitions;
+	-moz-transition: $transitions;
+	-ms-transition: $transitions;
+	-o-transition: $transitions;
+	transition: $transitions;
 }
 
 // transform
-@mixin transform($transforms) {
+@mixin transform( $transforms ) {
 	-webkit-transform: $transforms;
-	   -moz-transform: $transforms;
-	    -ms-transform: $transforms;
-	     -o-transform: $transforms;
-	        transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	-o-transform: $transforms;
+	transform: $transforms;
 }
+
 // transform: rotate
-@mixin rotate($deg) {
-	@include transform(rotate(#{$deg}deg));
+@mixin rotate( $deg ) {
+	@include transform( rotate( #{$deg}deg ) );
 }
 
 // transform: scale
-@mixin scale($scale) {
-	@include transform(scale($scale));
+@mixin scale( $scale ) {
+	@include transform( scale( $scale ) );
 }
+
 // transform: translate
-@mixin translate($x, $y) {
-	@include transform(translate($x, $y));
+@mixin translate( $x, $y ) {
+	@include transform( translate( $x, $y ) );
 }
+
 // transform: transform-origin
-@mixin transform-origin($origin) {
+@mixin transform-origin( $origin ) {
 	-webkit-transform-origin: $origin;
-	   -moz-transform-origin: $origin;
-	    -ms-transform-origin: $origin;
-	     -o-transform-origin: $origin;
-	        transform-origin: $origin;
+	-moz-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	-o-transform-origin: $origin;
+	transform-origin: $origin;
 }
 
 // keyframes
-@mixin keyframes($animation-name) {
+@mixin keyframes( $animation-name ) {
 	@-webkit-keyframes #{$animation-name} {
 		@content;
 	}
@@ -142,18 +136,20 @@
 		@content;
 	}
 }
+
 // animation
-@mixin animation($str) {
+@mixin animation( $str ) {
 	-webkit-animation: #{$str};
-	   -moz-animation: #{$str};
-	    -ms-animation: #{$str};
-	     -o-animation: #{$str};
-	        animation: #{$str};
+	-moz-animation: #{$str};
+	-ms-animation: #{$str};
+	-o-animation: #{$str};
+	animation: #{$str};
 }
+
 // vertical-center: a more IE-friendly version of vertical center. Apply "vertical-center-child" to a parent element and "vertical-center" to the child
 // Default usage: @include vertical-center-child;
 // Usage specifying a child selector: @include vertical-center-child(".yourSelector");
-@mixin vertical-center-child($selector: "*") {
+@mixin vertical-center-child( $selector: "*" ) {
 	.lt-ie9 & {
 		display: table;
 	}
@@ -167,9 +163,9 @@
 		top: 50%;
 		display: block;
 		-webkit-transform: translateY(-50%);
-		   -moz-transform: translateY(-50%);
-		    -ms-transform: translateY(-50%);
-		        transform: translateY(-50%);
+			-moz-transform: translateY(-50%);
+			 -ms-transform: translateY(-50%);
+				  transform: translateY(-50%);
 	}
 }
 // Usage: @include vertical-center
@@ -177,9 +173,9 @@
 	position: relative;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
-	   -moz-transform: translateY(-50%);
-	    -ms-transform: translateY(-50%);
-	        transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		 -ms-transform: translateY(-50%);
+			  transform: translateY(-50%);
 	.lt-ie9 & {
 		top: auto;
 	}
@@ -208,13 +204,13 @@
 	width: auto;
 }
 
-// If primary stylesheet indicates media query support (e.g. style.scss), output media queries. If not (e.g. ie.scss), output the block WITHOUT @media wrapper.
+// If primary stylesheet indicates media query support (e.g. style.scss ), output media queries. If not (e.g. ie.scss ), output the block WITHOUT @media wrapper.
 // Usage: @include breakpoint(md) {...}
 // $skiplgMQforIE tells this mixin whether or not to skip the lg point styles on THIS set of styles for IE8.
 // If you have an individual set of styles for the large breakpoint that you need to print, this allows you to do it.
 // Realistically, you probably don't need it.
 
-@mixin breakpoint($point, $skiplgMQsforIE: true) {
+@mixin breakpoint( $point, $skiplgMQsforIE: true ) {
 	// Error handling for anyone upgrading to 1.2.0
 	@if (
 		$point == extra_small or
@@ -224,47 +220,40 @@
 	) {
 		@error 'The breakpoint shorthand "#{$point}" is no longer supported as of Responsive 1.2.0. Use "xs", "sm", "md", or "lg" instead.';
 	}
-	@if ($mqs) {
-		@if ($point == xs) {
-			@media screen and (min-width:$xs) {
+	@if ( $mqs ) {
+		@if ( $point == xs ) {
+			@media screen and ( min-width: $xs ) {
 				@content;
 			}
-		}
-		@else if ($point == sm) {
-			@media screen and (min-width:$sm) {
+		} @else if ( $point == sm ) {
+			@media screen and ( min-width: $sm ) {
 				@content;
 			}
-		}
-		@else if ($point == md) {
-			@media screen and (min-width:$md) {
+		} @else if ( $point == md ) {
+			@media screen and ( min-width: $md ) {
 				@content;
 			}
-		}
-		@else if ($point == lg) {
-			@media screen and (min-width:$lg) {
+		} @else if ( $point == lg ) {
+			@media screen and ( min-width: $lg ) {
 				@content;
 			}
-		}
-		@else if ($point == xl) {
-			@media screen and (min-width:$xl) {
+		} @else if ( $point == xl ) {
+			@media screen and ( min-width: $xl ) {
 				@content;
 			}
-		}
-		@else {
+		} @else {
 			// Can also accept your very own min-width argument, like so:
 			// "min-width: 300px;"
 			// "max-width: 900px;"
 			// Keep in mind these print for all sizes if MQs aren't supported.
-			@media screen and ($point) {
+			@media screen and ( $point ) {
 				@content;
 			}
 		}
-	}
-	@else {
-		@if ($point == lg and $skiplgMQsforIE) {
+	} @else {
+		@if ( $point == lg and $skiplgMQsforIE ) {
 			// ie8 and large desktop output nothing
-		}
-		@else {
+		} @else {
 			@content;
 		}
 	}
@@ -275,11 +264,11 @@
 @mixin retina {
 	@media
 	only screen and (-webkit-min-device-pixel-ratio: 2),
-	only screen and (   min--moz-device-pixel-ratio: 2),
-	only screen and (     -o-min-device-pixel-ratio: 2/1),
-	only screen and (        min-device-pixel-ratio: 2),
-	only screen and (                min-resolution: 192dpi),
-	only screen and (                min-resolution: 2dppx) {
+	only screen and ( min--moz-device-pixel-ratio: 2),
+	only screen and ( -o-min-device-pixel-ratio: 2/1),
+	only screen and ( min-device-pixel-ratio: 2),
+	only screen and ( min-resolution: 192dpi),
+	only screen and ( min-resolution: 2dppx) {
 		@content;
 	}
 }
@@ -288,18 +277,17 @@
 // Usage: @include rgba-color('background-color', rgba(black, 0.5), white);
 @mixin rgba-color( $attribute: NULL, $color: NULL, $background: NULL ) {
 	@if (
-		type_of($attribute) == string and
-		type_of($color) == color and
-		type_of($background) == color
+		type_of( $attribute ) == string and
+		type_of( $color ) == color and
+		type_of( $background ) == color
 	) {
-		$percent: alpha($color) * 100%;
-		$opaque: opacify($color, 1);
-		$solid-color: mix($opaque, $background, $percent);
+		$percent: alpha( $color ) * 100%;
+		$opaque: opacify( $color, 1 );
+		$solid-color: mix( $opaque, $background, $percent );
 
 		#{$attribute}: $solid-color;
 		#{$attribute}: $color;
-	}
-	@else {
+	} @else {
 		@error 'The rgba-color mixin requires a valid CSS attribute to apply the color to, a valid RGBA color, and a valid fallback color. \a Example usage: @include rgba-color(\'background-color\', rgba(black, 0.5), white);';
 	}
 }
@@ -308,5 +296,5 @@
 // Usage: @include mixin-help
 
 @mixin mixin-help {
-	@debug '\a\a\a Quick guide to Responsive mixins: \a\a border-radius: @include border-radius(3px); \a box-shadow: @include box-shadow(0 0 1px 3px #000000); \a linear-gradient: @include linear-gradient($fromColor, $toColor); \a opacity: @include opacity(0.5); \a transition: @include transition(all, 250ms, ease-in-out, 0s); \a transform: @include(any valid CSS transform argument); \a rotate: @include rotate(90); \a scale: @include scale(2); \a translate: @include translate(10px, 20px); \a keyframes: @include keyframes(animationName) { ... } ; \a animation: @include animation(animationName); \a vertical-center: @include vertical-center in the element you want to center \a vertical-center (IE friendly): @include vertical-center-child(.childElement) in the parent class \a breakpoint: @include breakpoint(md) { ... } \a retina:  @include retina { ... } \a rgba-color: @include rgba-color(\'background-color\', rgba(someColor, 0.5), fallbackColor); \a\a';
+	@debug '\a\a\a Quick guide to Responsive mixins: \a\a border-radius: @include border-radius(3px); \a box-shadow: @include box-shadow(0 0 1px 3px #000000); \a linear-gradient: @include linear-gradient( $fromColor, $to-color); \a opacity: @include opacity(0.5); \a transition: @include transition(all, 250ms, ease-in-out, 0s ); \a transform: @include(any valid CSS transform argument); \a rotate: @include rotate(90); \a scale: @include scale(2); \a translate: @include translate(10px, 20px); \a keyframes: @include keyframes(animationName) { ... } ; \a animation: @include animation(animationName); \a vertical-center: @include vertical-center in the element you want to center \a vertical-center (IE friendly): @include vertical-center-child(.childElement) in the parent class \a breakpoint: @include breakpoint(md) { ... } \a retina:  @include retina { ... } \a rgba-color: @include rgba-color(\'background-color\', rgba(someColor, 0.5), fallbackColor); \a\a';
 }
