@@ -49,15 +49,15 @@
 	font-family: $font-family-icons;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-	font-style: normal !important;
-	font-variant: normal !important;
-	font-weight: normal !important;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
 	line-height: 1;
 	padding-bottom: 0.2em; // Accomodate for inline icons
 	speak: none;
-	text-decoration: none !important;
+	text-decoration: none;
 	text-rendering: optimizeLegibility;
-	text-transform: none !important;
+	text-transform: none;
 	vertical-align: middle;
 	white-space: nowrap;
 }
