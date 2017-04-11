@@ -267,7 +267,7 @@
 /// @access public
 /// @since 2.0.0
 
-@mixin debug-map($map) {
+@mixin debug-map( $map ) {
 	@at-root {
 		@debug-map {
 			__toString__: inspect($map);
@@ -276,7 +276,7 @@
 			__keys__: map-keys($map);
 			__properties__ {
 				@each $key, $value in $map {
-					#{'(' + type-of($value) + ') ' + $key}: inspect($value);
+					#{'(' + type-of( $value ) + ') ' + $key}: inspect( $value );
 				}
 			}
 		}

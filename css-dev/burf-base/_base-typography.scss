@@ -257,7 +257,7 @@ $_h: $_depth-headings;
 // @access private
 // @since 2.0.0
 
-@if variable-exists(font-styles-theme) {
+@if variable-exists( font-styles-theme ) {
 	$font-styles: map_merge( $font-styles, $font-styles-theme );
 }
 
@@ -270,12 +270,12 @@ $_h: $_depth-headings;
 @each $style, $settings in $font-styles {
 	.font-size-#{$style},
 	%font-size-#{$style} {
-	  font-size: map-get( $settings, font-size-mobile);
+		font-size: map-get( $settings, font-size-mobile);
 		line-height: map-get( $settings, line-height );
-	  @include breakpoint(xs){ 
+	@include breakpoint( xs ){ 
 	    font-size: map-get( $settings, font-size-desktop );
-		  line-height: map-get( $settings, line-height );
-	  }
+		line-height: map-get( $settings, line-height );
+	}
   }
 }
 
