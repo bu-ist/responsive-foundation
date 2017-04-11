@@ -130,7 +130,7 @@
 /// @since 2.0.0
 
 .widget-post-excerpt {
-	margin-top: -.5em;
+	margin-top: -0.5em;
 }
 
 /// Handles styling for the thumbnail in the
@@ -420,8 +420,8 @@ $_width-calendar-date: 48px;
 
 .prev-month,
 .next-month {
-	margin: 0 0.5em;
 	font-weight: normal;
+	margin: 0 0.5em;
 }
 
 /// Styles the BU Calendar list page topics widget.

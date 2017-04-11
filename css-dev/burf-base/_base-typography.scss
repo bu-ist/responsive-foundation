@@ -215,13 +215,12 @@ $_h: $_depth-headings;
 // @since 2.0.0
 
 @while $_h >= 0 {
-	$font-style: ();
+	$font-style: ( );
 	$size: null;
 	$size-mobile: null;
 	$lh: null;
 	$name: null;
 	$heading-name: $_depth-headings - $_h;
-	
 
 	@if $_h == 0 {
 		$size: $min-size-headings / $font-size-base + em;
@@ -288,8 +287,8 @@ $_h: $_depth-headings;
 %heading-base {
 	color: $color-heading;
 	font-family: $font-family-heading;
+	margin-bottom: 0.6em;
 	margin-top: 1em;
-	margin-bottom: .6em;
 
 	&:first-child {
 		margin-top: 0;
