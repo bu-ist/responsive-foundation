@@ -228,7 +228,7 @@ $_h: $_depth-headings;
 		$size-mobile: $min-size-headings / $font-size-base + em;
 	} @else {
 		$size: calc-size( $_h + 1, $heading-growth-rate, $_heading-size-scale, $min-size-headings ) + em;
-		$size-mobile: calc-size( $_h +1, $heading-growth-rate, $_heading-size-scale-mobile, $min-size-headings + em );
+		$size-mobile: calc-size( $_h +1, $heading-growth-rate, $_heading-size-scale-mobile, $min-size-headings ) + em ;
 	}
 
 	@if $_h == $_depth-headings {
