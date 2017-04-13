@@ -209,6 +209,8 @@
 // $skiplgMQforIE tells this mixin whether or not to skip the lg point styles on THIS set of styles for IE8.
 // If you have an individual set of styles for the large breakpoint that you need to print, this allows you to do it.
 // Realistically, you probably don't need it.
+// TODO: check out if http://sassbreak.com/getting-back-to-our-roots/ helps with mqs for IE
+// It looks like it can print styles at the root if MQs aren't supported, maybe.
 
 @mixin breakpoint( $point, $skiplgMQsforIE: true ) {
 	// Error handling for anyone upgrading to 1.2.0
@@ -255,6 +257,28 @@
 			// ie8 and large desktop output nothing
 		} @else {
 			@content;
+		}
+	}
+}
+
+/// Outputs a sass map neatly in CSS for debugging purposes.
+/// From https://www.sitepoint.com/debugging-sass-maps/
+/// @group mixins
+/// @access public
+/// @since 2.0.0
+
+@mixin debug-map( $map ) {
+	@at-root {
+		@debug-map {
+			__toString__: inspect( $map );
+			__length__: length( $map );
+			__depth__: depth( $map );
+			__keys__: map-keys( $map );
+			__properties__ {
+				@each $key, $value in $map {
+					#{"(" + type-of( $value ) + ") " + $key}: inspect( $value );
+				}
+			}
 		}
 	}
 }

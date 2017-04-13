@@ -178,13 +178,6 @@ $border-radius-message:                     3px !default;
 
 $padding-message:                          20px !default;
 
-/// The font size in comments.
-/// @group comments
-/// @access public
-/// @since 1.0.0
-
-$font-size-message:                         $font-size-small !default;
-
 /// The background of comments.
 /// @group comments
 /// @access public
@@ -216,19 +209,12 @@ $margin-floated-content: 						 10px !default;
 
 $font-family-caption:                       $font-family-sans-serif !default;
 
-/// The font size to use for captions.
-/// @group content
-/// @access public
-/// @since 1.0.0
-
-$font-size-caption:                         $font-size-smaller !default;
-
 /// The color to use for captions.
 /// @group content
 /// @access public
 /// @since 1.0.0
 
-$color-caption:                            $color-grayscale-9 !default;
+$color-caption:                            $color-grayscale-6 !default;
 
 /// The border color to use in tables.
 /// @group content
@@ -355,13 +341,6 @@ $color-primary-nav-border:                  $color-grayscale-3 !default;
 
 $font-family-navigation:                    $font-family-sans-serif !default;
 
-/// The font size in primary navigation.
-/// @group primary-navigation
-/// @access public
-/// @since 1.0.0
-
-$font-size-navigation:                      $font-size-small !default;
-
 /// The color to use behind primary navigation.
 /// @group primary-navigation
 /// @access public
@@ -429,7 +408,7 @@ $border-width-utility-nav:                   $border-top !default;
 /// @access public
 /// @since 1.0.0
 
-$font-size-utility-nav:                      $font-size-smaller !default;
+$font-size-utility-nav:                      14px !default;
 
 /// The color of links in the utility navigation.
 /// @group utility-navigation
@@ -595,14 +574,6 @@ $color-back-link-before:                    $color-grayscale-f !default;
 // Calendar Template: Event List
 // -----------------------------------------------------------------
 
-/// Controls the size of the calendar topic, which lives right below the
-/// title on the calendar listing template.
-/// @group calendar
-/// @access public
-/// @since 1.0.0
-
-$font-size-calendar-topic:                  $font-size-large !default;
-
 /// Controls the color of the date range on the calendar listing template.
 /// By default, this is right after the topic.
 /// @group calendar
@@ -610,15 +581,6 @@ $font-size-calendar-topic:                  $font-size-large !default;
 /// @since 1.0.0
 
 $color-calendar-heading-date-range:          $color-grayscale-9 !default;
-
-/// Controls the size of the date heading on the calendar listing template.
-/// When there are multiple events on the same day, they will be grouped by
-/// day, so it is best to treat this like a heading.
-/// @group calendar
-/// @access public
-/// @since 1.0.0
-
-$font-size-calendar-event-date:              $font-size-medium !default;
 
 /// Controls the color of links on the calendar listing template.
 /// @group calendar
@@ -644,14 +606,6 @@ $color-calendar-event-link-hover:           $color-link !default;
 /// @since 1.0.0
 
 $font-family-calendar-month-caption:         $font-family-sans-serif !default;
-
-/// Controls the size of the selected month in the calendar picker
-/// in the sidebar of the calendar listing template.
-/// @group calendar
-/// @access public
-/// @since 1.0.0
-
-$font-size-calendar-month-caption:           $font-size-medium !default;
 
 /// Controls the color of the selected month in the calendar picker
 /// in the sidebar of the calendar listing template.
@@ -789,22 +743,6 @@ $border-profiles:                          $border-base !default;
 
 $border-radius-profile-figure:              50% !default;
 
-/// Controls the font family used for profile names in the profile
-/// listing template.
-/// @group profiles
-/// @access public
-/// @since 1.0.0
-
-$font-family-profile-name:                  $font-family-sans-serif !default;
-
-/// Controls the font size used for profile names in the profile
-/// listing template.
-/// @group profiles
-/// @access public
-/// @since 1.0.0
-
-$font-size-profile-name:                    $font-size-medium !default;
-
 /// Controls the color used for profile names in the profile
 /// listing template.
 /// @group profiles
@@ -812,22 +750,6 @@ $font-size-profile-name:                    $font-size-medium !default;
 /// @since 1.0.0
 
 $color-profile-name:                       $color-link !default;
-
-/// Controls the font family used for profile titles in the profile
-/// listing template.
-/// @group profiles
-/// @access public
-/// @since 1.0.0
-
-$font-family-profile-title:                 $font-family-base !default;
-
-/// Controls the font size used for profile titles in the profile
-/// listing template.
-/// @group profiles
-/// @access public
-/// @since 1.0.0
-
-$font-size-profile-title:                   $font-size-small !default;
 
 /// Controls the color used for profile titles in the profile
 /// listing template.
@@ -880,30 +802,6 @@ $profiles-mini-cols-sm:			2 !default;
 
 $color-profile-mini-border:                $color-grayscale-e !default;
 
-/// Controls the font size of names on the mini profile format
-/// in the profiles shortcode.
-/// @group profiles
-/// @access public
-/// @since 1.0.0
-
-$font-size-profile-mini-name:               $font-size-small !default;
-
-/// Controls the font size of descriptions on the mini profile format
-/// in the profiles shortcode.
-/// @group profiles
-/// @access public
-/// @since 1.0.0
-
-$font-size-profile-mini-description:              $font-size-smaller !default;
-
-/// Controls the spacing between name and description on the mini profile format
-/// in the profiles shortcode.
-/// @group profiles
-/// @access public
-/// @since 1.0.0
-
-$line-height-profile-mini-description:            $line-height-medium !default;
-
 // News and Archive Template: Listing
 // -----------------------------------------------------------------
 
@@ -920,22 +818,6 @@ $border-news-post:                         $border-base !default;
 /// @since 1.0.0
 
 $border-width-news-post:                    $border-top !default;
-
-/// Controls the font family of metadata (author, date, etc)
-/// on post listing templates.
-/// @group news
-/// @access public
-/// @since 1.0.0
-
-$font-family-news-meta:                     $font-family-sans-serif !default;
-
-/// Controls the font size of metadata (author, date, etc)
-/// on post listing templates.
-/// @group news
-/// @access public
-/// @since 1.0.0
-
-$font-size-news-meta:                       $font-size-smaller !default;
 
 /// Controls the color of the separators between metadata.
 /// @group news
@@ -986,14 +868,6 @@ $border-width-single-meta:                  $border-width-message !default;
 /// @since 1.0.0
 
 $border-radius-single-meta:                 $border-radius-message !default;
-
-/// Controls the font size in the metadata card at the bottom of the single
-/// post template.
-/// @group news
-/// @access public
-/// @since 1.0.0
-
-$font-size-single-meta:                     $font-size-small !default;
 
 /// Controls the background of the metadata card at the bottom of the single
 /// post template.
@@ -1196,20 +1070,6 @@ $border-widget-title:                       4px solid $color-grayscale-0 !defaul
 
 $border-width-widget-title:                  0 0 4px 0 !default;
 
-/// Controls the font size used on the widget title.
-/// @group widgets
-/// @access public
-/// @since 1.0.0
-
-$font-size-widget-title:                     $font-size-large !default;
-
-/// Controls the line height of the widget title.
-/// @group widgets
-/// @access public
-/// @since 1.0.0
-
-$line-height-widget-title:                   $line-height-large !default;
-
 /// Controls the color of the widget title.
 /// @group widgets
 /// @access public
@@ -1240,20 +1100,6 @@ $color-widget-title-link-after:             currentColor !default;
 /// @since 1.0.0
 
 $color-widget-title-link-after-hover:       $color-grayscale-0 !default;
-
-/// Controls the font size in all widgets.
-/// @group widgets
-/// @access public
-/// @since 1.0.0
-
-$font-size-widget:                          $font-size-small !default;
-
-/// Controls the line height in all widgets.
-/// @group widgets
-/// @access public
-/// @since 1.0.0
-
-$line-height-widget:								 $line-height-base !default;
 
 /// Controls the font family used for headings in widget content.
 /// @group widgets
@@ -1286,20 +1132,6 @@ $color-widget-link-hover:                  $color-link !default;
 
 $font-family-widget-calendar-date:          $font-family-sans-serif !default;
 
-/// Controls the font size used on dates in the calendar widget.
-/// @group widgets
-/// @access public
-/// @since 1.0.0
-
-$font-size-widget-calendar-date:             $font-size-smallest !default;
-
-/// Controls the line height used on dates in the calendar widget.
-/// @group widgets
-/// @access public
-/// @since 1.0.0
-
-$line-height-widget-calendar-date:           $line-height-large !default;
-
 /// Controls the color of dates in the calendar widget.
 /// @group widgets
 /// @access public
@@ -1313,7 +1145,7 @@ $color-widget-calendar-date:                $color-grayscale-0 !default;
 /// @access public
 /// @since 1.0.0
 
-$font-size-widget-calendar-date-day:          $font-size-large !default;
+$font-size-widget-calendar-date-day:          22px !default;
 
 /// Controls the color of the day when using the graphic style in the
 /// calendar widget.
@@ -1329,7 +1161,7 @@ $color-widget-calendar-date-day:             inherit !default;
 /// @access public
 /// @since 1.0.0
 
-$font-size-widget-calendar-date-month:        $font-size-smallest !default;
+$font-size-widget-calendar-date-month:        12px !default;
 
 /// Controls the color of the month when using the graphic style in the
 /// calendar widget.
@@ -1384,7 +1216,7 @@ $font-family-widget-contentnav:             $font-family-sans-serif !default;
 /// @access public
 /// @since 1.0.0
 
-$font-size-widget-contentnav-link:          $font-size-small !default;
+$font-size-widget-contentnav-link:          inherit !default;
 
 /// Controls the font size used for items below the first level in the
 /// content navigation widget.
@@ -1392,7 +1224,7 @@ $font-size-widget-contentnav-link:          $font-size-small !default;
 /// @access public
 /// @since 1.0.0
 
-$font-size-widget-contentnav-nested-link:    $font-size-small !default;
+$font-size-widget-contentnav-nested-link:    inherit !default;
 
 /// Controls the color of nav items in the content navigation widget.
 /// @group widgets
@@ -1417,48 +1249,6 @@ $color-widget-contentnav-active:           $color-link-active !default;
 
 // BU Posts Widget
 // -----------------------------------------------------------------
-
-/// Controls the font size of headlines in the BU posts widget.
-/// @group widgets
-/// @access public
-/// @since 1.0.0
-
-$font-size-widget-post-headline:             $font-size-small !default;
-
-/// Controls the line height of headlines in the BU posts widget.
-/// @group widgets
-/// @access public
-/// @since 1.0.0
-
-$line-height-widget-post-headline:           1.4 !default;
-
-/// Controls the font size of the excerpt in the BU posts widget.
-/// @group widgets
-/// @access public
-/// @since 1.0.0
-
-$font-size-widget-post-excerpt:              $font-size-small !default;
-
-/// Controls the line height of the excerpt in the BU posts widget.
-/// @group widgets
-/// @access public
-/// @since 1.0.0
-
-$line-height-widget-post-excerpt:            $line-height-medium !default;
-
-/// Controls the font size of the post date in the BU posts widget.
-/// @group widgets
-/// @access public
-/// @since 1.0.0
-
-$font-size-widget-post-date:                 $font-size-smallest !default;
-
-/// Controls the font size of the metadata in the BU posts widget.
-/// @group widgets
-/// @access public
-/// @since 1.0.0
-
-$font-size-widget-post-meta:                 $font-size-smallest !default;
 
 /// Controls the color of the metadata in the BU posts widget.
 /// @group widgets
@@ -1625,3 +1415,11 @@ $image-bumclogo:         "https://www.bu.edu/cdn/images/logos/bumclogo96x40.png"
 /// @since 1.0.0
 
 $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-retina.png" !default;
+
+
+
+
+
+
+
+$font-size-icon: 21px !default;

@@ -170,14 +170,14 @@
 /// @since 1.4.0
 
 .brand-site-description {
+	@extend %font-size-secondary;
 	@extend %_vertical-center;
 	display: none;
 
 	@include breakpoint( md ) {
 		color: $color-grayscale-9;
 		display: block;
-		font-family: $font-family-base;
-		font-size: $font-size-small;
+		font-family: $font-family-base; // TODO: inherits whitney from brand if you take away
 	}
 }
 

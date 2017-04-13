@@ -47,12 +47,12 @@
 /// @since 1.0.0
 
 %card-styles {
+	@extend %font-size-secondary;
 	@include border-radius( $border-radius-message );
 	background-color: $color-message-bg;
 	border: $border-message;
 	border-left-color: $color-message-border-left;
 	border-width: $border-width-message;
-	font-size: $font-size-message;
 	padding: $padding-message;
 }
 
@@ -181,10 +181,10 @@
 /// @since 1.0.0
 
 .wp-caption-text {
+	@extend %font-size-minimum;
 	clear: both;
 	color: $color-caption;
 	font-family: $font-family-caption;
-	font-size: $font-size-caption;
 	line-height: 1.4;
 }
 

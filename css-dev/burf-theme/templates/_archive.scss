@@ -9,9 +9,7 @@
 }
 
 .meta {
-	font-family: $font-family-news-meta;
-	font-size: $font-size-news-meta;
-	margin-bottom: 20px;
+	@extend %font-size-secondary;
 }
 
 /// Handles the previous and next links at the bottom of post listings.
@@ -76,7 +74,9 @@
 /// @since 2.0.0
 
 .post-headline {
-	margin-bottom: 10px;
+	& + .meta {
+		margin-top: -0.5em;
+	}
 }
 
 /// Handles styling for metadata in the post template partial,

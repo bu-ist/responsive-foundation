@@ -238,8 +238,6 @@
 
 .profile-name {
 	color: $color-profile-name;
-	font-family: $font-family-profile-name;
-	font-size: $font-size-profile-name;
 	margin-bottom: 0;
 	text-decoration: underline;
 }
@@ -252,8 +250,6 @@
 .profile-title {
 	color: $color-profile-title;
 	display: block;
-	font-family: $font-family-profile-title;
-	font-size: $font-size-profile-title;
 }
 
 /// Styles for all profile links.
@@ -457,9 +453,11 @@ $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 
 .profile-details-mini {
 	@extend %col-10;
-	font-size: $font-size-profile-mini-description;
-	line-height: $line-height-profile-mini-description;
 	padding-left: 20px;
+
+	p {
+		@extend %font-size-minimum;
+	}
 }
 
 /// Styles the mini profile name.
@@ -469,7 +467,6 @@ $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 
 .profile-name-mini {
 	color: inherit;
-	font-size: $font-size-profile-mini-name;
 	text-decoration: none;
 }
 

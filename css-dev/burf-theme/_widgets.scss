@@ -20,8 +20,7 @@
 /// @since 1.0.0
 
 .widget {
-	font-size: $font-size-widget;
-	line-height: $line-height-widget;
+	@extend %font-size-secondary;
 	margin-bottom: $widget-margin-bottom;
 
 	h1,
@@ -74,8 +73,6 @@
 	border-width: $border-width-widget-title;
 	color: $color-widget-title;
 	font-family: $font-family-widget-title;
-	font-size: $font-size-widget-title;
-	line-height: $line-height-widget-title;
 	padding: 0 0 4px;
 
 	a {
@@ -97,18 +94,12 @@
 // -----------------------------------------------------------------
 
 /// Handles styling for posts in the BU Posts widget (news widget).
-/// We put the margin on top because the markup displayed when "random"
-/// is selected (specifically, the script and noscript tags it outputs)
-/// means that we can't rely on first- or last-child. But by putting a
-/// reasonable margin-top on instead, we can take advantage of margin
-/// collapsing with the title margin and avoid the issue altogether.
 /// @group widgets
 /// @access public
 /// @since 2.0.0
 
 .widget-post {
 	@extend %clearfix;
-	margin-top: 15px;
 }
 
 /// Handles styling for the post headline in the
@@ -118,19 +109,7 @@
 /// @since 2.0.0
 
 .widget-post-headline {
-	font-size: $font-size-widget-post-headline;
-	line-height: $line-height-widget-post-headline;
-	margin: 0;
-}
-
-/// Handles styling for the published date in the
-/// BU Posts widget (news widget).
-/// @group widgets
-/// @access public
-/// @since 2.0.0
-
-.widget-posts-published {
-	font-size: $font-size-widget-post-date;
+	@extend %font-size-5;
 }
 
 /// Handles styling for metadata in the
@@ -140,9 +119,8 @@
 /// @since 2.0.0
 
 .widget-post-meta {
+	@extend %font-size-minimum;
 	color: $color-widget-post-meta;
-	font-size: $font-size-widget-post-meta;
-	margin: 0;
 }
 
 /// Handles styling for the excerpt in the
@@ -152,9 +130,7 @@
 /// @since 2.0.0
 
 .widget-post-excerpt {
-	font-size: $font-size-widget-post-excerpt;
-	line-height: $line-height-widget-post-excerpt;
-	margin: 4px 0 0;
+	margin-top: -0.5em;
 }
 
 /// Handles styling for the thumbnail in the
@@ -323,15 +299,6 @@ $_width-calendar-date: 48px;
 	position: relative;
 }
 
-/// Styles dates in the calendar widget full date format.
-/// @group widgets
-/// @access public
-/// @since 2.0.0
-
-.widget-calednar-date-fulldate {
-	font-size: $font-size-widget-calendar-date;
-}
-
 /// Styles links in the calendar widget graphic format.
 /// @group widgets
 /// @access public
@@ -351,7 +318,7 @@ $_width-calendar-date: 48px;
 	color: $color-widget-calendar-date;
 	display: table-cell;
 	width: $_width-calendar-date;
-	line-height: $line-height-widget-calendar-date;
+	line-height: 1.1;
 	text-align: center;
 }
 
@@ -403,16 +370,18 @@ $_width-calendar-date: 48px;
 
 .widget-calendar-picker {
 	color: $color-calendar-month-link;
+	line-height: 1.6;
 
 	.month {
 		width: 100%;
 	}
 
 	caption {
+		@extend %font-size-5;
 		color: $color-calendar-month-caption;
-		font-family: $font-family-calendar-month-caption;
-		font-size: $font-size-calendar-month-caption;
+		font-family: $font-family-sans-serif;
 		font-style: normal;
+		font-weight: bold;
 	}
 
 	th,
@@ -447,6 +416,12 @@ $_width-calendar-date: 48px;
 		background: $color-calendar-month-link-today-bg;
 		color: $color-calendar-month-link-today;
 	}
+}
+
+.prev-month,
+.next-month {
+	font-weight: normal;
+	margin: 0 0.5em;
 }
 
 /// Styles the BU Calendar list page topics widget.
