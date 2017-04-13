@@ -1,86 +1,117 @@
-/* Tables
------------------------------------------------------------------ */
+// =================================================================
+// Tables
+// =================================================================
 
-/* 1. From normalize.css: removes most spacing between table cells. */
+/// Controls base styling for tables.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
 table {
-	margin: $table-margin;
+	@extend %font-size-secondary;
 	border: $table-border;
-	border-spacing: 0; /* 1 */
-	border-collapse: collapse; /* 1 */
 	empty-cells: show;
-}
-table caption {
-	padding: $table-caption-padding;
-	font-style: italic;
-	font-size: $font-size-table-caption;
-	color: $color-table-caption;
-	text-align: center;
-}
-table td,
-table th {
-	overflow: visible; /*to make ths where the title is really long work*/
-	padding: $table-padding;
-	margin: 0;
-	border-width: 0 0 0 1px;
-	border-left: 1px solid $color-table-border;
-	font-size: inherit;
-}
-table th {
-	border-bottom: 1px solid $color-table-border;
-}
-table td {
-	background-color: transparent;
-	vertical-align: top;
-}
-table td:first-child,
-table th:first-child {
-	border-left-width: 0;
-}
-table thead {
-	background: $color-table-head-bg;
-	vertical-align: bottom;
-	color: $color-table-head;
-	text-align: left;
-}
-/* tables that use grid width classes */
-table col[class*="col-"] {
-	display: table-column;
-	float: none;
-}
-table td[class*="col-"],
-table th[class*="col-"] {
-	display: table-cell;
-	float: none;
+	margin: $table-margin;
+	width: 100%;
+
+	caption {
+		color: $color-table-caption;
+		font-style: italic;
+		padding: $table-caption-padding;
+		text-align: center;
+	}
+
+	td,
+	th {
+		border-left: 1px solid $color-table-border;
+		border-width: 0 0 0 1px;
+		font-size: inherit;
+		margin: 0;
+		overflow: visible; // to make ths where the title is really long work
+		padding: $table-padding;
+
+		&:first-child {
+			border-left-width: 0;
+		}
+
+		&[class*="col-"] {
+			display: table-cell;
+			float: none;
+		}
+	}
+
+	th {
+		border-bottom: 1px solid $color-table-border;
+	}
+
+	td {
+		background-color: transparent;
+		vertical-align: top;
+	}
+
+	thead {
+		background: $color-table-head-bg;
+		color: $color-table-head;
+		text-align: left;
+		vertical-align: bottom;
+	}
+
+	col[class*="col-"] { // Despite what CodeClimate says this is necessary.
+		display: table-column;
+		float: none;
+	}
 }
 
-/* Striped tables
------------------------------------------------------------------ */
+/// Adds stripes to tables.
+/// @group global
+/// @access public
+/// @since 1.0.0
 
-/* nth-child selector for modern browsers, otherwise apply .u-odd class to markup */
-.table-striped tr:nth-child(2n-1) td,
-.u-odd td {
-	background-color: $color-table-stripes;
+.table-striped tr:nth-child(2n-1),
+.u-odd {
+	td {
+		background-color: $color-table-stripes;
+	}
 }
 
-/* Bordered tables
------------------------------------------------------------------ */
+// Bordered tables
+// -----------------------------------------------------------------
 
-.table-bordered td {
-	border-bottom: 1px solid $color-table-border;
-}
-.table-bordered tbody > tr:last-child td,
-.table-horizontal tbody > tr:last-child td {
-	border-bottom-width: 0;
+/// Adds both horizontal and vertical borders.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
+.table-bordered {
+	td {
+		border-bottom: 1px solid $color-table-border;
+	}
 }
 
-/* Horizontal tables
------------------------------------------------------------------ */
+// Horizontal tables
+// -----------------------------------------------------------------
 
-.table-horizontal td,
-.table-horizontal th {
-	border-width: 0 0 1px 0;
-	border-bottom: 1px solid $color-table-border;
+/// Switches the border on tables from vertical to horizontal.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
+.table-horizontal {
+	td,
+	th {
+		border: 0;
+		border-bottom: 1px solid $color-table-border;
+	}
 }
-.table-horizontal tbody > tr:last-child td {
-	border-bottom-width: 0;
+
+.table-bordered,
+.table-horizontal,
+.section-row {
+	tbody > {
+		tr:last-child {
+			td {
+				border-bottom-width: 0;
+			}
+		}
+	}
 }

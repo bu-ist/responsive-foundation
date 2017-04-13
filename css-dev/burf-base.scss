@@ -1,5 +1,10 @@
-// basic framework elements
-// -----------------------------------------------------------------
+// =================================================================
+// Basic styling and resets which do not depend on WordPress
+// =================================================================
+
+// resets
+@import "../bower_components/normalize-css/normalize";
+@import "../bower_components/mathsass/dist/math";
 
 // variables
 @import 'burf-base/variables';

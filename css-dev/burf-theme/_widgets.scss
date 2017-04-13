@@ -1,144 +1,209 @@
-/* widget contents:
+// =================================================================
+// Widgets
+// =================================================================
 
-	1. Basic Widgets
-	2. BU Posts
-	3. Content Nav
-	4. Calendar
+// Widget contents:
 
------------------------------------------------------------------ */
+//	1. Basic Widgets
+//	2. BU Posts
+//	3. Content Nav
+//	4. Calendar
 
-/* Basic Widgets
------------------------------------------------------------------ */
+// -----------------------------------------------------------------
+
+// Basic Widgets
+// -----------------------------------------------------------------
+
+/// Handles global widget styling.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
 
 .widget {
+	@extend %font-size-secondary;
 	margin-bottom: $widget-margin-bottom;
-	font-size: $font-size-widget;
-	line-height: $line-height-widget;
-}
-.widget a {
-	color: $color-widget-link;
-	&:hover,
-	&:focus {
-		color: $color-widget-link-hover;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: $font-family-widget-heading;
+	}
+
+	a {
+		color: $color-widget-link;
+
+		&:hover,
+		&:focus {
+			color: $color-widget-link-hover;
+		}
+	}
+
+	ul {
+		list-style: none;
+		list-style-image: none;
 	}
 }
-.footbar a {
-	color: $color-footbar-widget-link;
-	&:hover,
-	&:focus {
-		color: $color-footbar-widget-link-hover;
+
+/// Handles styling for widgets in the footer.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+.footbar {
+	a {
+		color: $color-footbar-widget-link;
+
+		&:hover,
+		&:focus {
+			color: $color-footbar-widget-link-hover;
+		}
 	}
 }
+
+/// Handles title styles for all widgets.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
 .widget-title {
-	padding: 0 0 4px 0;
 	border: $border-widget-title;
 	border-width: $border-width-widget-title;
+	color: $color-widget-title;
 	font-family: $font-family-widget-title;
-	font-size: $font-size-widget-title;
-	line-height: $line-height-widget-title;
-	color: $color-widget-title;
-}
-.widget-title a {
-	color: $color-widget-title;
-	text-decoration: none;
-	&:after {
-		content: $widget-title-link-after;
-		color: $color-widget-title-link-after;
+	padding: 0 0 4px;
+
+	a {
+		color: inherit;
+		text-decoration: none;
+
+		&::after {
+			color: $color-widget-title-link-after;
+			content: $widget-title-link-after;
+		}
+
+		&:hover::after {
+			color: $color-widget-title-link-after-hover;
+		}
 	}
 }
-.widget-title a:hover {
-	&:after {
-		color: $color-widget-title-link-after-hover;
-	}
-}
-.widget ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	list-style-image: none;
-}
-.widget h1,
-.widget h2,
-.widget h3,
-.widget h4,
-.widget h5,
-.widget h6 {
-	font-family: $font-family-widget-heading;
-}
 
-/* BU Posts
------------------------------------------------------------------ */
+// BU Posts
+// -----------------------------------------------------------------
 
+/// Handles styling for posts in the BU Posts widget (news widget).
+/// @group widgets
+/// @access public
+/// @since 2.0.0
 
-.widget-bu-posts .post {
-	margin-bottom: 25px;
+.widget-post {
 	@extend %clearfix;
-	&:last-child {
-		//border-bottom: none;
-		margin-bottom: 0;
-	}
 }
-.widget-bu-posts .headline {
-	margin: 0;
-	font-size: $font-size-widget-post-headline;
-	line-height: $line-height-widget-post-headline;
+
+/// Handles styling for the post headline in the
+/// BU Posts widget (news widget).
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-post-headline {
+	@extend %font-size-5;
 }
-.widget-bu-posts .excerpt {
-	margin: 4px 0 0;
-	font-size: $font-size-widget-post-excerpt;
-	line-height: $line-height-widget-post-excerpt;
-}
-.widget-bu-posts .thumb {
-	display: block;
-	float: left;
-	max-width: 45%;
-	margin: 5px 15px 15px 0;
-}
-.widget-bu-posts .published {
-	font-size: $font-size-widget-post-date;
-}
-.widget-bu-posts .meta {
-	margin: 0;
-	font-size: $font-size-widget-post-meta;
+
+/// Handles styling for metadata in the
+/// BU Posts widget (news widget).
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-post-meta {
+	@extend %font-size-minimum;
 	color: $color-widget-post-meta;
 }
 
+/// Handles styling for the excerpt in the
+/// BU Posts widget (news widget).
+/// @group widgets
+/// @access public
+/// @since 2.0.0
 
-/* Content Nav
------------------------------------------------------------------ */
+.widget-post-excerpt {
+	margin-top: -0.5em;
+}
+
+/// Handles styling for the thumbnail in the
+/// BU Posts widget (news widget).
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-post-thumbnail {
+	margin-bottom: 10px;
+}
+
+/// Handles styling for the thumbnail in the
+/// BU Posts widget (news widget) in the title and date format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-post-thumbnail-title-date {
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+// Content Nav
+// -----------------------------------------------------------------
+
+/// Handles styling for content navigation widgets (BU Pages and Content Navigation, aka side nav).
+/// @group widgets
+/// @access public
+/// @since 1.0.0
 
 .widget_bu_pages,
 .widget_nav_menu {
 	h3 {
 		margin-bottom: 0;
 	}
+
 	ul {
 		border: $border-widget-contentnav;
 		border-width: $border-width-widget-contentnav;
+		padding: 0;
+
 		ul {
+			border: 0;
 			margin: 0;
-			border: none;
 		}
+
 	}
+
 	li {
 		border: $border-widget-list;
 		border-width: $border-width-widget-list;
 		font-family: $font-family-widget-contentnav;
+
 		&:first-child {
-			border: none;
+			border: 0;
 		}
+
 		li {
+			border: 0;
 			padding: 0 0 0 20px;
-			border: none;
+
 			a {
 				font-size: $font-size-widget-contentnav-nested-link;
 			}
 		}
+
 		a {
-			display: block;
-			padding: 10px 0;
-			font-size: $font-size-widget-contentnav-link;
 			color: $color-widget-contentnav;
+			display: block;
+			font-size: $font-size-widget-contentnav-link;
+			padding: 10px 0;
 
 			&:hover,
 			&:focus {
@@ -147,83 +212,236 @@
 			}
 		}
 	}
-}
 
-.widget_bu_pages .active,
-.widget_nav_menu .current_page_item a {
-	color: $color-widget-contentnav-active;
-}
-
-/* Calendar
------------------------------------------------------------------ */
-
-$width-calendar-date: 48px;
-
-// A placeholder meant only for calendar.
-%calendar-absolutePositionDate {
-	.date {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: $width-calendar-date;
+	.active,
+	.current_page_item a {
+		color: $color-widget-contentnav-active;
 	}
+}
+
+// Calendar
+// -----------------------------------------------------------------
+
+/// A helper variable for absolute positioning in formats which use it.
+/// Sets the width of the calendar date.
+/// By default, affects the default and graphic formats.
+/// @group widgets
+/// @access private
+/// @since 1.2.0
+
+$_width-calendar-date: 48px;
+
+/// Styles events in the calendar widget. Affects all formats.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-event {
+	border: $border-widget-list;
+	border-width: $border-width-widget-list;
+	padding: 10px 0;
+
+	&:first-child {
+		border: 0;
+		padding: 0 0 10px;
+	}
+}
+
+/// Styles links in the calendar widget. Affects all formats.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-link {
+	display: block;
+}
+
+/// Styles dates in the calendar widget. Affects all formats.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-date {
+	color: $color-widget-calendar-date;
+	display: block;
+	font-family: $font-family-widget-calendar-date;
+	font-weight: 700;
+}
+
+/// Styles an event in the calendar widget default format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-event-default {
+	position: relative;
+}
+
+/// Styles dates in the calendar widget default format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-date-default {
+	left: 0;
+	position: absolute;
+	top: auto;
+	width: $_width-calendar-date;
+}
+
+/// Styles titles in the calendar widget default format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-title-default {
+	padding-left: $_width-calendar-date + 12;
+	position: relative;
+}
+
+/// Styles links in the calendar widget graphic format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-link-graphic {
+	display: table;
+	text-decoration: none;
+}
+
+/// Styles dates in the calendar widget graphic format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-date-graphic {
+	color: $color-widget-calendar-date;
+	display: table-cell;
+	width: $_width-calendar-date;
+	line-height: 1.1;
+	text-align: center;
+}
+
+/// Styles the day of the month in the calendar widget graphic format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-day-graphic {
+	color: $color-widget-calendar-date-day;
+	display: block;
+	font-size: $font-size-widget-calendar-date-day;
+}
+
+/// Styles the month in the calendar widget graphic format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-month-graphic {
+	color: $color-widget-calendar-date-month;
+	font-size: $font-size-widget-calendar-date-month;
+	text-transform: uppercase;
+}
+
+/// Styles the title in the calendar widget graphic format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-title-graphic {
+	display: table-cell;
+	padding-left: 10px;
+	vertical-align: middle;
+	text-decoration: underline;
+}
+
+.widgetnav,
+.widget_archive ul,
+.widget_categories ul { // maybe not though, there are nested categories
+	padding: 0;
+	margin: 0;
+}
+
+/// Styles the BU Calendar list page date picker.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-picker {
+	color: $color-calendar-month-link;
+	line-height: 1.6;
+
+	.month {
+		width: 100%;
+	}
+
+	caption {
+		@extend %font-size-5;
+		color: $color-calendar-month-caption;
+		font-family: $font-family-sans-serif;
+		font-style: normal;
+		font-weight: bold;
+	}
+
+	th,
+	td {
+		font-family: $font-family-calendar-month-cell;
+		padding: $padding-calendar-month-cell;
+		text-align: center;
+		width: 14.285714285%;
+	}
+
+	th {
+		background: $color-calendar-month-th-bg;
+		color: $color-calendar-month-th;
+	}
+
 	a {
-		position: relative;
-		display: block;
-		padding-left: 60px;
+		color: inherit;
+		text-decoration: none;
+
+		&:hover,
+		&::focus {
+			color: $color-calendar-month-link-hover;
+		}
+	}
+
+	.out {
+		background: $color-calendar-month-link-out-bg;
+		color: $color-calendar-month-link-out;
+	}
+
+	.today {
+		background: $color-calendar-month-link-today-bg;
+		color: $color-calendar-month-link-today;
 	}
 }
 
-.widget-bu-calendar {
-	/* calendar: shared */
-	.date {
-		display: block;
-		font-family: $font-family-widget-calendar-date;
-		color: $color-widget-calendar-date;
-		font-weight: 700;
-	}
-	li {
-		padding: 10px 0;
-		border: $border-widget-list;
-		border-width: $border-width-widget-list;
-		&:first-child {
-			padding: 0 0 10px;
-			border: none;
-		}
-	}
+.prev-month,
+.next-month {
+	font-weight: normal;
+	margin: 0 0.5em;
+}
 
-	/* calendar: default */
-	.default {
-		@extend %calendar-absolutePositionDate;
-	}
+/// Styles the BU Calendar list page topics widget.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
 
-	/* calendar: full-date */
-	.full-date {
-		.date {
-			font-size: $font-size-widget-calendar-date;
-		}
-	}
+.calendar-topics {
+	padding: 0;
 
-	/* calendar: graphic */
-	.graphic {
-		@extend %calendar-absolutePositionDate;
-
-		a {
-			min-height: $width-calendar-date;
-		}
-		.date {
-			text-align: center;
-			line-height: $line-height-widget-calendar-date;
-		}
-		.day {
-			display: block;
-			font-size: $font-size-widget-calendar-dateDay;
-			color: $color-widget-calendar-dateDay;
-		}
-		.month {
-			font-size: $font-size-widget-calendar-dateMonth;
-			color: $color-widget-calendar-dateMonth;
-			text-transform: uppercase;
-		}
+	ul {
+		padding-left: 20px;
 	}
+}
+
+/// Styles the blog list in the blogroll widget.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.blogroll {
+	padding: 0;
 }

@@ -1,97 +1,196 @@
+// =================================================================
+// Layout
+// =================================================================
+
 body {
 	background: $color-body-bg;
 }
+
+/// Controls styling for all content, from the masthead to the site footer.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
 .content {
 	background: $color-content-bg;
 }
+
+/// A wrapper to contain content to a certain size. Sits just below the window
+/// width banner and just above the footbar.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
 .content-container {
 	@extend %container-styles;
 }
 
-/* masthead
------------------------------------------------------------------ */
+// Masthead
+// -----------------------------------------------------------------
+
+/// Controls all styling related to the masthead. This includes
+/// navigation, branding, and search.
+/// @group layout
+/// @access public
+/// @since 1.0.0
 
 .masthead {
 	@extend %clearfix;
-	position: relative;
+	background: $color-masthead-bg;
 	border: $border-masthead;
 	border-width: $border-width-masthead;
-	background: $color-masthead-bg;
+	position: relative;
 }
+
+/// A wrapper for items in the masthead. Often used to restrict the
+/// masthead to a certain width without interfering with the background.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
 .masthead-container {
 	position: relative;
 }
 
-/* .bannerContainer
------------------------------------------------------------------ */
+// Content Banner
+// -----------------------------------------------------------------
+
+/// General styles for all content banner positions.
+/// @group layout
+/// @access public
+/// @since 1.0.0
 
 .banner-container {
 	padding: 0;
 	text-align: center;
-}
-.banner-container img {
-	display: block;
-	margin: 0 auto;
-}
-.banner-container-window-width {
-	@include breakpoint(lg) {
-		padding: 20px;
-		background: $color-bannerContainer;
+
+	img {
+		display: block;
+		margin: 0 auto;
 	}
 }
+
+/// Styles for the window-width content banner position.
+/// Sits outside of `.content-container`.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
+.banner-container-window-width {
+	@include breakpoint( lg ) {
+		background: $color-banner-container;
+		padding: 20px;
+	}
+}
+
+/// Styles for the page-width content banner position.
+/// Sits directly inside `.content-container` and just
+/// outside of `.content-area`.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
 .banner-container-page-width {
-	margin: -15px 0 35px;
-	@include breakpoint(sm) {
+	margin: -$grid-container-padding;
+	margin-bottom: $grid-container-padding;
+
+	@include breakpoint( sm ) {
 		margin: 0 0 60px;
 	}
-}
-.banner-container-page-width img {
-	@include breakpoint(md) {
-		width: 100%;
-		background: $color-bannerContainer;
+
+	img {
+		@include breakpoint( md ) {
+			background: $color-banner-container;
+			width: 100%;
+		}
 	}
 }
+
+/// Styles for the content-width content banner position.
+/// Sits directly inside `.content-area`.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
 .banner-container-content-width {
-	padding: 0;
-	margin: -15px 0 35px;
 	background: none;
-	@include breakpoint(sm) {
+	margin: -$grid-container-padding;
+	margin-bottom: ( 1.5 * $grid-container-padding );
+	padding: 0;
+
+	@include breakpoint( sm ) {
+		margin-left: auto;
+		margin-right: auto;
 		margin-top: 0;
 	}
 }
 
-/* content
------------------------------------------------------------------ */
+// Content Area
+// -----------------------------------------------------------------
+
+/// A helper variable to figure out the proper width for the content
+/// based on the desired number of columns in the design.
+/// Note that this is different from the number of columns supported in
+/// the grid.
+/// By default, the width is one less than the number of columns.
+/// @group layout
+/// @access private
+/// @since 1.0.0
+
+$_content-width: $grid-number-columns * ( ( $number-columns - 1 ) / $number-columns );
+
+/// A helper variable to figure out the proper width for the sidebar
+/// based on the desired number of columns in the design.
+/// Note that this is different from the number of columns supported in
+/// the grid.
+/// By default, the width is one column.
+/// @group layout
+/// @access private
+/// @since 1.0.0
+
+$_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
+
+/// Styles for the content area (formerly styled by article[role=main]).
+/// Sits next to the sidebar.
+/// @group layout
+/// @access public
+/// @since 1.0.0
 
 .content-area {
-	@extend %col-md-#{$grid-number-columns*((($number-columns)-1)/$number-columns)};
+	@extend %col-md-#{$_content-width};
 	padding-bottom: $column-padding-bottom;
-	@include breakpoint(sm) {
+
+	@include breakpoint( sm ) {
 		padding-bottom: $column-padding-bottom-large-screen;
 	}
 
 	// Left layout
 	.sidebar-location-left & {
-		@extend %col-md-push-#{$grid-number-columns*(1/$number-columns)};
+		@extend %col-md-push-#{$_sidebar-width};
 	}
+
 	.page-template-no-sidebars & {
 		left: 0;
 		width: 100%;
 	}
 }
 
-// Bottom layout
+/// Styles for the bottom sidebar location.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
 .sidebar-location-bottom {
 	@extend %template-narrow;
 
 	.sidebar {
 		@extend %col-sm-margin-parent;
 		clear: both;
-		overflow: hidden;
-		width: auto;
 		float: none;
-		padding-left: 0;
 		margin-bottom: $widget-margin-bottom;
+		overflow: hidden;
+		padding-left: 0;
+		width: auto;
 
 		.widget {
 			@extend %col-sm-margin-half;
@@ -100,333 +199,446 @@ body {
 }
 
 
-/* sidebar
------------------------------------------------------------------ */
+// Sidebar
+// -----------------------------------------------------------------
+
+/// Controls styles for the sidebar.
+/// You may extend this class if you can't use .sidebar for some reason.
+/// @group layout
+/// @access public
+/// @since 1.2.0
 
 %sidebar-styles {
-	@extend %col-md-#{$grid-number-columns*(1/$number-columns)};
-	font-size: $font-size-small;
+	@extend %font-size-secondary;
+	@extend %col-md-#{$_sidebar-width};
 	clear: none;
 
-	// TODO: sunset this in a future release - this padding should really only apply to .sidebar-location-right
-	@include breakpoint(md) {
+	// TODO: sunset this in a future release -
+	// this padding should really only apply to .sidebar-location-right
+	@include breakpoint( md ) {
 		padding-left: $sidebar-padding;
 	}
 
 	// Left layout
 	.sidebar-location-left & {
-		@extend %col-md-pull-#{$grid-number-columns*(1-(1/$number-columns))};
+		@extend %col-md-pull-#{$_content-width};
 
-		@include breakpoint(md) {
+		@include breakpoint( md ) {
 			// TODO: sunset in a future release
 			padding: 0;
 			padding-right: $sidebar-padding;
 		}
 	}
 }
+
+/// The default class for styling sidebars.
+/// @group layout
+/// @access public
+/// @since 1.0.0
 
 .sidebar {
 	@extend %sidebar-styles;
 }
 
-/* layouts
------------------------------------------------------------------ */
+// layouts
+// -----------------------------------------------------------------
 
-// Left layout
+/// Styles for the left sidebar location.
+/// @group layout
+/// @access public
+/// @since 1.2.0
+
 .sidebar-location-left {
 	.sidebar {
-		@extend %col-md-pull-#{$grid-number-columns*(1-(1/$number-columns))};
+		@extend %col-md-pull-#{$_content-width};
 
-		@include breakpoint(md) {
+		@include breakpoint( md ) {
 			// TODO: sunset in a future release
 			padding: 0;
 			padding-right: $sidebar-padding;
 		}
 	}
+
 	.sidebar-posts {
 		@extend %remove-template-narrow-sidebar;
 	}
 }
 
-/* .footbar
------------------------------------------------------------------ */
+// Footbar
+// -----------------------------------------------------------------
+
+/// The width a widget should take up, including the margin, in the footbar.
+/// First, width gets equally divided among widgets.
+/// Next, calculate the amount of margin you need to subtract from the width.
+/// You need to split the margin equally, but the first margin in every row
+/// will always be left out.
+/// So if there are 3 widgets in the footbar, you only need to account for margin on two,
+/// which makes the basic formula something like this: width - (margin * 2/3).
+/// @group layout
+/// @access private
+/// @since 1.0.0
+
+$_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( ( $number-widgets-footbar - 1 ) / $number-widgets-footbar );
+
+/// Controls styling for the footbar.
+/// @group layout
+/// @access public
+/// @since 1.0.0
 
 .footbar {
 	@extend %clearfix;
-	width: 100%;
-	padding-bottom: $footbar-padding-bottom;
+	background: $color-footbar-bg;
 	border: $border-footbar;
 	border-width: $border-width-footbar;
-	background: $color-footbar-bg;
+	padding-bottom: $footbar-padding-bottom;
+	width: 100%;
 }
+
+/// Controls styling for the footbar container and width of widgets inside.
+/// Often used to put a maximum width on the footbar without affecting the background.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
 .footbar-container {
 	@extend %container-styles;
 	background: $color-footbar-container-bg;
-	@include breakpoint(md) {
+
+	@include breakpoint( md ) {
 		padding: $grid-container-padding-large-screen;
 	}
-}
-.footbar-container .widget {
-	@extend %col-base;
-	@extend %col-float;
-	width: 100%;
 
-	@include breakpoint(md) {
-		// Bet you're really reconsidering overriding this width now!
-		// Don't worry, it's not so bad.
-		// First, width gets equally divided among widgets.
-		// Next, calculate the amount of margin you need to subtract from the width.
-		// You need to split the margin equally, but the first margin in every row will always be left out.
-		// So if there are 3 widgets in the footbar, you only need to account for margin on two:
-		// width - (margin * 2/3)
-		// See? Totally fine.
-		width: (100%/$number-widgets-footbar) - $margin-width * ((($number-widgets-footbar)-1)/$number-widgets-footbar);
-		float: left;
-		margin-left: $margin-width;
-		margin-top: 0;
-		padding: 0;
+	.widget {
+		width: 100%;
 
-		&:first-child,
-		&:nth-child(#{$number-widgets-footbar}n+1) {
-			margin-left: 0;
-			clear: left;
+		@include breakpoint( md ) {
+			float: left;
+			margin-left: $margin-width;
+			margin-top: 0;
+			padding: 0;
+			width: $_footbar-widget-width;
+
+			&:first-child,
+			&:nth-child(#{$number-widgets-footbar}n+1) {
+				clear: left;
+				margin-left: 0;
+			}
 		}
 	}
 }
 
+// Footer
+// -----------------------------------------------------------------
 
-
-/* footer
------------------------------------------------------------------ */
+/// Controls styling for the site footer - branding, address, and social links.
+/// @group layout
+/// @access public
+/// @since 1.0.0
 
 .site-footer {
+	@extend %font-size-secondary;
 	@extend %clearfix;
-	position: relative;
-	display: block;
-	clear: both;
-	width: 100%;
-	padding: $padding-site-footer;
 	background: $color-site-footer-bg;
-	font-family: $font-family-sans-serif;
-	font-size: $font-size-small;
-	line-height: $line-height-small;
+	clear: both;
 	color: $color-grayscale-8;
-}
-.site-footer h1,
-.site-footer h2,
-.site-footer h3,
-.site-footer h4,
-.site-footer h5,
-.site-footer h6 {
-	margin: 0 0 3px;
+	display: block;
 	font-family: $font-family-sans-serif;
-	font-size: $font-size-small;
-	line-height: $line-height-small;
-	color: $color-site-footer;
-}
-.site-footer a {
-	color: $color-site-footer-link;
-	&:hover {
-		color: $color-site-footer-link-hover;
-	}
-}
-.site-footer li {
-	margin: 0 0 5px;
-	line-height: 1.4;
-	&:last-child {
-		margin: 0;
-	}
-}
-.site-footer-info {
-	@extend %col-sm-half;
+	padding: $padding-site-footer;
+	position: relative;
+	width: 100%;
 
-	@include breakpoint(sm) {
-		padding: 0 0 10px 30px;
-		text-align:left;
+	a {
+		color: $color-site-footer-link;
+
+		&:hover {
+			color: $color-site-footer-link-hover;
+		}
 	}
-}
-.site-footer-links,
-.site-footer-social {
-	@extend %col-sm-quarter;
-	padding: 0 0 30px;
-	@include breakpoint(sm) {
-		padding-left: 30px;
+
+	li {
+		line-height: 1.4;
+		margin: 0 0 5px;
+
+		&:last-child {
+			margin: 0;
+		}
 	}
-}
-.site-footer-social {
-	text-align: center;
-	@include breakpoint(sm) {
-		text-align: left;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@extend %font-size-secondary;
+		color: $color-site-footer;
+		font-family: $font-family-sans-serif;
+		margin: 0 0 3px;
 	}
 }
 
+/// A helper placeholder for listing links in an inline style.
+/// @group layout
+/// @access private
+/// @since 1.0.0
 
-/* utility class for displaying lists of links inline. Use @extend */
-%u-list-inlineLinks {
-	/* These classes are using %u-list-inlineLinks. */
+%_u-list-inlineLinks {
 	display: inline-block;
-	padding: 0;
 	margin-right: 20px;
+	padding: 0;
+
 	&:last-child {
 		margin-right: 0;
 	}
 }
 
-/* Add master logo if specified by theme */
-.has-branding {
-	min-height: 140px;
-}
-.has-branding .site-footer-brand {
-	width: 112px;
-	margin: 6px auto 35px;
-	@include breakpoint(sm) {
-		position: absolute;
-		top: 40px;
-		left: 20px;
-	}
-}
-.site-footer-brand + .site-footer-content {
-	@include breakpoint(sm) {
-		margin: 0 0 0 112px;
-	}
-}
+/// Styles the social media links menu in the footer based on
+/// the content around it.
+/// @group layout
+/// @access public
+/// @since 1.0.0
 
-/* Add BUMC logo if specified by theme */
-.site-footer-bumc {
-	width: 96px;
-	margin: 6px auto 35px;
-
-	@include breakpoint(sm) {
-		margin:0;
-		position: absolute;
-		top: 40px;
-		left: 20px;
-	}
-}
-.site-footer-brand + .site-footer-bumc {
-	@include breakpoint(sm) {
-		position: absolute;
-		top: 48px;
-		left: 162px;
-	}
-}
-.site-footer-bumc + .site-footer-content {
-	@include breakpoint(sm) {
-		margin: 0 0 0 112px;
-	}
-}
-.site-footer-brand + .site-footer-bumc + .site-footer-content {
-	@include breakpoint(sm) {
-		margin: 0 0 0 234px;
-	}
-}
-
-/* Add disclaimer if specified by theme */
-.site-footer-disclaimer {
-	margin-bottom:20px;
-	text-align:center;
-
-	@include breakpoint(sm) {
-		margin-bottom:0;
-		position: absolute;
-	}
-}
-.has-branding .site-footer-disclaimer,
-.site-footer-bumc + .site-footer-disclaimer {
-
-	@include breakpoint(sm) {
-		position: absolute;
-		top: 48px;
-		left: 162px;
-	}
-}
-.site-footer-disclaimer + .site-footer-content {
-	@include breakpoint(sm) {
-		margin: 0 0 0 112px;
-	}
-}
-.site-footer-brand + .site-footer-disclaimer + .site-footer-content,
-.site-footer-bumc + .site-footer-disclaimer + .site-footer-content {
-	@include breakpoint(sm) {
-		margin: 0 0 0 234px;
-	}
-}
-.site-footer-brand + .site-footer-bumc + .site-footer-content {
-	@include breakpoint(sm) {
-		margin: 0 0 0 234px;
-	}
-}
-.site-footer-brand + .site-footer-bumc + .site-footer-disclaimer {
-	@include breakpoint(sm) {
-		left: 282px;
-	}
-}
-.site-footer-brand + .site-footer-bumc + .site-footer-disclaimer + .site-footer-content {
-	@include breakpoint(sm) {
-		margin: 0 0 0 344px;
-	}
-}
-
-
-/* Has only HTML info */
-.has-info .site-footer-info {
-	@extend %col-sm-full;
-}
-
-/* Has only general links */
-.has-links .site-footer-links {
-	@extend %col-sm-full;
-}
-.has-links .site-footer-links li {
-	@extend %u-list-inlineLinks;
-}
-
-/* Has general + social media links */
-.has-social .site-footer-social {
-	@extend %col-sm-full;
-}
-.has-social .site-footer-social li {
-	@extend %u-list-inlineLinks;
-}
-.has-links-social .site-footer-links,
-.has-links-social .site-footer-social {
+.site-footer-social {
 	@extend %col-sm-half;
-}
-.has-links-social .site-footer-links li,
-.has-links-social .site-footer-social li {
-	@extend %u-list-inlineLinks;
+	text-align: center;
+
+	@include breakpoint( sm ) {
+		float: right;
+		text-align: right;
+	}
+
+	.has-branding &,
+	.has-footer-info & {
+		@include breakpoint( sm ) {
+			text-align: left;
+		}
+	}
+
+	li {
+		@extend %_u-list-inlineLinks;
+	}
+
+	a {
+		@include transition( color 200ms ease-in-out 0s );
+		font-size: $font-size-icon;
+	}
+
+	[href*="dropbox.com"] {
+		@extend %icon-dropbox;
+	}
+
+	[href*="facebook.com"] {
+		@extend %icon-facebook;
+	}
+
+	[href*="flickr.com"] {
+		@extend %icon-flickr;
+	}
+
+	[href*="foursquare.com"] {
+		@extend %icon-foursquare;
+	}
+
+	[href*="github.com"] {
+		@extend %icon-github;
+	}
+
+	[href*="instagram.com"] {
+		@extend %icon-instagram;
+	}
+
+	[href*="kickstarter.com"] {
+		@extend %icon-kickstarter;
+	}
+
+	[href*="linkedin.com"] {
+		@extend %icon-linkedin;
+	}
+
+	[href*="pinterest.com"] {
+		@extend %icon-pinterest;
+	}
+
+	[href*="plus.google.com"] {
+		@extend %icon-googleplus;
+	}
+
+	[href*="getpocket.com"] {
+		@extend %icon-pocket;
+	}
+
+	[href*="reddit.com"] {
+		@extend %icon-reddit;
+	}
+
+	[href*="tumblr.com"] {
+		@extend %icon-tumblr;
+	}
+
+	[href*="twitter.com"] {
+		@extend %icon-twitter;
+	}
+
+	[href*="vimeo.com"] {
+		@extend %icon-vimeo;
+	}
+
+	[href*="vine.co"] {
+		@extend %icon-vine;
+	}
+
+	[href*="youtube.com"] {
+		@extend %icon-youtube;
+	}
 }
 
-/* Has info + general links */
-.has-info-links .site-footer-info {
-	@extend %col-sm-three-quarter;
-}
-.has-info-links .site-footer-links {
-	@extend %col-sm-quarter;
-}
-.has-info-links .site-footer-links li {
-	@extend %u-list-inlineLinks;
-}
-/* Has info + social media links */
-.has-info-social .site-footer-info {
-	@extend %col-sm-three-quarter;
-}
-.has-info-social .site-footer-social {
-	@extend %col-sm-quarter;
-}
-.has-info-social .site-footer-social li {
-	@extend %u-list-inlineLinks;
-}
+/// Styles the container which holds branding assets in the site footer.
+/// @group layout
+/// @access public
+/// @since 2.0.0
 
-/* Has all three */
-.has-info-links-social .site-footer-info {
+.site-footer-brand-assets {
 	@extend %col-sm-half;
+	text-align: center;
+
+	@include breakpoint( sm ) {
+		text-align: left;
+	}
+
+	.has-branding & {
+		@extend %col-md-two-third;
+	}
+
+	a {
+		display: block;
+		margin: 0 auto 30px;
+
+		@include breakpoint( xs ) {
+			display: inline-block;
+			height: 50px;
+			margin-right: 30px;
+			vertical-align: middle;
+		}
+
+		@include breakpoint( sm ) {
+			float: left;
+			text-align: left;
+		}
+	}
 }
-.has-info-links-social .site-footer-links,
-.has-info-links-social .site-footer-social {
-	@extend %col-sm-quarter;
+
+/// Styles the disclaimer, which shows in the site footer.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
+.disclaimer {
+	line-height: 50px;
 }
-// .has-info-links-social .site-footer-links li, Doesn't always look good.
-.has-info-links-social .site-footer-social li  {
-    @extend %u-list-inlineLinks;
+
+/// Styles the container which holds menus (footer links and social) in the site footer
+/// based on the content around it.
+/// @group layout
+/// @access public
+/// @since 2.0.0
+
+.site-footer-menus {
+	clear: both;
+
+	.has-footer-info & {
+		@extend %col-sm-half;
+		clear: none;
+
+		@include breakpoint( sm ) {
+			float: right;
+		}
+	}
+
+	.has-branding & {
+		@extend %col-sm-half;
+		@extend %col-md-third;
+		clear: none;
+
+		@include breakpoint( sm ) {
+			float: right;
+		}
+	}
+}
+
+/// Styles the container which holds footer links
+/// based on the content around it.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
+.site-footer-links {
+	@extend %col-sm-half;
+	margin-bottom: 30px;
+	text-align: center;
+
+	@include breakpoint( sm ) {
+		text-align: left;
+	}
+
+	li {
+		@extend %_u-list-inlineLinks;
+
+		.has-branding & {
+			display: block;
+		}
+	}
+}
+
+/// Styles the container which holds footer information
+/// based on the content around it.
+/// Note: this is slated to be controlled by the branding plugin
+/// in a future release.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
+.site-footer-info {
+	clear: both;
+	display: block;
+	margin-bottom: 30px;
+
+	@include breakpoint( sm ) {
+		padding-right: 30px;
+	}
+
+	.brand-masterplate + & {
+		@include breakpoint( sm ) {
+			clear: none;
+			float: left;
+			max-width: 60%;
+		}
+
+		@include breakpoint( md ) {
+			max-width: 75%;
+		}
+	}
+
+	.brand-bumclogo + & {
+		@include breakpoint( md ) {
+			clear: none;
+			float: left;
+			max-width: 50%;
+		}
+
+		@include breakpoint( lg ) {
+			max-width: 65%;
+		}
+	}
+
+	.disclaimer + & {
+		@include breakpoint( md ) {
+			clear: none;
+			float: left;
+			max-width: 33%;
+		}
+
+		@include breakpoint( lg ) {
+			max-width: 50%;
+		}
+	}
 }

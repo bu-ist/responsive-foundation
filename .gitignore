@@ -6,7 +6,3 @@ docs
 .grunt
 npm-debug.log
 bower_components
-.eslintignore
-.eslintrc
-.scss-lint.yml
-markdown.rb

@@ -1,203 +1,253 @@
-/* components
------------------------------------------------------------------ */
+// =================================================================
+// Utilities
+// =================================================================
 
-/* edit link */
+// components
+// -----------------------------------------------------------------
+
+/// Provides a link for clients to edit the page within the page content.
+/// @group wp-admin
+/// @access public
+/// @since 1.0.0
+
 .edit-link {
 	position: absolute;
-	top: 0;
 	right: 0;
+	top: 0;
 }
 
-/* back link */
+/// A placeholder to mimic the styles of the "Back" link on archive pages.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
 %back-link-styles {
-	/* These classes are using %back-link-styles. */
-	&:before {
-		content: $back-link-before;
+	&::before {
 		color: $color-back-link-before;
+		content: $back-link-before;
 	}
 }
+
+/// Controls the styles of the "Back" link on archive pages.
+/// Use this class to only style CSS with the back link. Use the placeholder
+/// to style anything that looks like a back link.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
 .back-link {
 	@extend %back-link-styles;
 }
 
-/* message */
-%message-styles {
-	/* These classes are using %message-styles. */
-	@include border-radius($border-radius-message);
-	padding: $padding-message;
-	border: $border-message;
-	border-width: $border-width-message;
-	border-left-color: $color-message-border-left;
+/// Controls card-like styles used throughout Foundation.
+/// By default, this controls single profile info styling in the sidebar,
+/// the metadata styling at the bottom of single posts, and the date summary.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
+%card-styles {
+	@extend %font-size-secondary;
+	@include border-radius( $border-radius-message );
 	background-color: $color-message-bg;
-	font-size: $font-size-message;
-}
-.message {
-	@extend %message-styles;
+	border: $border-message;
+	border-left-color: $color-message-border-left;
+	border-width: $border-width-message;
+	padding: $padding-message;
 }
 
-/* .responsive-video */
+/// Controls the styling for messages.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
+.message {
+	@extend %card-styles;
+}
+
+/// A placeholder for responsive video styles.
+/// Use this placeholder if you need something to support responsive video,
+/// but you need a separate, unique class from responsive-video.
+/// You may also use this to enable responsive behavior on other types of
+/// embedded media that don't have a video aspect ratio by extending this
+/// to a unique class, and adjusting the padding-bottom value on that class
+/// to match the aspect ratio you're looking for.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
 %responsive-video-styles {
-	/* These classes are using %responsive-video-styles. */
-	position: relative;
-	padding-top: 45px;
-	padding-bottom: 56.25%;
 	margin-bottom: 14px;
+	padding-bottom: 56.25%;
+	padding-top: 45px;
+	position: relative;
+
 	div,
 	embed,
 	object,
 	iframe {
+		height: 100% !important; // Required to override inline styles on embeds
+		left: 0;
 		position: absolute;
 		top: 0;
-		left: 0;
-		width: 100% !important;
-		height: 100% !important;
+		width: 100% !important; // Required to override inline styles on embeds
 	}
 }
+
+/// The default class which enables responsive video.
+/// Wrap this around any video or iframe which is not supported by oEmbed,
+/// or if you are manually putting in HTML for a video for some reason.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
 .responsive-video {
 	@extend %responsive-video-styles;
 }
 
+/// WordPress accessibility classes for screen readers.
+/// Not really something you should be overriding.
+/// @group utilities
+/// @access private
+/// @since 1.0.0
 
-/* collapsibles (class name requires underscore due to dependency on front-end library) */
-h1.bu_collapsible,
-h2.bu_collapsible,
-h3.bu_collapsible,
-h4.bu_collapsible,
-h5.bu_collapsible,
-h6.bu_collapsible {
-	margin-bottom: 0;
-}
-
-/* WordPress accessibility classes */
-/* Hide visually but not from screen readers */
 .screen-reader-text,
 .screen-reader-text span,
 .ui-helper-hidden-accessible {
-  position: absolute;
-  margin: -1px;
-  padding: 0;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  border: 0;
+	@extend %visuallyhidden;
 }
 
-/* WordPress inline align classes (use WP standard class names) */
+// WordPress content area markup
+// -----------------------------------------------------------------
 
-// A placeholder just for align. Not meant to be extended elsewhere.
-%align-styles {
-	max-width: 100%;
+/// A placeholder just for align. Not meant to be extended elsewhere.
+/// @group utilities
+/// @access private
+/// @since 1.2.0
+
+%_align-styles {
 	margin-bottom: $margin-floated-content;
-	p {
-		margin-bottom: 0;
-	}
-	img {
-		margin-bottom: $margin-floated-content / 2;
-	}
-	@include breakpoint(xs) {
+	max-width: 100%;
+
+	@include breakpoint( xs ) {
 		max-width: 50%;
 	}
 }
+
+/// The class WordPress generates when you align something right in the
+/// visual editor.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
 .alignright {
-	@extend %align-styles;
-	@include breakpoint(xs) {
+	@extend %_align-styles;
+
+	@include breakpoint( xs ) {
 		float: right;
-		margin: 0.0 0 $margin-floated-content $margin-floated-content;
+		margin: 0 0 $margin-floated-content $margin-floated-content;
 	}
 }
+
+/// The class WordPress generates when you align something left in the
+/// visual editor.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
 .alignleft {
-	@extend %align-styles;
-	@include breakpoint(xs) {
+	@extend %_align-styles;
+
+	@include breakpoint( xs ) {
 		float: left;
 		margin: 0 $margin-floated-content $margin-floated-content 0;
 	}
 }
+
+/// The class WordPress generates when you center something in the
+/// visual editor.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
 .aligncenter {
 	display: block;
 	margin: 0 auto $margin-floated-content;
 }
 
-.wp-caption,
+/// The class WordPress generates for caption text on images in the visual editor.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
 .wp-caption-text {
-	font-family: $font-family-caption;
-	font-size: $font-size-caption;
-	line-height: 1.4;
-	color: $color-caption;
-}
-.wp-caption p {
+	@extend %font-size-minimum;
 	clear: both;
-}
-.wp-caption img {
-	display: block;
-	margin-top: 0;
-	margin-bottom: 10px;
+	color: $color-caption;
+	font-family: $font-family-caption;
+	line-height: 1.4;
 }
 
-/* slideshows */
-.bu-slideshow-container {
-	z-index: 1;
-	margin-bottom: 30px;
-	text-align: center;
-}
+/// A placeholder which controls responsive styling for tables.
+/// You may want to extend this if you can't use the responsive-table class
+/// for some reason, or if you need to make significant overrides and want to
+/// leave the base styles intact.
+/// You must wrap the class this uses around a table for it to work. It will
+/// not work if you just put it on the table.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
 
-// Must be a class that wraps around a table to work properly.
 %resposive-table-styles {
-	/* These classes are using %resposive-table-styles. */
 	position: relative;
+
+	@include breakpoint( "max-width: #{$container_md}" ) {
+		margin: 35px 0;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		overflow-x: auto;
+		overflow-y: hidden;
+		width: 100%;
+
+		// Tighten up spacing
+		table {
+			margin: 0;
+			table-layout: auto;
+
+			td {
+				border: 1px solid $border-color-table;
+				white-space: nowrap; // Ensure the content doesn't wrap
+			}
+		}
+	}
+
 	table {
 		border: 1px solid $border-color-table;
+
 		td,
 		th {
 			border: 1px solid $border-color-table;
 		}
 	}
-	@include breakpoint("max-width: #{$container_MD}") {
-		overflow-x: auto;
-		overflow-y: hidden;
-		-webkit-overflow-scrolling: touch;
-		width: 100%;
-		margin: 35px 0;
-		-ms-overflow-style: -ms-autohiding-scrollbar;
-		// Tighten up spacing
-		table {
-			margin: 0;
-			table-layout: auto;
-			// Ensure the content doesn't wrap
-			td {
-				border: 1px solid $border-color-table;
-				white-space: nowrap;
-			}
-		}
-	}
 }
+
+/// A class for responsive styling on tables.
+/// This class will make the table scrollable below the medium breakpoint.
+/// You must wrap the table in a div with this class. It will not work if you
+/// put it directly on the table.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
 
 .responsive-table {
 	@extend %resposive-table-styles;
 }
-// Special overrides for the bordered tables
-.table-bordered {
-	border: 0;
-	// Nuke the appropriate borders so that the parent can handle them
-	th,
-	td {
-		&:first-child {
-			border-left: 0;
-		}
-		&:last-child {
-			border-right: 0;
-		}
-	}
-	// Only nuke the last row's bottom-border in `tbody` and `tfoot` since
-	// chances are there will be only one `tr` in a `thead` and that would
-	// remove the border altogether.
-	tbody,
-	tfoot {
-		tr:last-child {
-			th,
-			td {
-				border-bottom: 0;
-			}
-		}
-	}
+
+/// For code within the WordPress content area.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
+.content p code {
+	font-size: 90%;
 }

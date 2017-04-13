@@ -1,120 +1,264 @@
-/* comments
------------------------------------------------------------------ */
+// =================================================================
+// Comments
+// =================================================================
+
+/// Controls styling for the comments section on posts.
+/// @group comments
+/// @access public
+/// @since 1.0.0
 
 .comments-area {
 	color: $color-comments;
+
+	// Remove defaults for all OL on this page
+	ol {
+		list-style: none;
+		//margin: 0;
+		padding: 0;
+	}
 }
-// Remove defaults for all OL on this page
-.comments-area ol {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
+
+/// Controls styling for comment threads on posts.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
 .comments-list {
-	border-bottom: 1px solid #dddddd;
+	margin-left: -10px;
+	margin-right: -10px;
+
+	@include breakpoint( sm ) {
+		margin: 0;
+	}
 }
-// Nested padding
-.comments-list li li {
-	padding: $comment-padding;
-}
+
+/// Controls styling for the comment container.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
 .comment {
+	margin-left: $comment-reply-depth-mobile;
+
+	@include breakpoint( sm ) {
+		margin-left: $comment-reply-depth;
+	}
+
+	&.depth-1 {
+		margin: $comment-margin-mobile 0;
+		padding: 0;
+
+		@include breakpoint( sm ) {
+			margin: $comment-margin 0;
+		}
+	}
+}
+
+/// Controls styling for individual comments on posts.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
+.comment-body {
+	@extend %font-size-secondary;
 	border: $border-comment;
 	border-width: $border-width-comment;
-}
-.comment-body {
-	position: relative;
-	margin: $comment-margin;
 	font-family: $font-family-comment;
-	font-size: $font-size-smaller;
+	padding: $comment-padding-mobile;
+	position: relative;
+
+	@include breakpoint( sm ) {
+		margin: $comment-reply-margin 0;
+		padding: $comment-padding;
+	}
+
+	.children & {
+		@media screen and ( max-width: $sm - 1 ) {
+			border-top: 0; // Prevents borders from stacking on child comments
+		}
+	}
 }
+
+/// Controls styling for the comment reply link.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
 .comment-reply-link {
-	font-size: $font-size-smallest;
+	@extend %font-size-minimum;
 	color: $color-comment-reply;
 }
+
+/// Controls styling for the comment author.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
 .comment-author {
-	color: $color-comment-author;
-}
-// TODO: probably shouldn't be outputting gravatar markup and hiding here...
-.comment-author img {
-	display: none;
-}
-.comment-author .fn {
-	font-size: $font-size-small;
+	@extend %font-size-5;
 	color: $color-comment-author-name;
 }
-// TODO: change markup, then style
-.comment-metadata time {
-	display: none;
+
+/// Controls styling for the "says" text after comment author.
+/// @group comments
+/// @access public
+/// @since 2.0.0
+
+.says {
+	color: $color-comment-author-says;
 }
-.comment-content p {
-	margin: 12px 0;
+
+/// Controls styling for the date and time of comments.
+/// This was hidden in the past, but in emergency situations, comments
+/// are often used as a means of communication, both officially and unofficially.
+/// Readers need to know how recent the last reliable update was should this happen.
+/// Disable or hide only with great caution, only using the `%visually-hidden` placeholder.
+/// @group comments
+/// @access public
+/// @since 2.0.0
+
+.comment-metadata {
+	@extend %font-size-minimum;
+	position: absolute;
+	right: $comment-padding-mobile;
+	top: $comment-padding-mobile;
+
+	@include breakpoint( sm ) {
+		right: $comment-padding;
+		top: $comment-padding;
+	}
 }
-.comment-content p:first-child {
-	margin-top: 1px;
+
+/// Styles the container which holds the comment content.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
+.comment-content {
+	margin: 0.5em 0;
+
+	p:last-child {
+		margin-bottom: 0;
+	}
 }
-/* comment form */
+
+/// Styles the comment form container.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
 .comment-respond {
-	@include border-radius(5px);
-	position: relative;
-	padding: 20px;
-	margin: 15px 0 20px;
+	@include border-radius( 5px );
+	background: $color-comment-form-bg;
 	border: $border-comment-form;
 	border-width: $border-width-comment-form;
-	background: $color-comment-form-bg;
+	margin: 15px 0 20px;
+	padding: 20px;
+	position: relative;
+
+	fieldset {
+		border: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	p {
+		margin: 0 0 20px;
+	}
+
+	label {
+		display: block;
+		margin: 0 0 2px;
+
+		@include breakpoint( sm ) {
+			float: left;
+			margin: $form-label-margin;
+			padding-right: 10px;
+			width: 25%;
+		}
+	}
 }
+
+/// Styles the comment form title.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
 .comment-respond-title {
-	margin: 0 0 20px;
-	font-size: $font-size-medium;
+	@extend %font-size-4;
 }
-.comment-respond fieldset {
-	padding: 0;
-	margin: 0;
-	border: 0;
-}
-.comment-respond p {
-	margin: 0 0 20px;
-}
+
+/// Styles the container around the comment form submit button.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
 .comment-form-submit {
 	margin: 15px 0 0;
 }
+
+/// Styles "view guidelines" and other helper text in the comment form.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
 .form-tip {
-	font-size: $font-size-smallest;
-	@include breakpoint(sm) {
+	@extend %font-size-minimum;
+	color: $color-grayscale-8;
+
+	@include breakpoint( sm ) {
 		display: block;
 	}
-}
-.form-tip,
-.form-tip a {
-	color: #aaaaaa;
-}
-.comment-respond label {
-	display: block;
-	margin: 0 0 2px;
-	@include breakpoint(sm) {
-		float: left;
-		width: 25%;
-		padding-right: 10px;
-		margin: $form-label-margin;
+
+	a {
+		color: inherit;
 	}
 }
-.comment-form .button {
-	@include breakpoint(sm) {
+
+/// Styles the comment text area in the comments form.
+/// @group comments
+/// @access public
+/// @since 2.0.0
+
+#comment {
+	@include transition( height 50ms ease-in-out 0s );
+	height: 6em;
+	width: 100%;
+
+	@include breakpoint( sm ) {
+		width: 75%;
+	}
+
+	&:focus,
+	&:valid {
+		@include transition( height 50ms ease-in-out 0s );
+		height: 12em;
+	}
+}
+
+/// Styles the comment form submit button.
+/// @group comments
+/// @access public
+/// @since 2.0.0
+
+.comment-submit {
+	@include breakpoint( sm ) {
 		margin-left: 25%;
 	}
 }
-.comment-form textarea {
-	@include transition(height 5ms ease-in-out 0s); // TODO: expand height on focus, but don't shrink if it contains content
-	width: 100%;
-	height: 6em;
-	@include breakpoint(sm) {
-		width: 75%;
-	}
-}
-// TODO: The link below this is hidden with a style attribute in markup. Intentional?
+
+/// Styles the cancel comment reply link.
+/// WordPress hides this on the comment form with an inline attribute when
+/// the comment is not a reply to another comment. To test this, hit the "Reply"
+/// link on any comment. You should be be able to see it.
+/// @group comments
+/// @access public
+/// @since 2.0.0
+
 .cancel-comment-reply {
-	position: absolute;
-	top: 20px;
-	right: 20px;
+	@extend %font-size-minimum;
 	display: inline-block;
-	font-size: $font-size-smallest;
+	position: absolute;
+	right: 20px;
+	top: 20px;
 }

@@ -1,77 +1,139 @@
-/* Branding
------------------------------------------------------------------ */
+// =================================================================
+// Branding
+// =================================================================
 
-%vertical-center-child {
+/// A placeholder for vertically centering children in the branding partial.
+/// @group branding
+/// @access private
+/// @since 1.4.0
+
+%_vertical-center-child {
 	@include vertical-center-child;
 }
-%vertical-center {
+
+/// A placeholder for vertical centering in the branding partial.
+/// @group branding
+/// @access private
+/// @since 1.4.0
+
+%_vertical-center {
 	@include vertical-center;
 }
 
+/// A placeholder for ensuring background images print.
+/// @group branding
+/// @access private
+/// @since 1.4.0
+
+%_brand-print {
+	@media print {
+		-webkit-print-color-adjust: exact;
+	}
+}
+
+/// Controls styling for elements in the branding area, including the logo and
+/// site description.
+/// @group branding
+/// @access public
+/// @since 1.0.0
+
 .brand {
-	@extend %vertical-center-child;
-	overflow: hidden;
-	height: $height-brand;
-	padding: 0 0 0 20px;
+	@extend %_vertical-center-child;
 	font-family: $font-family-brand;
 	font-size: 18px;
+	height: $height-brand;
 	line-height: 1.3;
+	padding: 0 20px;
 
 	> .has-parent {
-		font-size:16px;
+		font-size: 16px;
 	}
+
 	> .brand-unbranded {
 		font-size: inherit;
 	}
 }
+
+/// Controls styling for the logo container.
+/// @group branding
+/// @access public
+/// @since 1.0.0
+
 .brand-container {
-	@extend %vertical-center;
+	@extend %_vertical-center;
+	color: $color-brand;
 	display: block;
 	float: left;
 	font-weight: 400;
-	color: $color-brand;
 	text-decoration: none;
 
 	&:visited {
 		color: $color-brand;
 	}
 }
-%brand-strong {
+
+/// Resets the font-weight to the appropriate weight for branding.
+/// @group branding
+/// @access private
+/// @since 1.0.0
+
+%_brand-strong {
 	font-weight: 600;
 }
-.brand-part-logotype {
-	@extend %brand-strong;
-}
-.brand-site-description {
-	@extend %vertical-center;
-	display: none;
-	@include breakpoint(md) {
-		display: block;
-		font-family: $font-family-base;
-		font-size: $font-size-small;
-		color: $color-grayscale-9;
-	}
-}
 
-/* Sub-brand signature */
+/// Controls styling for the signature brand style.
+/// @group branding
+/// @access public
+/// @since 1.4.0
+
 .brand-signature {
-	padding: 10px 30px 9px 56px;
+	@extend %_brand-print;
+	background: url( $image-subbrand ) no-repeat 0 49%;
 	min-height: 35px;
-	background: url($image-subbrand) no-repeat 0 49%;
+	padding: 10px 30px 9px 56px;
 
 	@include retina {
-		background-image: url($image-subbrand-retina);
+		background-image: url( $image-subbrand-retina );
 		background-size: 49px 35px;
 	}
 
 	&.has-parent {
-		padding-top: 0;
-		padding-bottom: 0;
 		background-position: 0 3px;
+		padding-bottom: 0;
+		padding-top: 0;
 	}
 }
 
-/* Sponsored branding */
+/// Controls styling for the unbranded brand style.
+/// @group branding
+/// @access public
+/// @since 1.4.0
+
+.brand-unbranded {
+	@extend %_brand-strong;
+	color: $color-unbranded;
+	font-family: $font-family-brand-unbranded;
+	font-size: 20px;
+
+	&:visited {
+		color: $color-unbranded;
+	}
+}
+
+/// Controls styling for the logotype brand part.
+/// @group branding
+/// @access public
+/// @since 1.4.0
+
+.brand-part-logotype {
+	@extend %_brand-strong;
+}
+
+/// Controls styling for the site name brand part.
+/// @group branding
+/// @access public
+/// @since 1.4.0
+
 .brand-part-sitename {
 	display: block;
 
@@ -79,52 +141,81 @@
 		display: inline;
 	}
 }
-.brand-unbranded {
-	@extend %brand-strong;
-	font-family: $font-family-brand-unbranded;
-	font-size: 20px;
-	color: $color-unbranded;
 
-	&:visited {
-		color: $color-unbranded;
-	}
-}
+/// Controls styling for the parent entity brand part.
+/// @group branding
+/// @access public
+/// @since 1.4.0
+
 .brand-part-parent {
-	@extend %brand-strong;
+	@extend %_brand-strong;
 
 	.brand-part-logotype + & {
 		font-weight: 400;
 	}
 }
+
+/// Controls styling for the subparent entity brand part.
+/// @group branding
+/// @access public
+/// @since 1.4.0
+
 .brand-part-subparent {
 	display: block;
 }
 
+/// Controls styling for the site description.
+/// @group branding
+/// @access public
+/// @since 1.4.0
 
-/* Master logo in footer */
+.brand-site-description {
+	@extend %font-size-secondary;
+	@extend %_vertical-center;
+	display: none;
+
+	@include breakpoint( md ) {
+		color: $color-grayscale-9;
+		display: block;
+		font-family: $font-family-base; // TODO: inherits whitney from brand if you take away
+	}
+}
+
+
+/// Controls styling for the masterplate.
+/// @group branding
+/// @access public
+/// @since 1.0.0
+
 .brand-masterplate {
+	@extend %_brand-print;
 	@extend %hide-text;
+	background: url( $image-masterplate ) no-repeat 0 0;
 	display: block;
-	width: 112px;
 	height: 50px;
-	background: url($image-masterplate) no-repeat 0 0;
+	width: 112px;
 
 	@include retina {
-		background-image: url($image-masterplate-retina);
+		background-image: url( $image-masterplate-retina );
 		background-size: 112px 50px;
 	}
 }
 
-/* BUMC logo in footer */
+/// Controls styling for the BUMC logo.
+/// @group branding
+/// @access public
+/// @since 1.0.0
+
 .brand-bumclogo {
+	@extend %_brand-print;
 	@extend %hide-text;
+	background: url( $image-bumclogo ) no-repeat 0 0;
 	display: block;
-	background: url($image-bumclogo) no-repeat 0 0;
-	width: 96px;
 	height: 40px;
+	width: 96px;
 
 	@include retina {
-		background-image: url($image-bumclogo-retina);
+		background-image: url( $image-bumclogo-retina );
 		background-size: 96px 40px;
 	}
 }

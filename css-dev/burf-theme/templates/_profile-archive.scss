@@ -1,0 +1,8 @@
+// -----------------------------------------------------------------
+// Profile Listing and Archive Templates
+// -----------------------------------------------------------------
+
+.page-template-profiles,
+.post-type-archive-profile {
+	@extend %template-narrow;
+}

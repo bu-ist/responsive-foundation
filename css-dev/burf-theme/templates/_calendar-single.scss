@@ -1,0 +1,568 @@
+// -----------------------------------------------------------------
+// Calendar Single Event Template
+// -----------------------------------------------------------------
+
+// Does not have a sidebar.
+.single-calendar {
+	@extend %template-narrow;
+
+	.content-area {
+		float: none;
+		margin: 0 auto;
+	}
+}
+
+/// Handles styling for the container around start and end times on
+/// a single calendar event.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-schedule {
+	@extend %card-styles;
+	@extend %col-sm-third;
+	margin: 0 0 20px;
+
+	@include breakpoint( sm ) {
+		float: right;
+		margin-left: $grid-margin-width#{"%"};
+	}
+}
+
+/// Handles styling for the list of start and end times on
+/// a single calendar event.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-schedule-list {
+	margin: 0;
+	padding: 0;
+}
+
+/// Handles styling for list items in the schedule of
+/// a single calendar event. Use if you need to add something to the
+/// calendar schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+%single-event-schedule-list-item {
+	list-style: none;
+	margin-top: 10px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+/// Controls whether or not to make the event time into a sentence.
+/// By default, this is visually hidden so screen readers still read
+/// it as a sentence, but it is displayed as list information.
+/// You can override this with `@extend %remove-visually-hidden`.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.event-time-make-sentence {
+	@extend %visuallyhidden;
+}
+
+/// Handles styling for start time in the schedule of
+/// a single calendar event.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-schedule-start {
+	@extend %single-event-schedule-list-item;
+}
+
+/// Handles styling for end time in the schedule of
+/// a single calendar event.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-schedule-end {
+	@extend %single-event-schedule-list-item;
+}
+
+/// Handles styling for all day events in the schedule of
+/// a single calendar event.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-schedule-allday {
+	@extend %single-event-schedule-list-item;
+}
+
+/// Handles styling for all single calendar labels.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+%single-event-label {
+	color: $color-single-event-label;
+	display: block;
+	font-family: $font-family-single-event-label;
+	font-weight: $font-weight-calendar-label;
+	text-transform: uppercase;
+}
+
+/// Handles styling for labels in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for times in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-time {
+	color: $color-grayscale-0;
+	display: block;
+	font-weight: bold;
+}
+
+/// Handles styling for the event description in the single calendar
+/// event template.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-description {
+	margin: $font-margin-base;
+}
+
+/// Handles styling for additional details in the single calendar
+/// event template.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-additional-details {
+	margin: 0 0 20px;
+}
+
+/// Handles styling for additional details information in the
+/// single calendar event template.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+%single-event-info {
+	margin: 0 0 20px;
+}
+
+/// Handles styling for the speakers label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-speakers-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for speaker information in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-speakers-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the audience label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-audience-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for audience information in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-audience-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the departments label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-departments-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for department information in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-departments-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the location label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-location-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for location information in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-location-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the building location label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-location-building-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for building location information in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-location-building-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the room location label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-location-room-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for room location information in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-location-room-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the multiple fees label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fees-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for multiple fee information in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fees-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the a single fee label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for a single fee information in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the general fee label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-general-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for general fee information in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-general-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the public fee label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-public-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for public fee information in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-public-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the staff fee label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-staff-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for staff fee information in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-staff-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the student fee label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-student-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for student fee information in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-student-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the BU student fee label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-bu-student-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for BU student fee information in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-bu-student-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the senior fee label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-senior-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for senior fee information in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-fee-senior-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the deadlines label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-deadline-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for deadline information in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-deadline-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the registration label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-registration-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for registration information in the single calendar
+/// event schedule. If you set color on this class, you may wish to add
+/// `color: inherit;` to `.single-event-registration-link`, which controls
+/// the link style for this type of information.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-registration-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the contact organization label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-contact-org-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for contact organization information in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-contact-org-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the contact name label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-contact-name-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for contact name information in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-contact-name-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the contact email label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-contact-email-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for contact email information in the single calendar
+/// event schedule. If you set color on this class, you may wish to add
+/// `color: inherit;` to `.single-event-contact-email-link`, which controls
+/// the link style for this type of information.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-contact-email-info {
+	@extend %single-event-info;
+}
+
+/// Handles styling for the contact phone label in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-contact-phone-label {
+	@extend %single-event-label;
+}
+
+/// Handles styling for contact phone information in the single calendar
+/// event schedule.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.single-event-contact-phone-info {
+	@extend %single-event-info;
+}

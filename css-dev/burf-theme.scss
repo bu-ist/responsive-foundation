@@ -1,5 +1,6 @@
-// theme-specific elements
-// -----------------------------------------------------------------
+// =================================================================
+// Styling for the WordPress theme framework
+// =================================================================
 
 // variables
 @import 'burf-theme/variables';
@@ -11,7 +12,22 @@
 @import 'burf-theme/branding';
 
 // icons
-@import 'burf-theme/icons';
+@import 'burf-theme/icons/base'; // Required
+	@import 'burf-theme/icons/social'; // Required
+	@import 'burf-theme/icons/actions'; // Required
+	@import 'burf-theme/icons/arrows';
+	@import 'burf-theme/icons/charts';
+	@import 'burf-theme/icons/communication';
+	@import 'burf-theme/icons/documents';
+	@import 'burf-theme/icons/ecommerce';
+	@import 'burf-theme/icons/editing';
+	@import 'burf-theme/icons/location';
+	@import 'burf-theme/icons/media';
+	@import 'burf-theme/icons/objects';
+	@import 'burf-theme/icons/status';
+	@import 'burf-theme/icons/technology';
+	@import 'burf-theme/icons/time';
+	@import 'burf-theme/icons/transportation';
 
 // navigation
 @import 'burf-theme/navigation';
@@ -22,11 +38,17 @@
 // comments
 @import 'burf-theme/comments';
 
+// templates
+@import 'burf-theme/templates/base';
+	@import 'burf-theme/templates/archive'; // News and archive
+	@import 'burf-theme/templates/single'; // Single post
+	@import 'burf-theme/templates/calendar-archive'; // Calendar listing
+	@import 'burf-theme/templates/calendar-single'; // Calendar event
+	@import 'burf-theme/templates/profile-archive'; // Profiles listing
+	@import 'burf-theme/templates/profile-single'; // Single profile
+
 // widgets
 @import 'burf-theme/widgets';
-
-// templates
-@import 'burf-theme/templates';
 
 // plugins
 @import 'burf-theme/plugins';
