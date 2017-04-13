@@ -70,6 +70,7 @@ $min-size-headings: $font-size-base;
 /// @since 2.0.0
 
 $max-size-headings: 55px;
+$max-size-headings-mobile: 36px;
 
 /// The minimum line height ratio for headings to use. Do not use any units with
 /// this value. This value directly affects the `<h1>` tag and indirectly affects
@@ -170,14 +171,15 @@ $heading-growth-rate: 3.5;
 
 $font-styles: (
 	secondary: (
-		font-size-desktop: 16px,
-		line-height: $line-height-base,
-		rabbits-go: hop
+	  	font-size-mobile: 12px,
+	  	font-size-desktop: 16px,
+		line-height: 1,
 	),
 	minimum: (
+    	font-size-mobile: 8px,
 		font-size-desktop: 13px,
-		line-height: $min-line-height
-	)
+		line-height: 1
+	),
 );
 
 /// The multiplier needed to calculate the scale between minimum and maximum
@@ -188,6 +190,7 @@ $font-styles: (
 /// @since 2.0.0
 
 $_heading-size-scale: calc-scale( $min-size-headings, $max-size-headings, $_depth-headings, $heading-growth-rate );
+$_heading-size-scale-mobile: calc-scale( $min-size-headings, $max-size-headings-mobile, $_depth-headings, $heading-growth-rate );
 
 /// The multiplier needed to calculate the scale between minimum and maximum
 /// line heights on headings. This value is dependent on the heading minimum, maximum,
@@ -212,16 +215,19 @@ $_h: $_depth-headings;
 // @since 2.0.0
 
 @while $_h >= 0 {
-	$font-style: ();
+	$font-style: ( );
 	$size: null;
+	$size-mobile: null;
 	$lh: null;
 	$name: null;
 	$heading-name: $_depth-headings - $_h;
 
 	@if $_h == 0 {
 		$size: $min-size-headings / $font-size-base + em;
+		$size-mobile: $min-size-headings / $font-size-base + em;
 	} @else {
 		$size: calc-size( $_h + 1, $heading-growth-rate, $_heading-size-scale, $min-size-headings ) + em;
+		$size-mobile: calc-size( $_h +1, $heading-growth-rate, $_heading-size-scale-mobile, $min-size-headings ) + em ;
 	}
 
 	@if $_h == $_depth-headings {
@@ -234,6 +240,7 @@ $_h: $_depth-headings;
 
 	$font-style: (
 		#{$name}: (
+			font-size-mobile: $size-mobile,
 			font-size-desktop: $size,
 			line-height: $lh
 		)
@@ -250,7 +257,7 @@ $_h: $_depth-headings;
 // @access private
 // @since 2.0.0
 
-@if variable-exists(font-styles-theme) {
+@if variable-exists( font-styles-theme ) {
 	$font-styles: map_merge( $font-styles, $font-styles-theme );
 }
 
@@ -263,9 +270,14 @@ $_h: $_depth-headings;
 @each $style, $settings in $font-styles {
 	.font-size-#{$style},
 	%font-size-#{$style} {
-		font-size: map-get( $settings, font-size-desktop );
-		line-height: map-get( $settings, line-height );;
-	}
+		font-size: map-get( $settings, font-size-mobile );
+		line-height: map-get( $settings, line-height );
+
+		@include breakpoint( xs ) {
+			font-size: map-get( $settings, font-size-desktop );
+			line-height: map-get( $settings, line-height );
+		}
+  	}
 }
 
 /// Controls base styles for all heading tags.
@@ -276,8 +288,8 @@ $_h: $_depth-headings;
 %heading-base {
 	color: $color-heading;
 	font-family: $font-family-heading;
+	margin-bottom: 0.6em;
 	margin-top: 1em;
-	margin-bottom: .6em;
 
 	&:first-child {
 		margin-top: 0;
