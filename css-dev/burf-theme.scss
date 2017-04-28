@@ -13,7 +13,7 @@
 @import 'burf-theme/branding';
 
 // navigation
-@import 'burf-theme/navigation';
+@import 'burf-theme/layout/navigation';
 
 // utilities
 @import 'burf-theme/utilities';
@@ -31,7 +31,7 @@
 	@import 'burf-theme/templates/profile-single'; // Single profile
 
 // widgets
-@import 'burf-theme/widgets';
+@import 'burf-theme/widgets/widgets';
 
 // plugins
 @import 'burf-theme/plugins';
