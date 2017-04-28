@@ -110,14 +110,9 @@ $z-index-10:                                1000;
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
 
-$font-family-base:                          "TiemposText", Georgia, serif !default;
 $font-family-sans-serif:                     "Benton", Helvetica, sans-serif !default;
 $font-family-monospace:                     Consolas, "Liberation Mono", Courier, monospace !default;
 $font-family-icons:                     	 "bu-default-icons" !default;
-
-$font-size-base:                            18px !default;
-
-$line-height-base:                          1.6 !default;
 
 $font-margin-base:                          0 0 1.5em 0 !default;
 
@@ -159,5 +154,3 @@ $color-grayscale-f:                        #fff !default;
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
-
-$color-base:                               $color-grayscale-5 !default;
