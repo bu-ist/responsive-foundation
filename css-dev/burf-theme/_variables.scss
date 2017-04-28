@@ -53,15 +53,6 @@ $font-family-sans-serif:                     "Benton", "Helvetica", sans-serif !
 
 $font-family-brand:                         "Whitney SSm A", "Whitney SSm B", $font-family-sans-serif !default;
 
-/// The color to use for icons across the site.
-/// By default, this will inherit the color of the text in the container the icon lives in.
-/// Setting this will keep the color of the icons consistent everywhere.
-/// @group global
-/// @access public
-/// @since 1.0.0
-
-$color-icons:										 unset;
-
 // Grid
 // -----------------------------------------------------------------
 

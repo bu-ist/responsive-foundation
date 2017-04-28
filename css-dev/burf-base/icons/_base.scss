@@ -15,6 +15,15 @@
 $font-family-icons:                     	 "bu-default-icons" !default;
 $font-size-icon: 21px !default;
 
+/// The color to use for icons across the site.
+/// By default, this will inherit the color of the text in the container the icon lives in.
+/// Setting this will keep the color of the icons consistent everywhere.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
+$color-icons:										 unset;
+
 /// Provides base icon styles normalized across browsers and optimized
 /// for accessibility.
 /// Use this placeholder if you are loading your own font library
