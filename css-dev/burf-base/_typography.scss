@@ -2,6 +2,34 @@
 // Typography
 // =================================================================
 
+$font-family-heading:                       $font-family-sans-serif !default;
+$color-heading:                            $color-grayscale-0 !default;
+$color-heading-small:                      $color-grayscale-9 !default;
+
+$color-link:                               #0f69d7 !default;
+$color-link-visited:                       #7337af !default;
+$color-link-active:                        $color-grayscale-0 !default;
+
+$font-family-button:                        $font-family-sans-serif !default;
+$font-size-button:                          inherit !default;
+$color-button-bg:                          $color-grayscale-e !default;
+$color-button-text:                        $color-grayscale-4 !default;
+$color-button-primary-bg:                  #0078e7 !default;
+$color-button-primary-text:                $color-grayscale-f !default;
+
+$font-padding-code:                         0.2em 0.4em !default;
+$font-margin-code:                          30px 0 !default;
+$color-code:                               $color-grayscale-7 !default;
+$color-code-bg:                            $color-grayscale-f5 !default;
+
+$font-margin-blockquote:                    1em 40px !default;
+
+$font-margin-list:                          $font-margin-base !default;
+$font-padding-list:                         0 0 0 40px !default;
+
+$font-margin-dd:                            0 0 0 40px !default;
+
+
 // Links
 // -----------------------------------------------------------------
 
