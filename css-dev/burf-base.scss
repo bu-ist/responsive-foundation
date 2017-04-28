@@ -2,24 +2,18 @@
 // Basic styling and resets which do not depend on WordPress
 // =================================================================
 
-// resets
+// Dependencies
 @import "../bower_components/normalize-css/normalize";
 @import "../bower_components/mathsass/dist/math";
 
-// variables
+// Utilities
 @import 'burf-base/config';
-
-// mixins
 @import 'burf-base/mixins';
-
-// fonts
 @import 'burf-base/fonts';
 
-// grid
-@import 'burf-base/grid';
-
-// base styles
+// Styles
 @import 'burf-base/normalize';
+@import 'burf-base/grid';
 @import 'burf-base/typography';
 @import 'burf-base/tables';
 @import 'burf-base/forms';
