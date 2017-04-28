@@ -2,6 +2,23 @@
 // Tables
 // =================================================================
 
+$table-margin:                             35px 0 !default;
+$table-padding:                            0.5em 1em !default;
+
+$color-table-border:                       $color-grayscale-d !default;
+$table-border:                             1px solid $color-table-border !default;
+
+$color-table-head:                         $color-grayscale-0 !default;
+$color-table-head-bg:                      $color-grayscale-e !default;
+
+$table-caption-padding:                    0 0 10px !default;
+$color-table-caption:                      $color-grayscale-9 !default;
+
+$color-table-th-border:                    $color-grayscale-c !default;
+$color-table-td-border:                    $color-grayscale-c !default;
+
+$color-table-stripes:                      $color-grayscale-f5 !default;
+
 /// Controls base styling for tables.
 /// @group global
 /// @access public
