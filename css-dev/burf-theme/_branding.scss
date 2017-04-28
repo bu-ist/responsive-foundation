@@ -2,6 +2,49 @@
 // Branding
 // =================================================================
 
+/// The font to use for branding.
+/// You may not change this unless you have permission from Marketing &amp; Communications.
+/// @group branding
+/// @access public
+/// @since 1.0.0
+
+$font-family-brand:                         "Whitney SSm A", "Whitney SSm B", $font-family-sans-serif !default;
+
+/// The font family to use for the sponsored branding type.
+/// @group branding
+/// @access public
+/// @since 1.0.0
+
+$font-family-brand-sponsored:               $font-family-brand !default;
+
+/// The font family to use for the unbranded branding type.
+/// @group branding
+/// @access public
+/// @since 1.0.0
+
+$font-family-brand-unbranded:               $font-family-sans-serif !default;
+
+/// The height of the branding area.
+/// @group branding
+/// @access public
+/// @since 1.0.0
+
+$height-brand:                             120px !default;
+
+/// The color used for the site name when a site is using BU branding.
+/// @group branding
+/// @access public
+/// @since 1.0.0
+
+$color-brand:                              $color-grayscale-0 !default;
+
+/// The color used for the site name when a site is not using BU branding.
+/// @group branding
+/// @access public
+/// @since 1.0.0
+
+$color-unbranded:                            #c00;
+
 /// The image used for the BU Masterplate.
 /// Do not change this without permission from Marketing &amp; Communications.
 /// @group branding

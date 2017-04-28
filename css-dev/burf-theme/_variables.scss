@@ -45,14 +45,6 @@ $font-family-serif:                         "TiemposText", Georgia, serif !defau
 
 $font-family-sans-serif:                     "Benton", "Helvetica", sans-serif !default;
 
-/// The font to use for branding.
-/// You may not change this unless you have permission from Marketing &amp; Communications.
-/// @group branding
-/// @access public
-/// @since 1.0.0
-
-$font-family-brand:                         "Whitney SSm A", "Whitney SSm B", $font-family-sans-serif !default;
-
 // Grid
 // -----------------------------------------------------------------
 
@@ -264,41 +256,6 @@ $border-width-masthead:                     $border-bottom !default;
 /// @since 1.0.0
 
 $color-masthead-bg:                        $color-grayscale-f !default;
-
-/// The font family to use for the sponsored branding type.
-/// @group branding
-/// @access public
-/// @since 1.0.0
-
-$font-family-brand-sponsored:               $font-family-brand !default;
-
-/// The font family to use for the unbranded branding type.
-/// @group branding
-/// @access public
-/// @since 1.0.0
-
-$font-family-brand-unbranded:               $font-family-sans-serif !default;
-
-/// The height of the branding area.
-/// @group branding
-/// @access public
-/// @since 1.0.0
-
-$height-brand:                             120px !default;
-
-/// The color used for the site name when a site is using BU branding.
-/// @group branding
-/// @access public
-/// @since 1.0.0
-
-$color-brand:                              $color-grayscale-0 !default;
-
-/// The color used for the site name when a site is not using BU branding.
-/// @group branding
-/// @access public
-/// @since 1.0.0
-
-$color-unbranded:                            #c00;
 
 // Primary Navigation
 // -----------------------------------------------------------------
