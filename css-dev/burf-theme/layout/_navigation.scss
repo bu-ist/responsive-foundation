@@ -1,3 +1,285 @@
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+// Navigation
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+
+// Masthead and Brand
+// -----------------------------------------------------------------
+
+/// The style of border to use on the masthead.
+/// This shows directly below navigation or brand depending on the layout
+/// you've chosen for your site.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$border-masthead:                          $border-base !default;
+
+/// The placement and size of the border on the masthead.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$border-width-masthead:                     $border-bottom !default;
+
+/// The background color of the masthead.
+/// Bright colors are not recommended.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$color-masthead-bg:                        $color-grayscale-f !default;
+
+// Primary Navigation
+// -----------------------------------------------------------------
+
+/// The style of border used on primary navigation.
+/// By default, this border shows above primary navigation on mobile only.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$border-width-primary-nav:                   $border-top !default;
+
+/// The width of border used on primary navigation at desktop sizes.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$border-primary-nav-desktop: 					 0 !default;
+
+/// The color of border used on primary navigation.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-primary-nav-border:                  $color-grayscale-3 !default;
+
+/// The font used in primary navigation.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$font-family-navigation:                    $font-family-sans-serif !default;
+
+/// The color to use behind primary navigation.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-primary-nav-bg:                      $color-grayscale-0 !default;
+
+/// The color of links in primary navigation.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-primary-nav-link:                    $color-grayscale-f !default;
+
+/// The color of links when you hover in primary navigation.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-primary-nav-link-hover:              $color-grayscale-a !default;
+
+/// The color of an active link in primary navigation - in other words, the
+/// color that a link will be when you are on that link's page.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-primary-nav-link-current:            $color-grayscale-9 !default;
+
+/// The color to use behind dropdown menus. Only affects non-mobile devices.
+/// This variable is not used in the left hand navigation layout as dropdowns
+/// are not supported.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-primary-nav-dropdown-bg:             $color-grayscale-0 !default;
+
+/// The color of links in dropdown menus.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-primary-nav-dropdown-link:           $color-primary-nav-link !default;
+
+/// The color of links in dropdown menus when you hover over them.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-primary-nav-dropdown-link-hover:     $color-primary-nav-link-hover !default;
+
+// Utility Navigation
+// -----------------------------------------------------------------
+
+/// The width and style of border used in the utility navigation.
+/// @group utility-navigation
+/// @access public
+/// @since 1.0.0
+
+$border-width-utility-nav:                   $border-top !default;
+
+/// The font size used in the utility navigation.
+/// @group utility-navigation
+/// @access public
+/// @since 1.0.0
+
+$font-size-utility-nav:                      14px !default;
+
+/// The color of links in the utility navigation.
+/// @group utility-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-utility-nav-link:                    $color-grayscale-7 !default;
+
+/// The color of links when you hover in the utility navigation.
+/// @group utility-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-utility-nav-link-hover:              $color-grayscale-0 !default;
+
+/// The color of links in the utility navigation on mobile.
+/// The placement of utility navigation on mobile usually means
+/// the utility navigation will be on a different background color,
+/// so it's important to double check that this is set correctly.
+/// @group utility-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-utility-nav-mobile-link:       			$color-grayscale-a !default;
+
+/// The color of links in the utility navigation when you hover on mobile.
+/// @group utility-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-utility-nav-mobile-link-hover: 			$color-grayscale-f !default;
+
+// Navigation and Search Toggles
+// -----------------------------------------------------------------
+
+/// Controls the color of toggles in the navigation at mobile sizes.
+/// By default, this affects both the menu and search toggles.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$color-nav-toggle:                          $color-grayscale-f !default;
+
+/// Controls the color of toggles in the navigation at mobile sizes on hover.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$color-nav-toggle-hover:                    $color-grayscale-a !default;
+
+/// Controls the color of toggles in the navigation at desktop sizes.
+/// By default, this affects both the menu and search toggles.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$color-nav-toggle-alt:                      $color-grayscale-9 !default;
+
+/// Controls the color of toggles in the navigation at desktop sizes on hover.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$color-nav-toggle-alt-hover:                $color-grayscale-0 !default;
+
+// Search
+// -----------------------------------------------------------------
+
+/// Controls the width of the border used on the search pane.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$border-width-quicksearch:                  $border-top !default;
+
+/// Controls the color of the border used on the search form.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$color-quicksearch-border:                 $color-grayscale-d !default;
+
+/// Controls how much rounding is applied to the search form field corners.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$border-radius-quicksearch-input:           20px 0 0 20px !default;
+
+/// Controls how much rounding is applied to the search form submit button.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$border-radius-quicksearch-button:          0 20px 20px 0 !default;
+
+/// Controls the width of the border used on the search field.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$border-search:                            0 !default;
+
+/// Controls the background color of the search field.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$color-search-bg:                          $color-grayscale-f5 !default;
+
+/// Controls the color of the text in the search field.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$color-search-text:                        $color-grayscale-0 !default;
+
+// Masthead
+// -----------------------------------------------------------------
+
+/// Controls all styling related to the masthead. This includes
+/// navigation, branding, and search.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
+.masthead {
+	@extend %clearfix;
+	background: $color-masthead-bg;
+	border: $border-masthead;
+	border-width: $border-width-masthead;
+	position: relative;
+}
+
+/// A wrapper for items in the masthead. Often used to restrict the
+/// masthead to a certain width without interfering with the background.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
+.masthead-container {
+	position: relative;
+}
+
+
 // =================================================================
 // Navigation
 // =================================================================

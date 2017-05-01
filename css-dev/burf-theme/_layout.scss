@@ -39,30 +39,3 @@ body {
 .content-container {
 	@extend %container-styles;
 }
-
-// Masthead
-// -----------------------------------------------------------------
-
-/// Controls all styling related to the masthead. This includes
-/// navigation, branding, and search.
-/// @group layout
-/// @access public
-/// @since 1.0.0
-
-.masthead {
-	@extend %clearfix;
-	background: $color-masthead-bg;
-	border: $border-masthead;
-	border-width: $border-width-masthead;
-	position: relative;
-}
-
-/// A wrapper for items in the masthead. Often used to restrict the
-/// masthead to a certain width without interfering with the background.
-/// @group layout
-/// @access public
-/// @since 1.0.0
-
-.masthead-container {
-	position: relative;
-}
