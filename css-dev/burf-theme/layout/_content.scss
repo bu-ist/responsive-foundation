@@ -1,3 +1,34 @@
+/// Controls the background color of the content.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$color-content-bg:                         $color-grayscale-f !default;
+
+// =================================================================
+// Layout
+// =================================================================
+
+/// Controls styling for all content, from the masthead to the site footer.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
+.content {
+	background: $color-content-bg;
+}
+
+/// A wrapper to contain content to a certain size. Sits just below the window
+/// width banner and just above the footbar.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
+.content-container {
+	@extend %container-styles;
+}
+
+
 // Content Area
 // -----------------------------------------------------------------
 
