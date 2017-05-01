@@ -15,14 +15,6 @@
 // Color and Typography
 // -----------------------------------------------------------------
 
-/// Affects the site footer background color as well as any other areas which
-/// do not have a background color.
-/// @group footer
-/// @access public
-/// @since 1.0.0
-
-$color-body-bg:                            $color-grayscale-0 !default;
-
 /// The default font for body copy.
 /// @group global
 /// @access public
@@ -486,21 +478,6 @@ $color-search-text:                        $color-grayscale-0 !default;
 
 // All content and templates
 // -----------------------------------------------------------------
-
-/// Controls the background color of the banner container.
-/// By default, this only affects the window width banner container.
-/// @group content
-/// @access public
-/// @since 1.0.0
-
-$color-banner-container:                    $color-grayscale-f0 !default;
-
-/// Controls the background color of the content.
-/// @group content
-/// @access public
-/// @since 1.0.0
-
-$color-content-bg:                         $color-grayscale-f !default;
 
 /// Controls the shape used in "back" links, such as the links you
 /// see at the bottom of the page when viewing a single profile.

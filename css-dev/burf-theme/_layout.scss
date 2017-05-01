@@ -1,3 +1,18 @@
+/// Affects the site footer background color as well as any other areas which
+/// do not have a background color.
+/// @group footer
+/// @access public
+/// @since 1.0.0
+
+$color-body-bg:                            $color-grayscale-0 !default;
+
+/// Controls the background color of the content.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$color-content-bg:                         $color-grayscale-f !default;
+
 // =================================================================
 // Layout
 // =================================================================
@@ -50,77 +65,4 @@ body {
 
 .masthead-container {
 	position: relative;
-}
-
-// Content Banner
-// -----------------------------------------------------------------
-
-/// General styles for all content banner positions.
-/// @group layout
-/// @access public
-/// @since 1.0.0
-
-.banner-container {
-	padding: 0;
-	text-align: center;
-
-	img {
-		display: block;
-		margin: 0 auto;
-	}
-}
-
-/// Styles for the window-width content banner position.
-/// Sits outside of `.content-container`.
-/// @group layout
-/// @access public
-/// @since 1.0.0
-
-.banner-container-window-width {
-	@include breakpoint( lg ) {
-		background: $color-banner-container;
-		padding: 20px;
-	}
-}
-
-/// Styles for the page-width content banner position.
-/// Sits directly inside `.content-container` and just
-/// outside of `.content-area`.
-/// @group layout
-/// @access public
-/// @since 1.0.0
-
-.banner-container-page-width {
-	margin: -$grid-container-padding;
-	margin-bottom: $grid-container-padding;
-
-	@include breakpoint( sm ) {
-		margin: 0 0 60px;
-	}
-
-	img {
-		@include breakpoint( md ) {
-			background: $color-banner-container;
-			width: 100%;
-		}
-	}
-}
-
-/// Styles for the content-width content banner position.
-/// Sits directly inside `.content-area`.
-/// @group layout
-/// @access public
-/// @since 1.0.0
-
-.banner-container-content-width {
-	background: none;
-	margin: -$grid-container-padding;
-	margin-bottom: ( 1.5 * $grid-container-padding );
-	padding: 0;
-
-	@include breakpoint( sm ) {
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 0;
-	}
 }
