@@ -1,164 +1,266 @@
-// =================================================================
-// Widgets
-// =================================================================
-
-// Widget contents:
-
-//	1. Basic Widgets
-//	2. BU Posts
-//	3. Content Nav
-//	4. Calendar
-
+// Calendar Widget
 // -----------------------------------------------------------------
 
-// Basic Widgets
-// -----------------------------------------------------------------
-
-/// Handles global widget styling.
+/// Controls the font family used on dates in the calendar widget.
 /// @group widgets
 /// @access public
 /// @since 1.0.0
 
-.widget {
-	@extend %font-size-secondary;
-	margin-bottom: $widget-margin-bottom;
+$font-family-widget-calendar-date:          $font-family-sans-serif !default;
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		font-family: $font-family-widget-heading;
-	}
+/// Controls the color of dates in the calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
 
-	a {
-		color: $color-widget-link;
+$color-widget-calendar-date:                $color-grayscale-0 !default;
 
-		&:hover,
-		&:focus {
-			color: $color-widget-link-hover;
-		}
-	}
+/// Controls the size of the day when using the graphic style in the
+/// calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
 
-	ul {
-		list-style: none;
-		list-style-image: none;
+$font-size-widget-calendar-date-day:          22px !default;
+
+/// Controls the color of the day when using the graphic style in the
+/// calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+$color-widget-calendar-date-day:             inherit !default;
+
+/// Controls the size of the month when using the graphic style in the
+/// calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+$font-size-widget-calendar-date-month:        12px !default;
+
+/// Controls the color of the month when using the graphic style in the
+/// calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+$color-widget-calendar-date-month:           inherit !default;
+
+// Calendar
+// -----------------------------------------------------------------
+
+/// A helper variable for absolute positioning in formats which use it.
+/// Sets the width of the calendar date.
+/// By default, affects the default and graphic formats.
+/// @group widgets
+/// @access private
+/// @since 1.2.0
+
+$_width-calendar-date: 48px;
+
+/// Styles events in the calendar widget. Affects all formats.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-event {
+	border: $border-widget-list;
+	border-width: $border-width-widget-list;
+	padding: 10px 0;
+
+	&:first-child {
+		border: 0;
+		padding: 0 0 10px;
 	}
 }
 
-/// Handles styling for widgets in the footer.
+/// Styles links in the calendar widget. Affects all formats.
 /// @group widgets
 /// @access public
-/// @since 1.0.0
+/// @since 2.0.0
 
-.footbar {
-	a {
-		color: $color-footbar-widget-link;
-
-		&:hover,
-		&:focus {
-			color: $color-footbar-widget-link-hover;
-		}
-	}
+.widget-calendar-link {
+	display: block;
 }
 
-/// Handles title styles for all widgets.
+/// Styles dates in the calendar widget. Affects all formats.
 /// @group widgets
 /// @access public
-/// @since 1.0.0
+/// @since 2.0.0
 
-.widget-title {
-	border: $border-widget-title;
-	border-width: $border-width-widget-title;
-	color: $color-widget-title;
-	font-family: $font-family-widget-title;
-	padding: 0 0 4px;
+.widget-calendar-date {
+	color: $color-widget-calendar-date;
+	display: block;
+	font-family: $font-family-widget-calendar-date;
+	font-weight: 700;
+}
+
+/// Styles an event in the calendar widget default format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-event-default {
+	position: relative;
+}
+
+/// Styles dates in the calendar widget default format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-date-default {
+	left: 0;
+	position: absolute;
+	top: auto;
+	width: $_width-calendar-date;
+}
+
+/// Styles titles in the calendar widget default format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-title-default {
+	padding-left: $_width-calendar-date + 12;
+	position: relative;
+}
+
+/// Styles links in the calendar widget graphic format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-link-graphic {
+	display: table;
+	text-decoration: none;
+}
+
+/// Styles dates in the calendar widget graphic format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-date-graphic {
+	color: $color-widget-calendar-date;
+	display: table-cell;
+	width: $_width-calendar-date;
+	line-height: 1.1;
+	text-align: center;
+}
+
+/// Styles the day of the month in the calendar widget graphic format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-day-graphic {
+	color: $color-widget-calendar-date-day;
+	display: block;
+	font-size: $font-size-widget-calendar-date-day;
+}
+
+/// Styles the month in the calendar widget graphic format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-month-graphic {
+	color: $color-widget-calendar-date-month;
+	font-size: $font-size-widget-calendar-date-month;
+	text-transform: uppercase;
+}
+
+/// Styles the title in the calendar widget graphic format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-title-graphic {
+	display: table-cell;
+	padding-left: 10px;
+	vertical-align: middle;
+	text-decoration: underline;
+}
+
+.widgetnav,
+.widget_archive ul,
+.widget_categories ul { // maybe not though, there are nested categories
+	padding: 0;
+	margin: 0;
+}
+
+/// Styles the BU Calendar list page date picker.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-picker {
+	color: $color-calendar-month-link;
+	line-height: 1.6;
+
+	.month {
+		width: 100%;
+	}
+
+	caption {
+		@extend %font-size-5;
+		color: $color-calendar-month-caption;
+		font-family: $font-family-sans-serif;
+		font-style: normal;
+		font-weight: bold;
+	}
+
+	th,
+	td {
+		font-family: $font-family-calendar-month-cell;
+		padding: $padding-calendar-month-cell;
+		text-align: center;
+		width: 14.285714285%;
+	}
+
+	th {
+		background: $color-calendar-month-th-bg;
+		color: $color-calendar-month-th;
+	}
 
 	a {
 		color: inherit;
 		text-decoration: none;
 
-		&::after {
-			color: $color-widget-title-link-after;
-			content: $widget-title-link-after;
+		&:hover,
+		&::focus {
+			color: $color-calendar-month-link-hover;
 		}
+	}
 
-		&:hover::after {
-			color: $color-widget-title-link-after-hover;
-		}
+	.out {
+		background: $color-calendar-month-link-out-bg;
+		color: $color-calendar-month-link-out;
+	}
+
+	.today {
+		background: $color-calendar-month-link-today-bg;
+		color: $color-calendar-month-link-today;
 	}
 }
 
-// Content Nav
-// -----------------------------------------------------------------
-
-/// Handles styling for content navigation widgets (BU Pages and Content Navigation, aka side nav).
-/// @group widgets
-/// @access public
-/// @since 1.0.0
-
-.widget_bu_pages,
-.widget_nav_menu {
-	h3 {
-		margin-bottom: 0;
-	}
-
-	ul {
-		border: $border-widget-contentnav;
-		border-width: $border-width-widget-contentnav;
-		padding: 0;
-
-		ul {
-			border: 0;
-			margin: 0;
-		}
-
-	}
-
-	li {
-		border: $border-widget-list;
-		border-width: $border-width-widget-list;
-		font-family: $font-family-widget-contentnav;
-
-		&:first-child {
-			border: 0;
-		}
-
-		li {
-			border: 0;
-			padding: 0 0 0 20px;
-
-			a {
-				font-size: $font-size-widget-contentnav-nested-link;
-			}
-		}
-
-		a {
-			color: $color-widget-contentnav;
-			display: block;
-			font-size: $font-size-widget-contentnav-link;
-			padding: 10px 0;
-
-			&:hover,
-			&:focus {
-				color: $color-widget-contentnav-hover;
-				text-decoration: none;
-			}
-		}
-	}
-
-	.active,
-	.current_page_item a {
-		color: $color-widget-contentnav-active;
-	}
+.prev-month,
+.next-month {
+	font-weight: normal;
+	margin: 0 0.5em;
 }
 
-/// Styles the blog list in the blogroll widget.
+/// Styles the BU Calendar list page topics widget.
 /// @group calendar
 /// @access public
 /// @since 2.0.0
 
-.blogroll {
+.calendar-topics {
 	padding: 0;
+
+	ul {
+		padding-left: 20px;
+	}
 }
