@@ -163,6 +163,22 @@ $_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( (
 	}
 }
 
+/// Handles styling for widgets in the footer.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+.footbar {
+	a {
+		color: $color-footbar-widget-link;
+
+		&:hover,
+		&:focus {
+			color: $color-footbar-widget-link-hover;
+		}
+	}
+}
+
 // Footer
 // -----------------------------------------------------------------
 
