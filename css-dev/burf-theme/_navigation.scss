@@ -31,6 +31,11 @@ nav {
 	margin: 0;
 	background: $color-search-bg;
 
+	&.is-open {
+		display: block;
+		border-bottom: $border-search;
+	}
+
 	fieldset {
 		margin: 0;
 
@@ -40,24 +45,9 @@ nav {
 			margin: 0 auto;
 		}
 	}
-	.button {
-		@extend %button-styles-primary;
-		@include border-radius($border-radius-quicksearch-button);
-		width: 25%;
-		padding: 11px 0 12px 0;
-		float: right;
-
-		@include breakpoint(sm) {
-			width: 15%;
-		}
-	}
 }
 
-#quicksearch.is-open {
-	display: block;
-	border-bottom: $border-search;
-}
-#q {
+.search-field {
 	@include border-radius($border-radius-quicksearch-input);
 	width: 75%;
 	padding-right: 10px;
@@ -66,6 +56,18 @@ nav {
 
 	@include breakpoint(sm) {
 		width: 85%;
+	}
+}
+
+.search-submit {
+	@extend %button-styles-primary;
+	@include border-radius($border-radius-quicksearch-button);
+	width: 25%;
+	padding: 11px 0 12px 0;
+	float: right;
+
+	@include breakpoint(sm) {
+		width: 15%;
 	}
 }
 
