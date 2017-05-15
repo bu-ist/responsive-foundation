@@ -170,6 +170,7 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 	// Left layout
 	.sidebar-location-left & {
 		@extend %col-md-push-#{$_sidebar-width};
+		position: relative;
 	}
 
 	.page-template-no-sidebars & {
@@ -181,13 +182,12 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 // Sidebar
 // -----------------------------------------------------------------
 
-/// Controls styles for the sidebar.
-/// You may extend this class if you can't use .sidebar for some reason.
+/// The default class for styling sidebars.
 /// @group layout
 /// @access public
-/// @since 1.2.0
+/// @since 1.0.0
 
-%sidebar-styles {
+.sidebar {
 	@extend %font-size-secondary;
 	clear: none;
 
@@ -205,20 +205,12 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 	// Left layout
 	.sidebar-location-left & {
 		@extend %col-md-pull-#{$_content-width};
+		position: relative;
 
 		@include breakpoint( md ) {
 			padding-right: $sidebar-padding;
 		}
 	}
-}
-
-/// The default class for styling sidebars.
-/// @group layout
-/// @access public
-/// @since 1.0.0
-
-.sidebar {
-	@extend %sidebar-styles;
 }
 
 // layouts
