@@ -2,6 +2,49 @@
 // Comments
 // =================================================================
 
+/// The style of the border on comments.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
+$border-message:                           $border-base !default;
+
+/// The width of the border on comments.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
+$border-width-message:                      1px 1px 1px 5px !default;
+
+/// The amount of rounding (border radius) to apply to the corners
+/// of comments.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
+$border-radius-message:                     3px !default;
+
+/// The amount of padding to apply to comments.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
+$padding-message:                          20px !default;
+
+/// The background of comments.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
+$color-message-bg:                         $color-grayscale-f0 !default;
+
+/// The left border color of comments.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
+$color-message-border-left:                 $color-grayscale-0 !default;
+
 /// Controls styling for the comments section on posts.
 /// @group comments
 /// @access public

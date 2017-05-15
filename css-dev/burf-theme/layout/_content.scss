@@ -5,6 +5,23 @@
 
 $color-content-bg:                         $color-grayscale-f !default;
 
+/// Controls the shape used in "back" links, such as the links you
+/// see at the bottom of the page when viewing a single profile.
+/// By default, this is an arrow.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$back-link-before:                          "← " !default;
+
+/// Controls the color of the arrow in "back" links, such as the links you
+/// see at the bottom of the page when viewing a single profile.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$color-back-link-before:                    $color-grayscale-f !default;
+
 // =================================================================
 // Layout
 // =================================================================
@@ -13,6 +30,75 @@ $color-content-bg:                         $color-grayscale-f !default;
 /// @group layout
 /// @access public
 /// @since 1.0.0
+
+// Wordpress WYSIWYG
+// -----------------------------------------------------------------
+
+/// The margin to use around anything floated in the content area.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$margin-floated-content: 						 10px !default;
+
+/// The font to use for captions.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$font-family-caption:                       $font-family-sans-serif !default;
+
+/// The color to use for captions.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$color-caption:                            $color-grayscale-6 !default;
+
+/// The border color to use in tables.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$border-color-table:                        $color-grayscale-d !default;
+
+/// A darker border color to use in tables.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$border-color-table-dark:                   $color-grayscale-9 !default;
+
+/// The shadow to use in tables.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$box-shadow-table:                          inset -20px 0 20px -10px $color-grayscale-f0 !default;
+
+// Plugins and Shortcodes
+// -----------------------------------------------------------------
+
+/// Controls the color of icons on collapsibles.
+/// @group content
+/// @access public
+/// @since 2.0.0
+
+$color-collapsible-icon:           $color-icons !default;
+
+/// Controls the color of icons on collapsibles when you hover.
+/// @group content
+/// @access public
+/// @since 2.0.0
+
+$color-collapsible-icon-hover:     $color-link !default;
+
+/// Controls the border between collapsibles.
+/// @group content
+/// @access public
+/// @since 2.0.0
+
+$border-collapsible:     1px solid $color-grayscale-c !default;
 
 .content {
 	background: $color-content-bg;
