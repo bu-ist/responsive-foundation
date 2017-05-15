@@ -178,30 +178,6 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 	}
 }
 
-/// Styles for the bottom sidebar location.
-/// @group layout
-/// @access public
-/// @since 1.0.0
-
-.sidebar-location-bottom {
-	@extend %template-narrow;
-
-	.sidebar {
-		@extend %col-sm-margin-parent;
-		clear: both;
-		float: none;
-		margin-bottom: $widget-margin-bottom;
-		overflow: hidden;
-		padding-left: 0;
-		width: auto;
-
-		.widget {
-			@extend %col-sm-margin-half;
-		}
-	}
-}
-
-
 // Sidebar
 // -----------------------------------------------------------------
 
@@ -213,13 +189,17 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 
 %sidebar-styles {
 	@extend %font-size-secondary;
-	@extend %col-md-#{$_sidebar-width};
 	clear: none;
 
-	// TODO: sunset this in a future release -
-	// this padding should really only apply to .sidebar-location-right
-	@include breakpoint( md ) {
-		padding-left: $sidebar-padding;
+	.content-container & {
+		@extend %col-md-#{$_sidebar-width};
+	}
+
+	// Right layout
+	.sidebar-location-right & {
+		@include breakpoint( md ) {
+			padding-left: $sidebar-padding;
+		}
 	}
 
 	// Left layout
@@ -227,8 +207,6 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 		@extend %col-md-pull-#{$_content-width};
 
 		@include breakpoint( md ) {
-			// TODO: sunset in a future release
-			padding: 0;
 			padding-right: $sidebar-padding;
 		}
 	}
@@ -254,16 +232,24 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 .sidebar-location-left {
 	.sidebar {
 		@extend %col-md-pull-#{$_content-width};
-
-		@include breakpoint( md ) {
-			// TODO: sunset in a future release
-			padding: 0;
-			padding-right: $sidebar-padding;
-		}
 	}
 
 	.sidebar-posts {
 		@extend %remove-template-narrow-sidebar;
+	}
+}
+
+.content-container-narrow {
+	.sidebar {
+		@extend %clearfix;
+		@extend %col-sm-margin-parent;
+		margin-bottom: $widget-margin-bottom;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.widget {
+		@extend %col-sm-margin-half;
 	}
 }
 

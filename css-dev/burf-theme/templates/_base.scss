@@ -10,16 +10,6 @@
 // Narrow Content Column
 // -----------------------------------------------------------------
 
-%template-narrow {
-	.content-container {
-		max-width: $container-sm;
-	}
-
-	.content-area {
-		@extend %col-md-full;
-	}
-}
-
 // A utility class to easily undo narrow column widths.
 // Always overrides %template-narrow.
 %remove-template-narrow {

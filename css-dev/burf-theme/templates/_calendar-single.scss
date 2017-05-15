@@ -2,16 +2,6 @@
 // Calendar Single Event Template
 // -----------------------------------------------------------------
 
-// Does not have a sidebar.
-.single-calendar {
-	@extend %template-narrow;
-
-	.content-area {
-		float: none;
-		margin: 0 auto;
-	}
-}
-
 /// Handles styling for the container around start and end times on
 /// a single calendar event.
 /// @group calendar

@@ -2,12 +2,6 @@
 // News & Archive Template
 // -----------------------------------------------------------------
 
-.blog,
-.archive,
-.page-template-news {
-	@extend %template-narrow;
-}
-
 .meta {
 	@extend %font-size-secondary;
 }
