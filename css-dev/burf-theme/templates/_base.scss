@@ -10,30 +10,9 @@
 // Narrow Content Column
 // -----------------------------------------------------------------
 
-// A utility class to easily undo narrow column widths.
-// Always overrides %template-narrow.
-%remove-template-narrow {
-	.content-container {
-		max-width: $container-lg;
-	}
-
-	.content-area {
-		@include breakpoint( md ) {
-			float: left;
-			width: 66.66667%;
-		}
-	}
-}
-
 .content-container-narrow {
 	@extend %container-styles;
 	max-width: $container-sm;
-}
-
-// Layouts
-.sidebar-location-left,
-.sidebar-location-right {
-	//@extend %remove-template-narrow;
 }
 
 // -----------------------------------------------------------------
@@ -69,17 +48,6 @@
 		margin-bottom: $widget-margin-bottom;
 		margin-left: 0;
 		width: 100%;
-	}
-}
-
-.sidebar-posts,
-.sidebar-profiles {
-	@extend %template-narrow-sidebar;
-
-	// Layouts
-	.sidebar-location-left &,
-	.sidebar-location-right & {
-		@extend %remove-template-narrow-sidebar;
 	}
 }
 

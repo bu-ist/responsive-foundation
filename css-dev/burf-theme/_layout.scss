@@ -233,10 +233,6 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 	.sidebar {
 		@extend %col-md-pull-#{$_content-width};
 	}
-
-	.sidebar-posts {
-		@extend %remove-template-narrow-sidebar;
-	}
 }
 
 .content-container-narrow {
