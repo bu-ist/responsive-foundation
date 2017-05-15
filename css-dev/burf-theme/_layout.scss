@@ -163,6 +163,7 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 		padding-bottom: $column-padding-bottom-large-screen;
 	}
 
+	// For templates with sidebars
 	.content-container & {
 		@extend %col-md-#{$_content-width};
 	}
@@ -173,7 +174,9 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 		position: relative;
 	}
 
-	.page-template-no-sidebars & {
+	// For templates without sidebars
+	.page-template-no-sidebars &,
+	.error404 & {
 		left: 0;
 		width: 100%;
 	}
@@ -226,6 +229,11 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 		@extend %col-md-pull-#{$_content-width};
 	}
 }
+
+/// Styles for narrow content.
+/// @group layout
+/// @access public
+/// @since 1.4.0
 
 .content-container-narrow {
 	.sidebar {

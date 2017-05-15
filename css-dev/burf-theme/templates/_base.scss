@@ -16,24 +16,6 @@
 }
 
 // -----------------------------------------------------------------
-// Narrow Sidebar
-// -----------------------------------------------------------------
-
-// A utility class to style sidebars on narrow width templates.
-%template-narrow-sidebar {
-	@extend %clearfix;
-	@extend %col-sm-margin-parent;
-	clear: both;
-	float: none;
-	margin-bottom: $widget-margin-bottom;
-	width: auto;
-
-	.widget {
-		@extend %col-sm-margin-half;
-	}
-}
-
-// -----------------------------------------------------------------
 // 404 page
 // -----------------------------------------------------------------
 
@@ -43,6 +25,9 @@
 /// @since 2.0.0
 
 .error-404 {
+	left: 0;
+	width: 100%;
+
 	#quicksearch {
 		background: transparent !important; // required to override Responsive layout styles
 		border: 0;
