@@ -35,10 +35,15 @@
 	}
 }
 
+.content-container-narrow {
+	@extend %container-styles;
+	max-width: $container-sm;
+}
+
 // Layouts
 .sidebar-location-left,
 .sidebar-location-right {
-	@extend %remove-template-narrow;
+	//@extend %remove-template-narrow;
 }
 
 // -----------------------------------------------------------------

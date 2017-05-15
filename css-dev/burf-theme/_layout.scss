@@ -157,11 +157,14 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 /// @since 1.0.0
 
 .content-area {
-	@extend %col-md-#{$_content-width};
 	padding-bottom: $column-padding-bottom;
 
 	@include breakpoint( sm ) {
 		padding-bottom: $column-padding-bottom-large-screen;
+	}
+
+	.content-container & {
+		@extend %col-md-#{$_content-width};
 	}
 
 	// Left layout
