@@ -2,10 +2,6 @@
 // Single Post
 // -----------------------------------------------------------------
 
-.single-post {
-	@extend %template-narrow;
-}
-
 /// Handles styling for the metadata card at the bottom of posts.
 /// @group news
 /// @access public

@@ -157,79 +157,34 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 /// @since 1.0.0
 
 .content-area {
-	@extend %col-md-#{$_content-width};
 	padding-bottom: $column-padding-bottom;
 
 	@include breakpoint( sm ) {
 		padding-bottom: $column-padding-bottom-large-screen;
 	}
 
-	// Left layout
-	.sidebar-location-left & {
-		@extend %col-md-push-#{$_sidebar-width};
+	// For templates with sidebars
+	.content-container & {
+		@extend %col-md-#{$_content-width};
 	}
 
-	.page-template-no-sidebars & {
+	// Left layout
+	// This level of specificity is necessary to prevent interfering with the narrow template.
+	.sidebar-location-left .content-container & {
+		@extend %col-md-push-#{$_sidebar-width};
+		position: relative;
+	}
+
+	// For templates without sidebars
+	.page-template-no-sidebars &,
+	.error404 & {
 		left: 0;
 		width: 100%;
 	}
 }
 
-/// Styles for the bottom sidebar location.
-/// @group layout
-/// @access public
-/// @since 1.0.0
-
-.sidebar-location-bottom {
-	@extend %template-narrow;
-
-	.sidebar {
-		@extend %col-sm-margin-parent;
-		clear: both;
-		float: none;
-		margin-bottom: $widget-margin-bottom;
-		overflow: hidden;
-		padding-left: 0;
-		width: auto;
-
-		.widget {
-			@extend %col-sm-margin-half;
-		}
-	}
-}
-
-
 // Sidebar
 // -----------------------------------------------------------------
-
-/// Controls styles for the sidebar.
-/// You may extend this class if you can't use .sidebar for some reason.
-/// @group layout
-/// @access public
-/// @since 1.2.0
-
-%sidebar-styles {
-	@extend %font-size-secondary;
-	@extend %col-md-#{$_sidebar-width};
-	clear: none;
-
-	// TODO: sunset this in a future release -
-	// this padding should really only apply to .sidebar-location-right
-	@include breakpoint( md ) {
-		padding-left: $sidebar-padding;
-	}
-
-	// Left layout
-	.sidebar-location-left & {
-		@extend %col-md-pull-#{$_content-width};
-
-		@include breakpoint( md ) {
-			// TODO: sunset in a future release
-			padding: 0;
-			padding-right: $sidebar-padding;
-		}
-	}
-}
 
 /// The default class for styling sidebars.
 /// @group layout
@@ -237,7 +192,31 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 /// @since 1.0.0
 
 .sidebar {
-	@extend %sidebar-styles;
+	@extend %font-size-secondary;
+	clear: none;
+
+	.content-container & {
+		@extend %col-md-#{$_sidebar-width};
+	}
+
+	// Right layout
+	// This level of specificity is necessary to prevent interfering with the narrow template.
+	.sidebar-location-right .content-container & {
+		@include breakpoint( md ) {
+			padding-left: $sidebar-padding;
+		}
+	}
+
+	// Left layout
+	// This level of specificity is necessary to prevent interfering with the narrow template.
+	.sidebar-location-left .content-container & {
+		@extend %col-md-pull-#{$_content-width};
+		position: relative;
+
+		@include breakpoint( md ) {
+			padding-right: $sidebar-padding;
+		}
+	}
 }
 
 // layouts
@@ -251,16 +230,25 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 .sidebar-location-left {
 	.sidebar {
 		@extend %col-md-pull-#{$_content-width};
+	}
+}
 
-		@include breakpoint( md ) {
-			// TODO: sunset in a future release
-			padding: 0;
-			padding-right: $sidebar-padding;
-		}
+/// Styles for narrow content.
+/// @group layout
+/// @access public
+/// @since 1.4.0
+
+.content-container-narrow {
+	.sidebar {
+		@extend %clearfix;
+		@extend %col-sm-margin-parent;
+		margin-bottom: $widget-margin-bottom;
+		padding-left: 0;
+		padding-right: 0;
 	}
 
-	.sidebar-posts {
-		@extend %remove-template-narrow-sidebar;
+	.widget {
+		@extend %col-sm-margin-half;
 	}
 }
 
