@@ -169,7 +169,8 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 	}
 
 	// Left layout
-	.sidebar-location-left & {
+	// This level of specificity is necessary to prevent interfering with the narrow template.
+	.sidebar-location-left .content-container & {
 		@extend %col-md-push-#{$_sidebar-width};
 		position: relative;
 	}
@@ -199,14 +200,16 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 	}
 
 	// Right layout
-	.sidebar-location-right & {
+	// This level of specificity is necessary to prevent interfering with the narrow template.
+	.sidebar-location-right .content-container & {
 		@include breakpoint( md ) {
 			padding-left: $sidebar-padding;
 		}
 	}
 
 	// Left layout
-	.sidebar-location-left & {
+	// This level of specificity is necessary to prevent interfering with the narrow template.
+	.sidebar-location-left .content-container & {
 		@extend %col-md-pull-#{$_content-width};
 		position: relative;
 
