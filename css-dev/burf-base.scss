@@ -3,8 +3,8 @@
 // =================================================================
 
 // dependencies and resets
-@import "normalize.scss/sass/normalize";
-@import "mathsass/dist/math";
+@import "normalize/import-now";
+@import "math";
 
 // variables
 @import 'burf-base/variables';
