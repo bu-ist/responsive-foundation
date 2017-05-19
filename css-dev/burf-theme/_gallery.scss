@@ -21,32 +21,120 @@ $_wp-supported-gallery-columns: 9;
 
 	a {
 		display: block;
-		margin-right: 10px;
 	}
 
 	img {
+		display: block;
 		width: 100%;
 	}
 }
 
-/// Styles for each supported number of columns in the WordPress gallery shortcode.
+/// Styles for image/caption pairs in the WordPress gallery shortcode.
 /// @group content
 /// @access public
 /// @since 1.4.0
 
-@for $i from 1 through $_wp-supported-gallery-columns {
-	.gallery-columns-#{$i} {
-		.gallery-item {
-			float: left;
-			width: 33.33%;
+.gallery-item {
+	float: left;
+	border-right: 10px solid transparent;
+	margin-bottom: 10px;
+	overflow: hidden;
+	position: relative;
+	width: 33.33%;
 
+	@for $i from 1 through $_wp-supported-gallery-columns {
+		.gallery-columns-#{$i} & {
 			@include breakpoint( xs ) {
 				width: 100 / $i#{"%"};
 
-				&:nth-child(#{$i + 1}) {
+				&:nth-child(#{$i}n + 1) {
 					clear: left;
 				}
 			}
+		}
+	}
+}
+
+.gallery-icon {
+	a {
+		@extend %icon-scaleup;
+
+		&::before,
+		&::after {
+			@include transition(opacity 250ms ease-in-out 0s);
+		}
+
+		&::before {
+			color: $color-grayscale-f;
+			display: block;
+			font-size: 2em;
+			left: 0;
+			margin-top: -0.5em;
+			opacity: 0;
+			position: absolute;
+			text-align: center;
+			top: 50%;
+			width: 100%;
+			z-index: 2;
+
+			@for $i from 4 through $_wp-supported-gallery-columns {
+				.gallery-columns-#{$i} & {
+					font-size: 1em;
+				}
+			}
+		}
+
+		&::after {
+			@include rgba-color(background-color, rgba(black, 0.75), transparent);
+			content: "";
+			display: block;
+			height: 100%;
+			left: 0;
+			opacity: 0;
+			position: absolute;
+			text-align: center;
+			top: 0;
+			width: 100%;
+			z-index: 1;
+		}
+
+		img {
+			@include transition(transform 250ms ease-in-out 0s);
+		}
+
+		&:hover {
+			img {
+				@include transition(transform 250ms ease-in-out 0s);
+				@include scale(1.1);
+			}
+
+			&::before,
+			&::after {
+				@include transition(opacity 250ms ease-in-out 0s);
+				opacity: 1;
+			}
+		}
+	}
+}
+
+/// Styles for captions in the WordPress gallery shortcode.
+/// @group content
+/// @access public
+/// @since 1.4.0
+
+.gallery-caption {
+	@include rgba-color(background-color, rgba($color-grayscale-0, 0.75), $color-grayscale-0);
+	bottom: 0;
+	color: $color-grayscale-f;
+	left: 0;
+	margin-right: 10px;
+	padding: 1em;
+	position: absolute;
+	width: 100%;
+
+	@for $i from 4 through $_wp-supported-gallery-columns {
+		.gallery-columns-#{$i} & {
+			display: none;
 		}
 	}
 }
