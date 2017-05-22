@@ -26,6 +26,6 @@
   ],
   "dependencies": {
     "mathsass": "~0.9.5",
-    "normalize-css": "~5.0.0"
+    "normalize.scss": "~7.0.0"
   }
 }
