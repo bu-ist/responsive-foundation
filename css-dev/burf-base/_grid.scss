@@ -45,6 +45,19 @@
 //			Note that friendly grid classes always print.
 //			Default: true
 
+/// The number of columns you would like to use in your layout.
+/// This controls the width of the content area vs. the sidebar.
+/// By default, setting this to 3 will make the sidebar take up 1 column,
+/// and the content area 2 columns.
+/// If you were to set this to 4, the sidebar would take up 1/4 of the space,
+/// while the content area would take up 3/4 of the space.
+/// By default, the number of supported widgets in your footer will match this number.
+/// @group grid
+/// @access public
+/// @since 1.2.0
+
+$number-columns: 									 3 !default;
+
 /// The number of columns you would like in your grid.
 /// To use styles in burf-theme, you must set this to a number that
 /// is divisible by 2, 3, and 4.
