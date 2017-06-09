@@ -346,22 +346,3 @@ $profiles-advanced-cols-xs:			2 !default;
 /// @since 2.0.0
 
 $profiles-advanced-cols-md:			3 !default;
-
-/// Controls the number of profiles in a row in the mini format.
-/// Kicks in at the small breakpoint.
-/// @group profiles
-/// @access public
-/// @since 2.0.0
-
-$profiles-mini-cols-sm:			2 !default;
-
-// Profiles Template: List Mini
-// -----------------------------------------------------------------
-
-/// Controls the color of the border on the mini profile format
-/// in the profiles shortcode.
-/// @group profiles
-/// @access public
-/// @since 1.0.0
-
-$color-profile-mini-border:                $color-grayscale-e !default;
