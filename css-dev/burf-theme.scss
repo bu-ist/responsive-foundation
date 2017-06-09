@@ -5,32 +5,50 @@
 // variables
 @import 'burf-theme/variables';
 
-// widgets
+// =================================================================
+// Shortcodes
+// =================================================================
+
+// @import 'burf-theme/shortcodes/collapsible';
+// @import 'burf-theme/shortcodes/courses';
+// @import 'burf-theme/shortcodes/profiles';
+
+// =================================================================
+// Widgets
+// =================================================================
+
 @import 'burf-theme/widgets/widgets';
 @import 'burf-theme/widgets/widget-calendar';
 @import 'burf-theme/widgets/widget-navigation';
 @import 'burf-theme/widgets/widget-posts';
+// footbar widgets partial
 
-// layout
+// =================================================================
+// Layout
+// =================================================================
+
 @import 'burf-theme/layout/branding';
 @import 'burf-theme/layout/navigation';
+@import 'burf-theme/layout/banner';
 @import 'burf-theme/layout/content';
 @import 'burf-theme/layout/footer';
 
-// utilities
-@import 'burf-theme/utilities';
+// =================================================================
+// Templates
+// =================================================================
 
-// comments
+@import 'burf-theme/templates/base';
 @import 'burf-theme/comments';
 
-// templates
-@import 'burf-theme/templates/base';
-	@import 'burf-theme/templates/archive'; // News and archive
-	@import 'burf-theme/templates/single'; // Single post
-	@import 'burf-theme/templates/calendar-archive'; // Calendar listing
-	@import 'burf-theme/templates/calendar-single'; // Calendar event
-	@import 'burf-theme/templates/profile-archive'; // Profiles listing
-	@import 'burf-theme/templates/profile-single'; // Single profile
+@import 'burf-theme/templates/archive'; // News and archive
+@import 'burf-theme/templates/single'; // Single post
+@import 'burf-theme/templates/calendar-archive'; // Calendar listing
+@import 'burf-theme/templates/calendar-single'; // Calendar event
+@import 'burf-theme/templates/profile-archive'; // Profiles listing
+@import 'burf-theme/templates/profile-single'; // Single profile
+
+// utilities
+@import 'burf-theme/utilities';
 
 // plugins
 @import 'burf-theme/plugins';
