@@ -2,6 +2,23 @@
 // Post Archive Settings
 // =================================================================
 
+/// Controls the shape used in "back" links, such as the links you
+/// see at the bottom of the page when viewing a single profile.
+/// By default, this is an arrow.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$back-link-before:                          "← " !default;
+
+/// Controls the color of the arrow in "back" links, such as the links you
+/// see at the bottom of the page when viewing a single profile.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$color-back-link-before:                    $color-grayscale-f !default;
+
 /// Controls the border style between posts on post listing templates.
 /// @group news
 /// @access public
@@ -35,6 +52,29 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 // =================================================================
 // Post Archive Styles
 // =================================================================
+
+/// A placeholder to mimic the styles of the "Back" link on archive pages.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
+%back-link-styles {
+	&::before {
+		color: $color-back-link-before;
+		content: $back-link-before;
+	}
+}
+
+/// Controls the styles of the "Back" link on archive pages.
+/// Use this class to only style CSS with the back link. Use the placeholder
+/// to style anything that looks like a back link.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
+.back-link {
+	@extend %back-link-styles;
+}
 
 .meta {
 	@extend %font-size-secondary;
