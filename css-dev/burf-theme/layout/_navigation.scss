@@ -337,7 +337,7 @@ nav {
 }
 
 .search-field {
-	@include border-radius($border-radius-quicksearch-input);
+	@include border-radius( $border-radius-quicksearch-input );
 	color: $color-search-text;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -350,7 +350,7 @@ nav {
 
 .search-submit {
 	@extend %button-styles-primary;
-	@include border-radius($border-radius-quicksearch-button);
+	@include border-radius( $border-radius-quicksearch-button );
 	float: right;
 	padding: 11px 0 12px 0;
 	width: 25%;
@@ -364,7 +364,7 @@ nav {
 
 .search-toggle {
 	@extend %icon-search;
-	@include transition(color 200ms ease-in-out 0s);
+	@include transition( color 200ms ease-in-out 0s );
 	color: $color-nav-toggle;
 	float: right;
 	font-size: 31px;
@@ -377,8 +377,13 @@ nav {
 	&:visited {
 		color: $color-nav-toggle;
 	}
+
 	&:hover {
 		color: $color-nav-toggle-hover;
+	}
+
+	&.is-open {
+		@extend %icon-close;
 	}
 
 	span {
@@ -386,15 +391,11 @@ nav {
 	}
 }
 
-.search-toggle.is-open {
-	@extend %icon-close;
-}
-
 // when nav or search are opened
 .is-open .primary-nav-menu,
 .is-open .utility-nav {
-	display: block;
 	clear: left;
+	display: block;
 }
 
 
@@ -402,70 +403,86 @@ nav {
 
 .nav-toggle {
 	@extend %hide-text;
-	position: relative;
-	float: left;
-	width: 60px;
-	height: 60px;
 	cursor: pointer;
+	float: left;
+	height: 60px;
+	position: relative;
+	width: 60px;
 
 	@include breakpoint( sm ) {
 		display: none;
 	}
-}
-.nav-toggle span,
-.nav-toggle span:before,
-.nav-toggle span:after {
-	position: absolute;
-	top: 28px;
-	left: 15px;
-	display: block;
-	width: 30px;
-	height: 4px;
-	background: $color-nav-toggle;
-	content: "";
-	cursor: pointer;
-}
-.nav-toggle span:before {
-	top: -10px;
-	left: 0;
-}
-.nav-toggle span:after {
-	top: 10px;
-	left: 0;
-}
-.nav-toggle span,
-.nav-toggle span:before,
-.nav-toggle span:after {
-	@include transition(all, 250ms, ease-in-out, 0s);
-}
-.nav-toggle.is-open span {
-	background-color: transparent;
-}
-.nav-toggle.is-open span:before,
-.nav-toggle.is-open span:after {
-	top: 0;
-}
-.nav-toggle.is-open span:before {
-	@include rotate (45);
-}
-.nav-toggle.is-open span:after {
-	@include rotate (-45);
+
+	span {
+		@include transition( all, 250ms, ease-in-out, 0s );
+		background: $color-nav-toggle;
+		content: "";
+		cursor: pointer;
+		display: block;
+		height: 4px;
+		left: 15px;
+		position: absolute;
+		top: 28px;
+		width: 30px;
+
+		&::before,
+		&::after {
+			@include transition( all, 250ms, ease-in-out, 0s );
+			background: $color-nav-toggle;
+			content: "";
+			cursor: pointer;
+			display: block;
+			height: 4px;
+			left: 15px;
+			position: absolute;
+			top: 28px;
+			width: 30px;
+		}
+
+		&::before {
+			left: 0;
+			top: -10px;
+		}
+
+		&::after {
+			left: 0;
+			top: 10px;
+		}
+	}
+
+	&.is-open span {
+		background-color: transparent;
+
+		&::before,
+		&::after {
+			top: 0;
+		}
+
+		&::before {
+			@include rotate (45);
+		}
+
+		&::after {
+			@include rotate (-45);
+		}
+	}
 }
 
 // primaryNav and menu
 
 .primary-nav {
 	@extend %clearfix;
+	background: $color-primary-nav-bg;
 	display: block;
 	padding: 0 10px;
-	background: $color-primary-nav-bg;
-}
 
-.primary-nav.is-open {
-	height: auto;
-	padding-bottom: 20px;
-	@include breakpoint( sm ) {
-		padding-bottom: 0;
+	&.is-open {
+		height: auto;
+		padding-bottom: 20px;
+
+		@include breakpoint( sm ) {
+			padding-bottom: 0;
+		}
 	}
 }
 
@@ -474,9 +491,9 @@ nav {
 	margin: 40px 10px 0 10px;
 
 	@include breakpoint( sm ) {
+		border: none;
 		display: inline;
 		margin: 0;
-		border: none;
 	}
 
 	li {
@@ -484,31 +501,58 @@ nav {
 		zoom: 1;
 
 		@include breakpoint( sm ) {
-			display: inline-block;
 			border: none;
+			display: inline-block;
 
 			.lt-ie8 & {
 				display: inline;
 			}
 		}
+
+		&:hover ul,
+		&:focus ul {
+			left: auto;
+		}
+
+		li {
+			display: block;
+			padding: 0 10px;
+
+			a {
+				padding: 10px 0;
+				line-height: $line-height-base;
+				color: $color-primary-nav-dropdown-link;
+
+				&:hover,
+				&:focus {
+					color: $color-primary-nav-dropdown-link-hover;
+				}
+			}
+		}
 	}
+
 	a {
+		border-width: $border-width-primary-nav;
+		border: 1px solid $color-primary-nav-border;
+		color: $color-primary-nav-link;
 		display: block;
 		padding: 10px 0;
-		border: 1px solid $color-primary-nav-border;
-		border-width: $border-width-primary-nav;
-		color: $color-primary-nav-link;
 		text-decoration: none;
 
 		@include breakpoint( sm ) {
-			padding: 0 10px;
 			border: $border-primary-nav-desktop;
 			line-height: 60px;
+			padding: 0 10px;
 		}
 
 		&:hover,
 		&:focus {
 			color: $color-primary-nav-link-hover;
+		}
+
+		&.active,
+		&.active_section {
+			color: $color-primary-nav-link-current;
 		}
 	}
 
@@ -516,51 +560,26 @@ nav {
 		display: none;
 
 		@include breakpoint( sm ) {
-			position: absolute;
-			left: -9999px;
-			z-index: 2;
-			display: block;
-			width: 240px;
 			background: $color-primary-nav-dropdown-bg;
+			display: block;
+			left: -9999px;
+			position: absolute;
+			width: 240px;
+			z-index: 2;
 		}
 	}
 }
 
-.primary-nav-menu li a.active,
-.primary-nav-menu li a.active_section {
-	color: $color-primary-nav-link-current;
-}
-
-.primary-nav-menu li:hover ul,
-.primary-nav-menu li:focus ul {
-	left: auto;
-}
-.primary-nav-menu li li {
-	display: block;
-	padding: 0 10px;
-}
-.primary-nav-menu li li a {
-	padding: 10px 0;
-	line-height: $line-height-base;
-	color: $color-primary-nav-dropdown-link;
-
-	&:hover,
-	&:focus {
-		color: $color-primary-nav-dropdown-link-hover;
-	}
-}
-
-/* utilityNav
------------------------------------------------------------------ */
+// utilityNav
 
 .utility-nav {
-	display: none;
-	padding: 20px 0 0;
-	margin: 0 10px;
-	border: 1px solid $color-primary-nav-border;
 	border-width: $border-width-utility-nav;
-	font-size: $font-size-utility-nav;
+	border: 1px solid $color-primary-nav-border;
 	color: $color-utility-nav-mobile-link;
+	display: none;
+	font-size: $font-size-utility-nav;
+	margin: 0 10px;
+	padding: 20px 0 0;
 	text-decoration: none;
 
 	@include breakpoint( sm ) {
@@ -568,14 +587,14 @@ nav {
 	}
 
 	li {
-		padding: 0;
 		border: none;
+		padding: 0;
 
 		@include breakpoint( sm ) {
-			display: inline-block;
-			padding-left: 10px;
 			border: none;
+			display: inline-block;
 			*display: inline;
+			padding-left: 10px;
 		}
 	}
 
@@ -590,25 +609,28 @@ nav {
 			}
 		}
 	}
-}
-.masthead-container .utility-nav {
-	@include breakpoint( sm ) {
-		display: block;
-		padding: 0;
-		margin: 0;
-		border: none;
+
+	.masthead-container & {
+		@include breakpoint( sm ) {
+			border: none;
+			display: block;
+			margin: 0;
+			padding: 0;
+		}
 	}
 }
 
 /* default
 ----------------------------------------------------------------- */
 
-.l-default .utility-nav {
-	@include breakpoint( sm ) {
-		position: absolute;
-		top: ($height-brand / 2) - ($font-size-utility-nav / 2);
-		right: 20px;
-		line-height: 1;
+.l-default {
+	.utility-nav {
+		@include breakpoint( sm ) {
+			line-height: 1;
+			position: absolute;
+			right: 20px;
+			top: ($height-brand / 2) - ($font-size-utility-nav / 2);
+		}
 	}
 }
 
@@ -628,13 +650,13 @@ nav {
 
 	.primary-nav {
 		@include breakpoint( sm ) {
+			background: none;
+			float: left;
+			left: 0;
+			margin-left: -$width-side-nav + 60px;
 			position: relative;
 			top: 0;
 			width: $width-side-nav;
-			background: none;
-			float: left;
-			margin-left: -$width-side-nav + 60px;
-			left: 0;
 
 			&.is-open {
 				left: $width-side-nav - 60px;
@@ -646,10 +668,10 @@ nav {
 		}
 
 		@include breakpoint( lg ) {
-			margin-left: 0;
 			display: block;
-			width: $width-side-nav;
+			margin-left: 0;
 			padding: 20px 10px;
+			width: $width-side-nav;
 		}
 	}
 
@@ -684,10 +706,10 @@ nav {
 		}
 
 		a {
-			padding: 10px 0;
-			border: 1px solid $color-primary-nav-border;
 			border-width: $border-width-primary-nav;
+			border: 1px solid $color-primary-nav-border;
 			line-height: $line-height-base;
+			padding: 10px 0;
 		}
 
 		ul {
@@ -697,17 +719,17 @@ nav {
 }
 
 .l-side-nav .search-toggle {
-	position: absolute;
 	//top: $height-brand + 30px;
-	right: 0;
 	color: $color-grayscale-f;
+	position: absolute;
+	right: 0;
 
 	@include breakpoint( sm ) {
-		right: 10px;
-		display: block;
-		position: relative;
 		@include vertical-center;
 		color: $color-nav-toggle-alt;
+		display: block;
+		position: relative;
+		right: 10px;
 	}
 
 	&:active,
@@ -742,10 +764,10 @@ $_search-height: 103px;
 .l-side-nav {
 	#quicksearch {
 		@include breakpoint( sm ) {
+			border-width: $border-width-quicksearch;
+			border: 1px solid $color-quicksearch-border;
 			position: absolute;
 			width: 100%;
-			border: 1px solid $color-quicksearch-border;
-			border-width: $border-width-quicksearch;
 		}
 	}
 
@@ -756,65 +778,53 @@ $_search-height: 103px;
 			}
 		}
 	}
-}
 
-.l-side-nav.nav-open {
-	.content {
-		@include breakpoint( sm ) {
-			left: $width-side-nav - 60px;
-		}
-		@include breakpoint( lg ) {
-			left: 0;
-		}
-	}
 	.nav-toggle {
-		float: left;
-		margin-left: -10px;
-	}
-}
-
-.l-no-nav .brand .search-toggle {
-	color: $color-nav-toggle-alt;
-	@include breakpoint( sm ) {
-		right: 10px;
 		display: block;
-		@include vertical-center;
-	}
-	&:visited {
-		color: $color-nav-toggle-alt;
-	}
-	&:hover {
-		color: $color-nav-toggle-alt-hover;
-	}
-}
 
-// side-nav: nav-toggle
-.l-side-nav .nav-toggle {
-	display: block;
-	@include breakpoint( lg ) {
-		display: none;
+		@include breakpoint( lg ) {
+			display: none;
+		}
 	}
-}
-.l-side-nav .masthead-container .utility-nav {
-	margin: 0 10px;
 
-	@include breakpoint( lg ) {
-		position: relative;
-		top: auto;
-		right: auto;
+	.masthead-container .utility-nav {
+		margin: 0 10px;
+
+		@include breakpoint( lg ) {
+			display: block;
+			position: relative;
+			right: auto;
+			top: auto;
+		}
+	}
+
+	.utility-nav li {
 		display: block;
+		padding-left: 0;
 	}
-}
 
-.l-side-nav .utility-nav li {
-	display: block;
-	padding-left: 0;
-}
+	&.nav-open {
+		.content {
+			@include breakpoint( sm ) {
+				left: $width-side-nav - 60px;
+			}
 
-.l-side-nav.nav-open .primary-nav-menu,
-.l-side-nav.nav-open .utility-nav {
-	display: block;
-	float: none;
+			@include breakpoint( lg ) {
+				left: 0;
+			}
+		}
+
+		.nav-toggle {
+			float: left;
+			margin-left: -10px;
+		}
+
+		.primary-nav-menu,
+		.utility-nav {
+			display: block;
+			float: none;
+		}
+	}
 }
 
 /* top nav
@@ -823,10 +833,10 @@ $_search-height: 103px;
 .l-top-nav {
 	.utility-nav {
 		@include breakpoint( sm ) {
-			position: absolute;
-			top: (($height-brand / 2) - ($font-size-utility-nav / 2)) + 60;
-			right: 20px;
 			line-height: 1;
+			position: absolute;
+			right: 20px;
+			top: ( ( $height-brand / 2 ) - ( $font-size-utility-nav / 2 ) ) + 60;
 		}
 	}
 
@@ -834,14 +844,14 @@ $_search-height: 103px;
 		border-bottom: 1px solid $color-grayscale-d;
 	}
 }
+
 .l-top-nav.search-open .utility-nav {
 	@include breakpoint( sm ) {
 		top: 209px;
 	}
 }
 
-/* no-nav
------------------------------------------------------------------ */
+// no-nav
 
 .l-no-nav {
 	.primary-nav {
@@ -852,10 +862,26 @@ $_search-height: 103px;
 
 	.brand {
 		padding-right: 60px;
+
 		.search-toggle {
+			color: $color-nav-toggle-alt;
 			display: block;
-			margin: 0 -60px 0 0;
 			font-size: 24px;
+			margin: 0 -60px 0 0;
+
+			@include breakpoint( sm ) {
+				@include vertical-center;
+				display: block;
+				right: 10px;
+			}
+
+			&:visited {
+				color: $color-nav-toggle-alt;
+			}
+
+			&:hover {
+				color: $color-nav-toggle-alt-hover;
+			}
 		}
 	}
 
@@ -863,14 +889,15 @@ $_search-height: 103px;
 		border-top: 1px solid $color-grayscale-d;
 	}
 
-	.masthead-container{
+	.masthead-container {
 		.utility-nav {
 			display: none;
+
 			@include breakpoint( sm ) {
-				position: absolute;
-				top: ($height-brand / 2) - ($font-size-utility-nav / 2) - 5;
-				right: 80px;
 				display: block;
+				position: absolute;
+				right: 80px;
+				top: ($height-brand / 2) - ($font-size-utility-nav / 2) - 5;
 			}
 		}
 	}
