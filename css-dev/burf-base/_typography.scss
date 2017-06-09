@@ -2,7 +2,14 @@
 // Typography
 // =================================================================
 
-$font-family-sans-serif:                     "Benton", Helvetica, sans-serif !default;
+/// A sans-serif font to use in your theme.
+/// By default, this affects the site footer and label text in profiles.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
+$font-family-sans-serif:                     "Benton", "Helvetica", sans-serif !default;
+
 $font-family-monospace:                     Consolas, "Liberation Mono", Courier, monospace !default;
 
 $font-family-heading:                       $font-family-sans-serif !default;
@@ -49,14 +56,6 @@ $font-family-base:                          "Benton", sans-serif !default;
 /// @since 1.0.0
 
 $font-family-serif:                         "TiemposText", Georgia, serif !default;
-
-/// A sans-serif font to use in your theme.
-/// By default, this affects the site footer and label text in profiles.
-/// @group global
-/// @access public
-/// @since 1.0.0
-
-$font-family-sans-serif:                     "Benton", "Helvetica", sans-serif !default;
 
 
 // Links
