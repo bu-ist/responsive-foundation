@@ -1,0 +1,179 @@
+// =================================================================
+// Calendar Picker Settings
+// =================================================================
+
+/// Controls the font used in the calendar picker in the sidebar
+/// of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
+$font-family-calendar-month-caption:         $font-family-sans-serif !default;
+
+/// Controls the color of the selected month in the calendar picker
+/// in the sidebar of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
+$color-calendar-month-caption:              $color-grayscale-7 !default;
+
+/// Controls the background of day cells in the calendar picker
+/// in the sidebar of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
+$color-calendar-month-th-bg:                $color-grayscale-e !default;
+
+/// Controls the color of text in the day cells in the calendar picker
+/// in the sidebar of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
+$color-calendar-month-th:                   $color-grayscale-0 !default;
+
+/// Controls the spacing of day cells in the calendar picker
+/// in the sidebar of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
+$padding-calendar-month-cell:               4px !default;
+
+/// Controls the font family of day cells in the calendar picker
+/// in the sidebar of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
+$font-family-calendar-month-cell:            $font-family-sans-serif !default;
+
+/// Controls the color of links in the calendar picker
+/// in the sidebar of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
+$color-calendar-month-link:             $color-link !default;
+
+/// Controls the color of links when you hover in the calendar picker
+/// in the sidebar of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
+$color-calendar-month-link-hover:       $color-link !default;
+
+/// Controls the background of links in the calendar picker
+/// for days that are not in the current month (previous/next month)
+/// in the sidebar of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
+$color-calendar-month-link-out-bg:       $color-grayscale-f5 !default;
+
+/// Controls the color of links in the calendar picker
+/// for days that are not in the current month (previous/next month)
+/// in the sidebar of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
+$color-calendar-month-link-out:          $color-grayscale-9 !default;
+
+/// Controls the background of the current day's link in the calendar picker
+/// in the sidebar of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
+$color-calendar-month-link-today-bg:     $color-grayscale-e !default;
+
+/// Controls the color of the current day's link in the calendar picker
+/// in the sidebar of the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
+$color-calendar-month-link-today:        $color-grayscale-0 !default;
+
+// =================================================================
+// Calendar Picker Styles
+// =================================================================
+
+/// Styles the BU Calendar list page date picker.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-picker {
+	color: $color-calendar-month-link;
+	line-height: 1.6;
+
+	.month {
+		width: 100%;
+	}
+
+	caption {
+		@extend %font-size-5;
+		color: $color-calendar-month-caption;
+		font-family: $font-family-sans-serif;
+		font-style: normal;
+		font-weight: bold;
+	}
+
+	th,
+	td {
+		font-family: $font-family-calendar-month-cell;
+		padding: $padding-calendar-month-cell;
+		text-align: center;
+		width: 14.285714285%;
+	}
+
+	th {
+		background: $color-calendar-month-th-bg;
+		color: $color-calendar-month-th;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+
+		&:hover,
+		&::focus {
+			color: $color-calendar-month-link-hover;
+		}
+	}
+
+	.out {
+		background: $color-calendar-month-link-out-bg;
+		color: $color-calendar-month-link-out;
+	}
+
+	.today {
+		background: $color-calendar-month-link-today-bg;
+		color: $color-calendar-month-link-today;
+	}
+}
+
+.prev-month,
+.next-month {
+	font-weight: normal;
+	margin: 0 0.5em;
+}
+
+/// Styles the BU Calendar list page topics widget.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+.calendar-topics {
+	padding: 0;
+
+	ul {
+		padding-left: 20px;
+	}
+}
