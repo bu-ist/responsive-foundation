@@ -1,6 +1,18 @@
-// -----------------------------------------------------------------
-// Profile Listing and Archive Templates
-// -----------------------------------------------------------------
+// =================================================================
+// Profile Single Settings
+// =================================================================
+
+/// Controls the color used for labels in the single profile
+/// listing template sidebar.
+/// @group profiles
+/// @access public
+/// @since 1.0.0
+
+$color-profile-info-label:                 $color-grayscale-a !default;
+
+// =================================================================
+// Profile Single Styles
+// =================================================================
 
 /// Styles the single profile name - typically the title of the page.
 /// @group profiles

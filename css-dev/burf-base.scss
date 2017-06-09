@@ -6,20 +6,15 @@
 @import "normalize/import-now";
 @import "math";
 
-// variables
-@import 'burf-base/variables';
+// Utilities
+@import "burf-base/config";
+@import "burf-base/mixins";
+@import "burf-base/fonts";
+@import "burf-base/icons/package";
 
-// mixins
-@import 'burf-base/mixins';
-
-// fonts
-@import 'burf-base/fonts';
-
-// grid
-@import 'burf-base/grid';
-
-// base styles
-@import 'burf-base/base-global';
-@import 'burf-base/base-typography';
-@import 'burf-base/base-tables';
-@import 'burf-base/base-forms';
+// Styles
+@import "burf-base/normalize";
+@import "burf-base/grid";
+@import "burf-base/typography";
+@import "burf-base/tables";
+@import "burf-base/forms";

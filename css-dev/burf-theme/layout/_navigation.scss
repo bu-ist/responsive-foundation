@@ -1,0 +1,902 @@
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+// Navigation
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+
+// Masthead and Brand
+// -----------------------------------------------------------------
+
+/// The style of border to use on the masthead.
+/// This shows directly below navigation or brand depending on the layout
+/// you've chosen for your site.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$border-masthead:                          $border-base !default;
+
+/// The placement and size of the border on the masthead.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$border-width-masthead:                     0 0 1px 0 !default;
+
+/// The background color of the masthead.
+/// Bright colors are not recommended.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$color-masthead-bg:                        $color-grayscale-f !default;
+
+// Primary Navigation
+// -----------------------------------------------------------------
+
+/// The style of border used on primary navigation.
+/// By default, this border shows above primary navigation on mobile only.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$border-width-primary-nav:                   1px 0 0 0 !default;
+
+/// The width of border used on primary navigation at desktop sizes.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$border-primary-nav-desktop: 					 0 !default;
+
+/// The color of border used on primary navigation.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-primary-nav-border:                  $color-grayscale-3 !default;
+
+/// The font used in primary navigation.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$font-family-navigation:                    $font-family-sans-serif !default;
+
+/// The color to use behind primary navigation.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-primary-nav-bg:                      $color-grayscale-0 !default;
+
+/// The color of links in primary navigation.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-primary-nav-link:                    $color-grayscale-f !default;
+
+/// The color of links when you hover in primary navigation.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-primary-nav-link-hover:              $color-grayscale-a !default;
+
+/// The color of an active link in primary navigation - in other words, the
+/// color that a link will be when you are on that link's page.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-primary-nav-link-current:            $color-grayscale-9 !default;
+
+/// The color to use behind dropdown menus. Only affects non-mobile devices.
+/// This variable is not used in the left hand navigation layout as dropdowns
+/// are not supported.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-primary-nav-dropdown-bg:             $color-grayscale-0 !default;
+
+/// The color of links in dropdown menus.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-primary-nav-dropdown-link:           $color-primary-nav-link !default;
+
+/// The color of links in dropdown menus when you hover over them.
+/// @group primary-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-primary-nav-dropdown-link-hover:     $color-primary-nav-link-hover !default;
+
+// Utility Navigation
+// -----------------------------------------------------------------
+
+/// The width and style of border used in the utility navigation.
+/// @group utility-navigation
+/// @access public
+/// @since 1.0.0
+
+$border-width-utility-nav:                   1px 0 0 0 !default;
+
+/// The font size used in the utility navigation.
+/// @group utility-navigation
+/// @access public
+/// @since 1.0.0
+
+$font-size-utility-nav:                      14px !default;
+
+/// The color of links in the utility navigation.
+/// @group utility-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-utility-nav-link:                    $color-grayscale-7 !default;
+
+/// The color of links when you hover in the utility navigation.
+/// @group utility-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-utility-nav-link-hover:              $color-grayscale-0 !default;
+
+/// The color of links in the utility navigation on mobile.
+/// The placement of utility navigation on mobile usually means
+/// the utility navigation will be on a different background color,
+/// so it's important to double check that this is set correctly.
+/// @group utility-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-utility-nav-mobile-link:       			$color-grayscale-a !default;
+
+/// The color of links in the utility navigation when you hover on mobile.
+/// @group utility-navigation
+/// @access public
+/// @since 1.0.0
+
+$color-utility-nav-mobile-link-hover: 			$color-grayscale-f !default;
+
+// Navigation and Search Toggles
+// -----------------------------------------------------------------
+
+/// Controls the color of toggles in the navigation at mobile sizes.
+/// By default, this affects both the menu and search toggles.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$color-nav-toggle:                          $color-grayscale-f !default;
+
+/// Controls the color of toggles in the navigation at mobile sizes on hover.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$color-nav-toggle-hover:                    $color-grayscale-a !default;
+
+/// Controls the color of toggles in the navigation at desktop sizes.
+/// By default, this affects both the menu and search toggles.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$color-nav-toggle-alt:                      $color-grayscale-9 !default;
+
+/// Controls the color of toggles in the navigation at desktop sizes on hover.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$color-nav-toggle-alt-hover:                $color-grayscale-0 !default;
+
+// Search
+// -----------------------------------------------------------------
+
+/// Controls the width of the border used on the search pane.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$border-width-quicksearch:                  1px 0 0 0 !default;
+
+/// Controls the color of the border used on the search form.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$color-quicksearch-border:                 $color-grayscale-d !default;
+
+/// Controls how much rounding is applied to the search form field corners.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$border-radius-quicksearch-input:           20px 0 0 20px !default;
+
+/// Controls how much rounding is applied to the search form submit button.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$border-radius-quicksearch-button:          0 20px 20px 0 !default;
+
+/// Controls the width of the border used on the search field.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$border-search:                            0 !default;
+
+/// Controls the background color of the search field.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$color-search-bg:                          $color-grayscale-f5 !default;
+
+/// Controls the color of the text in the search field.
+/// @group header
+/// @access public
+/// @since 1.0.0
+
+$color-search-text:                        $color-grayscale-0 !default;
+
+/// The width of the side nav, if you are using the left hand layout.
+/// @group grid
+/// @access public
+/// @since 1.2.0
+
+$width-side-nav:                            240px !default;
+
+// Masthead
+// -----------------------------------------------------------------
+
+/// Controls all styling related to the masthead. This includes
+/// navigation, branding, and search.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
+.masthead {
+	@extend %clearfix;
+	background: $color-masthead-bg;
+	border: $border-masthead;
+	border-width: $border-width-masthead;
+	position: relative;
+}
+
+/// A wrapper for items in the masthead. Often used to restrict the
+/// masthead to a certain width without interfering with the background.
+/// @group layout
+/// @access public
+/// @since 1.0.0
+
+.masthead-container {
+	position: relative;
+}
+
+
+// =================================================================
+// Navigation
+// =================================================================
+
+nav {
+	font-family: $font-family-navigation;
+
+	a {
+		text-decoration: none;
+	}
+}
+
+// .search-toggle appears only when header is small and above, otherwise it's hidden
+.brand {
+	.search-toggle {
+		display: none;
+	}
+
+	.site-description {
+		float: left;
+		margin-left: 50px;
+		width: auto;
+	}
+}
+// quicksearch (use WordPress plugin class name)
+
+#quicksearch {
+	background: $color-search-bg;
+	display: none;
+	margin: 0;
+	padding: 30px 20px;
+	position: relative;
+
+	&.is-open {
+		border-bottom: $border-search;
+		display: block;
+	}
+
+	fieldset {
+		margin: 0;
+
+		@include breakpoint( sm ) {
+			margin: 0 auto;
+			max-width: $container-sm;
+			padding: 0 20px;
+		}
+	}
+}
+
+.search-field {
+	@include border-radius( $border-radius-quicksearch-input );
+	color: $color-search-text;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 75%;
+
+	@include breakpoint( sm ) {
+		width: 85%;
+	}
+}
+
+.search-submit {
+	@extend %button-styles-primary;
+	@include border-radius( $border-radius-quicksearch-button );
+	float: right;
+	padding: 11px 0 12px;
+	width: 25%;
+
+	@include breakpoint( sm ) {
+		width: 15%;
+	}
+}
+
+// search-toggle
+
+.search-toggle {
+	@extend %icon-search;
+	@include transition( color 200ms ease-in-out 0s );
+	color: $color-nav-toggle;
+	float: right;
+	font-size: 31px;
+	height: 60px;
+	line-height: 60px;
+	padding: 0;
+	text-align: center;
+	width: 60px;
+
+	&:visited {
+		color: $color-nav-toggle;
+	}
+
+	&:hover {
+		color: $color-nav-toggle-hover;
+	}
+
+	&.is-open {
+		@extend %icon-close;
+	}
+
+	span {
+		display: none;
+	}
+}
+
+// when nav or search are opened
+.is-open .primary-nav-menu,
+.is-open .utility-nav {
+	clear: left;
+	display: block;
+}
+
+
+// nav-toggle
+
+.nav-toggle {
+	@extend %hide-text;
+	cursor: pointer;
+	float: left;
+	height: 60px;
+	position: relative;
+	width: 60px;
+
+	@include breakpoint( sm ) {
+		display: none;
+	}
+
+	span {
+		@include transition( all, 250ms, ease-in-out, 0s );
+		background: $color-nav-toggle;
+		content: "";
+		cursor: pointer;
+		display: block;
+		height: 4px;
+		left: 15px;
+		position: absolute;
+		top: 28px;
+		width: 30px;
+
+		&::before,
+		&::after {
+			@include transition( all, 250ms, ease-in-out, 0s );
+			background: $color-nav-toggle;
+			content: "";
+			cursor: pointer;
+			display: block;
+			height: 4px;
+			left: 15px;
+			position: absolute;
+			top: 28px;
+			width: 30px;
+		}
+
+		&::before {
+			left: 0;
+			top: -10px;
+		}
+
+		&::after {
+			left: 0;
+			top: 10px;
+		}
+	}
+
+	&.is-open span {
+		background-color: transparent;
+
+		&::before,
+		&::after {
+			top: 0;
+		}
+
+		&::before {
+			@include rotate( 45 );
+		}
+
+		&::after {
+			@include rotate( -45 );
+		}
+	}
+}
+
+// primaryNav and menu
+
+.primary-nav {
+	@extend %clearfix;
+	background: $color-primary-nav-bg;
+	display: block;
+	padding: 0 10px;
+
+	&.is-open {
+		height: auto;
+		padding-bottom: 20px;
+
+		@include breakpoint( sm ) {
+			padding-bottom: 0;
+		}
+	}
+}
+
+.primary-nav-menu {
+	display: none;
+	margin: 40px 10px 0;
+
+	@include breakpoint( sm ) {
+		border: 0;
+		display: inline;
+		margin: 0;
+	}
+
+	li {
+		display: block;
+		zoom: 1;
+
+		@include breakpoint( sm ) {
+			border: 0;
+			display: inline-block;
+
+			.lt-ie8 & {
+				display: inline;
+			}
+		}
+
+		&:hover ul,
+		&:focus ul {
+			left: auto;
+		}
+
+		li {
+			display: block;
+			padding: 0 10px;
+
+			a {
+				color: $color-primary-nav-dropdown-link;
+				line-height: $line-height-base;
+				padding: 10px 0;
+
+				&:hover,
+				&:focus {
+					color: $color-primary-nav-dropdown-link-hover;
+				}
+			}
+		}
+	}
+
+	a {
+		border: 1px solid $color-primary-nav-border;
+		border-width: $border-width-primary-nav;
+		color: $color-primary-nav-link;
+		display: block;
+		padding: 10px 0;
+		text-decoration: none;
+
+		@include breakpoint( sm ) {
+			border: $border-primary-nav-desktop;
+			line-height: 60px;
+			padding: 0 10px;
+		}
+
+		&:hover,
+		&:focus {
+			color: $color-primary-nav-link-hover;
+		}
+
+		&.active,
+		&.active_section {
+			color: $color-primary-nav-link-current;
+		}
+	}
+
+	ul {
+		display: none;
+
+		@include breakpoint( sm ) {
+			background: $color-primary-nav-dropdown-bg;
+			display: block;
+			left: -9999px;
+			position: absolute;
+			width: 240px;
+			z-index: 2;
+		}
+	}
+}
+
+// utilityNav
+
+.utility-nav {
+	border: 1px solid $color-primary-nav-border;
+	border-width: $border-width-utility-nav;
+	color: $color-utility-nav-mobile-link;
+	display: none;
+	font-size: $font-size-utility-nav;
+	margin: 0 10px;
+	padding: 20px 0 0;
+	text-decoration: none;
+
+	@include breakpoint( sm ) {
+		color: $color-utility-nav-link;
+	}
+
+	li {
+		border: 0;
+		padding: 0;
+
+		@include breakpoint( sm ) {
+			*display: inline;
+			border: 0;
+			display: inline-block;
+			padding-left: 10px;
+		}
+	}
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			color: $color-utility-nav-mobile-link-hover;
+
+			@include breakpoint( sm ) {
+				color: $color-utility-nav-link-hover;
+			}
+		}
+	}
+
+	.masthead-container & {
+		@include breakpoint( sm ) {
+			border: 0;
+			display: block;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+// default
+
+.l-default {
+	.utility-nav {
+		@include breakpoint( sm ) {
+			line-height: 1;
+			position: absolute;
+			right: 20px;
+			top: ( $height-brand / 2 ) - ( $font-size-utility-nav / 2 );
+		}
+	}
+}
+
+// side-nav
+
+.l-side-nav {
+	.masthead::after {
+		@include breakpoint( sm ) {
+			display: none;
+		}
+	}
+
+	.wrapper {
+		background: $color-primary-nav-bg;
+	}
+
+	.primary-nav {
+		@include breakpoint( sm ) {
+			background: none;
+			float: left;
+			left: 0;
+			margin-left: -$width-side-nav + 60px;
+			position: relative;
+			top: 0;
+			width: $width-side-nav;
+
+			&.is-open {
+				left: $width-side-nav - 60px;
+
+				@include breakpoint( lg ) {
+					left: 0;
+				}
+			}
+		}
+
+		@include breakpoint( lg ) {
+			display: block;
+			margin-left: 0;
+			padding: 20px 10px;
+			width: $width-side-nav;
+		}
+	}
+
+	.nav-toggle {
+		@include breakpoint( sm ) {
+			float: right;
+			margin-right: -10px;
+		}
+	}
+
+	.primary-nav-menu {
+		@include breakpoint( sm ) {
+			display: none;
+			margin: 0 10px;
+		}
+
+		@include breakpoint( lg ) {
+			display: block;
+		}
+
+		li {
+			display: block;
+			padding: 0;
+
+			&:first-child {
+				a {
+					@include breakpoint( lg ) {
+						border: 0;
+					}
+				}
+			}
+		}
+
+		a {
+			border: 1px solid $color-primary-nav-border;
+			border-width: $border-width-primary-nav;
+			line-height: $line-height-base;
+			padding: 10px 0;
+		}
+
+		ul {
+			display: none;
+		}
+	}
+}
+
+.l-side-nav .search-toggle {
+	//top: $height-brand + 30px;
+	color: $color-grayscale-f;
+	position: absolute;
+	right: 0;
+
+	@include breakpoint( sm ) {
+		@include vertical-center;
+		color: $color-nav-toggle-alt;
+		display: block;
+		position: relative;
+		right: 10px;
+	}
+
+	&:active,
+	&:visited {
+		color: currentColor;
+	}
+
+	&:hover {
+		color: currentColor;
+
+		@include breakpoint( sm ) {
+			color: $color-nav-toggle-alt-hover;
+		}
+	}
+}
+
+$_search-height: 103px;
+
+.search-open.l-side-nav {
+	.primary-nav {
+		@include breakpoint( sm ) {
+			top: $_search-height; // adds the height of the open search form
+		}
+	}
+	.content {
+		@include breakpoint( sm ) {
+			margin-top: $_search-height; // adds the height of the open search form
+		}
+	}
+}
+
+// side-nav and no-nav: quicksearch
+.l-side-nav {
+	#quicksearch {
+		@include breakpoint( sm ) {
+			border: 1px solid $color-quicksearch-border;
+			border-width: $border-width-quicksearch;
+			position: absolute;
+			width: 100%;
+		}
+	}
+
+	.primary-nav {
+		.search-toggle {
+			@include breakpoint( sm ) {
+				display: none;
+			}
+		}
+	}
+
+	.nav-toggle {
+		display: block;
+
+		@include breakpoint( lg ) {
+			display: none;
+		}
+	}
+
+	.masthead-container .utility-nav {
+		margin: 0 10px;
+
+		@include breakpoint( lg ) {
+			display: block;
+			position: relative;
+			right: auto;
+			top: auto;
+		}
+	}
+
+	.utility-nav li {
+		display: block;
+		padding-left: 0;
+	}
+
+	&.nav-open {
+		.content {
+			@include breakpoint( sm ) {
+				left: $width-side-nav - 60px;
+			}
+
+			@include breakpoint( lg ) {
+				left: 0;
+			}
+		}
+
+		.nav-toggle {
+			float: left;
+			margin-left: -10px;
+		}
+
+		.primary-nav-menu,
+		.utility-nav {
+			display: block;
+			float: none;
+		}
+	}
+}
+
+// top nav
+
+.l-top-nav {
+	.utility-nav {
+		@include breakpoint( sm ) {
+			line-height: 1;
+			position: absolute;
+			right: 20px;
+			top: ( ( $height-brand / 2 ) - ( $font-size-utility-nav / 2 ) ) + 60;
+		}
+	}
+
+	#quicksearch {
+		border-bottom: 1px solid $color-grayscale-d;
+	}
+}
+
+.l-top-nav.search-open .utility-nav {
+	@include breakpoint( sm ) {
+		top: 209px;
+	}
+}
+
+// no-nav
+
+.l-no-nav {
+	.primary-nav {
+		@include breakpoint( sm ) {
+			display: none;
+		}
+	}
+
+	.brand {
+		padding-right: 60px;
+
+		.search-toggle {
+			color: $color-nav-toggle-alt;
+			display: block;
+			font-size: 24px;
+			margin: 0 -60px 0 0;
+
+			@include breakpoint( sm ) {
+				@include vertical-center;
+				display: block;
+				right: 10px;
+			}
+
+			&:visited {
+				color: $color-nav-toggle-alt;
+			}
+
+			&:hover {
+				color: $color-nav-toggle-alt-hover;
+			}
+		}
+	}
+
+	#quicksearch {
+		border-top: 1px solid $color-grayscale-d;
+	}
+
+	.masthead-container {
+		.utility-nav {
+			display: none;
+
+			@include breakpoint( sm ) {
+				display: block;
+				position: absolute;
+				right: 80px;
+				top: ( $height-brand / 2 ) - ( $font-size-utility-nav / 2 ) - 5;
+			}
+		}
+	}
+}

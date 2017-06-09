@@ -1,5 +1,129 @@
 // =================================================================
-// Comments
+// Comments Settings
+// =================================================================
+
+/// Controls the amount of spacing between comment threads on a post.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$comment-margin:                           20px !default;
+
+/// Controls the amount of spacing between comment threads on a post on mobile.
+/// @group news
+/// @access public
+/// @since 2.0.0
+
+$comment-margin-mobile:               $comment-margin / 2 !default;
+
+/// Controls the amount of spacing between comments within a thread on desktop.
+/// By default, there is no margin between comments on mobile.
+/// @group news
+/// @access public
+/// @since 2.0.0
+
+$comment-reply-margin:                      10px !default;
+
+/// Controls the amount of space a reply comment is indented from the parent.
+/// @group news
+/// @access public
+/// @since 2.0.0
+
+$comment-reply-depth:                      15px !default;
+
+/// Controls the amount of space a reply comment is indented from the parent on mobile.
+/// @group news
+/// @access public
+/// @since 2.0.0
+
+$comment-reply-depth-mobile:               $comment-reply-depth / 3 !default;
+
+/// Controls the border style between comments on a post.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$border-comment:                           $border-base !default;
+
+/// Controls the border width between comments on a post.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$border-width-comment:                      1px 1px 1px 5px !default;
+
+/// Controls the amount of spacing within comments.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$comment-padding:                           15px !default;
+
+/// Controls the amount of spacing within comments on mobile.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$comment-padding-mobile:                           10px !default;
+
+/// Controls the font family used for comments on a post.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$font-family-comment:                       $font-family-sans-serif !default;
+
+/// Controls the color of comments on a post.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$color-comments:                           $color-base !default;
+
+/// Controls the color of replies to comments on a post.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$color-comment-reply:                      $color-grayscale-8 !default;
+
+/// Controls the color of the author name in a comment.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$color-comment-author-name:                 $color-grayscale-0 !default;
+
+/// Controls the color of the "says" text after author name in a comment.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$color-comment-author-says:                     $color-grayscale-8 !default;
+
+/// Controls the background color of the comment submission form.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$color-comment-form-bg:                     $color-grayscale-f5 !default;
+
+/// Controls the border style on the comment submission form.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$border-comment-form:                       1px solid $color-grayscale-e !default;
+
+/// Controls the border width on the comment submission form.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$border-width-comment-form:                  3px !default;
+
+// =================================================================
+// Comments Styles
 // =================================================================
 
 /// Controls styling for the comments section on posts.

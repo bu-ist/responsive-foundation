@@ -1,57 +1,63 @@
 // =================================================================
 // Styling for the WordPress theme framework
+//
+// BURF Theme contains styles that work with the Boston University
+// WordPress environment. If you're not using WordPress for your
+// project, you probably don't need these styles. You can import
+// just BURF Base for special situations where you don't need all
+// the extra styling to support WordPress.
+//
 // =================================================================
 
-// variables
-@import 'burf-theme/variables';
+// =================================================================
+// Content and Shortcodes
+// =================================================================
 
-// layout
-@import 'burf-theme/layout';
+@import "burf-theme/content/collapsibles";
+@import "burf-theme/content/courses";
+@import "burf-theme/content/galleries";
+@import "burf-theme/profiles/profile-format-default";
+@import "burf-theme/profiles/profile-format-basic";
+@import "burf-theme/profiles/profile-format-advanced";
+@import "burf-theme/profiles/profile-format-mini";
+@import "burf-theme/content/slideshows";
+@import "burf-theme/content/wordpress-editor";
 
-// branding
-@import 'burf-theme/branding';
+// =================================================================
+// Widgets
+// =================================================================
 
-// icons
-@import 'burf-theme/icons/base'; // Required
-	@import 'burf-theme/icons/social'; // Required
-	@import 'burf-theme/icons/actions'; // Required
-	@import 'burf-theme/icons/arrows';
-	@import 'burf-theme/icons/charts';
-	@import 'burf-theme/icons/communication';
-	@import 'burf-theme/icons/documents';
-	@import 'burf-theme/icons/ecommerce';
-	@import 'burf-theme/icons/editing';
-	@import 'burf-theme/icons/location';
-	@import 'burf-theme/icons/media';
-	@import 'burf-theme/icons/objects';
-	@import 'burf-theme/icons/status';
-	@import 'burf-theme/icons/technology';
-	@import 'burf-theme/icons/time';
-	@import 'burf-theme/icons/transportation';
+@import "burf-theme/widgets/widgets";
+@import "burf-theme/calendar/widget-calendar";
+@import "burf-theme/calendar/calendar-picker";
+@import "burf-theme/widgets/widget-navigation";
+@import "burf-theme/widgets/widget-posts";
 
-// navigation
-@import 'burf-theme/navigation';
+// =================================================================
+// Layout
+// =================================================================
 
-// utilities
-@import 'burf-theme/utilities';
+@import "burf-theme/layout/branding";
+@import "burf-theme/layout/navigation";
+@import "burf-theme/layout/banner";
+@import "burf-theme/layout/content-area";
+@import "burf-theme/layout/footer";
 
-// comments
-@import 'burf-theme/comments';
+// =================================================================
+// Templates
+// =================================================================
 
-// templates
-@import 'burf-theme/templates/base';
-	@import 'burf-theme/templates/archive'; // News and archive
-	@import 'burf-theme/templates/single'; // Single post
-	@import 'burf-theme/templates/calendar-archive'; // Calendar listing
-	@import 'burf-theme/templates/calendar-single'; // Calendar event
-	@import 'burf-theme/templates/profile-archive'; // Profiles listing
-	@import 'burf-theme/templates/profile-single'; // Single profile
+@import "burf-theme/news/base";
+@import "burf-theme/news/comments";
 
-// widgets
-@import 'burf-theme/widgets';
+// Archive Templates
 
-// plugins
-@import 'burf-theme/plugins';
+@import "burf-theme/news/archive";
+@import "burf-theme/calendar/calendar-archive";
+@import "burf-theme/profiles/profile-archive";
 
-// wordpress standard shortcodes
-@import 'burf-theme/gallery';
+// Single Templates
+
+@import "burf-theme/news/single";
+@import "burf-theme/calendar/calendar-single";
+@import "burf-theme/profiles/profile-single";
