@@ -269,7 +269,7 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 	@include breakpoint( md ) {
 		color: $color-grayscale-9;
 		display: block;
-		font-family: $font-family-base; // TODO: inherits whitney from brand if you take away
+		font-family: $font-family-base;
 	}
 }
 

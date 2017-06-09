@@ -135,6 +135,15 @@ $_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( (
 	border-width: $border-width-footbar;
 	padding-bottom: $footbar-padding-bottom;
 	width: 100%;
+
+	a {
+		color: $color-footbar-widget-link;
+
+		&:hover,
+		&:focus {
+			color: $color-footbar-widget-link-hover;
+		}
+	}
 }
 
 /// Controls styling for the footbar container and width of widgets inside.
@@ -166,22 +175,6 @@ $_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( (
 				clear: left;
 				margin-left: 0;
 			}
-		}
-	}
-}
-
-/// Handles styling for widgets in the footer.
-/// @group widgets
-/// @access public
-/// @since 1.0.0
-
-.footbar {
-	a {
-		color: $color-footbar-widget-link;
-
-		&:hover,
-		&:focus {
-			color: $color-footbar-widget-link-hover;
 		}
 	}
 }

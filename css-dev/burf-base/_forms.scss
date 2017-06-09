@@ -90,7 +90,7 @@ $color-input-focus-border:                  #129fea !default;
 	}
 
 	// Firefox: Get rid of the inner focus border
-	&:-moz-focus-inner {
+	&::-moz-focus-inner {
 		border: 0;
 		padding: 0;
 	}

@@ -145,9 +145,9 @@ $_width-calendar-date: 48px;
 .widget-calendar-date-graphic {
 	color: $color-widget-calendar-date;
 	display: table-cell;
-	width: $_width-calendar-date;
 	line-height: 1.1;
 	text-align: center;
+	width: $_width-calendar-date;
 }
 
 /// Styles the day of the month in the calendar widget graphic format.
@@ -180,13 +180,13 @@ $_width-calendar-date: 48px;
 .widget-calendar-title-graphic {
 	display: table-cell;
 	padding-left: 10px;
-	vertical-align: middle;
 	text-decoration: underline;
+	vertical-align: middle;
 }
 
 .widgetnav,
 .widget_archive ul,
 .widget_categories ul { // maybe not though, there are nested categories
-	padding: 0;
 	margin: 0;
+	padding: 0;
 }

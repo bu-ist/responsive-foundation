@@ -193,7 +193,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 %resposive-table-styles {
 	position: relative;
 
-	@include breakpoint( "max-width: #{$container_md}" ) {
+	@include breakpoint( "max-width: #{$container-md}" ) {
 		margin: 35px 0;
 		-webkit-overflow-scrolling: touch;
 		-ms-overflow-style: -ms-autohiding-scrollbar;

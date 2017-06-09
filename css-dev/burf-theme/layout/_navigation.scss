@@ -352,7 +352,7 @@ nav {
 	@extend %button-styles-primary;
 	@include border-radius( $border-radius-quicksearch-button );
 	float: right;
-	padding: 11px 0 12px 0;
+	padding: 11px 0 12px;
 	width: 25%;
 
 	@include breakpoint( sm ) {
@@ -459,11 +459,11 @@ nav {
 		}
 
 		&::before {
-			@include rotate (45);
+			@include rotate( 45 );
 		}
 
 		&::after {
-			@include rotate (-45);
+			@include rotate( -45 );
 		}
 	}
 }
@@ -488,10 +488,10 @@ nav {
 
 .primary-nav-menu {
 	display: none;
-	margin: 40px 10px 0 10px;
+	margin: 40px 10px 0;
 
 	@include breakpoint( sm ) {
-		border: none;
+		border: 0;
 		display: inline;
 		margin: 0;
 	}
@@ -501,7 +501,7 @@ nav {
 		zoom: 1;
 
 		@include breakpoint( sm ) {
-			border: none;
+			border: 0;
 			display: inline-block;
 
 			.lt-ie8 & {
@@ -519,9 +519,9 @@ nav {
 			padding: 0 10px;
 
 			a {
-				padding: 10px 0;
-				line-height: $line-height-base;
 				color: $color-primary-nav-dropdown-link;
+				line-height: $line-height-base;
+				padding: 10px 0;
 
 				&:hover,
 				&:focus {
@@ -532,8 +532,8 @@ nav {
 	}
 
 	a {
-		border-width: $border-width-primary-nav;
 		border: 1px solid $color-primary-nav-border;
+		border-width: $border-width-primary-nav;
 		color: $color-primary-nav-link;
 		display: block;
 		padding: 10px 0;
@@ -573,8 +573,8 @@ nav {
 // utilityNav
 
 .utility-nav {
-	border-width: $border-width-utility-nav;
 	border: 1px solid $color-primary-nav-border;
+	border-width: $border-width-utility-nav;
 	color: $color-utility-nav-mobile-link;
 	display: none;
 	font-size: $font-size-utility-nav;
@@ -587,13 +587,13 @@ nav {
 	}
 
 	li {
-		border: none;
+		border: 0;
 		padding: 0;
 
 		@include breakpoint( sm ) {
-			border: none;
-			display: inline-block;
 			*display: inline;
+			border: 0;
+			display: inline-block;
 			padding-left: 10px;
 		}
 	}
@@ -612,7 +612,7 @@ nav {
 
 	.masthead-container & {
 		@include breakpoint( sm ) {
-			border: none;
+			border: 0;
 			display: block;
 			margin: 0;
 			padding: 0;
@@ -620,8 +620,7 @@ nav {
 	}
 }
 
-/* default
------------------------------------------------------------------ */
+// default
 
 .l-default {
 	.utility-nav {
@@ -629,16 +628,15 @@ nav {
 			line-height: 1;
 			position: absolute;
 			right: 20px;
-			top: ($height-brand / 2) - ($font-size-utility-nav / 2);
+			top: ( $height-brand / 2 ) - ( $font-size-utility-nav / 2) ;
 		}
 	}
 }
 
-/* side-nav
------------------------------------------------------------------ */
+// side-nav
 
 .l-side-nav {
-	.masthead:after {
+	.masthead::after {
 		@include breakpoint( sm ) {
 			display: none;
 		}
@@ -706,8 +704,8 @@ nav {
 		}
 
 		a {
-			border-width: $border-width-primary-nav;
 			border: 1px solid $color-primary-nav-border;
+			border-width: $border-width-primary-nav;
 			line-height: $line-height-base;
 			padding: 10px 0;
 		}
@@ -736,6 +734,7 @@ nav {
 	&:visited {
 		color: currentColor;
 	}
+
 	&:hover {
 		color: currentColor;
 
@@ -764,8 +763,8 @@ $_search-height: 103px;
 .l-side-nav {
 	#quicksearch {
 		@include breakpoint( sm ) {
-			border-width: $border-width-quicksearch;
 			border: 1px solid $color-quicksearch-border;
+			border-width: $border-width-quicksearch;
 			position: absolute;
 			width: 100%;
 		}
@@ -827,8 +826,7 @@ $_search-height: 103px;
 	}
 }
 
-/* top nav
------------------------------------------------------------------ */
+// top nav
 
 .l-top-nav {
 	.utility-nav {
@@ -897,7 +895,7 @@ $_search-height: 103px;
 				display: block;
 				position: absolute;
 				right: 80px;
-				top: ($height-brand / 2) - ($font-size-utility-nav / 2) - 5;
+				top: ( $height-brand / 2 ) - ( $font-size-utility-nav / 2 ) - 5;
 			}
 		}
 	}
