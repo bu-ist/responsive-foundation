@@ -1,0 +1,81 @@
+// -----------------------------------------------------------------
+// Profile Listing and Archive Templates
+// -----------------------------------------------------------------
+
+/// Styles for all profile listings.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-listing {
+	@extend %clearfix;
+	padding: 0;
+}
+
+/// Styles for all profile items in a listing.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-item {
+	list-style: none;
+	margin-bottom: 25px;
+	position: relative;
+}
+
+/// Styles for all profile photos.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-photo {
+	@include border-radius( $border-radius-profile-figure );
+	overflow: hidden;
+
+	img {
+		display: block;
+		height: auto;
+		width: 100%;
+	}
+}
+
+/// Styles for all profile names.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-name {
+	color: $color-profile-name;
+	margin-bottom: 0;
+	text-decoration: underline;
+}
+
+/// Styles for all profile titles.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-title {
+	color: $color-profile-title;
+	display: block;
+}
+
+/// Styles for all profile links.
+/// Since links are usually wrapped around the whole profile,
+/// we leave link styling to specific child elements to avoid
+/// visual chaos.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-link {
+	display: block;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		.profile-name {
+			text-decoration: none;
+		}
+	}
+}

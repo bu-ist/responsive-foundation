@@ -1,0 +1,72 @@
+/// Styles the advanced profile format.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-format-advanced {
+	@extend %clearfix;
+}
+
+/// A helper variable to determine which grid class to extend
+/// for advanced profile items at the `xs` breakpoint.
+/// @group profiles
+/// @access private
+/// @since 2.0.0
+
+$_profile-adv-cols-xs: $grid-number-columns / $profiles-advanced-cols-xs;
+
+/// A helper variable to determine which grid class to extend
+/// for advanced profile items at the `md` breakpoint.
+/// @group profiles
+/// @access private
+/// @since 2.0.0
+
+$_profile-adv-cols-md: $grid-number-columns / $profiles-advanced-cols-md;
+
+/// Styles an advanced profile item.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-item-advanced {
+	@extend %col-xs-#{$_profile-adv-cols-xs};
+	@extend %col-md-#{$_profile-adv-cols-md};
+
+	@include breakpoint( md ) {
+		&:nth-child( #{$profiles-advanced-cols-md}n+1 ) {
+			clear: left;
+		}
+	}
+
+	&:nth-child( #{$profiles-advanced-cols-xs}n+1 ) {
+		clear: left;
+
+		@include breakpoint( md ) {
+			clear: none;
+		}
+	}
+}
+
+/// Styles an advanced profile item link.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-link-advanced {
+	display: block;
+	padding: 0 15px;
+	text-align: center;
+}
+
+/// Styles an advanced profile item photo.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-photo-advanced {
+	height: 150px;
+	margin: 0 auto 15px;
+	overflow: hidden;
+	width: 150px;
+}
+

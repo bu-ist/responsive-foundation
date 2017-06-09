@@ -1,0 +1,67 @@
+/// A helper variable to determine which grid class to extend
+/// for mini profile items at the `sm` breakpoint.
+/// @group profiles
+/// @access private
+/// @since 2.0.0
+
+$_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
+
+/// Styles the mini profile format.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-item-mini {
+	@extend %clearfix;
+	@extend %col-sm-#{$_profile-mini-cols-sm};
+
+	&:nth-child(#{$profiles-mini-cols-sm}n+1) {
+		clear: left;
+		padding-right: 15px;
+	}
+}
+
+/// Styles the mini profile photo.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-photo-mini {
+	@extend %col-2;
+	height: 0;
+	padding-bottom: 16%;
+}
+
+/// Styles the mini profile details.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-details-mini {
+	@extend %col-10;
+	padding-left: 20px;
+
+	p {
+		@extend %font-size-minimum;
+	}
+}
+
+/// Styles the mini profile name.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-name-mini {
+	color: inherit;
+	text-decoration: none;
+}
+
+/// Styles the mini profile email.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-email-mini {
+	margin: 5px 0;
+	word-wrap: break-word;
+}
