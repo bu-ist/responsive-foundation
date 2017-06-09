@@ -1,9 +1,53 @@
 // =================================================================
-// Utilities
+// WordPress WYSIWYG Settings
 // =================================================================
 
-// components
-// -----------------------------------------------------------------
+/// The margin to use around anything floated in the content area.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$margin-floated-content: 						 10px !default;
+
+/// The font to use for captions.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$font-family-caption:                       $font-family-sans-serif !default;
+
+/// The color to use for captions.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$color-caption:                            $color-grayscale-6 !default;
+
+/// The border color to use in tables.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$border-color-table:                        $color-grayscale-d !default;
+
+/// A darker border color to use in tables.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$border-color-table-dark:                   $color-grayscale-9 !default;
+
+/// The shadow to use in tables.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$box-shadow-table:                          inset -20px 0 20px -10px $color-grayscale-f0 !default;
+
+
+// =================================================================
+// WordPress WYSIWYG Styles
+// =================================================================
 
 /// Provides a link for clients to edit the page within the page content.
 /// @group wp-admin
@@ -67,9 +111,6 @@
 .ui-helper-hidden-accessible {
 	@extend %visuallyhidden;
 }
-
-// WordPress content area markup
-// -----------------------------------------------------------------
 
 /// A placeholder just for align. Not meant to be extended elsewhere.
 /// @group utilities
@@ -199,6 +240,10 @@
 /// @access public
 /// @since 1.0.0
 
-.content p code {
-	font-size: 90%;
+.content {
+	p {
+		code {
+			font-size: 90%;
+		}
+	}
 }

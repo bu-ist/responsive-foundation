@@ -1,12 +1,16 @@
 // =================================================================
 // Styling for the WordPress theme framework
+//
+// BURF Theme contains styles that work with the Boston University
+// WordPress environment. If you're not using WordPress for your
+// project, you probably don't need these styles. You can import
+// just BURF Base for special situations where you don't need all
+// the extra styling to support WordPress.
+//
 // =================================================================
 
-// variables
-@import 'burf-theme/variables';
-
 // =================================================================
-// Content
+// Content and Shortcodes
 // =================================================================
 
 @import 'burf-theme/content/collapsibles';
@@ -17,6 +21,7 @@
 @import 'burf-theme/profiles/profile-format-advanced';
 @import 'burf-theme/profiles/profile-format-mini';
 @import 'burf-theme/content/slideshows';
+@import 'burf-theme/content/wordpress-editor';
 
 // =================================================================
 // Widgets
@@ -53,9 +58,6 @@
 
 // Single Templates
 
-@import 'burf-theme/news/single'; // Single post
-@import 'burf-theme/calendar/calendar-single'; // Calendar event
-@import 'burf-theme/profiles/profile-single'; // Single profile
-
-// utilities
-@import 'burf-theme/utilities';
+@import 'burf-theme/news/single';
+@import 'burf-theme/calendar/calendar-single';
+@import 'burf-theme/profiles/profile-single';
