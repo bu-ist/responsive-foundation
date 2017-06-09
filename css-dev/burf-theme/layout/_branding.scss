@@ -2,28 +2,6 @@
 // Branding
 // =================================================================
 
-/// The default font for body copy.
-/// @group global
-/// @access public
-/// @since 1.0.0
-
-$font-family-base:                          "Benton", sans-serif !default;
-
-/// A serif font to use in your theme. This variable is not used by default.
-/// @group global
-/// @access public
-/// @since 1.0.0
-
-$font-family-serif:                         "TiemposText", Georgia, serif !default;
-
-/// A sans-serif font to use in your theme.
-/// By default, this affects the site footer and label text in profiles.
-/// @group global
-/// @access public
-/// @since 1.0.0
-
-$font-family-sans-serif:                     "Benton", "Helvetica", sans-serif !default;
-
 /// The font to use for branding.
 /// You may not change this unless you have permission from Marketing &amp; Communications.
 /// @group branding

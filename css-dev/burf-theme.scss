@@ -3,7 +3,7 @@
 // =================================================================
 
 // variables
-//@import 'burf-theme/variables';
+@import 'burf-theme/variables';
 
 // widgets
 @import 'burf-theme/widgets/global';
@@ -32,10 +32,6 @@
 	@import 'burf-theme/templates/calendar-single'; // Calendar event
 	@import 'burf-theme/templates/profile-archive'; // Profiles listing
 	@import 'burf-theme/templates/profile-single'; // Single profile
-	@import 'burf-theme/templates/news-archive'; // News listing
-	@import 'burf-theme/templates/news-single'; // Single news
-	@import 'burf-theme/templates/grid-archive'; // Grid archive
-
 
 // plugins
 @import 'burf-theme/plugins';
