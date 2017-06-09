@@ -2,8 +2,6 @@
 // Variables
 // =================================================================
 
-// TODO: Needs cleanup
-
 /// Whether or not to print media queries in your stylesheet.
 /// If you set this to false, it will print media queries in the
 /// order they are declared so that desktop styles will always
@@ -78,7 +76,7 @@ $container-md:                             970px !default;
 
 $container-lg:                             1170px !default;
 
-// TODO: Z-Index Variables
+// Z-Index Variables
 
 $z-index-1:                                 100;
 $z-index-2:                                 200;
@@ -95,7 +93,7 @@ $z-index-10:                                1000;
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
-// TODO: Typography
+// Typography
 //
 // base     = p
 // small    = h6
