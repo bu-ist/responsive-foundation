@@ -1,3 +1,11 @@
+/// Controls the style of border used on profile callouts.
+/// By default, this applies to the basic format only.
+/// @group profiles
+/// @access public
+/// @since 1.0.0
+
+$border-profiles:                          $border-base !default;
+
 /// Styles the basic profile format.
 /// @group profiles
 /// @access public
