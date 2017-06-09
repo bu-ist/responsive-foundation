@@ -1,3 +1,20 @@
+/// Controls the number of profiles in a row in the advanced format.
+/// Kicks in at the extra small breakpoint.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+$profiles-advanced-cols-xs:			2 !default;
+
+/// Controls the number of profiles in a row in the advanced format.
+/// Kicks in at the medium breakpoint.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+$profiles-advanced-cols-md:			3 !default;
+
+
 /// Styles the advanced profile format.
 /// @group profiles
 /// @access public

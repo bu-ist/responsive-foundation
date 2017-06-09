@@ -291,14 +291,6 @@ $color-single-event-label:               $color-grayscale-9 !default;
 // Profiles Template: List
 // -----------------------------------------------------------------
 
-/// Controls the style of border used on profile callouts.
-/// By default, this applies to the basic format only.
-/// @group profiles
-/// @access public
-/// @since 1.0.0
-
-$border-profiles:                          $border-base !default;
-
 /// Controls the shape of the profile photo.
 /// By default, this is set to a circle.
 /// @group profiles
@@ -330,19 +322,3 @@ $color-profile-title:                      $color-base !default;
 /// @since 1.0.0
 
 $color-profile-info-label:                 $color-grayscale-a !default;
-
-/// Controls the number of profiles in a row in the advanced format.
-/// Kicks in at the extra small breakpoint.
-/// @group profiles
-/// @access public
-/// @since 2.0.0
-
-$profiles-advanced-cols-xs:			2 !default;
-
-/// Controls the number of profiles in a row in the advanced format.
-/// Kicks in at the medium breakpoint.
-/// @group profiles
-/// @access public
-/// @since 2.0.0
-
-$profiles-advanced-cols-md:			3 !default;
