@@ -41,7 +41,7 @@ $border-footbar:                           1px solid $color-footbar-border !defa
 /// @access public
 /// @since 1.0.0
 
-$border-width-footbar:                      $border-top !default;
+$border-width-footbar:                      1px 0 0 0 !default;
 
 /// Controls the background of the footer widget container.
 /// @group footer

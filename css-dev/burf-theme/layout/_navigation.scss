@@ -25,7 +25,7 @@ $border-masthead:                          $border-base !default;
 /// @access public
 /// @since 1.0.0
 
-$border-width-masthead:                     $border-bottom !default;
+$border-width-masthead:                     0 0 1px 0 !default;
 
 /// The background color of the masthead.
 /// Bright colors are not recommended.
@@ -44,7 +44,7 @@ $color-masthead-bg:                        $color-grayscale-f !default;
 /// @access public
 /// @since 1.0.0
 
-$border-width-primary-nav:                   $border-top !default;
+$border-width-primary-nav:                   1px 0 0 0 !default;
 
 /// The width of border used on primary navigation at desktop sizes.
 /// @group primary-navigation
@@ -127,7 +127,7 @@ $color-primary-nav-dropdown-link-hover:     $color-primary-nav-link-hover !defau
 /// @access public
 /// @since 1.0.0
 
-$border-width-utility-nav:                   $border-top !default;
+$border-width-utility-nav:                   1px 0 0 0 !default;
 
 /// The font size used in the utility navigation.
 /// @group utility-navigation
@@ -208,7 +208,7 @@ $color-nav-toggle-alt-hover:                $color-grayscale-0 !default;
 /// @access public
 /// @since 1.0.0
 
-$border-width-quicksearch:                  $border-top !default;
+$border-width-quicksearch:                  1px 0 0 0 !default;
 
 /// Controls the color of the border used on the search form.
 /// @group header
