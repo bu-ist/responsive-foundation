@@ -102,6 +102,14 @@ $color-site-footer-link-hover:					 $color-grayscale-f !default;
 // Footbar
 // -----------------------------------------------------------------
 
+/// Sets the number of supported widgets in the footbar.
+/// Matches the number of columns in the theme by default.
+/// @group grid
+/// @access public
+/// @since 1.2.0
+
+$number-widgets-footbar: 						 $number-columns !default;
+
 /// The width a widget should take up, including the margin, in the footbar.
 /// First, width gets equally divided among widgets.
 /// Next, calculate the amount of margin you need to subtract from the width.

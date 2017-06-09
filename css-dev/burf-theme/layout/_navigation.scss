@@ -252,6 +252,13 @@ $color-search-bg:                          $color-grayscale-f5 !default;
 
 $color-search-text:                        $color-grayscale-0 !default;
 
+/// The width of the side nav, if you are using the left hand layout.
+/// @group grid
+/// @access public
+/// @since 1.2.0
+
+$width-side-nav:                            240px !default;
+
 // Masthead
 // -----------------------------------------------------------------
 
