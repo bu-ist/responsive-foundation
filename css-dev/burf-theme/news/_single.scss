@@ -2,6 +2,49 @@
 // Single Post Settings
 // =================================================================
 
+/// The style of the border on comments and items using the card styles.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
+$border-message:                           $border-base !default;
+
+/// The width of the border on comments and items using the card styles.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
+$border-width-message:                      1px 1px 1px 5px !default;
+
+/// The amount of rounding (border radius) to apply to the corners
+/// of comments.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
+$border-radius-message:                     3px !default;
+
+/// The amount of padding to apply to comments.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
+$padding-message:                          20px !default;
+
+/// The background of comments.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
+$color-message-bg:                         $color-grayscale-f0 !default;
+
+/// The left border color of comments.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
+$color-message-border-left:                 $color-grayscale-0 !default;
+
 /// Controls the padding of the metadata card at the bottom of news posts
 /// on the single post template.
 /// @group news
@@ -54,6 +97,33 @@ $color-single-meta-border-left:             $color-message-border-left !default;
 // =================================================================
 // Single Post Styles
 // =================================================================
+
+/// Controls card-like styles used throughout Foundation.
+/// By default, this controls single profile info styling in the sidebar,
+/// the metadata styling at the bottom of single posts, and the date summary.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
+%card-styles {
+	@extend %font-size-secondary;
+	@include border-radius( $border-radius-message );
+	background-color: $color-message-bg;
+	border: $border-message;
+	border-left-color: $color-message-border-left;
+	border-width: $border-width-message;
+	padding: $padding-message;
+}
+
+/// Controls the styling for messages.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
+.message {
+	@extend %card-styles;
+}
+
 
 /// Handles styling for the metadata card at the bottom of posts.
 /// @group news

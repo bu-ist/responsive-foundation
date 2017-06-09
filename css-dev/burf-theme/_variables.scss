@@ -13,53 +13,6 @@
 // -----------------------------------------------------------------
 
 
-
-// Message
-// -----------------------------------------------------------------
-
-/// The style of the border on comments.
-/// @group comments
-/// @access public
-/// @since 1.0.0
-
-$border-message:                           $border-base !default;
-
-/// The width of the border on comments.
-/// @group comments
-/// @access public
-/// @since 1.0.0
-
-$border-width-message:                      1px 1px 1px 5px !default;
-
-/// The amount of rounding (border radius) to apply to the corners
-/// of comments.
-/// @group comments
-/// @access public
-/// @since 1.0.0
-
-$border-radius-message:                     3px !default;
-
-/// The amount of padding to apply to comments.
-/// @group comments
-/// @access public
-/// @since 1.0.0
-
-$padding-message:                          20px !default;
-
-/// The background of comments.
-/// @group comments
-/// @access public
-/// @since 1.0.0
-
-$color-message-bg:                         $color-grayscale-f0 !default;
-
-/// The left border color of comments.
-/// @group comments
-/// @access public
-/// @since 1.0.0
-
-$color-message-border-left:                 $color-grayscale-0 !default;
-
 // Wordpress WYSIWYG
 // -----------------------------------------------------------------
 
@@ -104,33 +57,3 @@ $border-color-table-dark:                   $color-grayscale-9 !default;
 /// @since 1.0.0
 
 $box-shadow-table:                          inset -20px 0 20px -10px $color-grayscale-f0 !default;
-
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// Content and Templates
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-
-// All content and templates
-// -----------------------------------------------------------------
-
-/// Controls the shape used in "back" links, such as the links you
-/// see at the bottom of the page when viewing a single profile.
-/// By default, this is an arrow.
-/// @group content
-/// @access public
-/// @since 1.0.0
-
-$back-link-before:                          "← " !default;
-
-/// Controls the color of the arrow in "back" links, such as the links you
-/// see at the bottom of the page when viewing a single profile.
-/// @group content
-/// @access public
-/// @since 1.0.0
-
-$color-back-link-before:                    $color-grayscale-f !default;
