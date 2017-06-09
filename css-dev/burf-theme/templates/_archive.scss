@@ -1,6 +1,40 @@
-// -----------------------------------------------------------------
-// News & Archive Template
-// -----------------------------------------------------------------
+// =================================================================
+// Post Archive Settings
+// =================================================================
+
+/// Controls the border style between posts on post listing templates.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$border-news-post:                         $border-base !default;
+
+/// Controls the border width between posts on post listing templates.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$border-width-news-post:                    1px 0 0 0 !default;
+
+/// Controls the color of the separators between metadata.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$color-news-meta-em:                        $color-grayscale-7 !default;
+
+/// Controls the shape of the separators between metadata.
+/// By default, this is set to a dot.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$color-news-meta-before:                    $color-grayscale-a !default;
+
+
+// =================================================================
+// Post Archive Styles
+// =================================================================
 
 .meta {
 	@extend %font-size-secondary;
