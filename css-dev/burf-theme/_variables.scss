@@ -287,38 +287,3 @@ $font-weight-calendar-label:                700 !default;
 /// @since 1.0.0
 
 $color-single-event-label:               $color-grayscale-9 !default;
-
-// Profiles Template: List
-// -----------------------------------------------------------------
-
-/// Controls the shape of the profile photo.
-/// By default, this is set to a circle.
-/// @group profiles
-/// @access public
-/// @since 1.0.0
-
-$border-radius-profile-figure:              50% !default;
-
-/// Controls the color used for profile names in the profile
-/// listing template.
-/// @group profiles
-/// @access public
-/// @since 1.0.0
-
-$color-profile-name:                       $color-link !default;
-
-/// Controls the color used for profile titles in the profile
-/// listing template.
-/// @group profiles
-/// @access public
-/// @since 1.0.0
-
-$color-profile-title:                      $color-base !default;
-
-/// Controls the color used for labels in the single profile
-/// listing template sidebar.
-/// @group profiles
-/// @access public
-/// @since 1.0.0
-
-$color-profile-info-label:                 $color-grayscale-a !default;

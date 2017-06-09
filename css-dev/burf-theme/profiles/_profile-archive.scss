@@ -1,6 +1,34 @@
-// -----------------------------------------------------------------
-// Profile Listing and Archive Templates
-// -----------------------------------------------------------------
+// =================================================================
+// Profile Archive Settings
+// =================================================================
+
+/// Controls the shape of the profile photo.
+/// By default, this is set to a circle.
+/// @group profiles
+/// @access public
+/// @since 1.0.0
+
+$border-radius-profile-figure:              50% !default;
+
+/// Controls the color used for profile names in the profile
+/// listing template.
+/// @group profiles
+/// @access public
+/// @since 1.0.0
+
+$color-profile-name:                       $color-link !default;
+
+/// Controls the color used for profile titles in the profile
+/// listing template.
+/// @group profiles
+/// @access public
+/// @since 1.0.0
+
+$color-profile-title:                      $color-base !default;
+
+// =================================================================
+// Profile Archive Styles
+// =================================================================
 
 /// Styles for all profile listings.
 /// @group profiles
