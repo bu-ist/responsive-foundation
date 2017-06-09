@@ -2,15 +2,6 @@
 // Profile Listing and Archive Templates
 // -----------------------------------------------------------------
 
-/// Styles the single profile template.
-/// @group profiles
-/// @access public
-/// @since 1.0.0
-
-.single-profile {
-	@extend %template-narrow;
-}
-
 /// Styles the single profile name - typically the title of the page.
 /// @group profiles
 /// @access public

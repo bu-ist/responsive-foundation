@@ -2,9 +2,9 @@
 // Basic styling and resets which do not depend on WordPress
 // =================================================================
 
-// Dependencies
-@import "../bower_components/normalize-css/normalize";
-@import "../bower_components/mathsass/dist/math";
+// dependencies and resets
+@import "normalize/import-now";
+@import "math";
 
 // Utilities
 @import 'burf-base/config';

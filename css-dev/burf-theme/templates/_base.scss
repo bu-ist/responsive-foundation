@@ -10,82 +10,9 @@
 // Narrow Content Column
 // -----------------------------------------------------------------
 
-%template-narrow {
-	.content-container {
-		max-width: $container-sm;
-	}
-
-	.content-area {
-		@extend %col-md-full;
-	}
-}
-
-// A utility class to easily undo narrow column widths.
-// Always overrides %template-narrow.
-%remove-template-narrow {
-	.content-container {
-		max-width: $container-lg;
-	}
-
-	.content-area {
-		@include breakpoint( md ) {
-			float: left;
-			width: 66.66667%;
-		}
-	}
-}
-
-// Layouts
-.sidebar-location-left,
-.sidebar-location-right {
-	@extend %remove-template-narrow;
-}
-
-// -----------------------------------------------------------------
-// Narrow Sidebar
-// -----------------------------------------------------------------
-
-// A utility class to style sidebars on narrow width templates.
-%template-narrow-sidebar {
-	@extend %clearfix;
-	@extend %col-sm-margin-parent;
-	clear: both;
-	float: none;
-	margin-bottom: $widget-margin-bottom;
-	width: auto;
-
-	.widget {
-		@extend %col-sm-margin-half;
-	}
-}
-
-// A utility class to easily undo narrow width sidebar styles.
-// Always overrides %template-narrow-sidebar.
-%remove-template-narrow-sidebar {
-	@extend %sidebar-styles;
+.content-container-narrow {
 	@extend %container-styles;
-
-	@include breakpoint( md ) {
-		clear: none;
-		float: left;
-	}
-
-	.widget {
-		margin-bottom: $widget-margin-bottom;
-		margin-left: 0;
-		width: 100%;
-	}
-}
-
-.sidebar-posts,
-.sidebar-profiles {
-	@extend %template-narrow-sidebar;
-
-	// Layouts
-	.sidebar-location-left &,
-	.sidebar-location-right & {
-		@extend %remove-template-narrow-sidebar;
-	}
+	max-width: $container-sm;
 }
 
 // -----------------------------------------------------------------
@@ -98,6 +25,9 @@
 /// @since 2.0.0
 
 .error-404 {
+	left: 0;
+	width: 100%;
+
 	#quicksearch {
 		background: transparent !important; // required to override Responsive layout styles
 		border: 0;
