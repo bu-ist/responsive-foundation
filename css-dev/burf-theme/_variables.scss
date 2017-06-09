@@ -134,29 +134,3 @@ $back-link-before:                          "← " !default;
 /// @since 1.0.0
 
 $color-back-link-before:                    $color-grayscale-f !default;
-
-// Calendar Template: Event List
-// -----------------------------------------------------------------
-
-/// Controls the color of the date range on the calendar listing template.
-/// By default, this is right after the topic.
-/// @group calendar
-/// @access public
-/// @since 1.0.0
-
-$color-calendar-heading-date-range:          $color-grayscale-9 !default;
-
-/// Controls the color of links on the calendar listing template.
-/// @group calendar
-/// @access public
-/// @since 1.0.0
-
-$color-calendar-event-link:                 $color-link !default;
-
-/// Controls the color of links on the calendar listing template when you hover.
-/// @group calendar
-/// @access public
-/// @since 1.0.0
-
-$color-calendar-event-link-hover:           $color-link !default;
-
