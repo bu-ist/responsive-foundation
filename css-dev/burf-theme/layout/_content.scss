@@ -25,6 +25,20 @@ $margin-width: 			  					    5.2% !default;
 
 $color-content-bg:                         $color-grayscale-f !default;
 
+/// The amount of padding to add to columns on mobile.
+/// @group grid
+/// @access public
+/// @since 1.2.0
+
+$column-padding-bottom:                     10px !default;
+
+/// The amount of padding to add to columns on desktop.
+/// @group grid
+/// @access public
+/// @since 1.2.0
+
+$column-padding-bottom-large-screen:         35px !default;
+
 // =================================================================
 // Layout
 // =================================================================
