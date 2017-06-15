@@ -1,0 +1,49 @@
+// =================================================================
+// Templates
+// =================================================================
+
+//	1. Narrow Content Column
+//	2. Narrow Sidebar
+//	3. 404 page
+
+// -----------------------------------------------------------------
+// Narrow Content Column
+// -----------------------------------------------------------------
+
+.content-container-narrow {
+	@extend %container-styles;
+	max-width: $container-sm;
+}
+
+// -----------------------------------------------------------------
+// 404 page
+// -----------------------------------------------------------------
+
+/// Handles styling for the 404 page.
+/// @group templates
+/// @access public
+/// @since 2.0.0
+
+.error-404 {
+	left: 0;
+	width: 100%;
+
+	#quicksearch {
+		background: transparent !important; // required to override Responsive layout styles
+		border: 0;
+		display: block;
+		font-size: 16.5px;
+		margin: 50px 0;
+		max-width: 500px;
+		padding: 0;
+		position: static;
+
+		fieldset {
+			padding: 0;
+		}
+
+		select {
+			display: none;
+		}
+	}
+}

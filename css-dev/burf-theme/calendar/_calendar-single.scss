@@ -1,16 +1,34 @@
-// -----------------------------------------------------------------
-// Calendar Single Event Template
-// -----------------------------------------------------------------
+// =================================================================
+// Calendar Single Settings
+// =================================================================
 
-// Does not have a sidebar.
-.single-calendar {
-	@extend %template-narrow;
+/// Controls the font used for labels in the sidebar of the single
+/// calendar event template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
 
-	.content-area {
-		float: none;
-		margin: 0 auto;
-	}
-}
+$font-family-single-event-label:             $font-family-sans-serif !default;
+
+/// Controls the font weight used for labels in the sidebar of the single
+/// calendar event template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
+$font-weight-calendar-label:                700 !default;
+
+/// Controls the color of labels in the sidebar of the single
+/// calendar event template.
+/// @group calendar
+/// @access public
+/// @since 1.0.0
+
+$color-single-event-label:               $color-grayscale-9 !default;
+
+// =================================================================
+// Calendar Single Styles
+// =================================================================
 
 /// Handles styling for the container around start and end times on
 /// a single calendar event.

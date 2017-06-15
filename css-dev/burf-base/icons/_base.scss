@@ -4,13 +4,25 @@
 
 @font-face {
 	font-family: "bu-default-icons";
-	src: url( "https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot?" ) format( "embedded-opentype" );
-	src: url( "https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.woff" ) format( "woff" ),
-		url( "https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.ttf" ) format( "truetype" ),
-		url( "https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.svg#bu-default-icons" ) format( "svg" );
+	src: url( "//www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot?" ) format( "embedded-opentype" );
+	src: url( "//www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.woff" ) format( "woff" ),
+		url( "//www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.ttf" ) format( "truetype" ),
+		url( "//www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.svg#bu-default-icons" ) format( "svg" );
 	font-weight: normal;
 	font-style: normal;
 }
+
+$font-family-icons:                     	 "bu-default-icons" !default;
+$font-size-icon: 21px !default;
+
+/// The color to use for icons across the site.
+/// By default, this will inherit the color of the text in the container the icon lives in.
+/// Setting this will keep the color of the icons consistent everywhere.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
+$color-icons:										 unset;
 
 /// Provides base icon styles normalized across browsers and optimized
 /// for accessibility.

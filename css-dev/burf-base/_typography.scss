@@ -2,6 +2,62 @@
 // Typography
 // =================================================================
 
+/// A sans-serif font to use in your theme.
+/// By default, this affects the site footer and label text in profiles.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
+$font-family-sans-serif:                     "Benton", "Helvetica", sans-serif !default;
+
+$font-family-monospace:                     Consolas, "Liberation Mono", Courier, monospace !default;
+
+$font-family-heading:                       $font-family-sans-serif !default;
+$color-heading:                            $color-grayscale-0 !default;
+$color-heading-small:                      $color-grayscale-9 !default;
+$font-margin-base:                          0 0 1.5em 0 !default;
+
+$color-link:                               #0f69d7 !default;
+$color-link-visited:                       #7337af !default;
+$color-link-active:                        $color-grayscale-0 !default;
+
+$font-family-button:                        $font-family-sans-serif !default;
+$font-size-button:                          inherit !default;
+$color-button-bg:                          $color-grayscale-e !default;
+$color-button-text:                        $color-grayscale-4 !default;
+$color-button-primary-bg:                  #0078e7 !default;
+$color-button-primary-text:                $color-grayscale-f !default;
+
+$font-padding-code:                         0.2em 0.4em !default;
+$font-margin-code:                          30px 0 !default;
+$color-code:                               $color-grayscale-7 !default;
+$color-code-bg:                            $color-grayscale-f5 !default;
+
+$font-margin-blockquote:                    1em 40px !default;
+
+$font-margin-list:                          $font-margin-base !default;
+$font-padding-list:                         0 0 0 40px !default;
+
+$font-margin-dd:                            0 0 0 40px !default;
+
+// Color and Typography
+// -----------------------------------------------------------------
+
+/// The default font for body copy.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
+$font-family-base:                          "Benton", sans-serif !default;
+
+/// A serif font to use in your theme. This variable is not used by default.
+/// @group global
+/// @access public
+/// @since 1.0.0
+
+$font-family-serif:                         "TiemposText", Georgia, serif !default;
+
+
 // Links
 // -----------------------------------------------------------------
 
@@ -227,7 +283,7 @@ $_h: $_depth-headings;
 		$size-mobile: $min-size-headings / $font-size-base + em;
 	} @else {
 		$size: calc-size( $_h + 1, $heading-growth-rate, $_heading-size-scale, $min-size-headings ) + em;
-		$size-mobile: calc-size( $_h +1, $heading-growth-rate, $_heading-size-scale-mobile, $min-size-headings ) + em ;
+		$size-mobile: calc-size( $_h + 1, $heading-growth-rate, $_heading-size-scale-mobile, $min-size-headings ) + em ;
 	}
 
 	@if $_h == $_depth-headings {

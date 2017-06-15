@@ -1,0 +1,74 @@
+// BU Posts Widget
+// -----------------------------------------------------------------
+
+/// Controls the color of the metadata in the BU posts widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+$color-widget-post-meta:                    $color-grayscale-a !default;
+
+// BU Posts
+// -----------------------------------------------------------------
+
+/// Handles styling for posts in the BU Posts widget (news widget).
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-post {
+	@extend %clearfix;
+}
+
+/// Handles styling for the post headline in the
+/// BU Posts widget (news widget).
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-post-headline {
+	@extend %font-size-5;
+}
+
+/// Handles styling for metadata in the
+/// BU Posts widget (news widget).
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-post-meta {
+	@extend %font-size-minimum;
+	color: $color-widget-post-meta;
+}
+
+/// Handles styling for the excerpt in the
+/// BU Posts widget (news widget).
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-post-excerpt {
+	margin-top: -0.5em;
+}
+
+/// Handles styling for the thumbnail in the
+/// BU Posts widget (news widget).
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-post-thumbnail {
+	margin-bottom: 10px;
+}
+
+/// Handles styling for the thumbnail in the
+/// BU Posts widget (news widget) in the title and date format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-post-thumbnail-title-date {
+	float: right;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}

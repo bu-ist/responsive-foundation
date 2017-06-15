@@ -1,0 +1,33 @@
+/// Styles the basic profile format.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-format-basic {
+	border-top: $border-profiles;
+}
+
+/// Styles a basic profile item.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-item-basic {
+	border-bottom: $border-profiles;
+	margin-bottom: 0;
+	min-height: 100px;
+	padding: 25px 65px 25px 0;
+}
+
+/// Styles a basic profile photo.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-photo-basic {
+	height: 50px;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	width: 50px;
+}

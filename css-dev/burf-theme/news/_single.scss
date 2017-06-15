@@ -1,0 +1,192 @@
+// =================================================================
+// Single Post Settings
+// =================================================================
+
+/// The style of the border on comments and items using the card styles.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
+$border-message:                           $border-base !default;
+
+/// The width of the border on comments and items using the card styles.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
+$border-width-message:                      1px 1px 1px 5px !default;
+
+/// The amount of rounding (border radius) to apply to the corners
+/// of comments.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
+$border-radius-message:                     3px !default;
+
+/// The amount of padding to apply to comments.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
+$padding-message:                          20px !default;
+
+/// The background of comments.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
+$color-message-bg:                         $color-grayscale-f0 !default;
+
+/// The left border color of comments.
+/// @group comments
+/// @access public
+/// @since 1.0.0
+
+$color-message-border-left:                 $color-grayscale-0 !default;
+
+/// Controls the padding of the metadata card at the bottom of news posts
+/// on the single post template.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$padding-single-meta:                      20px !default;
+
+/// Controls the border style on the metadata card at the bottom of news posts
+/// on the single post template.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$border-single-meta:                       $border-message !default;
+
+/// Controls the border width on the metadata card at the bottom of news posts
+/// on the single post template.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$border-width-single-meta:                  $border-width-message !default;
+
+/// Controls the amount of rounding applied to corners of the metadata card
+/// at the bottom of the single post template.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$border-radius-single-meta:                 $border-radius-message !default;
+
+/// Controls the background of the metadata card at the bottom of the single
+/// post template.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$color-single-meta-bg:                     $color-grayscale-f0 !default;
+
+/// Controls the color of the left border in the metadata card
+/// at the bottom of the single post template.
+/// @group news
+/// @access public
+/// @since 1.0.0
+
+$color-single-meta-border-left:             $color-message-border-left !default;
+
+
+// =================================================================
+// Single Post Styles
+// =================================================================
+
+/// Controls card-like styles used throughout Foundation.
+/// By default, this controls single profile info styling in the sidebar,
+/// the metadata styling at the bottom of single posts, and the date summary.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
+%card-styles {
+	@extend %font-size-secondary;
+	@include border-radius( $border-radius-message );
+	background-color: $color-message-bg;
+	border: $border-message;
+	border-left-color: $color-message-border-left;
+	border-width: $border-width-message;
+	padding: $padding-message;
+}
+
+/// Controls the styling for messages.
+/// @group utilities
+/// @access public
+/// @since 1.0.0
+
+.message {
+	@extend %card-styles;
+}
+
+
+/// Handles styling for the metadata card at the bottom of posts.
+/// @group news
+/// @access public
+/// @since 2.0.0
+
+.single-meta {
+	@extend %card-styles;
+	@include border-radius( $border-radius-single-meta );
+	background-color: $color-single-meta-bg;
+	border: $border-single-meta;
+	border-left-color: $color-single-meta-border-left;
+	border-width: $border-width-single-meta;
+	margin-bottom: 30px;
+	padding: $padding-single-meta;
+}
+
+/// Handles styling for the title in the metadata card at the bottom of posts.
+/// @group news
+/// @access public
+/// @since 2.0.0
+
+.single-meta-post-title {
+	margin-bottom: 10px;
+}
+
+/// Handles styling for the byline in the metadata card at the bottom of posts.
+/// @group news
+/// @access public
+/// @since 2.0.0
+
+.single-meta-byline {
+	font-size: inherit;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+
+/// Handles styling for categories and tags in the metadata card at the bottom of posts.
+/// @group news
+/// @access public
+/// @since 2.0.0
+
+.single-meta-info {
+	margin-bottom: 0;
+	margin-top: 10px;
+}
+
+/// Handles styling for the archive (View all posts) link container.
+/// @group news
+/// @access public
+/// @since 2.0.0
+
+.archive-link-container {
+	text-align: center;
+}
+
+/// Handles styling for the archive (View all posts) link.
+/// @group news
+/// @access public
+/// @since 2.0.0
+
+.archive-link {
+	@extend %button-styles;
+	@extend %button-styles-primary;
+	@extend %back-link-styles;
+}

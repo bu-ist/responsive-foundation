@@ -205,7 +205,7 @@
 }
 
 // If primary stylesheet indicates media query support (e.g. style.scss ), output media queries. If not (e.g. ie.scss ), output the block WITHOUT @media wrapper.
-// Usage: @include breakpoint(md) {...}
+// Usage: @include breakpoint( md ) {...}
 // $skiplgMQforIE tells this mixin whether or not to skip the lg point styles on THIS set of styles for IE8.
 // If you have an individual set of styles for the large breakpoint that you need to print, this allows you to do it.
 // Realistically, you probably don't need it.
@@ -320,5 +320,5 @@
 // Usage: @include mixin-help
 
 @mixin mixin-help {
-	@debug '\a\a\a Quick guide to Responsive mixins: \a\a border-radius: @include border-radius(3px); \a box-shadow: @include box-shadow(0 0 1px 3px #000000); \a linear-gradient: @include linear-gradient( $fromColor, $to-color); \a opacity: @include opacity(0.5); \a transition: @include transition(all, 250ms, ease-in-out, 0s ); \a transform: @include(any valid CSS transform argument); \a rotate: @include rotate(90); \a scale: @include scale(2); \a translate: @include translate(10px, 20px); \a keyframes: @include keyframes(animationName) { ... } ; \a animation: @include animation(animationName); \a vertical-center: @include vertical-center in the element you want to center \a vertical-center (IE friendly): @include vertical-center-child(.childElement) in the parent class \a breakpoint: @include breakpoint(md) { ... } \a retina:  @include retina { ... } \a rgba-color: @include rgba-color(\'background-color\', rgba(someColor, 0.5), fallbackColor); \a\a';
+	@debug '\a\a\a Quick guide to Responsive mixins: \a\a border-radius: @include border-radius(3px); \a box-shadow: @include box-shadow(0 0 1px 3px #000000); \a linear-gradient: @include linear-gradient( $fromColor, $to-color); \a opacity: @include opacity(0.5); \a transition: @include transition(all, 250ms, ease-in-out, 0s ); \a transform: @include(any valid CSS transform argument); \a rotate: @include rotate(90); \a scale: @include scale(2); \a translate: @include translate(10px, 20px); \a keyframes: @include keyframes(animationName) { ... } ; \a animation: @include animation(animationName); \a vertical-center: @include vertical-center in the element you want to center \a vertical-center (IE friendly): @include vertical-center-child(.childElement) in the parent class \a breakpoint: @include breakpoint( md ) { ... } \a retina:  @include retina { ... } \a rgba-color: @include rgba-color(\'background-color\', rgba(someColor, 0.5), fallbackColor); \a\a';
 }

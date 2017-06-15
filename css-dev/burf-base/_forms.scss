@@ -1,6 +1,31 @@
 // Forms
 // =================================================================
 
+
+$font-family-form:                          $font-family-sans-serif !default;
+
+$form-legend-border:                       1px solid $color-grayscale-e !default;
+$form-legend-border-width:                  0 0 1px 0 !default;
+$form-legend-margin:                       0 0 20px !default;
+$form-legend-padding:                      0 0 4px !default;
+
+$form-fieldset-border:                     0 !default;
+$form-fieldset-margin:                     30px 0 !default;
+$form-fieldset-padding:                    0 !default;
+
+$form-label-margin:                        0.5em 0 0.2em !default;
+
+$form-row-margin:                          0 0 10px !default;
+
+$form-input-margin:                        0.25em 0 !default;
+$form-input-padding:                       0.5em 0.6em !default;
+$form-input-border:                        1px solid $color-grayscale-c !default;
+$form-input-shadow:                        inset 0 1px 3px $color-grayscale-e !default;
+$form-input-border-radius:                  0 !default;
+$form-input-focus-shadow:                   0 0 4px 0 rgba( 18, 159, 234, 0.2 ) !default;
+$color-input-focus-border:                  #129fea !default;
+
+
 // Placeholders for Forms
 // -----------------------------------------------------------------
 
@@ -65,7 +90,7 @@
 	}
 
 	// Firefox: Get rid of the inner focus border
-	&:-moz-focus-inner {
+	&::-moz-focus-inner {
 		border: 0;
 		padding: 0;
 	}
