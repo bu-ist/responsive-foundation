@@ -1,0 +1,192 @@
+// Calendar Widget
+// -----------------------------------------------------------------
+
+/// Controls the font family used on dates in the calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+$font-family-widget-calendar-date:          $font-family-sans-serif !default;
+
+/// Controls the color of dates in the calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+$color-widget-calendar-date:                $color-grayscale-0 !default;
+
+/// Controls the size of the day when using the graphic style in the
+/// calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+$font-size-widget-calendar-date-day:          22px !default;
+
+/// Controls the color of the day when using the graphic style in the
+/// calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+$color-widget-calendar-date-day:             inherit !default;
+
+/// Controls the size of the month when using the graphic style in the
+/// calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+$font-size-widget-calendar-date-month:        12px !default;
+
+/// Controls the color of the month when using the graphic style in the
+/// calendar widget.
+/// @group widgets
+/// @access public
+/// @since 1.0.0
+
+$color-widget-calendar-date-month:           inherit !default;
+
+// Calendar
+// -----------------------------------------------------------------
+
+/// A helper variable for absolute positioning in formats which use it.
+/// Sets the width of the calendar date.
+/// By default, affects the default and graphic formats.
+/// @group widgets
+/// @access private
+/// @since 1.2.0
+
+$_width-calendar-date: 48px;
+
+/// Styles events in the calendar widget. Affects all formats.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-event {
+	border: $border-widget-list;
+	border-width: $border-width-widget-list;
+	padding: 10px 0;
+
+	&:first-child {
+		border: 0;
+		padding: 0 0 10px;
+	}
+}
+
+/// Styles links in the calendar widget. Affects all formats.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-link {
+	display: block;
+}
+
+/// Styles dates in the calendar widget. Affects all formats.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-date {
+	color: $color-widget-calendar-date;
+	display: block;
+	font-family: $font-family-widget-calendar-date;
+	font-weight: 700;
+}
+
+/// Styles an event in the calendar widget default format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-event-default {
+	position: relative;
+}
+
+/// Styles dates in the calendar widget default format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-date-default {
+	left: 0;
+	position: absolute;
+	top: auto;
+	width: $_width-calendar-date;
+}
+
+/// Styles titles in the calendar widget default format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-title-default {
+	padding-left: $_width-calendar-date + 12;
+	position: relative;
+}
+
+/// Styles links in the calendar widget graphic format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-link-graphic {
+	display: table;
+	text-decoration: none;
+}
+
+/// Styles dates in the calendar widget graphic format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-date-graphic {
+	color: $color-widget-calendar-date;
+	display: table-cell;
+	line-height: 1.1;
+	text-align: center;
+	width: $_width-calendar-date;
+}
+
+/// Styles the day of the month in the calendar widget graphic format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-day-graphic {
+	color: $color-widget-calendar-date-day;
+	display: block;
+	font-size: $font-size-widget-calendar-date-day;
+}
+
+/// Styles the month in the calendar widget graphic format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-month-graphic {
+	color: $color-widget-calendar-date-month;
+	font-size: $font-size-widget-calendar-date-month;
+	text-transform: uppercase;
+}
+
+/// Styles the title in the calendar widget graphic format.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.widget-calendar-title-graphic {
+	display: table-cell;
+	padding-left: 10px;
+	text-decoration: underline;
+	vertical-align: middle;
+}
+
+.widgetnav,
+.widget_archive ul,
+.widget_categories ul { // maybe not though, there are nested categories
+	margin: 0;
+	padding: 0;
+}

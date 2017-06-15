@@ -1,0 +1,85 @@
+// =================================================================
+// Collapsible Settings
+// =================================================================
+
+/// Controls the color of icons on collapsibles.
+/// @group content
+/// @access public
+/// @since 2.0.0
+
+$color-collapsible-icon:           $color-icons !default;
+
+/// Controls the color of icons on collapsibles when you hover.
+/// @group content
+/// @access public
+/// @since 2.0.0
+
+$color-collapsible-icon-hover:     $color-link !default;
+
+/// Controls the border between collapsibles.
+/// @group content
+/// @access public
+/// @since 2.0.0
+
+$border-collapsible:     1px solid $color-grayscale-c !default;
+
+// =================================================================
+// Collapsible Styles
+// =================================================================
+
+/// Styles a collapsible item.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+.bu_collapsible_container {
+	padding: 0.5em 0;
+	position: relative;
+
+	& + & {
+		border-top: $border-collapsible;
+	}
+}
+
+/// Styles the header on a collapsible item.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+.bu_collapsible {
+	@extend %icon-plus;
+	margin-bottom: 0;
+	padding-right: 30px;
+	position: relative;
+
+	&::before {
+		color: $color-collapsible-icon;
+		font-size: 16px;
+		margin-top: -10px;
+		position: absolute;
+		right: 7px;
+		top: 50%;
+	}
+
+	&:hover,
+	&:focus {
+		&::before {
+			color: $color-collapsible-icon-hover;
+		}
+	}
+
+	.bu_collapsible_open & {
+		@extend %icon-hyphen;
+	}
+}
+
+/// Print styles for collapsibles.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+@media print {
+	.bu_collapsible_section {
+		display: block !important; // important required to override inline styles added by JS
+	}
+}
