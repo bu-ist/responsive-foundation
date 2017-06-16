@@ -120,43 +120,44 @@ $z-index-10:                                1000;
 
 // 18 colors
 
-$grays: (
-	1: #fff,
-	2: #f5f5f5,
-	3: #f0f0f0,
-	4: #eee,
-	5: #ddd,
-	6: #ccc,
-	7: #bbb,
-	8: #aaa,
+$color-grayscale: (
+	0: #000,
+	1: #111,
+	2: #222,
+	3: #333,
+	4: #444,
+	5: #555,
+	6: #666,
+	7: #777,
+	8: #888,
 	9: #999,
-	10: #888,
-	11: #777,
-	12: #666,
-	13: #555,
-	14: #444,
-	15: #333,
-	16: #222,
-	17: #111,
-	18: #000
+	a: #aaa,
+	b: #bbb,
+	c: #ccc,
+	d: #ddd,
+	e: #eee,
+	f0: #f0f0f0,
+	f5: #f5f5f5,
+	f: #fff
 );
 
-$mix-color: brown;
+$gray-tint: #cc0000;
+$gray-tint-amount: 50;
 
-.color-test {
-	$_bamt: (10/18);
-	$_amt: $_bamt;
+.color-grayscale {
+	$_bamt: ( $gray-tint-amount / length( $color-grayscale ) );
+	$_amt: $gray-tint-amount;
 
-	@each $gray, $setting in $grays {
+	@each $gray, $setting in $color-grayscale {
 		&-#{$gray} {
 			display: block;
 			width: 100px;
 			height: 100px;
 			float: left;
-			background-color: mix( $mix-color, $setting, $_amt );
+			background-color: mix( $gray-tint, $setting, $_amt );
 		}
 
-		$_amt: $_amt + $_bamt;
+		$_amt: $_amt - $_bamt;
 	}
 }
 
