@@ -151,11 +151,16 @@ $_footbar-widget-width: $grid-number-columns / $number-widgets-footbar;
 	background: $color-footbar-container-bg;
 
 	@include breakpoint( md ) {
+		display: grid;
+		grid-gap: $margin*2;
+		grid-template-columns: repeat(#{$number-widgets-footbar}, 1fr);
 		padding: $grid-container-padding-large-screen;
 	}
 
 	.widget {
-		@extend %col-md-margin-#{$_footbar-widget-width};
+		.no-csscolumns & { // TODO: Change to no-cssgrid when Modernizr adds build support
+			@extend %col-md-margin-#{$_footbar-widget-width};
+		}
 
 		@include breakpoint( md ) {
 			margin-top: 0;
