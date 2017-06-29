@@ -110,19 +110,6 @@ $color-site-footer-link-hover:					 $color-grayscale-f !default;
 
 $number-widgets-footbar: 						 $number-columns !default;
 
-/// The width a widget should take up, including the margin, in the footbar.
-/// First, width gets equally divided among widgets.
-/// Next, calculate the amount of margin you need to subtract from the width.
-/// You need to split the margin equally, but the first margin in every row
-/// will always be left out.
-/// So if there are 3 widgets in the footbar, you only need to account for margin on two,
-/// which makes the basic formula something like this: width - (margin * 2/3).
-/// @group layout
-/// @access private
-/// @since 1.0.0
-
-$_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( ( $number-widgets-footbar - 1 ) / $number-widgets-footbar );
-
 /// Controls styling for the footbar.
 /// @group layout
 /// @access public
@@ -146,6 +133,13 @@ $_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( (
 	}
 }
 
+/// The number of grid columns a widget should take up, in the footbar.
+/// @group layout
+/// @access private
+/// @since 1.0.0
+
+$_footbar-widget-width: $grid-number-columns / $number-widgets-footbar;
+
 /// Controls styling for the footbar container and width of widgets inside.
 /// Often used to put a maximum width on the footbar without affecting the background.
 /// @group layout
@@ -161,14 +155,11 @@ $_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( (
 	}
 
 	.widget {
-		width: 100%;
+		@extend %col-md-margin-#{$_footbar-widget-width};
 
 		@include breakpoint( md ) {
-			float: left;
-			margin-left: $margin-width;
 			margin-top: 0;
 			padding: 0;
-			width: $_footbar-widget-width;
 
 			&:first-child,
 			&:nth-child(#{$number-widgets-footbar}n+1) {
