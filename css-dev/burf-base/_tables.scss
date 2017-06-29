@@ -2,7 +2,7 @@
 // Tables
 // =================================================================
 
-$table-margin:                             35px 0 !default;
+$table-margin:                             $margin*2 0 !default;
 $table-padding:                            0.5em 1em !default;
 
 $color-table-border:                       $color-grayscale-d !default;
