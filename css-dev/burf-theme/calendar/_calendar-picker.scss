@@ -130,7 +130,7 @@ $color-calendar-month-link-today:        $color-grayscale-0 !default;
 		font-family: $font-family-calendar-month-cell;
 		padding: $padding-calendar-month-cell;
 		text-align: center;
-		width: 14.285714285%;
+		width: ( 100% / 7 ); // To accomodate seven days in a week
 	}
 
 	th {
