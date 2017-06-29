@@ -93,20 +93,31 @@ $z-index-10:                                1000;
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
-// Typography
-//
-// base     = p
-// small    = h6
-// medium   = h5
-// large    = h4
-// larger   = h3
-// largest  = h2
-// jumbo    = h1
-//
+// Spacing
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
+
+/// The base margin to use sitewide.
+/// All margins are based on this number. Larger margins
+/// will be a multiple of this, smaller margins will be a
+/// fraction of this.
+/// @group config
+/// @access public
+/// @since 2.0.0
+
+$margin:                                    20px;
+
+/// The base padding to use sitewide.
+/// All padding is based on this number. Larger padding
+/// will be a multiple of this, smaller padding will be a
+/// fraction of this.
+/// @group config
+/// @access public
+/// @since 2.0.0
+
+$padding:                                   20px;
 
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
