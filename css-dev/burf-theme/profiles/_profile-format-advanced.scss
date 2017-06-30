@@ -82,7 +82,7 @@ $_profile-adv-cols-md: $grid-number-columns / $profiles-advanced-cols-md;
 
 .profile-photo-advanced {
 	height: 150px;
-	margin: 0 auto 15px;
+	margin: 0 auto $margin-small;
 	overflow: hidden;
 	width: 150px;
 }

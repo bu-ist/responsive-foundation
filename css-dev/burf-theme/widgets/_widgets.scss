@@ -16,7 +16,7 @@
 /// @access public
 /// @since 1.0.0
 
-$widget-margin-bottom:                      40px !default;
+$widget-margin-bottom:                      $margin !default;
 
 /// Controls the font family used for the widget title.
 /// @group widgets

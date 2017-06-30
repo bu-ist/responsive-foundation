@@ -110,19 +110,6 @@ $color-site-footer-link-hover:					 $color-grayscale-f !default;
 
 $number-widgets-footbar: 						 $number-columns !default;
 
-/// The width a widget should take up, including the margin, in the footbar.
-/// First, width gets equally divided among widgets.
-/// Next, calculate the amount of margin you need to subtract from the width.
-/// You need to split the margin equally, but the first margin in every row
-/// will always be left out.
-/// So if there are 3 widgets in the footbar, you only need to account for margin on two,
-/// which makes the basic formula something like this: width - (margin * 2/3).
-/// @group layout
-/// @access private
-/// @since 1.0.0
-
-$_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( ( $number-widgets-footbar - 1 ) / $number-widgets-footbar );
-
 /// Controls styling for the footbar.
 /// @group layout
 /// @access public
@@ -146,6 +133,13 @@ $_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( (
 	}
 }
 
+/// The number of grid columns a widget should take up, in the footbar.
+/// @group layout
+/// @access private
+/// @since 1.0.0
+
+$_footbar-widget-width: $grid-number-columns / $number-widgets-footbar;
+
 /// Controls styling for the footbar container and width of widgets inside.
 /// Often used to put a maximum width on the footbar without affecting the background.
 /// @group layout
@@ -157,24 +151,26 @@ $_footbar-widget-width: ( 100% / $number-widgets-footbar ) - $margin-width * ( (
 	background: $color-footbar-container-bg;
 
 	@include breakpoint( md ) {
+		display: grid;
+		grid-gap: $margin-large;
+		grid-template-columns: repeat( #{$number-widgets-footbar}, 1fr );
 		padding: $grid-container-padding-large-screen;
 	}
 
 	.widget {
-		width: 100%;
-
 		@include breakpoint( md ) {
-			float: left;
-			margin-left: $margin-width;
 			margin-top: 0;
 			padding: 0;
-			width: $_footbar-widget-width;
 
 			&:first-child,
 			&:nth-child(#{$number-widgets-footbar}n+1) {
 				clear: left;
 				margin-left: 0;
 			}
+		}
+
+		.no-csscolumns & { // TODO: Change to no-cssgrid when Modernizr adds build support
+			@extend %col-md-margin-#{$_footbar-widget-width};
 		}
 	}
 }
@@ -221,7 +217,7 @@ body {
 
 	li {
 		line-height: 1.4;
-		margin: 0 0 5px;
+		margin: 0 0 0.3em;
 
 		&:last-child {
 			margin: 0;
@@ -237,7 +233,7 @@ body {
 		@extend %font-size-secondary;
 		color: $color-site-footer;
 		font-family: $font-family-sans-serif;
-		margin: 0 0 3px;
+		margin: 0 0 0.3em;
 	}
 }
 
@@ -375,12 +371,12 @@ body {
 
 	a {
 		display: block;
-		margin: 0 auto 30px;
+		margin: 0 auto $margin;
 
 		@include breakpoint( xs ) {
 			display: inline-block;
 			height: 50px;
-			margin-right: 30px;
+			margin-right: $margin;
 			vertical-align: middle;
 		}
 
@@ -437,7 +433,7 @@ body {
 
 .site-footer-links {
 	@extend %col-sm-half;
-	margin-bottom: 30px;
+	margin-bottom: $margin;
 	text-align: center;
 
 	@include breakpoint( sm ) {
@@ -464,7 +460,7 @@ body {
 .site-footer-info {
 	clear: both;
 	display: block;
-	margin-bottom: 30px;
+	margin-bottom: $margin;
 
 	@include breakpoint( sm ) {
 		padding-right: 30px;

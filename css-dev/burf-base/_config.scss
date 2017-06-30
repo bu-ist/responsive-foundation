@@ -93,20 +93,51 @@ $z-index-10:                                1000;
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
-// Typography
-//
-// base     = p
-// small    = h6
-// medium   = h5
-// large    = h4
-// larger   = h3
-// largest  = h2
-// jumbo    = h1
-//
+// Spacing
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
+
+/// The base margin to use sitewide.
+/// All margins are based on this number. Larger margins
+/// will be a multiple of this, smaller margins will be a
+/// fraction of this, except in cases of UI or typography
+/// where margin should be related to font size.
+/// @group config
+/// @access public
+/// @since 2.0.0
+
+$margin:                                    30px;
+
+/// The base margin to use for content sitewide.
+/// This affects floated content in the WordPress editor,
+/// and would be good for any sort of floated content you
+/// may add in a custom theme, like a floated callout.
+/// @group config
+/// @access public
+/// @since 2.0.0
+
+$margin-small:                              $margin / 2;
+
+/// The base margin to use for large spacing sitewide.
+/// This affects elements like the banner, section tags,
+/// and any other larger elements.
+/// @group config
+/// @access public
+/// @since 2.0.0
+
+$margin-large:                              $margin * 2;
+
+/// The base padding to use sitewide.
+/// All padding is based on this number. Larger padding
+/// will be a multiple of this, smaller padding will be a
+/// fraction of this.
+/// @group config
+/// @access public
+/// @since 2.0.0
+
+$padding:                                   30px;
 
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------

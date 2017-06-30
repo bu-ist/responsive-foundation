@@ -307,7 +307,7 @@ nav {
 
 	.site-description {
 		float: left;
-		margin-left: 50px;
+		margin-left: $margin-large;
 		width: auto;
 	}
 }
@@ -360,6 +360,15 @@ nav {
 	}
 }
 
+/// Adjusts the size of the search and nav toggles in
+/// the main navigation. Also affects the top/bottom spacing
+/// around main navigation items in the nav bar.
+/// @group navigation
+/// @access public
+/// @since 2.0.0
+
+$nav-toggle-size: 60px !default;
+
 // search-toggle
 
 .search-toggle {
@@ -367,12 +376,12 @@ nav {
 	@include transition( color 200ms ease-in-out 0s );
 	color: $color-nav-toggle;
 	float: right;
-	font-size: 31px;
-	height: 60px;
-	line-height: 60px;
+	font-size: $nav-toggle-size / 2;
+	height: $nav-toggle-size;
+	line-height: $nav-toggle-size;
 	padding: 0;
 	text-align: center;
-	width: 60px;
+	width: $nav-toggle-size;
 
 	&:visited {
 		color: $color-nav-toggle;
@@ -399,15 +408,22 @@ nav {
 }
 
 
-// nav-toggle
+/// Adjusts the size of border on the nav toggle icon
+/// in the main navigation. Also affects spacing of borders
+/// in this icon.
+/// @group navigation
+/// @access public
+/// @since 2.0.0
+
+$nav-toggle-border: 4px !default;
 
 .nav-toggle {
 	@extend %hide-text;
 	cursor: pointer;
 	float: left;
-	height: 60px;
+	height: $nav-toggle-size;
 	position: relative;
-	width: 60px;
+	width: $nav-toggle-size;
 
 	@include breakpoint( sm ) {
 		display: none;
@@ -419,11 +435,11 @@ nav {
 		content: "";
 		cursor: pointer;
 		display: block;
-		height: 4px;
-		left: 15px;
+		height: $nav-toggle-border;
+		left: $nav-toggle-size / 4;
 		position: absolute;
-		top: 28px;
-		width: 30px;
+		top: $nav-toggle-size / 2;
+		width: $nav-toggle-size / 2;
 
 		&::before,
 		&::after {
@@ -432,21 +448,21 @@ nav {
 			content: "";
 			cursor: pointer;
 			display: block;
-			height: 4px;
-			left: 15px;
+			height: $nav-toggle-border;
+			left: $nav-toggle-size / 4;
 			position: absolute;
-			top: 28px;
-			width: 30px;
+			top: $nav-toggle-size / 2;
+			width: $nav-toggle-size / 2;
 		}
 
 		&::before {
 			left: 0;
-			top: -10px;
+			top: -$nav-toggle-border * 2.5;
 		}
 
 		&::after {
 			left: 0;
-			top: 10px;
+			top: $nav-toggle-border * 2.5;
 		}
 	}
 
@@ -488,7 +504,7 @@ nav {
 
 .primary-nav-menu {
 	display: none;
-	margin: 40px 10px 0;
+	margin: $nav-toggle-size 10px 0; // Keeps menu from overlapping nav toggle
 
 	@include breakpoint( sm ) {
 		border: 0;
@@ -541,7 +557,7 @@ nav {
 
 		@include breakpoint( sm ) {
 			border: $border-primary-nav-desktop;
-			line-height: 60px;
+			line-height: $nav-toggle-size;
 			padding: 0 10px;
 		}
 
