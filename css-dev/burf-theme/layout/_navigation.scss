@@ -361,7 +361,8 @@ nav {
 }
 
 /// Adjusts the size of the search and nav toggles in
-/// the main navigation.
+/// the main navigation. Also affects the top/bottom spacing
+/// around main navigation items in the nav bar.
 /// @group navigation
 /// @access public
 /// @since 2.0.0
@@ -556,7 +557,7 @@ $nav-toggle-border: 4px !default;
 
 		@include breakpoint( sm ) {
 			border: $border-primary-nav-desktop;
-			line-height: 60px;
+			line-height: $nav-toggle-size;
 			padding: 0 10px;
 		}
 
