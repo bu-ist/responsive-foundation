@@ -153,15 +153,11 @@ $_footbar-widget-width: $grid-number-columns / $number-widgets-footbar;
 	@include breakpoint( md ) {
 		display: grid;
 		grid-gap: $margin-large;
-		grid-template-columns: repeat(#{$number-widgets-footbar}, 1fr);
+		grid-template-columns: repeat( #{$number-widgets-footbar}, 1fr );
 		padding: $grid-container-padding-large-screen;
 	}
 
 	.widget {
-		.no-csscolumns & { // TODO: Change to no-cssgrid when Modernizr adds build support
-			@extend %col-md-margin-#{$_footbar-widget-width};
-		}
-
 		@include breakpoint( md ) {
 			margin-top: 0;
 			padding: 0;
@@ -171,6 +167,10 @@ $_footbar-widget-width: $grid-number-columns / $number-widgets-footbar;
 				clear: left;
 				margin-left: 0;
 			}
+		}
+
+		.no-csscolumns & { // TODO: Change to no-cssgrid when Modernizr adds build support
+			@extend %col-md-margin-#{$_footbar-widget-width};
 		}
 	}
 }
@@ -217,7 +217,7 @@ body {
 
 	li {
 		line-height: 1.4;
-		margin: 0 0 .3em;
+		margin: 0 0 0.3em;
 
 		&:last-child {
 			margin: 0;
@@ -233,7 +233,7 @@ body {
 		@extend %font-size-secondary;
 		color: $color-site-footer;
 		font-family: $font-family-sans-serif;
-		margin: 0 0 .3em;
+		margin: 0 0 0.3em;
 	}
 }
 

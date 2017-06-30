@@ -118,7 +118,7 @@ $margin:                                    30px;
 /// @access public
 /// @since 2.0.0
 
-$margin-small:                              $margin/2;
+$margin-small:                              $margin / 2;
 
 /// The base margin to use for large spacing sitewide.
 /// This affects elements like the banner, section tags,
@@ -127,7 +127,7 @@ $margin-small:                              $margin/2;
 /// @access public
 /// @since 2.0.0
 
-$margin-large:                              $margin*2;
+$margin-large:                              $margin * 2;
 
 /// The base padding to use sitewide.
 /// All padding is based on this number. Larger padding

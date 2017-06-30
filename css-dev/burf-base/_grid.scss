@@ -63,7 +63,7 @@ $grid-number-columns:                      12 !default;
 /// @access public
 /// @since 1.2.0
 
-$grid-margin-width:                        ( $margin / $container-lg )*100 !default;
+$grid-margin-width:                        ( $margin / $container-lg ) * 100 !default;
 
 /// Choose which breakpoints you want grid classes to support.
 /// Small (sm) and medium (md) are required, everything else is optional.

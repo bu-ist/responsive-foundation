@@ -376,7 +376,7 @@ $nav-toggle-size: 60px !default;
 	@include transition( color 200ms ease-in-out 0s );
 	color: $color-nav-toggle;
 	float: right;
-	font-size: $nav-toggle-size/2;
+	font-size: $nav-toggle-size / 2;
 	height: $nav-toggle-size;
 	line-height: $nav-toggle-size;
 	padding: 0;
@@ -436,10 +436,10 @@ $nav-toggle-border: 4px !default;
 		cursor: pointer;
 		display: block;
 		height: $nav-toggle-border;
-		left: $nav-toggle-size/4;
+		left: $nav-toggle-size / 4;
 		position: absolute;
-		top: $nav-toggle-size/2;
-		width: $nav-toggle-size/2;
+		top: $nav-toggle-size / 2;
+		width: $nav-toggle-size / 2;
 
 		&::before,
 		&::after {
@@ -449,20 +449,20 @@ $nav-toggle-border: 4px !default;
 			cursor: pointer;
 			display: block;
 			height: $nav-toggle-border;
-			left: $nav-toggle-size/4;
+			left: $nav-toggle-size / 4;
 			position: absolute;
-			top: $nav-toggle-size/2;
-			width: $nav-toggle-size/2;
+			top: $nav-toggle-size / 2;
+			width: $nav-toggle-size / 2;
 		}
 
 		&::before {
 			left: 0;
-			top: -$nav-toggle-border*2.5;
+			top: -$nav-toggle-border * 2.5;
 		}
 
 		&::after {
 			left: 0;
-			top: $nav-toggle-border*2.5;
+			top: $nav-toggle-border * 2.5;
 		}
 	}
 
