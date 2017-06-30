@@ -97,10 +97,20 @@ $grid-supports: (
 
 $grid-classes:										 true !default;
 
-// TODO: Grid Spacing
+/// The amount of padding to put on the content container.
+/// @group grid
+/// @access public
+/// @since 1.0.0
 
-$grid-container-padding:                   20px !default;
-$grid-container-padding-large-screen:       60px 20px 0 !default;
+$grid-container-padding:                   $padding-small !default;
+
+/// The amount of padding to put on the content container
+/// on desktop.
+/// @group grid
+/// @access public
+/// @since 1.0.0
+
+$grid-container-padding-desktop:           $padding-large $padding !default;
 
 /// Controls the margin on rows in the grid.
 /// By default, this will attempt to "pull" grid items out
@@ -140,7 +150,7 @@ $grid-sidebar-padding:                     0 0 0 60px !default;
 
 	@include breakpoint( sm ) {
 		max-width: $container-sm;
-		padding: $grid-container-padding-large-screen;
+		padding: $grid-container-padding-desktop;
 	}
 
 	@include breakpoint( md ) {

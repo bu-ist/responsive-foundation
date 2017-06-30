@@ -132,6 +132,10 @@ $border-width-widget-list:                   1px 0 0 0 !default;
 	@extend %font-size-secondary;
 	margin-bottom: $widget-margin-bottom;
 
+	&:last-child {
+		margin-bottom: 0;
+	}
+
 	h1,
 	h2,
 	h3,

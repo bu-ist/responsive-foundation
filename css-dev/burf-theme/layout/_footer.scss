@@ -154,7 +154,7 @@ $_footbar-widget-width: $grid-number-columns / $number-widgets-footbar;
 		display: grid;
 		grid-gap: $margin-large;
 		grid-template-columns: repeat( #{$number-widgets-footbar}, 1fr );
-		padding: $grid-container-padding-large-screen;
+		padding: $grid-container-padding-desktop;
 	}
 
 	.widget {
