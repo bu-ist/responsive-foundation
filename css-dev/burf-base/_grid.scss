@@ -197,16 +197,20 @@ $grid-column-padding:                      0 $padding !default;
 	padding: $grid-column-padding;
 }
 
+/// A backwards-compatible equal heights solution for
+/// older browsers.
 /// Base styles for a container whose children should
 /// be equal heights.
 /// @group utilities
 /// @access public
 /// @since 1.2.0
 
-%equal-height-parent {
+%equal-height-parent-backcompat {
 	overflow: hidden;
 }
 
+/// A backwards-compatible equal heights solution for
+/// older browsers.
 /// Base styles for children of the equal-height-parent.
 /// These styles will make children appear to be equal heights,
 /// even if the actual content is different heights.
@@ -216,11 +220,26 @@ $grid-column-padding:                      0 $padding !default;
 /// @access public
 /// @since 1.2.0
 
-%equal-height-child {
+%equal-height-child-backcompat {
 	@include breakpoint( md ) {
 		padding-bottom: 99999px;
 		margin-bottom: -99999px;
 	}
+}
+
+/// A newer version of equal heights that takes advantage
+/// of flexbox. Use this on your container to make all
+/// children equal heights. Plays nice with the grid.
+/// Check https://caniuse.com/#search=flexbox for browser
+/// support. You may want to provide a min-height on a
+/// case by case basis as a fallback.
+/// @group utilities
+/// @access public
+/// @since 2.0.0
+
+%equal-heights {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 // Additional placeholders are available for the grid. See below for detailed docs.
