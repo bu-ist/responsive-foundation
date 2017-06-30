@@ -57,14 +57,14 @@ $border-width-comment:                      1px 1px 1px 5px !default;
 /// @access public
 /// @since 1.0.0
 
-$comment-padding:                           15px !default;
+$comment-padding:                           $padding-small !default;
 
 /// Controls the amount of spacing within comments on mobile.
 /// @group news
 /// @access public
 /// @since 1.0.0
 
-$comment-padding-mobile:                           10px !default;
+$comment-padding-mobile:                           $padding-small !default;
 
 /// Controls the font family used for comments on a post.
 /// @group news
@@ -148,8 +148,8 @@ $border-width-comment-form:                  3px !default;
 /// @since 1.0.0
 
 .comments-list {
-	margin-left: -10px;
-	margin-right: -10px;
+	margin-left: -$margin-small;
+	margin-right: -$margin-small;
 
 	@include breakpoint( sm ) {
 		margin: 0;
@@ -276,8 +276,8 @@ $border-width-comment-form:                  3px !default;
 	background: $color-comment-form-bg;
 	border: $border-comment-form;
 	border-width: $border-width-comment-form;
-	margin: 15px 0 20px;
-	padding: 20px;
+	margin: $margin-small 0 $margin;
+	padding: $padding;
 	position: relative;
 
 	fieldset {
@@ -287,7 +287,7 @@ $border-width-comment-form:                  3px !default;
 	}
 
 	p {
-		margin: 0 0 20px;
+		margin: 0 0 $padding;
 	}
 
 	label {
@@ -297,7 +297,7 @@ $border-width-comment-form:                  3px !default;
 		@include breakpoint( sm ) {
 			float: left;
 			margin: $form-label-margin;
-			padding-right: 10px;
+			padding-right: $padding-small;
 			width: 25%;
 		}
 	}

@@ -71,7 +71,7 @@ $_profile-adv-cols-md: $grid-number-columns / $profiles-advanced-cols-md;
 
 .profile-link-advanced {
 	display: block;
-	padding: 0 15px;
+	padding: 0 $padding-small;
 	text-align: center;
 }
 

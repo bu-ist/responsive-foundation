@@ -33,7 +33,7 @@ $color-banner-container:                    $color-grayscale-f0 !default;
 .banner-container-window-width {
 	@include breakpoint( lg ) {
 		background: $color-banner-container;
-		padding: 20px;
+		padding: $padding-small;
 	}
 }
 

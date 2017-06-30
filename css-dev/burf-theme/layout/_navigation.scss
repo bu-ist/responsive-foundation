@@ -324,7 +324,7 @@ nav {
 	background: $color-search-bg;
 	display: none;
 	margin: 0;
-	padding: 30px 20px;
+	padding: $padding $padding-small;
 	position: relative;
 
 	&.is-open {
@@ -338,7 +338,7 @@ nav {
 		@include breakpoint( $nav-desktop ) {
 			margin: 0 auto;
 			max-width: $container-sm;
-			padding: 0 20px;
+			padding: 0 $padding;
 		}
 	}
 
@@ -350,8 +350,8 @@ nav {
 .search-field {
 	@include border-radius( $border-radius-quicksearch-input );
 	color: $color-search-text;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: $padding-small;
+	padding-right: $padding-small;
 	width: 75%;
 
 	@include breakpoint( $nav-desktop ) {
@@ -501,11 +501,11 @@ $nav-toggle-border: 4px !default;
 	@extend %clearfix;
 	background: $color-primary-nav-bg;
 	display: block;
-	padding: 0 10px;
+	padding: 0 $padding-small;
 
 	&.is-open {
 		height: auto;
-		padding-bottom: 20px;
+		padding-bottom: $padding;
 
 		@include breakpoint( $nav-desktop ) {
 			padding-bottom: 0;
@@ -543,12 +543,12 @@ $nav-toggle-border: 4px !default;
 
 		li {
 			display: block;
-			padding: 0 10px;
+			padding: 0 $padding-small;
 
 			a {
 				color: $color-primary-nav-dropdown-link;
 				line-height: $line-height-base;
-				padding: 10px 0;
+				padding: $padding-small 0;
 
 				&:hover,
 				&:focus {
@@ -563,13 +563,13 @@ $nav-toggle-border: 4px !default;
 		border-width: $border-width-primary-nav;
 		color: $color-primary-nav-link;
 		display: block;
-		padding: 10px 0;
+		padding: $padding-small 0;
 		text-decoration: none;
 
 		@include breakpoint( $nav-desktop ) {
 			border: $border-primary-nav-desktop;
 			line-height: $nav-toggle-size;
-			padding: 0 10px;
+			padding: 0 $padding-small;
 		}
 
 		&:hover,
@@ -605,8 +605,8 @@ $nav-toggle-border: 4px !default;
 	color: $color-utility-nav-mobile-link;
 	display: none;
 	font-size: $font-size-utility-nav;
-	margin: 0 10px;
-	padding: 20px 0 0;
+	margin: 0 $padding-small;
+	padding: $padding 0 0;
 	text-decoration: none;
 
 	@include breakpoint( $nav-desktop ) {
@@ -621,7 +621,7 @@ $nav-toggle-border: 4px !default;
 			*display: inline;
 			border: 0;
 			display: inline-block;
-			padding-left: 10px;
+			padding-left: $padding-small;
 		}
 	}
 
@@ -703,7 +703,7 @@ $left-nav-desktop:                    $nav-desktop !default;
 		@include breakpoint( lg ) {
 			display: block;
 			margin-left: 0;
-			padding: 20px 10px;
+			padding: $padding $padding-small;
 			width: $width-side-nav;
 		}
 	}
@@ -711,14 +711,14 @@ $left-nav-desktop:                    $nav-desktop !default;
 	.nav-toggle {
 		@include breakpoint( $left-nav-desktop ) {
 			float: right;
-			margin-right: -10px;
+			margin-right: -$padding-small;
 		}
 	}
 
 	.primary-nav-menu {
 		@include breakpoint( $left-nav-desktop ) {
 			display: none;
-			margin: 0 10px;
+			margin: 0 $margin-small;
 		}
 
 		@include breakpoint( lg ) {
@@ -742,7 +742,7 @@ $left-nav-desktop:                    $nav-desktop !default;
 			border: 1px solid $color-primary-nav-border;
 			border-width: $border-width-primary-nav;
 			line-height: $line-height-base;
-			padding: 10px 0;
+			padding: $padding-small 0;
 		}
 
 		ul {
@@ -762,7 +762,7 @@ $left-nav-desktop:                    $nav-desktop !default;
 		color: $color-nav-toggle-alt;
 		display: block;
 		position: relative;
-		right: 10px;
+		right: $padding-small;
 	}
 
 	&:active,
@@ -823,7 +823,7 @@ $_search-height: 103px;
 	}
 
 	.masthead-container .utility-nav {
-		margin: 0 10px;
+		margin: 0 $margin-small;
 
 		@include breakpoint( lg ) {
 			display: block;
@@ -851,7 +851,7 @@ $_search-height: 103px;
 
 		.nav-toggle {
 			float: left;
-			margin-left: -10px;
+			margin-left: -$margin-small;
 		}
 
 		.primary-nav-menu,
