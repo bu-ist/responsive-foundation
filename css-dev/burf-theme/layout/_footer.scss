@@ -152,7 +152,7 @@ $_footbar-widget-width: $grid-number-columns / $number-widgets-footbar;
 
 	@include breakpoint( md ) {
 		display: grid;
-		grid-gap: $margin*2;
+		grid-gap: $margin-large;
 		grid-template-columns: repeat(#{$number-widgets-footbar}, 1fr);
 		padding: $grid-container-padding-large-screen;
 	}
