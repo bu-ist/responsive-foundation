@@ -120,8 +120,19 @@ $grid-container-padding-desktop:           $padding-large $padding !default;
 /// @since 1.0.0
 
 $grid-row-margin:                          0 -$grid-container-padding !default;
-$grid-column-padding:                      0 20px !default;
-$grid-sidebar-padding:                     0 0 0 60px !default;
+
+/// Controls the padding on child items of the grid.
+/// On non-margin classes, this will act like a "margin",
+/// putting space between grid items, Boostrap-style.
+/// If you need to use the padding for something else, like
+/// if you have a background color on your grid item,
+/// use the margin classes.
+/// @group grid
+/// @access public
+/// @since 1.0.0
+
+$grid-column-padding:                      0 $padding !default;
+$grid-sidebar-padding:                     0 0 0 $padding-large !default;
 
 
 /// Base styles for all wrapper elements.
