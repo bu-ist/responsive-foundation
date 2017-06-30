@@ -3,7 +3,7 @@
 /// @access public
 /// @since 2.0.0
 
-$profile-photo-basic-size: 50px;
+$profile-photo-basic-size:                  $profile-photo-default-size;
 
 /// Styles the basic profile format.
 /// @group profiles
@@ -23,7 +23,7 @@ $profile-photo-basic-size: 50px;
 	border-bottom: $border-profiles;
 	margin-bottom: 0;
 	min-height: 100px;
-	padding: 25px ($profile-photo-basic-size + $margin-small) 25px 0;
+	padding: 25px ( $profile-photo-basic-size + $margin-small ) 25px 0;
 }
 
 /// Styles a basic profile photo.

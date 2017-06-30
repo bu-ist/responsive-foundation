@@ -1,3 +1,10 @@
+/// Adjusts the size of the default profile photo.
+/// @group profiles
+/// @access public
+/// @since 2.0.0
+
+$profile-photo-default-size:                  50px;
+
 /// Controls the style of border used on profile callouts.
 /// By default, this applies to the basic and default formats only.
 /// @group profiles
@@ -24,7 +31,7 @@ $border-profiles:                          $border-base !default;
 	border-bottom: $border-profiles;
 	margin-bottom: 0;
 	min-height: 100px;
-	padding: 25px 65px 25px 0;
+	padding: 25px ( $profile-photo-default-size + $margin-small ) 25px 0;
 }
 
 /// Styles a default profile photo.
@@ -33,9 +40,9 @@ $border-profiles:                          $border-base !default;
 /// @since 2.0.0
 
 .profile-photo-default {
-	height: 50px;
+	height: $profile-photo-default-size;
 	overflow: hidden;
 	position: absolute;
 	right: 0;
-	width: 50px;
+	width: $profile-photo-default-size;
 }
