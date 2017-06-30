@@ -503,7 +503,7 @@ $nav-toggle-border: 4px !default;
 
 .primary-nav-menu {
 	display: none;
-	margin: 40px 10px 0;
+	margin: $nav-toggle-size 10px 0; // Keeps menu from overlapping nav toggle
 
 	@include breakpoint( sm ) {
 		border: 0;
