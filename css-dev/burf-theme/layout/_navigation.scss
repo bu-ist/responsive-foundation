@@ -334,6 +334,10 @@ nav {
 			padding: 0 20px;
 		}
 	}
+
+	label {
+		display: initial;
+	}
 }
 
 .search-field {
@@ -352,7 +356,7 @@ nav {
 	@extend %button-styles-primary;
 	@include border-radius( $border-radius-quicksearch-button );
 	float: right;
-	padding: 11px 0 12px;
+	margin: 0;
 	width: 25%;
 
 	@include breakpoint( sm ) {

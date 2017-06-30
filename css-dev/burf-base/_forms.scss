@@ -36,9 +36,9 @@ $form-fieldset-padding:                    0 !default;
 /// @access public
 /// @since 1.0.0
 
-$form-label-margin:                        0.5em 0 0.2em !default;
+$form-label-margin:                        0.5em 0 0.5em !default;
 
-$form-row-margin:                          0 0 $margin !default;
+$form-row-margin:                          0 0 $margin-small !default;
 
 /// Controls the margin on inputs in forms.
 /// Note: this style may not apply to Gravity Forms
@@ -47,7 +47,7 @@ $form-row-margin:                          0 0 $margin !default;
 /// @access public
 /// @since 1.0.0
 
-$form-input-margin:                        0.25em 0 !default;
+$form-input-margin:                        0 0 $margin-small !default;
 
 $form-input-padding:                       0.5em 0.6em !default;
 
@@ -57,6 +57,21 @@ $form-input-border-radius:                  0 !default;
 $form-input-focus-shadow:                   0 0 4px 0 rgba( 18, 159, 234, 0.2 ) !default;
 $color-input-focus-border:                  #129fea !default;
 
+$font-family-button:                        $font-family-sans-serif !default;
+$font-size-button:                          inherit !default;
+$color-button-bg:                          $color-grayscale-e !default;
+$color-button-text:                        $color-grayscale-4 !default;
+$color-button-primary-bg:                  #0078e7 !default;
+$color-button-primary-text:                $color-grayscale-f !default;
+
+/// Controls the margin on buttons in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
+$margin-button:                             0 $margin-small $margin-small 0 !default;
 
 // Placeholders for Forms
 // -----------------------------------------------------------------
@@ -80,6 +95,7 @@ $color-input-focus-border:                  #129fea !default;
 	font-family: $font-family-button;
 	font-size: $font-size-button;
 	line-height: normal;
+	margin: $margin-button;
 	padding: 0.5em 1em;
 	text-align: center;
 	text-decoration: none;
@@ -198,6 +214,7 @@ legend {
 	border: $form-legend-border;
 	border-width: $form-legend-border-width;
 	display: block;
+	font-size: 1.5em;
 	font-weight: 700;
 	margin: $form-legend-margin;
 	padding: $form-legend-padding;
@@ -217,6 +234,8 @@ textarea {
 
 label {
 	margin: $form-label-margin;
+	display: block;
+	font-weight: bold;
 }
 
 /// The general styles for inputs which should look like buttons.
@@ -277,6 +296,7 @@ textarea {
 	@include border-radius( $form-input-border-radius );
 	border: $form-input-border;
 	display: inline-block;
+	margin: $form-input-margin;
 	padding: $form-input-padding;
 
 	&:focus {
@@ -312,7 +332,6 @@ textarea {
 
 .checkbox,
 .radio {
-	display: block;
 	margin: 0.5em 0;
 }
 
@@ -420,7 +439,7 @@ select {
 /// @since 1.0.0
 
 .form-controls {
-	margin: 20px 0 0;
+	margin: $margin 0 0;
 }
 
 /// Styles required items, if you are not using Gravity Forms.
