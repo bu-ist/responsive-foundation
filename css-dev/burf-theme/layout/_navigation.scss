@@ -291,6 +291,13 @@ $width-side-nav:                            240px !default;
 // Navigation
 // =================================================================
 
+/// The default breakpoint to switch to the desktop view in navigation.
+/// @group primary-navigation
+/// @access public
+/// @since 2.0.0
+
+$nav-desktop:                    sm !default;
+
 nav {
 	font-family: $font-family-navigation;
 
@@ -328,7 +335,7 @@ nav {
 	fieldset {
 		margin: 0;
 
-		@include breakpoint( sm ) {
+		@include breakpoint( $nav-desktop ) {
 			margin: 0 auto;
 			max-width: $container-sm;
 			padding: 0 20px;
@@ -347,7 +354,7 @@ nav {
 	padding-right: 10px;
 	width: 75%;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $nav-desktop ) {
 		width: 85%;
 	}
 }
@@ -359,7 +366,7 @@ nav {
 	margin: 0;
 	width: 25%;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $nav-desktop ) {
 		width: 15%;
 	}
 }
@@ -429,7 +436,7 @@ $nav-toggle-border: 4px !default;
 	position: relative;
 	width: $nav-toggle-size;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $nav-desktop ) {
 		display: none;
 	}
 
@@ -500,7 +507,7 @@ $nav-toggle-border: 4px !default;
 		height: auto;
 		padding-bottom: 20px;
 
-		@include breakpoint( sm ) {
+		@include breakpoint( $nav-desktop ) {
 			padding-bottom: 0;
 		}
 	}
@@ -510,7 +517,7 @@ $nav-toggle-border: 4px !default;
 	display: none;
 	margin: $nav-toggle-size 10px 0; // Keeps menu from overlapping nav toggle
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $nav-desktop ) {
 		border: 0;
 		display: inline;
 		margin: 0;
@@ -520,7 +527,7 @@ $nav-toggle-border: 4px !default;
 		display: block;
 		zoom: 1;
 
-		@include breakpoint( sm ) {
+		@include breakpoint( $nav-desktop ) {
 			border: 0;
 			display: inline-block;
 
@@ -559,7 +566,7 @@ $nav-toggle-border: 4px !default;
 		padding: 10px 0;
 		text-decoration: none;
 
-		@include breakpoint( sm ) {
+		@include breakpoint( $nav-desktop ) {
 			border: $border-primary-nav-desktop;
 			line-height: $nav-toggle-size;
 			padding: 0 10px;
@@ -579,7 +586,7 @@ $nav-toggle-border: 4px !default;
 	ul {
 		display: none;
 
-		@include breakpoint( sm ) {
+		@include breakpoint( $nav-desktop ) {
 			background: $color-primary-nav-dropdown-bg;
 			display: block;
 			left: -9999px;
@@ -602,7 +609,7 @@ $nav-toggle-border: 4px !default;
 	padding: 20px 0 0;
 	text-decoration: none;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $nav-desktop ) {
 		color: $color-utility-nav-link;
 	}
 
@@ -610,7 +617,7 @@ $nav-toggle-border: 4px !default;
 		border: 0;
 		padding: 0;
 
-		@include breakpoint( sm ) {
+		@include breakpoint( $nav-desktop ) {
 			*display: inline;
 			border: 0;
 			display: inline-block;
@@ -624,14 +631,14 @@ $nav-toggle-border: 4px !default;
 		&:hover {
 			color: $color-utility-nav-mobile-link-hover;
 
-			@include breakpoint( sm ) {
+			@include breakpoint( $nav-desktop ) {
 				color: $color-utility-nav-link-hover;
 			}
 		}
 	}
 
 	.masthead-container & {
-		@include breakpoint( sm ) {
+		@include breakpoint( $nav-desktop ) {
 			border: 0;
 			display: block;
 			margin: 0;
@@ -644,7 +651,7 @@ $nav-toggle-border: 4px !default;
 
 .l-default {
 	.utility-nav {
-		@include breakpoint( sm ) {
+		@include breakpoint( $nav-desktop ) {
 			line-height: 1;
 			position: absolute;
 			right: 20px;
@@ -655,9 +662,17 @@ $nav-toggle-border: 4px !default;
 
 // side-nav
 
+/// The breakpoint to switch to the desktop view in the left
+/// navigation layout.
+/// @group primary-navigation
+/// @access public
+/// @since 2.0.0
+
+$left-nav-desktop:                    $nav-desktop !default;
+
 .l-side-nav {
 	.masthead::after {
-		@include breakpoint( sm ) {
+		@include breakpoint( $left-nav-desktop ) {
 			display: none;
 		}
 	}
@@ -667,7 +682,7 @@ $nav-toggle-border: 4px !default;
 	}
 
 	.primary-nav {
-		@include breakpoint( sm ) {
+		@include breakpoint( $left-nav-desktop ) {
 			background: none;
 			float: left;
 			left: 0;
@@ -694,14 +709,14 @@ $nav-toggle-border: 4px !default;
 	}
 
 	.nav-toggle {
-		@include breakpoint( sm ) {
+		@include breakpoint( $left-nav-desktop ) {
 			float: right;
 			margin-right: -10px;
 		}
 	}
 
 	.primary-nav-menu {
-		@include breakpoint( sm ) {
+		@include breakpoint( $left-nav-desktop ) {
 			display: none;
 			margin: 0 10px;
 		}
@@ -742,7 +757,7 @@ $nav-toggle-border: 4px !default;
 	position: absolute;
 	right: 0;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $left-nav-desktop ) {
 		@include vertical-center;
 		color: $color-nav-toggle-alt;
 		display: block;
@@ -758,7 +773,7 @@ $nav-toggle-border: 4px !default;
 	&:hover {
 		color: currentColor;
 
-		@include breakpoint( sm ) {
+		@include breakpoint( $left-nav-desktop ) {
 			color: $color-nav-toggle-alt-hover;
 		}
 	}
@@ -768,21 +783,22 @@ $_search-height: 103px;
 
 .search-open.l-side-nav {
 	.primary-nav {
-		@include breakpoint( sm ) {
+		@include breakpoint( $left-nav-desktop ) {
 			top: $_search-height; // adds the height of the open search form
 		}
 	}
 	.content {
-		@include breakpoint( sm ) {
+		@include breakpoint( $left-nav-desktop ) {
 			margin-top: $_search-height; // adds the height of the open search form
 		}
 	}
 }
 
 // side-nav and no-nav: quicksearch
+
 .l-side-nav {
 	#quicksearch {
-		@include breakpoint( sm ) {
+		@include breakpoint( $left-nav-desktop ) {
 			border: 1px solid $color-quicksearch-border;
 			border-width: $border-width-quicksearch;
 			position: absolute;
@@ -792,7 +808,7 @@ $_search-height: 103px;
 
 	.primary-nav {
 		.search-toggle {
-			@include breakpoint( sm ) {
+			@include breakpoint( $left-nav-desktop ) {
 				display: none;
 			}
 		}
@@ -824,7 +840,7 @@ $_search-height: 103px;
 
 	&.nav-open {
 		.content {
-			@include breakpoint( sm ) {
+			@include breakpoint( $left-nav-desktop ) {
 				left: $width-side-nav - 60px;
 			}
 
@@ -848,9 +864,17 @@ $_search-height: 103px;
 
 // top nav
 
+/// The breakpoint to switch to the desktop view in the top
+/// navigation layout.
+/// @group primary-navigation
+/// @access public
+/// @since 2.0.0
+
+$top-nav-desktop:                    $nav-desktop !default;
+
 .l-top-nav {
 	.utility-nav {
-		@include breakpoint( sm ) {
+		@include breakpoint( $top-nav-desktop ) {
 			line-height: 1;
 			position: absolute;
 			right: 20px;
@@ -864,16 +888,24 @@ $_search-height: 103px;
 }
 
 .l-top-nav.search-open .utility-nav {
-	@include breakpoint( sm ) {
+	@include breakpoint( $top-nav-desktop ) {
 		top: 209px;
 	}
 }
 
 // no-nav
 
+/// The breakpoint to switch to the desktop view in the no
+/// navigation layout.
+/// @group primary-navigation
+/// @access public
+/// @since 2.0.0
+
+$no-nav-desktop:                    $nav-desktop !default;
+
 .l-no-nav {
 	.primary-nav {
-		@include breakpoint( sm ) {
+		@include breakpoint( $no-nav-desktop ) {
 			display: none;
 		}
 	}
@@ -887,7 +919,7 @@ $_search-height: 103px;
 			font-size: 24px;
 			margin: 0 -60px 0 0;
 
-			@include breakpoint( sm ) {
+			@include breakpoint( $no-nav-desktop ) {
 				@include vertical-center;
 				display: block;
 				right: 10px;
@@ -911,7 +943,7 @@ $_search-height: 103px;
 		.utility-nav {
 			display: none;
 
-			@include breakpoint( sm ) {
+			@include breakpoint( $no-nav-desktop ) {
 				display: block;
 				position: absolute;
 				right: 80px;
