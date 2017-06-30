@@ -124,8 +124,8 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 .post-part {
 	border: $border-news-post;
 	border-width: $border-width-news-post;
-	margin-top: 30px;
-	padding-top: 30px;
+	margin-top: $margin;
+	padding-top: $margin;
 	position: relative;
 
 	&:first-child {
