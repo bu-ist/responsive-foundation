@@ -15,6 +15,12 @@ $font-family-monospace:                     Consolas, "Liberation Mono", Courier
 $font-family-heading:                       $font-family-sans-serif !default;
 $color-heading:                            $color-grayscale-0 !default;
 $color-heading-small:                      $color-grayscale-9 !default;
+
+/// Base margin for HTML tags. Primarily affect `<p>`.
+/// @group typography
+/// @access public
+/// @since 1.0.0
+
 $font-margin-base:                          0 0 1.5em 0 !default;
 
 $color-link:                               #0f69d7 !default;
@@ -29,16 +35,37 @@ $color-button-primary-bg:                  #0078e7 !default;
 $color-button-primary-text:                $color-grayscale-f !default;
 
 $font-padding-code:                         0.2em 0.4em !default;
+
+/// Base margin for the `<code>` tag.
+/// @group typography
+/// @access public
+/// @since 1.0.0
+
 $font-margin-code:                          $margin 0 !default;
 $color-code:                               $color-grayscale-7 !default;
 $color-code-bg:                            $color-grayscale-f5 !default;
 
+/// Base margin for the `<blockquote>` tag.
+/// @group typography
+/// @access public
+/// @since 1.0.0
+
 $font-margin-blockquote:                    1em $margin-large !default;
+
+/// Base margin for `<ul>` and `<ol>` tags.
+/// @group typography
+/// @access public
+/// @since 1.0.0
 
 $font-margin-list:                          $font-margin-base !default;
 $font-padding-list:                         0 0 0 40px !default;
 
-$font-margin-dd:                            0 0 0 40px !default;
+/// Base margin for `<dd>` tags.
+/// @group typography
+/// @access public
+/// @since 1.0.0
+
+$font-margin-dd:                            0 0 0 $margin !default;
 
 // Color and Typography
 // -----------------------------------------------------------------
@@ -126,6 +153,17 @@ $min-size-headings: $font-size-base;
 /// @since 2.0.0
 
 $max-size-headings: 55px;
+
+/// The maximum font size in pixels for headings to use on mobile. This directly affects `<h1>`
+/// headings _within content_. Do not use a larger value, such as those you might find
+/// on a landing page or in a homepage slider, to determine this value. Be sure to
+/// test it against deeply nested pages, which tend to have longer page titles.
+/// It indirectly affects all other heading  font sizes as well by serving as the
+/// upper limit to our scale.
+/// @group global
+/// @access public
+/// @since 2.0.0
+
 $max-size-headings-mobile: 36px;
 
 /// The minimum line height ratio for headings to use. Do not use any units with
@@ -246,6 +284,14 @@ $font-styles: (
 /// @since 2.0.0
 
 $_heading-size-scale: calc-scale( $min-size-headings, $max-size-headings, $_depth-headings, $heading-growth-rate );
+
+/// The multiplier needed to calculate the scale between minimum and maximum
+/// font sizes on headings on mobile. This value is dependent on the heading minimum, maximum,
+/// and growth rate; it should never be changed directly. Change those instead.
+/// @group global
+/// @access private
+/// @since 2.0.0
+
 $_heading-size-scale-mobile: calc-scale( $min-size-headings, $max-size-headings-mobile, $_depth-headings, $heading-growth-rate );
 
 /// The multiplier needed to calculate the scale between minimum and maximum

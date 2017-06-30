@@ -2,7 +2,12 @@
 // Tables
 // =================================================================
 
-$table-margin:                             $margin*2 0 !default;
+/// Base margin for the table tag.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$table-margin:                             $margin 0 !default;
 $table-padding:                            0.5em 1em !default;
 
 $color-table-border:                       $color-grayscale-d !default;
