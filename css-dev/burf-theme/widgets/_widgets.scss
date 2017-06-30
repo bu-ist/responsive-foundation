@@ -129,6 +129,7 @@ $border-width-widget-list:                   1px 0 0 0 !default;
 /// @since 1.0.0
 
 .widget {
+	@extend %col-full;
 	@extend %font-size-secondary;
 	margin-bottom: $widget-margin-bottom;
 

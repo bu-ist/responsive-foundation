@@ -139,6 +139,7 @@ $sidebar-padding:                          3.46667% !default;
 /// @since 1.0.0
 
 .sidebar {
+	@extend %equal-heights;
 	@extend %font-size-secondary;
 	clear: none;
 
