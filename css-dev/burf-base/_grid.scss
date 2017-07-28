@@ -109,7 +109,7 @@ $grid-container-padding-large-screen:       60px 20px 0 !default;
 /// @access public
 /// @since 1.0.0
 
-$grid-row-margin:                          0 -$grid-container-padding !default;
+$grid-row-margin:                          0 -#{$grid-container-padding} !default;
 $grid-column-padding:                      0 20px !default;
 $grid-sidebar-padding:                     0 0 0 60px !default;
 
