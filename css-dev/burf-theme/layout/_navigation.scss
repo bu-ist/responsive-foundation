@@ -377,6 +377,7 @@ $nav-toggle-size: 60px !default;
 .search-toggle {
 	@extend %icon-search;
 	@include transition( color 200ms ease-in-out 0s );
+	background: transparent;
 	color: $color-nav-toggle;
 	float: right;
 	font-size: $nav-toggle-size / 2;
