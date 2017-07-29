@@ -419,6 +419,7 @@ $nav-toggle-border: 4px !default;
 
 .nav-toggle {
 	@extend %hide-text;
+	background: transparent;
 	cursor: pointer;
 	float: left;
 	height: $nav-toggle-size;
@@ -444,6 +445,7 @@ $nav-toggle-border: 4px !default;
 		position: absolute;
 		top: $nav-toggle-size / 2;
 		width: $nav-toggle-size / 2;
+		text-indent: 100px;
 
 		&::before,
 		&::after {
@@ -510,7 +512,7 @@ $nav-toggle-border: 4px !default;
 	margin: $nav-toggle-size 10px 0; // Keeps menu from overlapping nav toggle
 	clear: left;
 
-	@media screen and ( max-width: $md - 1 ) {
+	@media screen and ( max-width: $sm - 1 ) {
 		.js & {
 			display: none;
 		}
@@ -533,6 +535,10 @@ $nav-toggle-border: 4px !default;
 			.lt-ie8 & {
 				display: inline;
 			}
+		}
+
+		&:focus {
+			outline-color: invert($color-primary-nav-bg);
 		}
 
 		&:hover ul,

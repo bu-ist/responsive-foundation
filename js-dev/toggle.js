@@ -11,8 +11,20 @@
 	$searchtoggle.attr( 'aria-expanded', 'false' )
 					 .attr( 'aria-controls', 'quicksearch' );
 
+	$toggle.attr( 'aria-expanded', 'false' )
+			 .attr( 'aria-controls', 'primary-nav-menu' );
+
 	$toggle.on( 'click', function ( e ) {
 		e.preventDefault();
+
+		if ( $toggle.attr( 'aria-expanded' ) === 'false' ) {
+			$toggle.attr( 'aria-expanded', 'true' )
+					 .attr( 'aria-label', 'Close menu' );
+		} else {
+			$toggle.attr( 'aria-expanded', 'false' )
+					 .attr( 'aria-label', 'Open menu' );
+		}
+
 		$toggleitems.toggleClass( 'is-open' );
 		$searchitems.removeClass( 'is-open' );
 		$body.toggleClass( 'nav-open' ).removeClass( 'search-open' );
@@ -28,9 +40,11 @@
 		}
 
 		if ( $searchtoggle.attr( 'aria-expanded' ) === 'false' ) {
-			$searchtoggle.attr( 'aria-expanded', 'true' );
+			$searchtoggle.attr( 'aria-expanded', 'true' )
+							 .attr( 'aria-label', 'Close search' );
 		} else {
-			$searchtoggle.attr( 'aria-expanded', 'false' );
+			$searchtoggle.attr( 'aria-expanded', 'false' )
+							 .attr( 'aria-label', 'Open search' );
 		}
 
 		$searchitems.toggleClass( 'is-open' );
