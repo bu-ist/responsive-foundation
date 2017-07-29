@@ -395,6 +395,10 @@ $nav-toggle-size: 60px !default;
 		color: $color-nav-toggle-hover;
 	}
 
+	&:focus {
+		outline-color: invert($color-primary-nav-bg);
+	}
+
 	&.is-open {
 		@extend %icon-close;
 	}
@@ -420,6 +424,10 @@ $nav-toggle-border: 4px !default;
 	height: $nav-toggle-size;
 	position: relative;
 	width: $nav-toggle-size;
+
+	&:focus {
+		outline-color: invert($color-primary-nav-bg);
+	}
 
 	@include breakpoint( sm ) {
 		display: none;
