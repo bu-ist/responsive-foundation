@@ -315,10 +315,13 @@ nav {
 
 #quicksearch {
 	background: $color-search-bg;
-	display: none;
 	margin: 0;
 	padding: 30px 20px;
 	position: relative;
+
+	.js & {
+		display: none;
+	}
 
 	&.is-open {
 		border-bottom: $border-search;
@@ -396,17 +399,9 @@ $nav-toggle-size: 60px !default;
 	}
 
 	span {
-		display: none;
+		@extend %visuallyhidden;
 	}
 }
-
-// when nav or search are opened
-.is-open .primary-nav-menu,
-.is-open .utility-nav {
-	clear: left;
-	display: block;
-}
-
 
 /// Adjusts the size of border on the nav toggle icon
 /// in the main navigation. Also affects spacing of borders
@@ -503,8 +498,14 @@ $nav-toggle-border: 4px !default;
 }
 
 .primary-nav-menu {
-	display: none;
 	margin: $nav-toggle-size 10px 0; // Keeps menu from overlapping nav toggle
+	clear: left;
+
+	@media screen and ( max-width: $md - 1 ) {
+		.js & {
+			display: none;
+		}
+	}
 
 	@include breakpoint( sm ) {
 		border: 0;
@@ -586,6 +587,12 @@ $nav-toggle-border: 4px !default;
 	}
 }
 
+// when nav or search are opened
+.is-open .primary-nav-menu,
+.is-open .utility-nav {
+	display: block;
+}
+
 // utilityNav
 
 .utility-nav {
@@ -597,6 +604,7 @@ $nav-toggle-border: 4px !default;
 	margin: 0 10px;
 	padding: 20px 0 0;
 	text-decoration: none;
+	clear: left;
 
 	@include breakpoint( sm ) {
 		color: $color-utility-nav-link;

@@ -8,6 +8,9 @@
 		 $searchtoggle = $( '.js-search-toggle' ),
 		 $searchitems = $searchtoggle.add( '#quicksearch' );
 
+	$searchtoggle.attr( 'aria-expanded', 'false' )
+					 .attr( 'aria-controls', 'quicksearch' );
+
 	$toggle.on( 'click', function ( e ) {
 		e.preventDefault();
 		$toggleitems.toggleClass( 'is-open' );
@@ -24,12 +27,18 @@
 			}, 100 );
 		}
 
+		if ( $searchtoggle.attr( 'aria-expanded' ) === 'false' ) {
+			$searchtoggle.attr( 'aria-expanded', 'true' );
+		} else {
+			$searchtoggle.attr( 'aria-expanded', 'false' );
+		}
+
 		$searchitems.toggleClass( 'is-open' );
-		$body.toggleClass( 'search-open' ).removeClass('nav-open');
+		$body.toggleClass( 'search-open' ).removeClass( 'nav-open' );
 	}
 
 	$searchtoggle.on({
-		mouseup: function (e) {
+		click: function (e) {
 			e.preventDefault();
 			toggleSearchPanel( true );
 		},
