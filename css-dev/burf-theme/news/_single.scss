@@ -14,7 +14,7 @@ $border-message:                           $border !default;
 /// @access public
 /// @since 1.0.0
 
-$border-width-message:                      1px 1px 1px 5px !default;
+$border-width-message:                     1px 1px 1px 5px !default;
 
 /// The amount of rounding (border radius) to apply to the corners
 /// of comments.
@@ -43,7 +43,7 @@ $color-message-bg:                         $color-grayscale-f0 !default;
 /// @access public
 /// @since 1.0.0
 
-$color-message-border-left:                 $color-grayscale-0 !default;
+$color-message-border-left:                $color-grayscale-0 !default;
 
 /// Controls the padding of the metadata card at the bottom of news posts
 /// on the single post template.
