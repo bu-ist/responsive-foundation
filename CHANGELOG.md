@@ -2,31 +2,29 @@
 
 ## 2.0.0-dev
 
-* Standardizes border treatments
-[See related pull request](https://github.com/bu-ist/responsive-foundation/pull/88)
-* Adds a new z-index scale to help manage layering of multiple interactive elements
-[See related pull request](https://github.com/bu-ist/responsive-foundation/pull/87)
+* Standardizes border treatments [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/88)
+* Adds a new z-index scale to help manage layering of multiple interactive elements [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/87)
 * Introduces `$padding`, `$padding-small`, and `$padding-large` as part of the variables
 cleanup effort [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/82)
 * Introduces `$margin`, `$margin-small`, and `$margin-large` as part of the variables
 cleanup effort [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/78)
 * Tint your grays with ease using the brand new `$tint-hue` and `$tint-saturation`!
 [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/75)
-* `%template-narrow` and `%remove-template-narrow` are deprecated in favor of new PHP filters in
-Framework [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/72)
+* `%template-narrow` and `%remove-template-narrow` are deprecated in favor of new PHP
+filters in Framework [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/72)
 * Navigation JS now follows coding standard, with bonus caching
 [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/71)
-* BRAND NEW ORGANIZATION! You can finally override variables in the same file as your custom Sass
-[See related pull request](https://github.com/bu-ist/responsive-foundation/pull/70)
+* BRAND NEW ORGANIZATION! You can finally override variables in the same file as your
+custom Sass [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/70)
 * A global, responsive typography scale - set `$min-size-headings` and `$max-size-headings`,
 and let Foundation take care of the math for you. Mobile min/max included
 [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/67)
-* Finally fixed that left hand layout bug where the nav would get cut off when no content was in
-[See related pull request](https://github.com/bu-ist/responsive-foundation/pull/56)
+* Finally fixed that left hand layout bug where the nav would get cut off when no content
+was in [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/56)
 * Duplicated navigation removed to improve accessibility
 [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/54)
-* Switch from camelCase-and-hyphensToo to just hyphens to match WordPress coding standards
-[See related pull request](https://github.com/bu-ist/responsive-foundation/pull/51)
+* Switch from camelCase-and-hyphensToo to just hyphens to match WordPress coding
+standards [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/51)
 * You asked for it! The transition mixin now supports multiple transitions by default
 [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/49)
 * Added by popular demand: a new `$xl` breakpoint and variable
