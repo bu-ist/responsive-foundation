@@ -4,7 +4,15 @@
 
 $font-family-form:                          $font-family-sans-serif !default;
 
-$form-legend-border:                       1px solid $color-grayscale-e !default;
+/// Controls the border on the legend in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
+$form-legend-border:                        $border !default;
+
 $form-legend-border-width:                  0 0 1px 0 !default;
 
 /// Controls the margin on the legend in forms.
@@ -81,7 +89,14 @@ $form-input-margin:                        0 0 $margin-small !default;
 
 $form-input-padding:                       0.5em !default;
 
-$form-input-border:                        1px solid $color-grayscale-c !default;
+/// Controls the border on inputs in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
+$form-input-border:                        $border !default;
 $form-input-shadow:                        inset 0 1px 3px $color-grayscale-e !default;
 $form-input-border-radius:                  0 !default;
 $form-input-focus-shadow:                   0 0 4px 0 rgba( 18, 159, 234, 0.2 ) !default;
