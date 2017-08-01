@@ -23,21 +23,21 @@ $widget-margin-bottom:                      $margin !default;
 /// @access public
 /// @since 1.0.0
 
-$font-family-widget-title:                   $font-family-sans-serif !default;
+$font-family-widget-title:                  $font-family-sans-serif !default;
 
 /// Controls the border style used on the widget title.
 /// @group widgets
 /// @access public
 /// @since 1.0.0
 
-$border-widget-title:                       4px solid $color-grayscale-0 !default;
+$border-widget-title:                       $border !default;
 
 /// Controls the border width used on the widget title.
 /// @group widgets
 /// @access public
 /// @since 1.0.0
 
-$border-width-widget-title:                  0 0 4px 0 !default;
+$border-width-widget-title:                 0 0 4px 0 !default;
 
 /// Controls the color of the widget title.
 /// @group widgets
