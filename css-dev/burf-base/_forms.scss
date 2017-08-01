@@ -272,9 +272,9 @@ textarea {
 /// @since 1.0.0
 
 label {
-	margin: $form-label-margin;
 	display: block;
 	font-weight: bold;
+	margin: $form-label-margin;
 }
 
 /// The general styles for inputs which should look like buttons.
