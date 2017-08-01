@@ -17,11 +17,11 @@ $_wp-supported-gallery-columns: 9;
 
 .gallery {
 	@extend %clearfix;
-	margin-right: -10px;
+	margin-right: -$margin-small;
 
 	a {
 		display: block;
-		margin-right: 10px;
+		margin-right: $margin-small;
 	}
 
 	img {

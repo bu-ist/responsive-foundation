@@ -8,8 +8,8 @@
 
 .cf-course {
 	border-top: $border-base;
-	margin-top: $margin-large;
-	padding-top: 2em;
+	margin-top: $margin;
+	padding-top: $padding;
 
 	&:first-child {
 		border: 0;
