@@ -17,15 +17,27 @@ $_wp-supported-gallery-columns: 9;
 
 .gallery {
 	@extend %clearfix;
+	display: flex;
+	flex-wrap: wrap;
 	margin-right: -10px;
+
+	.gallery-icon {
+		height: 100%;
+	}
 
 	a {
 		display: block;
+
+		.object-fit & {
+			display: flex;
+			height: 100%;
+		}
 	}
 
 	img {
 		display: block;
 		width: 100%;
+		object-fit: cover;
 	}
 }
 
