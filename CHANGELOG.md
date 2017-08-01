@@ -2,6 +2,8 @@
 
 ## 2.0.0-dev
 
+* Standardizes border treatments
+[See related pull request](https://github.com/bu-ist/responsive-foundation/pull/88)
 * Adds a new z-index scale to help manage layering of multiple interactive elements
 [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/87)
 * Introduces `$padding`, `$padding-small`, and `$padding-large` as part of the variables
