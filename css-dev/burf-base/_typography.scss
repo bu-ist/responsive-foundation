@@ -43,7 +43,7 @@ $color-code-bg:                            $color-grayscale-f5 !default;
 /// @access public
 /// @since 2.0.0
 
-$border-code:                              $border;
+$border-code:                              $border !default;
 
 /// Base margin for the `<blockquote>` tag.
 /// @group typography
