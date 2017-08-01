@@ -144,3 +144,66 @@ $_wp-supported-gallery-columns: 9;
 		margin-top: 32px;
 	}
 }
+
+// LightGallery custom styles
+
+.lg-sub-html {
+	@include transition( max-height, .25s, cubic-bezier( 0, 0, .25, 1 ), 0s );
+	max-height: 33vh; // Prevent the captions from covering the ENTIRE thing on mobile
+	overflow-y: auto;
+
+	.lg-thumb-open & {
+		@include transition( max-height, .25s, cubic-bezier( 0, 0, .25, 1 ), 0s );
+		max-height: 20vh;
+	}
+}
+
+.lg-thumb-outer {
+	border-top: 1px solid;
+	@include rgba-color(border-color, rgba(white, 0.2), white);
+}
+
+.lg-toogle-thumb {
+	border: 1px solid;
+	@include rgba-color(border-color, rgba(white, 0.2), white);
+	border-bottom: none;
+
+	&::before {
+		@extend %font-size-minimum;
+		content: 'Show thumbnails';
+		font-family: $font-family-sans-serif;
+		margin-right: 5px;
+		position: relative;
+		top: -5px;
+	}
+
+	.lg-thumb-open &::before {
+		content: 'Hide thumbnails';
+	}
+
+	// Required to override plugin CSS
+	.lg-outer .lg-thumb-outer & {
+		padding: 5px 10px 0 14px;
+		width: auto;
+	}
+}
+
+.lg-thumb {
+	// Required to override plugin CSS
+	.lg-outer .lg-thumb-outer & {
+		padding: $padding-small 0;
+	}
+}
+
+.lg-outer .lg .lg-inner {
+	height: calc(100% - 140px);
+}
+
+.lg-outer.lg-pull-caption-up.lg-thumb-open .lg .lg-sub-html,
+.lg-outer.lg-pull-caption-up .lg .lg-sub-html {
+	margin-bottom: 40px;
+}
+
+.lg-outer.lg-pull-caption-up.lg-thumb-open .lg .lg-sub-html {
+	bottom: 100px;
+}
