@@ -148,11 +148,16 @@ $color-gallery-overlay: rgba( $color-grayscale-0, 0.75 ) !default;
 	@include rgba-color( background-color, $color-gallery-overlay, $color-grayscale-0 );
 	bottom: 0;
 	color: $color-grayscale-f;
+	display: none;
 	left: 0;
 	margin-right: 10px;
 	padding: 1em;
 	position: absolute;
 	width: 100%;
+
+	@include breakpoint( xs ) {
+		display: block;
+	}
 
 	@for $i from 4 through $_wp-supported-gallery-columns {
 		.gallery-columns-#{$i} & {
