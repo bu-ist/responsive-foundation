@@ -16,26 +16,12 @@ $footbar-padding-bottom:                    $padding !default;
 
 $color-footbar-bg:                         $color-grayscale-f5 !default;
 
-/// Controls the border color of the footer widget area.
-/// @group footer
-/// @access public
-/// @since 1.0.0
-
-$color-footbar-border:                     $color-grayscale-c !default;
-
 /// Controls the border style of the footer widget area.
 /// @group footer
 /// @access public
 /// @since 1.0.0
 
-$border-footbar:                           1px solid $color-footbar-border !default;
-
-/// Controls the border width of the footer widget area.
-/// @group footer
-/// @access public
-/// @since 1.0.0
-
-$border-width-footbar:                      1px 0 0 0 !default;
+$border-footbar:                           $border !default;
 
 /// Controls the background of the footer widget container.
 /// @group footer
@@ -113,8 +99,7 @@ $number-widgets-footbar: 						 $number-columns !default;
 .footbar {
 	@extend %clearfix;
 	background: $color-footbar-bg;
-	border: $border-footbar;
-	border-width: $border-width-footbar;
+	border-top: $border-footbar;
 	padding-bottom: $footbar-padding-bottom;
 	width: 100%;
 
