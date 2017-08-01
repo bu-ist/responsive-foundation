@@ -39,7 +39,7 @@ $color-profile-info-label:                 $color-grayscale-a !default;
 /// @since 2.0.0
 
 .profile-single-photo {
-	margin: 0 auto 20px;
+	margin: 0 auto $margin;
 	width: 120px;
 }
 

@@ -47,7 +47,7 @@ $color-profile-title:                      $color-base !default;
 
 .profile-item {
 	list-style: none;
-	margin-bottom: 25px;
+	margin-bottom: $margin;
 	position: relative;
 }
 

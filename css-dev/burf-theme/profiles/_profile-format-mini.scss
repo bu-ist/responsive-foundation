@@ -36,7 +36,7 @@ $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 
 	&:nth-child(#{$profiles-mini-cols-sm}n+1) {
 		clear: left;
-		padding-right: 15px;
+		padding-right: $margin-small;
 	}
 }
 

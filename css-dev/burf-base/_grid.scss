@@ -56,12 +56,14 @@ $grid-number-columns:                      12 !default;
 
 /// The percentage you'd like a margin to take up on grid items, if you
 /// are using margins on grid items.
-/// The default setting, 2.6%, equals about 20px on a large screen.
+/// By default, this will attempt to reproduce the default margin on a
+/// large screen in a full-width container. If you plan to use grids include
+/// a smaller container, you may need to adjust this.
 /// @group grid
 /// @access public
 /// @since 1.2.0
 
-$grid-margin-width:                        2.6 !default;
+$grid-margin-width:                        ( $margin / $container-lg ) * 100 !default;
 
 /// Choose which breakpoints you want grid classes to support.
 /// Small (sm) and medium (md) are required, everything else is optional.
@@ -99,7 +101,15 @@ $grid-classes:										 true !default;
 
 $grid-container-padding:                   20px !default;
 $grid-container-padding-large-screen:       60px 20px 0 !default;
-$grid-row-margin:                          0 -20px !default;
+
+/// Controls the margin on rows in the grid.
+/// By default, this will attempt to "pull" grid items out
+/// by the same amount as their margin, Boostrap-style.
+/// @group grid
+/// @access public
+/// @since 1.0.0
+
+$grid-row-margin:                          0 -#{$grid-container-padding} !default;
 $grid-column-padding:                      0 20px !default;
 $grid-sidebar-padding:                     0 0 0 60px !default;
 
