@@ -98,7 +98,7 @@ $color-widget-contentnav-active:           $color-link-active !default;
 
 		li {
 			border: 0;
-			padding: 0 0 0 20px;
+			padding: 0 0 0 $padding-small;
 
 			a {
 				font-size: $font-size-widget-contentnav-nested-link;
@@ -109,7 +109,7 @@ $color-widget-contentnav-active:           $color-link-active !default;
 			color: $color-widget-contentnav;
 			display: block;
 			font-size: $font-size-widget-contentnav-link;
-			padding: 10px 0;
+			padding: $padding-small 0;
 
 			&:hover,
 			&:focus {

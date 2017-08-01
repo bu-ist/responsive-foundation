@@ -97,10 +97,20 @@ $grid-supports: (
 
 $grid-classes:										 true !default;
 
-// TODO: Grid Spacing
+/// The amount of padding to put on the content container.
+/// @group grid
+/// @access public
+/// @since 1.0.0
 
-$grid-container-padding:                   20px !default;
-$grid-container-padding-large-screen:       60px 20px 0 !default;
+$grid-container-padding:                   $padding-small !default;
+
+/// The amount of padding to put on the content container
+/// on desktop.
+/// @group grid
+/// @access public
+/// @since 1.0.0
+
+$grid-container-padding-desktop:           $padding-large $padding !default;
 
 /// Controls the margin on rows in the grid.
 /// By default, this will attempt to "pull" grid items out
@@ -110,9 +120,18 @@ $grid-container-padding-large-screen:       60px 20px 0 !default;
 /// @since 1.0.0
 
 $grid-row-margin:                          0 -#{$grid-container-padding} !default;
-$grid-column-padding:                      0 20px !default;
-$grid-sidebar-padding:                     0 0 0 60px !default;
 
+/// Controls the padding on child items of the grid.
+/// On non-margin classes, this will act like a "margin",
+/// putting space between grid items, Boostrap-style.
+/// If you need to use the padding for something else, like
+/// if you have a background color on your grid item,
+/// use the margin classes.
+/// @group grid
+/// @access public
+/// @since 1.0.0
+
+$grid-column-padding:                      0 $padding !default;
 
 /// Base styles for all wrapper elements.
 /// @group global
@@ -140,7 +159,7 @@ $grid-sidebar-padding:                     0 0 0 60px !default;
 
 	@include breakpoint( sm ) {
 		max-width: $container-sm;
-		padding: $grid-container-padding-large-screen;
+		padding: $grid-container-padding-desktop;
 	}
 
 	@include breakpoint( md ) {
@@ -178,16 +197,20 @@ $grid-sidebar-padding:                     0 0 0 60px !default;
 	padding: $grid-column-padding;
 }
 
+/// A backwards-compatible equal heights solution for
+/// older browsers.
 /// Base styles for a container whose children should
 /// be equal heights.
 /// @group utilities
 /// @access public
 /// @since 1.2.0
 
-%equal-height-parent {
+%equal-height-parent-backcompat {
 	overflow: hidden;
 }
 
+/// A backwards-compatible equal heights solution for
+/// older browsers.
 /// Base styles for children of the equal-height-parent.
 /// These styles will make children appear to be equal heights,
 /// even if the actual content is different heights.
@@ -197,11 +220,26 @@ $grid-sidebar-padding:                     0 0 0 60px !default;
 /// @access public
 /// @since 1.2.0
 
-%equal-height-child {
+%equal-height-child-backcompat {
 	@include breakpoint( md ) {
 		padding-bottom: 99999px;
 		margin-bottom: -99999px;
 	}
+}
+
+/// A newer version of equal heights that takes advantage
+/// of flexbox. Use this on your container to make all
+/// children equal heights. Plays nice with the grid.
+/// Check https://caniuse.com/#search=flexbox for browser
+/// support. You may want to provide a min-height on a
+/// case by case basis as a fallback.
+/// @group utilities
+/// @access public
+/// @since 2.0.0
+
+%equal-heights {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 // Additional placeholders are available for the grid. See below for detailed docs.
