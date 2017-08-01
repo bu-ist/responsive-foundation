@@ -20,13 +20,6 @@
 
 $border-masthead:                          $border !default;
 
-/// The placement and size of the border on the masthead.
-/// @group header
-/// @access public
-/// @since 1.0.0
-
-$border-width-masthead:                     0 0 1px 0 !default;
-
 /// The background color of the masthead.
 /// Bright colors are not recommended.
 /// @group header
@@ -271,8 +264,7 @@ $width-side-nav:                            240px !default;
 .masthead {
 	@extend %clearfix;
 	background: $color-masthead-bg;
-	border: $border-masthead;
-	border-width: $border-width-masthead;
+	border-bottom: $border-masthead;
 	position: relative;
 }
 
