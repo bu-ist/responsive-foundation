@@ -98,12 +98,12 @@ $form-input-padding:                       0.5em !default;
 
 $form-input-border:                        $border !default;
 $form-input-shadow:                        inset 0 1px 3px $color-grayscale-e !default;
-$form-input-border-radius:                  0 !default;
-$form-input-focus-shadow:                   0 0 4px 0 rgba( 18, 159, 234, 0.2 ) !default;
-$color-input-focus-border:                  #129fea !default;
+$form-input-border-radius:                 0 !default;
+$form-input-focus-shadow:                  0 0 4px 0 rgba( 18, 159, 234, 0.2 ) !default;
+$color-input-focus-border:                 #129fea !default;
 
-$font-family-button:                        $font-family-sans-serif !default;
-$font-size-button:                          inherit !default;
+$font-family-button:                       $font-family-sans-serif !default;
+$font-size-button:                         inherit !default;
 $color-button-bg:                          $color-grayscale-e !default;
 $color-button-text:                        $color-grayscale-4 !default;
 $color-button-primary-bg:                  #0078e7 !default;
@@ -116,7 +116,7 @@ $color-button-primary-text:                $color-grayscale-f !default;
 /// @access public
 /// @since 2.0.0
 
-$margin-button:                             0 $margin-small $margin-small 0 !default;
+$margin-button:                            0 $margin-small $margin-small 0 !default;
 
 /// Controls the margin on buttons in forms.
 /// Note: this style may not apply to Gravity Forms
@@ -125,14 +125,14 @@ $margin-button:                             0 $margin-small $margin-small 0 !def
 /// @access public
 /// @since 2.0.0
 
-$padding-button:                             0.5em 1em !default;
+$padding-button:                           0.5em 1em !default;
 
 /// Controls the border on buttons.
 /// @group config
 /// @access public
 /// @since 2.0.0
 
-$border-button:                              0;
+$border-button:                            0;
 
 /// Controls the rounding of edges on buttons.
 /// Note: this style may not apply to Gravity Forms
@@ -141,7 +141,7 @@ $border-button:                              0;
 /// @access public
 /// @since 2.0.0
 
-$border-radius-button:                       2px !default;
+$border-radius-button:                     2px !default;
 
 // Placeholders for Forms
 // -----------------------------------------------------------------
@@ -218,9 +218,8 @@ $border-radius-button:                       2px !default;
 	&-disabled:focus,
 	&-disabled:active {
 		@include box-shadow( none );
-		@include opacity( 0.4 );
-		background-image: none;
-		border: 0;
+		background: $color-grayscale-d;
+		color: $color-grayscale-7;
 		cursor: not-allowed;
 	}
 
