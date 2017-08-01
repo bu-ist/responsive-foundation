@@ -23,21 +23,21 @@ $widget-margin-bottom:                      $margin !default;
 /// @access public
 /// @since 1.0.0
 
-$font-family-widget-title:                   $font-family-sans-serif !default;
+$font-family-widget-title:                  $font-family-sans-serif !default;
 
 /// Controls the border style used on the widget title.
 /// @group widgets
 /// @access public
 /// @since 1.0.0
 
-$border-widget-title:                       4px solid $color-grayscale-0 !default;
+$border-widget-title:                       $border !default;
 
 /// Controls the border width used on the widget title.
 /// @group widgets
 /// @access public
 /// @since 1.0.0
 
-$border-width-widget-title:                  0 0 4px 0 !default;
+$border-width-widget-title:                 0 0 4px 0 !default;
 
 /// Controls the color of the widget title.
 /// @group widgets
@@ -97,15 +97,7 @@ $color-widget-link-hover:                  $color-link !default;
 /// @access public
 /// @since 1.0.0
 
-$border-widget-list:                        $border-base !default;
-
-/// Controls the width of border used between items in widgets which use a
-/// list format, such as content navigation and the calendar widget.
-/// @group widgets
-/// @access public
-/// @since 1.0.0
-
-$border-width-widget-list:                   1px 0 0 0 !default;
+$border-widget-list:                       $border !default;
 
 // =================================================================
 // Widgets
@@ -208,8 +200,7 @@ $border-width-widget-list:                   1px 0 0 0 !default;
 .widget_links,
 .widget_archive {
 	li {
-		border: $border-widget-list;
-		border-width: $border-width-widget-list;
+		border-top: $border-widget-list;
 		padding: $padding-small 0;
 
 		&:first-child {

@@ -65,8 +65,7 @@ $_width-calendar-date: 48px;
 /// @since 2.0.0
 
 .widget-calendar-event {
-	border: $border-widget-list;
-	border-width: $border-width-widget-list;
+	border-top: $border-widget-list;
 	padding: $padding-small 0;
 
 	&:first-child {

@@ -1,3 +1,7 @@
+// =================================================================
+// Content Banner Settings
+// =================================================================
+
 /// Controls the background color of the banner container.
 /// By default, this only affects the window width banner container.
 /// @group content
@@ -6,8 +10,9 @@
 
 $color-banner-container:                    $color-grayscale-f0 !default;
 
-// Content Banner
-// -----------------------------------------------------------------
+// =================================================================
+// Content Banner Styles
+// =================================================================
 
 /// General styles for all content banner positions.
 /// @group layout

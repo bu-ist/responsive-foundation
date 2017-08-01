@@ -1,12 +1,6 @@
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// Navigation
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
+// =================================================================
+// Navigation Settings
+// =================================================================
 
 // Masthead and Brand
 // -----------------------------------------------------------------
@@ -18,14 +12,7 @@
 /// @access public
 /// @since 1.0.0
 
-$border-masthead:                          $border-base !default;
-
-/// The placement and size of the border on the masthead.
-/// @group header
-/// @access public
-/// @since 1.0.0
-
-$border-width-masthead:                     0 0 1px 0 !default;
+$border-masthead:                          $border !default;
 
 /// The background color of the masthead.
 /// Bright colors are not recommended.
@@ -259,6 +246,10 @@ $color-search-text:                        $color-grayscale-0 !default;
 
 $width-side-nav:                            240px !default;
 
+// =================================================================
+// Navigation Styles
+// =================================================================
+
 // Masthead
 // -----------------------------------------------------------------
 
@@ -271,8 +262,7 @@ $width-side-nav:                            240px !default;
 .masthead {
 	@extend %clearfix;
 	background: $color-masthead-bg;
-	border: $border-masthead;
-	border-width: $border-width-masthead;
+	border-bottom: $border-masthead;
 	position: relative;
 }
 

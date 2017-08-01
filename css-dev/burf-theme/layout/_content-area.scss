@@ -1,3 +1,7 @@
+// =================================================================
+// Content Layout Settings
+// =================================================================
+
 /// The number of columns you would like to use in your layout.
 /// This controls the width of the content area vs. the sidebar.
 /// By default, setting this to 3 will make the sidebar take up 1 column,
@@ -40,7 +44,7 @@ $column-padding-bottom:                     10px !default;
 $column-padding-bottom-large-screen:         35px !default;
 
 // =================================================================
-// Layout
+// Content Layout Styles
 // =================================================================
 
 /// Controls styling for all content, from the masthead to the site footer.
@@ -167,7 +171,7 @@ $sidebar-padding:                          3.46667% !default;
 	}
 }
 
-// layouts
+// Layouts
 // -----------------------------------------------------------------
 
 /// Styles for the left sidebar location.

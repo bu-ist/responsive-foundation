@@ -1,5 +1,17 @@
-// Course Feeds
-// -----------------------------------------------------------------
+// =================================================================
+// Course Feed Settings
+// =================================================================
+
+/// Controls the border between course feed items.
+/// @group content
+/// @access public
+/// @since 2.0.0
+
+$border-coursefeed:               $border !default;
+
+// =================================================================
+// Course Feed Styles
+// =================================================================
 
 /// Controls the styling for a single course in a course feed.
 /// @group content
@@ -7,7 +19,7 @@
 /// @since 1.0.0
 
 .cf-course {
-	border-top: $border-base;
+	border-top: $border-coursefeed;
 	margin-top: $margin;
 	padding-top: $padding;
 
