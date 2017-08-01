@@ -127,6 +127,15 @@ $margin-button:                             0 $margin-small $margin-small 0 !def
 
 $padding-button:                             0.5em 1em !default;
 
+/// Controls the rounding of edges on buttons.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 2.0.0
+
+$border-radius-button:                       2px !default;
+
 // Placeholders for Forms
 // -----------------------------------------------------------------
 
@@ -141,7 +150,7 @@ $padding-button:                             0.5em 1em !default;
 
 %button-styles {
 	background-color: $color-button-bg;
-	border-radius: 2px;
+	border-radius: $border-radius-button;
 	border: 1px solid $color-grayscale-9;  // IE 6/7/8
 	border: none rgba( $color-grayscale-0, 0 );  // IE9 + everything else
 	color: $color-button-text;
