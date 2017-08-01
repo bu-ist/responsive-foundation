@@ -119,7 +119,7 @@ $grid-container-padding-desktop:           $padding-large $padding !default;
 /// @access public
 /// @since 1.0.0
 
-$grid-row-margin:                          0 -$grid-container-padding !default;
+$grid-row-margin:                          0 -#{$grid-container-padding} !default;
 
 /// Controls the padding on child items of the grid.
 /// On non-margin classes, this will act like a "margin",
