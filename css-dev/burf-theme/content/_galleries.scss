@@ -10,6 +10,14 @@
 
 $_wp-supported-gallery-columns: 9;
 
+/// A variable which controls the color of overlays on photo hover
+/// in WordPress galleries.
+/// @group content
+/// @access priavte
+/// @since 2.0.0
+
+$color-gallery-overlay: rgba( $color-grayscale-0, 0.75 ) !default;
+
 /// Base styles for the gallery shortcode in WordPress.
 /// @group content
 /// @access public
@@ -36,8 +44,8 @@ $_wp-supported-gallery-columns: 9;
 
 	img {
 		display: block;
-		width: 100%;
 		object-fit: cover;
+		width: 100%;
 	}
 }
 
@@ -47,8 +55,8 @@ $_wp-supported-gallery-columns: 9;
 /// @since 1.4.0
 
 .gallery-item {
-	float: left;
 	border-right: 10px solid transparent;
+	float: left;
 	margin-bottom: 10px;
 	overflow: hidden;
 	position: relative;
@@ -73,7 +81,7 @@ $_wp-supported-gallery-columns: 9;
 
 		&::before,
 		&::after {
-			@include transition(opacity 250ms ease-in-out 0s);
+			@include transition( opacity 250ms ease-in-out 0s );
 		}
 
 		&::before {
@@ -97,7 +105,7 @@ $_wp-supported-gallery-columns: 9;
 		}
 
 		&::after {
-			@include rgba-color(background-color, rgba(black, 0.75), transparent);
+			@include rgba-color( background-color, $color-gallery-overlay, transparent );
 			content: "";
 			display: block;
 			height: 100%;
@@ -110,21 +118,23 @@ $_wp-supported-gallery-columns: 9;
 			z-index: 1;
 		}
 
-		img {
-			@include transition(transform 250ms ease-in-out 0s);
-		}
-
 		&:hover {
-			img {
-				@include transition(transform 250ms ease-in-out 0s);
-				@include scale(1.1);
-			}
-
 			&::before,
 			&::after {
-				@include transition(opacity 250ms ease-in-out 0s);
+				@include transition( opacity 250ms ease-in-out 0s );
 				opacity: 1;
 			}
+		}
+	}
+
+	img {
+		@include transition( transform 250ms ease-in-out 0s );
+	}
+
+	&:hover {
+		img {
+			@include transition( transform 250ms ease-in-out 0s );
+			@include scale( 1.1 );
 		}
 	}
 }
@@ -135,7 +145,7 @@ $_wp-supported-gallery-columns: 9;
 /// @since 1.4.0
 
 .gallery-caption {
-	@include rgba-color(background-color, rgba($color-grayscale-0, 0.75), $color-grayscale-0);
+	@include rgba-color( background-color, $color-gallery-overlay, $color-grayscale-0 );
 	bottom: 0;
 	color: $color-grayscale-f;
 	left: 0;
@@ -160,29 +170,29 @@ $_wp-supported-gallery-columns: 9;
 // LightGallery custom styles
 
 .lg-sub-html {
-	@include transition( max-height, .25s, cubic-bezier( 0, 0, .25, 1 ), 0s );
+	@include transition( max-height, 0.25s, cubic-bezier( 0, 0, 0.25, 1 ), 0s );
 	max-height: 33vh; // Prevent the captions from covering the ENTIRE thing on mobile
 	overflow-y: auto;
 
 	.lg-thumb-open & {
-		@include transition( max-height, .25s, cubic-bezier( 0, 0, .25, 1 ), 0s );
+		@include transition( max-height, 0.25s, cubic-bezier( 0, 0, 0.25, 1 ), 0s );
 		max-height: 20vh;
 	}
 }
 
 .lg-thumb-outer {
 	border-top: 1px solid;
-	@include rgba-color(border-color, rgba(white, 0.2), white);
+	@include rgba-color( border-color, rgba( $color-grayscale-f, 0.2 ), $color-grayscale-f );
 }
 
 .lg-toogle-thumb {
 	border: 1px solid;
-	@include rgba-color(border-color, rgba(white, 0.2), white);
-	border-bottom: none;
+	@include rgba-color( border-color, rgba( $color-grayscale-f, 0.2 ), $color-grayscale-f );
+	border-bottom: 0;
 
 	&::before {
 		@extend %font-size-minimum;
-		content: 'Show thumbnails';
+		content: "Show thumbnails";
 		font-family: $font-family-sans-serif;
 		margin-right: 5px;
 		position: relative;
@@ -190,7 +200,7 @@ $_wp-supported-gallery-columns: 9;
 	}
 
 	.lg-thumb-open &::before {
-		content: 'Hide thumbnails';
+		content: "Hide thumbnails";
 	}
 
 	// Required to override plugin CSS
@@ -210,8 +220,8 @@ $_wp-supported-gallery-columns: 9;
 .lg-thumb-item {
 	.lg-outer .lg-thumb-outer & {
 		@include border-radius( 0 );
-		border: none;
-		opacity: .45;
+		border: 0;
+		opacity: 0.45;
 
 		&.active,
 		&:hover {
@@ -222,7 +232,7 @@ $_wp-supported-gallery-columns: 9;
 }
 
 .lg-outer .lg .lg-inner {
-	height: calc(100% - 140px); // Plugin has an OK fallback for this if not supported.
+	height: calc( 100% - 140px ); // Plugin has an OK fallback for this if not supported.
 }
 
 .lg-outer.lg-pull-caption-up.lg-thumb-open .lg .lg-sub-html,
