@@ -195,8 +195,22 @@ $_wp-supported-gallery-columns: 9;
 	}
 }
 
+.lg-thumb-item {
+	.lg-outer .lg-thumb-outer & {
+		@include border-radius( 0 );
+		border: none;
+		opacity: .45;
+
+		&.active,
+		&:hover {
+			border: 1px solid $color-grayscale-f;
+			opacity: 1;
+		}
+	}
+}
+
 .lg-outer .lg .lg-inner {
-	height: calc(100% - 140px);
+	height: calc(100% - 140px); // Plugin has an OK fallback for this if not supported.
 }
 
 .lg-outer.lg-pull-caption-up.lg-thumb-open .lg .lg-sub-html,
