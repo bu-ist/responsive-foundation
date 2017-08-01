@@ -592,7 +592,7 @@ $nav-toggle-border: 4px !default;
 			left: -9999px;
 			position: absolute;
 			width: 240px;
-			z-index: 2;
+			z-index: $z-index-primarynav;
 		}
 	}
 }

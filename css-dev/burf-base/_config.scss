@@ -76,18 +76,215 @@ $container-md:                             970px !default;
 
 $container-lg:                             1170px !default;
 
-// Z-Index Variables
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+// z-index
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+
+/// The lowest priority z-index possible.
+/// Used for content by default.
+/// @group config
+/// @access private
+/// @since 1.0.0
 
 $z-index-1:                                 100;
+
+/// A low priority z-index for use in themes.
+/// Can be used for items that should overlap content
+/// but still sit below stated content.
+/// @group config
+/// @access private
+/// @since 1.0.0
+
 $z-index-2:                                 200;
+
+/// A low priority z-index for use in themes.
+/// Used for content with multiple states by default.
+/// @group config
+/// @access private
+/// @since 1.0.0
+
 $z-index-3:                                 300;
+
+/// A medium priority z-index for use in themes.
+/// Can be used for items that should sit above
+/// stated content but below panel-like content.
+/// @group config
+/// @access private
+/// @since 1.0.0
+
 $z-index-4:                                 400;
+
+/// A medium priority z-index for use in themes.
+/// Used for panel-like content by default.
+/// @group config
+/// @access private
+/// @since 1.0.0
+
 $z-index-5:                                 500;
+
+/// A medium priority z-index for use in themes.
+/// Can be used for items that should sit above
+/// panel-like content but below the primary navigation.
+/// @group config
+/// @access private
+/// @since 1.0.0
+
 $z-index-6:                                 600;
+
+/// A high priority z-index for use in themes.
+/// Used for the primary navigation by default.
+/// @group config
+/// @access private
+/// @since 1.0.0
+
 $z-index-7:                                 700;
+
+/// A high priority z-index for use in themes.
+/// Can be used for items that should sit above
+/// primary navigation but below overlays.
+/// @group config
+/// @access private
+/// @since 1.0.0
+
 $z-index-8:                                 800;
+
+/// The highest priority z-index for use in themes.
+/// Used for overlays and lightboxes by default.
+/// @group config
+/// @access private
+/// @since 1.0.0
+
 $z-index-9:                                 900;
+
+/// A z-index which overrides all other z-indexes.
+/// Strictly for development and debugging.
+/// @group config
+/// @access private
+/// @since 1.0.0
+
 $z-index-10:                                1000;
+
+/// A base z-index to use for interactive content in the
+/// content area that isn't an overlay. Some examples are
+/// callouts that scale up on hover, or tooltip definitions.
+/// Use this variable for your default state.
+/// Use `+` or `-` with this variable to set z-index relative
+/// to the default state - plus for above, minus for below.
+/// Change this variable to change the stacking order for
+/// all states in the site.
+/// @example
+/// 		Make sure a callout that scales up on hover is always
+/// 		above the other callouts next to it.
+/// 			.callout {
+///				@include scale( 1 );
+///				z-index: $z-index-content;
+///
+///				&:hover {
+///					@include scale( 1.2 );
+///					z-index: $z-index-content + 1;
+///				}
+///			}
+/// @group layout
+/// @access public
+/// @since 2.0.0
+
+$z-index-content:                          $z-index-1 !default;
+
+/// A base z-index to use for content with multiple states.
+/// A good example of this content might be a form with
+/// multiple states stacked on one another that you animate.
+/// Use this variable for your default state.
+/// Use `+` or `-` with this variable to set z-index relative
+/// to the default state - plus for above, minus for below.
+/// Change this variable to change the stacking order for
+/// all states in the site.
+/// @example
+/// 		Set z-index on a stacked form with states.
+/// 			.form-state-start,
+///			.form-state-active {
+///				z-index: $z-index-states;
+///			}
+///
+///			.form-state-getinfo {
+///				z-index: $z-index-states - 1;
+///			}
+///
+///			.form-state-end {
+///				z-index: $z-index-states - 2;
+///			}
+/// @group layout
+/// @access public
+/// @since 2.0.0
+
+$z-index-states:                           $z-index-3 !default;
+
+/// A base z-index to use for panel-like content.
+/// Panel-like content can include panels that open
+/// and close, such as horizontal secondary navigation
+/// menus or filters, which push aside or overlap other content.
+/// Use this variable alone to set a default z-index which
+/// will play nicely with other types of interactive content
+/// on your site. Use `+` or `-` with it to set a z-index relative
+/// to all panels. Change this variable to change the
+/// default z-index for all panel-like content.
+/// @example
+/// 		Ensure two stacked filters on a degree page overlap correctly.
+///			.degree-filter {
+///				z-index: $z-index-panels;
+///			}
+///
+///			.degree-subfilter {
+///				z-index: $z-index-panels - 1;
+///			}
+/// @group layout
+/// @access public
+/// @since 2.0.0
+
+$z-index-panels:                           $z-index-5 !default;
+
+/// A base z-index to use for the primary navigation.
+/// By default, this sets a z-index which will put dropdown
+/// menus above content, but below overlays.
+/// Use this variable alone to set a default z-index which
+/// will play nicely with other types of interactive content
+/// on your site. Use `+` or `-` with it to set a z-index relative
+/// to the primary navigation. Change this variable to change the
+/// stacking order of the primary navigation.
+/// @group layout
+/// @access public
+/// @since 2.0.0
+
+$z-index-primarynav:                       $z-index-7 !default;
+
+/// A base z-index to use for overlays and lightboxes.
+/// This z-index will always be on top unless you are using `$z-index-dev`.
+/// Use this variable alone to set a default z-index which
+/// will play nicely with other types of interactive content
+/// on your site. Use `+` or `-` with it to set a z-index relative
+/// to the default overlay. Change this variable to change the
+/// stacking order of all overlays. (You may want to do this if you
+/// have a fixed sticky navigation so that the sticky navigation isn't
+/// always on top, even with lightboxes.)
+/// @group layout
+/// @access public
+/// @since 2.0.0
+
+$z-index-overlays:                         $z-index-9 !default;
+
+/// A z-index that will override all other z-indexes for development
+/// and debugging purposes only. Avoid where possible and do not commit
+/// to production code.
+/// @group layout
+/// @access public
+/// @since 2.0.0
+
+$z-index-dev:                              $z-index-10 !default;
 
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
