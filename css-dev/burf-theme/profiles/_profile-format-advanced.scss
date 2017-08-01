@@ -1,3 +1,7 @@
+// =================================================================
+// Profile Advanced Format Settings
+// =================================================================
+
 /// Controls the number of profiles in a row in the advanced format.
 /// Kicks in at the extra small breakpoint.
 /// @group profiles
@@ -14,6 +18,9 @@ $profiles-advanced-cols-xs:			2 !default;
 
 $profiles-advanced-cols-md:			3 !default;
 
+// =================================================================
+// Profile Advanced Format Styles
+// =================================================================
 
 /// Styles the advanced profile format.
 /// @group profiles

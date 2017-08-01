@@ -1,5 +1,5 @@
 // =================================================================
-// Grid
+// Grid Settings
 // =================================================================
 
 // TODO: Needs documentation
@@ -132,6 +132,10 @@ $grid-row-margin:                          0 -#{$grid-container-padding} !defaul
 /// @since 1.0.0
 
 $grid-column-padding:                      0 $padding !default;
+
+// =================================================================
+// Grid Styles and Placeholders
+// =================================================================
 
 /// Base styles for all wrapper elements.
 /// @group global

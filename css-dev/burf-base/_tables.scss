@@ -1,5 +1,5 @@
 // =================================================================
-// Tables
+// Tables Settings
 // =================================================================
 
 /// Base margin for the table tag.
@@ -57,6 +57,10 @@ $color-table-caption:                      $color-grayscale-9 !default;
 /// @since 1.0.0
 
 $table-stripes:                            $color-grayscale-f5 !default;
+
+// =================================================================
+// Tables Styles
+// =================================================================
 
 /// Controls base styling for tables.
 /// @group global

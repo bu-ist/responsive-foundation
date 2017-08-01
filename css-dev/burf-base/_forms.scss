@@ -1,4 +1,5 @@
-// Forms
+// =================================================================
+// Forms Settings
 // =================================================================
 
 /// Controls the font family used in forms.
@@ -36,6 +37,13 @@ $form-legend-margin:                       0 0 $margin !default;
 /// @since 1.0.0
 
 $form-legend-padding:                      0 0 0.5em !default;
+
+/// Controls the border on fieldsets in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 1.0.0
 
 $form-fieldset-border:                     0 !default;
 
@@ -146,6 +154,10 @@ $border-button:                            0;
 /// @since 2.0.0
 
 $border-radius-button:                     2px !default;
+
+// =================================================================
+// Forms Styles
+// =================================================================
 
 // Placeholders for Forms
 // -----------------------------------------------------------------
