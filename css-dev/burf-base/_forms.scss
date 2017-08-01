@@ -1,6 +1,12 @@
 // Forms
 // =================================================================
 
+/// Controls the font family used in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 1.0.0
 
 $font-family-form:                          $font-family-sans-serif !default;
 
@@ -12,8 +18,6 @@ $font-family-form:                          $font-family-sans-serif !default;
 /// @since 1.0.0
 
 $form-legend-border:                        $border !default;
-
-$form-legend-border-width:                  0 0 1px 0 !default;
 
 /// Controls the margin on the legend in forms.
 /// Note: this style may not apply to Gravity Forms
@@ -279,8 +283,7 @@ fieldset {
 /// @since 1.0.0
 
 legend {
-	border: $form-legend-border;
-	border-width: $form-legend-border-width;
+	border-bottom: $form-legend-border;
 	display: block;
 	font-size: 1.5em;
 	font-weight: 700;
