@@ -1,5 +1,5 @@
 // =================================================================
-// Gallery
+// Gallery Settings
 // =================================================================
 
 /// A helper variable to control the number of columns a gallery
@@ -9,6 +9,10 @@
 /// @since 1.4.0
 
 $_wp-supported-gallery-columns: 9;
+
+// =================================================================
+// Gallery Styles
+// =================================================================
 
 /// Base styles for the gallery shortcode in WordPress.
 /// @group content

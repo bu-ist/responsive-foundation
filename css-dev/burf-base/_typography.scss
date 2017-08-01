@@ -38,6 +38,13 @@ $font-margin-code:                          $margin 0 !default;
 $color-code:                               $color-grayscale-7 !default;
 $color-code-bg:                            $color-grayscale-f5 !default;
 
+/// Base border for the `<code>` tag.
+/// @group typography
+/// @access public
+/// @since 2.0.0
+
+$border-code:                              $border !default;
+
 /// Base margin for the `<blockquote>` tag.
 /// @group typography
 /// @access public
@@ -578,7 +585,7 @@ code {
 
 .code {
 	background: $color-code-bg;
-	border: 1px solid $color-grayscale-e;
+	border: $border-code;
 	margin: $font-margin-code;
 	-webkit-overflow-scrolling: touch;
 	overflow-x: auto;

@@ -16,19 +16,47 @@ $table-margin:                             $margin 0 !default;
 
 $table-padding:                            0.5em 1em !default;
 
-$color-table-border:                       $color-grayscale-d !default;
-$table-border:                             1px solid $color-table-border !default;
+/// Default border for tables.
+/// @group content
+/// @access public
+/// @since 1.0.0
 
-$color-table-head:                         $color-grayscale-0 !default;
-$color-table-head-bg:                      $color-grayscale-e !default;
+$table-border:                             $border !default;
+
+/// Default color for table headings.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$color-table-head:                         $color-heading !default;
+
+/// Default background for table headings.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
+$table-head-bg:                            $color-grayscale-e !default;
+
+/// Default padding for table captions.
+/// @group content
+/// @access public
+/// @since 1.0.0
 
 $table-caption-padding:                    0 0 10px !default;
+
+/// Default color for table captions.
+/// @group content
+/// @access public
+/// @since 1.0.0
+
 $color-table-caption:                      $color-grayscale-9 !default;
 
-$color-table-th-border:                    $color-grayscale-c !default;
-$color-table-td-border:                    $color-grayscale-c !default;
+/// Default background for striped table backgrounds.
+/// @group content
+/// @access public
+/// @since 1.0.0
 
-$color-table-stripes:                      $color-grayscale-f5 !default;
+$table-stripes:                            $color-grayscale-f5 !default;
 
 /// Controls base styling for tables.
 /// @group global
@@ -38,6 +66,7 @@ $color-table-stripes:                      $color-grayscale-f5 !default;
 table {
 	@extend %font-size-secondary;
 	border: $table-border;
+	border-collapse: collapse;
 	empty-cells: show;
 	margin: $table-margin;
 	width: 100%;
@@ -51,8 +80,7 @@ table {
 
 	td,
 	th {
-		border-left: 1px solid $color-table-border;
-		border-width: 0 0 0 1px;
+		border-left: $table-border;
 		font-size: inherit;
 		margin: 0;
 		overflow: visible; // to make ths where the title is really long work
@@ -69,7 +97,7 @@ table {
 	}
 
 	th {
-		border-bottom: 1px solid $color-table-border;
+		border-bottom: $table-border;
 	}
 
 	td {
@@ -78,7 +106,7 @@ table {
 	}
 
 	thead {
-		background: $color-table-head-bg;
+		background: $table-head-bg;
 		color: $color-table-head;
 		text-align: left;
 		vertical-align: bottom;
@@ -98,7 +126,7 @@ table {
 .table-striped tr:nth-child(2n-1),
 .u-odd {
 	td {
-		background-color: $color-table-stripes;
+		background: $table-stripes;
 	}
 }
 
@@ -112,7 +140,7 @@ table {
 
 .table-bordered {
 	td {
-		border-bottom: 1px solid $color-table-border;
+		border-bottom: $table-border;
 	}
 }
 
@@ -128,9 +156,11 @@ table {
 	td,
 	th {
 		border: 0;
-		border-bottom: 1px solid $color-table-border;
+		border-bottom: $table-border;
 	}
 }
+
+// Removes the border at the bottom of tables to avoid overlap
 
 .table-bordered,
 .table-horizontal,
@@ -142,4 +172,10 @@ table {
 			}
 		}
 	}
+}
+
+// BU Table Sorter override
+
+table.sortable thead tr th.header {
+	border: $table-border;
 }
