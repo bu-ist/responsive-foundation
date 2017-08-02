@@ -243,22 +243,89 @@
 	transform: $transforms;
 }
 
-// transform: rotate
+/// A shorthand mixin for rotate. Takes care of browser
+/// prefixes for you. You could use `transform` as well.
+/// Accepts an amount of degrees to rotate by.
+/// More info at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/transform
+/// @example
+/// 		Rotate a callout 90 degrees.
+/// 			.callout {
+///				@include rotate( 90 );
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
 @mixin rotate( $deg ) {
 	@include transform( rotate( #{$deg}deg ) );
 }
 
-// transform: scale
+/// A shorthand mixin for scale. Takes care of browser
+/// prefixes for you. You could use `transform` as well.
+/// Accepts an amount of degrees to rotate by.
+/// More info at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/transform
+/// @example
+/// 		Scale a callout to double its size.
+/// 			.callout {
+///				@include scale( 2 );
+///			}
+/// 		Scale the height of a filtered item from 0 to the full height when visible.
+/// 			.degree-program {
+///				@include scale( 0, 0 );
+///
+///				&.visible {
+///					@include scale( 0, 1 );
+///				}
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
 @mixin scale( $scale ) {
 	@include transform( scale( $scale ) );
 }
 
-// transform: translate
+/// A shorthand mixin for translate. Takes care of browser
+/// prefixes for you. You could use `transform` as well.
+/// Accepts two arguments: an amount to translate X by, and
+/// an amount to translate Y by.
+/// More info at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/transform
+/// @example
+/// 		Move a callout 10px to the left.
+/// 			.callout {
+///				@include translate( -10px, 0 );
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
 @mixin translate( $x, $y ) {
 	@include transform( translate( $x, $y ) );
 }
 
-// transform: transform-origin
+/// A mixin for transform-origin. Takes care of browser
+/// prefixes for you. You should always use this mixin
+/// when writing transform-origin rules to ensure you're
+/// compatible with the browsers we support.
+/// Use with `transform`, `rotate`, `scale`, or `translate`
+/// to tell the browser where the transform should start from.
+/// Accepts any valid CSS value for `transform-origin`.
+/// More info at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin
+/// @example
+/// 		Scale the height of a filtered item from 0 to the full height when visible
+///		and start the transform from the top of the item.
+/// 			.degree-program {
+///				@include scale( 0, 0 );
+///				@include transform-origin( top );
+///
+///				&.visible {
+///					@include scale( 0, 1 );
+///				}
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
 @mixin transform-origin( $origin ) {
 	-webkit-transform-origin: $origin;
 	-moz-transform-origin: $origin;
