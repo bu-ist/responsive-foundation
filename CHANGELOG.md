@@ -2,16 +2,18 @@
 
 ## 2.0.0-dev
 
-* Simplify the breakpoint mixin to accept any variable, and open up the target breakpoint
-for <=IE8 to modification in custom themes. Use any value you like - it'll just work now!
-`max-width` support is deprecated as of 2.0 since the intention of this mixin is to print
-styles safely in older versions of IE - `max-width` styles are unlikely to be the last
-styles to apply. [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/89)
-* An new approach for centering, `center-children`, using flexbox. Old approaches will
-still be available for the forseeable future - just use `vertical-center-ie8` or
-`vertical-center-ie9` as appropriate for your needs [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/89)
-* Documentation for mixins and change `%visuallyhidden` to `%visually-hidden` to comply
-with coding standards for naming [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/89)
+* Simplify the breakpoint mixin to accept any variable, and open up the target
+breakpoint for <=IE8 to modification in custom themes. Use any value you like
+- it'll just work now! `max-width` support is deprecated as of 2.0 since the
+intention of this mixin is to print styles safely in older versions of IE -
+`max-width` styles are unlikely to be the last styles to apply.
+[See related pull request](https://github.com/bu-ist/responsive-foundation/pull/89)
+* An new approach for centering, `center-children`, using flexbox. Old
+approaches will still be available for the forseeable future - just use
+`vertical-center-ie8` or `vertical-center-ie9` as appropriate for your needs
+[See related pull request](https://github.com/bu-ist/responsive-foundation/pull/89)
+* Documentation for mixins and change `%visuallyhidden` to `%visually-hidden`
+to comply with coding standards for naming [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/89)
 * The `animation` and `transition` mixins now support multiple declarations by default
 [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/89)
 * Standardizes border treatments by adding a new `$border` for global border treatments
