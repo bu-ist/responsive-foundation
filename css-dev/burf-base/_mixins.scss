@@ -111,8 +111,8 @@
 @mixin linear-gradient( $from-color: NULL, $to-color: NULL ) {
 	// Both variables must be defined colors
 	@if (
-			type_of( $from-color ) == color and
-			type_of( $to-color ) == color
+			type-of( $from-color ) == color and
+			type-of( $to-color ) == color
 		) {
 		background-image: -webkit-gradient(linear, left top, left bottom, from( $from-color), to( $to-color)); // Saf4+, Chrome
 		background-image: -webkit-linear-gradient(top, $from-color, $to-color); // Chrome 10+, Saf5.1+, iOS 5+
@@ -150,7 +150,7 @@
 		$opacity-ie: $opacity * 100;
 		opacity: $opacity;
 		filter: alpha(opacity=$opacity-ie); //IE8
-	} @else if ( type_of( $opacity ) == string ) { // Accounts for initial, inherit, unset
+	} @else if ( type-of( $opacity ) == string ) { // Accounts for initial, inherit, unset
 		opacity: $opacity;
 	} @else {
 		@error 'Opacity must be specified as a decimal value. \a Example usage: @include opacity( 0.5 );';
