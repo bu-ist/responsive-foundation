@@ -128,19 +128,84 @@
 
 // cross-browser opacity
 // Usage: @include opacity(0.5)
+
+/// A mixin for opacity. Takes care of browser
+/// prefixes for you. You should always use this mixin
+/// when writing opacity rules to ensure you're
+/// compatible with the browsers we support. Accepts
+/// arguments in the same syntax as standard CSS.
+/// More info at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/opacity
+/// @example
+/// 		Fade a thumbnail until it's hovered over.
+/// 			.gallery-thumbnail {
+///				@include opacity( 0.5 );
+///
+///				&:hover {
+///					@include opacity( 1 );
+///				}
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
 @mixin opacity( $opacity: NULL ) {
-	// Opacity must be in decimal form
 	@if ( $opacity <= 1 ) {
 		$opacity-ie: $opacity * 100;
 		opacity: $opacity;
 		filter: alpha(opacity=$opacity-ie); //IE8
+	} @else if ( type_of( $opacity ) == string ) { // Accounts for initial, inherit, unset
+		opacity: $opacity;
 	} @else {
-		@error 'Opacity must be specified as a decimal value. \a Example usage: @include opacity(0.5);';
+		@error 'Opacity must be specified as a decimal value. \a Example usage: @include opacity( 0.5 );';
 	}
 }
 
-// transition
-// Usage: @include transitions( all 250ms ease-in-out 0s )
+/// A mixin for transition. Takes care of browser
+/// prefixes for you. You should always use this mixin
+/// when writing transition rules to ensure you're
+/// compatible with the browsers we support.
+/// Supports multiple transitions, just use the same syntax
+/// as you would CSS. Please note: you should avoid trasition `all`,
+/// as it can become a significant performance issue on older devices.
+/// The cheapest properties to animate performance-wise are `transform`,
+/// `opacity`, and `filter` -  if you're not sure what you're doing, it's
+/// best to stick to those where possible.
+/// Learn how to test animation performance: https://www.sitepoint.com/check-css-animation-performance-with-the-browsers-dev-tools/
+/// Syntax info at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/transition
+/// @example
+/// 		Transition the opacity on a lightbox when it is opened.
+/// 			.lightbox-overlay {
+///				@include opacity( 0 );
+///				@include transition( opacity 250ms ease-in-out 0s );
+///
+///				&.open {
+///					@include opacity( 1 );
+///					@include transition( opacity 250ms ease-in-out 0s );
+///				}
+///			}
+///
+/// 		Transition multiple properties between closed and open menu states.
+/// 		Note that you can stagger or have each property animate at separate lengths.
+/// 			.menu-closed {
+///				@include opacity( 0 );
+///				@include transition(
+///					opacity 250ms ease-in-out 0s,
+///					scale 250ms ease-in-out 0s
+///				);
+///				@include scale( 1, 0 );
+///			}
+/// 			.menu-opened {
+///				@include opacity( 1 );
+///				@include transition(
+///					opacity 250ms ease-in-out 0s,
+///					scale 250ms ease-in-out 0s
+///				);
+///				@include scale( 1, 1 );
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
 @mixin transition( $transitions... ) {
 	-webkit-transition: $transitions;
 	-moz-transition: $transitions;
