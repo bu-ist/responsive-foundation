@@ -44,7 +44,7 @@ $_wp-supported-gallery-columns: 9;
 			float: left;
 			width: 33.33%;
 
-			@include breakpoint( xs ) {
+			@include breakpoint( $xs ) {
 				width: 100 / $i#{"%"};
 
 				&:nth-child(#{$i + 1}) {

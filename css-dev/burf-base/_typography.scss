@@ -1,5 +1,5 @@
 // =================================================================
-// Typography
+// Typography Settings
 // =================================================================
 
 /// A sans-serif font to use in your theme.
@@ -84,6 +84,9 @@ $font-family-base:                          "Benton", sans-serif !default;
 
 $font-family-serif:                         "TiemposText", Georgia, serif !default;
 
+// =================================================================
+// Typography Styles
+// =================================================================
 
 // Links
 // -----------------------------------------------------------------
@@ -375,7 +378,7 @@ $_h: $_depth-headings;
 		font-size: map-get( $settings, font-size-mobile );
 		line-height: map-get( $settings, line-height );
 
-		@include breakpoint( xs ) {
+		@include breakpoint( $xs ) {
 			font-size: map-get( $settings, font-size-desktop );
 			line-height: map-get( $settings, line-height );
 		}

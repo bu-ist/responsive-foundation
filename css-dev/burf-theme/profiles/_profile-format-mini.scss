@@ -1,5 +1,6 @@
-// Profiles Template: List Mini
-// -----------------------------------------------------------------
+// =================================================================
+// Mini Profile Format Settings
+// =================================================================
 
 /// Controls the color of the border on the mini profile format
 /// in the profiles shortcode.
@@ -24,6 +25,10 @@ $profiles-mini-cols-sm:			2 !default;
 /// @since 2.0.0
 
 $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
+
+// =================================================================
+// Mini Profile Format Styles
+// =================================================================
 
 /// Styles the mini profile format.
 /// @group profiles

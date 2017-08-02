@@ -52,7 +52,7 @@ $color-profile-info-label:                 $color-grayscale-a !default;
 	@extend %card-styles;
 	margin: 0 0 $margin;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $sm ) {
 		float: right;
 		margin: 0 0 20px 20px;
 		width: 33.33333333333333%;

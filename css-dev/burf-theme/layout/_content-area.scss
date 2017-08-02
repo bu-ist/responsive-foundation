@@ -1,5 +1,5 @@
 // =================================================================
-// Content Layout Settings
+// Content Area Settings
 // =================================================================
 
 /// The number of columns you would like to use in your layout.
@@ -44,7 +44,7 @@ $column-padding-bottom:                     10px !default;
 $column-padding-bottom-large-screen:         35px !default;
 
 // =================================================================
-// Content Layout Styles
+// Content Area Styles
 // =================================================================
 
 /// Controls styling for all content, from the masthead to the site footer.
@@ -101,7 +101,7 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 .content-area {
 	padding-bottom: $column-padding-bottom;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $sm ) {
 		padding-bottom: $column-padding-bottom-large-screen;
 	}
 
@@ -154,7 +154,7 @@ $sidebar-padding:                          3.46667% !default;
 	// Right layout
 	// This level of specificity is necessary to prevent interfering with the narrow template.
 	.sidebar-location-right .content-container & {
-		@include breakpoint( md ) {
+		@include breakpoint( $md ) {
 			padding-left: $sidebar-padding;
 		}
 	}
@@ -165,7 +165,7 @@ $sidebar-padding:                          3.46667% !default;
 		@extend %col-md-pull-#{$_content-width};
 		position: relative;
 
-		@include breakpoint( md ) {
+		@include breakpoint( $md ) {
 			padding-right: $sidebar-padding;
 		}
 	}

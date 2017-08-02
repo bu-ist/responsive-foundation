@@ -1,6 +1,13 @@
-// Forms
+// =================================================================
+// Forms Settings
 // =================================================================
 
+/// Controls the font family used in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 1.0.0
 
 $font-family-form:                          $font-family-sans-serif !default;
 
@@ -12,8 +19,6 @@ $font-family-form:                          $font-family-sans-serif !default;
 /// @since 1.0.0
 
 $form-legend-border:                        $border !default;
-
-$form-legend-border-width:                  0 0 1px 0 !default;
 
 /// Controls the margin on the legend in forms.
 /// Note: this style may not apply to Gravity Forms
@@ -32,6 +37,13 @@ $form-legend-margin:                       0 0 $margin !default;
 /// @since 1.0.0
 
 $form-legend-padding:                      0 0 0.5em !default;
+
+/// Controls the border on fieldsets in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 1.0.0
 
 $form-fieldset-border:                     0 !default;
 
@@ -142,6 +154,10 @@ $border-button:                            0;
 /// @since 2.0.0
 
 $border-radius-button:                     2px !default;
+
+// =================================================================
+// Forms Styles
+// =================================================================
 
 // Placeholders for Forms
 // -----------------------------------------------------------------
@@ -279,8 +295,7 @@ fieldset {
 /// @since 1.0.0
 
 legend {
-	border: $form-legend-border;
-	border-width: $form-legend-border-width;
+	border-bottom: $form-legend-border;
 	display: block;
 	font-size: 1.5em;
 	font-weight: 700;
@@ -560,7 +575,7 @@ textarea {
 /// @access public
 /// @since 1.0.0
 
-@include breakpoint( md ) {
+@include breakpoint( $md ) {
 	.form-aligned {
 		input,
 		textarea,
