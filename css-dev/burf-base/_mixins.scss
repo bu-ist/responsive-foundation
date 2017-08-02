@@ -181,23 +181,31 @@
 ///				}
 ///			}
 ///
-/// 		Transition multiple properties between closed and open menu states.
-/// 		Note that you can stagger or have each property animate at separate lengths.
-/// 			.menu-closed {
+/// 		Transition multiple properties between hidden and visible item states
+///		for a filter and ensure that certain properties are applied to the
+///		animation immediately using the `step-start` timing function.
+/// 		Note the delay on opacity.
+/// 			.degree-program-hidden {
 ///				@include opacity( 0 );
-///				@include transition(
-///					opacity 250ms ease-in-out 0s,
-///					scale 250ms ease-in-out 0s
-///				);
 ///				@include scale( 1, 0 );
-///			}
-/// 			.menu-opened {
-///				@include opacity( 1 );
+///				z-index: 1;
+///
 ///				@include transition(
-///					opacity 250ms ease-in-out 0s,
-///					scale 250ms ease-in-out 0s
+///					opacity 250ms ease-in-out .2s,
+///					transform 250ms ease-in-out 0s,
+///					z-index 0s step-start 0s
 ///				);
+///			}
+/// 			.degree-program-visible {
+///				@include opacity( 1 );
 ///				@include scale( 1, 1 );
+///				z-index: 2;
+///
+///				@include transition(
+///					opacity 250ms step-end .2s,
+///					transform 250ms ease-out 0s,
+///					z-index 0s step-start 0s
+///				);
 ///			}
 /// @group mixins
 /// @access public
@@ -334,7 +342,34 @@
 	transform-origin: $origin;
 }
 
-// keyframes
+/// A mixin for keyframes. Takes care of browser
+/// prefixes for you. You should always use this mixin
+/// when writing keyframe rules to ensure you're
+/// compatible with the browsers we support.
+/// Use with `animation` to build complex animations
+/// that `transition` isn't capable of alone and to tightly
+/// control timing.
+/// Accepts any valid CSS value for `keyframes`.
+/// More info at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
+/// @example
+/// 		Create an infinite loading animation which completes every 250ms
+///		using keyframes and animation.
+/// 			@include keyframes( infinite-loader ) {
+/// 				from {
+/// 					transform: rotate( 0deg );
+/// 				}
+/// 				to {
+/// 					transform: rotate( 360deg );
+/// 				}
+/// 			}
+///
+/// 			.loading {
+///				@include animation( infinite-loader 250ms infinite );
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
 @mixin keyframes( $animation-name ) {
 	@-webkit-keyframes #{$animation-name} {
 		@content;
@@ -353,13 +388,41 @@
 	}
 }
 
-// animation
-@mixin animation( $str ) {
-	-webkit-animation: #{$str};
-	-moz-animation: #{$str};
-	-ms-animation: #{$str};
-	-o-animation: #{$str};
-	animation: #{$str};
+/// A mixin for animation. Takes care of browser
+/// prefixes for you. You should always use this mixin
+/// when writing animation rules to ensure you're
+/// compatible with the browsers we support.
+/// Use with `keyframes` to build complex animations
+/// that `transition` isn't capable of alone and to tightly
+/// control timing.
+/// Accepts any valid CSS value for `animation`, including
+/// multiple animation declarations.
+/// More info at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/animation
+/// @example
+/// 		Create an infinite loading animation which completes every 250ms
+///		using keyframes and animation.
+/// 			@include keyframes( infinite-loader ) {
+/// 				from {
+/// 					transform: rotate( 0deg );
+/// 				}
+/// 				to {
+/// 					transform: rotate( 360deg );
+/// 				}
+/// 			}
+///
+/// 			.loading {
+///				@include animation( infinite-loader 250ms infinite );
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
+@mixin animation( $keyframe-animations... ) {
+	-webkit-animation: #{$keyframe-animations};
+	-moz-animation: #{$keyframe-animations};
+	-ms-animation: #{$keyframe-animations};
+	-o-animation: #{$keyframe-animations};
+	animation: #{$keyframe-animations};
 }
 
 // vertical-center: a more IE-friendly version of vertical center. Apply "vertical-center-child" to a parent element and "vertical-center" to the child
