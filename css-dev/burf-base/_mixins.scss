@@ -272,8 +272,8 @@
 }
 
 // Hide elements visually but not from screen readers. Great for accessibility hints like skip to content. Uses Sass placeholder selector (%).
-// Usage: @extend %visuallyhidden
-%visuallyhidden {
+// Usage: @extend %visually-hidden
+%visually-hidden {
 	border: 0;
 	clip: rect( 0, 0, 0, 0 ); // Deprecated. Remove when clip-path support is better.
 	clip-path: inset( 50% );

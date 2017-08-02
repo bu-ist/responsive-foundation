@@ -83,7 +83,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 /// @since 2.0.0
 
 .event-time-make-sentence {
-	@extend %visuallyhidden;
+	@extend %visually-hidden;
 }
 
 /// Handles styling for start time in the schedule of

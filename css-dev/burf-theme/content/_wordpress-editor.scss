@@ -95,7 +95,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 .screen-reader-text,
 .screen-reader-text span,
 .ui-helper-hidden-accessible {
-	@extend %visuallyhidden;
+	@extend %visually-hidden;
 }
 
 /// A placeholder just for align. Not meant to be extended elsewhere.

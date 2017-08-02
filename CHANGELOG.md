@@ -2,6 +2,8 @@
 
 ## 2.0.0-dev
 
+* Documentation for mixins and change `%visuallyhidden` to `%visually-hidden` to comply
+with coding standards for naming [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/88)
 * Standardizes border treatments by adding a new `$border` for global border treatments
 and removing width variables which don't get a lot of use [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/88)
 * Adds a new z-index scale to help manage layering of multiple interactive elements [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/87)
