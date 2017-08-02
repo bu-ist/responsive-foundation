@@ -169,9 +169,37 @@ $font-family-button:                       $font-family-sans-serif !default;
 /// @since 1.0.0
 
 $font-size-button:                         inherit !default;
+
+/// Controls the background color used on default buttons and
+/// things that looks like buttons across the site.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
 $color-button-bg:                          $color-grayscale-e !default;
+
+/// Controls the text color used on default buttons and
+/// things that looks like buttons across the site.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
 $color-button-text:                        $color-grayscale-4 !default;
+
+/// Controls the background color used on primary buttons and
+/// things that looks like buttons across the site.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
 $color-button-primary-bg:                  #0078e7 !default;
+
+/// Controls the text color used on primary buttons and
+/// things that looks like buttons across the site.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
 $color-button-primary-text:                $color-grayscale-f !default;
 
 /// Controls the margin on buttons in forms.
