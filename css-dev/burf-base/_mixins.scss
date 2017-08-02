@@ -90,21 +90,35 @@
 	box-shadow: $shadow;
 }
 
-// linear-gradient
-// Usage: @include linear-gradient( $from-color, $to-color );
-// where $from-color and $to-color are valid colors or variables which hold a color
-// Note: you should always specify a backup background-color when using this.
+/// A mixin for linear gradients. Takes care of browser
+/// prefixes for you. You should always use this mixin
+/// when writing linear gradients rules to ensure you're
+/// compatible with the browsers we support.
+/// Always to supply a backup background color as well
+/// for browsers that do not support gradients.
+/// Does not support multiple gradients - you're on your
+/// own for that.
+/// @example
+/// 		Create a fancy button with a subtle downward gradient.
+/// 			.fancy-button {
+///				@include linear-gradient( transparent, darken( $your-color, 10% ) );
+///				background-color: $your-color;
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.2.0
+
 @mixin linear-gradient( $from-color: NULL, $to-color: NULL ) {
 	// Both variables must be defined colors
 	@if (
 			type_of( $from-color ) == color and
 			type_of( $to-color ) == color
 		) {
-		background-image: -webkit-gradient(linear, left top, left bottom, from( $from-color), to( $to-color)); /* Saf4+, Chrome */
-		background-image: -webkit-linear-gradient(top, $from-color, $to-color); /* Chrome 10+, Saf5.1+, iOS 5+ */
-		background-image: -moz-linear-gradient(top, $from-color, $to-color); /* FF3.6 */
-		background-image: -ms-linear-gradient(top, $from-color, $to-color); /* IE10 */
-		background-image: -o-linear-gradient(top, $from-color, $to-color); /* Opera 11.10+ */
+		background-image: -webkit-gradient(linear, left top, left bottom, from( $from-color), to( $to-color)); // Saf4+, Chrome
+		background-image: -webkit-linear-gradient(top, $from-color, $to-color); // Chrome 10+, Saf5.1+, iOS 5+
+		background-image: -moz-linear-gradient(top, $from-color, $to-color); // FF3.6
+		background-image: -ms-linear-gradient(top, $from-color, $to-color); // IE10
+		background-image: -o-linear-gradient(top, $from-color, $to-color); // Opera 11.10+
 		background-image: linear-gradient(top, $from-color, $to-color);
 		filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$from-color}', EndColorStr='#{$to-color}');
 	} @else {
