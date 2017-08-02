@@ -7,7 +7,7 @@
 /// isn't getting the correct height because it doesn't
 /// recognize the height of the floated child items.
 /// Based on Nicolas Gallagher's micro clearfix.
-/// http://nicolasgallagher.com/micro-clearfix-hack/
+/// More info: http://nicolasgallagher.com/micro-clearfix-hack/
 /// @example
 /// 		Clear degree items in a degree programs panel so
 /// 		the degree programs background is applied properly.
@@ -31,8 +31,22 @@
 	}
 }
 
-// border-radius
-// Usage: @include border-radius( 3px )
+/// A mixin for border-radius. Takes care of browser
+/// prefixes for you. You should always use this mixin
+/// when writing border-radius rules to ensure you're
+/// compatible with the browsers we support. Accepts
+/// arguments in the same syntax as standard CSS.
+/// More info at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
+/// @example
+/// 		Create a round profile image for a callout.
+/// 		the degree programs background is applied properly.
+/// 			.profile-callout-image {
+///				@include border-radius( 50% );
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
 @mixin border-radius( $radius ) {
 	-webkit-border-radius: $radius;
 	-moz-border-radius: $radius;
@@ -40,8 +54,34 @@
 	border-radius: $radius;
 }
 
-// box-shadow
-// Usage: @include box-shadow( 0 0 1px 3px #000000 )
+/// A mixin for box-shadow. Takes care of browser
+/// prefixes for you. You should always use this mixin
+/// when writing box-shadow rules to ensure you're
+/// compatible with the browsers we support.
+/// Supports multiple shadows, just use the same syntax
+/// as you would CSS.
+/// More info at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+/// @example
+/// 		Create a large, subtle shadow to help a callout
+/// 		stand out against a complicated background, like
+/// 		a background photo.
+/// 			.feature-callout {
+///				@include box-shadow( 0px 0px 40px 0px rgba( 0, 0, 0, 0.25 ) );
+///			}
+///
+/// 		Create a fancy button with an inset highlight and
+/// 		a shadow around it to help it stand out on a background.
+/// 		a background photo.
+/// 			.fancy-button {
+///				@include box-shadow(
+///					inset 0 2px 0px rgba( 255, 255, 255, 0.25 ),
+///					0px 0px 10px 0px rgba( 0, 0, 0, 0.25 )
+///				);
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
 @mixin box-shadow( $shadow... ) {
 	-webkit-box-shadow: $shadow;
 	-moz-box-shadow: $shadow;
