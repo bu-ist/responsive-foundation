@@ -245,8 +245,8 @@
 	}
 }
 
-/// Hides elements from screen readers, but preserves element
-/// width and height. Use this placeholder to hide text when
+/// Hides text in an element visually, but preserves width and height
+/// and screen reader visibility. Use this placeholder to hide text when
 /// you need a visual representation of the screen reader text,
 /// but the text itself isn't desirable to have in your design,
 /// such as in a logo. For example, this placeholder is used to
@@ -271,8 +271,22 @@
 	white-space: nowrap;
 }
 
-// Hide elements visually but not from screen readers. Great for accessibility hints like skip to content. Uses Sass placeholder selector (%).
-// Usage: @extend %visually-hidden
+/// Hides entire elements visually, but preserves visibility for
+/// screen readers. Use this placeholder when an element is only
+/// for screen readers and needs no visual representation on the site.
+/// This is the preferred method of hiding items visually as it works
+/// with right-to-left languages, making it a safer choice if a site is
+/// ever translated.
+/// More info on this technique: http://a11yproject.com/posts/how-to-hide-content/
+/// @example
+/// 		Hide a label in a button.
+/// 			.fancy-button-label {
+///				@extend %visually-hidden;
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
 %visually-hidden {
 	border: 0;
 	clip: rect( 0, 0, 0, 0 ); // Deprecated. Remove when clip-path support is better.
@@ -284,6 +298,17 @@
 	position: absolute;
 	width: 1px;
 }
+
+/// Reverses `%visually-hidden`. Helpful if you want to
+/// unhide a previously hidden label.
+/// @example
+/// 		Show a previously hidden label for all users.
+/// 			.fancy-button-label {
+///				@extend %remove-visually-hidden;
+///			}
+/// @group mixins
+/// @access public
+/// @since 2.0.0
 
 %remove-visually-hidden {
 	clip: auto;
