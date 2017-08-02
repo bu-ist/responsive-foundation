@@ -748,7 +748,7 @@ $left-nav-desktop:                    $nav-desktop !default;
 	right: 0;
 
 	@include breakpoint( $left-nav-desktop ) {
-		@include vertical-center;
+		@include vertical-center-legacy;
 		color: $color-nav-toggle-alt;
 		display: block;
 		position: relative;
@@ -910,7 +910,7 @@ $no-nav-desktop:                    $nav-desktop !default;
 			margin: 0 -60px 0 0;
 
 			@include breakpoint( $no-nav-desktop ) {
-				@include vertical-center;
+				@include vertical-center-legacy;
 				display: block;
 				right: 10px;
 			}
