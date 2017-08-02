@@ -2,6 +2,9 @@
 
 ## 2.0.0-dev
 
+* An updated `vertical-center` approach using flexbox. Old approaches will still be
+available for the forseeable future - just use `vertical-center-ie8` or
+`vertical-center-ie9` as appropriate for your needs [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/89)
 * Documentation for mixins and change `%visuallyhidden` to `%visually-hidden` to comply
 with coding standards for naming [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/89)
 * The `animation` and `transition` mixins now support multiple declarations by default

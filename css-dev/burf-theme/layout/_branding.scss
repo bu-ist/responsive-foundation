@@ -103,7 +103,7 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 /// @since 1.4.0
 
 %_vertical-center-child {
-	@include vertical-center-child-legacy;
+	@include vertical-center-child-ie8;
 }
 
 /// A placeholder for vertical centering in the branding partial.
@@ -112,7 +112,7 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 /// @since 1.4.0
 
 %_vertical-center {
-	@include vertical-center-legacy;
+	@include vertical-center-ie9;
 }
 
 /// A placeholder for ensuring background images print.

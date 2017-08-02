@@ -425,10 +425,31 @@
 	animation: #{$keyframe-animations};
 }
 
-// vertical-center: a more IE-friendly version of vertical center. Apply "vertical-center-child-legacy" to a parent element and "vertical-center" to the child
-// Default usage: @include vertical-center-child-legacy;
-// Usage specifying a child selector: @include vertical-center-child-legacy(".yourSelector");
-@mixin vertical-center-child-legacy( $selector: "*" ) {
+/// A deprecated mixin for vertical centering in IE8. This is an older
+/// approach that can be used when centering is critical for IE8,
+/// such as with branding, or lack of centering will cause usability
+/// issues. If neither of these applies, use the newer version, which
+/// is simpler, less buggy with regards to positioning, and uses flexbox.
+/// With this mixin, you can choose to center all child items, or just
+/// a specific selector. You should always try to use the specific selector
+/// option where possible to avoid performance issues.
+/// This mixin should be used on the parent element of whatever you want to center.
+/// Covers vertical centering for IE8 and above; no additional mixins are necessary.
+/// @example
+/// 		Center everything in a callout vertically (bad).
+/// 			.callout {
+///				@include vertical-center-child-ie8;
+///			}
+/// 		Center only the callout text in a callout vertically (good).
+/// 			.callout {
+///				@include vertical-center-child-ie8( ".callout-text" );
+///			}
+/// @group mixins
+/// @access public
+/// @deprecated Deprecated in favor of flexbox approach in Responsive 2.0
+/// @since 1.0.0
+
+@mixin vertical-center-child-ie8( $selector: "*" ) {
 	.lt-ie9 & {
 		display: table;
 	}
@@ -441,14 +462,31 @@
 		position: relative;
 		top: 50%;
 		display: block;
-		-webkit-transform: translateY(-50%);
-			-moz-transform: translateY(-50%);
-			 -ms-transform: translateY(-50%);
-				  transform: translateY(-50%);
+		-webkit-transform: translateY( -50% );
+			-moz-transform: translateY( -50% );
+			 -ms-transform: translateY( -50% );
+				  transform: translateY( -50% );
 	}
 }
-// Usage: @include vertical-center
-@mixin vertical-center-legacy {
+
+/// A deprecated mixin for vertical centering in IE9 and above. This is an
+/// older approach that can be used when centering is critical for IE9.
+/// Vertical centering is not available in IE8 using this approach.
+/// If this doesn't apply, use the newer version, which is simpler,
+/// less buggy with regards to positioning, and uses flexbox.
+/// This mixin should be used on the element you want to center.
+/// No parent styles are necessary.
+/// @example
+/// 		Vertically center the callout text in a callout.
+/// 			.callout {
+///				@include vertical-center-ie9;
+///			}
+/// @group mixins
+/// @access public
+/// @deprecated Deprecated in favor of flexbox approach in Responsive 2.0
+/// @since 1.0.0
+
+@mixin vertical-center-ie9 {
 	position: relative;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
@@ -651,5 +689,5 @@
 // Usage: @include mixin-help
 
 @mixin mixin-help {
-	@debug '\a\a\a Quick guide to Responsive mixins: \a\a border-radius: @include border-radius(3px); \a box-shadow: @include box-shadow(0 0 1px 3px #000000); \a linear-gradient: @include linear-gradient( $fromColor, $to-color); \a opacity: @include opacity(0.5); \a transition: @include transition(all, 250ms, ease-in-out, 0s ); \a transform: @include(any valid CSS transform argument); \a rotate: @include rotate(90); \a scale: @include scale(2); \a translate: @include translate(10px, 20px); \a keyframes: @include keyframes(animationName) { ... } ; \a animation: @include animation(animationName); \a vertical-center: @include vertical-center in the element you want to center \a vertical-center (IE friendly): @include vertical-center-child-legacy(.childElement) in the parent class \a breakpoint: @include breakpoint( md ) { ... } \a retina:  @include retina { ... } \a rgba-color: @include rgba-color(\'background-color\', rgba(someColor, 0.5), fallbackColor); \a\a';
+	@debug '\a\a\a Quick guide to Responsive mixins: \a\a border-radius: @include border-radius(3px); \a box-shadow: @include box-shadow(0 0 1px 3px #000000); \a linear-gradient: @include linear-gradient( $fromColor, $to-color); \a opacity: @include opacity(0.5); \a transition: @include transition(all, 250ms, ease-in-out, 0s ); \a transform: @include(any valid CSS transform argument); \a rotate: @include rotate(90); \a scale: @include scale(2); \a translate: @include translate(10px, 20px); \a keyframes: @include keyframes(animationName) { ... } ; \a animation: @include animation(animationName); \a vertical-center: @include vertical-center in the element you want to center \a vertical-center (IE friendly): @include vertical-center-child-ie8(.childElement) in the parent class \a breakpoint: @include breakpoint( md ) { ... } \a retina:  @include retina { ... } \a rgba-color: @include rgba-color(\'background-color\', rgba(someColor, 0.5), fallbackColor); \a\a';
 }
