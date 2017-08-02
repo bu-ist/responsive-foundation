@@ -498,6 +498,41 @@
 	}
 }
 
+/// A mixin for vertically and horizontally centering all children
+/// in modern browsers using flexbox.
+/// Use this mixin when centering isn't critical to usability.
+/// Older browsers will gracefully degrade and not center.
+/// This mixin should be used on the parent of the elements you
+/// want to center.
+/// By default, this is set to work as-is for most use cases, but
+/// you may be interested in tweaking the parameters if you
+/// want flexbox-specific functionality.
+/// @example
+/// 		Center all elements in a callout for modern browsers.
+/// 			.callout {
+///				@include center-children;
+///			}
+/// 		Center all elements in a callout for modern browsers,
+///		but let flexbox decide the width for each child item.
+/// 			.callout {
+///				@include center-children( center, center, nowrap, center );
+///			}
+/// @group mixins
+/// @param {string} | $align-content [center] - Removes the gap between multiple child items.
+/// @param {string} | $align-items [center] - Centers child items vertically.
+/// @param {string} | $flex-wrap [wrap] - Wraps child items so the width behaves as expected.
+/// @param {string} | $justify-content [center] - Centers child items horizontally.
+/// @access public
+/// @since 2.0.0
+
+@mixin center-children( $align-content: center, $align-items: center, $flex-wrap: wrap, $justify-content: center ) {
+	align-content: $align-content;
+	align-items: $align-items;
+	display: flex;
+	flex-wrap: $flex-wrap;
+	justify-content: $justify-content;
+}
+
 /// Hides text in an element visually, but preserves width and height
 /// and screen reader visibility. Use this placeholder to hide text when
 /// you need a visual representation of the screen reader text,
