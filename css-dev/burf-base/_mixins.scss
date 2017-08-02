@@ -608,31 +608,42 @@
 	width: auto;
 }
 
-$bp-start-skip-for-ie8: $lg;
-
-/// Hides entire elements visually, but preserves visibility for
-/// screen readers. Use this placeholder when an element is only
-/// for screen readers and needs no visual representation on the site.
-/// This is the preferred method of hiding items visually as it works
-/// with right-to-left languages, making it a safer choice if a site is
-/// ever translated.
-/// More info on this technique: http://a11yproject.com/posts/how-to-hide-content/
+/// A safe way to including responsive styles on old browers which
+/// do not fully support media queries, such as IE8.
+/// All media queries using this mixin are mobile-first (`min-width`).
+/// This mixin will take all reponsive styles up to a certain point and print
+/// them in the order they're written in the ie.css stylesheet, up until
+/// the default screen width you set to support in IE8 and below.
+/// In most cases, you won't have to change this from `$lg`, but you
+/// can always check Google Analytics to see what the most used screen
+/// size is for your site's older IE users if you like, and set it to that.
+/// This mixin no longer supports custom media queries like `max-width` as of 2.0,
+/// because those styles do not generally need to be included for old IE
+/// to be usable. Instead, you should use a plain CSS media query, which
+/// will not interfere with older browsers and degrade gracefully.
+/// By default, you'll use this mixin for all your responsive styles,
+/// and should only have a few very minor exceptions in media queries.
 /// @example
-/// 		Hide a label in a button.
-/// 			.fancy-button-label {
-///				@extend %visually-hidden;
+/// 		Change the background of a callout from black to white
+///		on tablets in vertical orientation and larger.
+/// 			.callout {
+///				background: $color-grayscale-0;
+///
+///				@include breakpoint( $xs ) {
+///					background: $color-grayscale-f;
+///				}
+///			}
+/// 		Override the background on a callout to
+///		white, but only on the smallest phones.
+/// 			.callout {
+///				@media screen and ( max-width: $xs - 1 ) {
+///					background: $color-grayscale-f;
+///				}
 ///			}
 /// @group mixins
+/// @param {variable | number} | $breakpoint - The window width to begin applying your styles. Can be any pixel value, but `$xs`, `$sm`, `$md`, `$lg`, and `$xl` are standard in this framework.
 /// @access public
 /// @since 1.0.0
-
-// If primary stylesheet indicates media query support (e.g. style.scss ), output media queries. If not (e.g. ie.scss ), output the block WITHOUT @media wrapper.
-// Usage: @include breakpoint( $md ) {...}
-// $skiplgMQforIE tells this mixin whether or not to skip the lg point styles on THIS set of styles for IE8.
-// If you have an individual set of styles for the large breakpoint that you need to print, this allows you to do it.
-// Realistically, you probably don't need it.
-// TODO: check out if http://sassbreak.com/getting-back-to-our-roots/ helps with mqs for IE
-// It looks like it can print styles at the root if MQs aren't supported, maybe.
 
 @mixin breakpoint( $point, $skip-mqs-for-ie: true ) {
 	// Error handling for anyone upgrading to 2.0
@@ -644,7 +655,7 @@ $bp-start-skip-for-ie8: $lg;
 			@content;
 		}
 	} @else {
-		@if ( $point >= $bp-start-skip-for-ie8 and $skip-mqs-for-ie ) {
+		@if ( $point >= $lte-ie8-target-width and $skip-mqs-for-ie ) {
 			// Do not output very large desktop styles for IE8
 		} @else {
 			@content;

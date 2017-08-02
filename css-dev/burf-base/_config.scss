@@ -55,6 +55,16 @@ $lg:                                       1200px !default;
 
 $xl:                                       1500px !default;
 
+/// The window width to target for IE8 and below.
+/// Because older versions of IE don't support media queries,
+/// we use this width to target the most likely browser width
+/// an older IE user will be viewing the site in.
+/// @group global
+/// @access public
+/// @since 2.0.0
+
+$lte-ie8-target-width:                     $lg !default;
+
 /// The container width for the small (sm) breakpoint.
 /// @group layout
 /// @access public
