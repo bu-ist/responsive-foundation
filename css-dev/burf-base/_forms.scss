@@ -575,7 +575,7 @@ textarea {
 /// @access public
 /// @since 1.0.0
 
-@include breakpoint( md ) {
+@include breakpoint( $md ) {
 	.form-aligned {
 		input,
 		textarea,

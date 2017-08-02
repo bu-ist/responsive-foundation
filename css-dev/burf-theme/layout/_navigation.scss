@@ -286,7 +286,7 @@ $width-side-nav:                            240px !default;
 /// @access public
 /// @since 2.0.0
 
-$nav-desktop:                    sm !default;
+$nav-desktop:                    $sm !default;
 
 nav {
 	font-family: $font-family-navigation;
@@ -684,13 +684,13 @@ $left-nav-desktop:                    $nav-desktop !default;
 			&.is-open {
 				left: $width-side-nav - 60px;
 
-				@include breakpoint( lg ) {
+				@include breakpoint( $lg ) {
 					left: 0;
 				}
 			}
 		}
 
-		@include breakpoint( lg ) {
+		@include breakpoint( $lg ) {
 			display: block;
 			margin-left: 0;
 			padding: $padding $padding-small;
@@ -711,7 +711,7 @@ $left-nav-desktop:                    $nav-desktop !default;
 			margin: 0 $margin-small;
 		}
 
-		@include breakpoint( lg ) {
+		@include breakpoint( $lg ) {
 			display: block;
 		}
 
@@ -721,7 +721,7 @@ $left-nav-desktop:                    $nav-desktop !default;
 
 			&:first-child {
 				a {
-					@include breakpoint( lg ) {
+					@include breakpoint( $lg ) {
 						border: 0;
 					}
 				}
@@ -807,7 +807,7 @@ $_search-height: 103px;
 	.nav-toggle {
 		display: block;
 
-		@include breakpoint( lg ) {
+		@include breakpoint( $lg ) {
 			display: none;
 		}
 	}
@@ -815,7 +815,7 @@ $_search-height: 103px;
 	.masthead-container .utility-nav {
 		margin: 0 $margin-small;
 
-		@include breakpoint( lg ) {
+		@include breakpoint( $lg ) {
 			display: block;
 			position: relative;
 			right: auto;
@@ -834,7 +834,7 @@ $_search-height: 103px;
 				left: $width-side-nav - 60px;
 			}
 
-			@include breakpoint( lg ) {
+			@include breakpoint( $lg ) {
 				left: 0;
 			}
 		}

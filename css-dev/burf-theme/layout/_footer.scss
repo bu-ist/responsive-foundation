@@ -130,7 +130,7 @@ $_footbar-widget-width: $grid-number-columns / $number-widgets-footbar;
 	@extend %container-styles;
 	background: $color-footbar-container-bg;
 
-	@include breakpoint( md ) {
+	@include breakpoint( $md ) {
 		display: grid;
 		grid-gap: $margin-large;
 		grid-template-columns: repeat( #{$number-widgets-footbar}, 1fr );
@@ -138,7 +138,7 @@ $_footbar-widget-width: $grid-number-columns / $number-widgets-footbar;
 	}
 
 	.widget {
-		@include breakpoint( md ) {
+		@include breakpoint( $md ) {
 			margin-top: 0;
 			padding: 0;
 
@@ -242,14 +242,14 @@ body {
 	@extend %col-sm-half;
 	text-align: center;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $sm ) {
 		float: right;
 		text-align: right;
 	}
 
 	.has-branding &,
 	.has-footer-info & {
-		@include breakpoint( sm ) {
+		@include breakpoint( $sm ) {
 			text-align: left;
 		}
 	}
@@ -341,7 +341,7 @@ body {
 	@extend %col-sm-half;
 	text-align: center;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $sm ) {
 		text-align: left;
 	}
 
@@ -353,14 +353,14 @@ body {
 		display: block;
 		margin: 0 auto $margin;
 
-		@include breakpoint( xs ) {
+		@include breakpoint( $xs ) {
 			display: inline-block;
 			height: 50px;
 			margin-right: $margin;
 			vertical-align: middle;
 		}
 
-		@include breakpoint( sm ) {
+		@include breakpoint( $sm ) {
 			float: left;
 			text-align: left;
 		}
@@ -389,7 +389,7 @@ body {
 		@extend %col-sm-half;
 		clear: none;
 
-		@include breakpoint( sm ) {
+		@include breakpoint( $sm ) {
 			float: right;
 		}
 	}
@@ -399,7 +399,7 @@ body {
 		@extend %col-md-third;
 		clear: none;
 
-		@include breakpoint( sm ) {
+		@include breakpoint( $sm ) {
 			float: right;
 		}
 	}
@@ -416,7 +416,7 @@ body {
 	margin-bottom: $margin;
 	text-align: center;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $sm ) {
 		text-align: left;
 	}
 
@@ -442,42 +442,42 @@ body {
 	display: block;
 	margin-bottom: $margin;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $sm ) {
 		padding-right: $padding;
 	}
 
 	.brand-masterplate + & {
-		@include breakpoint( sm ) {
+		@include breakpoint( $sm ) {
 			clear: none;
 			float: left;
 			max-width: 60%;
 		}
 
-		@include breakpoint( md ) {
+		@include breakpoint( $md ) {
 			max-width: 75%;
 		}
 	}
 
 	.brand-bumclogo + & {
-		@include breakpoint( md ) {
+		@include breakpoint( $md ) {
 			clear: none;
 			float: left;
 			max-width: 50%;
 		}
 
-		@include breakpoint( lg ) {
+		@include breakpoint( $lg ) {
 			max-width: 65%;
 		}
 	}
 
 	.disclaimer + & {
-		@include breakpoint( md ) {
+		@include breakpoint( $md ) {
 			clear: none;
 			float: left;
 			max-width: 33%;
 		}
 
-		@include breakpoint( lg ) {
+		@include breakpoint( $lg ) {
 			max-width: 50%;
 		}
 	}

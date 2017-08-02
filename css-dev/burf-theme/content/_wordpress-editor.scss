@@ -107,7 +107,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 	margin-bottom: $margin-floated-content;
 	max-width: 100%;
 
-	@include breakpoint( xs ) {
+	@include breakpoint( $xs ) {
 		max-width: 50%;
 	}
 }
@@ -121,7 +121,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 .alignright {
 	@extend %_align-styles;
 
-	@include breakpoint( xs ) {
+	@include breakpoint( $xs ) {
 		float: right;
 		margin: 0 0 $margin-floated-content $margin-floated-content;
 	}
@@ -136,7 +136,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 .alignleft {
 	@extend %_align-styles;
 
-	@include breakpoint( xs ) {
+	@include breakpoint( $xs ) {
 		float: left;
 		margin: 0 $margin-floated-content $margin-floated-content 0;
 	}
@@ -179,7 +179,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 %resposive-table-styles {
 	position: relative;
 
-	@include breakpoint( "max-width: #{$container-md}" ) {
+	@media screen and ( max-width: #{$container-md} ) {
 		margin: 35px 0;
 		-webkit-overflow-scrolling: touch;
 		-ms-overflow-style: -ms-autohiding-scrollbar;

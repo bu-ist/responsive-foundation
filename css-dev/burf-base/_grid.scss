@@ -71,8 +71,12 @@ $grid-margin-width:                        ( $margin / $container-lg ) * 100 !de
 /// @access public
 /// @since 1.2.0
 
-$grid-breakpoints:                         "xs", "sm", "md", "lg" !default;
-
+$grid-breakpoints: (
+	xs: 		$xs, // optional
+	sm: 		$sm, // required for the framework
+	md: 		$md, // required for the framework
+	lg: 		$lg  // optional
+);
 
 /// Determines which classes to calculate and print for the theme.
 /// By default, all are on so clients can freely use these in custom CSS.
@@ -161,16 +165,16 @@ $grid-column-padding:                      0 $padding !default;
 	padding: $grid-container-padding;
 	width: 100%;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $sm ) {
 		max-width: $container-sm;
 		padding: $grid-container-padding-desktop;
 	}
 
-	@include breakpoint( md ) {
+	@include breakpoint( $md ) {
 		max-width: $container-md;
 	}
 
-	@include breakpoint( lg ) {
+	@include breakpoint( $lg ) {
 		max-width: $container-lg;
 	}
 }
@@ -186,7 +190,7 @@ $grid-column-padding:                      0 $padding !default;
 	@extend %clearfix;
 	margin: $grid-row-margin;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $sm ) {
 		margin-right: 0;
 	}
 }
@@ -225,7 +229,7 @@ $grid-column-padding:                      0 $padding !default;
 /// @since 1.2.0
 
 %equal-height-child-backcompat {
-	@include breakpoint( md ) {
+	@include breakpoint( $md ) {
 		padding-bottom: 99999px;
 		margin-bottom: -99999px;
 	}
@@ -387,15 +391,15 @@ $grid-widths-margins: ();
 
 // Breakpoints time
 
-@each $breakpoint in $grid-breakpoints {
+@each $bp-name, $bp-variable in $grid-breakpoints {
 
-	@include breakpoint( $breakpoint, false ) {
-		%col-#{$breakpoint}-margin-base {
+	@include breakpoint( $bp-variable, false ) {
+		%col-#{$bp-name}-margin-base {
 			margin-left: $grid-margin-width#{"%"};
 		}
 
-		.col-#{$breakpoint}-margin-parent,
-		%col-#{$breakpoint}-margin-parent {
+		.col-#{$bp-name}-margin-parent,
+		%col-#{$bp-name}-margin-parent {
 			margin-left: -$grid-margin-width#{"%"};
 		}
 
@@ -403,7 +407,7 @@ $grid-widths-margins: ();
 			// Get percentage from earlier
 			$percentage: nth($grid-widths, ($i + 1));
 
-			%col-#{$breakpoint} {
+			%col-#{$bp-name} {
 				@if ($i != 0) {
 					&-#{$i} {
 						@include gridBuild(width, $percentage);
@@ -443,9 +447,9 @@ $grid-widths-margins: ();
 
 		@if map-get($grid-supports, margin) and ($i != 0) {
 			// Add to base styles
-			%col-#{$breakpoint}-margin-#{$i} {
+			%col-#{$bp-name}-margin-#{$i} {
 				@extend %col-margin-base;
-				@extend %col-#{$breakpoint}-margin-base;
+				@extend %col-#{$bp-name}-margin-base;
 			}
 		}
 	}
@@ -486,18 +490,18 @@ $widths: (
 		}
 	}
 
-	@each $breakpoint in $grid-breakpoints {
-		.col-#{$breakpoint},
-		%col-#{$breakpoint} {
+	@each $bp-name, $bp-variable in $grid-breakpoints {
+		.col-#{$bp-name},
+		%col-#{$bp-name} {
 
 			&-#{$width} {
-				@extend %col-#{$breakpoint}-#{$columns} !optional;
+				@extend %col-#{$bp-name}-#{$columns} !optional;
 			}
 
 			@each $feature, $supported in $grid-supports {
 				@if $supported {
 					&-#{$feature}-#{$width} {
-						@extend %col-#{$breakpoint}-#{$feature}-#{$columns} !optional;
+						@extend %col-#{$bp-name}-#{$feature}-#{$columns} !optional;
 					}
 				}
 			}
@@ -517,16 +521,16 @@ $widths: (
 				}
 			}
 		}
-		@each $breakpoint in $grid-breakpoints {
-			.col-#{$breakpoint} {
+		@each $bp-name, $bp-variable in $grid-breakpoints {
+			.col-#{$bp-name} {
 				&-#{$i} {
-					@extend %col-#{$breakpoint}-#{$i} !optional;
+					@extend %col-#{$bp-name}-#{$i} !optional;
 				}
 
 				@each $feature, $supported in $grid-supports {
 					@if $supported {
 						&-#{$feature}-#{$i} {
-							@extend %col-#{$breakpoint}-#{$feature}-#{$i} !optional;
+							@extend %col-#{$bp-name}-#{$feature}-#{$i} !optional;
 						}
 					}
 				}

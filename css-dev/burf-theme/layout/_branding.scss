@@ -269,7 +269,7 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 	@extend %_vertical-center;
 	display: none;
 
-	@include breakpoint( md ) {
+	@include breakpoint( $md ) {
 		color: $color-grayscale-9;
 		display: block;
 		font-family: $font-family-base;

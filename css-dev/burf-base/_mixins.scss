@@ -608,57 +608,44 @@
 	width: auto;
 }
 
+$bp-start-skip-for-ie8: $lg;
+
+/// Hides entire elements visually, but preserves visibility for
+/// screen readers. Use this placeholder when an element is only
+/// for screen readers and needs no visual representation on the site.
+/// This is the preferred method of hiding items visually as it works
+/// with right-to-left languages, making it a safer choice if a site is
+/// ever translated.
+/// More info on this technique: http://a11yproject.com/posts/how-to-hide-content/
+/// @example
+/// 		Hide a label in a button.
+/// 			.fancy-button-label {
+///				@extend %visually-hidden;
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
 // If primary stylesheet indicates media query support (e.g. style.scss ), output media queries. If not (e.g. ie.scss ), output the block WITHOUT @media wrapper.
-// Usage: @include breakpoint( md ) {...}
+// Usage: @include breakpoint( $md ) {...}
 // $skiplgMQforIE tells this mixin whether or not to skip the lg point styles on THIS set of styles for IE8.
 // If you have an individual set of styles for the large breakpoint that you need to print, this allows you to do it.
 // Realistically, you probably don't need it.
 // TODO: check out if http://sassbreak.com/getting-back-to-our-roots/ helps with mqs for IE
 // It looks like it can print styles at the root if MQs aren't supported, maybe.
 
-@mixin breakpoint( $point, $skiplgMQsforIE: true ) {
-	// Error handling for anyone upgrading to 1.2.0
-	@if (
-		$point == extra_small or
-		$point == small or
-		$point == medium or
-		$point == large
-	) {
-		@error 'The breakpoint shorthand "#{$point}" is no longer supported as of Responsive 1.2.0. Use "xs", "sm", "md", or "lg" instead.';
+@mixin breakpoint( $point, $skip-mqs-for-ie: true ) {
+	// Error handling for anyone upgrading to 2.0
+	@if ( type-of( $point ) == string ) {
+		@error 'The breakpoint shortcut "#{$point}" is no longer supported as of Responsive 2.0. \a Use the direct breakpoint variable ($#{$point}) instead. \a If want to use max-width, write a plain @media query.';
 	}
 	@if ( $mqs ) {
-		@if ( $point == xs ) {
-			@media screen and ( min-width: $xs ) {
-				@content;
-			}
-		} @else if ( $point == sm ) {
-			@media screen and ( min-width: $sm ) {
-				@content;
-			}
-		} @else if ( $point == md ) {
-			@media screen and ( min-width: $md ) {
-				@content;
-			}
-		} @else if ( $point == lg ) {
-			@media screen and ( min-width: $lg ) {
-				@content;
-			}
-		} @else if ( $point == xl ) {
-			@media screen and ( min-width: $xl ) {
-				@content;
-			}
-		} @else {
-			// Can also accept your very own min-width argument, like so:
-			// "min-width: 300px;"
-			// "max-width: 900px;"
-			// Keep in mind these print for all sizes if MQs aren't supported.
-			@media screen and ( $point ) {
-				@content;
-			}
+		@media screen and ( min-width: $point ) {
+			@content;
 		}
 	} @else {
-		@if ( $point == lg and $skiplgMQsforIE ) {
-			// ie8 and large desktop output nothing
+		@if ( $point >= $bp-start-skip-for-ie8 and $skip-mqs-for-ie ) {
+			// Do not output very large desktop styles for IE8
 		} @else {
 			@content;
 		}
@@ -705,9 +692,9 @@
 // Usage: @include rgba-color('background-color', rgba(black, 0.5), white);
 @mixin rgba-color( $attribute: NULL, $color: NULL, $background: NULL ) {
 	@if (
-		type_of( $attribute ) == string and
-		type_of( $color ) == color and
-		type_of( $background ) == color
+		type-of( $attribute ) == string and
+		type-of( $color ) == color and
+		type-of( $background ) == color
 	) {
 		$percent: alpha( $color ) * 100%;
 		$opaque: opacify( $color, 1 );
@@ -724,5 +711,5 @@
 // Usage: @include mixin-help
 
 @mixin mixin-help {
-	@debug '\a\a\a Quick guide to Responsive mixins: \a\a border-radius: @include border-radius(3px); \a box-shadow: @include box-shadow(0 0 1px 3px #000000); \a linear-gradient: @include linear-gradient( $fromColor, $to-color); \a opacity: @include opacity(0.5); \a transition: @include transition(all, 250ms, ease-in-out, 0s ); \a transform: @include(any valid CSS transform argument); \a rotate: @include rotate(90); \a scale: @include scale(2); \a translate: @include translate(10px, 20px); \a keyframes: @include keyframes(animationName) { ... } ; \a animation: @include animation(animationName); \a vertical-center: @include vertical-center in the element you want to center \a vertical-center (IE friendly): @include vertical-center-child-ie8(.childElement) in the parent class \a breakpoint: @include breakpoint( md ) { ... } \a retina:  @include retina { ... } \a rgba-color: @include rgba-color(\'background-color\', rgba(someColor, 0.5), fallbackColor); \a\a';
+	@debug '\a\a\a Quick guide to Responsive mixins: \a\a border-radius: @include border-radius(3px); \a box-shadow: @include box-shadow(0 0 1px 3px #000000); \a linear-gradient: @include linear-gradient( $fromColor, $to-color); \a opacity: @include opacity(0.5); \a transition: @include transition(all, 250ms, ease-in-out, 0s ); \a transform: @include(any valid CSS transform argument); \a rotate: @include rotate(90); \a scale: @include scale(2); \a translate: @include translate(10px, 20px); \a keyframes: @include keyframes(animationName) { ... } ; \a animation: @include animation(animationName); \a vertical-center: @include vertical-center in the element you want to center \a vertical-center (IE friendly): @include vertical-center-child-ie8(.childElement) in the parent class \a breakpoint: @include breakpoint( $md ) { ... } \a retina:  @include retina { ... } \a rgba-color: @include rgba-color(\'background-color\', rgba(someColor, 0.5), fallbackColor); \a\a';
 }
