@@ -3,8 +3,8 @@
 ## 2.0.0-dev
 
 * Simplify the breakpoint mixin to accept any variable, and open up the target
-breakpoint for <=IE8 to modification in custom themes. Use any value you like
-- it'll just work now! `max-width` support is deprecated as of 2.0 since the
+breakpoint for <=IE8 to modification in custom themes. Use any value you like,
+it'll just work now! `max-width` support is deprecated as of 2.0 since the
 intention of this mixin is to print styles safely in older versions of IE -
 `max-width` styles are unlikely to be the last styles to apply.
 [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/89)
