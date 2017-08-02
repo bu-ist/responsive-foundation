@@ -109,16 +109,97 @@ $form-input-padding:                       0.5em !default;
 /// @since 1.0.0
 
 $form-input-border:                        $border !default;
+
+/// Controls the inner shadow on inputs in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
 $form-input-shadow:                        inset 0 1px 3px $color-grayscale-e !default;
+
+/// Controls the border radius on inputs in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
 $form-input-border-radius:                 0 !default;
+
+/// Controls the shadow on focused inputs.
+/// This is important for accessibility. Always
+/// test with a keyboard if you change this style
+/// to ensure it is still clear which item is keyboard
+/// focused afterwards.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
 $form-input-focus-shadow:                  0 0 4px 0 rgba( 18, 159, 234, 0.2 ) !default;
+
+/// Controls the border on focused inputs.
+/// This is important for accessibility. Always
+/// test with a keyboard if you change this style
+/// to ensure it is still clear which item is keyboard
+/// focused afterwards.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
 $color-input-focus-border:                 #129fea !default;
 
+/// Controls the font used on all buttons and
+/// things that looks like buttons across the site.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
 $font-family-button:                       $font-family-sans-serif !default;
+
+/// Controls the font size used on all buttons and
+/// things that looks like buttons across the site.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
 $font-size-button:                         inherit !default;
+
+/// Controls the background color used on default buttons and
+/// things that looks like buttons across the site.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
 $color-button-bg:                          $color-grayscale-e !default;
+
+/// Controls the text color used on default buttons and
+/// things that looks like buttons across the site.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
 $color-button-text:                        $color-grayscale-4 !default;
+
+/// Controls the background color used on primary buttons and
+/// things that looks like buttons across the site.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
 $color-button-primary-bg:                  #0078e7 !default;
+
+/// Controls the text color used on primary buttons and
+/// things that looks like buttons across the site.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
 $color-button-primary-text:                $color-grayscale-f !default;
 
 /// Controls the margin on buttons in forms.

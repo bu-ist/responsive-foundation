@@ -2,30 +2,81 @@
 // Typography Settings
 // =================================================================
 
-/// A sans-serif font to use in your theme.
+/// A sans-serif font to use sitewide.
 /// By default, this affects the site footer and label text in profiles.
-/// @group global
+/// @group typography
 /// @access public
 /// @since 1.0.0
 
-$font-family-sans-serif:                     "Benton", "Helvetica", sans-serif !default;
+$font-family-sans-serif:                    "Benton", "Helvetica", sans-serif !default;
 
-$font-family-monospace:                     Consolas, "Liberation Mono", Courier, monospace !default;
+/// A monospace font to use sitewide.
+/// By default, this affects the `<code>` and `<pre>` elements.
+/// @group typography
+/// @access public
+/// @since 1.0.0
+
+$font-family-monospace:                     "Consolas", "Liberation Mono", Courier, monospace !default;
+
+/// A font to use for headings.
+/// Affects `<h1>`, `<h2>`, etc.
+/// @group typography
+/// @access public
+/// @since 1.0.0
 
 $font-family-heading:                       $font-family-sans-serif !default;
-$color-heading:                            $color-grayscale-0 !default;
-$color-heading-small:                      $color-grayscale-9 !default;
 
-/// Base margin for HTML tags. Primarily affect `<p>`.
+/// A color to use for headings.
+/// Affects `<h1>`, `<h2>`, etc.
+/// @group typography
+/// @access public
+/// @since 1.0.0
+
+$color-heading:                             $color-grayscale-0 !default;
+
+/// A font to use for small tags within headings.
+/// @group typography
+/// @access public
+/// @since 1.0.0
+
+$color-heading-small:                       $color-grayscale-9 !default;
+
+/// Base margin for HTML tags. Primarily affects `<p>`.
 /// @group typography
 /// @access public
 /// @since 1.0.0
 
 $font-margin-base:                          0 0 1.5em 0 !default;
 
-$color-link:                               #0f69d7 !default;
-$color-link-visited:                       #7337af !default;
-$color-link-active:                        $color-grayscale-0 !default;
+/// Base color for links.
+/// @group typography
+/// @access public
+/// @since 1.0.0
+
+$color-link:                                #0f69d7 !default;
+
+/// Base color for visited links.
+/// Must be different from `$color-link` for accessibility
+/// reasons.
+/// @group typography
+/// @access public
+/// @since 1.0.0
+
+$color-link-visited:                        #7337af !default;
+
+/// Base color for active links.
+/// Must be different from `$color-link` for accessibility
+/// reasons.
+/// @group typography
+/// @access public
+/// @since 1.0.0
+
+$color-link-active:                         $color-grayscale-0 !default;
+
+/// Base padding for the `<code>` tag.
+/// @group typography
+/// @access public
+/// @since 1.0.0
 
 $font-padding-code:                         0.2em 0.4em !default;
 
@@ -35,15 +86,27 @@ $font-padding-code:                         0.2em 0.4em !default;
 /// @since 1.0.0
 
 $font-margin-code:                          $margin 0 !default;
-$color-code:                               $color-grayscale-7 !default;
-$color-code-bg:                            $color-grayscale-f5 !default;
+
+/// Text color to use for the `<code>` tag.
+/// @group typography
+/// @access public
+/// @since 1.0.0
+
+$color-code:                                $color-grayscale-7 !default;
+
+/// Background color to use for the `<code>` tag.
+/// @group typography
+/// @access public
+/// @since 1.0.0
+
+$color-code-bg:                             $color-grayscale-f5 !default;
 
 /// Base border for the `<code>` tag.
 /// @group typography
 /// @access public
 /// @since 2.0.0
 
-$border-code:                              $border !default;
+$border-code:                               $border !default;
 
 /// Base margin for the `<blockquote>` tag.
 /// @group typography
@@ -58,6 +121,12 @@ $font-margin-blockquote:                    1em $margin-large !default;
 /// @since 1.0.0
 
 $font-margin-list:                          $font-margin-base !default;
+
+/// Base padding for `<ul>` and `<ol>` tags.
+/// @group typography
+/// @access public
+/// @since 1.0.0
+
 $font-padding-list:                         0 0 0 40px !default;
 
 /// Base margin for `<dd>` tags.
@@ -75,9 +144,9 @@ $font-margin-dd:                            0 0 0 $margin !default;
 /// @access public
 /// @since 1.0.0
 
-$font-family-base:                          "Benton", sans-serif !default;
+$font-family-base:                          $font-family-sans-serif !default;
 
-/// A serif font to use in your theme. This variable is not used by default.
+/// A serif font to use. This variable is not used by default.
 /// @group global
 /// @access public
 /// @since 1.0.0

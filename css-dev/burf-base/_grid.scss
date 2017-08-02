@@ -2,49 +2,6 @@
 // Grid Settings
 // =================================================================
 
-// TODO: Needs documentation
-// TODO: Needs col-0 classes
-
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// Grid and Layout
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-
-//	Grid controls (see _variables.scss)
-//		$grid-number-columns
-//			Controls number of columns in grid.
-//			Required: Columns must be neatly divisible by 2, 3, and 4.
-//			Default: 12
-//		$grid-breakpoints
-//			The breakpoints you want grids to begin at.
-//			Required: Small and medium if you use burf-theme. Large is optional.
-//			Default: "small", "medium"
-//		$grid-margins
-//			Turn on optional margin classes.
-//			Default: false
-//		$grid-margin-width
-//			Your desired grid margin, in %. Default value works out to 20px on large screens.
-//			Relies on $grid-margins being set to "true".
-//			Default: 2.6
-//		$grid-push
-//			Turn on optional push classes.
-//			Default: false
-//		$grid-pull
-//			Turn on optional pull classes.
-//			Default: false
-//		$grid-offset
-//			Turn on optional offset classes.
-//			Default: false
-//		$grid-classes
-//			Choose to output numeric grid classes (ie, .col-sm-5)
-//			Note that friendly grid classes always print.
-//			Default: true
-
 /// The number of columns you would like in your grid.
 /// To use styles in burf-theme, you must set this to a number that
 /// is divisible by 2, 3, and 4.
