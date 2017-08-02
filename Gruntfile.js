@@ -103,6 +103,13 @@ module.exports = function(grunt) {
 				files: ['_docs/vendor/**/*'],
 				tasks: ['copy']
 			}
+		},
+		sassdoc: {
+			src: 'css-dev/**/*.scss',
+			options: {
+				//config: 'sassdoc-config.json',
+				dest: docsVersionFilePath
+			},
 		}
 	});
 
@@ -112,9 +119,10 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-gh-pages');
+	grunt.loadNpmTasks('grunt-sassdoc');
 	grunt.loadNpmTasks('grunt-version');
 
-	grunt.registerTask('build', ['sass', 'concat', 'copy']);
+	grunt.registerTask('build', ['sassdoc']);
 	grunt.registerTask('deploy', ['build', 'gh-pages']);
 	grunt.registerTask('serve', ['build', 'browserSync', 'watch']);
 
