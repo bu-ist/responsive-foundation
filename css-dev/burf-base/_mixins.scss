@@ -664,8 +664,10 @@
 }
 
 /// Outputs a sass map neatly in CSS for debugging purposes.
+/// Sends output to terminal on compile.
 /// From https://www.sitepoint.com/debugging-sass-maps/
 /// @group mixins
+/// @param {map} | $map - A sass map to debug.
 /// @access public
 /// @since 2.0.0
 
@@ -685,8 +687,22 @@
 	}
 }
 
-// Media query for retina images
-// Usage: @include retina {...}
+/// A shortcut media query for retina devices.
+/// Handy for including separate retina images.
+/// Accepts blocks of CSS or Sass.
+/// @example
+/// 		Add a retina-specific logo.
+/// 			.custom-logo {
+///				background: url( "images/custom-logo.jpg" );
+///
+///				@include retina {
+///					background: url( "images/custom-logo-retina.jpg" );
+///				}
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
 @mixin retina {
 	@media
 	only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -699,8 +715,22 @@
 	}
 }
 
-// Mixin to generate RGBA colors for any style with a fallback for non-rgba browsers such as IE8.
-// Usage: @include rgba-color('background-color', rgba(black, 0.5), white);
+/// Generates backwards-compatible RGBA color CSS by calculating
+/// a solid color that looks the same as what a user sees for IE8 and
+/// below.
+/// @example
+/// 		Style a darkened overlay on the bottom half of a callout with
+///		a green background.
+/// 			.callout-overlay {
+///				@include rgba-color( background-color, rgba( $color-grayscale-0, 0.5 ), $green );
+///			}
+/// @group mixins
+/// @param {string} | $attribute - The CSS attribute to apply your color to.
+/// @param {string} | $color - The rgba color to use for modern browsers.
+/// @param {string} | $background - The background color of the item this will sit on top of, to help calculate an accurate fallback color. Use a solid version of the same color as `$color` for photos.
+/// @access public
+/// @since 1.0.0
+
 @mixin rgba-color( $attribute: NULL, $color: NULL, $background: NULL ) {
 	@if (
 		type-of( $attribute ) == string and
@@ -714,13 +744,6 @@
 		#{$attribute}: $solid-color;
 		#{$attribute}: $color;
 	} @else {
-		@error 'The rgba-color mixin requires a valid CSS attribute to apply the color to, a valid RGBA color, and a valid fallback color. \a Example usage: @include rgba-color(\'background-color\', rgba(black, 0.5), white);';
+		@error 'The rgba-color mixin requires a valid CSS attribute to apply the color to, a valid RGBA color, and a valid background color to calculate the fallback color. \a Example usage: @include rgba-color(\'background-color\', rgba(black, 0.5), white);';
 	}
-}
-
-// Help for mixins so it's easier to see syntax - prints to console on each save
-// Usage: @include mixin-help
-
-@mixin mixin-help {
-	@debug '\a\a\a Quick guide to Responsive mixins: \a\a border-radius: @include border-radius(3px); \a box-shadow: @include box-shadow(0 0 1px 3px #000000); \a linear-gradient: @include linear-gradient( $fromColor, $to-color); \a opacity: @include opacity(0.5); \a transition: @include transition(all, 250ms, ease-in-out, 0s ); \a transform: @include(any valid CSS transform argument); \a rotate: @include rotate(90); \a scale: @include scale(2); \a translate: @include translate(10px, 20px); \a keyframes: @include keyframes(animationName) { ... } ; \a animation: @include animation(animationName); \a vertical-center: @include vertical-center in the element you want to center \a vertical-center (IE friendly): @include vertical-center-child-ie8(.childElement) in the parent class \a breakpoint: @include breakpoint( $md ) { ... } \a retina:  @include retina { ... } \a rgba-color: @include rgba-color(\'background-color\', rgba(someColor, 0.5), fallbackColor); \a\a';
 }
