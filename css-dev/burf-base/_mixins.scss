@@ -126,9 +126,6 @@
 	}
 }
 
-// cross-browser opacity
-// Usage: @include opacity(0.5)
-
 /// A mixin for opacity. Takes care of browser
 /// prefixes for you. You should always use this mixin
 /// when writing opacity rules to ensure you're
@@ -214,7 +211,30 @@
 	transition: $transitions;
 }
 
-// transform
+/// A mixin for transform. Takes care of browser
+/// prefixes for you. You should always use this mixin
+/// when writing transform rules to ensure you're
+/// compatible with the browsers we support.
+/// Supports multiple transforms, just use the same syntax
+/// as you would CSS.
+/// More info at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/transform
+/// @example
+/// 		Move a callout.
+/// 			.callout {
+///				@include transform( translateX( 100px ) );
+///			}
+/// 		Move and rotate a callout.
+/// 			.callout-selected {
+///				@include transform(
+///					translateX( 100px )
+///					translateY( 20px )
+///					rotate( 20deg )
+///				);
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
 @mixin transform( $transforms ) {
 	-webkit-transform: $transforms;
 	-moz-transform: $transforms;
