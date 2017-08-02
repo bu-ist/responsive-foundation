@@ -1,4 +1,11 @@
 module.exports = function(grunt) {
+	// Set up a versioned folder for SassDoc
+	var pkg = require('./package.json'),
+		 docsVersionFilePath = 'docs/' + pkg.version;
+
+	grunt.file.mkdir( docsVersionFilePath );
+
+	// Configure Grunt
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -6,13 +13,24 @@ module.exports = function(grunt) {
 		browserSync: {
 			docs: {
 				bsFiles: {
-					src : ['docs/*.html', 'docs/css/*.css', 'docs/js/*.js']
+					src : [
+						docsVersionFilePath + '/css/*.css',
+						docsVersionFilePath + '/*.html'
+					]
 				},
 				options: {
 					watchTask: true,
 					server: {
-						baseDir: './docs'
-					}
+						baseDir: docsVersionFilePath
+					},
+					plugins: [
+						{
+						module: "bs-html-injector",
+							options: {
+								files: docsVersionFilePath + "/*.html"
+							}
+						}
+					]
 				}
 			}
 		},
@@ -41,7 +59,11 @@ module.exports = function(grunt) {
 			docs: {
 				options: {
 					style: 'compressed',
-					loadPath: 'css-dev'
+					loadPath: [
+						'bower_components/normalize.scss/sass',
+						'bower_components/mathsass/dist/',
+						'css-dev'
+					],
 				},
 				files: {
 					'docs/css/docs.css': '_docs/css-dev/docs.scss',
