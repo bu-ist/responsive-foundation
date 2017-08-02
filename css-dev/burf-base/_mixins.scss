@@ -1,9 +1,27 @@
 // =================================================================
-// Mixins
+// Mixins & Extends
 // =================================================================
 
-// clearfix
-// Usage: @extend %clearfix;
+/// Clears floats on a container.
+/// Use when an element contains floated items and
+/// isn't getting the correct height because it doesn't
+/// recognize the height of the floated child items.
+/// Based on Nicolas Gallagher's micro clearfix.
+/// http://nicolasgallagher.com/micro-clearfix-hack/
+/// @example
+/// 		Clear degree items in a degree programs panel so
+/// 		the degree programs background is applied properly.
+/// 			.degree-programs {
+///				@extend %clearfix;
+///				background: $color-grayscale-0;
+///			}
+///
+/// 			.degree-item {
+///				@extend %col-md-quarter;
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
 
 %clearfix {
 	&::after {
