@@ -726,15 +726,15 @@
 		$selector: if( $pseudo == 'both', '&:before,&:after', '&:#{$pseudo}' );
 
 		#{$selector} {
+			-webkit-backface-visibility: hidden; // for Chrome Windows
 			background: inherit;
-			content: '';
+			content: "";
 			display: block;
 			height: 50%;
 			left: 0;
 			position: absolute;
 			right: 0;
 			z-index: -1;
-			-webkit-backface-visibility: hidden; // for Chrome Windows
 		}
 
 		@if $pseudo == 'before' {
