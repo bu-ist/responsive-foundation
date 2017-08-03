@@ -110,6 +110,7 @@ module.exports = function(grunt) {
 				//config: 'sassdoc-config.json',
 				dest: docsVersionFilePath
 			},
+			basePath: 'https://github.com/bu-ist/responsive-foundation/tree/' + pkg.version + '/css-dev'
 		}
 	});
 
