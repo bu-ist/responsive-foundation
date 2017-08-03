@@ -2,6 +2,7 @@
 
 ## 2.0.0-dev
 
+* Adds a new angles mixin [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/94)
 * Adds utility classes for quick prototyping: `u-visually-hidden`,
 `u-clearfix`, `u-hide-text`, `u-hide`, `u-show` [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/93)
 * Change font name from "Benton" to "Benton-Sans" to align with CDN and fix
