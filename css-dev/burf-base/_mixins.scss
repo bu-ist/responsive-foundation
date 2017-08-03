@@ -23,7 +23,8 @@
 /// @access public
 /// @since 1.0.0
 
-%clearfix {
+%clearfix,
+.u-clearfix {
 	&::after {
 		display: table;
 		clear: both;
@@ -553,7 +554,8 @@
 /// @access public
 /// @since 1.0.0
 
-%hide-text {
+%hide-text,
+.u-hide-text {
 	overflow: hidden;
 	text-indent: 100%;
 	white-space: nowrap;
@@ -575,7 +577,8 @@
 /// @access public
 /// @since 1.0.0
 
-%visually-hidden {
+%visually-hidden,
+.u-visually-hidden {
 	border: 0;
 	clip: rect( 0, 0, 0, 0 ); // Deprecated. Remove when clip-path support is better.
 	clip-path: inset( 50% );
@@ -606,6 +609,32 @@
 	overflow: visible;
 	position: static;
 	width: auto;
+}
+
+/// A class for developers to use to quickly prototype filtering.
+/// Hides an item completely. Do not use in production code.
+/// Never override this class in your CSS. Instead, attach the
+/// final show/hide animations to the CSS class you decide to use
+/// for that element.
+/// @group mixins
+/// @access public
+/// @since 2.0.0
+
+.u-hide {
+	display: none;
+}
+
+/// A class for developers to use to quickly prototype filtering.
+/// Shows an item. Do not use in production code.
+/// Never override this class in your CSS. Instead, attach the
+/// final show/hide animations to the CSS class you decide to use
+/// for that element.
+/// @group mixins
+/// @access public
+/// @since 2.0.0
+
+.u-show {
+	display: block;
 }
 
 /// A safe way to including responsive styles on old browers which
