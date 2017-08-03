@@ -26,6 +26,7 @@
   ],
   "dependencies": {
     "mathsass": "~0.9.5",
-    "normalize.scss": "~7.0.0"
+    "normalize.scss": "~7.0.0",
+    "sassdoc-theme-budocs": "git@github.com:ashleykolodziej/sassdoc-theme-budocs.git#master"
   }
 }
