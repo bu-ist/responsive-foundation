@@ -10,6 +10,15 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
+		bower: {
+			install: {
+				options: {
+					targetDir: 'bower_components',
+					verbose: true,
+					copy: false
+				}
+			}
+		},
 		browserSync: {
 			current: {
 				bsFiles: {
@@ -158,6 +167,7 @@ module.exports = function(grunt) {
 	});
 
 	grunt.loadNpmTasks('grunt-browser-sync');
+	grunt.loadNpmTasks('grunt-bower-task');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-sass');
@@ -166,7 +176,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-sassdoc');
 	grunt.loadNpmTasks('grunt-version');
 
-	grunt.registerTask('build', ['sassdoc']);
+	grunt.registerTask('build', ['bower:install', 'sassdoc']);
 	grunt.registerTask('deploy', ['build', 'gh-pages']);
 	grunt.registerTask('serve', ['build', 'browserSync:current', 'watch']);
 	grunt.registerTask('previewall', ['build', 'browserSync:all', 'watch']);
