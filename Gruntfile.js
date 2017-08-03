@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 
 		browserSync: {
-			docs: {
+			current: {
 				bsFiles: {
 					src : [
 						docsVersionFilePath + '/css/*.css',
@@ -32,6 +32,17 @@ module.exports = function(grunt) {
 						}
 					]
 				}
+			},
+			all: {
+				bsFiles: {
+					src : ['docs/*.html', 'docs/css/*.css', 'docs/js/*.js']
+				},
+				options: {
+					watchTask: true,
+					server: {
+						baseDir: './docs'
+					}
+				}
 			}
 		},
 		concat: {
@@ -42,6 +53,12 @@ module.exports = function(grunt) {
 			}
 		},
 		copy: {
+			alpha: {
+				expand: true,
+				cwd: '_docs/0.1.0',
+				src: ['**/*.html', 'vendor/**/*'],
+				dest: 'docs/0.1.0'
+			},
 			docs: {
 				expand: true,
 				cwd: '_docs',
@@ -145,7 +162,8 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('build', ['sassdoc']);
 	grunt.registerTask('deploy', ['build', 'gh-pages']);
-	grunt.registerTask('serve', ['build', 'browserSync', 'watch']);
+	grunt.registerTask('serve', ['build', 'browserSync:current', 'watch']);
+	grunt.registerTask('previewall', ['build', 'browserSync:all', 'watch']);
 
 	grunt.registerTask('default', ['serve']);
 
