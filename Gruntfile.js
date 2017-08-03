@@ -107,11 +107,13 @@ module.exports = function(grunt) {
 		sassdoc: {
 			src: 'css-dev/**/*.scss',
 			options: {
-				//config: 'sassdoc-config.json',
+				display: {
+					access: ['public'],
+				},
 				dest: docsVersionFilePath,
-				theme: 'bower_components/sassdoc-theme-budocs'
+				theme: 'bower_components/sassdoc-theme-budocs',
+				basePath: 'https://github.com/bu-ist/responsive-foundation/tree/' + pkg.version + '/css-dev'
 			},
-			//basePath: 'https://github.com/bu-ist/responsive-foundation/tree/' + pkg.version + '/css-dev'
 		}
 	});
 
