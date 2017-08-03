@@ -4,7 +4,7 @@
 
 /// Controls the background color of the banner container.
 /// By default, this only affects the window width banner container.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 1.0.0
 
@@ -15,7 +15,7 @@ $color-banner-container:                    $color-grayscale-f0 !default;
 // =================================================================
 
 /// General styles for all content banner positions.
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 1.0.0
 
@@ -31,7 +31,7 @@ $color-banner-container:                    $color-grayscale-f0 !default;
 
 /// Styles for the window-width content banner position.
 /// Sits outside of `.content-container`.
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 1.0.0
 
@@ -45,7 +45,7 @@ $color-banner-container:                    $color-grayscale-f0 !default;
 /// Styles for the page-width content banner position.
 /// Sits directly inside `.content-container` and just
 /// outside of `.content-area`.
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 1.0.0
 
@@ -67,7 +67,7 @@ $color-banner-container:                    $color-grayscale-f0 !default;
 
 /// Styles for the content-width content banner position.
 /// Sits directly inside `.content-area`.
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 1.0.0
 

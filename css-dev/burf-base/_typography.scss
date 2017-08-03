@@ -4,7 +4,7 @@
 
 /// A sans-serif font to use sitewide.
 /// By default, this affects the site footer and label text in profiles.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -12,7 +12,7 @@ $font-family-sans-serif:                    "Benton", "Helvetica", sans-serif !d
 
 /// A monospace font to use sitewide.
 /// By default, this affects the `<code>` and `<pre>` elements.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -20,7 +20,7 @@ $font-family-monospace:                     "Consolas", "Liberation Mono", Couri
 
 /// A font to use for headings.
 /// Affects `<h1>`, `<h2>`, etc.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -28,28 +28,28 @@ $font-family-heading:                       $font-family-sans-serif !default;
 
 /// A color to use for headings.
 /// Affects `<h1>`, `<h2>`, etc.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
 $color-heading:                             $color-grayscale-0 !default;
 
 /// A font to use for small tags within headings.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
 $color-heading-small:                       $color-grayscale-9 !default;
 
 /// Base margin for HTML tags. Primarily affects `<p>`.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
 $font-margin-base:                          0 0 1.5em 0 !default;
 
 /// Base color for links.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -58,7 +58,7 @@ $color-link:                                #0f69d7 !default;
 /// Base color for visited links.
 /// Must be different from `$color-link` for accessibility
 /// reasons.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -67,70 +67,70 @@ $color-link-visited:                        #7337af !default;
 /// Base color for active links.
 /// Must be different from `$color-link` for accessibility
 /// reasons.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
 $color-link-active:                         $color-grayscale-0 !default;
 
 /// Base padding for the `<code>` tag.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
 $font-padding-code:                         0.2em 0.4em !default;
 
 /// Base margin for the `<code>` tag.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
 $font-margin-code:                          $margin 0 !default;
 
 /// Text color to use for the `<code>` tag.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
 $color-code:                                $color-grayscale-7 !default;
 
 /// Background color to use for the `<code>` tag.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
 $color-code-bg:                             $color-grayscale-f5 !default;
 
 /// Base border for the `<code>` tag.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 2.0.0
 
 $border-code:                               $border !default;
 
 /// Base margin for the `<blockquote>` tag.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
 $font-margin-blockquote:                    1em $margin-large !default;
 
 /// Base margin for `<ul>` and `<ol>` tags.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
 $font-margin-list:                          $font-margin-base !default;
 
 /// Base padding for `<ul>` and `<ol>` tags.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
 $font-padding-list:                         0 0 0 40px !default;
 
 /// Base margin for `<dd>` tags.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -140,14 +140,14 @@ $font-margin-dd:                            0 0 0 $margin !default;
 // -----------------------------------------------------------------
 
 /// The default font for body copy.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
 $font-family-base:                          $font-family-sans-serif !default;
 
 /// A serif font to use. This variable is not used by default.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -161,7 +161,7 @@ $font-family-serif:                         "TiemposText", Georgia, serif !defau
 // -----------------------------------------------------------------
 
 /// Controls base styling for all links.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -196,7 +196,7 @@ a {
 /// If you just want to give your top-level headings more contrast, it's
 /// better to adjust `$heading-growth-rate` up, which will weigh the font size distribution
 /// more heavily towards the top.
-/// @group global
+/// @group 01-config
 /// @access private
 /// @since 2.0.0
 
@@ -208,7 +208,7 @@ $_depth-headings: 6;
 /// to preserve the visual hierarchy - think uppercasing, color, stuff like that.
 /// This directly affects the `<h6>` tag. It indirectly affects all other heading
 /// font sizes as well by serving as the lower limit to our scale.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 2.0.0
 
@@ -220,7 +220,7 @@ $min-size-headings: $font-size-base;
 /// test it against deeply nested pages, which tend to have longer page titles.
 /// It indirectly affects all other heading  font sizes as well by serving as the
 /// upper limit to our scale.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 2.0.0
 
@@ -232,7 +232,7 @@ $max-size-headings: 55px;
 /// test it against deeply nested pages, which tend to have longer page titles.
 /// It indirectly affects all other heading  font sizes as well by serving as the
 /// upper limit to our scale.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 2.0.0
 
@@ -243,7 +243,7 @@ $max-size-headings-mobile: 36px;
 /// all other heading  font sizes as well by serving as the lower limit to our scale.
 /// In typography, the relationship between font-size and line-height is that larger
 /// font-sizes demand lower line-height values to preserve vertical rhythm.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 2.0.0
 
@@ -254,7 +254,7 @@ $min-line-height: 1.15;
 /// all other heading  font sizes as well by serving as the upper limit to our scale.
 /// Because we set the `<h6>` tag to be the same size as our body copy by default,
 /// it also gets the same line-height ratio by default.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 2.0.0
 
@@ -277,7 +277,7 @@ $heading-growth-rate: 3.5;
 /// @return {int} - A number to multiply by in an exponential equation to equal the
 /// maximum value on the last value calculated. Useful to calculate `$scale` for use
 /// in the `calc-size` function.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 2.0.0
 /// @see calc-size
@@ -306,7 +306,7 @@ $heading-growth-rate: 3.5;
 /// @param {int} $base - A value to divide by in order to return a scaled value. The units on this
 /// value need to match `$min` - that is, if `$min` is in pixels, this needs to be in pixels as well.
 /// @return {int} - A unitless size.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 2.0.0
 /// @requires pow - an exponential function in the mathsass library
@@ -331,7 +331,7 @@ $heading-growth-rate: 3.5;
 /// These values are used to build the font-size placeholders. You can override invidividual
 /// values and create your own custom values and placeholders by redeclaring values you want
 /// to override and adding new values in your own `$font-styles-theme` map.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 2.0.0
 
@@ -351,7 +351,7 @@ $font-styles: (
 /// The multiplier needed to calculate the scale between minimum and maximum
 /// font sizes on headings. This value is dependent on the heading minimum, maximum,
 /// and growth rate; it should never be changed directly. Change those instead.
-/// @group global
+/// @group 01-config
 /// @access private
 /// @since 2.0.0
 
@@ -360,7 +360,7 @@ $_heading-size-scale: calc-scale( $min-size-headings, $max-size-headings, $_dept
 /// The multiplier needed to calculate the scale between minimum and maximum
 /// font sizes on headings on mobile. This value is dependent on the heading minimum, maximum,
 /// and growth rate; it should never be changed directly. Change those instead.
-/// @group global
+/// @group 01-config
 /// @access private
 /// @since 2.0.0
 
@@ -369,7 +369,7 @@ $_heading-size-scale-mobile: calc-scale( $min-size-headings, $max-size-headings-
 /// The multiplier needed to calculate the scale between minimum and maximum
 /// line heights on headings. This value is dependent on the heading minimum, maximum,
 /// and growth rate; it should never be changed directly. Change those instead.
-/// @group global
+/// @group 01-config
 /// @access private
 /// @since 2.0.0
 
@@ -377,7 +377,7 @@ $heading-lh-scale: calc-scale( $min-line-height, $max-line-height, $_depth-headi
 
 /// A simple counter variable to help keep track of how many headings we have left
 /// to calculate.
-/// @group global
+/// @group 01-config
 /// @access private
 /// @since 2.0.0
 
@@ -455,7 +455,7 @@ $_h: $_depth-headings;
 }
 
 /// Controls base styles for all heading tags.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -477,7 +477,7 @@ $_h: $_depth-headings;
 }
 
 /// Styles for all h1 tags.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -487,7 +487,7 @@ h1 {
 }
 
 /// Styles for all h2 tags.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -497,7 +497,7 @@ h2 {
 }
 
 /// Styles for all h3 tags.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -507,7 +507,7 @@ h3 {
 }
 
 /// Styles for all h4 tags.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -517,7 +517,7 @@ h4 {
 }
 
 /// Styles for all h5 tags.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -527,7 +527,7 @@ h5 {
 }
 
 /// Styles for all h6 tags.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -542,7 +542,7 @@ abbr[title] {
 }
 
 /// Styles for all blockquotes.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -551,7 +551,7 @@ blockquote {
 }
 
 /// Styles for all paragraphs and preformatted content.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -561,7 +561,7 @@ pre {
 }
 
 /// Styles for all preformatted and code content.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -582,7 +582,7 @@ samp {
 // -----------------------------------------------------------------
 
 /// Styles for all lists and list-like content.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -594,7 +594,7 @@ ul {
 }
 
 /// Styles for definition stuff.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -603,7 +603,7 @@ dd {
 }
 
 /// Styles menus and lists.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -614,7 +614,7 @@ ul {
 }
 
 /// Styles for navigation.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -638,7 +638,7 @@ ol ol {
 // -----------------------------------------------------------------
 
 /// Styles for code element.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -651,7 +651,7 @@ code {
 
 /// Styles for the code wrapper class.
 /// Adding this class around a code element enables scrolling on mobile devices.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 

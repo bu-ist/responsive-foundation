@@ -31,14 +31,14 @@ $border-footbar:                           $border !default;
 $color-footbar-container-bg:               $color-footbar-bg !default;
 
 /// Controls the color of links in widgets in the footbar.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 1.0.0
 
 $color-footbar-widget-link:                $color-link !default;
 
 /// Controls the color of links in widgets in the footbar when you hover.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 1.0.0
 
@@ -81,7 +81,7 @@ $color-site-footer-link-hover:					 $color-grayscale-f !default;
 
 /// Sets the number of supported widgets in the footbar.
 /// Matches the number of columns in the theme by default.
-/// @group grid
+/// @group 05-grid
 /// @access public
 /// @since 1.2.0
 
@@ -92,7 +92,7 @@ $number-widgets-footbar: 						 $number-columns !default;
 // =================================================================
 
 /// Controls styling for the footbar.
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 1.0.0
 
@@ -114,7 +114,7 @@ $number-widgets-footbar: 						 $number-columns !default;
 }
 
 /// The number of grid columns a widget should take up, in the footbar.
-/// @group layout
+/// @group 08-layout
 /// @access private
 /// @since 1.0.0
 
@@ -122,7 +122,7 @@ $_footbar-widget-width: $grid-number-columns / $number-widgets-footbar;
 
 /// Controls styling for the footbar container and width of widgets inside.
 /// Often used to put a maximum width on the footbar without affecting the background.
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 1.0.0
 
@@ -171,7 +171,7 @@ body {
 }
 
 /// Controls styling for the site footer - branding, address, and social links.
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 1.0.0
 
@@ -218,7 +218,7 @@ body {
 }
 
 /// A helper placeholder for listing links in an inline style.
-/// @group layout
+/// @group 08-layout
 /// @access private
 /// @since 1.0.0
 
@@ -234,7 +234,7 @@ body {
 
 /// Styles the social media links menu in the footer based on
 /// the content around it.
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 1.0.0
 
@@ -333,7 +333,7 @@ body {
 }
 
 /// Styles the container which holds branding assets in the site footer.
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 2.0.0
 
@@ -368,7 +368,7 @@ body {
 }
 
 /// Styles the disclaimer, which shows in the site footer.
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 1.0.0
 
@@ -378,7 +378,7 @@ body {
 
 /// Styles the container which holds menus (footer links and social) in the site footer
 /// based on the content around it.
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 2.0.0
 
@@ -407,7 +407,7 @@ body {
 
 /// Styles the container which holds footer links
 /// based on the content around it.
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 1.0.0
 
@@ -433,7 +433,7 @@ body {
 /// based on the content around it.
 /// Note: this is slated to be controlled by the branding plugin
 /// in a future release.
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 1.0.0
 

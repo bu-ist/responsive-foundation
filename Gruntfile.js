@@ -112,7 +112,24 @@ module.exports = function(grunt) {
 				},
 				dest: docsVersionFilePath,
 				theme: 'bower_components/sassdoc-theme-budocs',
-				basePath: 'https://github.com/bu-ist/responsive-foundation/tree/' + pkg.version + '/css-dev'
+				basePath: 'https://github.com/bu-ist/responsive-foundation/tree/' + pkg.version + '/css-dev',
+				groups: {
+					'01-config': 'Global Configuration',
+					'02-mixins': 'Helpers',
+					'03-icons': 'Icons',
+					'04-typography': 'Typography',
+					'05-grid': 'Grid',
+					'06-navigation': 'Navigation',
+					'07-branding': 'Branding',
+					'08-layout': 'Layout',
+					'09-content': 'Content',
+					'10-widgets': 'Widgets',
+					'11-forms': 'Forms',
+					'12-news': 'News',
+					'13-calendar': 'Calendar',
+					'14-profiles': 'Profiles',
+					'wp-admin': 'WordPress Admin',
+				},
 			},
 		}
 	});

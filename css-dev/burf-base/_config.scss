@@ -7,7 +7,7 @@
 /// order they are declared so that desktop styles will always
 /// override mobile styles, regardless of screen size.
 /// This is mostly useful for browsers which do not support media queries.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -15,7 +15,7 @@ $mqs: true !default;
 
 /// The window width at which extra small styles will begin.
 /// By default, this is set to target most large phones.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 1.2.0
 
@@ -24,7 +24,7 @@ $xs:                                       500px !default;
 /// The window width at which small styles will begin.
 /// By default, this is set to target most small tablets
 /// and iPads in vertical orientation.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 1.2.0
 
@@ -33,7 +33,7 @@ $sm:                                       768px !default;
 /// The window width at which medium styles will begin.
 /// By default, this is set to target older desktops
 /// and iPads in horizontal orientation.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 1.2.0
 
@@ -41,7 +41,7 @@ $md:                                       992px !default;
 
 /// The window width at which large styles will begin.
 /// By default, this is set to target most laptops.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 1.2.0
 
@@ -49,7 +49,7 @@ $lg:                                       1200px !default;
 
 /// The window width at which extra large styles will begin.
 /// By default, this is set to target most modern desktops.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 1.2.0
 
@@ -59,28 +59,28 @@ $xl:                                       1500px !default;
 /// Because older versions of IE don't support media queries,
 /// we use this width to target the most likely browser width
 /// an older IE user will be viewing the site in.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 2.0.0
 
 $lte-ie8-target-width:                     $lg !default;
 
 /// The container width for the small (sm) breakpoint.
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 1.2.0
 
 $container-sm:                             750px !default;
 
 /// The container width for the medium (md) breakpoint.
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 1.2.0
 
 $container-md:                             970px !default;
 
 /// The container width for the large (lg) breakpoint.
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 1.2.0
 
@@ -98,7 +98,7 @@ $container-lg:                             1170px !default;
 
 /// The lowest priority z-index possible.
 /// Used for content by default.
-/// @group config
+/// @group 01-config
 /// @access private
 /// @since 1.0.0
 
@@ -107,7 +107,7 @@ $z-index-1:                                 100;
 /// A low priority z-index for use in themes.
 /// Can be used for items that should overlap content
 /// but still sit below stated content.
-/// @group config
+/// @group 01-config
 /// @access private
 /// @since 1.0.0
 
@@ -115,7 +115,7 @@ $z-index-2:                                 200;
 
 /// A low priority z-index for use in themes.
 /// Used for content with multiple states by default.
-/// @group config
+/// @group 01-config
 /// @access private
 /// @since 1.0.0
 
@@ -124,7 +124,7 @@ $z-index-3:                                 300;
 /// A medium priority z-index for use in themes.
 /// Can be used for items that should sit above
 /// stated content but below panel-like content.
-/// @group config
+/// @group 01-config
 /// @access private
 /// @since 1.0.0
 
@@ -132,7 +132,7 @@ $z-index-4:                                 400;
 
 /// A medium priority z-index for use in themes.
 /// Used for panel-like content by default.
-/// @group config
+/// @group 01-config
 /// @access private
 /// @since 1.0.0
 
@@ -141,7 +141,7 @@ $z-index-5:                                 500;
 /// A medium priority z-index for use in themes.
 /// Can be used for items that should sit above
 /// panel-like content but below the primary navigation.
-/// @group config
+/// @group 01-config
 /// @access private
 /// @since 1.0.0
 
@@ -149,7 +149,7 @@ $z-index-6:                                 600;
 
 /// A high priority z-index for use in themes.
 /// Used for the primary navigation by default.
-/// @group config
+/// @group 01-config
 /// @access private
 /// @since 1.0.0
 
@@ -158,7 +158,7 @@ $z-index-7:                                 700;
 /// A high priority z-index for use in themes.
 /// Can be used for items that should sit above
 /// primary navigation but below overlays.
-/// @group config
+/// @group 01-config
 /// @access private
 /// @since 1.0.0
 
@@ -166,7 +166,7 @@ $z-index-8:                                 800;
 
 /// The highest priority z-index for use in themes.
 /// Used for overlays and lightboxes by default.
-/// @group config
+/// @group 01-config
 /// @access private
 /// @since 1.0.0
 
@@ -174,7 +174,7 @@ $z-index-9:                                 900;
 
 /// A z-index which overrides all other z-indexes.
 /// Strictly for development and debugging.
-/// @group config
+/// @group 01-config
 /// @access private
 /// @since 1.0.0
 
@@ -200,7 +200,7 @@ $z-index-10:                                1000;
 ///					z-index: $z-index-content + 1;
 ///				}
 ///			}
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 2.0.0
 
@@ -228,7 +228,7 @@ $z-index-content:                          $z-index-1 !default;
 ///			.form-state-end {
 ///				z-index: $z-index-states - 2;
 ///			}
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 2.0.0
 
@@ -252,7 +252,7 @@ $z-index-states:                           $z-index-3 !default;
 ///			.degree-subfilter {
 ///				z-index: $z-index-panels - 1;
 ///			}
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 2.0.0
 
@@ -266,7 +266,7 @@ $z-index-panels:                           $z-index-5 !default;
 /// on your site. Use `+` or `-` with it to set a z-index relative
 /// to the primary navigation. Change this variable to change the
 /// stacking order of the primary navigation.
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 2.0.0
 
@@ -281,7 +281,7 @@ $z-index-primarynav:                       $z-index-7 !default;
 /// stacking order of all overlays. (You may want to do this if you
 /// have a fixed sticky navigation so that the sticky navigation isn't
 /// always on top, even with lightboxes.)
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 2.0.0
 
@@ -290,7 +290,7 @@ $z-index-overlays:                         $z-index-9 !default;
 /// A z-index that will override all other z-indexes for development
 /// and debugging purposes only. Avoid where possible and do not commit
 /// to production code.
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 2.0.0
 
@@ -311,7 +311,7 @@ $z-index-dev:                              $z-index-10 !default;
 /// will be a multiple of this, smaller margins will be a
 /// fraction of this, except in cases of UI or typography
 /// where margin should be related to font size.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 2.0.0
 
@@ -321,7 +321,7 @@ $margin:                                    30px !default;
 /// This affects floated content in the WordPress editor,
 /// and would be good for any sort of floated content you
 /// may add in a custom theme, like a floated callout.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 2.0.0
 
@@ -330,7 +330,7 @@ $margin-small:                              $margin / 2 !default;
 /// The base margin to use for large spacing sitewide.
 /// This affects elements like the banner, section tags,
 /// and any other larger elements.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 2.0.0
 
@@ -340,7 +340,7 @@ $margin-large:                              $margin * 2 !default;
 /// All padding is based on this number. Larger padding
 /// will be a multiple of this, smaller padding will be a
 /// fraction of this.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 2.0.0
 
@@ -348,7 +348,7 @@ $padding:                                   30px !default;
 
 /// A padding variable for situations where you need a
 /// smaller amount of padding.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 2.0.0
 
@@ -356,7 +356,7 @@ $padding-small:                              $padding / 2 !default;
 
 /// A padding variable for situations where you need a
 /// larger amount of padding.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 2.0.0
 
@@ -375,7 +375,7 @@ $padding-large:                              $padding * 2 !default;
 /// A color to tint your grays with.
 /// Affects grayscale variables. Try cool colors, like blues.
 /// Accepts any valid color.
-/// @group config
+/// @group 01-config
 /// @type color
 /// @access public
 /// @since 2.0.0
@@ -384,7 +384,7 @@ $tint-hue: none !default;
 
 /// The amount to tint your grays, from 0-100%.
 /// This will affect the maximum saturation of your tint.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 2.0.0
 
@@ -397,7 +397,7 @@ $tint-saturation: 15% !default;
 /// which is the color to use as a tint, and `$tint-saturation`,
 /// which is the maximum saturation of that tint. More saturation
 /// happens with dark colors, less or none with very light colors.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 2.0.0
 
@@ -415,7 +415,7 @@ $tint-saturation: 15% !default;
 /// A grayscale variable that takes advantage of the tint system.
 /// Produces a plain black.
 /// Overriding this variable is not supported.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -424,7 +424,7 @@ $color-grayscale-0:                        tint-gray( #000 );
 /// A grayscale variable that takes advantage of the tint system.
 /// Produces a very dark gray suitable for text.
 /// Overriding this variable is not supported.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -433,7 +433,7 @@ $color-grayscale-1:                        tint-gray( #111 );
 /// A grayscale variable that takes advantage of the tint system.
 /// Produces a very dark gray suitable for text.
 /// Overriding this variable is not supported.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -442,7 +442,7 @@ $color-grayscale-2:                        tint-gray( #222 );
 /// A grayscale variable that takes advantage of the tint system.
 /// Produces a dark gray suitable for text or backgrounds.
 /// Overriding this variable is not supported.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -451,7 +451,7 @@ $color-grayscale-3:                        tint-gray( #333 );
 /// A grayscale variable that takes advantage of the tint system.
 /// Produces a dark gray suitable for backgrounds or metadata.
 /// Overriding this variable is not supported.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -460,7 +460,7 @@ $color-grayscale-4:                        tint-gray( #444 );
 /// A grayscale variable that takes advantage of the tint system.
 /// Produces a dark gray suitable for backgrounds.
 /// Overriding this variable is not supported.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -469,7 +469,7 @@ $color-grayscale-5:                        tint-gray( #555 );
 /// A grayscale variable that takes advantage of the tint system.
 /// Produces a middle gray suitable for backgrounds or large typography.
 /// Overriding this variable is not supported.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -478,7 +478,7 @@ $color-grayscale-6:                        tint-gray( #666 );
 /// A grayscale variable that takes advantage of the tint system.
 /// Produces a middle gray suitable for backgrounds or large typography.
 /// Overriding this variable is not supported.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -487,7 +487,7 @@ $color-grayscale-7:                        tint-gray( #777 );
 /// A grayscale variable that takes advantage of the tint system.
 /// Produces a middle gray suitable for backgrounds or large typography.
 /// Overriding this variable is not supported.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -496,7 +496,7 @@ $color-grayscale-8:                        tint-gray( #888 );
 /// A grayscale variable that takes advantage of the tint system.
 /// Produces a middle gray suitable for backgrounds or large typography.
 /// Overriding this variable is not supported.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -505,7 +505,7 @@ $color-grayscale-9:                        tint-gray( #999 );
 /// A grayscale variable that takes advantage of the tint system.
 /// Produces a middle gray suitable for backgrounds.
 /// Overriding this variable is not supported.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -514,7 +514,7 @@ $color-grayscale-a:                        tint-gray( #aaa );
 /// A grayscale variable that takes advantage of the tint system.
 /// Produces a light gray suitable for backgrounds.
 /// Overriding this variable is not supported.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -523,7 +523,7 @@ $color-grayscale-b:                        tint-gray( #bbb );
 /// A grayscale variable that takes advantage of the tint system.
 /// Produces a light gray suitable for backgrounds, borders, and metadata.
 /// Overriding this variable is not supported.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -532,7 +532,7 @@ $color-grayscale-c:                        tint-gray( #ccc );
 /// A grayscale variable that takes advantage of the tint system.
 /// Produces a light gray suitable for backgrounds.
 /// Overriding this variable is not supported.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -541,7 +541,7 @@ $color-grayscale-d:                        tint-gray( #ddd );
 /// A grayscale variable that takes advantage of the tint system.
 /// Produces a light gray suitable for backgrounds.
 /// Overriding this variable is not supported.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -550,7 +550,7 @@ $color-grayscale-e:                        tint-gray( #eee );
 /// A grayscale variable that takes advantage of the tint system.
 /// Produces a near-white gray suitable for backgrounds.
 /// Overriding this variable is not supported.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -559,7 +559,7 @@ $color-grayscale-f0:                       tint-gray( #f0f0f0 );
 /// A grayscale variable that takes advantage of the tint system.
 /// Produces a near-white gray suitable for backgrounds.
 /// Overriding this variable is not supported.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -568,7 +568,7 @@ $color-grayscale-f5:                       tint-gray( #f5f5f5 );
 /// A grayscale variable that takes advantage of the tint system.
 /// Produces a plain white.
 /// Overriding this variable is not supported.
-/// @group config
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -588,7 +588,7 @@ $color-grayscale-f:                        tint-gray( #fff );
 // -----------------------------------------------------------------
 
 /// The default border style.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 1.2.0
 

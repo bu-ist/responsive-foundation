@@ -5,7 +5,7 @@
 /// The number of columns you would like in your grid.
 /// To use styles in burf-theme, you must set this to a number that
 /// is divisible by 2, 3, and 4.
-/// @group grid
+/// @group 05-grid
 /// @access public
 /// @since 1.2.0
 
@@ -16,7 +16,7 @@ $grid-number-columns:                      12 !default;
 /// By default, this will attempt to reproduce the default margin on a
 /// large screen in a full-width container. If you plan to use grids include
 /// a smaller container, you may need to adjust this.
-/// @group grid
+/// @group 05-grid
 /// @access public
 /// @since 1.2.0
 
@@ -24,7 +24,7 @@ $grid-margin-width:                        ( $margin / $container-lg ) * 100 !de
 
 /// Choose which breakpoints you want grid classes to support.
 /// Small (sm) and medium (md) are required, everything else is optional.
-/// @group grid
+/// @group 05-grid
 /// @access public
 /// @since 1.2.0
 
@@ -38,7 +38,7 @@ $grid-breakpoints: (
 /// Determines which classes to calculate and print for the theme.
 /// By default, all are on so clients can freely use these in custom CSS.
 /// However, you may choose to only support the ones you like in a custom theme.
-/// @group grid
+/// @group 05-grid
 /// @access public
 /// @since 2.0.0
 
@@ -52,14 +52,14 @@ $grid-supports: (
 /// Choose whether or not to print the numeric grid classes (.col-sm-5). Optional.
 /// Note that friendly placeholders (.col-quarter, .col-sm-quarter) will always print.
 /// You may wish to disable these on custom themes.
-/// @group grid
+/// @group 05-grid
 /// @access public
 /// @since 1.2.0
 
 $grid-classes:										 true !default;
 
 /// The amount of padding to put on the content container.
-/// @group grid
+/// @group 05-grid
 /// @access public
 /// @since 1.0.0
 
@@ -67,7 +67,7 @@ $grid-container-padding:                   $padding-small !default;
 
 /// The amount of padding to put on the content container
 /// on desktop.
-/// @group grid
+/// @group 05-grid
 /// @access public
 /// @since 1.0.0
 
@@ -76,7 +76,7 @@ $grid-container-padding-desktop:           $padding-large $padding !default;
 /// Controls the margin on rows in the grid.
 /// By default, this will attempt to "pull" grid items out
 /// by the same amount as their margin, Boostrap-style.
-/// @group grid
+/// @group 05-grid
 /// @access public
 /// @since 1.0.0
 
@@ -88,7 +88,7 @@ $grid-row-margin:                          0 -#{$grid-container-padding} !defaul
 /// If you need to use the padding for something else, like
 /// if you have a background color on your grid item,
 /// use the margin classes.
-/// @group grid
+/// @group 05-grid
 /// @access public
 /// @since 1.0.0
 
@@ -99,7 +99,7 @@ $grid-column-padding:                      0 $padding !default;
 // =================================================================
 
 /// Base styles for all wrapper elements.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 1.2.0
 
@@ -112,7 +112,7 @@ $grid-column-padding:                      0 $padding !default;
 /// `.content-container` for some reason - such as on a landing
 /// page where you are overriding that class to use the full width
 /// of the screen.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 1.2.0
 
@@ -139,7 +139,7 @@ $grid-column-padding:                      0 $padding !default;
 /// Base styles for containers that hold grid elements.
 /// A negative margin is included to counteract the grid item
 /// margins.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 1.2.0
 
@@ -154,7 +154,7 @@ $grid-column-padding:                      0 $padding !default;
 
 /// Base styles for children of a row.
 /// Usually used for grid items.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 1.2.0
 
@@ -166,7 +166,7 @@ $grid-column-padding:                      0 $padding !default;
 /// older browsers.
 /// Base styles for a container whose children should
 /// be equal heights.
-/// @group utilities
+/// @group 02-mixins
 /// @access public
 /// @since 1.2.0
 
@@ -181,7 +181,7 @@ $grid-column-padding:                      0 $padding !default;
 /// even if the actual content is different heights.
 /// If you need padding on the bottom of the child items, you might have to adjust
 /// the margin-bottom to be lower.
-/// @group utilities
+/// @group 02-mixins
 /// @access public
 /// @since 1.2.0
 
@@ -198,7 +198,7 @@ $grid-column-padding:                      0 $padding !default;
 /// Check https://caniuse.com/#search=flexbox for browser
 /// support. You may want to provide a min-height on a
 /// case by case basis as a fallback.
-/// @group utilities
+/// @group 02-mixins
 /// @access public
 /// @since 2.0.0
 

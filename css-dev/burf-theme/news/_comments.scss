@@ -3,14 +3,14 @@
 // =================================================================
 
 /// Controls the amount of spacing between comment threads on a post.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
 $comment-margin:                           $margin !default;
 
 /// Controls the amount of spacing between comment threads on a post on mobile.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 2.0.0
 
@@ -18,105 +18,105 @@ $comment-margin-mobile:               		 $margin-small !default;
 
 /// Controls the amount of spacing between comments within a thread on desktop.
 /// By default, there is no margin between comments on mobile.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 2.0.0
 
 $comment-reply-margin:                     $margin-small !default;
 
 /// Controls the amount of space a reply comment is indented from the parent.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 2.0.0
 
 $comment-reply-depth:                      $margin-small !default;
 
 /// Controls the amount of space a reply comment is indented from the parent on mobile.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 2.0.0
 
 $comment-reply-depth-mobile:               $comment-reply-depth / 3 !default;
 
 /// Controls the border style between comments on a post.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
 $border-comment:                           $border !default;
 
 /// Controls the border width between comments on a post.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
 $border-width-comment:                      1px 1px 1px 5px !default;
 
 /// Controls the amount of spacing within comments.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
 $comment-padding:                           $padding-small !default;
 
 /// Controls the amount of spacing within comments on mobile.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
 $comment-padding-mobile:                           $padding-small !default;
 
 /// Controls the font family used for comments on a post.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
 $font-family-comment:                       $font-family-sans-serif !default;
 
 /// Controls the color of comments on a post.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
 $color-comments:                           $color-base !default;
 
 /// Controls the color of replies to comments on a post.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
 $color-comment-reply:                      $color-grayscale-8 !default;
 
 /// Controls the color of the author name in a comment.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
 $color-comment-author-name:                 $color-grayscale-0 !default;
 
 /// Controls the color of the "says" text after author name in a comment.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
 $color-comment-author-says:                     $color-grayscale-8 !default;
 
 /// Controls the background color of the comment submission form.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
 $color-comment-form-bg:                     $color-grayscale-f5 !default;
 
 /// Controls the border style on the comment submission form.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
 $border-comment-form:                       $border !default;
 
 /// Controls the border width on the comment submission form.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
@@ -127,7 +127,7 @@ $border-width-comment-form:                  3px !default;
 // =================================================================
 
 /// Controls styling for the comments section on posts.
-/// @group comments
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
@@ -143,7 +143,7 @@ $border-width-comment-form:                  3px !default;
 }
 
 /// Controls styling for comment threads on posts.
-/// @group comments
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
@@ -157,7 +157,7 @@ $border-width-comment-form:                  3px !default;
 }
 
 /// Controls styling for the comment container.
-/// @group comments
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
@@ -179,7 +179,7 @@ $border-width-comment-form:                  3px !default;
 }
 
 /// Controls styling for individual comments on posts.
-/// @group comments
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
@@ -204,7 +204,7 @@ $border-width-comment-form:                  3px !default;
 }
 
 /// Controls styling for the comment reply link.
-/// @group comments
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
@@ -214,7 +214,7 @@ $border-width-comment-form:                  3px !default;
 }
 
 /// Controls styling for the comment author.
-/// @group comments
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
@@ -224,7 +224,7 @@ $border-width-comment-form:                  3px !default;
 }
 
 /// Controls styling for the "says" text after comment author.
-/// @group comments
+/// @group 12-news
 /// @access public
 /// @since 2.0.0
 
@@ -237,7 +237,7 @@ $border-width-comment-form:                  3px !default;
 /// are often used as a means of communication, both officially and unofficially.
 /// Readers need to know how recent the last reliable update was should this happen.
 /// Disable or hide only with great caution, only using the `%visually-hidden` placeholder.
-/// @group comments
+/// @group 12-news
 /// @access public
 /// @since 2.0.0
 
@@ -254,7 +254,7 @@ $border-width-comment-form:                  3px !default;
 }
 
 /// Styles the container which holds the comment content.
-/// @group comments
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
@@ -267,7 +267,7 @@ $border-width-comment-form:                  3px !default;
 }
 
 /// Styles the comment form container.
-/// @group comments
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
@@ -304,7 +304,7 @@ $border-width-comment-form:                  3px !default;
 }
 
 /// Styles the comment form title.
-/// @group comments
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
@@ -313,7 +313,7 @@ $border-width-comment-form:                  3px !default;
 }
 
 /// Styles the container around the comment form submit button.
-/// @group comments
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
@@ -322,7 +322,7 @@ $border-width-comment-form:                  3px !default;
 }
 
 /// Styles "view guidelines" and other helper text in the comment form.
-/// @group comments
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
@@ -340,7 +340,7 @@ $border-width-comment-form:                  3px !default;
 }
 
 /// Styles the comment text area in the comments form.
-/// @group comments
+/// @group 12-news
 /// @access public
 /// @since 2.0.0
 
@@ -361,7 +361,7 @@ $border-width-comment-form:                  3px !default;
 }
 
 /// Styles the comment form submit button.
-/// @group comments
+/// @group 12-news
 /// @access public
 /// @since 2.0.0
 
@@ -375,7 +375,7 @@ $border-width-comment-form:                  3px !default;
 /// WordPress hides this on the comment form with an inline attribute when
 /// the comment is not a reply to another comment. To test this, hit the "Reply"
 /// link on any comment. You should be be able to see it.
-/// @group comments
+/// @group 12-news
 /// @access public
 /// @since 2.0.0
 

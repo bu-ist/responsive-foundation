@@ -4,7 +4,7 @@
 
 /// Controls the font used for labels in the sidebar of the single
 /// calendar event template.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 1.0.0
 
@@ -12,7 +12,7 @@ $font-family-single-event-label:             $font-family-sans-serif !default;
 
 /// Controls the font weight used for labels in the sidebar of the single
 /// calendar event template.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 1.0.0
 
@@ -20,7 +20,7 @@ $font-weight-calendar-label:                700 !default;
 
 /// Controls the color of labels in the sidebar of the single
 /// calendar event template.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 1.0.0
 
@@ -32,7 +32,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for the container around start and end times on
 /// a single calendar event.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -49,7 +49,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for the list of start and end times on
 /// a single calendar event.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -61,7 +61,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 /// Handles styling for list items in the schedule of
 /// a single calendar event. Use if you need to add something to the
 /// calendar schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -78,7 +78,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 /// By default, this is visually hidden so screen readers still read
 /// it as a sentence, but it is displayed as list information.
 /// You can override this with `@extend %remove-visually-hidden`.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -88,7 +88,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for start time in the schedule of
 /// a single calendar event.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -98,7 +98,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for end time in the schedule of
 /// a single calendar event.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -108,7 +108,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for all day events in the schedule of
 /// a single calendar event.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -117,7 +117,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 }
 
 /// Handles styling for all single calendar labels.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -131,7 +131,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for labels in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -141,7 +141,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for times in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -153,7 +153,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for the event description in the single calendar
 /// event template.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -163,7 +163,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for additional details in the single calendar
 /// event template.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -173,7 +173,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for additional details information in the
 /// single calendar event template.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -183,7 +183,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for the speakers label in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -193,7 +193,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for speaker information in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -203,7 +203,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for the audience label in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -213,7 +213,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for audience information in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -223,7 +223,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for the departments label in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -233,7 +233,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for department information in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -243,7 +243,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for the location label in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -253,7 +253,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for location information in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -263,7 +263,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for the building location label in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -273,7 +273,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for building location information in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -283,7 +283,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for the room location label in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -293,7 +293,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for room location information in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -303,7 +303,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for the multiple fees label in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -313,7 +313,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for multiple fee information in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -323,7 +323,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for the a single fee label in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -333,7 +333,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for a single fee information in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -343,7 +343,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for the general fee label in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -353,7 +353,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for general fee information in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -363,7 +363,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for the public fee label in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -373,7 +373,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for public fee information in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -383,7 +383,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for the staff fee label in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -393,7 +393,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for staff fee information in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -403,7 +403,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for the student fee label in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -413,7 +413,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for student fee information in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -423,7 +423,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for the BU student fee label in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -433,7 +433,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for BU student fee information in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -443,7 +443,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for the senior fee label in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -453,7 +453,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for senior fee information in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -463,7 +463,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for the deadlines label in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -473,7 +473,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for deadline information in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -483,7 +483,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for the registration label in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -495,7 +495,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 /// event schedule. If you set color on this class, you may wish to add
 /// `color: inherit;` to `.single-event-registration-link`, which controls
 /// the link style for this type of information.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -505,7 +505,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for the contact organization label in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -515,7 +515,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for contact organization information in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -525,7 +525,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for the contact name label in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -535,7 +535,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for contact name information in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -545,7 +545,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for the contact email label in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -557,7 +557,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 /// event schedule. If you set color on this class, you may wish to add
 /// `color: inherit;` to `.single-event-contact-email-link`, which controls
 /// the link style for this type of information.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -567,7 +567,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for the contact phone label in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -577,7 +577,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 /// Handles styling for contact phone information in the single calendar
 /// event schedule.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 

@@ -18,7 +18,7 @@ $font-size-icon: 21px !default;
 /// The color to use for icons across the site.
 /// By default, this will inherit the color of the text in the container the icon lives in.
 /// Setting this will keep the color of the icons consistent everywhere.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -30,7 +30,7 @@ $color-icons:										 unset;
 /// and can't use the built-in icons because the content is different.
 /// This should go on your base element. The complimentary placeholder,
 /// `%icon`, needs to go on a `:before` or `:after` underneath.
-/// @group icons
+/// @group 03-icons
 /// @access public
 /// @since 1.2.0
 
@@ -51,7 +51,7 @@ $color-icons:										 unset;
 /// font library and can't use the built-in icons because the content is different.
 /// You will also need the %icon-base placeholder on your hoverable element if you
 /// need compatibility before IE9.
-/// @group icons
+/// @group 03-icons
 /// @access public
 /// @since 1.2.0
 

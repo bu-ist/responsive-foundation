@@ -4,7 +4,7 @@
 
 /// A helper variable to control the number of columns a gallery
 /// supports in our WordPress environment.
-/// @group content
+/// @group 09-content
 /// @access priavte
 /// @since 1.4.0
 
@@ -15,7 +15,7 @@ $_wp-supported-gallery-columns: 9;
 // =================================================================
 
 /// Base styles for the gallery shortcode in WordPress.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 1.4.0
 
@@ -34,7 +34,7 @@ $_wp-supported-gallery-columns: 9;
 }
 
 /// Styles for each supported number of columns in the WordPress gallery shortcode.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 1.4.0
 
