@@ -2,6 +2,8 @@
 
 ## 2.0.0-dev
 
+* Adds utility classes for quick prototyping: `u-visually-hidden`,
+`u-clearfix`, `u-hide-text`, `u-hide`, `u-show` [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/93)
 * Change font name from "Benton" to "Benton-Sans" to align with CDN and fix
 [this issue](https://github.com/bu-ist/responsive-foundation/issues/50) [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/89)
 * Simplify the breakpoint mixin to accept any variable, and open up the target
