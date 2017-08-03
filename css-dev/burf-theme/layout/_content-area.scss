@@ -134,8 +134,7 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 /// @access public
 /// @since 1.2.0
 
-//$sidebar-padding:                          ( $margin-width - $margin-width * ( 1 / ( $number-widgets-footbar ) ) ) !default;
-$sidebar-padding:                          3.46667% !default;
+$sidebar-padding:                          3.46667% !default; // $sidebar-padding:                          ( $margin-width - $margin-width * ( 1 / ( $number-widgets-footbar ) ) ) !default;
 
 /// The default class for styling sidebars.
 /// @group layout
