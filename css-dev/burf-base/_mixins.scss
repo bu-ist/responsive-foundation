@@ -109,23 +109,86 @@
 /// @access public
 /// @since 1.2.0
 
-@mixin linear-gradient( $from-color: NULL, $to-color: NULL ) {
-	// Both variables must be defined colors
-	@if (
-			type-of( $from-color ) == color and
-			type-of( $to-color ) == color
-		) {
-		background-image: -webkit-gradient(linear, left top, left bottom, from( $from-color), to( $to-color)); // Saf4+, Chrome
-		background-image: -webkit-linear-gradient(top, $from-color, $to-color); // Chrome 10+, Saf5.1+, iOS 5+
-		background-image: -moz-linear-gradient(top, $from-color, $to-color); // FF3.6
-		background-image: -ms-linear-gradient(top, $from-color, $to-color); // IE10
-		background-image: -o-linear-gradient(top, $from-color, $to-color); // Opera 11.10+
-		background-image: linear-gradient(top, $from-color, $to-color);
-		filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$from-color}', EndColorStr='#{$to-color}');
-	} @else {
-		@error 'The linear gradient mixin requires two valid colors or variables which hold colors. \a Example usage: @include linear-gradient( $from-color, $to-color);';
-	}
+// @mixin linear-gradient( $from-color: NULL, $to-color: NULL ) {
+// 	// Both variables must be defined colors
+// 	@if (
+// 			type-of( $from-color ) == color and
+// 			type-of( $to-color ) == color
+// 		) {
+// 		background-image: -webkit-gradient(linear, left top, left bottom, from( $from-color), to( $to-color)); // Saf4+, Chrome
+// 		background-image: -webkit-linear-gradient(top, $from-color, $to-color); // Chrome 10+, Saf5.1+, iOS 5+
+// 		background-image: -moz-linear-gradient(top, $from-color, $to-color); // FF3.6
+// 		background-image: -ms-linear-gradient(top, $from-color, $to-color); // IE10
+// 		background-image: -o-linear-gradient(top, $from-color, $to-color); // Opera 11.10+
+// 		background-image: linear-gradient(top, $from-color, $to-color);
+// 		filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$from-color}', EndColorStr='#{$to-color}');
+// 	} @else {
+// 		@error 'The linear gradient mixin requires two valid colors or variables which hold colors. \a Example usage: @include linear-gradient( $from-color, $to-color);';
+// 	}
+// }
+
+
+//Source: https://www.sitepoint.com/building-linear-gradient-mixin-sass
+/// Mixin printing a linear-gradient
+/// as well as a plain color fallback
+/// and the `-webkit-` prefixed declaration
+/// @access public
+/// @param {Keyword | Angle} $direction - Linear gradient direction
+/// @param {Arglist} $color-stops - List of color-stops composing the gradient
+@mixin linear-gradient($direction, $color-stops...) {
+	// Direction has been omitted and happens to be a color-stop
+	@if is-direction($direction) == false {
+	$color-stops: $direction, $color-stops;
+	$direction: 180deg;
 }
+
+	background: nth(nth($color-stops, 1), 1);
+	background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+	background: linear-gradient($direction, $color-stops);
+}
+
+/// Test if `$value` is a valid direction
+/// @param {*} $value - Value to test
+/// @return {Bool}
+@function is-direction($value) {
+ 	$is-keyword: index((to top, to top right, to right top, to right, to bottom right, to right bottom, to bottom, to bottom left, to left bottom, to left, to left top, to top left), $value);
+	$is-angle: type-of($value) == 'number' and index('deg' 'grad' 'turn' 'rad', unit($value));
+
+  @return $is-keyword or $is-angle;
+}
+
+/// Convert a direction to legacy syntax
+/// @param {Keyword | Angle} $value - Value to convert
+/// @require {function} is-direction
+/// @require {function} convert-angle
+/// @throw Cannot convert `#{$value}` to legacy syntax because it doesn't seem to be a direction.;
+@function legacy-direction($value) {
+	@if is-direction($value) == false {
+		@error "Cannot convert `#{$value}` to legacy syntax because it doesn't seem to be a direction.";
+	}
+
+	$conversion-map: (
+		to top				: bottom,
+		to top right		: bottom left,
+		to right top		: left bottom,
+		to right			: left,
+		to bottom right		: top left,
+		to right bottom		: left top,
+		to bottom			: top,
+		to bottom left		: top right,
+		to left bottom		: right top,
+		to left				: right,
+		to left top			: right bottom,
+		to top left			: bottom right
+	);
+
+	@if map-has-key($conversion-map, $value) {
+		@return map-get($conversion-map, $value);
+	}
+	@return 90deg - $value;
+}
+
+
 
 /// A mixin for opacity. Takes care of browser
 /// prefixes for you. You should always use this mixin
