@@ -21,7 +21,7 @@ $color-collapsible-icon-hover:     $color-link !default;
 /// @access public
 /// @since 2.0.0
 
-$border-collapsible:     1px solid $color-grayscale-c !default;
+$border-collapsible:               $border !default;
 
 // =================================================================
 // Collapsible Styles

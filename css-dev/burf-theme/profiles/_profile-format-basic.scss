@@ -1,9 +1,17 @@
+// =================================================================
+// Profile Basic Format Settings
+// =================================================================
+
 /// Adjusts the size of the basic profile photo.
 /// @group profiles
 /// @access public
 /// @since 2.0.0
 
 $profile-photo-basic-size:                  $profile-photo-default-size;
+
+// =================================================================
+// Profile Basic Format Styles
+// =================================================================
 
 /// Styles the basic profile format.
 /// @group profiles

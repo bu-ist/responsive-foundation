@@ -24,14 +24,7 @@ $color-back-link-before:                    $color-grayscale-f !default;
 /// @access public
 /// @since 1.0.0
 
-$border-news-post:                         $border-base !default;
-
-/// Controls the border width between posts on post listing templates.
-/// @group news
-/// @access public
-/// @since 1.0.0
-
-$border-width-news-post:                    1px 0 0 0 !default;
+$border-news-post:                         $border !default;
 
 /// Controls the color of the separators between metadata.
 /// @group news
@@ -87,8 +80,7 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 
 .paging-navigation {
 	@extend %clearfix;
-	border: $border-news-post;
-	border-width: $border-width-news-post;
+	border-top: $border-news-post;
 	margin-top: $margin;
 	padding-top: $margin;
 
@@ -122,8 +114,7 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 /// @since 2.0.0
 
 .post-part {
-	border: $border-news-post;
-	border-width: $border-width-news-post;
+	border-top: $border-news-post;
 	margin-top: $margin;
 	padding-top: $margin;
 	position: relative;

@@ -1,5 +1,5 @@
 // =================================================================
-// Gallery
+// Gallery Settings
 // =================================================================
 
 /// A helper variable to control the number of columns a gallery
@@ -17,6 +17,10 @@ $_wp-supported-gallery-columns: 9;
 /// @since 2.0.0
 
 $color-gallery-overlay: rgba( $color-grayscale-0, 0.75 ) !default;
+
+// =================================================================
+// Gallery Styles
+// =================================================================
 
 /// Base styles for the gallery shortcode in WordPress.
 /// @group content
@@ -64,7 +68,7 @@ $color-gallery-overlay: rgba( $color-grayscale-0, 0.75 ) !default;
 
 	@for $i from 1 through $_wp-supported-gallery-columns {
 		.gallery-columns-#{$i} & {
-			@include breakpoint( xs ) {
+			@include breakpoint( $xs ) {
 				width: 100 / $i#{"%"};
 
 				&:nth-child(#{$i}n + 1) {

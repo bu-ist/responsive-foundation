@@ -1,5 +1,6 @@
-// Calendar Widget
-// -----------------------------------------------------------------
+// =================================================================
+// Calendar Widget Settings
+// =================================================================
 
 /// Controls the font family used on dates in the calendar widget.
 /// @group widgets
@@ -47,8 +48,9 @@ $font-size-widget-calendar-date-month:        12px !default;
 
 $color-widget-calendar-date-month:           inherit !default;
 
-// Calendar
-// -----------------------------------------------------------------
+// =================================================================
+// Calendar Widget Styles
+// =================================================================
 
 /// A helper variable for absolute positioning in formats which use it.
 /// Sets the width of the calendar date.
@@ -65,8 +67,7 @@ $_width-calendar-date: 48px;
 /// @since 2.0.0
 
 .widget-calendar-event {
-	border: $border-widget-list;
-	border-width: $border-width-widget-list;
+	border-top: $border-widget-list;
 	padding: $padding-small 0;
 
 	&:first-child {

@@ -43,7 +43,7 @@ $comment-reply-depth-mobile:               $comment-reply-depth / 3 !default;
 /// @access public
 /// @since 1.0.0
 
-$border-comment:                           $border-base !default;
+$border-comment:                           $border !default;
 
 /// Controls the border width between comments on a post.
 /// @group news
@@ -113,7 +113,7 @@ $color-comment-form-bg:                     $color-grayscale-f5 !default;
 /// @access public
 /// @since 1.0.0
 
-$border-comment-form:                       1px solid $color-grayscale-e !default;
+$border-comment-form:                       $border !default;
 
 /// Controls the border width on the comment submission form.
 /// @group news
@@ -151,7 +151,7 @@ $border-width-comment-form:                  3px !default;
 	margin-left: -$margin-small;
 	margin-right: -$margin-small;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $sm ) {
 		margin: 0;
 	}
 }
@@ -164,7 +164,7 @@ $border-width-comment-form:                  3px !default;
 .comment {
 	margin-left: $comment-reply-depth-mobile;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $sm ) {
 		margin-left: $comment-reply-depth;
 	}
 
@@ -172,7 +172,7 @@ $border-width-comment-form:                  3px !default;
 		margin: $comment-margin-mobile 0;
 		padding: 0;
 
-		@include breakpoint( sm ) {
+		@include breakpoint( $sm ) {
 			margin: $comment-margin 0;
 		}
 	}
@@ -191,7 +191,7 @@ $border-width-comment-form:                  3px !default;
 	padding: $comment-padding-mobile;
 	position: relative;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $sm ) {
 		margin: $comment-reply-margin 0;
 		padding: $comment-padding;
 	}
@@ -247,7 +247,7 @@ $border-width-comment-form:                  3px !default;
 	right: $comment-padding-mobile;
 	top: $comment-padding-mobile;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $sm ) {
 		right: $comment-padding;
 		top: $comment-padding;
 	}
@@ -294,7 +294,7 @@ $border-width-comment-form:                  3px !default;
 		display: block;
 		margin: 0 0 2px;
 
-		@include breakpoint( sm ) {
+		@include breakpoint( $sm ) {
 			float: left;
 			margin: $form-label-margin;
 			padding-right: $padding-small;
@@ -330,7 +330,7 @@ $border-width-comment-form:                  3px !default;
 	@extend %font-size-minimum;
 	color: $color-grayscale-8;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $sm ) {
 		display: block;
 	}
 
@@ -349,7 +349,7 @@ $border-width-comment-form:                  3px !default;
 	height: 6em;
 	width: 100%;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $sm ) {
 		width: 75%;
 	}
 
@@ -366,7 +366,7 @@ $border-width-comment-form:                  3px !default;
 /// @since 2.0.0
 
 .comment-submit {
-	@include breakpoint( sm ) {
+	@include breakpoint( $sm ) {
 		margin-left: 25%;
 	}
 }
