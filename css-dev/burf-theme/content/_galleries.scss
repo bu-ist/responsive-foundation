@@ -125,7 +125,6 @@ $color-gallery-overlay: rgba( $color-grayscale-0, 0.75 ) !default;
 		&:hover {
 			&::before,
 			&::after {
-				@include transition( opacity 250ms ease-in-out 0s );
 				opacity: 1;
 			}
 		}
@@ -159,7 +158,7 @@ $color-gallery-overlay: rgba( $color-grayscale-0, 0.75 ) !default;
 	position: absolute;
 	width: 100%;
 
-	@include breakpoint( xs ) {
+	@include breakpoint( $xs ) {
 		display: block;
 	}
 
