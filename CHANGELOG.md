@@ -1,3 +1,7 @@
+# 1.4.2
+
+* Fixes missing parenthesis in gallery Sass to make Foundation compatible with libsass
+
 # 1.4.1
 
 * Fixes a typo in classes for BUMC branding
