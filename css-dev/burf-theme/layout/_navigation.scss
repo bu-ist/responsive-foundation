@@ -612,8 +612,8 @@ $nav-toggle-border: 4px !default;
 // utilityNav
 
 .utility-nav {
-	border-width: $border-width-utility-nav;
 	border: 1px solid $color-primary-nav-border;
+	border-width: $border-width-utility-nav;
 	clear: left;
 	color: $color-utility-nav-mobile-link;
 	display: none;
