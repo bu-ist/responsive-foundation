@@ -32,7 +32,7 @@
 		$toggleitems.removeClass( 'is-open' );
 
 		if( focus === true && ! $( this ).hasClass( 'is-open' ) ){
-			setTimeout(function(){
+			setTimeout( function(){
 				$( '#q' ).focus();
 			}, 100 );
 		}
@@ -48,12 +48,12 @@
 	}
 
 	$searchtoggle.on({
-		click: function (e) {
+		click: function ( e ) {
 			e.preventDefault();
 			toggleSearchPanel( true );
 		},
-		keypress: function (e) {
-			if ( e.keyCode == 13 ) {
+		keypress: function ( e ) {
+			if ( e.keyCode === 13 ) {
 				e.preventDefault();
 				toggleSearchPanel( false );
 			}

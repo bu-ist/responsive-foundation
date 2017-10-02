@@ -397,7 +397,7 @@ $nav-toggle-size: 60px !default;
 	}
 
 	&:focus {
-		outline-color: invert($color-primary-nav-bg);
+		outline-color: invert( $color-primary-nav-bg );
 	}
 
 	&.is-open {
@@ -427,12 +427,12 @@ $nav-toggle-border: 4px !default;
 	position: relative;
 	width: $nav-toggle-size;
 
-	&:focus {
-		outline-color: invert($color-primary-nav-bg);
-	}
-
 	@include breakpoint( $nav-desktop ) {
 		display: none;
+	}
+
+	&:focus {
+		outline-color: invert( $color-primary-nav-bg );
 	}
 
 	span {
@@ -444,9 +444,9 @@ $nav-toggle-border: 4px !default;
 		height: $nav-toggle-border;
 		left: $nav-toggle-size / 4;
 		position: absolute;
+		text-indent: 100px;
 		top: $nav-toggle-size / 2;
 		width: $nav-toggle-size / 2;
-		text-indent: 100px;
 
 		&::before,
 		&::after {
@@ -510,8 +510,8 @@ $nav-toggle-border: 4px !default;
 }
 
 .primary-nav-menu {
-	margin: $nav-toggle-size 10px 0; // Keeps menu from overlapping nav toggle
 	clear: left;
+	margin: $nav-toggle-size 10px 0; // Keeps menu from overlapping nav toggle
 
 	@media screen and ( max-width: $sm - 1 ) {
 		.js & {
@@ -539,7 +539,7 @@ $nav-toggle-border: 4px !default;
 		}
 
 		&:focus {
-			outline-color: invert($color-primary-nav-bg);
+			outline-color: invert( $color-primary-nav-bg );
 		}
 
 		&:hover ul,
@@ -612,15 +612,15 @@ $nav-toggle-border: 4px !default;
 // utilityNav
 
 .utility-nav {
-	border: 1px solid $color-primary-nav-border;
 	border-width: $border-width-utility-nav;
+	border: 1px solid $color-primary-nav-border;
+	clear: left;
 	color: $color-utility-nav-mobile-link;
 	display: none;
 	font-size: $font-size-utility-nav;
 	margin: 0 $padding-small;
 	padding: $padding 0 0;
 	text-decoration: none;
-	clear: left;
 
 	@include breakpoint( $nav-desktop ) {
 		color: $color-utility-nav-link;
