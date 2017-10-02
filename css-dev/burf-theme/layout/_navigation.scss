@@ -405,7 +405,7 @@ $nav-toggle-size: 60px !default;
 	}
 
 	span {
-		@extend %visuallyhidden;
+		@extend %visually-hidden;
 	}
 }
 
