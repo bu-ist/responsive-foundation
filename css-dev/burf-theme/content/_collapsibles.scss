@@ -21,7 +21,7 @@ $color-collapsible-icon-hover:     $color-link !default;
 /// @access public
 /// @since 2.0.0
 
-$border-collapsible:     1px solid $color-grayscale-c !default;
+$border-collapsible:               $border !default;
 
 // =================================================================
 // Collapsible Styles
@@ -49,7 +49,7 @@ $border-collapsible:     1px solid $color-grayscale-c !default;
 .bu_collapsible {
 	@extend %icon-plus;
 	margin-bottom: 0;
-	padding-right: 30px;
+	padding-right: $padding;
 	position: relative;
 
 	&::before {

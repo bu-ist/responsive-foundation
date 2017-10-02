@@ -1,49 +1,6 @@
 // =================================================================
-// Grid
+// Grid Settings
 // =================================================================
-
-// TODO: Needs documentation
-// TODO: Needs col-0 classes
-
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// Grid and Layout
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-// -----------------------------------------------------------------
-
-//	Grid controls (see _variables.scss)
-//		$grid-number-columns
-//			Controls number of columns in grid.
-//			Required: Columns must be neatly divisible by 2, 3, and 4.
-//			Default: 12
-//		$grid-breakpoints
-//			The breakpoints you want grids to begin at.
-//			Required: Small and medium if you use burf-theme. Large is optional.
-//			Default: "small", "medium"
-//		$grid-margins
-//			Turn on optional margin classes.
-//			Default: false
-//		$grid-margin-width
-//			Your desired grid margin, in %. Default value works out to 20px on large screens.
-//			Relies on $grid-margins being set to "true".
-//			Default: 2.6
-//		$grid-push
-//			Turn on optional push classes.
-//			Default: false
-//		$grid-pull
-//			Turn on optional pull classes.
-//			Default: false
-//		$grid-offset
-//			Turn on optional offset classes.
-//			Default: false
-//		$grid-classes
-//			Choose to output numeric grid classes (ie, .col-sm-5)
-//			Note that friendly grid classes always print.
-//			Default: true
 
 /// The number of columns you would like in your grid.
 /// To use styles in burf-theme, you must set this to a number that
@@ -71,8 +28,12 @@ $grid-margin-width:                        ( $margin / $container-lg ) * 100 !de
 /// @access public
 /// @since 1.2.0
 
-$grid-breakpoints:                         "xs", "sm", "md", "lg" !default;
-
+$grid-breakpoints: (
+	xs: 		$xs, // optional
+	sm: 		$sm, // required for the framework
+	md: 		$md, // required for the framework
+	lg: 		$lg  // optional
+);
 
 /// Determines which classes to calculate and print for the theme.
 /// By default, all are on so clients can freely use these in custom CSS.
@@ -97,10 +58,20 @@ $grid-supports: (
 
 $grid-classes:										 true !default;
 
-// TODO: Grid Spacing
+/// The amount of padding to put on the content container.
+/// @group grid
+/// @access public
+/// @since 1.0.0
 
-$grid-container-padding:                   20px !default;
-$grid-container-padding-large-screen:       60px 20px 0 !default;
+$grid-container-padding:                   $padding-small !default;
+
+/// The amount of padding to put on the content container
+/// on desktop.
+/// @group grid
+/// @access public
+/// @since 1.0.0
+
+$grid-container-padding-desktop:           $padding-large $padding !default;
 
 /// Controls the margin on rows in the grid.
 /// By default, this will attempt to "pull" grid items out
@@ -110,9 +81,22 @@ $grid-container-padding-large-screen:       60px 20px 0 !default;
 /// @since 1.0.0
 
 $grid-row-margin:                          0 -#{$grid-container-padding} !default;
-$grid-column-padding:                      0 20px !default;
-$grid-sidebar-padding:                     0 0 0 60px !default;
 
+/// Controls the padding on child items of the grid.
+/// On non-margin classes, this will act like a "margin",
+/// putting space between grid items, Boostrap-style.
+/// If you need to use the padding for something else, like
+/// if you have a background color on your grid item,
+/// use the margin classes.
+/// @group grid
+/// @access public
+/// @since 1.0.0
+
+$grid-column-padding:                      0 $padding !default;
+
+// =================================================================
+// Grid Styles and Placeholders
+// =================================================================
 
 /// Base styles for all wrapper elements.
 /// @group global
@@ -138,16 +122,16 @@ $grid-sidebar-padding:                     0 0 0 60px !default;
 	padding: $grid-container-padding;
 	width: 100%;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $sm ) {
 		max-width: $container-sm;
-		padding: $grid-container-padding-large-screen;
+		padding: $grid-container-padding-desktop;
 	}
 
-	@include breakpoint( md ) {
+	@include breakpoint( $md ) {
 		max-width: $container-md;
 	}
 
-	@include breakpoint( lg ) {
+	@include breakpoint( $lg ) {
 		max-width: $container-lg;
 	}
 }
@@ -163,7 +147,7 @@ $grid-sidebar-padding:                     0 0 0 60px !default;
 	@extend %clearfix;
 	margin: $grid-row-margin;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $sm ) {
 		margin-right: 0;
 	}
 }
@@ -178,16 +162,20 @@ $grid-sidebar-padding:                     0 0 0 60px !default;
 	padding: $grid-column-padding;
 }
 
+/// A backwards-compatible equal heights solution for
+/// older browsers.
 /// Base styles for a container whose children should
 /// be equal heights.
 /// @group utilities
 /// @access public
 /// @since 1.2.0
 
-%equal-height-parent {
+%equal-height-parent-backcompat {
 	overflow: hidden;
 }
 
+/// A backwards-compatible equal heights solution for
+/// older browsers.
 /// Base styles for children of the equal-height-parent.
 /// These styles will make children appear to be equal heights,
 /// even if the actual content is different heights.
@@ -197,11 +185,26 @@ $grid-sidebar-padding:                     0 0 0 60px !default;
 /// @access public
 /// @since 1.2.0
 
-%equal-height-child {
-	@include breakpoint( md ) {
+%equal-height-child-backcompat {
+	@include breakpoint( $md ) {
 		padding-bottom: 99999px;
 		margin-bottom: -99999px;
 	}
+}
+
+/// A newer version of equal heights that takes advantage
+/// of flexbox. Use this on your container to make all
+/// children equal heights. Plays nice with the grid.
+/// Check https://caniuse.com/#search=flexbox for browser
+/// support. You may want to provide a min-height on a
+/// case by case basis as a fallback.
+/// @group utilities
+/// @access public
+/// @since 2.0.0
+
+%equal-heights {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 // Additional placeholders are available for the grid. See below for detailed docs.
@@ -345,15 +348,15 @@ $grid-widths-margins: ();
 
 // Breakpoints time
 
-@each $breakpoint in $grid-breakpoints {
+@each $bp-name, $bp-variable in $grid-breakpoints {
 
-	@include breakpoint( $breakpoint, false ) {
-		%col-#{$breakpoint}-margin-base {
+	@include breakpoint( $bp-variable, false ) {
+		%col-#{$bp-name}-margin-base {
 			margin-left: $grid-margin-width#{"%"};
 		}
 
-		.col-#{$breakpoint}-margin-parent,
-		%col-#{$breakpoint}-margin-parent {
+		.col-#{$bp-name}-margin-parent,
+		%col-#{$bp-name}-margin-parent {
 			margin-left: -$grid-margin-width#{"%"};
 		}
 
@@ -361,7 +364,7 @@ $grid-widths-margins: ();
 			// Get percentage from earlier
 			$percentage: nth($grid-widths, ($i + 1));
 
-			%col-#{$breakpoint} {
+			%col-#{$bp-name} {
 				@if ($i != 0) {
 					&-#{$i} {
 						@include gridBuild(width, $percentage);
@@ -401,9 +404,9 @@ $grid-widths-margins: ();
 
 		@if map-get($grid-supports, margin) and ($i != 0) {
 			// Add to base styles
-			%col-#{$breakpoint}-margin-#{$i} {
+			%col-#{$bp-name}-margin-#{$i} {
 				@extend %col-margin-base;
-				@extend %col-#{$breakpoint}-margin-base;
+				@extend %col-#{$bp-name}-margin-base;
 			}
 		}
 	}
@@ -444,18 +447,18 @@ $widths: (
 		}
 	}
 
-	@each $breakpoint in $grid-breakpoints {
-		.col-#{$breakpoint},
-		%col-#{$breakpoint} {
+	@each $bp-name, $bp-variable in $grid-breakpoints {
+		.col-#{$bp-name},
+		%col-#{$bp-name} {
 
 			&-#{$width} {
-				@extend %col-#{$breakpoint}-#{$columns} !optional;
+				@extend %col-#{$bp-name}-#{$columns} !optional;
 			}
 
 			@each $feature, $supported in $grid-supports {
 				@if $supported {
 					&-#{$feature}-#{$width} {
-						@extend %col-#{$breakpoint}-#{$feature}-#{$columns} !optional;
+						@extend %col-#{$bp-name}-#{$feature}-#{$columns} !optional;
 					}
 				}
 			}
@@ -475,16 +478,16 @@ $widths: (
 				}
 			}
 		}
-		@each $breakpoint in $grid-breakpoints {
-			.col-#{$breakpoint} {
+		@each $bp-name, $bp-variable in $grid-breakpoints {
+			.col-#{$bp-name} {
 				&-#{$i} {
-					@extend %col-#{$breakpoint}-#{$i} !optional;
+					@extend %col-#{$bp-name}-#{$i} !optional;
 				}
 
 				@each $feature, $supported in $grid-supports {
 					@if $supported {
 						&-#{$feature}-#{$i} {
-							@extend %col-#{$breakpoint}-#{$feature}-#{$i} !optional;
+							@extend %col-#{$bp-name}-#{$feature}-#{$i} !optional;
 						}
 					}
 				}

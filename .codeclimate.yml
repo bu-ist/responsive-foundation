@@ -10,6 +10,8 @@ exclude_paths:
 - "*.min.css"
 - "*.min.js"
 - "**.css"
+- ".scss-lint.yml"
+- "_docs/**"
 
 prepare:
   fetch:
@@ -44,5 +46,5 @@ ratings:
   paths:
   - "**.md"
   - "**.js"
-  - "**.css"
+  - "**.json"
   - "**.scss"

@@ -1,11 +1,24 @@
-// Forms
+// =================================================================
+// Forms Settings
 // =================================================================
 
+/// Controls the font family used in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 1.0.0
 
 $font-family-form:                          $font-family-sans-serif !default;
 
-$form-legend-border:                       1px solid $color-grayscale-e !default;
-$form-legend-border-width:                  0 0 1px 0 !default;
+/// Controls the border on the legend in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
+$form-legend-border:                        $border !default;
 
 /// Controls the margin on the legend in forms.
 /// Note: this style may not apply to Gravity Forms
@@ -15,7 +28,22 @@ $form-legend-border-width:                  0 0 1px 0 !default;
 /// @since 1.0.0
 
 $form-legend-margin:                       0 0 $margin !default;
-$form-legend-padding:                      0 0 4px !default;
+
+/// Controls the padding on the legend in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
+$form-legend-padding:                      0 0 0.5em !default;
+
+/// Controls the border on fieldsets in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 1.0.0
 
 $form-fieldset-border:                     0 !default;
 
@@ -27,6 +55,14 @@ $form-fieldset-border:                     0 !default;
 /// @since 1.0.0
 
 $form-fieldset-margin:                     $margin 0 !default;
+
+/// Controls the padding on the fieldset in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
 $form-fieldset-padding:                    0 !default;
 
 /// Controls the margin on labels in forms.
@@ -36,9 +72,16 @@ $form-fieldset-padding:                    0 !default;
 /// @access public
 /// @since 1.0.0
 
-$form-label-margin:                        0.5em 0 0.2em !default;
+$form-label-margin:                        0.5em 0 !default;
 
-$form-row-margin:                          0 0 $margin !default;
+/// Controls the margin on rows in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
+$form-row-margin:                          0 0 $margin-small !default;
 
 /// Controls the margin on inputs in forms.
 /// Note: this style may not apply to Gravity Forms
@@ -47,16 +90,155 @@ $form-row-margin:                          0 0 $margin !default;
 /// @access public
 /// @since 1.0.0
 
-$form-input-margin:                        0.25em 0 !default;
+$form-input-margin:                        0 0 $margin-small !default;
 
-$form-input-padding:                       0.5em 0.6em !default;
+/// Controls the padding on inputs in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 1.0.0
 
-$form-input-border:                        1px solid $color-grayscale-c !default;
+$form-input-padding:                       0.5em !default;
+
+/// Controls the border on inputs in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
+$form-input-border:                        $border !default;
+
+/// Controls the inner shadow on inputs in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
 $form-input-shadow:                        inset 0 1px 3px $color-grayscale-e !default;
-$form-input-border-radius:                  0 !default;
-$form-input-focus-shadow:                   0 0 4px 0 rgba( 18, 159, 234, 0.2 ) !default;
-$color-input-focus-border:                  #129fea !default;
 
+/// Controls the border radius on inputs in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
+$form-input-border-radius:                 0 !default;
+
+/// Controls the shadow on focused inputs.
+/// This is important for accessibility. Always
+/// test with a keyboard if you change this style
+/// to ensure it is still clear which item is keyboard
+/// focused afterwards.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
+$form-input-focus-shadow:                  0 0 4px 0 rgba( 18, 159, 234, 0.2 ) !default;
+
+/// Controls the border on focused inputs.
+/// This is important for accessibility. Always
+/// test with a keyboard if you change this style
+/// to ensure it is still clear which item is keyboard
+/// focused afterwards.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
+$color-input-focus-border:                 #129fea !default;
+
+/// Controls the font used on all buttons and
+/// things that looks like buttons across the site.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
+$font-family-button:                       $font-family-sans-serif !default;
+
+/// Controls the font size used on all buttons and
+/// things that looks like buttons across the site.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
+$font-size-button:                         inherit !default;
+
+/// Controls the background color used on default buttons and
+/// things that looks like buttons across the site.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
+$color-button-bg:                          $color-grayscale-e !default;
+
+/// Controls the text color used on default buttons and
+/// things that looks like buttons across the site.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
+$color-button-text:                        $color-grayscale-4 !default;
+
+/// Controls the background color used on primary buttons and
+/// things that looks like buttons across the site.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
+$color-button-primary-bg:                  #0078e7 !default;
+
+/// Controls the text color used on primary buttons and
+/// things that looks like buttons across the site.
+/// @group config
+/// @access public
+/// @since 1.0.0
+
+$color-button-primary-text:                $color-grayscale-f !default;
+
+/// Controls the margin on buttons in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 2.0.0
+
+$margin-button:                            0 $margin-small $margin-small 0 !default;
+
+/// Controls the margin on buttons in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 2.0.0
+
+$padding-button:                           0.5em 1em !default;
+
+/// Controls the border on buttons.
+/// @group config
+/// @access public
+/// @since 2.0.0
+
+$border-button:                            0;
+
+/// Controls the rounding of edges on buttons.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group config
+/// @access public
+/// @since 2.0.0
+
+$border-radius-button:                     2px !default;
+
+// =================================================================
+// Forms Styles
+// =================================================================
 
 // Placeholders for Forms
 // -----------------------------------------------------------------
@@ -72,15 +254,15 @@ $color-input-focus-border:                  #129fea !default;
 
 %button-styles {
 	background-color: $color-button-bg;
-	border-radius: 2px;
-	border: 1px solid $color-grayscale-9;  // IE 6/7/8
-	border: none rgba( $color-grayscale-0, 0 );  // IE9 + everything else
+	border: $border-button;
+	border-radius: $border-radius-button;
 	color: $color-button-text;
 	display: inline-block;
 	font-family: $font-family-button;
 	font-size: $font-size-button;
 	line-height: normal;
-	padding: 0.5em 1em;
+	margin: $margin-button;
+	padding: $padding-button;
 	text-align: center;
 	text-decoration: none;
 	vertical-align: baseline;
@@ -121,9 +303,8 @@ $color-input-focus-border:                  #129fea !default;
 	&-disabled:hover,
 	&-disabled:active {
 		@include box-shadow( none );
-		@include opacity( 0.4 );
-		background-image: none;
-		border: 0;
+		background: $color-grayscale-d;
+		color: $color-grayscale-7;
 		cursor: not-allowed;
 	}
 
@@ -183,9 +364,9 @@ fieldset {
 /// @since 1.0.0
 
 legend {
-	border: $form-legend-border;
-	border-width: $form-legend-border-width;
+	border-bottom: $form-legend-border;
 	display: block;
+	font-size: 1.5em;
 	font-weight: 700;
 	margin: $form-legend-margin;
 	padding: $form-legend-padding;
@@ -204,6 +385,8 @@ textarea {
 /// @since 1.0.0
 
 label {
+	display: block;
+	font-weight: bold;
 	margin: $form-label-margin;
 }
 
@@ -265,6 +448,8 @@ textarea {
 	@include border-radius( $form-input-border-radius );
 	border: $form-input-border;
 	display: inline-block;
+	line-height: 1;
+	margin: $form-input-margin;
 	padding: $form-input-padding;
 
 	&:focus {
@@ -300,7 +485,6 @@ textarea {
 
 .checkbox,
 .radio {
-	display: block;
 	margin: 0.5em 0;
 }
 
@@ -408,7 +592,7 @@ select {
 /// @since 1.0.0
 
 .form-controls {
-	margin: 20px 0 0;
+	margin: $margin 0 0;
 }
 
 /// Styles required items, if you are not using Gravity Forms.
@@ -460,7 +644,7 @@ textarea {
 /// @access public
 /// @since 1.0.0
 
-@include breakpoint( md ) {
+@include breakpoint( $md ) {
 	.form-aligned {
 		input,
 		textarea,

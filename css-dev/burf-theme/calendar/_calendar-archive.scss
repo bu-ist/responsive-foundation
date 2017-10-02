@@ -24,6 +24,13 @@ $color-calendar-event-link:                 $color-link !default;
 
 $color-calendar-event-link-hover:           $color-link !default;
 
+/// Controls the border between events on the calendar listing template.
+/// @group calendar
+/// @access public
+/// @since 2.0.0
+
+$border-calendar-list:                      $border !default;
+
 // =================================================================
 // Calendar List Styles
 // =================================================================
@@ -77,7 +84,7 @@ $color-calendar-event-link-hover:           $color-link !default;
 /// @since 2.0.0
 
 .calendar-list-event-first-at-time {
-	border-top: 1px dotted $color-grayscale-c;
+	border-top: $border-calendar-list;
 	margin-bottom: 0.75em;
 	padding-top: 0.75em;
 }

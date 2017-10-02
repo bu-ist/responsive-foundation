@@ -50,9 +50,9 @@ $color-profile-info-label:                 $color-grayscale-a !default;
 
 .profile-single-details {
 	@extend %card-styles;
-	margin: 0 0 20px;
+	margin: 0 0 $margin;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $sm ) {
 		float: right;
 		margin: 0 0 20px 20px;
 		width: 33.33333333333333%;
@@ -98,6 +98,6 @@ $color-profile-info-label:                 $color-grayscale-a !default;
 
 .profile-details-item {
 	list-style: none;
-	margin: 0 0 20px;
+	margin: 0 0 $margin;
 	word-wrap: break-word;
 }

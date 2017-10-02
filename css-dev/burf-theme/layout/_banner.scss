@@ -1,3 +1,7 @@
+// =================================================================
+// Content Banner Settings
+// =================================================================
+
 /// Controls the background color of the banner container.
 /// By default, this only affects the window width banner container.
 /// @group content
@@ -6,8 +10,9 @@
 
 $color-banner-container:                    $color-grayscale-f0 !default;
 
-// Content Banner
-// -----------------------------------------------------------------
+// =================================================================
+// Content Banner Styles
+// =================================================================
 
 /// General styles for all content banner positions.
 /// @group layout
@@ -31,9 +36,9 @@ $color-banner-container:                    $color-grayscale-f0 !default;
 /// @since 1.0.0
 
 .banner-container-window-width {
-	@include breakpoint( lg ) {
+	@include breakpoint( $lg ) {
 		background: $color-banner-container;
-		padding: 20px;
+		padding: $padding-small;
 	}
 }
 
@@ -48,12 +53,12 @@ $color-banner-container:                    $color-grayscale-f0 !default;
 	margin: -$grid-container-padding;
 	margin-bottom: $grid-container-padding;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $sm ) {
 		margin: 0 0 $margin-large;
 	}
 
 	img {
-		@include breakpoint( md ) {
+		@include breakpoint( $md ) {
 			background: $color-banner-container;
 			width: 100%;
 		}
@@ -72,7 +77,7 @@ $color-banner-container:                    $color-grayscale-f0 !default;
 	margin-bottom: ( 1.5 * $grid-container-padding );
 	padding: 0;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $sm ) {
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 0;

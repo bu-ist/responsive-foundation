@@ -23,20 +23,6 @@ $font-family-caption:                       $font-family-sans-serif !default;
 
 $color-caption:                            $color-grayscale-6 !default;
 
-/// The border color to use in tables.
-/// @group content
-/// @access public
-/// @since 1.0.0
-
-$border-color-table:                        $color-grayscale-d !default;
-
-/// A darker border color to use in tables.
-/// @group content
-/// @access public
-/// @since 1.0.0
-
-$border-color-table-dark:                   $color-grayscale-9 !default;
-
 /// The shadow to use in tables.
 /// @group content
 /// @access public
@@ -109,7 +95,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 .screen-reader-text,
 .screen-reader-text span,
 .ui-helper-hidden-accessible {
-	@extend %visuallyhidden;
+	@extend %visually-hidden;
 }
 
 /// A placeholder just for align. Not meant to be extended elsewhere.
@@ -121,7 +107,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 	margin-bottom: $margin-floated-content;
 	max-width: 100%;
 
-	@include breakpoint( xs ) {
+	@include breakpoint( $xs ) {
 		max-width: 50%;
 	}
 }
@@ -135,7 +121,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 .alignright {
 	@extend %_align-styles;
 
-	@include breakpoint( xs ) {
+	@include breakpoint( $xs ) {
 		float: right;
 		margin: 0 0 $margin-floated-content $margin-floated-content;
 	}
@@ -150,7 +136,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 .alignleft {
 	@extend %_align-styles;
 
-	@include breakpoint( xs ) {
+	@include breakpoint( $xs ) {
 		float: left;
 		margin: 0 $margin-floated-content $margin-floated-content 0;
 	}
@@ -193,7 +179,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 %resposive-table-styles {
 	position: relative;
 
-	@include breakpoint( "max-width: #{$container-md}" ) {
+	@media screen and ( max-width: #{$container-md} ) {
 		margin: 35px 0;
 		-webkit-overflow-scrolling: touch;
 		-ms-overflow-style: -ms-autohiding-scrollbar;
@@ -207,18 +193,8 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 			table-layout: auto;
 
 			td {
-				border: 1px solid $border-color-table;
 				white-space: nowrap; // Ensure the content doesn't wrap
 			}
-		}
-	}
-
-	table {
-		border: 1px solid $border-color-table;
-
-		td,
-		th {
-			border: 1px solid $border-color-table;
 		}
 	}
 }

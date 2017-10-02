@@ -1,20 +1,13 @@
-// Navigation and Menu Widgets
-// -----------------------------------------------------------------
+// =================================================================
+// Content Navigation Settings
+// =================================================================
 
 /// Controls the style of border used on the content navigation list.
 /// @group widgets
 /// @access public
 /// @since 1.0.0
 
-$border-widget-contentnav:                 $border-base !default;
-
-/// Controls the width of border used on the content navigation list.
-/// By default, this will put a border after all other nav items in the widget.
-/// @group widgets
-/// @access public
-/// @since 1.0.0
-
-$border-width-widget-contentnav:            0 0 1px 0 !default;
+$border-widget-contentnav:                 $border !default;
 
 /// Controls the font family used in the content navigation widget.
 /// @group widgets
@@ -61,8 +54,9 @@ $color-widget-contentnav-hover:            $color-link !default;
 $color-widget-contentnav-active:           $color-link-active !default;
 
 
-// Content Nav
-// -----------------------------------------------------------------
+// =================================================================
+// Content Navigation Styles
+// =================================================================
 
 /// Handles styling for content navigation widgets (BU Pages and Content Navigation, aka side nav).
 /// @group widgets
@@ -76,8 +70,7 @@ $color-widget-contentnav-active:           $color-link-active !default;
 	}
 
 	ul {
-		border: $border-widget-contentnav;
-		border-width: $border-width-widget-contentnav;
+		border-bottom: $border-widget-contentnav;
 		padding: 0;
 
 		ul {
@@ -88,8 +81,7 @@ $color-widget-contentnav-active:           $color-link-active !default;
 	}
 
 	li {
-		border: $border-widget-list;
-		border-width: $border-width-widget-list;
+		border-top: $border-widget-list;
 		font-family: $font-family-widget-contentnav;
 
 		&:first-child {
@@ -98,7 +90,7 @@ $color-widget-contentnav-active:           $color-link-active !default;
 
 		li {
 			border: 0;
-			padding: 0 0 0 20px;
+			padding: 0 0 0 $padding-small;
 
 			a {
 				font-size: $font-size-widget-contentnav-nested-link;
@@ -109,7 +101,7 @@ $color-widget-contentnav-active:           $color-link-active !default;
 			color: $color-widget-contentnav;
 			display: block;
 			font-size: $font-size-widget-contentnav-link;
-			padding: 10px 0;
+			padding: $padding-small 0;
 
 			&:hover,
 			&:focus {

@@ -1,11 +1,30 @@
 // =================================================================
-// Mixins
+// Mixins & Extends
 // =================================================================
 
-// clearfix
-// Usage: @extend %clearfix;
+/// Clears floats on a container.
+/// Use when an element contains floated items and
+/// isn't getting the correct height because it doesn't
+/// recognize the height of the floated child items.
+/// Based on Nicolas Gallagher's micro clearfix.
+/// More info: http://nicolasgallagher.com/micro-clearfix-hack/
+/// @example
+/// 		Clear degree items in a degree programs panel so
+/// 		the degree programs background is applied properly.
+/// 			.degree-programs {
+///				@extend %clearfix;
+///				background: $color-grayscale-0;
+///			}
+///
+/// 			.degree-item {
+///				@extend %col-md-quarter;
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
 
-%clearfix {
+%clearfix,
+.u-clearfix {
 	&::after {
 		display: table;
 		clear: both;
@@ -13,8 +32,22 @@
 	}
 }
 
-// border-radius
-// Usage: @include border-radius( 3px )
+/// A mixin for border-radius. Takes care of browser
+/// prefixes for you. You should always use this mixin
+/// when writing border-radius rules to ensure you're
+/// compatible with the browsers we support. Accepts
+/// arguments in the same syntax as standard CSS.
+/// More info at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
+/// @example
+/// 		Create a round profile image for a callout.
+/// 		the degree programs background is applied properly.
+/// 			.profile-callout-image {
+///				@include border-radius( 50% );
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
 @mixin border-radius( $radius ) {
 	-webkit-border-radius: $radius;
 	-moz-border-radius: $radius;
@@ -22,8 +55,34 @@
 	border-radius: $radius;
 }
 
-// box-shadow
-// Usage: @include box-shadow( 0 0 1px 3px #000000 )
+/// A mixin for box-shadow. Takes care of browser
+/// prefixes for you. You should always use this mixin
+/// when writing box-shadow rules to ensure you're
+/// compatible with the browsers we support.
+/// Supports multiple shadows, just use the same syntax
+/// as you would CSS.
+/// More info at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+/// @example
+/// 		Create a large, subtle shadow to help a callout
+/// 		stand out against a complicated background, like
+/// 		a background photo.
+/// 			.feature-callout {
+///				@include box-shadow( 0px 0px 40px 0px rgba( 0, 0, 0, 0.25 ) );
+///			}
+///
+/// 		Create a fancy button with an inset highlight and
+/// 		a shadow around it to help it stand out on a background.
+/// 		a background photo.
+/// 			.fancy-button {
+///				@include box-shadow(
+///					inset 0 2px 0px rgba( 255, 255, 255, 0.25 ),
+///					0px 0px 10px 0px rgba( 0, 0, 0, 0.25 )
+///				);
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
 @mixin box-shadow( $shadow... ) {
 	-webkit-box-shadow: $shadow;
 	-moz-box-shadow: $shadow;
@@ -32,21 +91,35 @@
 	box-shadow: $shadow;
 }
 
-// linear-gradient
-// Usage: @include linear-gradient( $from-color, $to-color );
-// where $from-color and $to-color are valid colors or variables which hold a color
-// Note: you should always specify a backup background-color when using this.
+/// A mixin for linear gradients. Takes care of browser
+/// prefixes for you. You should always use this mixin
+/// when writing linear gradients rules to ensure you're
+/// compatible with the browsers we support.
+/// Always to supply a backup background color as well
+/// for browsers that do not support gradients.
+/// Does not support multiple gradients - you're on your
+/// own for that.
+/// @example
+/// 		Create a fancy button with a subtle downward gradient.
+/// 			.fancy-button {
+///				@include linear-gradient( transparent, darken( $your-color, 10% ) );
+///				background-color: $your-color;
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.2.0
+
 @mixin linear-gradient( $from-color: NULL, $to-color: NULL ) {
 	// Both variables must be defined colors
 	@if (
-			type_of( $from-color ) == color and
-			type_of( $to-color ) == color
+			type-of( $from-color ) == color and
+			type-of( $to-color ) == color
 		) {
-		background-image: -webkit-gradient(linear, left top, left bottom, from( $from-color), to( $to-color)); /* Saf4+, Chrome */
-		background-image: -webkit-linear-gradient(top, $from-color, $to-color); /* Chrome 10+, Saf5.1+, iOS 5+ */
-		background-image: -moz-linear-gradient(top, $from-color, $to-color); /* FF3.6 */
-		background-image: -ms-linear-gradient(top, $from-color, $to-color); /* IE10 */
-		background-image: -o-linear-gradient(top, $from-color, $to-color); /* Opera 11.10+ */
+		background-image: -webkit-gradient(linear, left top, left bottom, from( $from-color), to( $to-color)); // Saf4+, Chrome
+		background-image: -webkit-linear-gradient(top, $from-color, $to-color); // Chrome 10+, Saf5.1+, iOS 5+
+		background-image: -moz-linear-gradient(top, $from-color, $to-color); // FF3.6
+		background-image: -ms-linear-gradient(top, $from-color, $to-color); // IE10
+		background-image: -o-linear-gradient(top, $from-color, $to-color); // Opera 11.10+
 		background-image: linear-gradient(top, $from-color, $to-color);
 		filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$from-color}', EndColorStr='#{$to-color}');
 	} @else {
@@ -54,29 +127,91 @@
 	}
 }
 
-// hide text. Uses Sass placeholder selector (%).
-// Usage: @extend hide-text
-%hide-text {
-	overflow: hidden;
-	text-indent: 100%;
-	white-space: nowrap;
-}
+/// A mixin for opacity. Takes care of browser
+/// prefixes for you. You should always use this mixin
+/// when writing opacity rules to ensure you're
+/// compatible with the browsers we support. Accepts
+/// arguments in the same syntax as standard CSS.
+/// More info at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/opacity
+/// @example
+/// 		Fade a thumbnail until it's hovered over.
+/// 			.gallery-thumbnail {
+///				@include opacity( 0.5 );
+///
+///				&:hover {
+///					@include opacity( 1 );
+///				}
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
 
-// cross-browser opacity
-// Usage: @include opacity(0.5)
 @mixin opacity( $opacity: NULL ) {
-	// Opacity must be in decimal form
 	@if ( $opacity <= 1 ) {
 		$opacity-ie: $opacity * 100;
 		opacity: $opacity;
 		filter: alpha(opacity=$opacity-ie); //IE8
+	} @else if ( type-of( $opacity ) == string ) { // Accounts for initial, inherit, unset
+		opacity: $opacity;
 	} @else {
-		@error 'Opacity must be specified as a decimal value. \a Example usage: @include opacity(0.5);';
+		@error 'Opacity must be specified as a decimal value. \a Example usage: @include opacity( 0.5 );';
 	}
 }
 
-// transition
-// Usage: @include transitions( all 250ms ease-in-out 0s )
+/// A mixin for transition. Takes care of browser
+/// prefixes for you. You should always use this mixin
+/// when writing transition rules to ensure you're
+/// compatible with the browsers we support.
+/// Supports multiple transitions, just use the same syntax
+/// as you would CSS. Please note: you should avoid trasition `all`,
+/// as it can become a significant performance issue on older devices.
+/// The cheapest properties to animate performance-wise are `transform`,
+/// `opacity`, and `filter` -  if you're not sure what you're doing, it's
+/// best to stick to those where possible.
+/// Learn how to test animation performance: https://www.sitepoint.com/check-css-animation-performance-with-the-browsers-dev-tools/
+/// Syntax info at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/transition
+/// @example
+/// 		Transition the opacity on a lightbox when it is opened.
+/// 			.lightbox-overlay {
+///				@include opacity( 0 );
+///				@include transition( opacity 250ms ease-in-out 0s );
+///
+///				&.open {
+///					@include opacity( 1 );
+///					@include transition( opacity 250ms ease-in-out 0s );
+///				}
+///			}
+///
+/// 		Transition multiple properties between hidden and visible item states
+///		for a filter and ensure that certain properties are applied to the
+///		animation immediately using the `step-start` timing function.
+/// 		Note the delay on opacity.
+/// 			.degree-program-hidden {
+///				@include opacity( 0 );
+///				@include scale( 1, 0 );
+///				z-index: 1;
+///
+///				@include transition(
+///					opacity 250ms ease-in-out .2s,
+///					transform 250ms ease-in-out 0s,
+///					z-index 0s step-start 0s
+///				);
+///			}
+/// 			.degree-program-visible {
+///				@include opacity( 1 );
+///				@include scale( 1, 1 );
+///				z-index: 2;
+///
+///				@include transition(
+///					opacity 250ms step-end .2s,
+///					transform 250ms ease-out 0s,
+///					z-index 0s step-start 0s
+///				);
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
 @mixin transition( $transitions... ) {
 	-webkit-transition: $transitions;
 	-moz-transition: $transitions;
@@ -85,7 +220,30 @@
 	transition: $transitions;
 }
 
-// transform
+/// A mixin for transform. Takes care of browser
+/// prefixes for you. You should always use this mixin
+/// when writing transform rules to ensure you're
+/// compatible with the browsers we support.
+/// Supports multiple transforms, just use the same syntax
+/// as you would CSS.
+/// More info at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/transform
+/// @example
+/// 		Move a callout.
+/// 			.callout {
+///				@include transform( translateX( 100px ) );
+///			}
+/// 		Move and rotate a callout.
+/// 			.callout-selected {
+///				@include transform(
+///					translateX( 100px )
+///					translateY( 20px )
+///					rotate( 20deg )
+///				);
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
 @mixin transform( $transforms ) {
 	-webkit-transform: $transforms;
 	-moz-transform: $transforms;
@@ -94,22 +252,89 @@
 	transform: $transforms;
 }
 
-// transform: rotate
+/// A shorthand mixin for rotate. Takes care of browser
+/// prefixes for you. You could use `transform` as well.
+/// Accepts an amount of degrees to rotate by.
+/// More info at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/transform
+/// @example
+/// 		Rotate a callout 90 degrees.
+/// 			.callout {
+///				@include rotate( 90 );
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
 @mixin rotate( $deg ) {
 	@include transform( rotate( #{$deg}deg ) );
 }
 
-// transform: scale
+/// A shorthand mixin for scale. Takes care of browser
+/// prefixes for you. You could use `transform` as well.
+/// Accepts an amount of degrees to rotate by.
+/// More info at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/transform
+/// @example
+/// 		Scale a callout to double its size.
+/// 			.callout {
+///				@include scale( 2 );
+///			}
+/// 		Scale the height of a filtered item from 0 to the full height when visible.
+/// 			.degree-program {
+///				@include scale( 0, 0 );
+///
+///				&.visible {
+///					@include scale( 0, 1 );
+///				}
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
 @mixin scale( $scale ) {
 	@include transform( scale( $scale ) );
 }
 
-// transform: translate
+/// A shorthand mixin for translate. Takes care of browser
+/// prefixes for you. You could use `transform` as well.
+/// Accepts two arguments: an amount to translate X by, and
+/// an amount to translate Y by.
+/// More info at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/transform
+/// @example
+/// 		Move a callout 10px to the left.
+/// 			.callout {
+///				@include translate( -10px, 0 );
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
 @mixin translate( $x, $y ) {
 	@include transform( translate( $x, $y ) );
 }
 
-// transform: transform-origin
+/// A mixin for transform-origin. Takes care of browser
+/// prefixes for you. You should always use this mixin
+/// when writing transform-origin rules to ensure you're
+/// compatible with the browsers we support.
+/// Use with `transform`, `rotate`, `scale`, or `translate`
+/// to tell the browser where the transform should start from.
+/// Accepts any valid CSS value for `transform-origin`.
+/// More info at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin
+/// @example
+/// 		Scale the height of a filtered item from 0 to the full height when visible
+///		and start the transform from the top of the item.
+/// 			.degree-program {
+///				@include scale( 0, 0 );
+///				@include transform-origin( top );
+///
+///				&.visible {
+///					@include scale( 0, 1 );
+///				}
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
 @mixin transform-origin( $origin ) {
 	-webkit-transform-origin: $origin;
 	-moz-transform-origin: $origin;
@@ -118,7 +343,34 @@
 	transform-origin: $origin;
 }
 
-// keyframes
+/// A mixin for keyframes. Takes care of browser
+/// prefixes for you. You should always use this mixin
+/// when writing keyframe rules to ensure you're
+/// compatible with the browsers we support.
+/// Use with `animation` to build complex animations
+/// that `transition` isn't capable of alone and to tightly
+/// control timing.
+/// Accepts any valid CSS value for `keyframes`.
+/// More info at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
+/// @example
+/// 		Create an infinite loading animation which completes every 250ms
+///		using keyframes and animation.
+/// 			@include keyframes( infinite-loader ) {
+/// 				from {
+/// 					transform: rotate( 0deg );
+/// 				}
+/// 				to {
+/// 					transform: rotate( 360deg );
+/// 				}
+/// 			}
+///
+/// 			.loading {
+///				@include animation( infinite-loader 250ms infinite );
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
 @mixin keyframes( $animation-name ) {
 	@-webkit-keyframes #{$animation-name} {
 		@content;
@@ -137,19 +389,68 @@
 	}
 }
 
-// animation
-@mixin animation( $str ) {
-	-webkit-animation: #{$str};
-	-moz-animation: #{$str};
-	-ms-animation: #{$str};
-	-o-animation: #{$str};
-	animation: #{$str};
+/// A mixin for animation. Takes care of browser
+/// prefixes for you. You should always use this mixin
+/// when writing animation rules to ensure you're
+/// compatible with the browsers we support.
+/// Use with `keyframes` to build complex animations
+/// that `transition` isn't capable of alone and to tightly
+/// control timing.
+/// Accepts any valid CSS value for `animation`, including
+/// multiple animation declarations.
+/// More info at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/animation
+/// @example
+/// 		Create an infinite loading animation which completes every 250ms
+///		using keyframes and animation.
+/// 			@include keyframes( infinite-loader ) {
+/// 				from {
+/// 					transform: rotate( 0deg );
+/// 				}
+/// 				to {
+/// 					transform: rotate( 360deg );
+/// 				}
+/// 			}
+///
+/// 			.loading {
+///				@include animation( infinite-loader 250ms infinite );
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
+@mixin animation( $keyframe-animations... ) {
+	-webkit-animation: #{$keyframe-animations};
+	-moz-animation: #{$keyframe-animations};
+	-ms-animation: #{$keyframe-animations};
+	-o-animation: #{$keyframe-animations};
+	animation: #{$keyframe-animations};
 }
 
-// vertical-center: a more IE-friendly version of vertical center. Apply "vertical-center-child" to a parent element and "vertical-center" to the child
-// Default usage: @include vertical-center-child;
-// Usage specifying a child selector: @include vertical-center-child(".yourSelector");
-@mixin vertical-center-child( $selector: "*" ) {
+/// A deprecated mixin for vertical centering in IE8. This is an older
+/// approach that can be used when centering is critical for IE8,
+/// such as with branding, or lack of centering will cause usability
+/// issues. If neither of these applies, use the newer version, which
+/// is simpler, less buggy with regards to positioning, and uses flexbox.
+/// With this mixin, you can choose to center all child items, or just
+/// a specific selector. You should always try to use the specific selector
+/// option where possible to avoid performance issues.
+/// This mixin should be used on the parent element of whatever you want to center.
+/// Covers vertical centering for IE8 and above; no additional mixins are necessary.
+/// @example
+/// 		Center everything in a callout vertically (bad).
+/// 			.callout {
+///				@include vertical-center-child-ie8;
+///			}
+/// 		Center only the callout text in a callout vertically (good).
+/// 			.callout {
+///				@include vertical-center-child-ie8( ".callout-text" );
+///			}
+/// @group mixins
+/// @access public
+/// @deprecated Deprecated in favor of flexbox approach in Responsive 2.0
+/// @since 1.0.0
+
+@mixin vertical-center-child-ie8( $selector: "*" ) {
 	.lt-ie9 & {
 		display: table;
 	}
@@ -162,14 +463,31 @@
 		position: relative;
 		top: 50%;
 		display: block;
-		-webkit-transform: translateY(-50%);
-			-moz-transform: translateY(-50%);
-			 -ms-transform: translateY(-50%);
-				  transform: translateY(-50%);
+		-webkit-transform: translateY( -50% );
+			-moz-transform: translateY( -50% );
+			 -ms-transform: translateY( -50% );
+				  transform: translateY( -50% );
 	}
 }
-// Usage: @include vertical-center
-@mixin vertical-center {
+
+/// A deprecated mixin for vertical centering in IE9 and above. This is an
+/// older approach that can be used when centering is critical for IE9.
+/// Vertical centering is not available in IE8 using this approach.
+/// If this doesn't apply, use the newer version, which is simpler,
+/// less buggy with regards to positioning, and uses flexbox.
+/// This mixin should be used on the element you want to center.
+/// No parent styles are necessary.
+/// @example
+/// 		Vertically center the callout text in a callout.
+/// 			.callout {
+///				@include vertical-center-ie9;
+///			}
+/// @group mixins
+/// @access public
+/// @deprecated Deprecated in favor of flexbox approach in Responsive 2.0
+/// @since 1.0.0
+
+@mixin vertical-center-ie9 {
 	position: relative;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
@@ -180,10 +498,87 @@
 		top: auto;
 	}
 }
-// Hide elements visually but not from screen readers. Great for accessibility hints like skip to content. Uses Sass placeholder selector (%).
-// Usage: @extend %visuallyhidden
-%visuallyhidden,
-.visually-hidden {
+
+/// A mixin for vertically and horizontally centering all children
+/// in modern browsers using flexbox.
+/// Use this mixin when centering isn't critical to usability.
+/// Older browsers will gracefully degrade and not center.
+/// This mixin should be used on the parent of the elements you
+/// want to center.
+/// By default, this is set to work as-is for most use cases, but
+/// you may be interested in tweaking the parameters if you
+/// want flexbox-specific functionality.
+/// @example
+/// 		Center all elements in a callout for modern browsers.
+/// 			.callout {
+///				@include center-children;
+///			}
+/// 		Center all elements in a callout for modern browsers,
+///		but let flexbox decide the width for each child item.
+/// 			.callout {
+///				@include center-children( center, center, nowrap, center );
+///			}
+/// @group mixins
+/// @param {string} | $align-content [center] - Removes the gap between multiple child items.
+/// @param {string} | $align-items [center] - Centers child items vertically.
+/// @param {string} | $flex-wrap [wrap] - Wraps child items so the width behaves as expected.
+/// @param {string} | $justify-content [center] - Centers child items horizontally.
+/// @access public
+/// @since 2.0.0
+
+@mixin center-children( $align-content: center, $align-items: center, $flex-wrap: wrap, $justify-content: center ) {
+	align-content: $align-content;
+	align-items: $align-items;
+	display: flex;
+	flex-wrap: $flex-wrap;
+	justify-content: $justify-content;
+}
+
+/// Hides text in an element visually, but preserves width and height
+/// and screen reader visibility. Use this placeholder to hide text when
+/// you need a visual representation of the screen reader text,
+/// but the text itself isn't desirable to have in your design,
+/// such as in a logo. For example, this placeholder is used to
+/// hide the text on the BU masterplate and BUMC logo in the footer.
+/// In cases where there is no visual component to worry about,
+/// %visually-hidden is preferred because it supports right-to-left
+/// languages and will be safer if a site is ever translated.
+/// More info on this technique: http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+/// @example
+/// 		Hide text on a logo using a background image.
+/// 			.custom-logo {
+///				@extend %hide-text;
+///				background-image: url( "images/your-image.jpg" );
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
+%hide-text,
+.u-hide-text {
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+}
+
+/// Hides entire elements visually, but preserves visibility for
+/// screen readers. Use this placeholder when an element is only
+/// for screen readers and needs no visual representation on the site.
+/// This is the preferred method of hiding items visually as it works
+/// with right-to-left languages, making it a safer choice if a site is
+/// ever translated.
+/// More info on this technique: http://a11yproject.com/posts/how-to-hide-content/
+/// @example
+/// 		Hide a label in a button.
+/// 			.fancy-button-label {
+///				@extend %visually-hidden;
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
+%visually-hidden,
+.u-visually-hidden {
 	border: 0;
 	clip: rect( 0, 0, 0, 0 ); // Deprecated. Remove when clip-path support is better.
 	clip-path: inset( 50% );
@@ -195,6 +590,17 @@
 	width: 1px;
 }
 
+/// Reverses `%visually-hidden`. Helpful if you want to
+/// unhide a previously hidden label.
+/// @example
+/// 		Show a previously hidden label for all users.
+/// 			.fancy-button-label {
+///				@extend %remove-visually-hidden;
+///			}
+/// @group mixins
+/// @access public
+/// @since 2.0.0
+
 %remove-visually-hidden {
 	clip: auto;
 	clip-path: none;
@@ -205,66 +611,193 @@
 	width: auto;
 }
 
-// If primary stylesheet indicates media query support (e.g. style.scss ), output media queries. If not (e.g. ie.scss ), output the block WITHOUT @media wrapper.
-// Usage: @include breakpoint( md ) {...}
-// $skiplgMQforIE tells this mixin whether or not to skip the lg point styles on THIS set of styles for IE8.
-// If you have an individual set of styles for the large breakpoint that you need to print, this allows you to do it.
-// Realistically, you probably don't need it.
-// TODO: check out if http://sassbreak.com/getting-back-to-our-roots/ helps with mqs for IE
-// It looks like it can print styles at the root if MQs aren't supported, maybe.
+/// A class for developers to use to quickly prototype filtering.
+/// Hides an item completely. Do not use in production code.
+/// Never override this class in your CSS. Instead, attach the
+/// final show/hide animations to the CSS class you decide to use
+/// for that element.
+/// @group mixins
+/// @access public
+/// @since 2.0.0
 
-@mixin breakpoint( $point, $skiplgMQsforIE: true ) {
-	// Error handling for anyone upgrading to 1.2.0
-	@if (
-		$point == extra_small or
-		$point == small or
-		$point == medium or
-		$point == large
-	) {
-		@error 'The breakpoint shorthand "#{$point}" is no longer supported as of Responsive 1.2.0. Use "xs", "sm", "md", or "lg" instead.';
+.u-hide {
+	display: none;
+}
+
+/// A class for developers to use to quickly prototype filtering.
+/// Shows an item. Do not use in production code.
+/// Never override this class in your CSS. Instead, attach the
+/// final show/hide animations to the CSS class you decide to use
+/// for that element.
+/// @group mixins
+/// @access public
+/// @since 2.0.0
+
+.u-show {
+	display: block;
+}
+
+/// A safe way to including responsive styles on old browers which
+/// do not fully support media queries, such as IE8.
+/// All media queries using this mixin are mobile-first (`min-width`).
+/// This mixin will take all reponsive styles up to a certain point and print
+/// them in the order they're written in the ie.css stylesheet, up until
+/// the default screen width you set to support in IE8 and below.
+/// In most cases, you won't have to change this from `$lg`, but you
+/// can always check Google Analytics to see what the most used screen
+/// size is for your site's older IE users if you like, and set it to that.
+/// This mixin no longer supports custom media queries like `max-width` as of 2.0,
+/// because those styles do not generally need to be included for old IE
+/// to be usable. Instead, you should use a plain CSS media query, which
+/// will not interfere with older browsers and degrade gracefully.
+/// By default, you'll use this mixin for all your responsive styles,
+/// and should only have a few very minor exceptions in media queries.
+/// @example
+/// 		Change the background of a callout from black to white
+///		on tablets in vertical orientation and larger.
+/// 			.callout {
+///				background: $color-grayscale-0;
+///
+///				@include breakpoint( $xs ) {
+///					background: $color-grayscale-f;
+///				}
+///			}
+/// 		Override the background on a callout to
+///		white, but only on the smallest phones.
+/// 			.callout {
+///				@media screen and ( max-width: $xs - 1 ) {
+///					background: $color-grayscale-f;
+///				}
+///			}
+/// @group mixins
+/// @param {variable | number} | $breakpoint - The window width to begin applying your styles. Can be any pixel value, but `$xs`, `$sm`, `$md`, `$lg`, and `$xl` are standard in this framework.
+/// @access public
+/// @since 1.0.0
+
+@mixin breakpoint( $point, $skip-mqs-for-ie: true ) {
+	// Error handling for anyone upgrading to 2.0
+	@if ( type-of( $point ) == string ) {
+		@error 'The breakpoint shortcut "#{$point}" is no longer supported as of Responsive 2.0. \a Use the direct breakpoint variable ($#{$point}) instead. \a If want to use max-width, write a plain @media query.';
 	}
 	@if ( $mqs ) {
-		@if ( $point == xs ) {
-			@media screen and ( min-width: $xs ) {
-				@content;
-			}
-		} @else if ( $point == sm ) {
-			@media screen and ( min-width: $sm ) {
-				@content;
-			}
-		} @else if ( $point == md ) {
-			@media screen and ( min-width: $md ) {
-				@content;
-			}
-		} @else if ( $point == lg ) {
-			@media screen and ( min-width: $lg ) {
-				@content;
-			}
-		} @else if ( $point == xl ) {
-			@media screen and ( min-width: $xl ) {
-				@content;
-			}
-		} @else {
-			// Can also accept your very own min-width argument, like so:
-			// "min-width: 300px;"
-			// "max-width: 900px;"
-			// Keep in mind these print for all sizes if MQs aren't supported.
-			@media screen and ( $point ) {
-				@content;
-			}
+		@media screen and ( min-width: $point ) {
+			@content;
 		}
 	} @else {
-		@if ( $point == lg and $skiplgMQsforIE ) {
-			// ie8 and large desktop output nothing
+		@if ( $point >= $lte-ie8-target-width and $skip-mqs-for-ie ) {
+			// Do not output very large desktop styles for IE8
 		} @else {
 			@content;
 		}
 	}
 }
 
+/// A mixin to quickly add angles to an element.
+/// Uses before/after pseudo classes.
+/// Based on Jeremy Frank's work here: https://www.viget.com/articles/angled-edges-with-css-masks-and-transforms
+/// @example
+/// 		Add a 1.5 degree angle, slanted right, to the bottom of a callout.
+///		.callout {
+///			@include angle( after );
+///		}
+///
+/// 		Add angles to both edges of a callout.
+///		.callout {
+///			@include angle( both );
+///		}
+///
+/// 		Add a 2.5 degree angle, slanted right, to the top of a callout.
+///		.callout {
+///			@include angle( before, false, 2.5deg );
+///		}
+///
+/// @group mixins
+/// @param {string} | $pseudo [after] - The pseudo-element to apply the angle to. Use before to get an angle on top, after to get an angle on bottom.
+/// @param {bool} | $flip [false] - Whether or not to flip the default angle slant. By default, the angle will slant upwards to the right.
+/// @param {deg} | $angle [1.5deg] - The number of degrees to slant the angle at.
+/// @access public
+/// @since 2.0.0
+
+@mixin angle( $pseudo: after, $flip: false, $angle: 1.5deg ) {
+	@if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
+		position: relative;
+		z-index: 1;
+
+		$selector: if( $pseudo == 'both', '&:before,&:after', '&:#{$pseudo}' );
+
+		#{$selector} {
+			-webkit-backface-visibility: hidden; // for Chrome Windows
+			background: inherit;
+			content: "";
+			display: block;
+			height: 50%;
+			left: 0;
+			position: absolute;
+			right: 0;
+			z-index: -1;
+		}
+
+		@if $pseudo == 'before' {
+			#{$selector} {
+				top: 0;
+
+				@if $flip {
+					transform: skewY($angle * -1);
+					transform-origin: 0 0;
+				} @else {
+					transform: skewY($angle);
+					transform-origin: 100% 0;
+				}
+			}
+		}
+
+		@if $pseudo == 'after' {
+			#{$selector} {
+				bottom: 0;
+
+				@if $flip {
+					transform: skewY($angle);
+					transform-origin: 0 100%;
+				} @else {
+					transform: skewY($angle * -1);
+					transform-origin: 100%;
+				}
+			}
+		}
+
+		@if $pseudo == 'both' {
+			&:before {
+				top: 0;
+
+				@if $flip {
+					transform: skewY($angle * -1);
+					transform-origin: 0 0;
+				} @else {
+					transform: skewY($angle);
+					transform-origin: 100% 0;
+				}
+			}
+
+			&:after {
+				bottom: 0;
+
+				@if $flip {
+					transform: skewY($angle);
+					transform-origin: 0 0;
+				} @else {
+					transform: skewY($angle * -1);
+					transform-origin: 100%;
+				}
+			}
+		}
+	}
+}
+
 /// Outputs a sass map neatly in CSS for debugging purposes.
+/// Sends output to terminal on compile.
 /// From https://www.sitepoint.com/debugging-sass-maps/
 /// @group mixins
+/// @param {map} | $map - A sass map to debug.
 /// @access public
 /// @since 2.0.0
 
@@ -284,8 +817,22 @@
 	}
 }
 
-// Media query for retina images
-// Usage: @include retina {...}
+/// A shortcut media query for retina devices.
+/// Handy for including separate retina images.
+/// Accepts blocks of CSS or Sass.
+/// @example
+/// 		Add a retina-specific logo.
+/// 			.custom-logo {
+///				background: url( "images/custom-logo.jpg" );
+///
+///				@include retina {
+///					background: url( "images/custom-logo-retina.jpg" );
+///				}
+///			}
+/// @group mixins
+/// @access public
+/// @since 1.0.0
+
 @mixin retina {
 	@media
 	only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -298,13 +845,27 @@
 	}
 }
 
-// Mixin to generate RGBA colors for any style with a fallback for non-rgba browsers such as IE8.
-// Usage: @include rgba-color('background-color', rgba(black, 0.5), white);
+/// Generates backwards-compatible RGBA color CSS by calculating
+/// a solid color that looks the same as what a user sees for IE8 and
+/// below.
+/// @example
+/// 		Style a darkened overlay on the bottom half of a callout with
+///		a green background.
+/// 			.callout-overlay {
+///				@include rgba-color( background-color, rgba( $color-grayscale-0, 0.5 ), $green );
+///			}
+/// @group mixins
+/// @param {string} | $attribute - The CSS attribute to apply your color to.
+/// @param {string} | $color - The rgba color to use for modern browsers.
+/// @param {string} | $background - The background color of the item this will sit on top of, to help calculate an accurate fallback color. Use a solid version of the same color as `$color` for photos.
+/// @access public
+/// @since 1.0.0
+
 @mixin rgba-color( $attribute: NULL, $color: NULL, $background: NULL ) {
 	@if (
-		type_of( $attribute ) == string and
-		type_of( $color ) == color and
-		type_of( $background ) == color
+		type-of( $attribute ) == string and
+		type-of( $color ) == color and
+		type-of( $background ) == color
 	) {
 		$percent: alpha( $color ) * 100%;
 		$opaque: opacify( $color, 1 );
@@ -313,13 +874,6 @@
 		#{$attribute}: $solid-color;
 		#{$attribute}: $color;
 	} @else {
-		@error 'The rgba-color mixin requires a valid CSS attribute to apply the color to, a valid RGBA color, and a valid fallback color. \a Example usage: @include rgba-color(\'background-color\', rgba(black, 0.5), white);';
+		@error 'The rgba-color mixin requires a valid CSS attribute to apply the color to, a valid RGBA color, and a valid background color to calculate the fallback color. \a Example usage: @include rgba-color(\'background-color\', rgba(black, 0.5), white);';
 	}
-}
-
-// Help for mixins so it's easier to see syntax - prints to console on each save
-// Usage: @include mixin-help
-
-@mixin mixin-help {
-	@debug '\a\a\a Quick guide to Responsive mixins: \a\a border-radius: @include border-radius(3px); \a box-shadow: @include box-shadow(0 0 1px 3px #000000); \a linear-gradient: @include linear-gradient( $fromColor, $to-color); \a opacity: @include opacity(0.5); \a transition: @include transition(all, 250ms, ease-in-out, 0s ); \a transform: @include(any valid CSS transform argument); \a rotate: @include rotate(90); \a scale: @include scale(2); \a translate: @include translate(10px, 20px); \a keyframes: @include keyframes(animationName) { ... } ; \a animation: @include animation(animationName); \a vertical-center: @include vertical-center in the element you want to center \a vertical-center (IE friendly): @include vertical-center-child(.childElement) in the parent class \a breakpoint: @include breakpoint( md ) { ... } \a retina:  @include retina { ... } \a rgba-color: @include rgba-color(\'background-color\', rgba(someColor, 0.5), fallbackColor); \a\a';
 }

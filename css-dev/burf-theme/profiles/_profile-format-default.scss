@@ -1,3 +1,7 @@
+// =================================================================
+// Profile Default Format Settings
+// =================================================================
+
 /// Adjusts the size of the default profile photo.
 /// @group profiles
 /// @access public
@@ -11,7 +15,11 @@ $profile-photo-default-size:               50px;
 /// @access public
 /// @since 1.0.0
 
-$border-profiles:                          $border-base !default;
+$border-profiles:                          $border !default;
+
+// =================================================================
+// Profile Default Format Styles
+// =================================================================
 
 /// Styles the default profile format.
 /// @group profiles
@@ -31,7 +39,7 @@ $border-profiles:                          $border-base !default;
 	border-bottom: $border-profiles;
 	margin-bottom: 0;
 	min-height: 100px;
-	padding: 25px ( $profile-photo-default-size + $margin-small ) 25px 0;
+	padding: $padding ( $profile-photo-default-size + $margin-small ) $padding 0;
 }
 
 /// Styles a default profile photo.

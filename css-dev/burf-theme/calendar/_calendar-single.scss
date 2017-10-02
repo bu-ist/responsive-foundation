@@ -41,7 +41,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 	@extend %col-sm-third;
 	margin: 0 0 20px;
 
-	@include breakpoint( sm ) {
+	@include breakpoint( $sm ) {
 		float: right;
 		margin-left: $grid-margin-width#{"%"};
 	}
@@ -83,7 +83,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 /// @since 2.0.0
 
 .event-time-make-sentence {
-	@extend %visuallyhidden;
+	@extend %visually-hidden;
 }
 
 /// Handles styling for start time in the schedule of

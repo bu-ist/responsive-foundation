@@ -2,22 +2,18 @@
 // Templates
 // =================================================================
 
-//	1. Narrow Content Column
-//	2. Narrow Sidebar
-//	3. 404 page
-
-// -----------------------------------------------------------------
-// Narrow Content Column
-// -----------------------------------------------------------------
+/// Handles styling for narrow content container pages.
+/// Do not override this class. Instead, add or remove
+/// templates from the narrow content container PHP filter
+/// in your theme.
+/// @group templates
+/// @access public
+/// @since 2.0.0
 
 .content-container-narrow {
 	@extend %container-styles;
 	max-width: $container-sm;
 }
-
-// -----------------------------------------------------------------
-// 404 page
-// -----------------------------------------------------------------
 
 /// Handles styling for the 404 page.
 /// @group templates
