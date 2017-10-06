@@ -268,10 +268,14 @@ $grid-column-padding:                      0 $padding !default;
 	float: left;
 }
 
-%col-margin-base {
+@mixin col-margin-base {
 	margin-bottom: $grid-margin-width#{"%"};
 	margin-top: 0;
 	padding: 20px;
+}
+
+%col-margin-base {
+	@include col-margin-base;
 }
 
 %col-noleftmargin {
@@ -313,101 +317,67 @@ $grid-widths-margins: ();
 	}
 }
 
-@for $i from 0 to length($grid-widths) {
-	// Get percentage from earlier
-	$percentage: nth($grid-widths, ($i + 1));
+@mixin col-float {
+	float: left;
+}
 
-	@if map-get($grid-supports, push) {
-		%col-push-#{$i} {
-			@include gridBuild(left, $percentage);
-		}
+@mixin grid-styles( $option, $col ) {
+	$percentage: nth( $grid-widths, $col + 1 );
+
+	@if ( $option == 'margin' ) {
+		$percentage: nth( $grid-widths-margins, $col + 1 );
+		@include col-margin-base;
+		@include gridBuild( width, $percentage );
+		float: left;
 	}
 
-	@if map-get($grid-supports, pull) {
-		%col-pull-#{$i} {
-			@include gridBuild(right, $percentage);
-		}
+	@if ( $option == 'push' ) {
+		@include gridBuild( left, $percentage );
 	}
 
-	@if map-get($grid-supports, offset) {
-		%col-offset-#{$i} {
-			@include gridBuild( margin-left, $percentage );
-		}
+	@if ( $option == 'pull' ) {
+		@include gridBuild( right, $percentage );
 	}
 
-	@if map-get($grid-supports, margin) and ($i != 0) {
-		%col-margin-#{$i} {
-			@extend %col-margin-base;
-			$margin-percentage: nth( $grid-widths-margins, $i + 1 );
-			@include gridBuild( width, $margin-percentage );
-			float: left;
+	@if ( $option == 'offset' ) {
+		@include gridBuild( margin-left, $percentage );
+	}
+
+	@if ( $option == '' ) {
+		@include gridBuild( width, $percentage );
+	}
+}
+
+@mixin col( $breakpoint: '', $option: '', $col: $grid-number-columns ) {
+	@if ( $breakpoint != '' ) {
+		@include breakpoint( $breakpoint, false ) {
+			@include grid-styles( $option, $col );
 		}
+	} @else {
+		@include grid-styles( $option, $col );
 	}
 }
 
 
-// Breakpoints time
 
-@each $bp-name, $bp-variable in $grid-breakpoints {
+@for $i from 0 to length($grid-widths) {
+	@each $feature, $supported in $grid-supports {
+		@if ( $supported ) {
+			%col-#{$feature}-#{$i} {
+				@include col( '', $feature, $i );
+			}
 
-	@include breakpoint( $bp-variable, false ) {
-		%col-#{$bp-name}-margin-base {
-			margin-left: $grid-margin-width#{"%"};
-		}
-
-		.col-#{$bp-name}-margin-parent,
-		%col-#{$bp-name}-margin-parent {
-			margin-left: -$grid-margin-width#{"%"};
-		}
-
-		@for $i from 0 to length($grid-widths) {
-			// Get percentage from earlier
-			$percentage: nth($grid-widths, ($i + 1));
-
-			%col-#{$bp-name} {
-				@if ($i != 0) {
-					&-#{$i} {
-						@include gridBuild(width, $percentage);
-						float: left;
-					}
-				}
-
-				@if map-get($grid-supports, push) {
-					&-push-#{$i} {
-						@include gridBuild(left, $percentage);
-					}
-				}
-
-				@if map-get($grid-supports, pull) {
-					&-pull-#{$i} {
-						@include gridBuild(right, $percentage);
-					}
-				}
-
-				@if map-get($grid-supports, offset) {
-					&-offset-#{$i} {
-						@include gridBuild( margin-left, $percentage );
-					}
-				}
-				@if map-get($grid-supports, margin) and ($i != 0) {
-					&-margin-#{$i} {
-						$margin-percentage: nth( $grid-widths-margins, $i + 1 );
-						@include gridBuild( width, $margin-percentage );
-						float: left;
-					}
+			@each $breakpoint, $value in $grid-breakpoints {
+				%col-#{$breakpoint}-#{$feature}-#{$i} {
+					@include col( $value, $feature, $i );
 				}
 			}
 		}
 	}
 
-	@for $i from 0 through $grid-number-columns {
-
-		@if map-get($grid-supports, margin) and ($i != 0) {
-			// Add to base styles
-			%col-#{$bp-name}-margin-#{$i} {
-				@extend %col-margin-base;
-				@extend %col-#{$bp-name}-margin-base;
-			}
+	@each $breakpoint, $value in $grid-breakpoints {
+		%col-#{$breakpoint}-#{$i} {
+			@include col( $value, '', $i );
 		}
 	}
 }
