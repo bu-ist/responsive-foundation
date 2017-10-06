@@ -143,7 +143,7 @@ module.exports = function(grunt) {
 					access: ['public'],
 				},
 				dest: docsVersionFilePath,
-				theme: 'bower_components/sassdoc-theme-budocs',
+				theme: 'node_modules/sassdoc-theme-budocs',
 				basePath: 'https://github.com/bu-ist/responsive-foundation/tree/' + pkg.version + '/css-dev',
 				groups: {
 					'01-config': 'Global Configuration',

@@ -11,6 +11,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-gh-pages": "^0.9.1",
     "grunt-sassdoc": "^2.0.2",
-    "grunt-version": "^0.3.0"
+    "grunt-version": "^0.3.0",
+    "sassdoc-theme-budocs": "git@github.com:ashleykolodziej/sassdoc-theme-budocs.git#master"
   }
 }
