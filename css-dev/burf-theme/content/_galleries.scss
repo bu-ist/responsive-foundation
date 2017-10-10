@@ -69,7 +69,7 @@ $color-gallery-overlay: rgba( $color-grayscale-0, 0.75 ) !default;
 	@for $i from 1 through $_wp-supported-gallery-columns {
 		.gallery-columns-#{$i} & {
 			@include breakpoint( $xs ) {
-				width: 100 / $i#{"%"};
+				width: ( 100 / $i )#{"%"};
 
 				&:nth-child(#{$i}n + 1) {
 					clear: left;

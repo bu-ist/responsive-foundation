@@ -54,7 +54,11 @@ standards [See related pull request](https://github.com/bu-ist/responsive-founda
 * Better compliance with licensing rules for Normalize and Pure CSS
 [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/59)
 
-## 1.4.1
+# 1.4.2
+
+* Fixes missing parenthesis in gallery Sass to make Foundation compatible with libsass
+
+# 1.4.1
 
 * Fixes a typo in classes for BUMC branding
 
