@@ -1,0 +1,98 @@
+// =================================================================
+// User Interface Icons
+	// filter
+	// checkbox - empty
+	// checkbox - filled
+	// radio - empty
+	// radio - filled
+// =================================================================
+
+/// The filter icon.
+/// @example scss - Add the filter icon to a menu item
+/// .menu-item {
+///    @extend %icon-filter;
+/// }
+/// @group icons
+/// @access public
+/// @since 2.0.0
+
+%icon-filter {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\ED51";
+	}
+}
+
+/// The checkbox - empty icon.
+/// @example scss - Add the checkbox - empty icon to a menu item
+/// .menu-item {
+///    @extend %icon-checkbox-empty;
+/// }
+/// @group icons
+/// @access public
+/// @since 2.0.0
+
+%icon-checkbox-empty {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\ED52";
+	}
+}
+
+/// The checkbox - filled icon.
+/// @example scss - Add the checkbox - filled icon to a menu item
+/// .menu-item {
+///    @extend %icon-checkbox-filled;
+/// }
+/// @group icons
+/// @access public
+/// @since 2.0.0
+
+%icon-checkbox-filled {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\ED53";
+	}
+}
+
+/// The radio - empty icon.
+/// @example scss - Add the radio - empty icon to a menu item
+/// .menu-item {
+///    @extend %icon-radio-empty;
+/// }
+/// @group icons
+/// @access public
+/// @since 2.0.0
+
+%icon-radio-empty {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\ED54";
+	}
+}
+
+/// The radio - filled icon.
+/// @example scss - Add the radio - filled icon to a menu item
+/// .menu-item {
+///    @extend %icon-radio-filled;
+/// }
+/// @group icons
+/// @access public
+/// @since 2.0.0
+
+%icon-radio-filled {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\ED55";
+	}
+}
