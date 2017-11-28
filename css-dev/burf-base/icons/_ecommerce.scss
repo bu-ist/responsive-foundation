@@ -2,6 +2,7 @@
 // eCommerce Icons
 	// burst
 	// cart
+	// credit card
 	// emptycart
 // =================================================================
 
@@ -38,6 +39,24 @@
 	&::before {
 		@extend %icon-content;
 		content: "\E500";
+	}
+}
+
+/// The credit card icon.
+/// @example scss - Add the credit card icon to a menu item
+/// .menu-item {
+///    @extend %icon-creditcard;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-creditcard {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\1F4B3";
 	}
 }
 
