@@ -637,6 +637,32 @@
 	display: block;
 }
 
+/// A class for developers to use to enable style matching to
+/// Responsive child themes. Generally used to aid in plugin
+/// development - it's unlikely you'll want to use this in
+/// a child theme, since you have control over the output.
+/// Matches to the $padding variable.
+/// @group mixins
+/// @access public
+/// @since 2.0.0
+
+.u-padding {
+	padding: $padding;
+}
+
+/// A class for developers to use to enable style matching to
+/// Responsive child themes. Generally used to aid in plugin
+/// development - it's unlikely you'll want to use this in
+/// a child theme, since you have control over the output.
+/// Matches to the $margin variable.
+/// @group mixins
+/// @access public
+/// @since 2.0.0
+
+.u-margin {
+	margin: $margin;
+}
+
 /// A safe way to including responsive styles on old browers which
 /// do not fully support media queries, such as IE8.
 /// All media queries using this mixin are mobile-first (`min-width`).
