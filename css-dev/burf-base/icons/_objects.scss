@@ -24,6 +24,8 @@
 	// planet
 	// poo
 	// puzzle
+	// recycle
+	// recycle alt
 	// screwdriver
 	// thermometer
 	// toolbox
@@ -31,6 +33,7 @@
 	// users
 	// utensils
 	// view
+	// wheelchair
 	// wrench
 // =================================================================
 
@@ -468,6 +471,42 @@
 	}
 }
 
+/// The recycle icon.
+/// @example scss - Add the recycle icon to a menu item
+/// .menu-item {
+///    @extend %icon-recycle;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-recycle {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\267B";
+	}
+}
+
+/// The recycle alt icon.
+/// @example scss - Add the recycle alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-recycle-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-recycle-alt {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\267C";
+	}
+}
+
 /// The screwdriver icon.
 /// @example scss - Add the screwdriver icon to a menu item
 /// .menu-item {
@@ -591,6 +630,24 @@
 	&::before {
 		@extend %icon-content;
 		content: "\1F440";
+	}
+}
+
+/// The wheelchair icon.
+/// @example scss - Add the wheelchair icon to a menu item
+/// .menu-item {
+///    @extend %icon-wheelchair;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-wheelchair {
+	@extend %icon-base;
+
+	&::before {
+		@extend %icon-content;
+		content: "\267F";
 	}
 }
 
