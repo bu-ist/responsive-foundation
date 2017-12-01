@@ -20,7 +20,7 @@
 }
 
 // A helper mixin to build grid styles. No need to use outside this file.
-@mixin grid-build($cssproperty, $amount) {
+@mixin grid-build( $cssproperty, $amount ) {
 	#{$cssproperty}: #{$amount}#{"%"};
 }
 
@@ -36,7 +36,7 @@
 		@include col-float;
 	}
 
-	@if ( $option == 'margin' ) {
+	@if ( $option == "margin" ) {
 		$percentage: nth( $grid-widths-margins, $col + 1 );
 		@include grid-build( width, $percentage );
 
@@ -45,29 +45,29 @@
 		}
 	}
 
-	@if ( $option == 'push' ) {
+	@if ( $option == "push" ) {
 		@include grid-build( left, $percentage );
 	}
 
-	@if ( $option == 'pull' ) {
+	@if ( $option == "pull" ) {
 		@include grid-build( right, $percentage );
 	}
 
-	@if ( $option == 'offset' ) {
+	@if ( $option == "offset" ) {
 		@include grid-build( margin-left, $percentage );
 	}
 
-	@if ( $option == '' ) {
+	@if ( $option == "" ) {
 		@include grid-build( width, $percentage );
 	}
 }
 
-@mixin col( $breakpoint: '', $option: '', $col: $grid-number-columns, $force: true ) {
-	@if ( 'string' == type-of( $col ) ) and ( map-get( $widths, $col ) ) {
+@mixin col( $breakpoint: "", $option: "", $col: $grid-number-columns, $force: true ) {
+	@if ( "string" == type-of( $col ) ) and ( map-get( $widths, $col ) ) {
 		$col: map-get( $widths, $col );
 	}
 
-	@if ( $breakpoint != '' ) {
+	@if ( $breakpoint != "" ) {
 		@include breakpoint( $breakpoint, false ) {
 			@include grid-styles( $option, $col, $force );
 		}

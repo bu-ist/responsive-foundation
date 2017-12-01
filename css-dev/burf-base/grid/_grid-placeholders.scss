@@ -91,8 +91,8 @@
 
 %equal-height-child-backcompat {
 	@include breakpoint( $md ) {
-		padding-bottom: 99999px;
 		margin-bottom: -99999px;
+		padding-bottom: 99999px;
 	}
 }
 
@@ -160,26 +160,26 @@ $grid-widths-margins: ();
 
 @for $i from 0 through $grid-number-columns {
 	// Determine current base width
-	$percentage: ($i / $grid-number-columns)*100;
+	$percentage: ( $i / $grid-number-columns )*100;
 	// Create a list of widths for grid-build to use later
-	$grid-widths: append($grid-widths, $percentage, comma);
+	$grid-widths: append( $grid-widths, $percentage, comma );
 
-	$percentage: ($i / $grid-number-columns)*100;
-	$grid-widths-margins: append($grid-widths-margins, ($percentage - $grid-margin-width), comma);
+	$percentage: ( $i / $grid-number-columns )*100;
+	$grid-widths-margins: append( $grid-widths-margins, ( $percentage - $grid-margin-width ), comma );
 
 	// Create basic grid classes, no breakpoints
 	// Example output: %col-1
 
-	@if ($i != 0) {
+	@if ( $i != 0 ) {
 		%col-#{$i} {
 			@include col-base;
 			@include col-float;
-			@include grid-build(width, $percentage);
+			@include grid-build( width, $percentage );
 		}
 	}
 }
 
-@for $i from 0 to length($grid-widths) {
+@for $i from 0 to length( $grid-widths ) {
 	@each $feature, $supported in $grid-supports {
 		@if ( $supported ) {
 			%col-#{$feature}-#{$i} {
@@ -193,7 +193,7 @@ $grid-widths-margins: ();
 
 @each $breakpoint, $value in $grid-breakpoints {
 	@include breakpoint( $value, false ) {
-		@for $i from 0 to length($grid-widths) {
+		@for $i from 0 to length( $grid-widths ) {
 			%col-#{$breakpoint}-#{$i} {
 				@include grid-styles( '', $i );
 			}
@@ -201,7 +201,7 @@ $grid-widths-margins: ();
 
 		@each $feature, $supported in $grid-supports {
 			@if ( $supported ) {
-				@for $i from 0 to length($grid-widths) {
+				@for $i from 0 to length( $grid-widths ) {
 					%col-#{$breakpoint}-#{$feature}-#{$i} {
 						@extend %col-#{$breakpoint}-#{$feature}-base !optional;
 						@include grid-styles( $feature, $i );

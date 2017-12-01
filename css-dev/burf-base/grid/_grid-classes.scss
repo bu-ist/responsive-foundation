@@ -12,6 +12,7 @@
 		.col-#{$i} {
 			@extend %col-#{$i} !optional;
 		}
+
 		@each $feature, $supported in $grid-supports {
 			@if $supported {
 				.col-#{$feature}-#{$i} {
@@ -19,6 +20,7 @@
 				}
 			}
 		}
+
 		@each $bp-name, $bp-variable in $grid-breakpoints {
 			.col-#{$bp-name} {
 				&-#{$i} {
