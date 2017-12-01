@@ -295,6 +295,13 @@ $grid-margin-padding:                      $padding-small !default;
 	margin-left: -$grid-margin-width#{"%"};
 }
 
+@each $breakpoint, $value in $grid-breakpoints {
+	.col-#{$breakpoint}-margin-parent,
+	%col-#{$breakpoint}-margin-parent {
+		margin-left: -$grid-margin-width#{"%"};
+	}
+}
+
 // A helper mixin to build grid styles. No need to use outside this file.
 @mixin gridBuild($cssproperty, $amount) {
 	#{$cssproperty}: #{$amount}#{"%"};
