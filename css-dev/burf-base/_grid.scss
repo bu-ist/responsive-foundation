@@ -298,7 +298,9 @@ $grid-margin-padding:                      $padding-small !default;
 @each $breakpoint, $value in $grid-breakpoints {
 	.col-#{$breakpoint}-margin-parent,
 	%col-#{$breakpoint}-margin-parent {
-		margin-left: -$grid-margin-width#{"%"};
+		@include breakpoint( $value, false ) {
+			margin-left: -$grid-margin-width#{"%"};
+		}
 	}
 }
 
