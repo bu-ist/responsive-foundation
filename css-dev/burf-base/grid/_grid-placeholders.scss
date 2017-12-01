@@ -111,47 +111,22 @@
 	flex-wrap: wrap;
 }
 
-// Grid placeholders
-
-// Builds placeholder classes for the grid.
-// Available classes follow the pattern below.
-
-// For your less obvious grid needs:
-// 	Basic usage (no breakpoints):
-// 		@extend %col-3;
-// 	Half column that starts only at medium breakpoints (half of 12):
-// 		@extend %col-md-6;
-
-// Optional grid classes are available as well, and may be turned on or off using variables:
-// 	Margin: Automatically calculates width with margin included. Handy for items with a background color.
-// 		Example: Make something take up 6 columns, starting at medium breakpoint, with margins:
-// 		Usage: @extend %col-md-margin-6;
-// 	Push: position ___ number of columns to the right (no affect on document flow)
-// 		Example: Position something 6 columns to the right without affecting anything else
-// 		Usage: @extend %col-md-push-6;
-// 	Offset: position ___ number of columns to the right (does affect document flow)
-// 		Example: Position something 6 columns to the right and bump everything else along with it
-// 		Usage: @extend %col-md-offset-6;
-// 	Pull: position ___ number of columns to the pull (does not affect document flow)
-// 		Example: Position something 6 columns to the pull without affecting anything else
-// 		Usage: @extend %col-md-pull-6;
-
-// Base styles
-%col-base {
-	@include col-base;
-}
-
-%col-float {
-	@include col-float;
-}
+/// An extend for base grid styles using the margin feature.
+/// @group utilities
+/// @access private
+/// @since 2.0.0
 
 %col-margin-base {
 	@include col-margin-base;
 }
 
-%col-noleftmargin {
-	margin-left: 0;
-}
+/// Styles for parents of margin grid items.
+/// Also available in breakpoint flavors,
+/// just like the grid classes - for example,
+/// `.col-md-margin-parent`.
+/// @group grid
+/// @access public
+/// @since 2.0.0
 
 .col-margin-parent,
 %col-margin-parent {
@@ -167,8 +142,19 @@
 	}
 }
 
-// Initial grid setup
+/// A private map to hold grid widths while
+/// calculating the grid.
+/// @group grid
+/// @access private
+/// @since 2.0.0
+
 $grid-widths: ();
+
+/// A private map to hold grid widths for margins
+/// while calculating the grid.
+/// @group grid
+/// @access private
+/// @since 2.0.0
 
 $grid-widths-margins: ();
 
@@ -186,21 +172,19 @@ $grid-widths-margins: ();
 
 	@if ($i != 0) {
 		%col-#{$i} {
-			@extend %col-base;
-			@extend %col-float;
+			@include col-base;
+			@include col-float;
 			@include grid-build(width, $percentage);
 		}
 	}
 }
 
-// Test 2: ? lines
-
 @for $i from 0 to length($grid-widths) {
 	@each $feature, $supported in $grid-supports {
 		@if ( $supported ) {
 			%col-#{$feature}-#{$i} {
-				@extend %col-base;
 				@extend %col-#{$feature}-base !optional;
+				@include col-base;
 				@include col( '', $feature, $i, false );
 			}
 		}
@@ -211,7 +195,6 @@ $grid-widths-margins: ();
 	@include breakpoint( $value, false ) {
 		@for $i from 0 to length($grid-widths) {
 			%col-#{$breakpoint}-#{$i} {
-				//@include col( $value, '', $i, false );
 				@include grid-styles( '', $i );
 			}
 		}
@@ -221,7 +204,6 @@ $grid-widths-margins: ();
 				@for $i from 0 to length($grid-widths) {
 					%col-#{$breakpoint}-#{$feature}-#{$i} {
 						@extend %col-#{$breakpoint}-#{$feature}-base !optional;
-						//@include col( $value, $feature, $i, false );
 						@include grid-styles( $feature, $i );
 					}
 				}
