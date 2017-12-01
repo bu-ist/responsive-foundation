@@ -94,6 +94,14 @@ $grid-row-margin:                          0 -#{$grid-container-padding} !defaul
 
 $grid-column-padding:                      0 $padding !default;
 
+/// Controls the padding on child items of the grid using the
+/// -margin class. Does not affect other margin classes.
+/// @group grid
+/// @access public
+/// @since 2.0.0
+
+$grid-margin-padding:                      $padding-small !default;
+
 // =================================================================
 // Grid Styles and Placeholders
 // =================================================================
@@ -271,7 +279,7 @@ $grid-column-padding:                      0 $padding !default;
 %col-margin-base {
 	margin-bottom: $grid-margin-width#{"%"};
 	margin-top: 0;
-	padding: 20px;
+	padding: $grid-margin-padding;
 }
 
 %col-noleftmargin {
