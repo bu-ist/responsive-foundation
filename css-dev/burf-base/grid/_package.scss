@@ -128,7 +128,3 @@ $grid-margin-padding:                      $padding-small !default;
 // Optional.
 
 @import "grid-classes";
-
-.whatever {
-	@include col($md, margin, half);
-}
