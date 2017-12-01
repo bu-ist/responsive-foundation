@@ -1,0 +1,65 @@
+// =================================================================
+// Grid Mixins
+// =================================================================
+
+/// Controls the padding on child items of the grid using the
+/// -margin class. Does not affect other margin classes.
+/// @group grid
+/// @access public
+/// @since 2.0.0
+
+@mixin col-margin-base {
+	margin-bottom: $grid-margin-width#{"%"};
+	margin-top: 0;
+	padding: $grid-margin-padding;
+}
+
+// A helper mixin to build grid styles. No need to use outside this file.
+@mixin grid-build($cssproperty, $amount) {
+	#{$cssproperty}: #{$amount}#{"%"};
+}
+
+@mixin col-float {
+	float: left;
+}
+
+@mixin grid-styles( $option, $col ) {
+	$percentage: nth( $grid-widths, $col + 1 );
+
+	@if ( $option == 'margin' ) {
+		$percentage: nth( $grid-widths-margins, $col + 1 );
+		@include col-margin-base;
+		@include grid-build( width, $percentage );
+		float: left;
+	}
+
+	@if ( $option == 'push' ) {
+		@include grid-build( left, $percentage );
+	}
+
+	@if ( $option == 'pull' ) {
+		@include grid-build( right, $percentage );
+	}
+
+	@if ( $option == 'offset' ) {
+		@include grid-build( margin-left, $percentage );
+	}
+
+	@if ( $option == '' ) {
+		@include grid-build( width, $percentage );
+	}
+}
+
+@mixin col( $breakpoint: '', $option: '', $col: $grid-number-columns ) {
+	@if ( 'string' == type-of( $col ) ) {
+		$col: map-get( $widths, $col );
+	}
+
+	@if ( $breakpoint != '' ) {
+		@include breakpoint( $breakpoint, false ) {
+			@include grid-styles( $option, $col );
+		}
+	} @else {
+		@include grid-styles( $option, $col );
+	}
+}

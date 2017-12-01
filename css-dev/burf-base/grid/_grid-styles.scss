@@ -1,0 +1,27 @@
+// =================================================================
+// Grid Styles and Placeholders
+// =================================================================
+
+.wrapper {
+	@extend %wrapper-styles;
+}
+
+.content {
+	position: relative;
+}
+
+.container {
+	@extend %container-styles;
+}
+
+.row {
+	@extend %row-styles;
+}
+
+.row [class*="col-"] {
+	@extend %row-child-styles;
+}
+
+.row .row:nth-last-of-type(1) {
+	margin-bottom: 0;
+}
