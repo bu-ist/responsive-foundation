@@ -137,6 +137,10 @@
 // 		Usage: @extend %col-md-pull-6;
 
 // Base styles
+%col-base {
+	@include col-base;
+}
+
 %col-float {
 	@include col-float;
 }
@@ -182,6 +186,7 @@ $grid-widths-margins: ();
 
 	@if ($i != 0) {
 		%col-#{$i} {
+			@extend %col-base;
 			@extend %col-float;
 			@include grid-build(width, $percentage);
 		}
@@ -192,11 +197,14 @@ $grid-widths-margins: ();
 	@each $feature, $supported in $grid-supports {
 		@if ( $supported ) {
 			%col-#{$feature}-#{$i} {
+				@extend %col-base;
+				@extend %col-#{$feature}-base !optional;
 				@include col( '', $feature, $i, false );
 			}
 
 			@each $breakpoint, $value in $grid-breakpoints {
 				%col-#{$breakpoint}-#{$feature}-#{$i} {
+					@extend %col-#{$breakpoint}-#{$feature}-base !optional;
 					@include col( $value, $feature, $i, false );
 				}
 			}

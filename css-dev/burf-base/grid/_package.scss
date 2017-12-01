@@ -130,5 +130,5 @@ $grid-margin-padding:                      $padding-small !default;
 @import "grid-classes";
 
 .whatever {
-	@include col($md, '', half);
+	@include col($md, margin, half);
 }

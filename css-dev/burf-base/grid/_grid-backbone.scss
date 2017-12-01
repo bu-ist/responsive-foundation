@@ -8,6 +8,11 @@
 /// @access public
 /// @since 2.0.0
 
+@mixin col-base {
+	min-height: 1px;
+	position: relative;
+}
+
 @mixin col-margin-base {
 	margin-bottom: $grid-margin-width#{"%"};
 	margin-top: 0;
@@ -27,13 +32,17 @@
 	$percentage: nth( $grid-widths, $col + 1 );
 
 	@if ( $force ) {
+		@include col-base;
 		@include col-float;
 	}
 
 	@if ( $option == 'margin' ) {
 		$percentage: nth( $grid-widths-margins, $col + 1 );
-
 		@include grid-build( width, $percentage );
+
+		@if ( $force ) {
+			@include col-margin-base;
+		}
 	}
 
 	@if ( $option == 'push' ) {
