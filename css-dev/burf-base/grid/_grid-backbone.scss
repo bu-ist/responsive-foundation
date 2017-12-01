@@ -23,14 +23,17 @@
 	float: left;
 }
 
-@mixin grid-styles( $option, $col ) {
+@mixin grid-styles( $option, $col, $force: false ) {
 	$percentage: nth( $grid-widths, $col + 1 );
+
+	@if ( $force ) {
+		@include col-float;
+	}
 
 	@if ( $option == 'margin' ) {
 		$percentage: nth( $grid-widths-margins, $col + 1 );
-		@include col-margin-base;
+
 		@include grid-build( width, $percentage );
-		float: left;
 	}
 
 	@if ( $option == 'push' ) {
@@ -50,16 +53,16 @@
 	}
 }
 
-@mixin col( $breakpoint: '', $option: '', $col: $grid-number-columns ) {
-	@if ( 'string' == type-of( $col ) ) {
+@mixin col( $breakpoint: '', $option: '', $col: $grid-number-columns, $force: true ) {
+	@if ( 'string' == type-of( $col ) ) and ( map-get( $widths, $col ) ) {
 		$col: map-get( $widths, $col );
 	}
 
 	@if ( $breakpoint != '' ) {
 		@include breakpoint( $breakpoint, false ) {
-			@include grid-styles( $option, $col );
+			@include grid-styles( $option, $col, $force );
 		}
 	} @else {
-		@include grid-styles( $option, $col );
+		@include grid-styles( $option, $col, $force );
 	}
 }

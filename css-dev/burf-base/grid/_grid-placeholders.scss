@@ -138,7 +138,7 @@
 
 // Base styles
 %col-float {
-	float: left;
+	@include col-float;
 }
 
 %col-margin-base {
@@ -192,12 +192,12 @@ $grid-widths-margins: ();
 	@each $feature, $supported in $grid-supports {
 		@if ( $supported ) {
 			%col-#{$feature}-#{$i} {
-				@include col( '', $feature, $i );
+				@include col( '', $feature, $i, false );
 			}
 
 			@each $breakpoint, $value in $grid-breakpoints {
 				%col-#{$breakpoint}-#{$feature}-#{$i} {
-					@include col( $value, $feature, $i );
+					@include col( $value, $feature, $i, false );
 				}
 			}
 		}
@@ -205,7 +205,7 @@ $grid-widths-margins: ();
 
 	@each $breakpoint, $value in $grid-breakpoints {
 		%col-#{$breakpoint}-#{$i} {
-			@include col( $value, '', $i );
+			@include col( $value, '', $i, false );
 		}
 	}
 }
