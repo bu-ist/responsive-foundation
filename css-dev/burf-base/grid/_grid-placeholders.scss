@@ -160,11 +160,11 @@ $grid-widths-margins: ();
 
 @for $i from 0 through $grid-number-columns {
 	// Determine current base width
-	$percentage: ( $i / $grid-number-columns )*100;
+	$percentage: ( $i / $grid-number-columns ) * 100;
 	// Create a list of widths for grid-build to use later
 	$grid-widths: append( $grid-widths, $percentage, comma );
 
-	$percentage: ( $i / $grid-number-columns )*100;
+	$percentage: ( $i / $grid-number-columns ) * 100;
 	$grid-widths-margins: append( $grid-widths-margins, ( $percentage - $grid-margin-width ), comma );
 
 	// Create basic grid classes, no breakpoints
