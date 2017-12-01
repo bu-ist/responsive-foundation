@@ -193,6 +193,8 @@ $grid-widths-margins: ();
 	}
 }
 
+// Test 2: ? lines
+
 @for $i from 0 to length($grid-widths) {
 	@each $feature, $supported in $grid-supports {
 		@if ( $supported ) {
@@ -201,19 +203,28 @@ $grid-widths-margins: ();
 				@extend %col-#{$feature}-base !optional;
 				@include col( '', $feature, $i, false );
 			}
+		}
+	}
+}
 
-			@each $breakpoint, $value in $grid-breakpoints {
-				%col-#{$breakpoint}-#{$feature}-#{$i} {
-					@extend %col-#{$breakpoint}-#{$feature}-base !optional;
-					@include col( $value, $feature, $i, false );
-				}
-			}
+@each $breakpoint, $value in $grid-breakpoints {
+	@for $i from 0 to length($grid-widths) {
+		%col-#{$breakpoint}-#{$i} {
+			@include col( $value, '', $i, false );
 		}
 	}
 
-	@each $breakpoint, $value in $grid-breakpoints {
-		%col-#{$breakpoint}-#{$i} {
-			@include col( $value, '', $i, false );
+	@each $feature, $supported in $grid-supports {
+		@if ( $supported ) {
+			@include breakpoint( $value, false ) {
+				@for $i from 0 to length($grid-widths) {
+					%col-#{$breakpoint}-#{$feature}-#{$i} {
+						@extend %col-#{$breakpoint}-#{$feature}-base !optional;
+						//@include col( $value, $feature, $i, false );
+						@include grid-styles( $feature, $i );
+					}
+				}
+			}
 		}
 	}
 }
