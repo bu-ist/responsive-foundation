@@ -208,15 +208,16 @@ $grid-widths-margins: ();
 }
 
 @each $breakpoint, $value in $grid-breakpoints {
-	@for $i from 0 to length($grid-widths) {
-		%col-#{$breakpoint}-#{$i} {
-			@include col( $value, '', $i, false );
+	@include breakpoint( $value, false ) {
+		@for $i from 0 to length($grid-widths) {
+			%col-#{$breakpoint}-#{$i} {
+				//@include col( $value, '', $i, false );
+				@include grid-styles( '', $i );
+			}
 		}
-	}
 
-	@each $feature, $supported in $grid-supports {
-		@if ( $supported ) {
-			@include breakpoint( $value, false ) {
+		@each $feature, $supported in $grid-supports {
+			@if ( $supported ) {
 				@for $i from 0 to length($grid-widths) {
 					%col-#{$breakpoint}-#{$feature}-#{$i} {
 						@extend %col-#{$breakpoint}-#{$feature}-base !optional;
