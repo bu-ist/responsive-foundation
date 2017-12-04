@@ -21,7 +21,11 @@
 
 // A helper mixin to build grid styles. No need to use outside this file.
 @mixin grid-build( $cssproperty, $amount ) {
-	#{$cssproperty}: #{$amount}#{"%"};
+	@if ( type_of( $amount ) == "number" ) {
+		#{$cssproperty}: #{$amount}#{"%"};
+	} @else {
+		#{$cssproperty}: #{$amount};
+	}
 }
 
 @mixin col-float {

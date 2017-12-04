@@ -168,8 +168,13 @@ $grid-widths-margins: ();
 	// Create a list of widths for grid-build to use later
 	$grid-widths: append( $grid-widths, $percentage, comma );
 
-	$percentage: ( $i / $grid-number-columns ) * 100;
-	$grid-widths-margins: append( $grid-widths-margins, ( $percentage - $grid-margin-width ), comma );
+	$percentage-margins: ( ( $i / $grid-number-columns ) * 100 ) - $grid-margin-width;
+
+	@if ( $percentage-margins < 0 ) {
+		$percentage-margins: initial;
+	}
+
+	$grid-widths-margins: append( $grid-widths-margins, $percentage-margins, comma );
 
 	// Create basic grid classes, no breakpoints
 	// Example output: %col-1
