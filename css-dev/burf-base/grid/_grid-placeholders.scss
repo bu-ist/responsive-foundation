@@ -117,7 +117,8 @@
 /// @since 2.0.0
 
 %col-base {
-	@include col-base;
+	position: relative;
+	min-height: 1px;
 }
 
 /// An extend for base grid styles using the margin feature.

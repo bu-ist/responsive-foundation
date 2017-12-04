@@ -2,17 +2,6 @@
 // Grid Mixins
 // =================================================================
 
-/// Controls the padding on child items of the grid using the
-/// -margin class. Does not affect other margin classes.
-/// @group grid
-/// @access public
-/// @since 2.0.0
-
-@mixin col-base {
-	min-height: 1px;
-	position: relative;
-}
-
 @mixin col-margin-base {
 	margin-left: $grid-margin-width#{"%"};
 	margin-bottom: $grid-margin-width#{"%"};
@@ -36,15 +25,10 @@
 @mixin grid-styles( $option, $col, $force: false ) {
 	$percentage: nth( $grid-widths, $col + 1 );
 
-	@if ( $force ) {
-		@include col-base;
-		@include col-float;
-
-		@if ( $col == 0 ) {
-			left: initial;
-			margin-left: initial;
-			right: initial;
-		}
+	@if ( $force ) and ( $col == 0 ) {
+		left: initial;
+		margin-left: initial;
+		right: initial;
 	}
 
 	@if ( $option == "margin" ) {
