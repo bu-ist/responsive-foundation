@@ -134,10 +134,14 @@
 }
 
 @each $breakpoint, $value in $grid-breakpoints {
-	.col-#{$breakpoint}-margin-parent,
-	%col-#{$breakpoint}-margin-parent {
-		@include breakpoint( $value, false ) {
+	@include breakpoint( $value, false ) {
+		.col-#{$breakpoint}-margin-parent,
+		%col-#{$breakpoint}-margin-parent {
 			margin-left: -$grid-margin-width#{"%"};
+		}
+
+		%col-#{$breakpoint}-margin-base {
+			@include col-margin-base;
 		}
 	}
 }
@@ -203,9 +207,18 @@ $grid-widths-margins: ();
 			@if ( $supported ) {
 				@for $i from 0 to length( $grid-widths ) {
 					%col-#{$breakpoint}-#{$feature}-#{$i} {
-						@extend %col-#{$breakpoint}-#{$feature}-base !optional;
 						@include grid-styles( $feature, $i );
 					}
+				}
+			}
+		}
+	}
+
+	@each $feature, $supported in $grid-supports {
+		@if ( $supported ) {
+			@for $i from 0 to length( $grid-widths ) {
+				%col-#{$breakpoint}-#{$feature}-#{$i} {
+					@extend %col-#{$breakpoint}-#{$feature}-base !optional;
 				}
 			}
 		}
