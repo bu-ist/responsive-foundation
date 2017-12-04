@@ -142,19 +142,6 @@
 	margin-left: -$grid-margin-width#{"%"};
 }
 
-@each $breakpoint, $value in $grid-breakpoints {
-	@include breakpoint( $value, false ) {
-		.col-#{$breakpoint}-margin-parent,
-		%col-#{$breakpoint}-margin-parent {
-			margin-left: -$grid-margin-width#{"%"};
-		}
-
-		%col-#{$breakpoint}-margin-base {
-			@include col-margin-base;
-		}
-	}
-}
-
 /// A private map to hold grid widths while
 /// calculating the grid.
 /// @group grid
@@ -216,6 +203,15 @@ $grid-widths-margins: ();
 
 @each $breakpoint, $value in $grid-breakpoints {
 	@include breakpoint( $value, false ) {
+		%col-#{$breakpoint}-margin-base {
+			@include col-margin-base;
+		}
+
+		.col-#{$breakpoint}-margin-parent,
+		%col-#{$breakpoint}-margin-parent {
+			margin-left: -$grid-margin-width#{"%"};
+		}
+
 		@for $i from 0 to length( $grid-widths ) {
 			%col-#{$breakpoint}-#{$i} {
 				@include grid-styles( '', $i );

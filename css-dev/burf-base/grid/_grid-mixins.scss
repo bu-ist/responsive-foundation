@@ -14,6 +14,7 @@
 }
 
 @mixin col-margin-base {
+	margin-left: $grid-margin-width#{"%"};
 	margin-bottom: $grid-margin-width#{"%"};
 	margin-top: 0;
 	padding: $grid-margin-padding;
@@ -49,6 +50,10 @@
 		}
 	}
 
+	@if ( $option == "" ) {
+		@include grid-build( width, $percentage );
+	}
+
 	@if ( $option == "push" ) {
 		@include grid-build( left, $percentage );
 	}
@@ -59,10 +64,6 @@
 
 	@if ( $option == "offset" ) {
 		@include grid-build( margin-left, $percentage );
-	}
-
-	@if ( $option == "" ) {
-		@include grid-build( width, $percentage );
 	}
 }
 
