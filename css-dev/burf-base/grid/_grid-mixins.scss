@@ -1,0 +1,141 @@
+// =================================================================
+// Grid Mixins
+// =================================================================
+
+/// Controls the base styles that get applied to grid items.
+/// Not intended for use outside the grid system - use the `col`
+/// mixin instead.
+/// @group grid
+/// @access private
+/// @since 2.0.0
+
+@mixin col-base {
+	float: left;
+	position: relative;
+	min-height: 1px;
+}
+
+/// Controls the base styles that get applied to grid margin items.
+/// Not intended for use outside the grid system - use the `col`
+/// mixin instead.
+/// @group grid
+/// @access private
+/// @since 2.0.0
+
+@mixin col-margin-base {
+	float: left;
+	margin-bottom: $grid-margin-width#{"%"};
+	margin-left: $grid-margin-width#{"%"};
+	margin-top: 0;
+	padding: $grid-margin-padding;
+}
+
+/// A helper mixin to build grid properties.
+/// Not intended for use outside the grid system - use the `col`
+/// mixin instead.
+/// @group grid
+/// @access private
+/// @since 1.4.0
+
+@mixin grid-build( $cssproperty, $amount ) {
+	@if ( type_of( $amount ) == "number" ) {
+		#{$cssproperty}: #{$amount}#{"%"};
+	} @else {
+		#{$cssproperty}: #{$amount};
+	}
+}
+
+/// A helper mixin to build grid properties.
+/// Not intended for use outside the grid system - use the `col`
+/// mixin instead.
+/// @group grid
+/// @access private
+/// @since 2.0.0
+
+@mixin col-float {
+	float: left;
+}
+
+/// A helper mixin to build grid styles. Does not handle breakpoints.
+/// Not intended for use outside the grid system - use the `col`
+/// mixin instead.
+/// @group grid
+/// @access private
+/// @since 2.0.0
+
+@mixin grid-styles( $option, $col, $force: false ) {
+	$percentage: nth( $grid-widths, $col + 1 );
+
+	@if ( $force ) {
+		left: initial;
+		margin-left: initial;
+		right: initial;
+	}
+
+	@if ( $option == "margin" ) {
+		$percentage: nth( $grid-widths-margins, $col + 1 );
+		@include grid-build( width, $percentage );
+
+		@if ( $force ) {
+			@include col-margin-base;
+		}
+	}
+
+	@if ( $option == "" ) {
+		@include grid-build( width, $percentage );
+	}
+
+	@if ( $option == "push" ) {
+		@include grid-build( left, $percentage );
+	}
+
+	@if ( $option == "pull" ) {
+		@include grid-build( right, $percentage );
+	}
+
+	@if ( $option == "offset" ) {
+		@include grid-build( margin-left, $percentage );
+	}
+}
+
+/// The official grid mixin.
+/// Use only where necessary to override grid classes.
+/// Arguments are the same as you use to write grid classes,
+/// in the same order.
+/// @example
+/// 		Don't use the margin class on a modified callout.
+/// 			.callout {
+///				@extend %col-sm-margin-quarter;
+///			}
+/// 			.callout-modified {
+///				@include col( $sm, quarter );
+///			}
+/// @param {variable | number} | $breakpoint - The window width to begin applying your styles. Can be any pixel value, but `$xs`, `$sm`, `$md`, `$lg`, and `$xl` are standard in this framework.
+/// @param {string} | $option - The grid option to use, ie "push", "pull", "margin". Pass "" for no option, or leave it out altogether - the mixin will check this and fix it for you.
+/// @param {number | string} | $col - The number of columns you want. Accepts friendly classes such as "half", or use Boostrap standard (1 - 12).
+/// @param {bool} | $force - Whether or not to override the original styles by printing them where this mixin is called. You probably don't want to change this unless you're working on Foundation.
+/// @group grid
+/// @access private
+/// @since 2.0.0
+
+@mixin col( $breakpoint: "", $option: "", $col: $grid-number-columns, $force: true ) {
+	$valid: map-get( $grid-supports, $option );
+
+	// Automatically fixes inputs if you forget the option (usually with normal grid mixins)
+	@if ( $valid == null and $option != "" ) {
+		$col: $option;
+		$option: "";
+	}
+
+	@if ( "string" == type-of( $col ) ) and ( map-get( $widths, $col ) ) {
+		$col: map-get( $widths, $col );
+	}
+
+	@if ( $breakpoint != "" ) {
+		@include breakpoint( $breakpoint, false ) {
+			@include grid-styles( $option, $col, $force );
+		}
+	} @else {
+		@include grid-styles( $option, $col, $force );
+	}
+}
