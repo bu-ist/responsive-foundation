@@ -2,9 +2,16 @@
 // Grid Mixins
 // =================================================================
 
+@mixin col-base {
+	float: left;
+	position: relative;
+	min-height: 1px;
+}
+
 @mixin col-margin-base {
-	margin-left: $grid-margin-width#{"%"};
+	float: left;
 	margin-bottom: $grid-margin-width#{"%"};
+	margin-left: $grid-margin-width#{"%"};
 	margin-top: 0;
 	padding: $grid-margin-padding;
 }

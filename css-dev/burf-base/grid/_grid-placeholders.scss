@@ -117,8 +117,7 @@
 /// @since 2.0.0
 
 %col-base {
-	position: relative;
-	min-height: 1px;
+	@include col-base;
 }
 
 /// An extend for base grid styles using the margin feature.
@@ -184,7 +183,6 @@ $grid-widths-margins: ();
 	@if ( $i != 0 ) {
 		%col-#{$i} {
 			@extend %col-base;
-			@include col-float;
 			@include grid-build( width, $percentage );
 		}
 	}
@@ -215,6 +213,7 @@ $grid-widths-margins: ();
 
 		@for $i from 0 to length( $grid-widths ) {
 			%col-#{$breakpoint}-#{$i} {
+				@include col-base;
 				@include grid-styles( '', $i );
 			}
 		}
