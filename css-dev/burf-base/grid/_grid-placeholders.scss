@@ -111,6 +111,15 @@
 	flex-wrap: wrap;
 }
 
+/// An extend for base grid styles.
+/// @group utilities
+/// @access private
+/// @since 2.0.0
+
+%col-base {
+	@include col-base;
+}
+
 /// An extend for base grid styles using the margin feature.
 /// @group utilities
 /// @access private
@@ -186,7 +195,7 @@ $grid-widths-margins: ();
 
 	@if ( $i != 0 ) {
 		%col-#{$i} {
-			@include col-base;
+			@extend %col-base;
 			@include col-float;
 			@include grid-build( width, $percentage );
 		}
@@ -198,7 +207,7 @@ $grid-widths-margins: ();
 		@if ( $supported ) {
 			%col-#{$feature}-#{$i} {
 				@extend %col-#{$feature}-base !optional;
-				@include col-base;
+				@extend %col-base;
 				@include col( '', $feature, $i, false );
 			}
 		}
