@@ -39,6 +39,12 @@
 	@if ( $force ) {
 		@include col-base;
 		@include col-float;
+
+		@if ( $col == 0 ) {
+			left: initial;
+			margin-left: initial;
+			right: initial;
+		}
 	}
 
 	@if ( $option == "margin" ) {
@@ -68,6 +74,14 @@
 }
 
 @mixin col( $breakpoint: "", $option: "", $col: $grid-number-columns, $force: true ) {
+	$valid: map-get( $grid-supports, $option );
+
+	// Automatically fixes inputs if you forget the option (usually with normal grid mixins)
+	@if ( $valid == null and $option != "" ) {
+		$col: $option;
+		$option: "";
+	}
+
 	@if ( "string" == type-of( $col ) ) and ( map-get( $widths, $col ) ) {
 		$col: map-get( $widths, $col );
 	}
