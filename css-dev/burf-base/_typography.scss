@@ -435,6 +435,31 @@ $_h: $_depth-headings;
 	$font-styles: map_merge( $font-styles, $font-styles-theme );
 }
 
+// A mixin to get and print font styles, just like `<h>` tags.
+// Handy for when the placeholders just aren't working for you.
+// Accepts a valid style, such as `6` (like h6) or `secondary`.
+// Also accepts any style you've defined in the theme.
+/// @example
+/// 		Make a `<h4>` look like an `<h2>`.
+/// 			.comparison-title {
+///				@include font-size( '2' );
+///			}
+// @group typography
+// @access public
+// @since 2.0.0
+
+@mixin font-size( $style ) {
+	$settings: map-get( $font-styles, $style );
+
+	font-size: map-get( $settings, font-size-mobile );
+	line-height: map-get( $settings, line-height );
+
+	@include breakpoint( $xs ) {
+		font-size: map-get( $settings, font-size-desktop );
+		line-height: map-get( $settings, line-height );
+	}
+}
+
 // Creates placeholders for each font style, which are used by `<h>` tags
 // as well as throughout the theme.
 // @group global
@@ -444,13 +469,7 @@ $_h: $_depth-headings;
 @each $style, $settings in $font-styles {
 	.font-size-#{$style},
 	%font-size-#{$style} {
-		font-size: map-get( $settings, font-size-mobile );
-		line-height: map-get( $settings, line-height );
-
-		@include breakpoint( $xs ) {
-			font-size: map-get( $settings, font-size-desktop );
-			line-height: map-get( $settings, line-height );
-		}
+		@include font-size( $style );
   	}
 }
 
