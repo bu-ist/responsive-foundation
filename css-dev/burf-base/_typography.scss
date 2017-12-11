@@ -439,6 +439,11 @@ $_h: $_depth-headings;
 // Handy for when the placeholders just aren't working for you.
 // Accepts a valid style, such as `6` (like h6) or `secondary`.
 // Also accepts any style you've defined in the theme.
+/// @example
+/// 		Make a `<h4>` look like an `<h2>`.
+/// 			.comparison-title {
+///				@include font-size( '2' );
+///			}
 // @group typography
 // @access public
 // @since 2.0.0
