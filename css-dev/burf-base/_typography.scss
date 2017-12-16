@@ -339,12 +339,12 @@ $font-styles: (
 	secondary: (
 	  	font-size-mobile: 12px,
 	  	font-size-desktop: 16px,
-		line-height: 1,
+		line-height: $min-line-height,
 	),
 	minimum: (
     	font-size-mobile: 11px,
 		font-size-desktop: 13px,
-		line-height: 1
+		line-height: $min-line-height
 	),
 );
 
