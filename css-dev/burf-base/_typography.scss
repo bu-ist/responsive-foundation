@@ -212,7 +212,7 @@ $_depth-headings: 6;
 /// @access public
 /// @since 2.0.0
 
-$min-size-headings: $font-size-base;
+$min-size-headings: $font-size-base !default;
 
 /// The maximum font size in pixels for headings to use. This directly affects `<h1>`
 /// headings _within content_. Do not use a larger value, such as those you might find
@@ -224,7 +224,7 @@ $min-size-headings: $font-size-base;
 /// @access public
 /// @since 2.0.0
 
-$max-size-headings: 55px;
+$max-size-headings: 55px !default;
 
 /// The maximum font size in pixels for headings to use on mobile. This directly affects `<h1>`
 /// headings _within content_. Do not use a larger value, such as those you might find
@@ -236,7 +236,7 @@ $max-size-headings: 55px;
 /// @access public
 /// @since 2.0.0
 
-$max-size-headings-mobile: 36px;
+$max-size-headings-mobile: 36px !default;
 
 /// The minimum line height ratio for headings to use. Do not use any units with
 /// this value. This value directly affects the `<h1>` tag and indirectly affects
@@ -247,7 +247,7 @@ $max-size-headings-mobile: 36px;
 /// @access public
 /// @since 2.0.0
 
-$min-line-height: 1.15;
+$min-line-height: 1.15 !default;
 
 /// The maximum line height ratio for headings to use. Do not use any units with
 /// this value. This value directly affects the `<h6>` tag and indirectly affects
@@ -258,7 +258,7 @@ $min-line-height: 1.15;
 /// @access public
 /// @since 2.0.0
 
-$max-line-height: $line-height-base;
+$max-line-height: $line-height-base !default;
 
 // Adjusts the rate of growth between font sizes.
 // 1 is a completely even rate of growth.
@@ -267,7 +267,7 @@ $max-line-height: $line-height-base;
 // A higher number will adjust the font size more dramatically at larger sizes.
 // By default, this is optimized for heavy use of h1-h4, and minimal use of h5 and h6.
 
-$heading-growth-rate: 3.5;
+$heading-growth-rate: 3.5 !default;
 
 /// Calculates the multiplier needed for growth between a minimum and maximum value
 /// based on a given rate of growth.
