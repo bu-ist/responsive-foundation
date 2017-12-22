@@ -67,6 +67,7 @@
 	$percentage: nth( $grid-widths, $col + 1 );
 
 	@if ( $force ) {
+		@include col-base;
 		left: initial;
 		margin-left: initial;
 		right: initial;
