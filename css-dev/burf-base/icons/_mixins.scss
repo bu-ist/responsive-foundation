@@ -89,8 +89,21 @@ $color-icons:										 unset;
 @mixin icon( $name, $position: "before" ) {
 	@extend %icon-base;
 
+	$content: map-get( $icons-supported, $name );
+	@debug $name;
+	@debug $content;
+
 	&::#{$position} {
 		@extend %icon-content;
-		content: map-get( $icons-supported, $name );
+
+		@if $content {
+			content: map-get( $icons-supported, $name );
+		} @else {
+			@error "This isn't a real icon";
+		}
 	}
+}
+
+.test-icon {
+	//@include icon( "fakeicon" );
 }
