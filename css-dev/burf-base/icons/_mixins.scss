@@ -28,15 +28,14 @@ $color-icons:										 unset;
 
 /// Provides base icon styles normalized across browsers and optimized
 /// for accessibility.
-/// Use this placeholder if you are loading your own font library
-/// and can't use the built-in icons because the content is different.
-/// This should go on your base element. The complimentary placeholder,
-/// `%icon`, needs to go on a `:before` or `:after` underneath.
+/// A helper mixin for the main icon mixin and icon extends.
+/// You probably don't actually want to use this unless you're working
+/// on Responsive. Use the icon mixin instead.
 /// @group icons
-/// @access public
-/// @since 1.2.0
+/// @access private
+/// @since 2.0.0
 
-%icon-base {
+@mixin icon-base {
 	.lt-ie9:hover & {
 		// This triggers a redraw in IE to Fix IE8's :before content rendering.
 		-ms-zoom: 1;
@@ -49,15 +48,14 @@ $color-icons:										 unset;
 
 /// Provides base icon styles normalized across browsers and optimized
 /// for accessibility.
-/// Use this placeholder on :before or :after if you are loading your own
-/// font library and can't use the built-in icons because the content is different.
-/// You will also need the %icon-base placeholder on your hoverable element if you
-/// need compatibility before IE9.
+/// A helper mixin for the main icon mixin and icon extends.
+/// You probably don't actually want to use this unless you're working
+/// on Responsive. Use the icon mixin instead.
 /// @group icons
 /// @access public
 /// @since 1.2.0
 
-%icon-content {
+@mixin icon-content {
 	color: $color-icons;
 	display: inline-block;
 	font-family: $font-family-icons;
