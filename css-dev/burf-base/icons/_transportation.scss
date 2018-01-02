@@ -15,12 +15,7 @@
 /// @since 1.2.0
 
 %icon-bike {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F6B2";
-	}
+	@include icon( "bike" );
 }
 
 /// The car icon.
@@ -33,12 +28,7 @@
 /// @since 1.2.0
 
 %icon-car {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F698";
-	}
+	@include icon( "car" );
 }
 
 /// The plane icon.
@@ -51,10 +41,5 @@
 /// @since 1.2.0
 
 %icon-plane {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2708";
-	}
+	@include icon( "plane" );
 }
