@@ -79,3 +79,18 @@ $color-icons:										 unset;
 	vertical-align: middle;
 	white-space: nowrap;
 }
+
+/// A mixin to generate icons.
+/// Use any icon in `$icon-supports`.
+/// @group icons
+/// @access public
+/// @since 2.0.0
+
+@mixin icon( $name, $position: "before" ) {
+	@extend %icon-base;
+
+	&::#{$position} {
+		@extend %icon-content;
+		content: map-get( $icons-supported, $name );
+	}
+}
