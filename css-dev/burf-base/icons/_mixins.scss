@@ -87,11 +87,11 @@ $color-icons:										 unset;
 /// @since 2.0.0
 
 @mixin icon( $name, $position: "before" ) {
-	@extend %icon-base;
+	@include icon-base;
 	$content: map-get( $icons-responsive, $name );
 
 	&::#{$position} {
-		@extend %icon-content;
+		@include icon-content;
 
 		@if $content {
 			content: $content;
