@@ -75,12 +75,7 @@
 /// @since 1.2.0
 
 %icon-facebook {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F610";
-	}
+	@include icon( "facebook" );
 }
 
 /// The facebook alt icon.
