@@ -39,12 +39,7 @@
 /// @since 1.2.0
 
 %icon-dropbox {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F653";
-	}
+	@include icon( "dropbox" );
 }
 
 /// The dropbox alt icon.
@@ -57,12 +52,7 @@
 /// @since 1.2.0
 
 %icon-dropbox-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F65A";
-	}
+	@include icon( "dropbox-alt" );
 }
 
 /// The facebook icon.
@@ -88,12 +78,7 @@
 /// @since 1.2.0
 
 %icon-facebook-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F61A";
-	}
+	@include icon( "facebook-alt" );
 }
 
 /// The flickr icon.
@@ -106,12 +91,7 @@
 /// @since 1.2.0
 
 %icon-flickr {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F640";
-	}
+	@include icon( "flickr" );
 }
 
 /// The flickr alt icon.
@@ -124,12 +104,7 @@
 /// @since 1.2.0
 
 %icon-flickr-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F644";
-	}
+	@include icon( "flickr-alt" );
 }
 
 /// The foursquare icon.
@@ -142,12 +117,7 @@
 /// @since 1.2.0
 
 %icon-foursquare {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F690";
-	}
+	@include icon( "foursquare" );
 }
 
 /// The icon alt icon.
@@ -160,12 +130,7 @@
 /// @since 1.2.0
 
 %icon-foursquare-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F691";
-	}
+	@include icon( "foursquare-alt" );
 }
 
 /// The github icon.
@@ -178,12 +143,7 @@
 /// @since 1.2.0
 
 %icon-github {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F670";
-	}
+	@include icon( "github" );
 }
 
 /// The github alt icon.
@@ -196,12 +156,7 @@
 /// @since 1.2.0
 
 %icon-github-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F671";
-	}
+	@include icon( "github-alt" );
 }
 
 /// The googleplus icon.
@@ -214,12 +169,7 @@
 /// @since 1.2.0
 
 %icon-googleplus {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F613";
-	}
+	@include icon( "googleplus" );
 }
 
 /// The icon alt icon.
@@ -232,12 +182,7 @@
 /// @since 1.2.0
 
 %icon-googleplus-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F614";
-	}
+	@include icon( "googleplus-alt" );
 }
 
 /// The instagram icon.
@@ -250,12 +195,7 @@
 /// @since 1.2.0
 
 %icon-instagram {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F641";
-	}
+	@include icon( "instagram" );
 }
 
 /// The instagram alt icon.
@@ -268,12 +208,7 @@
 /// @since 1.2.0
 
 %icon-instagram-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F64A";
-	}
+	@include icon( "instagram-alt" );
 }
 
 /// The kickstarter icon.
@@ -286,12 +221,7 @@
 /// @since 1.2.0
 
 %icon-kickstarter {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F681";
-	}
+	@include icon( "kickstarter" );
 }
 
 /// The icon alt icon.
@@ -304,12 +234,7 @@
 /// @since 1.2.0
 
 %icon-kickstarter-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F68A";
-	}
+	@include icon( "ickstarter-alt" );
 }
 
 /// The linkedin icon.
@@ -322,12 +247,7 @@
 /// @since 1.2.0
 
 %icon-linkedin {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F612";
-	}
+	@include icon( "linkedin" );
 }
 
 /// The linkedin alt icon.
@@ -340,12 +260,7 @@
 /// @since 1.2.0
 
 %icon-linkedin-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F61E";
-	}
+	@include icon( "linkedin-alt" );
 }
 
 /// The paypal icon.
@@ -358,12 +273,7 @@
 /// @since 1.2.0
 
 %icon-paypal {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F680";
-	}
+	@include icon( "paypal" );
 }
 
 /// The paypal alt icon.
@@ -376,12 +286,7 @@
 /// @since 1.2.0
 
 %icon-paypal-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F68B";
-	}
+	@include icon( "paypal-alt" );
 }
 
 /// The pinterest icon.
@@ -394,12 +299,7 @@
 /// @since 1.2.0
 
 %icon-pinterest {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F650";
-	}
+	@include icon( "pinterest" );
 }
 
 /// The pinterest alt icon.
@@ -412,12 +312,7 @@
 /// @since 1.2.0
 
 %icon-pinterest-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F651";
-	}
+	@include icon( "pinterest-alt" );
 }
 
 /// The pocket icon.
@@ -430,12 +325,7 @@
 /// @since 1.2.0
 
 %icon-pocket {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F634";
-	}
+	@include icon( "pocket" );
 }
 
 /// The pocket alt icon.
@@ -448,12 +338,7 @@
 /// @since 1.2.0
 
 %icon-pocket-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F635";
-	}
+	@include icon( "pocket-alt" );
 }
 
 /// The reddit icon.
@@ -466,12 +351,7 @@
 /// @since 1.2.0
 
 %icon-reddit {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F616";
-	}
+	@include icon( "reddit" );
 }
 
 /// The reddit alt icon.
@@ -484,12 +364,7 @@
 /// @since 1.2.0
 
 %icon-reddit-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F617";
-	}
+	@include icon( "reddit-alt" );
 }
 
 /// The renren icon.
@@ -502,12 +377,7 @@
 /// @since 1.2.0
 
 %icon-renren {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F61C";
-	}
+	@include icon( "renren" );
 }
 
 /// The retweet icon.
@@ -520,12 +390,7 @@
 /// @since 1.2.0
 
 %icon-retweet {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F600";
-	}
+	@include icon( "retweet" );
 }
 
 /// The soundcloud icon.
@@ -538,12 +403,7 @@
 /// @since 1.2.0
 
 %icon-soundcloud {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F6B3";
-	}
+	@include icon( "soundcloud" );
 }
 
 /// The icon alt icon.
@@ -556,12 +416,7 @@
 /// @since 1.2.0
 
 %icon-soundcloud-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F6B4";
-	}
+	@include icon( "soundcloud-alt" );
 }
 
 /// The spotify icon.
@@ -574,12 +429,7 @@
 /// @since 1.2.0
 
 %icon-spotify {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F6B1";
-	}
+	@include icon( "spotify" );
 }
 
 /// The stackexchange icon.
@@ -592,12 +442,7 @@
 /// @since 1.2.0
 
 %icon-stackexchange {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F673";
-	}
+	@include icon( "stackexchange" );
 }
 
 /// The icon alt icon.
@@ -610,12 +455,7 @@
 /// @since 1.2.0
 
 %icon-stackexchange-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F67B";
-	}
+	@include icon( "stackexchange-alt" );
 }
 
 /// The stackoverflow icon.
@@ -628,12 +468,7 @@
 /// @since 1.2.0
 
 %icon-stackoverflow {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F672";
-	}
+	@include icon( "stackoverflow" );
 }
 
 /// The icon alt icon.
@@ -646,12 +481,7 @@
 /// @since 1.2.0
 
 %icon-stackoverflow-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F67A";
-	}
+	@include icon( "stackoverflow-alt" );
 }
 
 /// The stumbleupon icon.
@@ -664,12 +494,7 @@
 /// @since 1.2.0
 
 %icon-stumbleupon {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F63A";
-	}
+	@include icon( "stumbleupon" );
 }
 
 /// The icon alt icon.
@@ -682,12 +507,7 @@
 /// @since 1.2.0
 
 %icon-stumbleupon-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F63D";
-	}
+	@include icon( "stumbleupon-alt" );
 }
 
 /// The twitter icon.
@@ -700,12 +520,7 @@
 /// @since 1.2.0
 
 %icon-twitter {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F611";
-	}
+	@include icon( "twitter" );
 }
 
 /// The twitter alt icon.
@@ -718,12 +533,7 @@
 /// @since 1.2.0
 
 %icon-twitter-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F62B";
-	}
+	@include icon( "twitter-alt" );
 }
 
 /// The tumblr icon.
@@ -736,12 +546,7 @@
 /// @since 1.2.0
 
 %icon-tumblr {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F620";
-	}
+	@include icon( "tumblr" );
 }
 
 /// The tumblr alt icon.
@@ -754,12 +559,7 @@
 /// @since 1.2.0
 
 %icon-tumblr-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F62A";
-	}
+	@include icon( "tumblr-alt" );
 }
 
 /// The vimeo icon.
@@ -772,12 +572,7 @@
 /// @since 1.2.0
 
 %icon-vimeo {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F631";
-	}
+	@include icon( "vimeo" );
 }
 
 /// The alt alt icon.
@@ -790,12 +585,7 @@
 /// @since 1.2.0
 
 %icon-vimeo-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F63C";
-	}
+	@include icon( "vimeo-alt" );
 }
 
 /// The vine icon.
@@ -808,12 +598,7 @@
 /// @since 1.2.0
 
 %icon-vine {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F633";
-	}
+	@include icon( "vine" );
 }
 
 /// The alt alt icon.
@@ -826,12 +611,7 @@
 /// @since 1.2.0
 
 %icon-vine-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F63B";
-	}
+	@include icon( "vine-alt" );
 }
 
 /// The weibo icon.
@@ -844,12 +624,7 @@
 /// @since 1.2.0
 
 %icon-weibo {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F61B";
-	}
+	@include icon( "weibo" );
 }
 
 /// The alt alt icon.
@@ -862,12 +637,7 @@
 /// @since 1.2.0
 
 %icon-weibo-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F61D";
-	}
+	@include icon( "weibo-alt" );
 }
 
 /// The wordpress icon.
@@ -880,12 +650,7 @@
 /// @since 1.2.0
 
 %icon-wordpress {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F621";
-	}
+	@include icon( "wordpress" );
 }
 
 /// The youtube icon.
@@ -898,12 +663,7 @@
 /// @since 1.2.0
 
 %icon-youtube {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F630";
-	}
+	@include icon( "youtube" );
 }
 
 /// The youtube alt icon.
@@ -916,10 +676,5 @@
 /// @since 1.2.0
 
 %icon-youtube-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F632";
-	}
+	@include icon( "youtube-alt" );
 }
