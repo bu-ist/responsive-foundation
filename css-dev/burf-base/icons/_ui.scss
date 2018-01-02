@@ -17,12 +17,7 @@
 /// @since 2.0.0
 
 %icon-filter {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\ED51";
-	}
+	@include icon( "filter" );
 }
 
 /// The checkbox - empty icon.
@@ -35,12 +30,7 @@
 /// @since 2.0.0
 
 %icon-checkbox-empty {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\ED52";
-	}
+	@include icon( "checkbox-empty" );
 }
 
 /// The checkbox - filled icon.
@@ -53,12 +43,7 @@
 /// @since 2.0.0
 
 %icon-checkbox-filled {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\ED53";
-	}
+	@include icon( "checkbox-filled" );
 }
 
 /// The radio - empty icon.
@@ -71,12 +56,7 @@
 /// @since 2.0.0
 
 %icon-radio-empty {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\ED54";
-	}
+	@include icon( "radio-empty" );
 }
 
 /// The radio - filled icon.
@@ -89,10 +69,5 @@
 /// @since 2.0.0
 
 %icon-radio-filled {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\ED55";
-	}
+	@include icon( "radio-filled" );
 }
