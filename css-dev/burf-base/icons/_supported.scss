@@ -10,7 +10,7 @@
 /// @access public
 /// @since 2.0.0
 
-$icons-supported: (
+$icons-responsive: (
 
 	// Actions
 
@@ -262,3 +262,13 @@ $icons-supported: (
 	radio-empty: "\ED54",
 	radio-filled: "\ED55",
 );
+
+// Merges custom icons and overrides with the default supported icons map.
+// $icons-theme must be set BEFORE this is called.
+// @group global
+// @access private
+// @since 2.0.0
+
+@if variable-exists( icons-theme ) {
+	$icons-responsive: map_merge( $icons-responsive, $icons-theme );
+}

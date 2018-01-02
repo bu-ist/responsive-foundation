@@ -89,21 +89,19 @@ $color-icons:										 unset;
 @mixin icon( $name, $position: "before" ) {
 	@extend %icon-base;
 
-	$content: map-get( $icons-supported, $name );
-	@debug $name;
-	@debug $content;
+	$content: map-get( $icons-responsive, $name );
 
 	&::#{$position} {
 		@extend %icon-content;
 
 		@if $content {
-			content: map-get( $icons-supported, $name );
+			content: map-get( $content );
 		} @else {
-			@error "This isn't a real icon";
+			@error "`#{$name}` is not a supported icon. See www.bu.edu/cdn/fonts/icons/bu-default-icons/specimen-icons.html for a list of supported icons. If this is a custom icon you meant to add for your own icon font, be sure you've added it to the `$icons-theme` map.";
 		}
 	}
 }
 
 .test-icon {
-	//@include icon( "fakeicon" );
+	@include icon( "fakeicon" );
 }
