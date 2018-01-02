@@ -1,84 +1,94 @@
 // =================================================================
-// Icon Mixins
+// Supported Icons
 // =================================================================
 
-/// The font family to use for icons across the site.
-/// Change this to use a different homegrown font family.
+/// The icons this site supports.
+/// All icons get a name and a UTF-8 value. It's unlikely you'll
+/// need to change these, and you probably shouldn't. However,
+/// if you're using your own icon font, you may want to add to it.
 /// @group icons
 /// @access public
 /// @since 2.0.0
 
-$font-family-icons:                     	 "bu-default-icons" !default;
+$icons-supported: (
 
-/// The font size to use for icons across the site.
-/// @group icons
-/// @access public
-/// @since 2.0.0
+	// Actions
 
-$font-size-icon: 									 21px !default;
+	action: "\EE00";
+	ban: "\1F6AB";
+	bookmark: "\1F516";
+	close: "\E421";
+	delete: "\2421";
+	download: "\EB01";
+	downloadbox: "\EB02";
+	like: "\1F44D";
+	like-alt: "\1F44B";
+	dislike: "\1F44E";
+	menu: "\E9A1";
+	plus: "\002B";
+	hyphen: "\002D";
+	print: "\2399";
+	redirect: "\21AA";
+	refresh: "\21BB";
+	replay: "\21BA";
+	share: "\F601";
+	search: "\1F50E";
+	settings: "\2699";
+	sync: "\EB82";
+	star: "\22C6";
+	tag: "\E100";
+	upload: "\EB41";
+	uploadcloud: "\EB40";
 
-/// The color to use for icons across the site.
-/// By default, this will inherit the color of the text in the container the icon lives in.
-/// Setting this will keep the color of the icons consistent everywhere.
-/// @group icons
-/// @access public
-/// @since 1.0.0
+	// Arrows
 
-$color-icons:										 unset;
+	contract: "\EE01";
+	expand: "\2922";
+	scaledown: "\EE05";
+	scaleup: "\EE04";
+	up: "\2806";
+	right: "\27A1";
+	down: "\2B07";
+	left: "\2B05";
+	directup: "\25B4";
+	directright: "\25B9";
+	dropdown: "\25BE";
+	directleft: "\25C3";
+	navigateup: "\F500";
+	navigateright: "\25BB";
+	navigatedown: "\F501";
+	navigateleft: "\25C5";
 
-/// Provides base icon styles normalized across browsers and optimized
-/// for accessibility.
-/// A helper mixin for the main icon mixin and icon extends.
-/// You probably don't actually want to use this unless you're working
-/// on Responsive. Use the icon mixin instead.
-/// @group icons
-/// @access private
-/// @since 2.0.0
+	// Charts
 
-@mixin icon-base {
-	.lt-ie9:hover & {
-		// This triggers a redraw in IE to Fix IE8's :before content rendering.
-		-ms-zoom: 1;
-	}
+	calculator: "\E551";
+	barchart: "\1F4CA";
+	piechart: "\E570";
+	stock: "\E579";
 
-	span {
-		display: none; // Hide labels
-	}
-}
+	// Communication
 
-/// Provides base icon styles normalized across browsers and optimized
-/// for accessibility.
-/// A helper mixin for the main icon mixin and icon extends.
-/// You probably don't actually want to use this unless you're working
-/// on Responsive. Use the icon mixin instead.
-/// @group icons
-/// @access public
-/// @since 2.0.0
+	envelope: "\2709";
+	phone: "\1F4DE";
+	rss: "\E310";
+	rss-alt: "\E31A";
+	rotaryphone: "\260E";
 
-@mixin icon-content {
-	color: $color-icons;
-	display: inline-block;
-	font-family: $font-family-icons;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: normal;
-	line-height: 1;
-	padding-bottom: 0.2em; // Accomodate for inline icons
-	speak: none;
-	text-decoration: none;
-	text-rendering: optimizeLegibility;
-	text-transform: none;
-	vertical-align: middle;
-	white-space: nowrap;
-}
+	// Documents
 
-/// Provides base icon styles normalized across browsers and optimized
-/// for accessibility.
-/// A helper mixin for the main icon mixin and icon extends.
-/// You probably don't actually want to use this unless you're working
-/// on Responsive. Use the icon mixin instead.
-/// @group icons
-/// @access public
-/// @since 2.0.0
+	link: "\1F51B";
+	link-alt: "\F699";
+	file: "\1F4C4";
+	files: "\EC00";
+	folder: "\1F4C1";
+	index: "\E902";
+	storagebox: "\E901";
+
+	// eCommerce
+
+	burst: "\F552";
+	cart: "\E500";
+	creditcard: "\1F4B3";
+	emptycart: "\E507";
+
+);
