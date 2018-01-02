@@ -27,12 +27,7 @@
 /// @since 1.2.0
 
 %icon-play {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\25B6";
-	}
+	@include icon( "play" );
 }
 
 /// The pause icon.
@@ -45,12 +40,7 @@
 /// @since 1.2.0
 
 %icon-pause {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E8A0";
-	}
+	@include icon( "pause" );
 }
 
 /// The stop icon.
@@ -63,12 +53,7 @@
 /// @since 1.2.0
 
 %icon-stop {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\25A0";
-	}
+	@include icon( "stop" );
 }
 
 /// The rewind icon.
@@ -81,12 +66,7 @@
 /// @since 1.2.0
 
 %icon-rewind {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\23EA";
-	}
+	@include icon( "rewind" );
 }
 
 /// The fastforward icon.
@@ -99,12 +79,7 @@
 /// @since 1.2.0
 
 %icon-fastforward {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\29E3";
-	}
+	@include icon( "fastforward" );
 }
 
 /// The skipback icon.
@@ -117,12 +92,7 @@
 /// @since 1.2.0
 
 %icon-skipback {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\23EE";
-	}
+	@include icon( "skipback" );
 }
 
 /// The skipforward icon.
@@ -135,12 +105,7 @@
 /// @since 1.2.0
 
 %icon-skipforward {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\23ED";
-	}
+	@include icon( "skipforward" );
 }
 
 /// The record icon.
@@ -153,12 +118,7 @@
 /// @since 1.2.0
 
 %icon-record {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\25CF";
-	}
+	@include icon( "record" );
 }
 
 /// The volume icon.
@@ -171,12 +131,7 @@
 /// @since 1.2.0
 
 %icon-volume {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F508";
-	}
+	@include icon( "volume" );
 }
 
 /// The camera icon.
@@ -189,12 +144,7 @@
 /// @since 1.2.0
 
 %icon-camera {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4F7";
-	}
+	@include icon( "camera" );
 }
 
 /// The headphones icon.
@@ -207,12 +157,7 @@
 /// @since 1.2.0
 
 %icon-headphones {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F3A7";
-	}
+	@include icon( "headphones" );
 }
 
 /// The mic icon.
@@ -225,12 +170,7 @@
 /// @since 1.2.0
 
 %icon-mic {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F3A4";
-	}
+	@include icon( "mic" );
 }
 
 /// The music icon.
@@ -243,12 +183,7 @@
 /// @since 1.2.0
 
 %icon-music {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\266B";
-	}
+	@include icon( "music" );
 }
 
 /// The picture icon.
@@ -261,12 +196,7 @@
 /// @since 1.2.0
 
 %icon-picture {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F304";
-	}
+	@include icon( "picture" );
 }
 
 /// The video icon.
@@ -279,10 +209,5 @@
 /// @since 1.2.0
 
 %icon-video {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4F9";
-	}
+	@include icon( "video" );
 }
