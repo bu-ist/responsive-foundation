@@ -1,0 +1,102 @@
+// =================================================================
+// Dependencies
+// =================================================================
+
+@import "supported";
+
+// =================================================================
+// Icon Mixins
+// =================================================================
+
+/// The font family to use for icons across the site.
+/// Change this to use a different homegrown font family.
+/// @group icons
+/// @access public
+/// @since 2.0.0
+
+$font-family-icons:                     	 "bu-default-icons" !default;
+
+/// The font size to use for icons across the site.
+/// @group icons
+/// @access public
+/// @since 2.0.0
+
+$font-size-icon: 									 21px !default;
+
+/// The color to use for icons across the site.
+/// By default, this will inherit the color of the text in the container the icon lives in.
+/// Setting this will keep the color of the icons consistent everywhere.
+/// @group icons
+/// @access public
+/// @since 1.0.0
+
+$color-icons:										 unset;
+
+/// Provides base icon styles normalized across browsers and optimized
+/// for accessibility.
+/// A helper mixin for the main icon mixin and icon extends.
+/// You probably don't actually want to use this unless you're working
+/// on Responsive. Use the icon mixin instead.
+/// @group icons
+/// @access private
+/// @since 2.0.0
+
+@mixin icon-base {
+	.lt-ie9:hover & {
+		// This triggers a redraw in IE to Fix IE8's :before content rendering.
+		-ms-zoom: 1;
+	}
+
+	span {
+		display: none; // Hide labels
+	}
+}
+
+/// Provides base icon styles normalized across browsers and optimized
+/// for accessibility.
+/// A helper mixin for the main icon mixin and icon extends.
+/// You probably don't actually want to use this unless you're working
+/// on Responsive. Use the icon mixin instead.
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+@mixin icon-content {
+	color: $color-icons;
+	display: inline-block;
+	font-family: $font-family-icons;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1;
+	padding-bottom: 0.2em; // Accomodate for inline icons
+	speak: none;
+	text-decoration: none;
+	text-rendering: optimizeLegibility;
+	text-transform: none;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+/// A mixin to generate icons.
+/// Use any icon in `$icon-supports`.
+/// @group icons
+/// @access public
+/// @since 2.0.0
+
+@mixin icon( $name, $position: "before" ) {
+	@extend %icon-base;
+	$content: map-get( $icons-responsive, $name );
+
+	&::#{$position} {
+		@extend %icon-content;
+
+		@if $content {
+			content: $content;
+		} @else {
+			@error "`#{$name}` is not a supported icon. See www.bu.edu/cdn/fonts/icons/bu-default-icons/specimen-icons.html for a list of supported icons. If this is a custom icon you meant to add for your own icon font, be sure you've added it to the `$icons-theme` map.";
+		}
+	}
+}

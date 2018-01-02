@@ -16,12 +16,7 @@
 /// @since 1.2.0
 
 %icon-burst {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F552";
-	}
+	@include icon( "burst" );
 }
 
 /// The cart icon.
@@ -34,12 +29,7 @@
 /// @since 1.2.0
 
 %icon-cart {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E500";
-	}
+	@include icon( "cart" );
 }
 
 /// The credit card icon.
@@ -52,12 +42,7 @@
 /// @since 1.2.0
 
 %icon-creditcard {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4B3";
-	}
+	@include icon( "creditcard" );
 }
 
 /// The emptycart icon.
@@ -70,10 +55,5 @@
 /// @since 1.2.0
 
 %icon-emptycart {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E507";
-	}
+	@include icon( "emptycart" );
 }

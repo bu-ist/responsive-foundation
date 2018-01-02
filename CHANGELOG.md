@@ -2,6 +2,9 @@
 
 ## 2.0.0-dev
 
+* Support for icon placement using a brand new icon mixin: `@include icon( "facebook" "after" );`,
+which will continue to default to `before` just like it always has
+* Support for grid mixins like so: `@include col( $xs, half );`
 * Adds a new angles mixin [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/94)
 * Adds utility classes for quick prototyping: `u-visually-hidden`,
 `u-clearfix`, `u-hide-text`, `u-hide`, `u-show` [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/93)
