@@ -16,12 +16,7 @@
 /// @since 1.2.0
 
 %icon-calculator {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E551";
-	}
+	@include icon( "calculator" );
 }
 
 /// The barchart icon.
@@ -34,12 +29,7 @@
 /// @since 1.2.0
 
 %icon-barchart {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4CA";
-	}
+	@include icon( "barchart" );
 }
 
 /// The piechart icon.
@@ -52,12 +42,7 @@
 /// @since 1.2.0
 
 %icon-piechart {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E570";
-	}
+	@include icon( "piechart" );
 }
 
 /// The stock icon.
@@ -70,10 +55,5 @@
 /// @since 1.2.0
 
 %icon-stock {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E579";
-	}
+	@include icon( "stock" );
 }
