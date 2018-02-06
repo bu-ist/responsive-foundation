@@ -579,6 +579,69 @@ abbr[title] {
 
 blockquote {
 	margin: $font-margin-blockquote;
+	font-family: $font-family-serif;
+	&.michael {
+		position: relative;
+		left: 30px;
+		&:before {
+			// Position 
+		  	position: absolute;
+		  	left: -30px;
+		  	top: 10px;
+
+		  	// Font
+		  	font-size: 4em;
+		  	content: "\201C"; // Unicode for Left Double Quote
+		}
+	}
+	&.lucille {
+		&:before {
+			content: "\201C"; // Unicode for Left Double Quote
+	    	font-size: 4em;
+	    	font-weight: 700;
+		}
+		&>p:first-of-type {
+			margin: -30px 0 25px 0; // Lifts up first paragraph of blockquote 
+		}
+	}
+	&.oscar {
+		border-left: 0.45em solid #0f69d7;
+		background: #f0f0f0; // $color-grayscale-f0: tint-gray
+		&>p {
+			padding: 0 18px;
+		}
+		&>p:first-of-type {
+			padding-top: 18px; // Provides top padding for first paragraph of blockquote to fill out gray box.
+		}
+		&>p:last-of-type {
+			padding-bottom: 18px; // Provides bottom padding for last paragraph of blockquote to fill out gray box.
+		}
+	}
+	&.gob {
+		position: relative;
+		border-left: 0.45em solid $color-grayscale-6; 
+		background:  $color-grayscale-f0; // color contrast with text (#24243a) = 13.27:1, passes WCAG AAA;
+		&:before {
+			// Position 
+			position: absolute;
+			left: 14px;
+			top: -0.55em; // -2px
+
+			// Font & Color
+			content: "\201C"; // Unicode for Left Double Quote 
+			font-size: 3.75em;
+			color: #666;
+		}
+		&>p {
+			padding: 0 18px;
+		}
+		&>p:first-of-type {
+			padding-top: 18px; // Provides top padding for first paragraph of blockquote to fill out gray box.
+		}
+		&>p:last-of-type {
+			padding-bottom: 18px; // Provides bottom padding for last paragraph of blockquote to fill out gray box.
+		}
+	}
 }
 
 /// Styles for all paragraphs and preformatted content.
