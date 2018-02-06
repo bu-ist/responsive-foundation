@@ -606,7 +606,7 @@ blockquote {
 	}
 	&.oscar {
 		border-left: 0.45em solid #0f69d7;
-		background: #f0f0f0; // $color-grayscale-f0: tint-gray
+		background: $color-grayscale-f0;
 		&>p {
 			padding: 0 18px;
 		}
@@ -625,7 +625,7 @@ blockquote {
 			// Position 
 			position: absolute;
 			left: 14px;
-			top: -0.55em; // -2px
+			top: 2px;
 
 			// Font & Color
 			content: "\201C"; // Unicode for Left Double Quote 
