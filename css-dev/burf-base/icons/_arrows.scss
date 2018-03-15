@@ -28,12 +28,7 @@
 /// @since 1.2.0
 
 %icon-contract {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\EE01";
-	}
+	@include icon( "contract" );
 }
 
 /// The expand icon.
@@ -46,12 +41,7 @@
 /// @since 1.2.0
 
 %icon-expand {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2922";
-	}
+	@include icon( "expand" );
 }
 
 /// The scaledown icon.
@@ -64,12 +54,7 @@
 /// @since 1.2.0
 
 %icon-scaledown {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\EE05";
-	}
+	@include icon( "scaledown" );
 }
 
 /// The scaleup icon.
@@ -82,12 +67,7 @@
 /// @since 1.2.0
 
 %icon-scaleup {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\EE04";
-	}
+	@include icon( "scaleup" );
 }
 
 /// The up icon.
@@ -100,12 +80,7 @@
 /// @since 1.2.0
 
 %icon-up {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2806";
-	}
+	@include icon( "up" );
 }
 
 /// The right icon.
@@ -118,12 +93,7 @@
 /// @since 1.2.0
 
 %icon-right {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\27A1";
-	}
+	@include icon( "right" );
 }
 
 /// The down icon.
@@ -136,12 +106,7 @@
 /// @since 1.2.0
 
 %icon-down {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2B07";
-	}
+	@include icon( "down" );
 }
 
 /// The left icon.
@@ -154,12 +119,7 @@
 /// @since 1.2.0
 
 %icon-left {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2B05";
-	}
+	@include icon( "left" );
 }
 
 /// The directup icon.
@@ -172,12 +132,7 @@
 /// @since 1.2.0
 
 %icon-directup {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\25B4";
-	}
+	@include icon( "directup" );
 }
 
 /// The directright icon.
@@ -190,12 +145,7 @@
 /// @since 1.2.0
 
 %icon-directright {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\25B9";
-	}
+	@include icon( "directright" );
 }
 
 /// The dropdown icon.
@@ -208,12 +158,7 @@
 /// @since 1.2.0
 
 %icon-dropdown {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\25BE";
-	}
+	@include icon( "dropdown" );
 }
 
 /// The directleft icon.
@@ -226,12 +171,7 @@
 /// @since 1.2.0
 
 %icon-directleft {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\25C3";
-	}
+	@include icon( "directleft" );
 }
 
 /// The navigateup icon.
@@ -244,12 +184,7 @@
 /// @since 1.2.0
 
 %icon-navigateup {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F500";
-	}
+	@include icon( "navigateup" );
 }
 
 /// The navigateright icon.
@@ -262,12 +197,7 @@
 /// @since 1.2.0
 
 %icon-navigateright {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\25BB";
-	}
+	@include icon( "navigateright" );
 }
 
 /// The navigatedown icon.
@@ -280,12 +210,7 @@
 /// @since 1.2.0
 
 %icon-navigatedown {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F501";
-	}
+	@include icon( "navigatedown" );
 }
 
 /// The navigateleft icon.
@@ -298,10 +223,5 @@
 /// @since 1.2.0
 
 %icon-navigateleft {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\25C5";
-	}
+	@include icon( "navigateleft" );
 }

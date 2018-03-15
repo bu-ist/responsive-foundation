@@ -21,12 +21,7 @@
 /// @since 1.2.0
 
 %icon-compose {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4DD";
-	}
+	@include icon( "compose" );
 }
 
 /// The grid icon.
@@ -39,12 +34,7 @@
 /// @since 1.2.0
 
 %icon-grid {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E9A0";
-	}
+	@include icon( "grid" );
 }
 /// The layers icon.
 /// @example scss - Add the layers icon to a menu item
@@ -56,12 +46,7 @@
 /// @since 1.2.0
 
 %icon-layers {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E202";
-	}
+	@include icon( "layers" );
 }
 
 /// The layout icon.
@@ -74,12 +59,7 @@
 /// @since 1.2.0
 
 %icon-layout {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E202";
-	}
+	@include icon( "layout" );
 }
 
 /// The list icon.
@@ -92,12 +72,7 @@
 /// @since 1.2.0
 
 %icon-list {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\ED50";
-	}
+	@include icon( "list" );
 }
 
 /// The flag icon.
@@ -110,12 +85,7 @@
 /// @since 1.2.0
 
 %icon-flag {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2691";
-	}
+	@include icon( "flag" );
 }
 
 /// The reply icon.
@@ -128,12 +98,7 @@
 /// @since 1.2.0
 
 %icon-reply {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\21A9";
-	}
+	@include icon( "reply" );
 }
 
 /// The thumbnails icon.
@@ -146,12 +111,7 @@
 /// @since 1.2.0
 
 %icon-thumbnails {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E9A3";
-	}
+	@include icon( "thumbnails" );
 }
 
 /// The write icon.
@@ -164,10 +124,5 @@
 /// @since 1.2.0
 
 %icon-write {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\270E";
-	}
+	@include icon( "write" );
 }

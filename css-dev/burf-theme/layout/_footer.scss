@@ -167,7 +167,7 @@ $_footbar-widget-width: $grid-number-columns / $number-widgets-footbar;
 $color-body-bg:                            $color-grayscale-0 !default;
 
 body {
-	background: $color-body-bg;
+	background-color: $color-body-bg;
 }
 
 /// Controls styling for the site footer - branding, address, and social links.

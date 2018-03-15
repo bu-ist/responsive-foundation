@@ -16,12 +16,7 @@
 /// @since 1.2.0
 
 %icon-alert {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\26A0";
-	}
+	@include icon( "alert" );
 }
 
 /// The check icon.
@@ -34,12 +29,7 @@
 /// @since 1.2.0
 
 %icon-check {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2713";
-	}
+	@include icon( "check" );
 }
 
 /// The info icon.
@@ -52,12 +42,7 @@
 /// @since 1.2.0
 
 %icon-info {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2139";
-	}
+	@include icon( "info" );
 }
 
 /// The megaphone icon.
@@ -70,10 +55,5 @@
 /// @since 1.2.0
 
 %icon-megaphone {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4E2";
-	}
+	@include icon( "megaphone" );
 }

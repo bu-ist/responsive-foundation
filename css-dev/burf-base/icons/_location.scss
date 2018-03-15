@@ -19,12 +19,7 @@
 /// @since 1.2.0
 
 %icon-compass {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E671";
-	}
+	@include icon( "compass" );
 }
 
 /// The crosshair icon.
@@ -37,12 +32,7 @@
 /// @since 1.2.0
 
 %icon-crosshair {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2316";
-	}
+	@include icon( "crosshair" );
 }
 
 /// The globe icon.
@@ -55,12 +45,7 @@
 /// @since 1.2.0
 
 %icon-globe {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F310";
-	}
+	@include icon( "globe" );
 }
 
 /// The location icon.
@@ -73,12 +58,7 @@
 /// @since 1.2.0
 
 %icon-location {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E6D0";
-	}
+	@include icon( "location" );
 }
 
 /// The map icon.
@@ -91,12 +71,7 @@
 /// @since 1.2.0
 
 %icon-map {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E673";
-	}
+	@include icon( "map" );
 }
 
 /// The navigate icon.
@@ -109,12 +84,7 @@
 /// @since 1.2.0
 
 %icon-navigate {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E670";
-	}
+	@include icon( "navigate" );
 }
 
 /// The signpost icon.
@@ -127,10 +97,5 @@
 /// @since 1.2.0
 
 %icon-signpost {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E672";
-	}
+	@include icon( "signpost" );
 }

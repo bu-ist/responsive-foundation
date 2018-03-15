@@ -19,12 +19,7 @@
 /// @since 1.2.0
 
 %icon-link {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F51B";
-	}
+	@include icon( "link" );
 }
 
 /// The link alt icon.
@@ -37,12 +32,7 @@
 /// @since 1.2.0
 
 %icon-link-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F699";
-	}
+	@include icon( "link-alt" );
 }
 
 /// The file icon.
@@ -55,12 +45,7 @@
 /// @since 1.2.0
 
 %icon-file {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4C4";
-	}
+	@include icon( "file" );
 }
 
 /// The files icon.
@@ -73,12 +58,7 @@
 /// @since 1.2.0
 
 %icon-files {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\EC00";
-	}
+	@include icon( "files" );
 }
 
 /// The folder icon.
@@ -91,12 +71,7 @@
 /// @since 1.2.0
 
 %icon-folder {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4C1";
-	}
+	@include icon( "folder" );
 }
 
 /// The index icon.
@@ -109,12 +84,7 @@
 /// @since 1.2.0
 
 %icon-index {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E902";
-	}
+	@include icon( "index" );
 }
 
 /// The storagebox icon.
@@ -127,10 +97,5 @@
 /// @since 1.2.0
 
 %icon-storagebox {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E901";
-	}
+	@include icon( "storagebox" );
 }

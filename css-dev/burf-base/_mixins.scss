@@ -23,7 +23,8 @@
 /// @access public
 /// @since 1.0.0
 
-%clearfix {
+%clearfix,
+.u-clearfix {
 	&::after {
 		display: table;
 		clear: both;
@@ -289,7 +290,7 @@
 /// @access public
 /// @since 1.0.0
 
-@mixin scale( $scale ) {
+@mixin scale( $scale... ) {
 	@include transform( scale( $scale ) );
 }
 
@@ -553,7 +554,8 @@
 /// @access public
 /// @since 1.0.0
 
-%hide-text {
+%hide-text,
+.u-hide-text {
 	overflow: hidden;
 	text-indent: 100%;
 	white-space: nowrap;
@@ -575,7 +577,8 @@
 /// @access public
 /// @since 1.0.0
 
-%visually-hidden {
+%visually-hidden,
+.u-visually-hidden {
 	border: 0;
 	clip: rect( 0, 0, 0, 0 ); // Deprecated. Remove when clip-path support is better.
 	clip-path: inset( 50% );
@@ -606,6 +609,58 @@
 	overflow: visible;
 	position: static;
 	width: auto;
+}
+
+/// A class for developers to use to quickly prototype filtering.
+/// Hides an item completely. Do not use in production code.
+/// Never override this class in your CSS. Instead, attach the
+/// final show/hide animations to the CSS class you decide to use
+/// for that element.
+/// @group mixins
+/// @access public
+/// @since 2.0.0
+
+.u-hide {
+	display: none;
+}
+
+/// A class for developers to use to quickly prototype filtering.
+/// Shows an item. Do not use in production code.
+/// Never override this class in your CSS. Instead, attach the
+/// final show/hide animations to the CSS class you decide to use
+/// for that element.
+/// @group mixins
+/// @access public
+/// @since 2.0.0
+
+.u-show {
+	display: block;
+}
+
+/// A class for developers to use to enable style matching to
+/// Responsive child themes. Generally used to aid in plugin
+/// development - it's unlikely you'll want to use this in
+/// a child theme, since you have control over the output.
+/// Matches to the $padding variable.
+/// @group mixins
+/// @access public
+/// @since 2.0.0
+
+.u-padding {
+	padding: $padding;
+}
+
+/// A class for developers to use to enable style matching to
+/// Responsive child themes. Generally used to aid in plugin
+/// development - it's unlikely you'll want to use this in
+/// a child theme, since you have control over the output.
+/// Matches to the $margin variable.
+/// @group mixins
+/// @access public
+/// @since 2.0.0
+
+.u-margin {
+	margin: $margin;
 }
 
 /// A safe way to including responsive styles on old browers which
@@ -659,6 +714,107 @@
 			// Do not output very large desktop styles for IE8
 		} @else {
 			@content;
+		}
+	}
+}
+
+/// A mixin to quickly add angles to an element.
+/// Uses before/after pseudo classes.
+/// Based on Jeremy Frank's work here: https://www.viget.com/articles/angled-edges-with-css-masks-and-transforms
+/// @example
+/// 		Add a 1.5 degree angle, slanted right, to the bottom of a callout.
+///		.callout {
+///			@include angle( after );
+///		}
+///
+/// 		Add angles to both edges of a callout.
+///		.callout {
+///			@include angle( both );
+///		}
+///
+/// 		Add a 2.5 degree angle, slanted right, to the top of a callout.
+///		.callout {
+///			@include angle( before, false, 2.5deg );
+///		}
+///
+/// @group mixins
+/// @param {string} | $pseudo [after] - The pseudo-element to apply the angle to. Use before to get an angle on top, after to get an angle on bottom.
+/// @param {bool} | $flip [false] - Whether or not to flip the default angle slant. By default, the angle will slant upwards to the right.
+/// @param {deg} | $angle [1.5deg] - The number of degrees to slant the angle at.
+/// @access public
+/// @since 2.0.0
+
+@mixin angle( $pseudo: after, $flip: false, $angle: 1.5deg ) {
+	@if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
+		position: relative;
+		z-index: 1;
+
+		$selector: if( $pseudo == 'both', '&:before,&:after', '&:#{$pseudo}' );
+
+		#{$selector} {
+			-webkit-backface-visibility: hidden; // for Chrome Windows
+			background: inherit;
+			content: "";
+			display: block;
+			height: 50%;
+			left: 0;
+			position: absolute;
+			right: 0;
+			z-index: -1;
+		}
+
+		@if $pseudo == 'before' {
+			#{$selector} {
+				top: 0;
+
+				@if $flip {
+					transform: skewY($angle * -1);
+					transform-origin: 0 0;
+				} @else {
+					transform: skewY($angle);
+					transform-origin: 100% 0;
+				}
+			}
+		}
+
+		@if $pseudo == 'after' {
+			#{$selector} {
+				bottom: 0;
+
+				@if $flip {
+					transform: skewY($angle);
+					transform-origin: 0 100%;
+				} @else {
+					transform: skewY($angle * -1);
+					transform-origin: 100%;
+				}
+			}
+		}
+
+		@if $pseudo == 'both' {
+			&:before {
+				top: 0;
+
+				@if $flip {
+					transform: skewY($angle * -1);
+					transform-origin: 0 0;
+				} @else {
+					transform: skewY($angle);
+					transform-origin: 100% 0;
+				}
+			}
+
+			&:after {
+				bottom: 0;
+
+				@if $flip {
+					transform: skewY($angle);
+					transform-origin: 0 0;
+				} @else {
+					transform: skewY($angle * -1);
+					transform-origin: 100%;
+				}
+			}
 		}
 	}
 }

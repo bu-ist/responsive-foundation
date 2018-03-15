@@ -362,6 +362,20 @@ $padding-small:                              $padding / 2 !default;
 
 $padding-large:                              $padding * 2 !default;
 
+/// The base padding to use for content sitewide.
+/// @group config
+/// @access public
+/// @since 2.0.0
+
+$padding-small:                              $padding / 2;
+
+/// The base padding to use for large spacing sitewide.
+/// @group config
+/// @access public
+/// @since 2.0.0
+
+$padding-large:                              $padding * 2;
+
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------

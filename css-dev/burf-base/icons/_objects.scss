@@ -24,6 +24,8 @@
 	// planet
 	// poo
 	// puzzle
+	// recycle
+	// recycle alt
 	// screwdriver
 	// thermometer
 	// toolbox
@@ -31,6 +33,7 @@
 	// users
 	// utensils
 	// view
+	// wheelchair
 	// wrench
 // =================================================================
 
@@ -44,12 +47,7 @@
 /// @since 1.2.0
 
 %icon-book {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4D5";
-	}
+	@include icon( "book" );
 }
 
 /// The box icon.
@@ -62,12 +60,7 @@
 /// @since 1.2.0
 
 %icon-box {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4E6";
-	}
+	@include icon( "box" );
 }
 
 /// The briefcase icon.
@@ -80,12 +73,7 @@
 /// @since 1.2.0
 
 %icon-briefcase {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4BC";
-	}
+	@include icon( "briefcase" );
 }
 
 /// The bug icon.
@@ -98,12 +86,7 @@
 /// @since 1.2.0
 
 %icon-bug {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F41B";
-	}
+	@include icon( "bug" );
 }
 
 /// The chat icon.
@@ -116,12 +99,7 @@
 /// @since 1.2.0
 
 %icon-chat {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4AC";
-	}
+	@include icon( "chat" );
 }
 
 /// The clipboard icon.
@@ -134,12 +112,7 @@
 /// @since 1.2.0
 
 %icon-clipboard {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4CB";
-	}
+	@include icon( "clipboard" );
 }
 
 /// The code icon.
@@ -152,12 +125,7 @@
 /// @since 1.2.0
 
 %icon-code {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E780";
-	}
+	@include icon( "code" );
 }
 
 /// The contacts icon.
@@ -170,12 +138,7 @@
 /// @since 1.2.0
 
 %icon-contacts {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4C7";
-	}
+	@include icon( "contacts" );
 }
 
 /// The dashboard icon.
@@ -188,12 +151,7 @@
 /// @since 1.2.0
 
 %icon-dashboard {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F000";
-	}
+	@include icon( "dashboard" );
 }
 
 
@@ -207,12 +165,7 @@
 /// @since 1.2.0
 
 %icon-flask {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F4C0";
-	}
+	@include icon( "flask" );
 }
 
 /// The heart icon.
@@ -225,12 +178,7 @@
 /// @since 1.2.0
 
 %icon-heart {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2665";
-	}
+	@include icon( "heart" );
 }
 
 /// The home icon.
@@ -243,12 +191,7 @@
 /// @since 1.2.0
 
 %icon-home {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2302";
-	}
+	@include icon( "home" );
 }
 
 /// The key icon.
@@ -261,12 +204,7 @@
 /// @since 1.2.0
 
 %icon-key {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F511";
-	}
+	@include icon( "key" );
 }
 
 /// The lightbulb icon.
@@ -279,12 +217,7 @@
 /// @since 1.2.0
 
 %icon-lightbulb {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4A1";
-	}
+	@include icon( "lightbulb" );
 }
 
 /// The lightning icon.
@@ -297,12 +230,7 @@
 /// @since 1.2.0
 
 %icon-lightning {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2607";
-	}
+	@include icon( "lightning" );
 }
 
 /// The lock icon.
@@ -315,12 +243,7 @@
 /// @since 1.2.0
 
 %icon-lock {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F512";
-	}
+	@include icon( "lock" );
 }
 
 /// The unlock icon.
@@ -333,12 +256,7 @@
 /// @since 1.2.0
 
 %icon-unlock {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F513";
-	}
+	@include icon( "unlock" );
 }
 
 /// The notebook icon.
@@ -351,12 +269,7 @@
 /// @since 1.2.0
 
 %icon-notebook {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4D3";
-	}
+	@include icon( "notebook" );
 }
 
 /// The notifications icon.
@@ -369,12 +282,7 @@
 /// @since 1.2.0
 
 %icon-notifications {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F514";
-	}
+	@include icon( "notifications" );
 }
 
 /// The pin icon.
@@ -387,12 +295,7 @@
 /// @since 1.2.0
 
 %icon-pin {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4CD";
-	}
+	@include icon( "pin" );
 }
 
 /// The pinboard icon.
@@ -405,12 +308,7 @@
 /// @since 1.2.0
 
 %icon-pinboard {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F654";
-	}
+	@include icon( "pinboard" );
 }
 
 
@@ -424,12 +322,7 @@
 /// @since 1.2.0
 
 %icon-planet {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F280";
-	}
+	@include icon( "planet" );
 }
 
 /// The poo icon.
@@ -442,12 +335,7 @@
 /// @since 1.2.0
 
 %icon-poo {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4A9";
-	}
+	@include icon( "poo" );
 }
 
 /// The puzzle icon.
@@ -460,12 +348,33 @@
 /// @since 1.2.0
 
 %icon-puzzle {
-	@extend %icon-base;
+	@include icon( "puzzle" );
+}
 
-	&::before {
-		@extend %icon-content;
-		content: "\E710";
-	}
+/// The recycle icon.
+/// @example scss - Add the recycle icon to a menu item
+/// .menu-item {
+///    @extend %icon-recycle;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-recycle {
+	@include icon( "recycle" );
+}
+
+/// The recycle alt icon.
+/// @example scss - Add the recycle alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-recycle-alt;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-recycle-alt {
+	@include icon( "recycle-alt" );
 }
 
 /// The screwdriver icon.
@@ -478,12 +387,7 @@
 /// @since 1.2.0
 
 %icon-screwdriver {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F037";
-	}
+	@include icon( "screwdriver" );
 }
 
 /// The thermometer icon.
@@ -496,12 +400,7 @@
 /// @since 1.2.0
 
 %icon-thermometer {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F201";
-	}
+	@include icon( "thermometer" );
 }
 
 /// The toolbox icon.
@@ -514,12 +413,7 @@
 /// @since 1.2.0
 
 %icon-toolbox {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F030";
-	}
+	@include icon( "toolbox" );
 }
 
 /// The user icon.
@@ -532,12 +426,7 @@
 /// @since 1.2.0
 
 %icon-user {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F464";
-	}
+	@include icon( "user" );
 }
 
 /// The users icon.
@@ -550,12 +439,7 @@
 /// @since 1.2.0
 
 %icon-users {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F465";
-	}
+	@include icon( "users" );
 }
 
 /// The utensils icon.
@@ -568,12 +452,7 @@
 /// @since 1.2.0
 
 %icon-utensils {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F374";
-	}
+	@include icon( "utensils" );
 }
 
 /// The view icon.
@@ -586,12 +465,20 @@
 /// @since 1.2.0
 
 %icon-view {
-	@extend %icon-base;
+	@include icon( "view" );
+}
 
-	&::before {
-		@extend %icon-content;
-		content: "\1F440";
-	}
+/// The wheelchair icon.
+/// @example scss - Add the wheelchair icon to a menu item
+/// .menu-item {
+///    @extend %icon-wheelchair;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-wheelchair {
+	@include icon( "wheelchair" );
 }
 
 /// The wrench icon.
@@ -604,10 +491,5 @@
 /// @since 1.2.0
 
 %icon-wrench {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F527";
-	}
+	@include icon( "wrench" );
 }

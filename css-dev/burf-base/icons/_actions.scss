@@ -37,12 +37,7 @@
 /// @since 1.2.0
 
 %icon-action {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\EE00";
-	}
+	@include icon( "action" );
 }
 
 /// The ban icon.
@@ -55,12 +50,7 @@
 /// @since 1.2.0
 
 %icon-ban {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F6AB";
-	}
+	@include icon( "ban" );
 }
 
 /// The bookmark icon.
@@ -73,12 +63,7 @@
 /// @since 1.2.0
 
 %icon-bookmark {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F516";
-	}
+	@include icon( "bookmark" );
 }
 
 /// The close icon.
@@ -91,12 +76,7 @@
 /// @since 1.2.0
 
 %icon-close {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E421";
-	}
+	@include icon( "close" );
 }
 
 /// The delete icon.
@@ -109,12 +89,7 @@
 /// @since 1.2.0
 
 %icon-delete {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2421";
-	}
+	@include icon( "delete" );
 }
 
 /// The download icon.
@@ -127,12 +102,7 @@
 /// @since 1.2.0
 
 %icon-download {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\EB01";
-	}
+	@include icon( "download" );
 }
 
 /// The downloadbox icon.
@@ -145,12 +115,7 @@
 /// @since 1.2.0
 
 %icon-downloadbox {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\EB02";
-	}
+	@include icon( "downloadbox" );
 }
 
 /// The like icon.
@@ -163,12 +128,7 @@
 /// @since 1.2.0
 
 %icon-like {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F44D";
-	}
+	@include icon( "like" );
 }
 
 /// The like alt icon.
@@ -181,12 +141,7 @@
 /// @since 1.2.0
 
 %icon-like-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F44B";
-	}
+	@include icon( "like-alt" );
 }
 
 /// The dislike icon.
@@ -199,12 +154,7 @@
 /// @since 1.2.0
 
 %icon-dislike {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F44E";
-	}
+	@include icon( "dislike" );
 }
 
 /// The menu icon.
@@ -217,12 +167,7 @@
 /// @since 1.2.0
 
 %icon-menu {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E9A1";
-	}
+	@include icon( "menu" );
 }
 
 /// The plus icon.
@@ -235,12 +180,7 @@
 /// @since 1.2.0
 
 %icon-plus {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\002B";
-	}
+	@include icon( "plus" );
 }
 
 /// The hyphen icon.
@@ -253,12 +193,7 @@
 /// @since 1.2.0
 
 %icon-hyphen {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\002D";
-	}
+	@include icon( "hyphen" );
 }
 
 /// The print icon.
@@ -271,12 +206,7 @@
 /// @since 1.2.0
 
 %icon-print {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2399";
-	}
+	@include icon( "print" );
 }
 
 /// The redirect icon.
@@ -289,12 +219,7 @@
 /// @since 1.2.0
 
 %icon-redirect {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\21AA";
-	}
+	@include icon( "redirect" );
 }
 
 /// The refresh icon.
@@ -307,12 +232,7 @@
 /// @since 1.2.0
 
 %icon-refresh {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\21BB";
-	}
+	@include icon( "refresh" );
 }
 
 /// The replay icon.
@@ -325,12 +245,7 @@
 /// @since 1.2.0
 
 %icon-replay {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\21BA";
-	}
+	@include icon( "replay" );
 }
 
 /// The share icon.
@@ -343,12 +258,7 @@
 /// @since 1.2.0
 
 %icon-share {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F601";
-	}
+	@include icon( "share" );
 }
 
 /// The search icon.
@@ -361,12 +271,7 @@
 /// @since 1.2.0
 
 %icon-search {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F50E";
-	}
+	@include icon( "search" );
 }
 
 /// The settings icon.
@@ -379,12 +284,7 @@
 /// @since 1.2.0
 
 %icon-settings {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2699";
-	}
+	@include icon( "settings" );
 }
 
 /// The sync icon.
@@ -397,12 +297,7 @@
 /// @since 1.2.0
 
 %icon-sync {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\EB82";
-	}
+	@include icon( "sync" );
 }
 
 /// The star icon.
@@ -415,12 +310,7 @@
 /// @since 1.2.0
 
 %icon-star {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\22C6";
-	}
+	@include icon( "star" );
 }
 
 /// The tag icon.
@@ -433,12 +323,7 @@
 /// @since 1.2.0
 
 %icon-tag {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E100";
-	}
+	@include icon( "tag" );
 }
 
 /// The upload icon.
@@ -451,12 +336,7 @@
 /// @since 1.2.0
 
 %icon-upload {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\EB41";
-	}
+	@include icon( "upload" );
 }
 
 /// The upload to cloud icon.
@@ -469,10 +349,5 @@
 /// @since 1.2.0
 
 %icon-uploadcloud {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\EB40";
-	}
+	@include icon( "uploadcloud" );
 }

@@ -68,7 +68,7 @@ $border-collapsible:               $border !default;
 		}
 	}
 
-	.bu_collapsible_open & {
+	.bu_collapsible_open > & {
 		@extend %icon-hyphen;
 	}
 }
