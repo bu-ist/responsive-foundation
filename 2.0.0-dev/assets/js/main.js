@@ -50,7 +50,15 @@
 (function ($, global) {
 
   $(document).ready(function () {
-    var app = new global.App();
+      var app = new global.App();
+
+      console.log('set');
+
+      $('.sidebar__group--title').on('click', function () {
+        console.log('running');
+        $grp = $(this).next('ul');
+        $grp.toggle();
+      });
   });
 
 }(window.jQuery, window));
