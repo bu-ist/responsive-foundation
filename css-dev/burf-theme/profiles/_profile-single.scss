@@ -8,7 +8,8 @@
 /// @access public
 /// @since 1.0.0
 
-$color-profile-info-label:                 $color-grayscale-a !default;
+$color-profile-info-label:					$color-grayscale-6 !default;
+$color-profile-info-item:					$color-grayscale-5 !default;
 
 // =================================================================
 // Profile Single Styles
@@ -97,6 +98,7 @@ $color-profile-info-label:                 $color-grayscale-a !default;
 /// @since 2.0.0
 
 .profile-details-item {
+	color: $color-profile-info-item;
 	list-style: none;
 	margin: 0 0 $margin;
 	word-wrap: break-word;
