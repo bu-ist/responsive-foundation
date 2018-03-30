@@ -384,6 +384,7 @@ $nav-toggle-size: 60px !default;
 	font-size: $nav-toggle-size / 2;
 	height: $nav-toggle-size;
 	line-height: $nav-toggle-size;
+	margin: 0;
 	padding: 0;
 	text-align: center;
 	width: $nav-toggle-size;
@@ -424,6 +425,7 @@ $nav-toggle-border: 4px !default;
 	cursor: pointer;
 	float: left;
 	height: $nav-toggle-size;
+	margin: 0;
 	position: relative;
 	width: $nav-toggle-size;
 
@@ -445,7 +447,7 @@ $nav-toggle-border: 4px !default;
 		left: $nav-toggle-size / 4;
 		position: absolute;
 		text-indent: 100px;
-		top: $nav-toggle-size / 2;
+		top: $nav-toggle-size / 2 - 2px;
 		width: $nav-toggle-size / 2;
 
 		&::before,
