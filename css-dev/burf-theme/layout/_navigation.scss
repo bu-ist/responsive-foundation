@@ -312,10 +312,13 @@ nav {
 
 #quicksearch {
 	background: $color-search-bg;
-	display: none;
 	margin: 0;
 	padding: $padding $padding-small;
 	position: relative;
+
+	.js & {
+		display: none;
+	}
 
 	&.is-open {
 		border-bottom: $border-search;
@@ -375,6 +378,7 @@ $nav-toggle-size: 60px !default;
 .search-toggle {
 	@extend %icon-search;
 	@include transition( color 200ms ease-in-out 0s );
+	background: transparent;
 	color: $color-nav-toggle;
 	float: right;
 	font-size: $nav-toggle-size / 2;
@@ -392,22 +396,18 @@ $nav-toggle-size: 60px !default;
 		color: $color-nav-toggle-hover;
 	}
 
+	&:focus {
+		outline-color: invert( $color-primary-nav-bg );
+	}
+
 	&.is-open {
 		@extend %icon-close;
 	}
 
 	span {
-		display: none;
+		@extend %visually-hidden;
 	}
 }
-
-// when nav or search are opened
-.is-open .primary-nav-menu,
-.is-open .utility-nav {
-	clear: left;
-	display: block;
-}
-
 
 /// Adjusts the size of border on the nav toggle icon
 /// in the main navigation. Also affects spacing of borders
@@ -420,6 +420,7 @@ $nav-toggle-border: 4px !default;
 
 .nav-toggle {
 	@extend %hide-text;
+	background: transparent;
 	cursor: pointer;
 	float: left;
 	height: $nav-toggle-size;
@@ -428,6 +429,10 @@ $nav-toggle-border: 4px !default;
 
 	@include breakpoint( $nav-desktop ) {
 		display: none;
+	}
+
+	&:focus {
+		outline-color: invert( $color-primary-nav-bg );
 	}
 
 	span {
@@ -439,6 +444,7 @@ $nav-toggle-border: 4px !default;
 		height: $nav-toggle-border;
 		left: $nav-toggle-size / 4;
 		position: absolute;
+		text-indent: 100px;
 		top: $nav-toggle-size / 2;
 		width: $nav-toggle-size / 2;
 
@@ -504,8 +510,14 @@ $nav-toggle-border: 4px !default;
 }
 
 .primary-nav-menu {
-	display: none;
+	clear: left;
 	margin: $nav-toggle-size 10px 0; // Keeps menu from overlapping nav toggle
+
+	@media screen and ( max-width: $sm - 1 ) {
+		.js & {
+			display: none;
+		}
+	}
 
 	@include breakpoint( $nav-desktop ) {
 		border: 0;
@@ -524,6 +536,10 @@ $nav-toggle-border: 4px !default;
 			.lt-ie8 & {
 				display: inline;
 			}
+		}
+
+		&:focus {
+			outline-color: invert( $color-primary-nav-bg );
 		}
 
 		&:hover ul,
@@ -587,11 +603,18 @@ $nav-toggle-border: 4px !default;
 	}
 }
 
+// when nav or search are opened
+.is-open .primary-nav-menu,
+.is-open .utility-nav {
+	display: block;
+}
+
 // utilityNav
 
 .utility-nav {
 	border: 1px solid $color-primary-nav-border;
 	border-width: $border-width-utility-nav;
+	clear: left;
 	color: $color-utility-nav-mobile-link;
 	display: none;
 	font-size: $font-size-utility-nav;
