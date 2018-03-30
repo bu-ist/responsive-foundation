@@ -499,7 +499,10 @@ $nav-toggle-border: 4px !default;
 	@extend %clearfix;
 	background: $color-primary-nav-bg;
 	display: block;
-	padding: 0 $padding-small;
+
+	@include breakpoint( $nav-desktop ) {
+		padding: 0 $padding-small;
+	}
 
 	&.is-open {
 		height: auto;
@@ -513,7 +516,7 @@ $nav-toggle-border: 4px !default;
 
 .primary-nav-menu {
 	clear: left;
-	margin: $nav-toggle-size 10px 0; // Keeps menu from overlapping nav toggle
+	margin: $nav-toggle-size $margin-small 0; // Keeps menu from overlapping nav toggle
 
 	@media screen and ( max-width: $sm - 1 ) {
 		.js & {
@@ -631,6 +634,7 @@ $nav-toggle-border: 4px !default;
 	li {
 		border: 0;
 		padding: 0;
+		list-style-type: none;
 
 		@include breakpoint( $nav-desktop ) {
 			*display: inline;
@@ -669,7 +673,7 @@ $nav-toggle-border: 4px !default;
 		@include breakpoint( $nav-desktop ) {
 			line-height: 1;
 			position: absolute;
-			right: 20px;
+			right: $padding;
 			top: ( $height-brand / 2 ) - ( $font-size-utility-nav / 2 );
 		}
 	}
@@ -892,7 +896,7 @@ $top-nav-desktop:                    $nav-desktop !default;
 		@include breakpoint( $top-nav-desktop ) {
 			line-height: 1;
 			position: absolute;
-			right: 20px;
+			right: $padding;
 			top: ( ( $height-brand / 2 ) - ( $font-size-utility-nav / 2 ) ) + 60;
 		}
 	}
