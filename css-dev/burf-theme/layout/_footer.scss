@@ -470,7 +470,7 @@ body {
 		}
 	}
 
-	.disclaimer + & {
+	.site-footer-disclaimer + & {
 		@include breakpoint( $md ) {
 			clear: none;
 			float: left;

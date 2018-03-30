@@ -340,9 +340,18 @@ nav {
 	}
 }
 
+
+/// The height of the search field. Affects both search and search button.
+/// @group navigation
+/// @access public
+/// @since 1.0.0
+
+$search-field-height:                          40px !default;
+
 .search-field {
 	@include border-radius( $border-radius-quicksearch-input );
 	color: $color-search-text;
+	height: $search-field-height;
 	padding-left: $padding-small;
 	padding-right: $padding-small;
 	width: 75%;
@@ -356,6 +365,7 @@ nav {
 	@extend %button-styles-primary;
 	@include border-radius( $border-radius-quicksearch-button );
 	float: right;
+	height: $search-field-height;
 	margin: 0;
 	width: 25%;
 
@@ -384,6 +394,7 @@ $nav-toggle-size: 60px !default;
 	font-size: $nav-toggle-size / 2;
 	height: $nav-toggle-size;
 	line-height: $nav-toggle-size;
+	margin: 0;
 	padding: 0;
 	text-align: center;
 	width: $nav-toggle-size;
@@ -424,6 +435,7 @@ $nav-toggle-border: 4px !default;
 	cursor: pointer;
 	float: left;
 	height: $nav-toggle-size;
+	margin: 0;
 	position: relative;
 	width: $nav-toggle-size;
 
@@ -445,7 +457,7 @@ $nav-toggle-border: 4px !default;
 		left: $nav-toggle-size / 4;
 		position: absolute;
 		text-indent: 100px;
-		top: $nav-toggle-size / 2;
+		top: $nav-toggle-size / 2 - 2px;
 		width: $nav-toggle-size / 2;
 
 		&::before,
@@ -497,7 +509,10 @@ $nav-toggle-border: 4px !default;
 	@extend %clearfix;
 	background: $color-primary-nav-bg;
 	display: block;
-	padding: 0 $padding-small;
+
+	@include breakpoint( $nav-desktop ) {
+		padding: 0 $padding-small;
+	}
 
 	&.is-open {
 		height: auto;
@@ -511,7 +526,7 @@ $nav-toggle-border: 4px !default;
 
 .primary-nav-menu {
 	clear: left;
-	margin: $nav-toggle-size 10px 0; // Keeps menu from overlapping nav toggle
+	margin: $nav-toggle-size $margin-small 0; // Keeps menu from overlapping nav toggle
 
 	@media screen and ( max-width: $sm - 1 ) {
 		.js & {
@@ -629,6 +644,7 @@ $nav-toggle-border: 4px !default;
 	li {
 		border: 0;
 		padding: 0;
+		list-style-type: none;
 
 		@include breakpoint( $nav-desktop ) {
 			*display: inline;
@@ -667,7 +683,7 @@ $nav-toggle-border: 4px !default;
 		@include breakpoint( $nav-desktop ) {
 			line-height: 1;
 			position: absolute;
-			right: 20px;
+			right: $padding;
 			top: ( $height-brand / 2 ) - ( $font-size-utility-nav / 2 );
 		}
 	}
@@ -890,7 +906,7 @@ $top-nav-desktop:                    $nav-desktop !default;
 		@include breakpoint( $top-nav-desktop ) {
 			line-height: 1;
 			position: absolute;
-			right: 20px;
+			right: $padding;
 			top: ( ( $height-brand / 2 ) - ( $font-size-utility-nav / 2 ) ) + 60;
 		}
 	}
