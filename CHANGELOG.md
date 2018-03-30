@@ -2,6 +2,9 @@
 
 ## 2.0.0-dev
 
+* Support for icon placement using a brand new icon mixin: `@include icon( "facebook" "after" );`,
+which will continue to default to `before` just like it always has
+* Support for grid mixins like so: `@include col( $xs, half );`
 * Adds a new angles mixin [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/94)
 * Adds utility classes for quick prototyping: `u-visually-hidden`,
 `u-clearfix`, `u-hide-text`, `u-hide`, `u-show` [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/93)
@@ -54,7 +57,11 @@ standards [See related pull request](https://github.com/bu-ist/responsive-founda
 * Better compliance with licensing rules for Normalize and Pure CSS
 [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/59)
 
-## 1.4.1
+# 1.4.2
+
+* Fixes missing parenthesis in gallery Sass to make Foundation compatible with libsass
+
+# 1.4.1
 
 * Fixes a typo in classes for BUMC branding
 

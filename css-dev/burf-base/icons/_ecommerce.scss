@@ -2,6 +2,7 @@
 // eCommerce Icons
 	// burst
 	// cart
+	// credit card
 	// emptycart
 // =================================================================
 
@@ -15,12 +16,7 @@
 /// @since 1.2.0
 
 %icon-burst {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\F552";
-	}
+	@include icon( "burst" );
 }
 
 /// The cart icon.
@@ -33,12 +29,20 @@
 /// @since 1.2.0
 
 %icon-cart {
-	@extend %icon-base;
+	@include icon( "cart" );
+}
 
-	&::before {
-		@extend %icon-content;
-		content: "\E500";
-	}
+/// The credit card icon.
+/// @example scss - Add the credit card icon to a menu item
+/// .menu-item {
+///    @extend %icon-creditcard;
+/// }
+/// @group icons
+/// @access public
+/// @since 1.2.0
+
+%icon-creditcard {
+	@include icon( "creditcard" );
 }
 
 /// The emptycart icon.
@@ -51,10 +55,5 @@
 /// @since 1.2.0
 
 %icon-emptycart {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E507";
-	}
+	@include icon( "emptycart" );
 }

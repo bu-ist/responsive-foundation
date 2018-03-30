@@ -1,0 +1,274 @@
+// =================================================================
+// Supported Icons
+// =================================================================
+
+/// The icons this site supports.
+/// All icons get a name and a UTF-8 value. It's unlikely you'll
+/// need to change these, and you probably shouldn't. However,
+/// if you're using your own icon font, you may want to add to it.
+/// @group icons
+/// @access public
+/// @since 2.0.0
+
+$icons-responsive: (
+
+	// Actions
+
+	action: "\EE00",
+	ban: "\1F6AB",
+	bookmark: "\1F516",
+	close: "\E421",
+	delete: "\2421",
+	download: "\EB01",
+	downloadbox: "\EB02",
+	like: "\1F44D",
+	like-alt: "\1F44B",
+	dislike: "\1F44E",
+	menu: "\E9A1",
+	plus: "\002B",
+	hyphen: "\002D",
+	print: "\2399",
+	redirect: "\21AA",
+	refresh: "\21BB",
+	replay: "\21BA",
+	share: "\F601",
+	search: "\1F50E",
+	settings: "\2699",
+	sync: "\EB82",
+	star: "\22C6",
+	tag: "\E100",
+	upload: "\EB41",
+	uploadcloud: "\EB40",
+
+	// Arrows
+
+	contract: "\EE01",
+	expand: "\2922",
+	scaledown: "\EE05",
+	scaleup: "\EE04",
+	up: "\2806",
+	right: "\27A1",
+	down: "\2B07",
+	left: "\2B05",
+	directup: "\25B4",
+	directright: "\25B9",
+	dropdown: "\25BE",
+	directleft: "\25C3",
+	navigateup: "\F500",
+	navigateright: "\25BB",
+	navigatedown: "\F501",
+	navigateleft: "\25C5",
+
+	// Charts
+
+	calculator: "\E551",
+	barchart: "\1F4CA",
+	piechart: "\E570",
+	stock: "\E579",
+
+	// Communication
+
+	envelope: "\2709",
+	phone: "\1F4DE",
+	rss: "\E310",
+	rss-alt: "\E31A",
+	rotaryphone: "\260E",
+
+	// Documents
+
+	link: "\1F51B",
+	link-alt: "\F699",
+	file: "\1F4C4",
+	files: "\EC00",
+	folder: "\1F4C1",
+	index: "\E902",
+	storagebox: "\E901",
+
+	// eCommerce
+
+	burst: "\F552",
+	cart: "\E500",
+	creditcard: "\1F4B3",
+	emptycart: "\E507",
+
+	// Editing
+
+	compose: "\1F4DD",
+	grid: "\E9A0",
+	layers: "\E202",
+	layout: "\E202",
+	list: "\ED50",
+	flag: "\2691",
+	reply: "\21A9",
+	thumbnails: "\E9A3",
+	write: "\270E",
+
+	// Location
+
+	compass: "\E671",
+	crosshair: "\2316",
+	globe: "\1F310",
+	location: "\E6D0",
+	map: "\E673",
+	navigate: "\E670",
+	signpost: "\E672",
+
+	// Media
+
+	play: "\25B6",
+	pause: "\E8A0",
+	stop: "\25A0",
+	rewind: "\23EA",
+	fastforward: "\29E3",
+	skipback: "\23EE",
+	skipforward: "\23ED",
+	record: "\25CF",
+	volume: "\1F508",
+	camera: "\1F4F7",
+	headphones: "\1F3A7",
+	mic: "\1F3A4",
+	music: "\266B",
+	picture: "\1F304",
+	video: "\1F4F9",
+
+	// Objects
+
+	book: "\1F4D5",
+	box: "\1F4E6",
+	briefcase: "\1F4BC",
+	bug: "\1F41B",
+	chat: "\1F4AC",
+	clipboard: "\1F4CB",
+	code: "\E780",
+	contacts: "\1F4C7",
+	dashboard: "\F000",
+	flask: "\F4C0",
+	heart: "\2665",
+	home: "\2302",
+	key: "\1F511",
+	lightbulb: "\1F4A1",
+	lightning: "\2607",
+	lock: "\1F512",
+	unlock: "\1F513",
+	notebook: "\1F4D3",
+	notifications: "\1F514",
+	pin: "\1F4CD",
+	pinboard: "\F654",
+	planet: "\F280",
+	poo: "\1F4A9",
+	puzzle: "\E710",
+	recycle: "\267B",
+	recycle-alt: "\267C",
+	screwdriver: "\F037",
+	thermometer: "\F201",
+	toolbox: "\F030",
+	user: "\1F464",
+	users: "\1F465",
+	utensils: "\1F374",
+	view: "\1F440",
+	wheelchair: "\267F",
+	wrench: "\1F527",
+
+	// Social
+
+	dropbox: "\F653",
+	dropbox-alt: "\F65A",
+	facebook: "\F610",
+	facebook-alt: "\F61A",
+	flickr: "\F640",
+	flickr-alt: "\F644",
+	foursquare: "\F690",
+	foursquare-alt: "\F691",
+	github: "\F670",
+	github-alt: "\F671",
+	googleplus: "\F613",
+	googleplus-alt: "\F614",
+	instagram: "\F641",
+	instagram-alt: "\F64A",
+	kickstarter: "\F681",
+	kickstarter-alt: "\F68A",
+	linkedin: "\F612",
+	linkedin-alt: "\F61E",
+	paypal: "\F680",
+	paypal-alt: "\F68B",
+	pinterest: "\F650",
+	pinterest-alt: "\F651",
+	pocket: "\F634",
+	pocket-alt: "\F635",
+	reddit: "\F616",
+	reddit-alt: "\F617",
+	renren: "\F61C",
+	retweet: "\F600",
+	soundcloud: "\F6B3",
+	soundcloud-alt: "\F6B4",
+	spotify: "\F6B1",
+	stackexchange: "\F673",
+	stackexchange-alt: "\F67B",
+	stackoverflow: "\F672",
+	stackoverflow-alt: "\F67A",
+	stumbleupon: "\F63A",
+	stumbleupon-alt: "\F63D",
+	twitter: "\F611",
+	twitter-alt: "\F62B",
+	tumblr: "\F620",
+	tumblr-alt: "\F62A",
+	vimeo: "\F631",
+	vimeo-alt: "\F63C",
+	vine: "\F633",
+	vine-alt: "\F63B",
+	weibo: "\F61B",
+	weibo-alt: "\F61D",
+	wordpress: "\F621",
+	youtube: "\F630",
+	youtube-alt: "\F632",
+
+	// Status
+
+	alert: "\26A0",
+	check: "\2713",
+	info: "\2139",
+	megaphone: "\1F4E2",
+
+	// Technology
+
+	android: "\F6F3",
+	appleinc: "\F8FF",
+	desktop: "\1F4BB",
+	cloud: "\2601",
+	laptop: "\EA00",
+	tablet: "\EA01",
+	smartphone: "\EA02",
+	tv: "\1F4FA",
+	wifi: "\EB84",
+
+	// Time
+
+	calendar: "\1F4C5",
+	clock: "\23F2",
+	watch: "\231A",
+	infinity: "\221E",
+
+	// Transportation
+
+	bike: "\1F6B2",
+	car: "\1F698",
+	plane: "\2708",
+
+	// UI
+
+	filter: "\ED51",
+	checkbox-empty: "\ED52",
+	checkbox-filled: "\ED53",
+	radio-empty: "\ED54",
+	radio-filled: "\ED55",
+);
+
+// Merges custom icons and overrides with the default supported icons map.
+// $icons-theme must be set BEFORE this is called.
+// @group global
+// @access private
+// @since 2.0.0
+
+@if variable-exists( icons-theme ) {
+	$icons-responsive: map_merge( $icons-responsive, $icons-theme );
+}

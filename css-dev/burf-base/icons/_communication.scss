@@ -17,12 +17,7 @@
 /// @since 1.2.0
 
 %icon-envelope {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\2709";
-	}
+	@include icon( "envelope" );
 }
 
 /// The phone icon.
@@ -35,12 +30,7 @@
 /// @since 1.2.0
 
 %icon-phone {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\1F4DE";
-	}
+	@include icon( "phone" );
 }
 
 /// The rss icon.
@@ -53,12 +43,7 @@
 /// @since 1.2.0
 
 %icon-rss {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E310";
-	}
+	@include icon( "rss" );
 }
 
 /// The rss alt icon.
@@ -71,12 +56,7 @@
 /// @since 1.2.0
 
 %icon-rss-alt {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\E31A";
-	}
+	@include icon( "rss-alt" );
 }
 
 /// The rotaryphone icon.
@@ -89,10 +69,5 @@
 /// @since 1.2.0
 
 %icon-rotaryphone {
-	@extend %icon-base;
-
-	&::before {
-		@extend %icon-content;
-		content: "\260E";
-	}
+	@include icon( "rotaryphone" );
 }

@@ -212,7 +212,19 @@ $_depth-headings: 6;
 /// @access public
 /// @since 2.0.0
 
-$min-size-headings: $font-size-base;
+$min-size-headings: $font-size-base !default;
+
+/// The minimum font size in pixels for headings to use on mobile. Unless you're a
+/// designer and you know what you're doing, leave this at `$font-size-base`.
+/// Anything lower means you'll need to compensate with other design elements
+/// to preserve the visual hierarchy - think uppercasing, color, stuff like that.
+/// This directly affects the `<h6>` tag. It indirectly affects all other heading
+/// font sizes as well by serving as the lower limit to our scale.
+/// @group global
+/// @access public
+/// @since 2.0.0
+
+$min-size-headings-mobile: $min-size-headings !default;
 
 /// The maximum font size in pixels for headings to use. This directly affects `<h1>`
 /// headings _within content_. Do not use a larger value, such as those you might find
@@ -224,7 +236,7 @@ $min-size-headings: $font-size-base;
 /// @access public
 /// @since 2.0.0
 
-$max-size-headings: 55px;
+$max-size-headings: 55px !default;
 
 /// The maximum font size in pixels for headings to use on mobile. This directly affects `<h1>`
 /// headings _within content_. Do not use a larger value, such as those you might find
@@ -236,7 +248,7 @@ $max-size-headings: 55px;
 /// @access public
 /// @since 2.0.0
 
-$max-size-headings-mobile: 36px;
+$max-size-headings-mobile: 36px !default;
 
 /// The minimum line height ratio for headings to use. Do not use any units with
 /// this value. This value directly affects the `<h1>` tag and indirectly affects
@@ -247,7 +259,7 @@ $max-size-headings-mobile: 36px;
 /// @access public
 /// @since 2.0.0
 
-$min-line-height: 1.15;
+$min-line-height: 1.15 !default;
 
 /// The maximum line height ratio for headings to use. Do not use any units with
 /// this value. This value directly affects the `<h6>` tag and indirectly affects
@@ -258,7 +270,7 @@ $min-line-height: 1.15;
 /// @access public
 /// @since 2.0.0
 
-$max-line-height: $line-height-base;
+$max-line-height: $line-height-base !default;
 
 // Adjusts the rate of growth between font sizes.
 // 1 is a completely even rate of growth.
@@ -267,7 +279,7 @@ $max-line-height: $line-height-base;
 // A higher number will adjust the font size more dramatically at larger sizes.
 // By default, this is optimized for heavy use of h1-h4, and minimal use of h5 and h6.
 
-$heading-growth-rate: 3.5;
+$heading-growth-rate: 3.5 !default;
 
 /// Calculates the multiplier needed for growth between a minimum and maximum value
 /// based on a given rate of growth.
@@ -339,12 +351,12 @@ $font-styles: (
 	secondary: (
 	  	font-size-mobile: 12px,
 	  	font-size-desktop: 16px,
-		line-height: 1,
+		line-height: $min-line-height,
 	),
 	minimum: (
     	font-size-mobile: 11px,
 		font-size-desktop: 13px,
-		line-height: 1
+		line-height: $min-line-height
 	),
 );
 
@@ -364,7 +376,7 @@ $_heading-size-scale: calc-scale( $min-size-headings, $max-size-headings, $_dept
 /// @access private
 /// @since 2.0.0
 
-$_heading-size-scale-mobile: calc-scale( $min-size-headings, $max-size-headings-mobile, $_depth-headings, $heading-growth-rate );
+$_heading-size-scale-mobile: calc-scale( $min-size-headings-mobile, $max-size-headings-mobile, $_depth-headings, $heading-growth-rate );
 
 /// The multiplier needed to calculate the scale between minimum and maximum
 /// line heights on headings. This value is dependent on the heading minimum, maximum,
@@ -398,10 +410,10 @@ $_h: $_depth-headings;
 
 	@if $_h == 0 {
 		$size: $min-size-headings / $font-size-base + em;
-		$size-mobile: $min-size-headings / $font-size-base + em;
+		$size-mobile: $min-size-headings-mobile / $font-size-base + em;
 	} @else {
 		$size: calc-size( $_h + 1, $heading-growth-rate, $_heading-size-scale, $min-size-headings ) + em;
-		$size-mobile: calc-size( $_h + 1, $heading-growth-rate, $_heading-size-scale-mobile, $min-size-headings ) + em ;
+		$size-mobile: calc-size( $_h + 1, $heading-growth-rate, $_heading-size-scale-mobile, $min-size-headings-mobile ) + em ;
 	}
 
 	@if $_h == $_depth-headings {
@@ -435,6 +447,31 @@ $_h: $_depth-headings;
 	$font-styles: map_merge( $font-styles, $font-styles-theme );
 }
 
+// A mixin to get and print font styles, just like `<h>` tags.
+// Handy for when the placeholders just aren't working for you.
+// Accepts a valid style, such as `6` (like h6) or `secondary`.
+// Also accepts any style you've defined in the theme.
+/// @example
+/// 		Make a `<h4>` look like an `<h2>`.
+/// 			.comparison-title {
+///				@include font-size( '2' );
+///			}
+// @group typography
+// @access public
+// @since 2.0.0
+
+@mixin font-size( $style ) {
+	$settings: map-get( $font-styles, $style );
+
+	font-size: map-get( $settings, font-size-mobile );
+	line-height: map-get( $settings, line-height );
+
+	@include breakpoint( $xs ) {
+		font-size: map-get( $settings, font-size-desktop );
+		line-height: map-get( $settings, line-height );
+	}
+}
+
 // Creates placeholders for each font style, which are used by `<h>` tags
 // as well as throughout the theme.
 // @group global
@@ -444,13 +481,7 @@ $_h: $_depth-headings;
 @each $style, $settings in $font-styles {
 	.font-size-#{$style},
 	%font-size-#{$style} {
-		font-size: map-get( $settings, font-size-mobile );
-		line-height: map-get( $settings, line-height );
-
-		@include breakpoint( $xs ) {
-			font-size: map-get( $settings, font-size-desktop );
-			line-height: map-get( $settings, line-height );
-		}
+		@include font-size( $style );
   	}
 }
 

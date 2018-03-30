@@ -1,0 +1,73 @@
+// =================================================================
+// User Interface Icons
+	// filter
+	// checkbox - empty
+	// checkbox - filled
+	// radio - empty
+	// radio - filled
+// =================================================================
+
+/// The filter icon.
+/// @example scss - Add the filter icon to a menu item
+/// .menu-item {
+///    @extend %icon-filter;
+/// }
+/// @group icons
+/// @access public
+/// @since 2.0.0
+
+%icon-filter {
+	@include icon( "filter" );
+}
+
+/// The checkbox - empty icon.
+/// @example scss - Add the checkbox - empty icon to a menu item
+/// .menu-item {
+///    @extend %icon-checkbox-empty;
+/// }
+/// @group icons
+/// @access public
+/// @since 2.0.0
+
+%icon-checkbox-empty {
+	@include icon( "checkbox-empty" );
+}
+
+/// The checkbox - filled icon.
+/// @example scss - Add the checkbox - filled icon to a menu item
+/// .menu-item {
+///    @extend %icon-checkbox-filled;
+/// }
+/// @group icons
+/// @access public
+/// @since 2.0.0
+
+%icon-checkbox-filled {
+	@include icon( "checkbox-filled" );
+}
+
+/// The radio - empty icon.
+/// @example scss - Add the radio - empty icon to a menu item
+/// .menu-item {
+///    @extend %icon-radio-empty;
+/// }
+/// @group icons
+/// @access public
+/// @since 2.0.0
+
+%icon-radio-empty {
+	@include icon( "radio-empty" );
+}
+
+/// The radio - filled icon.
+/// @example scss - Add the radio - filled icon to a menu item
+/// .menu-item {
+///    @extend %icon-radio-filled;
+/// }
+/// @group icons
+/// @access public
+/// @since 2.0.0
+
+%icon-radio-filled {
+	@include icon( "radio-filled" );
+}

@@ -290,7 +290,7 @@
 /// @access public
 /// @since 1.0.0
 
-@mixin scale( $scale ) {
+@mixin scale( $scale... ) {
 	@include transform( scale( $scale ) );
 }
 
@@ -581,6 +581,7 @@
 .u-visually-hidden {
 	border: 0;
 	clip: rect( 0, 0, 0, 0 ); // Deprecated. Remove when clip-path support is better.
+	-webkit-clip-path: inset( 50% );
 	clip-path: inset( 50% );
 	height: 1px;
 	margin: -1px;
@@ -603,6 +604,7 @@
 
 %remove-visually-hidden {
 	clip: auto;
+	-webkit-clip-path: none;
 	clip-path: none;
 	height: auto;
 	margin: 0;
@@ -635,6 +637,32 @@
 
 .u-show {
 	display: block;
+}
+
+/// A class for developers to use to enable style matching to
+/// Responsive child themes. Generally used to aid in plugin
+/// development - it's unlikely you'll want to use this in
+/// a child theme, since you have control over the output.
+/// Matches to the $padding variable.
+/// @group mixins
+/// @access public
+/// @since 2.0.0
+
+.u-padding {
+	padding: $padding;
+}
+
+/// A class for developers to use to enable style matching to
+/// Responsive child themes. Generally used to aid in plugin
+/// development - it's unlikely you'll want to use this in
+/// a child theme, since you have control over the output.
+/// Matches to the $margin variable.
+/// @group mixins
+/// @access public
+/// @since 2.0.0
+
+.u-margin {
+	margin: $margin;
 }
 
 /// A safe way to including responsive styles on old browers which

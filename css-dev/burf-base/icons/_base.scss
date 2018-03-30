@@ -1,4 +1,10 @@
 // =================================================================
+// Dependencies
+// =================================================================
+
+@import "mixins";
+
+// =================================================================
 // Base Icon Styles
 // =================================================================
 
@@ -12,18 +18,6 @@
 	font-style: normal;
 }
 
-$font-family-icons:                     	 "bu-default-icons" !default;
-$font-size-icon: 21px !default;
-
-/// The color to use for icons across the site.
-/// By default, this will inherit the color of the text in the container the icon lives in.
-/// Setting this will keep the color of the icons consistent everywhere.
-/// @group global
-/// @access public
-/// @since 1.0.0
-
-$color-icons:										 unset;
-
 /// Provides base icon styles normalized across browsers and optimized
 /// for accessibility.
 /// Use this placeholder if you are loading your own font library
@@ -35,14 +29,7 @@ $color-icons:										 unset;
 /// @since 1.2.0
 
 %icon-base {
-	.lt-ie9:hover & {
-		// This triggers a redraw in IE to Fix IE8's :before content rendering.
-		-ms-zoom: 1;
-	}
-
-	span {
-		display: none; // Hide labels
-	}
+	@include icon-base;
 }
 
 /// Provides base icon styles normalized across browsers and optimized
@@ -56,20 +43,5 @@ $color-icons:										 unset;
 /// @since 1.2.0
 
 %icon-content {
-	color: $color-icons;
-	display: inline-block;
-	font-family: $font-family-icons;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: normal;
-	line-height: 1;
-	padding-bottom: 0.2em; // Accomodate for inline icons
-	speak: none;
-	text-decoration: none;
-	text-rendering: optimizeLegibility;
-	text-transform: none;
-	vertical-align: middle;
-	white-space: nowrap;
+	@include icon-content;
 }
