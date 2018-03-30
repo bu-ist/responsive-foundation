@@ -340,9 +340,18 @@ nav {
 	}
 }
 
+
+/// The height of the search field. Affects both search and search button.
+/// @group navigation
+/// @access public
+/// @since 1.0.0
+
+$search-field-height:                          40px !default;
+
 .search-field {
 	@include border-radius( $border-radius-quicksearch-input );
 	color: $color-search-text;
+	height: $search-field-height;
 	padding-left: $padding-small;
 	padding-right: $padding-small;
 	width: 75%;
@@ -356,6 +365,7 @@ nav {
 	@extend %button-styles-primary;
 	@include border-radius( $border-radius-quicksearch-button );
 	float: right;
+	height: $search-field-height;
 	margin: 0;
 	width: 25%;
 
