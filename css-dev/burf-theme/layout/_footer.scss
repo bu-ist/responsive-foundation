@@ -262,6 +262,17 @@ body {
 		@include transition( color 200ms ease-in-out 0s );
 		font-size: $font-size-icon;
 	}
+}
+
+/// Styles social links in menus.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.menu-item {
+	a::before {
+		margin-right: 0.5em;
+	}
 
 	[href*="dropbox.com"] {
 		@extend %icon-dropbox;
