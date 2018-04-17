@@ -92,6 +92,7 @@ $color-icons:										 unset;
 %icon-content-before {
 	&::before {
 		@include icon-content;
+		margin-right: 0.5em;
 	}
 }
 
@@ -107,6 +108,7 @@ $color-icons:										 unset;
 %icon-content-after {
 	&::after {
 		@include icon-content;
+		margin-left: 0.5em;
 	}
 }
 
