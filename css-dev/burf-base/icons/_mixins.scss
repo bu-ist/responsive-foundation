@@ -80,19 +80,48 @@ $color-icons:										 unset;
 	white-space: nowrap;
 }
 
+/// Provides base icon styles normalized across browsers and optimized
+/// for accessibility.
+/// A helper placeholder for the main icon mixin and icon extends.
+/// You probably don't actually want to use this unless you're working
+/// on Responsive. Use the icon mixin instead.
+/// @group icons
+/// @access public
+/// @since 2.0.0
+
+%icon-content-before {
+	&::before {
+		@include icon-content;
+	}
+}
+
+/// Provides base icon styles normalized across browsers and optimized
+/// for accessibility.
+/// A helper placeholder for the main icon mixin and icon extends.
+/// You probably don't actually want to use this unless you're working
+/// on Responsive. Use the icon mixin instead.
+/// @group icons
+/// @access public
+/// @since 2.0.0
+
+%icon-content-after {
+	&::after {
+		@include icon-content;
+	}
+}
+
 /// A mixin to generate icons.
 /// Use any icon in `$icon-supports`.
 /// @group icons
 /// @access public
 /// @since 2.0.0
 
-@mixin icon( $name, $position: "before", $print-classes: $print-icon-classes ) {
+@mixin icon( $name, $position: "before" ) {
+	@extend %icon-content-#{$position};
 	@include icon-base;
 	$content: map-get( $icons-responsive, $name );
 
 	&::#{$position} {
-		@include icon-content;
-
 		@if $content {
 			content: $content;
 		} @else {
@@ -100,7 +129,7 @@ $color-icons:										 unset;
 		}
 	}
 
-	@if $print-classes {
+	@if $print-icon-classes {
 		@at-root {
 			.icon-#{$name} {
 				@extend %icon-#{$name};
