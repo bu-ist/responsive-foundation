@@ -270,10 +270,6 @@ body {
 /// @since 2.0.0
 
 .menu-item {
-	a::before {
-		margin-right: 0.5em;
-	}
-
 	[href*="dropbox.com"] {
 		@extend %icon-dropbox;
 	}
