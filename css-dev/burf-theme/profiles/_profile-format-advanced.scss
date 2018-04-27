@@ -4,7 +4,7 @@
 
 /// Controls the number of profiles in a row in the advanced format.
 /// Kicks in at the extra small breakpoint.
-/// @group profiles
+/// @group 14-profiles
 /// @access public
 /// @since 2.0.0
 
@@ -12,7 +12,7 @@ $profiles-advanced-cols-xs:			2 !default;
 
 /// Controls the number of profiles in a row in the advanced format.
 /// Kicks in at the medium breakpoint.
-/// @group profiles
+/// @group 14-profiles
 /// @access public
 /// @since 2.0.0
 
@@ -23,7 +23,7 @@ $profiles-advanced-cols-md:			3 !default;
 // =================================================================
 
 /// Styles the advanced profile format.
-/// @group profiles
+/// @group 14-profiles
 /// @access public
 /// @since 2.0.0
 
@@ -33,7 +33,7 @@ $profiles-advanced-cols-md:			3 !default;
 
 /// A helper variable to determine which grid class to extend
 /// for advanced profile items at the `xs` breakpoint.
-/// @group profiles
+/// @group 14-profiles
 /// @access private
 /// @since 2.0.0
 
@@ -41,14 +41,14 @@ $_profile-adv-cols-xs: $grid-number-columns / $profiles-advanced-cols-xs;
 
 /// A helper variable to determine which grid class to extend
 /// for advanced profile items at the `md` breakpoint.
-/// @group profiles
+/// @group 14-profiles
 /// @access private
 /// @since 2.0.0
 
 $_profile-adv-cols-md: $grid-number-columns / $profiles-advanced-cols-md;
 
 /// Styles an advanced profile item.
-/// @group profiles
+/// @group 14-profiles
 /// @access public
 /// @since 2.0.0
 
@@ -72,7 +72,7 @@ $_profile-adv-cols-md: $grid-number-columns / $profiles-advanced-cols-md;
 }
 
 /// Styles an advanced profile item link.
-/// @group profiles
+/// @group 14-profiles
 /// @access public
 /// @since 2.0.0
 
@@ -83,7 +83,7 @@ $_profile-adv-cols-md: $grid-number-columns / $profiles-advanced-cols-md;
 }
 
 /// Styles an advanced profile item photo.
-/// @group profiles
+/// @group 14-profiles
 /// @access public
 /// @since 2.0.0
 

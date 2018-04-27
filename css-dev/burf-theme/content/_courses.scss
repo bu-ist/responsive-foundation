@@ -3,7 +3,7 @@
 // =================================================================
 
 /// Controls the border between course feed items.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 2.0.0
 
@@ -14,7 +14,7 @@ $border-coursefeed:               $border !default;
 // =================================================================
 
 /// Controls the styling for a single course in a course feed.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 1.0.0
 
@@ -30,7 +30,7 @@ $border-coursefeed:               $border !default;
 }
 
 /// Controls the styling for the course title in a course feed.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 2.0.0
 
@@ -41,7 +41,7 @@ $border-coursefeed:               $border !default;
 /// Controls the styling for the course id (college, department, and number) in a course feed.
 /// You may style each of these individually as well using `.cf-course-college`,
 /// `.cf-course-dept`, etc.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 2.0.0
 
@@ -54,7 +54,7 @@ $border-coursefeed:               $border !default;
 }
 
 /// Controls the styling for course credits, availability, and prerequisites.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 2.0.0
 
@@ -63,7 +63,7 @@ $border-coursefeed:               $border !default;
 }
 
 /// Controls the styling for the section table.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 2.0.0
 
@@ -73,7 +73,7 @@ $border-coursefeed:               $border !default;
 }
 
 /// Controls the styling for the section title.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 2.0.0
 
@@ -85,7 +85,7 @@ $border-coursefeed:               $border !default;
 }
 
 /// Controls the styling for the section start and end dates.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 2.0.0
 
@@ -95,7 +95,7 @@ $border-coursefeed:               $border !default;
 
 /// Conditional styling to label course availability.
 /// There isn't currently a way to do this in the course template reliably.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 2.0.0
 
@@ -107,7 +107,7 @@ $border-coursefeed:               $border !default;
 
 /// Conditional styling to label course prerequisites.
 /// There isn't currently a way to do this in the course template reliably.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 2.0.0
 

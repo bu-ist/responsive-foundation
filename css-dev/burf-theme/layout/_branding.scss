@@ -4,42 +4,42 @@
 
 /// The font to use for branding.
 /// You may not change this unless you have permission from Marketing &amp; Communications.
-/// @group branding
+/// @group 07-branding
 /// @access public
 /// @since 1.0.0
 
 $font-family-brand:                         "Whitney SSm A", "Whitney SSm B", $font-family-sans-serif !default;
 
 /// The font family to use for the sponsored branding type.
-/// @group branding
+/// @group 07-branding
 /// @access public
 /// @since 1.0.0
 
 $font-family-brand-sponsored:               $font-family-brand !default;
 
 /// The font family to use for the unbranded branding type.
-/// @group branding
+/// @group 07-branding
 /// @access public
 /// @since 1.0.0
 
 $font-family-brand-unbranded:               $font-family-sans-serif !default;
 
 /// The height of the branding area.
-/// @group branding
+/// @group 07-branding
 /// @access public
 /// @since 1.0.0
 
 $height-brand:                             120px !default;
 
 /// The color used for the site name when a site is using BU branding.
-/// @group branding
+/// @group 07-branding
 /// @access public
 /// @since 1.0.0
 
 $color-brand:                              $color-grayscale-0 !default;
 
 /// The color used for the site name when a site is not using BU branding.
-/// @group branding
+/// @group 07-branding
 /// @access public
 /// @since 1.0.0
 
@@ -47,7 +47,7 @@ $color-unbranded:                            #c00;
 
 /// The image used for the BU Masterplate.
 /// Do not change this without permission from Marketing &amp; Communications.
-/// @group branding
+/// @group 07-branding
 /// @access public
 /// @since 1.0.0
 
@@ -55,7 +55,7 @@ $image-masterplate:         "https://www.bu.edu/cdn/images/logos/masterplate112x
 
 /// The image used for the BU Masterplate on retina devices.
 /// Do not change this without permission from Marketing &amp; Communications.
-/// @group branding
+/// @group 07-branding
 /// @access public
 /// @since 1.0.0
 
@@ -63,7 +63,7 @@ $image-masterplate-retina:  "https://www.bu.edu/cdn/images/logos/masterplate112x
 
 /// The image used for the BU plate in the Signature style.
 /// Do not change this without permission from Marketing &amp; Communications.
-/// @group branding
+/// @group 07-branding
 /// @access public
 /// @since 1.0.0
 
@@ -71,7 +71,7 @@ $image-subbrand:            "https://www.bu.edu/cdn/images/logos/subbrand49x35.p
 
 /// The image used for the BU plate in the Signature style on retina devices.
 /// Do not change this without permission from Marketing &amp; Communications.
-/// @group branding
+/// @group 07-branding
 /// @access public
 /// @since 1.0.0
 
@@ -79,7 +79,7 @@ $image-subbrand-retina:     "https://www.bu.edu/cdn/images/logos/subbrand49x35-r
 
 /// The image used for the BUMC logo.
 /// Do not change this without permission from Marketing &amp; Communications.
-/// @group branding
+/// @group 07-branding
 /// @access public
 /// @since 1.0.0
 
@@ -87,7 +87,7 @@ $image-bumclogo:         "https://www.bu.edu/cdn/images/logos/bumclogo96x40.png"
 
 /// The image used for the BUMC logo on retina devices.
 /// Do not change this without permission from Marketing &amp; Communications.
-/// @group branding
+/// @group 07-branding
 /// @access public
 /// @since 1.0.0
 
@@ -98,7 +98,7 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 // =================================================================
 
 /// A placeholder for vertically centering children in the branding partial.
-/// @group branding
+/// @group 07-branding
 /// @access private
 /// @since 1.4.0
 
@@ -107,7 +107,7 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 }
 
 /// A placeholder for vertical centering in the branding partial.
-/// @group branding
+/// @group 07-branding
 /// @access private
 /// @since 1.4.0
 
@@ -116,7 +116,7 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 }
 
 /// A placeholder for ensuring background images print.
-/// @group branding
+/// @group 07-branding
 /// @access private
 /// @since 1.4.0
 
@@ -128,7 +128,7 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 
 /// Controls styling for elements in the branding area, including the logo and
 /// site description.
-/// @group branding
+/// @group 07-branding
 /// @access public
 /// @since 1.0.0
 
@@ -154,7 +154,7 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 }
 
 /// Controls styling for the logo container.
-/// @group branding
+/// @group 07-branding
 /// @access public
 /// @since 1.0.0
 
@@ -172,7 +172,7 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 }
 
 /// Resets the font-weight to the appropriate weight for branding.
-/// @group branding
+/// @group 07-branding
 /// @access private
 /// @since 1.0.0
 
@@ -181,7 +181,7 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 }
 
 /// Controls styling for the signature brand style.
-/// @group branding
+/// @group 07-branding
 /// @access public
 /// @since 1.4.0
 
@@ -204,7 +204,7 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 }
 
 /// Controls styling for the unbranded brand style.
-/// @group branding
+/// @group 07-branding
 /// @access public
 /// @since 1.4.0
 
@@ -220,7 +220,7 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 }
 
 /// Controls styling for the logotype brand part.
-/// @group branding
+/// @group 07-branding
 /// @access public
 /// @since 1.4.0
 
@@ -229,7 +229,7 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 }
 
 /// Controls styling for the site name brand part.
-/// @group branding
+/// @group 07-branding
 /// @access public
 /// @since 1.4.0
 
@@ -242,7 +242,7 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 }
 
 /// Controls styling for the parent entity brand part.
-/// @group branding
+/// @group 07-branding
 /// @access public
 /// @since 1.4.0
 
@@ -255,7 +255,7 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 }
 
 /// Controls styling for the subparent entity brand part.
-/// @group branding
+/// @group 07-branding
 /// @access public
 /// @since 1.4.0
 
@@ -264,7 +264,7 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 }
 
 /// Controls styling for the site description.
-/// @group branding
+/// @group 07-branding
 /// @access public
 /// @since 1.4.0
 
@@ -282,7 +282,7 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 
 
 /// Controls styling for the masterplate.
-/// @group branding
+/// @group 07-branding
 /// @access public
 /// @since 1.0.0
 
@@ -301,7 +301,7 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 }
 
 /// Controls styling for the BUMC logo.
-/// @group branding
+/// @group 07-branding
 /// @access public
 /// @since 1.0.0
 
