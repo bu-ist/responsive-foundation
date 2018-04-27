@@ -1,6 +1,6 @@
 {
   "name": "responsive-foundation",
-  "version": "2.0.0-dev",
+  "version": "2.0.0",
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-browser-sync": "^1.5.3",

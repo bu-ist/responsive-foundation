@@ -1,7 +1,8 @@
 # Changelog
 
-## 2.0.0-dev
+## 2.0.0
 
+* Support for typography mixins
 * Support for icon placement using a brand new icon mixin: `@include icon( "facebook" "after" );`,
 which will continue to default to `before` just like it always has
 * Support for grid mixins like so: `@include col( $xs, half );`
@@ -56,6 +57,7 @@ standards [See related pull request](https://github.com/bu-ist/responsive-founda
 [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/46)
 * Better compliance with licensing rules for Normalize and Pure CSS
 [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/59)
+* Assortment of bug fixes
 
 # 1.4.2
 
