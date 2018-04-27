@@ -19,7 +19,7 @@
 /// 			.degree-item {
 ///				@extend %col-md-quarter;
 ///			}
-/// @group mixins
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -44,7 +44,7 @@
 /// 			.profile-callout-image {
 ///				@include border-radius( 50% );
 ///			}
-/// @group mixins
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -79,7 +79,7 @@
 ///					0px 0px 10px 0px rgba( 0, 0, 0, 0.25 )
 ///				);
 ///			}
-/// @group mixins
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -105,7 +105,7 @@
 ///				@include linear-gradient( transparent, darken( $your-color, 10% ) );
 ///				background-color: $your-color;
 ///			}
-/// @group mixins
+/// @group 02-mixins
 /// @access public
 /// @since 1.2.0
 
@@ -146,7 +146,7 @@
 ///					@include opacity( 1 );
 ///				}
 ///			}
-/// @group mixins
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -212,7 +212,7 @@
 ///					z-index 0s step-start 0s
 ///				);
 ///			}
-/// @group mixins
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -244,7 +244,7 @@
 ///					rotate( 20deg )
 ///				);
 ///			}
-/// @group mixins
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -265,7 +265,7 @@
 /// 			.callout {
 ///				@include rotate( 90 );
 ///			}
-/// @group mixins
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -290,7 +290,7 @@
 ///					@include scale( 0, 1 );
 ///				}
 ///			}
-/// @group mixins
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -308,7 +308,7 @@
 /// 			.callout {
 ///				@include translate( -10px, 0 );
 ///			}
-/// @group mixins
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -335,7 +335,7 @@
 ///					@include scale( 0, 1 );
 ///				}
 ///			}
-/// @group mixins
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -371,7 +371,7 @@
 /// 			.loading {
 ///				@include animation( infinite-loader 250ms infinite );
 ///			}
-/// @group mixins
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -418,7 +418,7 @@
 /// 			.loading {
 ///				@include animation( infinite-loader 250ms infinite );
 ///			}
-/// @group mixins
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -449,7 +449,7 @@
 /// 			.callout {
 ///				@include vertical-center-child-ie8( ".callout-text" );
 ///			}
-/// @group mixins
+/// @group 02-mixins
 /// @access public
 /// @deprecated Deprecated in favor of flexbox approach in Responsive 2.0
 /// @since 1.0.0
@@ -486,7 +486,7 @@
 /// 			.callout {
 ///				@include vertical-center-ie9;
 ///			}
-/// @group mixins
+/// @group 02-mixins
 /// @access public
 /// @deprecated Deprecated in favor of flexbox approach in Responsive 2.0
 /// @since 1.0.0
@@ -522,7 +522,7 @@
 /// 			.callout {
 ///				@include center-children( center, center, nowrap, center );
 ///			}
-/// @group mixins
+/// @group 02-mixins
 /// @param {string} | $align-content [center] - Removes the gap between multiple child items.
 /// @param {string} | $align-items [center] - Centers child items vertically.
 /// @param {string} | $flex-wrap [wrap] - Wraps child items so the width behaves as expected.
@@ -554,7 +554,7 @@
 ///				@extend %hide-text;
 ///				background-image: url( "images/your-image.jpg" );
 ///			}
-/// @group mixins
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -577,7 +577,7 @@
 /// 			.fancy-button-label {
 ///				@extend %visually-hidden;
 ///			}
-/// @group mixins
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -602,7 +602,7 @@
 /// 			.fancy-button-label {
 ///				@extend %remove-visually-hidden;
 ///			}
-/// @group mixins
+/// @group 02-mixins
 /// @access public
 /// @since 2.0.0
 
@@ -701,7 +701,7 @@
 ///					background: $color-grayscale-f;
 ///				}
 ///			}
-/// @group mixins
+/// @group 02-mixins
 /// @param {variable | number} | $breakpoint - The window width to begin applying your styles. Can be any pixel value, but `$xs`, `$sm`, `$md`, `$lg`, and `$xl` are standard in this framework.
 /// @access public
 /// @since 1.0.0
@@ -828,7 +828,7 @@
 /// Outputs a sass map neatly in CSS for debugging purposes.
 /// Sends output to terminal on compile.
 /// From https://www.sitepoint.com/debugging-sass-maps/
-/// @group mixins
+/// @group 02-mixins
 /// @param {map} | $map - A sass map to debug.
 /// @access public
 /// @since 2.0.0
@@ -861,7 +861,7 @@
 ///					background: url( "images/custom-logo-retina.jpg" );
 ///				}
 ///			}
-/// @group mixins
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -886,7 +886,7 @@
 /// 			.callout-overlay {
 ///				@include rgba-color( background-color, rgba( $color-grayscale-0, 0.5 ), $green );
 ///			}
-/// @group mixins
+/// @group 02-mixins
 /// @param {string} | $attribute - The CSS attribute to apply your color to.
 /// @param {string} | $color - The rgba color to use for modern browsers.
 /// @param {string} | $background - The background color of the item this will sit on top of, to help calculate an accurate fallback color. Use a solid version of the same color as `$color` for photos.

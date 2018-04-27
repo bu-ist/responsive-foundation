@@ -30,7 +30,7 @@ $font-size-icon: 									 21px !default;
 /// @access public
 /// @since 1.0.0
 
-$color-icons:										 unset;
+$color-icons:										 unset !default;
 
 /// Provides base icon styles normalized across browsers and optimized
 /// for accessibility.

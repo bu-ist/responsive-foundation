@@ -3,28 +3,28 @@
 // =================================================================
 
 /// The margin to use around anything floated in the content area.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 1.0.0
 
 $margin-floated-content: 						 $margin-small !default;
 
 /// The font to use for captions.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 1.0.0
 
 $font-family-caption:                       $font-family-sans-serif !default;
 
 /// The color to use for captions.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 1.0.0
 
 $color-caption:                            $color-grayscale-6 !default;
 
 /// The shadow to use in tables.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 1.0.0
 
@@ -53,7 +53,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 /// embedded media that don't have a video aspect ratio by extending this
 /// to a unique class, and adjusting the padding-bottom value on that class
 /// to match the aspect ratio you're looking for.
-/// @group utilities
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -78,7 +78,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 /// The default class which enables responsive video.
 /// Wrap this around any video or iframe which is not supported by oEmbed,
 /// or if you are manually putting in HTML for a video for some reason.
-/// @group utilities
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -88,7 +88,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 
 /// WordPress accessibility classes for screen readers.
 /// Not really something you should be overriding.
-/// @group utilities
+/// @group 02-mixins
 /// @access private
 /// @since 1.0.0
 
@@ -99,7 +99,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 }
 
 /// A placeholder just for align. Not meant to be extended elsewhere.
-/// @group utilities
+/// @group 02-mixins
 /// @access private
 /// @since 1.2.0
 
@@ -114,7 +114,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 
 /// The class WordPress generates when you align something right in the
 /// visual editor.
-/// @group utilities
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -129,7 +129,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 
 /// The class WordPress generates when you align something left in the
 /// visual editor.
-/// @group utilities
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -144,7 +144,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 
 /// The class WordPress generates when you center something in the
 /// visual editor.
-/// @group utilities
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -154,7 +154,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 }
 
 /// The class WordPress generates for caption text on images in the visual editor.
-/// @group utilities
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -172,7 +172,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 /// leave the base styles intact.
 /// You must wrap the class this uses around a table for it to work. It will
 /// not work if you just put it on the table.
-/// @group utilities
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -203,7 +203,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 /// This class will make the table scrollable below the medium breakpoint.
 /// You must wrap the table in a div with this class. It will not work if you
 /// put it directly on the table.
-/// @group utilities
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -212,7 +212,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 }
 
 /// For code within the WordPress content area.
-/// @group utilities
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 

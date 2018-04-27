@@ -4,7 +4,7 @@
 
 /// A helper variable to control the number of columns a gallery
 /// supports in our WordPress environment.
-/// @group content
+/// @group 09-content
 /// @access priavte
 /// @since 1.4.0
 
@@ -23,7 +23,7 @@ $color-gallery-overlay: rgba( $color-grayscale-0, 0.75 ) !default;
 // =================================================================
 
 /// Base styles for the gallery shortcode in WordPress.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 1.4.0
 
@@ -53,8 +53,8 @@ $color-gallery-overlay: rgba( $color-grayscale-0, 0.75 ) !default;
 	}
 }
 
-/// Styles for image/caption pairs in the WordPress gallery shortcode.
-/// @group content
+/// Styles for each supported number of columns in the WordPress gallery shortcode.
+/// @group 09-content
 /// @access public
 /// @since 1.4.0
 

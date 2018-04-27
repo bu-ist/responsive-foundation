@@ -4,7 +4,7 @@
 
 /// Controls the color of the border on the mini profile format
 /// in the profiles shortcode.
-/// @group profiles
+/// @group 14-profiles
 /// @access public
 /// @since 1.0.0
 
@@ -12,7 +12,7 @@ $color-profile-mini-border:                $color-grayscale-e !default;
 
 /// Controls the number of profiles in a row in the mini format.
 /// Kicks in at the small breakpoint.
-/// @group profiles
+/// @group 14-profiles
 /// @access public
 /// @since 2.0.0
 
@@ -20,7 +20,7 @@ $profiles-mini-cols-sm:			2 !default;
 
 /// A helper variable to determine which grid class to extend
 /// for mini profile items at the `sm` breakpoint.
-/// @group profiles
+/// @group 14-profiles
 /// @access private
 /// @since 2.0.0
 
@@ -31,7 +31,7 @@ $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 // =================================================================
 
 /// Styles the mini profile format.
-/// @group profiles
+/// @group 14-profiles
 /// @access public
 /// @since 2.0.0
 
@@ -46,7 +46,7 @@ $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 }
 
 /// Styles the mini profile photo.
-/// @group profiles
+/// @group 14-profiles
 /// @access public
 /// @since 2.0.0
 
@@ -57,7 +57,7 @@ $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 }
 
 /// Styles the mini profile details.
-/// @group profiles
+/// @group 14-profiles
 /// @access public
 /// @since 2.0.0
 
@@ -71,7 +71,7 @@ $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 }
 
 /// Styles the mini profile name.
-/// @group profiles
+/// @group 14-profiles
 /// @access public
 /// @since 2.0.0
 
@@ -81,7 +81,7 @@ $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 }
 
 /// Styles the mini profile email.
-/// @group profiles
+/// @group 14-profiles
 /// @access public
 /// @since 2.0.0
 
