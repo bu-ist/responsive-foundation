@@ -52,7 +52,7 @@
 	margin: $grid-row-margin;
 
 	@include breakpoint( $sm ) {
-		margin-right: 0;
+		margin: $grid-row-margin-desktop;
 	}
 }
 
@@ -63,7 +63,8 @@
 /// @since 1.2.0
 
 %row-child-styles {
-	padding: $grid-column-padding;
+	padding-left: $grid-column-padding;
+	padding-right: $grid-column-padding;
 }
 
 /// A backwards-compatible equal heights solution for
@@ -140,6 +141,7 @@
 .col-margin-parent,
 %col-margin-parent {
 	margin-left: -$grid-margin-width#{"%"};
+	margin-right: 0;
 }
 
 /// A private map to hold grid widths while

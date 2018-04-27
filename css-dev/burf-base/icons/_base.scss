@@ -18,21 +18,16 @@
 	font-style: normal;
 }
 
-/// The default icon size to use across the site.
-/// @group 01-config
+/// Choose whether or not to print CSS classes for icons in your
+/// stylesheet. By default, this option is false for child themes,
+/// and true for the framework. Set this to true when you want to
+/// give the client flexibility to choose their own icons using CSS
+/// and custom HTML.
+/// @group icons
 /// @access public
-/// @since 1.0.0
+/// @since 2.0.0
 
-$font-size-icon:                           21px !default;
-
-/// The color to use for icons across the site.
-/// By default, this will inherit the color of the text in the container the icon lives in.
-/// Setting this will keep the color of the icons consistent everywhere.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
-
-$color-icons:										 unset;
+$print-icon-classes:                 false !default;
 
 /// Provides base icon styles normalized across browsers and optimized
 /// for accessibility.

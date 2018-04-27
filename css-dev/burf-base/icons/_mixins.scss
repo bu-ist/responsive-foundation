@@ -30,7 +30,7 @@ $font-size-icon: 									 21px !default;
 /// @access public
 /// @since 1.0.0
 
-$color-icons:										 unset;
+$color-icons:										 unset !default;
 
 /// Provides base icon styles normalized across browsers and optimized
 /// for accessibility.
@@ -80,6 +80,38 @@ $color-icons:										 unset;
 	white-space: nowrap;
 }
 
+/// Provides base icon styles normalized across browsers and optimized
+/// for accessibility.
+/// A helper placeholder for the main icon mixin and icon extends.
+/// You probably don't actually want to use this unless you're working
+/// on Responsive. Use the icon mixin instead.
+/// @group icons
+/// @access public
+/// @since 2.0.0
+
+%icon-content-before {
+	&::before {
+		@include icon-content;
+		margin-right: 0.5em;
+	}
+}
+
+/// Provides base icon styles normalized across browsers and optimized
+/// for accessibility.
+/// A helper placeholder for the main icon mixin and icon extends.
+/// You probably don't actually want to use this unless you're working
+/// on Responsive. Use the icon mixin instead.
+/// @group icons
+/// @access public
+/// @since 2.0.0
+
+%icon-content-after {
+	&::after {
+		@include icon-content;
+		margin-left: 0.5em;
+	}
+}
+
 /// A mixin to generate icons.
 /// Use any icon in `$icon-supports`.
 /// @group icons
@@ -87,16 +119,23 @@ $color-icons:										 unset;
 /// @since 2.0.0
 
 @mixin icon( $name, $position: "before" ) {
+	@extend %icon-content-#{$position};
 	@include icon-base;
 	$content: map-get( $icons-responsive, $name );
 
 	&::#{$position} {
-		@include icon-content;
-
 		@if $content {
 			content: $content;
 		} @else {
 			@error "`#{$name}` is not a supported icon. See www.bu.edu/cdn/fonts/icons/bu-default-icons/specimen-icons.html for a list of supported icons. If this is a custom icon you meant to add for your own icon font, be sure you've added it to the `$icons-theme` map.";
+		}
+	}
+
+	@if $print-icon-classes {
+		@at-root {
+			.icon-#{$name} {
+				@extend %icon-#{$name};
+			}
 		}
 	}
 }

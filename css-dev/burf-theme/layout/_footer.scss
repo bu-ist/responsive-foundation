@@ -262,7 +262,14 @@ body {
 		@include transition( color 200ms ease-in-out 0s );
 		font-size: $font-size-icon;
 	}
+}
 
+/// Styles social links in menus.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.menu-item {
 	[href*="dropbox.com"] {
 		@extend %icon-dropbox;
 	}
@@ -470,7 +477,7 @@ body {
 		}
 	}
 
-	.disclaimer + & {
+	.site-footer-disclaimer + & {
 		@include breakpoint( $md ) {
 			clear: none;
 			float: left;

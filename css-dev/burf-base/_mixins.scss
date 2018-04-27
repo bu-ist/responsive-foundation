@@ -115,13 +115,17 @@
 			type-of( $from-color ) == color and
 			type-of( $to-color ) == color
 		) {
+
+		$ie-from: ie-hex-str( $from-color );
+		$ie-to: ie-hex-str( $to-color );
+
 		background-image: -webkit-gradient(linear, left top, left bottom, from( $from-color), to( $to-color)); // Saf4+, Chrome
 		background-image: -webkit-linear-gradient(top, $from-color, $to-color); // Chrome 10+, Saf5.1+, iOS 5+
 		background-image: -moz-linear-gradient(top, $from-color, $to-color); // FF3.6
 		background-image: -ms-linear-gradient(top, $from-color, $to-color); // IE10
 		background-image: -o-linear-gradient(top, $from-color, $to-color); // Opera 11.10+
 		background-image: linear-gradient(top, $from-color, $to-color);
-		filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$from-color}', EndColorStr='#{$to-color}');
+		filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$ie-from}', EndColorStr='#{$ie-to}');
 	} @else {
 		@error 'The linear gradient mixin requires two valid colors or variables which hold colors. \a Example usage: @include linear-gradient( $from-color, $to-color);';
 	}
@@ -581,6 +585,7 @@
 .u-visually-hidden {
 	border: 0;
 	clip: rect( 0, 0, 0, 0 ); // Deprecated. Remove when clip-path support is better.
+	-webkit-clip-path: inset( 50% );
 	clip-path: inset( 50% );
 	height: 1px;
 	margin: -1px;
@@ -603,6 +608,7 @@
 
 %remove-visually-hidden {
 	clip: auto;
+	-webkit-clip-path: none;
 	clip-path: none;
 	height: auto;
 	margin: 0;

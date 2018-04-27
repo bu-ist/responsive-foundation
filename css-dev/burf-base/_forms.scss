@@ -298,21 +298,9 @@ $border-radius-button:                     2px !default;
 	white-space: nowrap;
 	zoom: 1;
 
-	&:focus {
-		@extend %button-styles:hover;
-		outline: 0;
-	}
-
-	// Firefox: Get rid of the inner focus border
-	&::-moz-focus-inner {
-		border: 0;
-		padding: 0;
-	}
-
 	&[disabled],
 	&-disabled,
 	&-disabled:hover,
-	&-disabled:focus,
 	&-disabled:active {
 		@include box-shadow( none );
 		background: $color-grayscale-d;
