@@ -1,0 +1,48 @@
+// =================================================================
+// Profile Basic Format Settings
+// =================================================================
+
+/// Adjusts the size of the basic profile photo.
+/// @group 14-profiles
+/// @access public
+/// @since 2.0.0
+
+$profile-photo-basic-size:                  $profile-photo-default-size;
+
+// =================================================================
+// Profile Basic Format Styles
+// =================================================================
+
+/// Styles the basic profile format.
+/// @group 14-profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-format-basic {
+	border-top: $border-profiles;
+}
+
+/// Styles a basic profile item.
+/// @group 14-profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-item-basic {
+	border-bottom: $border-profiles;
+	margin-bottom: 0;
+	min-height: 100px;
+	padding: $padding ( $profile-photo-basic-size + $margin-small ) $padding 0;
+}
+
+/// Styles a basic profile photo.
+/// @group 14-profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-photo-basic {
+	height: $profile-photo-basic-size;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	width: $profile-photo-basic-size;
+}

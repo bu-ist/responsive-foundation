@@ -1,0 +1,225 @@
+// =================================================================
+// WordPress WYSIWYG Settings
+// =================================================================
+
+/// The margin to use around anything floated in the content area.
+/// @group 09-content
+/// @access public
+/// @since 1.0.0
+
+$margin-floated-content: 						 $margin-small !default;
+
+/// The font to use for captions.
+/// @group 09-content
+/// @access public
+/// @since 1.0.0
+
+$font-family-caption:                       $font-family-sans-serif !default;
+
+/// The color to use for captions.
+/// @group 09-content
+/// @access public
+/// @since 1.0.0
+
+$color-caption:                            $color-grayscale-6 !default;
+
+/// The shadow to use in tables.
+/// @group 09-content
+/// @access public
+/// @since 1.0.0
+
+$box-shadow-table:                          inset -20px 0 20px -10px $color-grayscale-f0 !default;
+
+
+// =================================================================
+// WordPress WYSIWYG Styles
+// =================================================================
+
+/// Provides a link for clients to edit the page within the page content.
+/// @group wp-admin
+/// @access public
+/// @since 1.0.0
+
+.edit-link {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+/// A placeholder for responsive video styles.
+/// Use this placeholder if you need something to support responsive video,
+/// but you need a separate, unique class from responsive-video.
+/// You may also use this to enable responsive behavior on other types of
+/// embedded media that don't have a video aspect ratio by extending this
+/// to a unique class, and adjusting the padding-bottom value on that class
+/// to match the aspect ratio you're looking for.
+/// @group 02-mixins
+/// @access public
+/// @since 1.0.0
+
+%responsive-video-styles {
+	margin-bottom: 14px;
+	padding-bottom: 56.25%;
+	padding-top: 45px;
+	position: relative;
+
+	div,
+	embed,
+	object,
+	iframe {
+		height: 100% !important; // Required to override inline styles on embeds
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100% !important; // Required to override inline styles on embeds
+	}
+}
+
+/// The default class which enables responsive video.
+/// Wrap this around any video or iframe which is not supported by oEmbed,
+/// or if you are manually putting in HTML for a video for some reason.
+/// @group 02-mixins
+/// @access public
+/// @since 1.0.0
+
+.responsive-video {
+	@extend %responsive-video-styles;
+}
+
+/// WordPress accessibility classes for screen readers.
+/// Not really something you should be overriding.
+/// @group 02-mixins
+/// @access private
+/// @since 1.0.0
+
+.screen-reader-text,
+.screen-reader-text span,
+.ui-helper-hidden-accessible {
+	@extend %visually-hidden;
+}
+
+/// A placeholder just for align. Not meant to be extended elsewhere.
+/// @group 02-mixins
+/// @access private
+/// @since 1.2.0
+
+%_align-styles {
+	margin-bottom: $margin-floated-content;
+	max-width: 100%;
+
+	@include breakpoint( $xs ) {
+		max-width: 50%;
+	}
+}
+
+/// The class WordPress generates when you align something right in the
+/// visual editor.
+/// @group 02-mixins
+/// @access public
+/// @since 1.0.0
+
+.alignright {
+	@extend %_align-styles;
+
+	@include breakpoint( $xs ) {
+		float: right;
+		margin: 0 0 $margin-floated-content $margin-floated-content;
+	}
+}
+
+/// The class WordPress generates when you align something left in the
+/// visual editor.
+/// @group 02-mixins
+/// @access public
+/// @since 1.0.0
+
+.alignleft {
+	@extend %_align-styles;
+
+	@include breakpoint( $xs ) {
+		float: left;
+		margin: 0 $margin-floated-content $margin-floated-content 0;
+	}
+}
+
+/// The class WordPress generates when you center something in the
+/// visual editor.
+/// @group 02-mixins
+/// @access public
+/// @since 1.0.0
+
+.aligncenter {
+	display: block;
+	margin: 0 auto $margin-floated-content;
+}
+
+/// The class WordPress generates for caption text on images in the visual editor.
+/// @group 02-mixins
+/// @access public
+/// @since 1.0.0
+
+.wp-caption-text {
+	@extend %font-size-minimum;
+	clear: both;
+	color: $color-caption;
+	font-family: $font-family-caption;
+	line-height: 1.4;
+}
+
+/// A placeholder which controls responsive styling for tables.
+/// You may want to extend this if you can't use the responsive-table class
+/// for some reason, or if you need to make significant overrides and want to
+/// leave the base styles intact.
+/// You must wrap the class this uses around a table for it to work. It will
+/// not work if you just put it on the table.
+/// @group 02-mixins
+/// @access public
+/// @since 1.0.0
+
+%resposive-table-styles {
+	position: relative;
+
+	@media screen and ( max-width: #{$container-md} ) {
+		margin: 35px 0;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		overflow-x: auto;
+		overflow-y: hidden;
+		width: 100%;
+
+		// Tighten up spacing
+		table {
+			margin: 0;
+			table-layout: auto;
+
+			td {
+				white-space: nowrap; // Ensure the content doesn't wrap
+			}
+		}
+	}
+}
+
+/// A class for responsive styling on tables.
+/// This class will make the table scrollable below the medium breakpoint.
+/// You must wrap the table in a div with this class. It will not work if you
+/// put it directly on the table.
+/// @group 02-mixins
+/// @access public
+/// @since 1.0.0
+
+.responsive-table {
+	@extend %resposive-table-styles;
+}
+
+/// For code within the WordPress content area.
+/// @group 02-mixins
+/// @access public
+/// @since 1.0.0
+
+.content {
+	p {
+		code {
+			font-size: 90%;
+		}
+	}
+}

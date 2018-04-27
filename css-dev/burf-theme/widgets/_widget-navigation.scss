@@ -1,0 +1,118 @@
+// =================================================================
+// Content Navigation Settings
+// =================================================================
+
+/// Controls the style of border used on the content navigation list.
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+$border-widget-contentnav:                 $border !default;
+
+/// Controls the font family used in the content navigation widget.
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+$font-family-widget-contentnav:             $font-family-sans-serif !default;
+
+/// Controls the font size used for items on the first level in the
+/// content navigation widget.
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+$font-size-widget-contentnav-link:          inherit !default;
+
+/// Controls the font size used for items below the first level in the
+/// content navigation widget.
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+$font-size-widget-contentnav-nested-link:    inherit !default;
+
+/// Controls the color of nav items in the content navigation widget.
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+$color-widget-contentnav:                  $color-link !default;
+
+/// Controls the color of nav items when you hover in the content navigation widget.
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+$color-widget-contentnav-hover:            $color-link !default;
+
+/// Controls the active color of nav items in the content navigation widget.
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+$color-widget-contentnav-active:           $color-link-active !default;
+
+
+// =================================================================
+// Content Navigation Styles
+// =================================================================
+
+/// Handles styling for content navigation widgets (BU Pages and Content Navigation, aka side nav).
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+.widget_bu_pages,
+.widget_nav_menu {
+	h3 {
+		margin-bottom: 0;
+	}
+
+	ul {
+		border-bottom: $border-widget-contentnav;
+		padding: 0;
+
+		ul {
+			border: 0;
+			margin: 0;
+		}
+
+	}
+
+	li {
+		border-top: $border-widget-list;
+		font-family: $font-family-widget-contentnav;
+
+		&:first-child {
+			border: 0;
+		}
+
+		li {
+			border: 0;
+			padding: 0 0 0 $padding-small;
+
+			a {
+				font-size: $font-size-widget-contentnav-nested-link;
+			}
+		}
+
+		a {
+			color: $color-widget-contentnav;
+			display: block;
+			font-size: $font-size-widget-contentnav-link;
+			padding: $padding-small 0;
+
+			&:hover,
+			&:focus {
+				color: $color-widget-contentnav-hover;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.active,
+	.current_page_item a {
+		color: $color-widget-contentnav-active;
+	}
+}

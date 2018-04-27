@@ -1,20 +1,27 @@
-// basic framework elements
-// -----------------------------------------------------------------
+// =================================================================
+// Basic styling and resets which do not depend on WordPress
+// =================================================================
 
-// variables
-@import 'burf-base/variables';
+// dependencies and resets
+@import "normalize/import-now";
+@import "math";
 
-// mixins
-@import 'burf-base/mixins';
+// Utilities
+@import "burf-base/config";
+@import "burf-base/mixins";
+@import "burf-base/fonts";
+@import "burf-base/icons/package";
 
-// fonts
-@import 'burf-base/fonts';
+// Styles
+@import "burf-base/normalize";
+@import "burf-base/grid/package";
+@import "burf-base/typography";
+@import "burf-base/tables";
+@import "burf-base/forms";
 
-// grid
-@import 'burf-base/grid';
+// =================================================================
+// Tests
+// TODO: Remove before release
+// =================================================================
 
-// base styles
-@import 'burf-base/base-global';
-@import 'burf-base/base-typography';
-@import 'burf-base/base-tables';
-@import 'burf-base/base-forms';
+@import "burf-base/tests";

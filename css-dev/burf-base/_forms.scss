@@ -1,0 +1,734 @@
+// =================================================================
+// Forms Settings
+// =================================================================
+
+/// Controls the font family used in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+$font-family-form:                          $font-family-sans-serif !default;
+
+/// Controls the border on the legend in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+$form-legend-border:                        $border !default;
+
+/// Controls the margin on the legend in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+$form-legend-margin:                       0 0 $margin !default;
+
+/// Controls the padding on the legend in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+$form-legend-padding:                      0 0 0.5em !default;
+
+/// Controls the border on fieldsets in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+$form-fieldset-border:                     0 !default;
+
+/// Controls the margin on the fieldset in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+$form-fieldset-margin:                     $margin 0 !default;
+
+/// Controls the padding on the fieldset in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+$form-fieldset-padding:                    0 !default;
+
+/// Controls the margin on labels in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+$form-label-margin:                        0.5em 0 !default;
+
+/// Controls the margin on rows in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+$form-row-margin:                          0 0 $margin-small !default;
+
+/// Controls the margin on inputs in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+$form-input-margin:                        0 0 $margin-small !default;
+
+/// Controls the padding on inputs in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+$form-input-padding:                       0.5em !default;
+
+/// Controls the border on inputs in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+$form-input-border:                        $border !default;
+
+/// Controls the inner shadow on inputs in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+$form-input-shadow:                        inset 0 1px 3px $color-grayscale-e !default;
+
+/// Controls the border radius on inputs in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+$form-input-border-radius:                 0 !default;
+
+/// Controls the shadow on focused inputs.
+/// This is important for accessibility. Always
+/// test with a keyboard if you change this style
+/// to ensure it is still clear which item is keyboard
+/// focused afterwards.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+$form-input-focus-shadow:                  0 0 4px 0 rgba( 18, 159, 234, 0.2 ) !default;
+
+/// Controls the border on focused inputs.
+/// This is important for accessibility. Always
+/// test with a keyboard if you change this style
+/// to ensure it is still clear which item is keyboard
+/// focused afterwards.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+$color-input-focus-border:                 #129fea !default;
+
+/// Controls the font used on all buttons and
+/// things that looks like buttons across the site.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+$font-family-button:                       $font-family-sans-serif !default;
+
+/// Controls the font size used on all buttons and
+/// things that looks like buttons across the site.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+$font-size-button:                         inherit !default;
+
+/// Controls the background color used on default buttons and
+/// things that looks like buttons across the site.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+$color-button-bg:                          $color-grayscale-e !default;
+
+/// Controls the text color used on default buttons and
+/// things that looks like buttons across the site.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+$color-button-text:                        $color-grayscale-4 !default;
+
+/// Controls the background color used on primary buttons and
+/// things that looks like buttons across the site.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+$color-button-primary-bg:                  #0078e7 !default;
+
+/// Controls the text color used on primary buttons and
+/// things that looks like buttons across the site.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+$color-button-primary-text:                $color-grayscale-f !default;
+
+/// Controls the margin on buttons in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group 01-config
+/// @access public
+/// @since 2.0.0
+
+$margin-button:                            0 $margin-small $margin-small 0 !default;
+
+/// Controls the margin on buttons in forms.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group 01-config
+/// @access public
+/// @since 2.0.0
+
+$padding-button:                           0.5em 1em !default;
+
+/// Controls the border on buttons.
+/// @group 01-config
+/// @access public
+/// @since 2.0.0
+
+$border-button:                            0;
+
+/// Controls the rounding of edges on buttons.
+/// Note: this style may not apply to Gravity Forms
+/// due to overly specific plugin CSS.
+/// @group 01-config
+/// @access public
+/// @since 2.0.0
+
+$border-radius-button:                     2px !default;
+
+// =================================================================
+// Forms Styles
+// =================================================================
+
+// Placeholders for Forms
+// -----------------------------------------------------------------
+
+/// Controls button styles globally.
+/// Extend this class for custom buttons or for elements whose HTML
+/// and CSS you don't have control over.
+/// May be used on both form element tags and regular links to make
+/// them look like buttons.
+/// @group 11-forms
+/// @access public
+/// @since 1.2.0
+
+%button-styles {
+	background-color: $color-button-bg;
+	border: $border-button;
+	border-radius: $border-radius-button;
+	color: $color-button-text;
+	display: inline-block;
+	font-family: $font-family-button;
+	font-size: $font-size-button;
+	line-height: normal;
+	margin: $margin-button;
+	padding: $padding-button;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: baseline;
+
+	&:hover {
+		@include linear-gradient( transparent, rgba( $color-grayscale-0, 0.10 ) );
+	}
+
+	&:active {
+		@include box-shadow(
+			0 0 0 1px rgba( $color-grayscale-0, 0.15 ) inset,
+			0 0 6px rgba( $color-grayscale-0, 0.20 ) inset
+		);
+	}
+}
+
+/// Controls button styles for input tags globally.
+/// Only to be used with form element tags.
+/// @group 11-forms
+/// @access public
+/// @since 1.2.0
+
+%button-styles-input {
+	cursor: pointer;
+	*display: inline; // IE 6/7
+	*font-size: 90%; // IE 6/7 - To reduce IE's oversized button text
+	*overflow: visible; // IE 6/7 - Because of IE's overly large left/right padding on buttons
+	user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	white-space: nowrap;
+	zoom: 1;
+
+	&[disabled],
+	&-disabled,
+	&-disabled:hover,
+	&-disabled:active {
+		@include box-shadow( none );
+		background: $color-grayscale-d;
+		color: $color-grayscale-7;
+		cursor: not-allowed;
+	}
+
+	&-hidden {
+		display: none;
+	}
+}
+
+/// Styles buttons in a "primary" way so as to look more important
+/// when there are multiple buttons near each other.
+/// @group 11-forms
+/// @access public
+/// @since 1.2.0
+
+%button-styles-primary {
+	background-color: $color-button-primary-bg;
+	color: $color-button-primary-text;
+
+	&:hover,
+	&:active,
+	&:visited {
+		color: $color-button-primary-text;
+	}
+}
+
+// Forms
+// -----------------------------------------------------------------
+
+/// The general styles for forms.
+/// @group 11-forms
+/// @access public
+/// @since 1.0.0
+
+form {
+	@extend %font-size-secondary;
+	font-family: $font-family-form;
+}
+
+/// The general styles for the fieldset element.
+/// Wraps around sets of controls within a form.
+/// See [MDN on fieldset](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset).
+/// @group 11-forms
+/// @access public
+/// @since 1.0.0
+
+fieldset {
+	border: $form-fieldset-border;
+	margin: $form-fieldset-margin;
+	padding: $form-fieldset-padding;
+}
+
+/// The general styles for the legend element, which holds a caption for the
+/// fieldset element.
+/// See [MDN on legend](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend).
+/// @group 11-forms
+/// @access public
+/// @since 1.0.0
+
+legend {
+	border-bottom: $form-legend-border;
+	display: block;
+	font-size: 1.5em;
+	font-weight: 700;
+	margin: $form-legend-margin;
+	padding: $form-legend-padding;
+	width: 100%;
+}
+
+select,
+textarea {
+	font-family: inherit; // Address `font-family` inconsistency between `textarea` and other form elements.
+}
+
+/// The general styles for labels on form fields.
+/// See [MDN on label](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label).
+/// @group 11-forms
+/// @access public
+/// @since 1.0.0
+
+label {
+	display: block;
+	font-weight: bold;
+	margin: $form-label-margin;
+}
+
+/// The general styles for inputs which should look like buttons.
+/// @group 11-forms
+/// @access public
+/// @since 1.0.0
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	@extend %button-styles;
+	@extend %button-styles-input;
+}
+
+/*!
+Pure v0.5.0
+Copyright 2013 Yahoo!
+Licensed under the BSD License.
+https://github.com/yahoo/pure/blob/master/LICENSE.md
+*/
+
+// Forms: Style (adapted from Pure CSS v0.5.0)
+// -----------------------------------------------------------------
+
+/// A helper for form input focus shadows.
+/// @group 11-forms
+/// @access private
+/// @since 1.0.0
+
+%_form-input-focus-shadow {
+	@include box-shadow( $form-input-focus-shadow );
+}
+
+/// Styles user inputs in forms.
+/// From Pure v0.5.0.
+/// @group 11-forms
+/// @access private
+/// @since 1.0.0
+
+[type="text"],
+[type="password"],
+[type="email"],
+[type="url"],
+[type="date"],
+[type="month"],
+[type="time"],
+[type="datetime"],
+[type="datetime-local"],
+[type="week"],
+[type="number"],
+[type="search"],
+[type="tel"],
+[type="color"],
+select,
+textarea {
+	@include	box-shadow( $form-input-shadow );
+	@include border-radius( $form-input-border-radius );
+	border: $form-input-border;
+	display: inline-block;
+	line-height: 1;
+	margin: $form-input-margin;
+	padding: $form-input-padding;
+
+	&:focus {
+		@extend %_form-input-focus-shadow;
+		border-color: $color-input-focus-border;
+		outline: 0;
+		outline: thin dotted \9; // IE6-9
+		outline: 1px auto $color-input-focus-border;
+	}
+}
+
+/// Styles checkbox and radio inputs in forms.
+/// From Pure v0.5.0.
+/// @group 11-forms
+/// @access private
+/// @since 1.0.0
+
+[type="file"],
+[type="radio"],
+[type="checkbox"] {
+	&:focus {
+		@extend %_form-input-focus-shadow;
+		outline: thin dotted $color-grayscale-3;
+		outline: 1px auto $color-input-focus-border;
+	}
+}
+
+/// Styles checkboxes and radio buttons in forms.
+/// From Pure v0.5.0.
+/// @group 11-forms
+/// @access private
+/// @since 1.0.0
+
+.checkbox,
+.radio {
+	margin: 0.5em 0;
+}
+
+/// Styles elements with the "disabled" attribute.
+/// From Pure v0.5.0.
+/// @group 11-forms
+/// @access private
+/// @since 1.0.0
+
+[disabled] {
+	background-color: $color-grayscale-e;
+	color: $color-grayscale-c;
+	cursor: not-allowed;
+}
+
+/// Styles elements with the "readonly" attribute.
+/// From Pure v0.5.0.
+/// @group 11-forms
+/// @access private
+/// @since 1.0.0
+
+[readonly] {
+	background: $color-grayscale-e;
+	border-color: $color-grayscale-c;
+	color: $color-grayscale-7;
+}
+
+/// The color to use on borders and outlines in the invalid state.
+/// From Pure v0.5.0.
+/// @group 11-forms
+/// @access private
+/// @since 1.0.0
+
+$_invalid-border-color: #e9322d;
+
+/// The color to use on text in the invalid state.
+/// From Pure v0.5.0.
+/// @group 11-forms
+/// @access private
+/// @since 1.0.0
+
+$_invalid-text-color: #b94a48;
+
+/// Styles elements which accept text with an invalid state
+/// until the user types something valid.
+/// From Pure v0.5.0.
+/// @group 11-forms
+/// @access private
+/// @since 1.0.0
+
+input,
+textarea,
+select {
+	&:focus:invalid {
+		border-color: $_invalid-border-color;
+		color: $_invalid-text-color;
+	}
+}
+
+/// Styles elements which do not accept text with an invalid state
+/// as long as the element is invalid. Focus state is targeted for
+/// the benefit of keyboard users.
+/// From Pure v0.5.0.
+/// @group 11-forms
+/// @access private
+/// @since 1.0.0
+
+[type="file"],
+[type="radio"],
+[type="checkbox"] {
+	&:focus:invalid {
+		outline-color: $_invalid-border-color;
+	}
+}
+
+/// Styles select and multi-select elements.
+/// From Pure v0.5.0.
+/// @group 11-forms
+/// @access private
+/// @since 1.0.0
+
+select {
+	background-color: $color-grayscale-f;
+	border: 1px solid $color-grayscale-c;
+
+	&[multiple] {
+		height: auto;
+	}
+}
+
+/// Styles form rows, if you are not using Gravity Forms.
+/// From Pure v0.5.0.
+/// @group 11-forms
+/// @access public
+/// @since 1.0.0
+
+.form-row {
+	margin: $form-row-margin;
+}
+
+/// Styles form controls, if you are not using Gravity Forms.
+/// From Pure v0.5.0.
+/// @group 11-forms
+/// @access public
+/// @since 1.0.0
+
+.form-controls {
+	margin: $margin 0 0;
+}
+
+/// Styles required items, if you are not using Gravity Forms.
+/// From Pure v0.5.0.
+/// @group 11-forms
+/// @access public
+/// @since 1.0.0
+
+.required {
+	color: #c00;
+}
+
+/// Styles inputs and labels in the stacked and aligned layouts,
+/// if you are not using Gravity Forms.
+/// From Pure v0.5.0.
+/// @group 11-forms
+/// @access public
+/// @since 1.0.0
+
+[type="text"],
+[type="password"],
+[type="email"],
+[type="url"],
+[type="date"],
+[type="month"],
+[type="time"],
+[type="datetime"],
+[type="datetime-local"],
+[type="week"],
+[type="number"],
+[type="search"],
+[type="tel"],
+[type="color"],
+select,
+label,
+textarea {
+	.form-stacked &,
+	.form-aligned & {
+		// Aligned forms should stack on small screens
+		display: block;
+		margin: $form-input-margin;
+	}
+}
+
+/// Styles inputs and labels in the aligned layout at desktop sizes,
+/// if you are not using Gravity Forms.
+/// From Pure v0.5.0.
+/// @group 11-forms
+/// @access public
+/// @since 1.0.0
+
+@include breakpoint( $md ) {
+	.form-aligned {
+		input,
+		textarea,
+		select {
+			display: inline-block;
+			*display: inline;
+			vertical-align: middle;
+			*zoom: 1;
+		}
+
+		textarea {
+			vertical-align: top;
+		}
+
+		label {
+			display: inline-block;
+			margin: 0 20px 0 0;
+			text-align: right;
+			vertical-align: middle;
+			width: 200px;
+		}
+
+		.form-row-checkbox,
+		.form-row-radio {
+			margin: $form-row-margin;
+			margin-left: 220px;
+		}
+
+		.form-controls {
+			margin-left: 220px;
+		}
+	}
+}
+
+// Gravity Forms
+// -----------------------------------------------------------------
+
+/// Styles Gravity Forms.
+/// @group 11-forms
+/// @access public
+/// @since 1.0.0
+
+.gform_wrapper {
+	li {
+		list-style: none;
+
+		&::before {
+			content: "";
+			font-size: 0;
+		}
+	}
+
+	table {
+		table-layout: initial;
+	}
+
+	[type="radio"] {
+		margin-left: 1px;
+	}
+}
+
+// Buttons
+// -----------------------------------------------------------------
+
+/// The basic style for a button. Preferred over the extend if
+/// you have control over HTML and do not need any styles for your
+/// button in particular.
+/// @group 11-forms
+/// @access public
+/// @since 1.0.0
+
+.button {
+	@extend %button-styles;
+}
+
+/// The basic style for a primary and selected button. Preferred over the extend if
+/// you have control over HTML and do not need any styles for your
+/// button in particular.
+/// @group 11-forms
+/// @access public
+/// @since 1.0.0
+
+.button-primary,
+.button-selected {
+	@extend %button-styles;
+	@extend %button-styles-primary;
+}

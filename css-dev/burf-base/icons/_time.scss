@@ -1,0 +1,59 @@
+// =================================================================
+// Time & Date Icons
+	// calendar
+	// clock
+	// watch
+	// infinity
+// =================================================================
+
+/// The calendar icon.
+/// @example scss - Add the calendar icon to a menu item
+/// .menu-item {
+///    @extend %icon-calendar;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-calendar {
+	@include icon( "calendar" );
+}
+
+/// The clock icon.
+/// @example scss - Add the clock icon to a menu item
+/// .menu-item {
+///    @extend %icon-clock;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-clock {
+	@include icon( "clock" );
+}
+
+/// The watch icon.
+/// @example scss - Add the watch icon to a menu item
+/// .menu-item {
+///    @extend %icon-watch;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-watch {
+	@include icon( "watch" );
+}
+
+/// The infinity icon.
+/// @example scss - Add the infinity icon to a menu item
+/// .menu-item {
+///    @extend %icon-infinity;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-infinity {
+	@include icon( "infinity" );
+}

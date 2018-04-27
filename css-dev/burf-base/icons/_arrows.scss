@@ -1,0 +1,227 @@
+// =================================================================
+// Arrow Icons
+	// contract
+	// expand
+	// scaledown
+	// scaleup
+	// up
+	// right
+	// down
+	// left
+	// directup
+	// directright
+	// dropdown
+	// directleft
+	// navigateup
+	// navigateright
+	// navigatedown
+	// navigateleft
+// =================================================================
+
+/// The contract icon.
+/// @example scss - Add the contract icon to a menu item
+/// .menu-item {
+///    @extend %icon-contract;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-contract {
+	@include icon( "contract" );
+}
+
+/// The expand icon.
+/// @example scss - Add the expand icon to a menu item
+/// .menu-item {
+///    @extend %icon-expand;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-expand {
+	@include icon( "expand" );
+}
+
+/// The scaledown icon.
+/// @example scss - Add the scaledown icon to a menu item
+/// .menu-item {
+///    @extend %icon-scaledown;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-scaledown {
+	@include icon( "scaledown" );
+}
+
+/// The scaleup icon.
+/// @example scss - Add the scaleup icon to a menu item
+/// .menu-item {
+///    @extend %icon-scaleup;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-scaleup {
+	@include icon( "scaleup" );
+}
+
+/// The up icon.
+/// @example scss - Add the up icon to a menu item
+/// .menu-item {
+///    @extend %icon-up;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-up {
+	@include icon( "up" );
+}
+
+/// The right icon.
+/// @example scss - Add the right icon to a menu item
+/// .menu-item {
+///    @extend %icon-right;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-right {
+	@include icon( "right" );
+}
+
+/// The down icon.
+/// @example scss - Add the down icon to a menu item
+/// .menu-item {
+///    @extend %icon-down;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-down {
+	@include icon( "down" );
+}
+
+/// The left icon.
+/// @example scss - Add the left icon to a menu item
+/// .menu-item {
+///    @extend %icon-left;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-left {
+	@include icon( "left" );
+}
+
+/// The directup icon.
+/// @example scss - Add the directup icon to a menu item
+/// .menu-item {
+///    @extend %icon-directup;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-directup {
+	@include icon( "directup" );
+}
+
+/// The directright icon.
+/// @example scss - Add the directright icon to a menu item
+/// .menu-item {
+///    @extend %icon-directright;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-directright {
+	@include icon( "directright" );
+}
+
+/// The dropdown icon.
+/// @example scss - Add the dropdown icon to a menu item
+/// .menu-item {
+///    @extend %icon-dropdown;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-dropdown {
+	@include icon( "dropdown" );
+}
+
+/// The directleft icon.
+/// @example scss - Add the directleft icon to a menu item
+/// .menu-item {
+///    @extend %icon-directleft;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-directleft {
+	@include icon( "directleft" );
+}
+
+/// The navigateup icon.
+/// @example scss - Add the navigateup icon to a menu item
+/// .menu-item {
+///    @extend %icon-navigateup;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-navigateup {
+	@include icon( "navigateup" );
+}
+
+/// The navigateright icon.
+/// @example scss - Add the navigateright icon to a menu item
+/// .menu-item {
+///    @extend %icon-navigateright;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-navigateright {
+	@include icon( "navigateright" );
+}
+
+/// The navigatedown icon.
+/// @example scss - Add the navigatedown icon to a menu item
+/// .menu-item {
+///    @extend %icon-navigatedown;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-navigatedown {
+	@include icon( "navigatedown" );
+}
+
+/// The navigateleft icon.
+/// @example scss - Add the navigateleft icon to a menu item
+/// .menu-item {
+///    @extend %icon-navigateleft;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-navigateleft {
+	@include icon( "navigateleft" );
+}

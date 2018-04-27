@@ -1,0 +1,101 @@
+// =================================================================
+// Location Icons
+	// compass
+	// crosshair
+	// globe
+	// location
+	// map
+	// navigate
+	// signpost
+// =================================================================
+
+/// The compass icon.
+/// @example scss - Add the compass icon to a menu item
+/// .menu-item {
+///    @extend %icon-compass;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-compass {
+	@include icon( "compass" );
+}
+
+/// The crosshair icon.
+/// @example scss - Add the crosshair icon to a menu item
+/// .menu-item {
+///    @extend %icon-crosshair;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-crosshair {
+	@include icon( "crosshair" );
+}
+
+/// The globe icon.
+/// @example scss - Add the globe icon to a menu item
+/// .menu-item {
+///    @extend %icon-globe;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-globe {
+	@include icon( "globe" );
+}
+
+/// The location icon.
+/// @example scss - Add the location icon to a menu item
+/// .menu-item {
+///    @extend %icon-location;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-location {
+	@include icon( "location" );
+}
+
+/// The map icon.
+/// @example scss - Add the map icon to a menu item
+/// .menu-item {
+///    @extend %icon-map;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-map {
+	@include icon( "map" );
+}
+
+/// The navigate icon.
+/// @example scss - Add the navigate icon to a menu item
+/// .menu-item {
+///    @extend %icon-navigate;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-navigate {
+	@include icon( "navigate" );
+}
+
+/// The signpost icon.
+/// @example scss - Add the signpost icon to a menu item
+/// .menu-item {
+///    @extend %icon-signpost;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-signpost {
+	@include icon( "signpost" );
+}

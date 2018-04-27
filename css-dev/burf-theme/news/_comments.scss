@@ -1,0 +1,388 @@
+// =================================================================
+// Comments Settings
+// =================================================================
+
+/// Controls the amount of spacing between comment threads on a post.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+$comment-margin:                           $margin !default;
+
+/// Controls the amount of spacing between comment threads on a post on mobile.
+/// @group 12-news
+/// @access public
+/// @since 2.0.0
+
+$comment-margin-mobile:               		 $margin-small !default;
+
+/// Controls the amount of spacing between comments within a thread on desktop.
+/// By default, there is no margin between comments on mobile.
+/// @group 12-news
+/// @access public
+/// @since 2.0.0
+
+$comment-reply-margin:                     $margin-small !default;
+
+/// Controls the amount of space a reply comment is indented from the parent.
+/// @group 12-news
+/// @access public
+/// @since 2.0.0
+
+$comment-reply-depth:                      $margin-small !default;
+
+/// Controls the amount of space a reply comment is indented from the parent on mobile.
+/// @group 12-news
+/// @access public
+/// @since 2.0.0
+
+$comment-reply-depth-mobile:               $comment-reply-depth / 3 !default;
+
+/// Controls the border style between comments on a post.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+$border-comment:                           $border !default;
+
+/// Controls the border width between comments on a post.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+$border-width-comment:                      1px 1px 1px 5px !default;
+
+/// Controls the amount of spacing within comments.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+$comment-padding:                           $padding-small !default;
+
+/// Controls the amount of spacing within comments on mobile.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+$comment-padding-mobile:                           $padding-small !default;
+
+/// Controls the font family used for comments on a post.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+$font-family-comment:                       $font-family-sans-serif !default;
+
+/// Controls the color of comments on a post.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+$color-comments:                           $color-base !default;
+
+/// Controls the color of replies to comments on a post.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+$color-comment-reply:                      $color-grayscale-8 !default;
+
+/// Controls the color of the author name in a comment.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+$color-comment-author-name:                 $color-grayscale-0 !default;
+
+/// Controls the color of the "says" text after author name in a comment.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+$color-comment-author-says:                     $color-grayscale-8 !default;
+
+/// Controls the background color of the comment submission form.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+$color-comment-form-bg:                     $color-grayscale-f5 !default;
+
+/// Controls the border style on the comment submission form.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+$border-comment-form:                       $border !default;
+
+/// Controls the border width on the comment submission form.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+$border-width-comment-form:                  3px !default;
+
+// =================================================================
+// Comments Styles
+// =================================================================
+
+/// Controls styling for the comments section on posts.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+.comments-area {
+	color: $color-comments;
+
+	// Remove defaults for all OL on this page
+	ol {
+		list-style: none;
+		//margin: 0;
+		padding: 0;
+	}
+}
+
+/// Controls styling for comment threads on posts.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+.comments-list {
+	margin-left: -$margin-small;
+	margin-right: -$margin-small;
+
+	@include breakpoint( $sm ) {
+		margin: 0;
+	}
+}
+
+/// Controls styling for the comment container.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+.comment {
+	margin-left: $comment-reply-depth-mobile;
+
+	@include breakpoint( $sm ) {
+		margin-left: $comment-reply-depth;
+	}
+
+	&.depth-1 {
+		margin: $comment-margin-mobile 0;
+		padding: 0;
+
+		@include breakpoint( $sm ) {
+			margin: $comment-margin 0;
+		}
+	}
+}
+
+/// Controls styling for individual comments on posts.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+.comment-body {
+	@extend %font-size-secondary;
+	border: $border-comment;
+	border-width: $border-width-comment;
+	font-family: $font-family-comment;
+	padding: $comment-padding-mobile;
+	position: relative;
+
+	@include breakpoint( $sm ) {
+		margin: $comment-reply-margin 0;
+		padding: $comment-padding;
+	}
+
+	.children & {
+		@media screen and ( max-width: $sm - 1 ) {
+			border-top: 0; // Prevents borders from stacking on child comments
+		}
+	}
+}
+
+/// Controls styling for the comment reply link.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+.comment-reply-link {
+	@extend %font-size-minimum;
+	color: $color-comment-reply;
+}
+
+/// Controls styling for the comment author.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+.comment-author {
+	@extend %font-size-5;
+	color: $color-comment-author-name;
+}
+
+/// Controls styling for the "says" text after comment author.
+/// @group 12-news
+/// @access public
+/// @since 2.0.0
+
+.says {
+	color: $color-comment-author-says;
+}
+
+/// Controls styling for the date and time of comments.
+/// This was hidden in the past, but in emergency situations, comments
+/// are often used as a means of communication, both officially and unofficially.
+/// Readers need to know how recent the last reliable update was should this happen.
+/// Disable or hide only with great caution, only using the `%visually-hidden` placeholder.
+/// @group 12-news
+/// @access public
+/// @since 2.0.0
+
+.comment-metadata {
+	@extend %font-size-minimum;
+	position: absolute;
+	right: $comment-padding-mobile;
+	top: $comment-padding-mobile;
+
+	@include breakpoint( $sm ) {
+		right: $comment-padding;
+		top: $comment-padding;
+	}
+}
+
+/// Styles the container which holds the comment content.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+.comment-content {
+	margin: 0.5em 0;
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+/// Styles the comment form container.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+.comment-respond {
+	@include border-radius( 5px );
+	background: $color-comment-form-bg;
+	border: $border-comment-form;
+	border-width: $border-width-comment-form;
+	margin: $margin-small 0 $margin;
+	padding: $padding;
+	position: relative;
+
+	fieldset {
+		border: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	p {
+		margin: 0 0 $padding;
+	}
+
+	label {
+		display: block;
+		margin: 0 0 2px;
+
+		@include breakpoint( $sm ) {
+			float: left;
+			margin: $form-label-margin;
+			padding-right: $padding-small;
+			width: 25%;
+		}
+	}
+}
+
+/// Styles the comment form title.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+.comment-respond-title {
+	@extend %font-size-4;
+}
+
+/// Styles the container around the comment form submit button.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+.comment-form-submit {
+	margin: $margin-small 0 0;
+}
+
+/// Styles "view guidelines" and other helper text in the comment form.
+/// @group 12-news
+/// @access public
+/// @since 1.0.0
+
+.form-tip {
+	@extend %font-size-minimum;
+	color: $color-grayscale-8;
+
+	@include breakpoint( $sm ) {
+		display: block;
+	}
+
+	a {
+		color: inherit;
+	}
+}
+
+/// Styles the comment text area in the comments form.
+/// @group 12-news
+/// @access public
+/// @since 2.0.0
+
+#comment {
+	@include transition( height 50ms ease-in-out 0s );
+	height: 6em;
+	width: 100%;
+
+	@include breakpoint( $sm ) {
+		width: 75%;
+	}
+
+	&:focus,
+	&:valid {
+		@include transition( height 50ms ease-in-out 0s );
+		height: 12em;
+	}
+}
+
+/// Styles the comment form submit button.
+/// @group 12-news
+/// @access public
+/// @since 2.0.0
+
+.comment-submit {
+	@include breakpoint( $sm ) {
+		margin-left: 25%;
+	}
+}
+
+/// Styles the cancel comment reply link.
+/// WordPress hides this on the comment form with an inline attribute when
+/// the comment is not a reply to another comment. To test this, hit the "Reply"
+/// link on any comment. You should be be able to see it.
+/// @group 12-news
+/// @access public
+/// @since 2.0.0
+
+.cancel-comment-reply {
+	@extend %font-size-minimum;
+	display: inline-block;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}

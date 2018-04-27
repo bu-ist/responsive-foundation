@@ -1,0 +1,101 @@
+// =================================================================
+// Document Icons
+	// link
+	// alt
+	// file
+	// files
+	// folder
+	// index
+	// storagebox
+// =================================================================
+
+/// The link icon.
+/// @example scss - Add the link icon to a menu item
+/// .menu-item {
+///    @extend %icon-link;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-link {
+	@include icon( "link" );
+}
+
+/// The link alt icon.
+/// @example scss - Add the alt icon to a menu item
+/// .menu-item {
+///    @extend %icon-alt;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-link-alt {
+	@include icon( "link-alt" );
+}
+
+/// The file icon.
+/// @example scss - Add the file icon to a menu item
+/// .menu-item {
+///    @extend %icon-file;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-file {
+	@include icon( "file" );
+}
+
+/// The files icon.
+/// @example scss - Add the files icon to a menu item
+/// .menu-item {
+///    @extend %icon-files;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-files {
+	@include icon( "files" );
+}
+
+/// The folder icon.
+/// @example scss - Add the folder icon to a menu item
+/// .menu-item {
+///    @extend %icon-folder;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-folder {
+	@include icon( "folder" );
+}
+
+/// The index icon.
+/// @example scss - Add the index icon to a menu item
+/// .menu-item {
+///    @extend %icon-index;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-index {
+	@include icon( "index" );
+}
+
+/// The storagebox icon.
+/// @example scss - Add the storagebox icon to a menu item
+/// .menu-item {
+///    @extend %icon-storagebox;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 1.2.0
+
+%icon-storagebox {
+	@include icon( "storagebox" );
+}

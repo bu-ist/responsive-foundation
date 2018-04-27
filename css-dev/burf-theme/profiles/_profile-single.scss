@@ -1,0 +1,105 @@
+// =================================================================
+// Profile Single Settings
+// =================================================================
+
+/// Controls the color used for labels in the single profile
+/// listing template sidebar.
+/// @group 14-profiles
+/// @access public
+/// @since 1.0.0
+
+$color-profile-info-label:					$color-grayscale-6 !default;
+$color-profile-info-item:					$color-grayscale-5 !default;
+
+// =================================================================
+// Profile Single Styles
+// =================================================================
+
+/// Styles the single profile name - typically the title of the page.
+/// @group 14-profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-single-name {
+	margin-bottom: 0;
+	text-align: center;
+}
+
+/// Styles the single profile title - typically the subtitle of the page.
+/// @group 14-profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-single-title {
+	text-align: center;
+}
+
+/// Styles the single profile photo.
+/// @group 14-profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-single-photo {
+	margin: 0 auto $margin;
+	width: 300px;
+}
+
+/// Styles the single profile details sidebar.
+/// @group 14-profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-single-details {
+	@extend %card-styles;
+	margin: 0 0 $margin;
+
+	@include breakpoint( $sm ) {
+		float: right;
+		margin: 0 0 20px 20px;
+		width: 33.33333333333333%;
+	}
+}
+
+/// General styles for labels.
+/// @group 09-content
+/// @access public
+/// @since 1.0.0
+
+.label {
+	@extend %font-size-minimum;
+	display: block;
+	font-family: $font-family-sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+/// Styles the single profile details labels.
+/// @group 14-profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-details-label {
+	color: $color-profile-info-label;
+}
+
+/// Styles the single profile details list.
+/// @group 14-profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-details-list {
+	margin: 0;
+	padding: 0;
+}
+
+/// Styles the single profile details items.
+/// @group 14-profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-details-item {
+	color: $color-profile-info-item;
+	list-style: none;
+	margin: 0 0 $margin;
+	word-wrap: break-word;
+}

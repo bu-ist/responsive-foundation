@@ -1,8 +1,12 @@
 # Responsive Foundation
 
-This framework provides a library of [Sass](http://sass-lang.com/) and Javascript files that serve as a foundation for building responsive sites. This library is designed to be imported into your project using [Bower](http://bower.io).
+Responsive Foundation is Boston University's front-end development framework. Built in Sass and JavaScript, Foundation powers the frontend of custom WordPress themes, longform editorial work, and special projects such as our Annual Report. 
 
-It was initially conceived during the build for the WordPress [Responsive Framework](https://github.com/bu-ist/responsive-framework) as a way to share common front-end assets among themes, but does not have an WordPress-specific bindings and can be used for non-WordPress projects as well.
+This framework is currently internal, and may not be used without permission.
+
+Foundation provides a library of [Sass](http://sass-lang.com/) and Javascript files that serve as a foundation for building responsive sites. This library is designed to be imported into your project using [Bower](http://bower.io).
+
+It was initially conceived during the build for our custom WordPress theme framework as a way to share common front-end assets among themes, but does not have an WordPress-specific bindings and can be used for non-WordPress projects as well.
 
 Note that this repository does not include any production-ready assets (e.g. minified, compressed). The build process is entirely up to the project.
 
@@ -57,6 +61,6 @@ Full usage documentation can be found in the [visual style guide](https://bu-ist
 
 After each major release, one version is maintained until everyone can be upgraded to the next major version. Currently, these versions are maintained for the purposes of hotfixes:
 
-- 0.1.0
-- 1.0.4
-- Current
+* 0.1.0
+* 1.0.4
+* Current

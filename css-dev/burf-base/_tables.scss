@@ -1,0 +1,185 @@
+// =================================================================
+// Tables Settings
+// =================================================================
+
+/// Base margin for the table tag.
+/// @group 09-content
+/// @access public
+/// @since 1.0.0
+
+$table-margin:                             $margin 0 !default;
+
+/// Base padding for the table.
+/// @group 09-content
+/// @access public
+/// @since 1.0.0
+
+$table-padding:                            0.5em 1em !default;
+
+/// Default border for tables.
+/// @group 09-content
+/// @access public
+/// @since 1.0.0
+
+$table-border:                             $border !default;
+
+/// Default color for table headings.
+/// @group 09-content
+/// @access public
+/// @since 1.0.0
+
+$color-table-head:                         $color-heading !default;
+
+/// Default background for table headings.
+/// @group 09-content
+/// @access public
+/// @since 1.0.0
+
+$table-head-bg:                            $color-grayscale-e !default;
+
+/// Default padding for table captions.
+/// @group 09-content
+/// @access public
+/// @since 1.0.0
+
+$table-caption-padding:                    0 0 10px !default;
+
+/// Default color for table captions.
+/// @group 09-content
+/// @access public
+/// @since 1.0.0
+
+$color-table-caption:                      $color-grayscale-9 !default;
+
+/// Default background for striped table backgrounds.
+/// @group 09-content
+/// @access public
+/// @since 1.0.0
+
+$table-stripes:                            $color-grayscale-f5 !default;
+
+// =================================================================
+// Tables Styles
+// =================================================================
+
+/// Controls base styling for tables.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+table {
+	@extend %font-size-secondary;
+	border: $table-border;
+	border-collapse: collapse;
+	empty-cells: show;
+	margin: $table-margin;
+	width: 100%;
+
+	caption {
+		color: $color-table-caption;
+		font-style: italic;
+		padding: $table-caption-padding;
+		text-align: center;
+	}
+
+	td,
+	th {
+		border-left: $table-border;
+		font-size: inherit;
+		margin: 0;
+		overflow: visible; // to make ths where the title is really long work
+		padding: $table-padding;
+
+		&:first-child {
+			border-left-width: 0;
+		}
+
+		&[class*="col-"] {
+			display: table-cell;
+			float: none;
+		}
+	}
+
+	th {
+		border-bottom: $table-border;
+	}
+
+	td {
+		background-color: transparent;
+		vertical-align: top;
+	}
+
+	thead {
+		background: $table-head-bg;
+		color: $color-table-head;
+		text-align: left;
+		vertical-align: bottom;
+	}
+
+	col[class*="col-"] { // Despite what CodeClimate says this is necessary.
+		display: table-column;
+		float: none;
+	}
+}
+
+/// Adds stripes to tables.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+.table-striped tr:nth-child(2n-1),
+.u-odd {
+	td {
+		background: $table-stripes;
+	}
+}
+
+// Bordered tables
+// -----------------------------------------------------------------
+
+/// Adds both horizontal and vertical borders.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+.table-bordered {
+	td {
+		border-bottom: $table-border;
+	}
+}
+
+// Horizontal tables
+// -----------------------------------------------------------------
+
+/// Switches the border on tables from vertical to horizontal.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+.table-horizontal {
+	td,
+	th {
+		border: 0;
+		border-bottom: $table-border;
+	}
+}
+
+// Removes the border at the bottom of tables to avoid overlap
+
+.table-bordered,
+.table-horizontal,
+.section-row {
+	tbody > {
+		tr:last-child {
+			td {
+				border-bottom-width: 0;
+			}
+		}
+	}
+}
+
+// BU Table Sorter override
+
+table.sortable thead tr th.header {
+	border: $table-border;
+}

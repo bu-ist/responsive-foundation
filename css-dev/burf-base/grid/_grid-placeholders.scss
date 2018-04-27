@@ -1,0 +1,243 @@
+// =================================================================
+// Grid Styles and Placeholders
+// =================================================================
+
+/// Base styles for all wrapper elements.
+/// @group global
+/// @access public
+/// @since 1.2.0
+
+%wrapper-styles {
+	overflow: hidden;
+}
+
+/// Base styles for all container elements.
+/// You may wish to extend this on a page where you can't use
+/// `.content-container` for some reason - such as on a landing
+/// page where you are overriding that class to use the full width
+/// of the screen.
+/// @group global
+/// @access public
+/// @since 1.2.0
+
+%container-styles {
+	@extend %clearfix;
+	margin: 0 auto;
+	padding: $grid-container-padding;
+	width: 100%;
+
+	@include breakpoint( $sm ) {
+		max-width: $container-sm;
+		padding: $grid-container-padding-desktop;
+	}
+
+	@include breakpoint( $md ) {
+		max-width: $container-md;
+	}
+
+	@include breakpoint( $lg ) {
+		max-width: $container-lg;
+	}
+}
+
+/// Base styles for containers that hold grid elements.
+/// A negative margin is included to counteract the grid item
+/// margins.
+/// @group global
+/// @access public
+/// @since 1.2.0
+
+%row-styles {
+	@extend %clearfix;
+	margin: $grid-row-margin;
+
+	@include breakpoint( $sm ) {
+		margin: $grid-row-margin-desktop;
+	}
+}
+
+/// Base styles for children of a row.
+/// Usually used for grid items.
+/// @group global
+/// @access public
+/// @since 1.2.0
+
+%row-child-styles {
+	padding-left: $grid-column-padding;
+	padding-right: $grid-column-padding;
+}
+
+/// A backwards-compatible equal heights solution for
+/// older browsers.
+/// Base styles for a container whose children should
+/// be equal heights.
+/// @group utilities
+/// @access public
+/// @since 1.2.0
+
+%equal-height-parent-backcompat {
+	overflow: hidden;
+}
+
+/// A backwards-compatible equal heights solution for
+/// older browsers.
+/// Base styles for children of the equal-height-parent.
+/// These styles will make children appear to be equal heights,
+/// even if the actual content is different heights.
+/// If you need padding on the bottom of the child items, you might have to adjust
+/// the margin-bottom to be lower.
+/// @group utilities
+/// @access public
+/// @since 1.2.0
+
+%equal-height-child-backcompat {
+	@include breakpoint( $md ) {
+		margin-bottom: -99999px;
+		padding-bottom: 99999px;
+	}
+}
+
+/// A newer version of equal heights that takes advantage
+/// of flexbox. Use this on your container to make all
+/// children equal heights. Plays nice with the grid.
+/// Check https://caniuse.com/#search=flexbox for browser
+/// support. You may want to provide a min-height on a
+/// case by case basis as a fallback.
+/// @group utilities
+/// @access public
+/// @since 2.0.0
+
+%equal-heights {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/// An extend for base grid styles.
+/// @group utilities
+/// @access private
+/// @since 2.0.0
+
+%col-base {
+	@include col-base;
+}
+
+/// An extend for base grid styles using the margin feature.
+/// @group utilities
+/// @access private
+/// @since 2.0.0
+
+%col-margin-base {
+	@include col-margin-base;
+}
+
+/// Styles for parents of margin grid items.
+/// Also available in breakpoint flavors,
+/// just like the grid classes - for example,
+/// `.col-md-margin-parent`.
+/// @group grid
+/// @access public
+/// @since 2.0.0
+
+.col-margin-parent,
+%col-margin-parent {
+	margin-left: -$grid-margin-width#{"%"};
+	margin-right: 0;
+}
+
+/// A private map to hold grid widths while
+/// calculating the grid.
+/// @group grid
+/// @access private
+/// @since 2.0.0
+
+$grid-widths: ();
+
+/// A private map to hold grid widths for margins
+/// while calculating the grid.
+/// @group grid
+/// @access private
+/// @since 2.0.0
+
+$grid-widths-margins: ();
+
+@for $i from 0 through $grid-number-columns {
+	// Determine current base width
+	$percentage: ( $i / $grid-number-columns ) * 100;
+
+	@if ( $percentage <= 0 ) {
+		$percentage: initial;
+	}
+
+	// Create a list of widths for grid-build to use later
+	$grid-widths: append( $grid-widths, $percentage, comma );
+
+	$percentage-margins: ( ( $i / $grid-number-columns ) * 100 ) - $grid-margin-width;
+
+	@if ( $percentage-margins <= 0 ) {
+		$percentage-margins: initial;
+	}
+
+	$grid-widths-margins: append( $grid-widths-margins, $percentage-margins, comma );
+
+	// Create basic grid classes, no breakpoints
+	// Example output: %col-1
+
+	@if ( $i != 0 ) {
+		%col-#{$i} {
+			@extend %col-base;
+			@include grid-build( width, $percentage );
+		}
+	}
+}
+
+@for $i from 0 to length( $grid-widths ) {
+	@each $feature, $supported in $grid-supports {
+		@if ( $supported ) {
+			%col-#{$feature}-#{$i} {
+				@extend %col-#{$feature}-base !optional;
+				@extend %col-base;
+				@include col( '', $feature, $i, false );
+			}
+		}
+	}
+}
+
+@each $breakpoint, $value in $grid-breakpoints {
+	@include breakpoint( $value, false ) {
+		%col-#{$breakpoint}-margin-base {
+			@include col-margin-base;
+		}
+
+		.col-#{$breakpoint}-margin-parent,
+		%col-#{$breakpoint}-margin-parent {
+			margin-left: -$grid-margin-width#{"%"};
+		}
+
+		@for $i from 0 to length( $grid-widths ) {
+			%col-#{$breakpoint}-#{$i} {
+				@include col-base;
+				@include grid-styles( '', $i );
+			}
+		}
+
+		@each $feature, $supported in $grid-supports {
+			@if ( $supported ) {
+				@for $i from 0 to length( $grid-widths ) {
+					%col-#{$breakpoint}-#{$feature}-#{$i} {
+						@include grid-styles( $feature, $i );
+					}
+				}
+			}
+		}
+	}
+
+	@each $feature, $supported in $grid-supports {
+		@if ( $supported ) {
+			@for $i from 0 to length( $grid-widths ) {
+				%col-#{$breakpoint}-#{$feature}-#{$i} {
+					@extend %col-#{$breakpoint}-#{$feature}-base !optional;
+				}
+			}
+		}
+	}
+}

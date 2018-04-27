@@ -1,0 +1,491 @@
+// =================================================================
+// Footer Settings
+// =================================================================
+
+/// Controls the spacing at the bottom of the footer widget area.
+/// @group footer
+/// @access public
+/// @since 1.0.0
+
+$footbar-padding-bottom:                    $padding !default;
+
+/// Controls the background color of the footer widget area.
+/// @group footer
+/// @access public
+/// @since 1.0.0
+
+$color-footbar-bg:                         $color-grayscale-f5 !default;
+
+/// Controls the border style of the footer widget area.
+/// @group footer
+/// @access public
+/// @since 1.0.0
+
+$border-footbar:                           $border !default;
+
+/// Controls the background of the footer widget container.
+/// @group footer
+/// @access public
+/// @since 1.0.0
+
+$color-footbar-container-bg:               $color-footbar-bg !default;
+
+/// Controls the color of links in widgets in the footbar.
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+$color-footbar-widget-link:                $color-link !default;
+
+/// Controls the color of links in widgets in the footbar when you hover.
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+$color-footbar-widget-link-hover:          $color-link !default;
+
+/// Controls the padding of the site footer.
+/// @group footer
+/// @access public
+/// @since 1.0.0
+
+$padding-site-footer:                       $padding $padding $padding-small !default;
+
+/// Controls the background color of the site footer.
+/// @group footer
+/// @access public
+/// @since 1.0.0
+
+$color-site-footer-bg:                      $color-grayscale-0 !default;
+
+/// Controls the color of text in the site footer.
+/// @group footer
+/// @access public
+/// @since 1.0.0
+
+$color-site-footer:								 $color-grayscale-f !default;
+
+/// Controls the color of links in the site footer.
+/// @group footer
+/// @access public
+/// @since 1.0.0
+
+$color-site-footer-link:							 $color-grayscale-8 !default;
+
+/// Controls the color of links when you hover in the site footer.
+/// @group footer
+/// @access public
+/// @since 1.0.0
+
+$color-site-footer-link-hover:					 $color-grayscale-f !default;
+
+/// Sets the number of supported widgets in the footbar.
+/// Matches the number of columns in the theme by default.
+/// @group 05-grid
+/// @access public
+/// @since 1.2.0
+
+$number-widgets-footbar: 						 $number-columns !default;
+
+// =================================================================
+// Footer Styles
+// =================================================================
+
+/// Controls styling for the footbar.
+/// @group 08-layout
+/// @access public
+/// @since 1.0.0
+
+.footbar {
+	@extend %clearfix;
+	background: $color-footbar-bg;
+	border-top: $border-footbar;
+	padding-bottom: $footbar-padding-bottom;
+	width: 100%;
+
+	a {
+		color: $color-footbar-widget-link;
+
+		&:hover,
+		&:focus {
+			color: $color-footbar-widget-link-hover;
+		}
+	}
+}
+
+/// The number of grid columns a widget should take up, in the footbar.
+/// @group 08-layout
+/// @access private
+/// @since 1.0.0
+
+$_footbar-widget-width: $grid-number-columns / $number-widgets-footbar;
+
+/// Controls styling for the footbar container and width of widgets inside.
+/// Often used to put a maximum width on the footbar without affecting the background.
+/// @group 08-layout
+/// @access public
+/// @since 1.0.0
+
+.footbar-container {
+	@extend %container-styles;
+	background: $color-footbar-container-bg;
+
+	@include breakpoint( $md ) {
+		display: grid;
+		grid-gap: $margin-large;
+		grid-template-columns: repeat( #{$number-widgets-footbar}, 1fr );
+		padding: $grid-container-padding-desktop;
+	}
+
+	.widget {
+		@include breakpoint( $md ) {
+			margin-top: 0;
+			padding: 0;
+
+			&:first-child,
+			&:nth-child(#{$number-widgets-footbar}n+1) {
+				clear: left;
+				margin-left: 0;
+			}
+		}
+
+		.no-csscolumns & { // TODO: Change to no-cssgrid when Modernizr adds build support
+			@extend %col-md-margin-#{$_footbar-widget-width};
+		}
+	}
+}
+
+// Footer
+// -----------------------------------------------------------------
+
+/// Affects the site footer background color as well as any other areas which
+/// do not have a background color.
+/// @group footer
+/// @access public
+/// @since 1.0.0
+
+$color-body-bg:                            $color-grayscale-0 !default;
+
+body {
+	background-color: $color-body-bg;
+}
+
+/// Controls styling for the site footer - branding, address, and social links.
+/// @group 08-layout
+/// @access public
+/// @since 1.0.0
+
+.site-footer {
+	@extend %font-size-secondary;
+	@extend %clearfix;
+	background: $color-site-footer-bg;
+	clear: both;
+	color: $color-grayscale-8;
+	display: block;
+	font-family: $font-family-sans-serif;
+	padding: $padding-site-footer;
+	position: relative;
+	width: 100%;
+
+	a {
+		color: $color-site-footer-link;
+
+		&:hover {
+			color: $color-site-footer-link-hover;
+		}
+	}
+
+	li {
+		line-height: 1.4;
+		margin: 0 0 0.3em;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@extend %font-size-secondary;
+		color: $color-site-footer;
+		font-family: $font-family-sans-serif;
+		margin: 0 0 0.3em;
+	}
+}
+
+/// A helper placeholder for listing links in an inline style.
+/// @group 08-layout
+/// @access private
+/// @since 1.0.0
+
+%_u-list-inlineLinks {
+	display: inline-block;
+	margin-right: 20px;
+	padding: 0;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+/// Styles the social media links menu in the footer based on
+/// the content around it.
+/// @group 08-layout
+/// @access public
+/// @since 1.0.0
+
+.site-footer-social {
+	@extend %col-sm-half;
+	text-align: center;
+
+	@include breakpoint( $sm ) {
+		float: right;
+		text-align: right;
+	}
+
+	.has-branding &,
+	.has-footer-info & {
+		@include breakpoint( $sm ) {
+			text-align: left;
+		}
+	}
+
+	li {
+		@extend %_u-list-inlineLinks;
+	}
+
+	a {
+		@include transition( color 200ms ease-in-out 0s );
+		font-size: $font-size-icon;
+	}
+}
+
+/// Styles social links in menus.
+/// @group widgets
+/// @access public
+/// @since 2.0.0
+
+.menu-item {
+	[href*="dropbox.com"] {
+		@extend %icon-dropbox;
+	}
+
+	[href*="facebook.com"] {
+		@extend %icon-facebook;
+	}
+
+	[href*="flickr.com"] {
+		@extend %icon-flickr;
+	}
+
+	[href*="foursquare.com"] {
+		@extend %icon-foursquare;
+	}
+
+	[href*="github.com"] {
+		@extend %icon-github;
+	}
+
+	[href*="instagram.com"] {
+		@extend %icon-instagram;
+	}
+
+	[href*="kickstarter.com"] {
+		@extend %icon-kickstarter;
+	}
+
+	[href*="linkedin.com"] {
+		@extend %icon-linkedin;
+	}
+
+	[href*="pinterest.com"] {
+		@extend %icon-pinterest;
+	}
+
+	[href*="plus.google.com"] {
+		@extend %icon-googleplus;
+	}
+
+	[href*="getpocket.com"] {
+		@extend %icon-pocket;
+	}
+
+	[href*="reddit.com"] {
+		@extend %icon-reddit;
+	}
+
+	[href*="tumblr.com"] {
+		@extend %icon-tumblr;
+	}
+
+	[href*="twitter.com"] {
+		@extend %icon-twitter;
+	}
+
+	[href*="vimeo.com"] {
+		@extend %icon-vimeo;
+	}
+
+	[href*="vine.co"] {
+		@extend %icon-vine;
+	}
+
+	[href*="youtube.com"] {
+		@extend %icon-youtube;
+	}
+}
+
+/// Styles the container which holds branding assets in the site footer.
+/// @group 08-layout
+/// @access public
+/// @since 2.0.0
+
+.site-footer-brand-assets {
+	@extend %col-sm-half;
+	text-align: center;
+
+	@include breakpoint( $sm ) {
+		text-align: left;
+	}
+
+	.has-branding & {
+		@extend %col-md-two-third;
+	}
+
+	a {
+		display: block;
+		margin: 0 auto $margin;
+
+		@include breakpoint( $xs ) {
+			display: inline-block;
+			height: 50px;
+			margin-right: $margin;
+			vertical-align: middle;
+		}
+
+		@include breakpoint( $sm ) {
+			float: left;
+			text-align: left;
+		}
+	}
+}
+
+/// Styles the disclaimer, which shows in the site footer.
+/// @group 08-layout
+/// @access public
+/// @since 1.0.0
+
+.disclaimer {
+	line-height: 50px;
+}
+
+/// Styles the container which holds menus (footer links and social) in the site footer
+/// based on the content around it.
+/// @group 08-layout
+/// @access public
+/// @since 2.0.0
+
+.site-footer-menus {
+	clear: both;
+
+	.has-footer-info & {
+		@extend %col-sm-half;
+		clear: none;
+
+		@include breakpoint( $sm ) {
+			float: right;
+		}
+	}
+
+	.has-branding & {
+		@extend %col-sm-half;
+		@extend %col-md-third;
+		clear: none;
+
+		@include breakpoint( $sm ) {
+			float: right;
+		}
+	}
+}
+
+/// Styles the container which holds footer links
+/// based on the content around it.
+/// @group 08-layout
+/// @access public
+/// @since 1.0.0
+
+.site-footer-links {
+	@extend %col-sm-half;
+	margin-bottom: $margin;
+	text-align: center;
+
+	@include breakpoint( $sm ) {
+		text-align: left;
+	}
+
+	li {
+		@extend %_u-list-inlineLinks;
+
+		.has-branding & {
+			display: block;
+		}
+	}
+}
+
+/// Styles the container which holds footer information
+/// based on the content around it.
+/// Note: this is slated to be controlled by the branding plugin
+/// in a future release.
+/// @group 08-layout
+/// @access public
+/// @since 1.0.0
+
+.site-footer-info {
+	clear: both;
+	display: block;
+	margin-bottom: $margin;
+
+	@include breakpoint( $sm ) {
+		padding-right: $padding;
+	}
+
+	.brand-masterplate + & {
+		@include breakpoint( $sm ) {
+			clear: none;
+			float: left;
+			max-width: 60%;
+		}
+
+		@include breakpoint( $md ) {
+			max-width: 75%;
+		}
+	}
+
+	.brand-bumclogo + & {
+		@include breakpoint( $md ) {
+			clear: none;
+			float: left;
+			max-width: 50%;
+		}
+
+		@include breakpoint( $lg ) {
+			max-width: 65%;
+		}
+	}
+
+	.site-footer-disclaimer + & {
+		@include breakpoint( $md ) {
+			clear: none;
+			float: left;
+			max-width: 33%;
+		}
+
+		@include breakpoint( $lg ) {
+			max-width: 50%;
+		}
+	}
+}

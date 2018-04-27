@@ -1,0 +1,201 @@
+// =================================================================
+// Widget Settings
+// =================================================================
+
+/// Controls the spacing between widgets in the sidebar.
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+$widget-margin-bottom:                      $margin !default;
+
+/// Controls the font family used for the widget title.
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+$font-family-widget-title:                  $font-family-sans-serif !default;
+
+/// Controls the border style used on the widget title.
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+$border-widget-title:                       $border !default;
+
+/// Controls the border width used on the widget title.
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+$border-width-widget-title:                 0 0 4px 0 !default;
+
+/// Controls the color of the widget title.
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+$color-widget-title:                        $color-grayscale-0 !default;
+
+/// Controls the shape which shows after the widget title if it is a link.
+/// By default, this is set to be an arrow.
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+$widget-title-link-after:                   " →" !default;
+
+/// Controls the color of the shape which shows after the widget title
+/// if it is a link.
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+$color-widget-title-link-after:             currentColor !default;
+
+/// Controls the color of the shape which shows after the widget title
+/// when you hover.
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+$color-widget-title-link-after-hover:       $color-grayscale-0 !default;
+
+/// Controls the font family used for headings in widget content.
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+$font-family-widget-heading:                $font-family-sans-serif !default;
+
+/// Controls the color of links in the widget content.
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+$color-widget-link:                        $color-link !default;
+
+/// Controls the color of links when you hover in the widget content.
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+$color-widget-link-hover:                  $color-link !default;
+
+/// Controls the style of border used between items in widgets which use a
+/// list format, such as content navigation and the calendar widget.
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+$border-widget-list:                       $border !default;
+
+// =================================================================
+// Widget Styles
+// =================================================================
+
+// Widget contents:
+
+//	1. Basic Widgets
+//	2. BU Posts
+//	3. Content Nav
+//	4. Calendar
+
+// -----------------------------------------------------------------
+
+// Basic Widgets
+// -----------------------------------------------------------------
+
+/// Handles global widget styling.
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+.widget {
+	@extend %col-full;
+	@extend %font-size-secondary;
+	margin-bottom: $widget-margin-bottom;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: $font-family-widget-heading;
+	}
+
+	a {
+		color: $color-widget-link;
+
+		&:hover,
+		&:focus {
+			color: $color-widget-link-hover;
+		}
+	}
+
+	ul {
+		list-style: none;
+		list-style-image: none;
+	}
+}
+
+/// Handles title styles for all widgets.
+/// @group 10-widgets
+/// @access public
+/// @since 1.0.0
+
+.widget-title {
+	border: $border-widget-title;
+	border-width: $border-width-widget-title;
+	color: $color-widget-title;
+	font-family: $font-family-widget-title;
+	padding: 0 0 4px;
+
+	a {
+		color: inherit;
+		text-decoration: none;
+
+		&::after {
+			color: $color-widget-title-link-after;
+			content: $widget-title-link-after;
+		}
+
+		&:hover::after {
+			color: $color-widget-title-link-after-hover;
+		}
+	}
+}
+
+/// Styles the blog list in the blogroll widget.
+/// @group 10-widgets
+/// @access public
+/// @since 2.0.0
+
+.blogroll {
+	padding: 0;
+}
+
+// Content Nav
+// -----------------------------------------------------------------
+
+/// Handles styling for archive and link widgets.
+/// @group 10-widgets
+/// @access public
+/// @since 2.0.0
+
+.widget_links,
+.widget_archive {
+	li {
+		border-top: $border-widget-list;
+		padding: $padding-small 0;
+
+		&:first-child {
+			border: 0;
+		}
+	}
+}

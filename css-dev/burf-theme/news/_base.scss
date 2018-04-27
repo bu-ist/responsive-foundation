@@ -1,0 +1,45 @@
+// =================================================================
+// Templates
+// =================================================================
+
+/// Handles styling for narrow content container pages.
+/// Do not override this class. Instead, add or remove
+/// templates from the narrow content container PHP filter
+/// in your theme.
+/// @group 08-layout
+/// @access public
+/// @since 2.0.0
+
+.content-container-narrow {
+	@extend %container-styles;
+	max-width: $container-sm;
+}
+
+/// Handles styling for the 404 page.
+/// @group 08-layout
+/// @access public
+/// @since 2.0.0
+
+.error-404 {
+	left: 0;
+	width: 100%;
+
+	#quicksearch {
+		background: transparent !important; // required to override Responsive layout styles
+		border: 0;
+		display: block;
+		font-size: 16.5px;
+		margin: $margin-large 0;
+		max-width: 500px;
+		padding: 0;
+		position: static;
+
+		fieldset {
+			padding: 0;
+		}
+
+		select {
+			display: none;
+		}
+	}
+}
