@@ -34,9 +34,9 @@ module.exports = function(grunt) {
 					},
 					plugins: [
 						{
-						module: "bs-html-injector",
+						module: 'bs-html-injector',
 							options: {
-								files: docsVersionFilePath + "/*.html"
+								files: docsVersionFilePath + '/*.html'
 							}
 						}
 					]
