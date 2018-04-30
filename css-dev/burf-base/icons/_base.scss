@@ -35,7 +35,7 @@ $print-icon-classes:                 false !default;
 /// and can't use the built-in icons because the content is different.
 /// This should go on your base element. The complimentary placeholder,
 /// `%icon`, needs to go on a `:before` or `:after` underneath.
-/// @group icons
+/// @group 03-icons
 /// @access public
 /// @since 1.2.0
 
@@ -49,7 +49,7 @@ $print-icon-classes:                 false !default;
 /// font library and can't use the built-in icons because the content is different.
 /// You will also need the %icon-base placeholder on your hoverable element if you
 /// need compatibility before IE9.
-/// @group icons
+/// @group 03-icons
 /// @access public
 /// @since 1.2.0
 

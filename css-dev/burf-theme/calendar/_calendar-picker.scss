@@ -4,7 +4,7 @@
 
 /// Controls the font used in the calendar picker in the sidebar
 /// of the calendar listing template.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 1.0.0
 
@@ -12,7 +12,7 @@ $font-family-calendar-month-caption:         $font-family-sans-serif !default;
 
 /// Controls the color of the selected month in the calendar picker
 /// in the sidebar of the calendar listing template.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 1.0.0
 
@@ -20,7 +20,7 @@ $color-calendar-month-caption:              $color-grayscale-7 !default;
 
 /// Controls the background of day cells in the calendar picker
 /// in the sidebar of the calendar listing template.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 1.0.0
 
@@ -28,7 +28,7 @@ $color-calendar-month-th-bg:                $color-grayscale-e !default;
 
 /// Controls the color of text in the day cells in the calendar picker
 /// in the sidebar of the calendar listing template.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 1.0.0
 
@@ -36,7 +36,7 @@ $color-calendar-month-th:                   $color-grayscale-0 !default;
 
 /// Controls the spacing of day cells in the calendar picker
 /// in the sidebar of the calendar listing template.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 1.0.0
 
@@ -44,7 +44,7 @@ $padding-calendar-month-cell:               0.25em !default;
 
 /// Controls the font family of day cells in the calendar picker
 /// in the sidebar of the calendar listing template.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 1.0.0
 
@@ -52,7 +52,7 @@ $font-family-calendar-month-cell:            $font-family-sans-serif !default;
 
 /// Controls the color of links in the calendar picker
 /// in the sidebar of the calendar listing template.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 1.0.0
 
@@ -60,7 +60,7 @@ $color-calendar-month-link:             $color-link !default;
 
 /// Controls the color of links when you hover in the calendar picker
 /// in the sidebar of the calendar listing template.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 1.0.0
 
@@ -69,7 +69,7 @@ $color-calendar-month-link-hover:       $color-link !default;
 /// Controls the background of links in the calendar picker
 /// for days that are not in the current month (previous/next month)
 /// in the sidebar of the calendar listing template.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 1.0.0
 
@@ -78,7 +78,7 @@ $color-calendar-month-link-out-bg:       $color-grayscale-f5 !default;
 /// Controls the color of links in the calendar picker
 /// for days that are not in the current month (previous/next month)
 /// in the sidebar of the calendar listing template.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 1.0.0
 
@@ -86,7 +86,7 @@ $color-calendar-month-link-out:          $color-grayscale-9 !default;
 
 /// Controls the background of the current day's link in the calendar picker
 /// in the sidebar of the calendar listing template.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 1.0.0
 
@@ -94,7 +94,7 @@ $color-calendar-month-link-today-bg:     $color-grayscale-e !default;
 
 /// Controls the color of the current day's link in the calendar picker
 /// in the sidebar of the calendar listing template.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 1.0.0
 
@@ -105,7 +105,7 @@ $color-calendar-month-link-today:        $color-grayscale-0 !default;
 // =================================================================
 
 /// Styles the BU Calendar list page date picker.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 
@@ -166,7 +166,7 @@ $color-calendar-month-link-today:        $color-grayscale-0 !default;
 }
 
 /// Styles the BU Calendar list page topics widget.
-/// @group calendar
+/// @group 13-calendar
 /// @access public
 /// @since 2.0.0
 

@@ -3,56 +3,56 @@
 // =================================================================
 
 /// Base margin for the table tag.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 1.0.0
 
 $table-margin:                             $margin 0 !default;
 
 /// Base padding for the table.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 1.0.0
 
 $table-padding:                            0.5em 1em !default;
 
 /// Default border for tables.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 1.0.0
 
 $table-border:                             $border !default;
 
 /// Default color for table headings.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 1.0.0
 
 $color-table-head:                         $color-heading !default;
 
 /// Default background for table headings.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 1.0.0
 
 $table-head-bg:                            $color-grayscale-e !default;
 
 /// Default padding for table captions.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 1.0.0
 
 $table-caption-padding:                    0 0 10px !default;
 
 /// Default color for table captions.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 1.0.0
 
 $color-table-caption:                      $color-grayscale-9 !default;
 
 /// Default background for striped table backgrounds.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 1.0.0
 
@@ -63,7 +63,7 @@ $table-stripes:                            $color-grayscale-f5 !default;
 // =================================================================
 
 /// Controls base styling for tables.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -123,7 +123,7 @@ table {
 }
 
 /// Adds stripes to tables.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -138,7 +138,7 @@ table {
 // -----------------------------------------------------------------
 
 /// Adds both horizontal and vertical borders.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -152,7 +152,7 @@ table {
 // -----------------------------------------------------------------
 
 /// Switches the border on tables from vertical to horizontal.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
