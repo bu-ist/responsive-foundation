@@ -1,6 +1,28 @@
 {
   "name": "responsive-foundation",
   "version": "2.0.0",
+  "homepage": "https://github.com/bu-ist/responsive-foundation",
+  "description": "A front-end framework for developing responsive sites at Boston University.",
+  "authors": [
+    "Mike Burns <mgburns@bu.edu>",
+    "Scott Dasse <sdasse@bu.edu>",
+    "Andy Rader <jarader@bu.edu>",
+    "Matt Fredenburg <malakhi@bu.edu>",
+    "Steve Rudolfi <srudolfi@bu.edu>",
+    "Eveleen Sung <eksung@bu.edu>",
+    "Inder Singh <isingh@bu.edu>",
+    "Ashley Kolodziej <kolodz10@bu.edu>",
+    "Jon Desroisers <jondes@bu.edu>",
+    "Tom Dodson <tdodson@bu.edu>"
+  ],
+  "keywords": [
+    "responsive",
+    "bu",
+    "foundation",
+    "bootstrap",
+    "framework"
+  ],
+  "private": true,
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-bower-task": "^0.4.0",
@@ -12,6 +34,8 @@
     "grunt-gh-pages": "^0.9.1",
     "grunt-sassdoc": "^2.0.3",
     "grunt-version": "^0.3.0",
+    "mathsass": "^0.10.1",
+    "normalize-scss": "^7.0.1",
     "sassdoc-theme-budocs": "git+ssh://git@github.com/ashleykolodziej/sassdoc-theme-budocs.git#master"
   }
 }
