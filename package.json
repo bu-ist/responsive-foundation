@@ -23,6 +23,10 @@
     "framework"
   ],
   "private": true,
+  "dependencies": {
+    "mathsass": "^0.10.1",
+    "normalize-scss": "^7.0.1",
+  },
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-bower-task": "^0.4.0",
@@ -34,8 +38,6 @@
     "grunt-gh-pages": "^0.9.1",
     "grunt-sassdoc": "^2.0.3",
     "grunt-version": "^0.3.0",
-    "mathsass": "^0.10.1",
-    "normalize-scss": "^7.0.1",
     "sassdoc-theme-budocs": "git+ssh://git@github.com/ashleykolodziej/sassdoc-theme-budocs.git#master"
   }
 }
