@@ -116,3 +116,102 @@ $border-coursefeed:               $border !default;
 		content: "Prerequisites: ";
 	}
 }
+
+
+@font-face {
+  font-family: 'bu-hub-iconstyles';
+  src: url('icons/bu-hub-webfont.eot');
+  src: url('icons/bu-hub-webfont.eot?#iefix') format("embedded-opentype"), url('icons/bu-hub-webfont.woff2') format("woff2"), url('icons/bu-hub-webfont.woff') format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/// BU Hub Indicator Wrapper
+/// Styles for BU Hub Areas Indicator
+/// @group 09-content
+/// @access public
+/// @since 2.0.0
+
+.cf-hub-ind {
+  margin-top: 5px;
+  max-width: 305px;
+  border-bottom: 1px solid #ccc;
+}
+
+.cf-hub-head {
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.bu-hub-iconstyles {
+  display: inline-block;
+  height: 25px;
+  width: 64px;
+  overflow: hidden;
+  margin: 5px 0px;
+  &:before {
+    display: inline-block;
+    height: 25px;
+    width: 90px;
+    font-family: "bu-hub-iconstyles";
+    font-size: 65px;
+    overflow: hidden;
+    content: attr(data-icon);
+    speak: none;
+    color: #555555;
+    line-height: 0px;
+  }
+}
+
+.icon-buhub:before {
+  content: "\e001";
+}
+
+.icon-questionmark:before {
+  line-height: 10px;
+  margin-left: -2px;
+  font-size: 32px;
+  content: "\e002";
+}
+
+.icon-buhub:before, .icon-questionmark:before {
+  a:hover & {
+    color: #767676;
+  }
+}
+
+.cf-hub-offerings {
+  display: block;
+  list-style-type: none;
+  margin: 5px 0px 10px 0px;
+  font-size: 12px;
+  font-weight: 300;
+  font-family: "Benton-Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #767676;
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+/* Responsi Theme Hub Indicator Overrides */
+
+.cf-course {
+  clear: right;
+}
+
+.cf-course-card .cf-hub-ind {
+  float: unset;
+  display: block;
+  border-bottom: initial;
+  .cf-hub-offerings {
+    padding: 0px;
+    margin: -5px 0px 10px;
+  }
+}
+
+@media (min-width: 525px) {
+  .cf-course-card .cf-hub-ind {
+    float: right;
+  }
+}
