@@ -25,7 +25,7 @@
   "private": true,
   "bundledDependencies": {
     "mathsass": "^0.10.1",
-    "normalize-scss": "^7.0.1",
+    "normalize-scss": "^7.0.1"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
