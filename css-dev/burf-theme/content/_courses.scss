@@ -20,9 +20,9 @@ $border-coursefeed:							 $border !default;
 
 .cf-course {
 	border-top: $border-coursefeed;
+	clear: right;
 	margin-top: $margin;
 	padding-top: $padding;
-	clear: right;
 
 	&:first-child {
 		border: 0;
