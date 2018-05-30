@@ -82,7 +82,7 @@
 /// @since 2.0.0
 
 %icon-buhub {
-	@include icon( "buhub" );
+	@include icon( 'buhub' );
 }
 
 /// BU Hub Question Mark Icon
@@ -95,5 +95,5 @@
 /// @since 2.0.0
 
 %icon-questionmark {
-	@include icon( "questionmark" );
+	@include icon( 'questionmark' );
 }

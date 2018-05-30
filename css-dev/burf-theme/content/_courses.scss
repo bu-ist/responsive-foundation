@@ -177,26 +177,15 @@ $border-coursefeed:							 $border !default;
 		}
 	}
 
-}
+	&.icon-buhub::before {
+		margin-right: 0;
+		width: 70px;
+	}
 
-/// BU Hub Indicator Title Logo Webfont Icon
-/// @group 09-content
-/// @access public
-/// @since 2.0.0
-
-.bu-hub-iconstyles.icon-buhub::before {
-	margin-right: 0;
-	width: 70px;
-}
-
-/// BU Hub Indicator Title Question Mark Webfont Icon
-/// @group 09-content
-/// @access public
-/// @since 2.0.0
-
-.bu-hub-iconstyles.icon-questionmark::before {
-	font-size: 16px;
-	line-height: 17px;
+	&.icon-questionmark::before {
+		font-size: 16px;
+		line-height: 17px;
+	}
 }
 
 /// BU Hub Indicator Area <ul> List
