@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.1
+
+* Adds support for BU Hub Indicator within Course Feeds.
+
 ## 2.0.0
 
 * Support for typography mixins

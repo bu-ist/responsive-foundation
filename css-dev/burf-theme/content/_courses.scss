@@ -7,7 +7,7 @@
 /// @access public
 /// @since 2.0.0
 
-$border-coursefeed:               $border !default;
+$border-coursefeed:							 $border !default;
 
 // =================================================================
 // Course Feed Styles
@@ -20,6 +20,7 @@ $border-coursefeed:               $border !default;
 
 .cf-course {
 	border-top: $border-coursefeed;
+	clear: right;
 	margin-top: $margin;
 	padding-top: $padding;
 
@@ -114,5 +115,95 @@ $border-coursefeed:               $border !default;
 .cf-course-prereqs {
 	&:not(:empty)::before {
 		content: "Prerequisites: ";
+	}
+}
+
+// =================================================================
+// BU Hub Indicator Styles
+// =================================================================
+
+
+/// BU Hub Indicator Wrapper
+/// @group 09-content
+/// @access public
+/// @since 2.0.1
+
+.cf-hub-ind {
+	display: block;
+	float: unset;
+	margin: 0 0 20px 20px;
+	max-width: 305px;
+	width: 100%;
+
+	.cf-course-card & {
+		// This breakpoint is explicit and shouldn’t be altered.
+		@include breakpoint( 525px ) {
+			float: right;
+		}
+	}
+}
+
+/// BU Hub Indicator Title
+/// @group 09-content
+/// @access public
+/// @since 2.0.1
+
+.cf-hub-head {
+	text-decoration: none;
+}
+
+/// BU Hub Indicator Title Iconstyles
+/// @group 09-content
+/// @access public
+/// @since 2.0.1
+
+.bu-hub-iconstyles {
+	display: inline-block;
+	height: 25px;
+	margin: 5px 0;
+	overflow: hidden;
+
+	&::before {
+		color: $color-grayscale-5;
+		display: block;
+		font-size: 65px;
+		height: 25px;
+		line-height: 16px;
+		overflow: hidden;
+		width: 90px;
+
+		a:hover & {
+			color: $color-hub;
+		}
+	}
+
+	&.icon-buhub::before {
+		margin-right: 0;
+		width: 70px;
+	}
+
+	&.icon-questionmark::before {
+		font-size: 16px;
+		line-height: 17px;
+	}
+}
+
+/// BU Hub Indicator Area <ul> List
+/// @group 09-content
+/// @access public
+/// @since 2.0.1
+
+.cf-hub-offerings {
+	color: $color-hub;
+	// ! Regardless where this lives, always maintain consistent use of Benton.
+	font-family: "Benton-Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: 300;
+	list-style-type: none;
+	margin: -5px 0 10px;
+	padding: 0;
+
+	li {
+		margin-bottom: 7px;
 	}
 }
