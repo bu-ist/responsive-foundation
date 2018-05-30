@@ -49,7 +49,7 @@
 /// The radio - empty icon.
 /// @example scss - Add the radio - empty icon to a menu item
 /// .menu-item {
-///    @extend %icon-radio-empty;
+///    @extend %icon-checkbox-filled;
 /// }
 /// @group icons
 /// @access public
@@ -62,7 +62,7 @@
 /// The radio - filled icon.
 /// @example scss - Add the radio - filled icon to a menu item
 /// .menu-item {
-///    @extend %icon-radio-filled;
+///    @extend %icon-radio-empty;
 /// }
 /// @group icons
 /// @access public
@@ -70,4 +70,30 @@
 
 %icon-radio-filled {
 	@include icon( "radio-filled" );
+}
+
+/// BU Hub Wordmark Logo
+/// @example scss - Add the radio - filled icon to a menu item
+/// .menu-item {
+///    @extend %icon-buhub;
+/// }
+/// @group icons
+/// @access public
+/// @since 2.0.0
+
+%icon-buhub {
+	@include icon( "buhub" );
+}
+
+/// BU Hub Question Mark Icon
+/// @example scss - Add the radio - filled icon to a menu item
+/// .menu-item {
+///    @extend %icon-questionmark;
+/// }
+/// @group icons
+/// @access public
+/// @since 2.0.0
+
+%icon-questionmark {
+	@include icon( "questionmark" );
 }

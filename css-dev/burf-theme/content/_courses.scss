@@ -118,8 +118,12 @@ $border-coursefeed:							 $border !default;
 	}
 }
 
+// =================================================================
+// BU Hub Indicator Styles
+// =================================================================
+
+
 /// BU Hub Indicator Wrapper
-/// Styles for BU Hub Areas Indicator
 /// @group 09-content
 /// @access public
 /// @since 2.0.0
@@ -130,11 +134,28 @@ $border-coursefeed:							 $border !default;
 	margin: 0 0 20px 20px;
 	max-width: 305px;
 	width: 100%;
+
+	.cf-course-card & {
+		// This breakpoint is explicit and shouldn’t be altered.
+		@include breakpoint( 525px ) {
+			float: right;
+		}
+	}
 }
+
+/// BU Hub Indicator Title
+/// @group 09-content
+/// @access public
+/// @since 2.0.0
 
 .cf-hub-head {
 	text-decoration: none;
 }
+
+/// BU Hub Indicator Title Iconstyles
+/// @group 09-content
+/// @access public
+/// @since 2.0.0
 
 .bu-hub-iconstyles {
 	display: inline-block;
@@ -144,39 +165,48 @@ $border-coursefeed:							 $border !default;
 
 	&::before {
 		color: $color-grayscale-5;
-		content: attr( data-icon );
-		font-family: 'BU-Default-Icons';
+		display: block;
 		font-size: 65px;
 		height: 25px;
 		line-height: 16px;
 		overflow: hidden;
-		speak: none;
 		width: 90px;
+
+		a:hover & {
+			color: $color-hub;
+		}
 	}
+
 }
 
-.icon-buhub::before {
-	content: '\F700';
+/// BU Hub Indicator Title Logo Webfont Icon
+/// @group 09-content
+/// @access public
+/// @since 2.0.0
+
+.bu-hub-iconstyles.icon-buhub::before {
+	margin-right: 0;
 	width: 70px;
 }
 
-.icon-questionmark::before {
-	content: '\2753';
+/// BU Hub Indicator Title Question Mark Webfont Icon
+/// @group 09-content
+/// @access public
+/// @since 2.0.0
+
+.bu-hub-iconstyles.icon-questionmark::before {
 	font-size: 16px;
 	line-height: 17px;
 }
 
-.icon-buhub::before,
-.icon-questionmark::before {
-	display: block;
-
-	a:hover & {
-		color: $color-hub;
-	}
-}
+/// BU Hub Indicator Area <ul> List
+/// @group 09-content
+/// @access public
+/// @since 2.0.0
 
 .cf-hub-offerings {
 	color: $color-hub;
+	// ! Regardless where this lives, always maintain consistent use of Benton.
 	font-family: "Benton-Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 12px;
 	font-weight: 300;
@@ -186,11 +216,5 @@ $border-coursefeed:							 $border !default;
 
 	li {
 		margin-bottom: 7px;
-	}
-}
-
-@media ( min-width: 525px ) {
-	.cf-course-card .cf-hub-ind {
-		float: right;
 	}
 }
