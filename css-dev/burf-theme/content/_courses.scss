@@ -171,12 +171,12 @@ $border-coursefeed:							 $border !default;
 	display: block;
 
 	a:hover & {
-		color: #767676;
+		color: $color-hub;
 	}
 }
 
 .cf-hub-offerings {
-	color: #767676;
+	color: $color-hub;
 	font-family: "Benton-Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 12px;
 	font-weight: 300;
