@@ -7,7 +7,7 @@
 /// @access public
 /// @since 2.0.0
 
-$border-coursefeed:               $border !default;
+$border-coursefeed:							 $border !default;
 
 // =================================================================
 // Course Feed Styles
@@ -22,7 +22,7 @@ $border-coursefeed:               $border !default;
 	border-top: $border-coursefeed;
 	margin-top: $margin;
 	padding-top: $padding;
-  clear: right;
+	clear: right;
 
 	&:first-child {
 		border: 0;
@@ -125,69 +125,72 @@ $border-coursefeed:               $border !default;
 /// @since 2.0.0
 
 .cf-hub-ind {
-  display: block;
-  max-width: 305px;
-  width: 100%;
-  margin: 0px 0px 20px 20px;
-  float: unset;
+	display: block;
+	float: unset;
+	margin: 0 0 20px 20px;
+	max-width: 305px;
+	width: 100%;
 }
 
 .cf-hub-head {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .bu-hub-iconstyles {
-  display: inline-block;
-  height: 25px;
-  overflow: hidden;
-  margin: 5px 0px;
-  &:before {
-    height: 25px;
-    width: 90px;
-    font-family: "BU-Default-Icons";
-    font-size: 65px;
-    overflow: hidden;
-    content: attr(data-icon);
-    speak: none;
-    color: #555555;
-    line-height: 16px;
-  }
+	display: inline-block;
+	height: 25px;
+	margin: 5px 0;
+	overflow: hidden;
+
+	&::before {
+		color: $color-grayscale-5;
+		content: attr( data-icon );
+		font-family: 'BU-Default-Icons';
+		font-size: 65px;
+		height: 25px;
+		line-height: 16px;
+		overflow: hidden;
+		speak: none;
+		width: 90px;
+	}
 }
 
-.icon-buhub:before {
-  content: "\F700";
-  width: 70px;
+.icon-buhub::before {
+	content: '\F700';
+	width: 70px;
 }
 
-.icon-questionmark:before {
-  content: "\2753";
-  font-size: 16px;
-  line-height: 17px;
+.icon-questionmark::before {
+	content: '\2753';
+	font-size: 16px;
+	line-height: 17px;
 }
 
-.icon-buhub:before, .icon-questionmark:before {
-  display: block;
-  a:hover & {
-    color: #767676;
-  }
+.icon-buhub::before,
+.icon-questionmark::before {
+	display: block;
+
+	a:hover & {
+		color: #767676;
+	}
 }
 
 .cf-hub-offerings {
-  list-style-type: none;
-  margin: 5px 0px 10px 0px;
-  font-size: 12px;
-  font-weight: 300;
-  font-family: "Benton-Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
-  color: #767676;
-  padding: 0px;
-  margin: -5px 0px 10px;
-  li {
-    margin-bottom: 7px;
-  }
+	color: #767676;
+	font-family: "Benton-Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: 300;
+	list-style-type: none;
+	margin: -5px 0 10px;
+	padding: 0;
+
+	li {
+		margin-bottom: 7px;
+	}
 }
 
-@media (min-width: 525px) {
-  .cf-course-card .cf-hub-ind {
-    float: right;
-  }
+@media ( min-width: 525px ) {
+	.cf-course-card .cf-hub-ind {
+		float: right;
+	}
 }
