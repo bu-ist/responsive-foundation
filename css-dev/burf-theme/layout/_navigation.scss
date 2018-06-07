@@ -558,7 +558,8 @@ $nav-toggle-border: 4px !default;
 		}
 
 		&:hover ul,
-		&:focus ul {
+		&:focus ul,
+		&:focus-within ul {
 			left: auto;
 		}
 
