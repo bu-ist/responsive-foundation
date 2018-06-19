@@ -868,7 +868,9 @@ $_search-height: 103px;
 	}
 
 	&.nav-open {
-		.content {
+		.bu-banner,
+		.content
+		 {
 			@include breakpoint( $left-nav-desktop ) {
 				left: $width-side-nav - 60px;
 			}
