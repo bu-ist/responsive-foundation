@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+* Fixed a bug with the left hand nav layout and BU Banners [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/154)
+
 ## 2.0.1
 
 * Adds support for BU Hub Indicator within Course Feeds.
