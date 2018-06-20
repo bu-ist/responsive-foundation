@@ -357,7 +357,7 @@ $search-field-height:                          40px !default;
 	width: 75%;
 
 	@include breakpoint( $nav-desktop ) {
-		width: 85%;
+		width: 80%;
 	}
 }
 
@@ -370,7 +370,7 @@ $search-field-height:                          40px !default;
 	width: 25%;
 
 	@include breakpoint( $nav-desktop ) {
-		width: 15%;
+		width: 20%;
 	}
 }
 
