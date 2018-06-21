@@ -85,7 +85,7 @@ $color-comments:                           $color-base !default;
 /// @access public
 /// @since 1.0.0
 
-$color-comment-reply:                      $color-grayscale-8 !default;
+$color-comment-reply:                      $color-grayscale-6 !default;
 
 /// Controls the color of the author name in a comment.
 /// @group 12-news
@@ -99,7 +99,7 @@ $color-comment-author-name:                 $color-grayscale-0 !default;
 /// @access public
 /// @since 1.0.0
 
-$color-comment-author-says:                     $color-grayscale-8 !default;
+$color-comment-author-says:                     $color-grayscale-6 !default;
 
 /// Controls the background color of the comment submission form.
 /// @group 12-news
@@ -328,7 +328,7 @@ $border-width-comment-form:                  3px !default;
 
 .form-tip {
 	@extend %font-size-minimum;
-	color: $color-grayscale-8;
+	color: $color-grayscale-6;
 
 	@include breakpoint( $sm ) {
 		display: block;
