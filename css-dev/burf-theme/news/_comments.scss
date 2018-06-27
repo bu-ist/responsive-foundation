@@ -84,6 +84,7 @@ $color-comments:                           $color-base !default;
 /// @group 12-news
 /// @access public
 /// @since 1.0.0
+/// @accessibility aa
 
 $color-comment-reply:                      $color-grayscale-6 !default;
 
@@ -98,6 +99,7 @@ $color-comment-author-name:                 $color-grayscale-0 !default;
 /// @group 12-news
 /// @access public
 /// @since 1.0.0
+/// @accessibility aa
 
 $color-comment-author-says:                     $color-grayscale-6 !default;
 
@@ -325,6 +327,7 @@ $border-width-comment-form:                  3px !default;
 /// @group 12-news
 /// @access public
 /// @since 1.0.0
+/// @accessibility aa
 
 .form-tip {
 	@extend %font-size-minimum;
