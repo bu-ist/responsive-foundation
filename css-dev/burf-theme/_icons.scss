@@ -1592,6 +1592,24 @@
 	}
 }
 
+%icon-buhub {
+	@extend %icon-iefix;
+	&:before {
+		/* These classes are using %icon-buhub. */
+		@extend %icon;
+		content: "\F700";
+	}
+}
+
+%icon-questionmark {
+	@extend %icon-iefix;
+	&:before {
+		/* These classes are using %icon-questionmark. */
+		@extend %icon;
+		content: "\2753";
+	}
+}
+
 /* Footer links */
 
 .siteFooter-social a {
