@@ -318,6 +318,10 @@ body {
 		@extend %icon-reddit;
 	}
 
+	[href*="snapchat.com"] {
+		@extend %icon-snapchat;
+	}
+
 	[href*="tumblr.com"] {
 		@extend %icon-tumblr;
 	}
