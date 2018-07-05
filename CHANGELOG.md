@@ -1,3 +1,7 @@
+# 1.0.4.3
+
+* Includes BU Hub Indicator styles within the base & theme of responsive-foundation version 1.0.4.2.
+
 # 1.0.4
 
 * Add alternate social icons from [BU Icon Font](https://github.com/bu-ist/bu-icon-font)

@@ -3,6 +3,7 @@
 	1. Collapsible divs
 	2. Profiles
 	3. Course feeds
+	4. BU Hub Indicator
 
 ----------------------------------------------------------------- */
 
@@ -211,7 +212,7 @@
 .single-profile .profile-info {
 	@extend .message;
 	margin: 0 0 20px 0;
-	
+
 	@include breakpoint(small) {
 		float: right;
 		width: 33.33333333333333%;
@@ -242,6 +243,75 @@
 /* Course Feeds
 ----------------------------------------------------------------- */
 
+$border-coursefeed:							 $table-border !default;
+
+.cf-course {
+	clear: right;
+}
+
 .cf-course table {
 	width: 100%;
 }
+
+/* Hub Indicator
+----------------------------------------------------------------- */
+
+.cf-hub-ind {
+	display: block;
+	float: right;
+	margin: 0 0 20px 20px;
+	max-width: 360px;
+	width: 100%;
+}
+
+.cf-hub-head {
+	text-decoration: none;
+}
+
+.bu-hub-iconstyles {
+	display: inline-block;
+	height: 25px;
+	margin: 5px 0;
+	overflow: hidden;
+
+	&::before {
+		color: $color-grayScale-5;
+		display: block;
+		font-size: 65px;
+		height: 25px;
+		line-height: 8px;
+		overflow: hidden;
+		width: 90px;
+
+		a:hover & {
+			color: $color-hub;
+		}
+	}
+
+}
+
+.bu-hub-iconstyles.icon-buhub::before {
+	margin-right: 0;
+	width: 70px;
+}
+
+.bu-hub-iconstyles.icon-questionmark::before {
+	font-size: 16px;
+	line-height: 17px;
+}
+
+.cf-hub-offerings {
+	color: $color-hub;
+	// ! Regardless where this lives, always maintain consistent use of Benton.
+	font-family: "Benton-Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: 300;
+	list-style-type: none;
+	margin: -5px 0 10px;
+	padding: 0;
+
+	li {
+		margin-bottom: 7px;
+	}
+}
+
