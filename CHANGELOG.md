@@ -5,6 +5,7 @@
 * Fixed a bug with the left hand nav layout and BU Banners [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/154)
 * Fixed a bug with the search box in IE [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/156)
 * Fixed a bug with the profile single photos [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/159)
+* Added snapchat icons [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/160)
 
 ## 2.0.1
 
