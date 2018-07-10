@@ -15,13 +15,18 @@ $font-branding: 'Whitney SSm A', 'Whitney SSm B' !default;
 
 $black: #000000 !default;
 $white: #ffffff !default;
+$gray_d: #dddddd !default;
 $gray_darkest: #151515 !default;
 $gray_darker: #222222 !default;
 $gray_dark: #333333 !default;
+$gray_mid: #555555 !default;
 $gray_light: #7a7a7a !default;
 $gray_lighter: #9f9f9f !default;
 
+/// A grayscale variable for hover state of the BU Hub webfont.
+// Not intended for editing.
 
+$color-hub: #767676;
 
 
 
@@ -42,3 +47,10 @@ $container_M: 970px !default;
 $container_L: 1170px !default;
 
 $MQs: true !default;
+
+
+/* borders
+------------------------ */
+
+$color-table-border: $gray_d !default;
+$table-border: 1px solid $color-table-border !default;

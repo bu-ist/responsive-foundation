@@ -1,0 +1,84 @@
+// 1. Course Feeds
+// 2. Hub Indicator
+
+/* Course Feeds
+----------------------------------------------------------------- */
+
+$border-coursefeed:							 $table-border !default;
+
+.cf-course {
+	clear: right;
+}
+
+.cf-course table {
+	width: 100%;
+}
+
+/* Hub Indicator
+----------------------------------------------------------------- */
+
+.cf-hub-ind {
+	display: block;
+	float: unset;
+	margin: 0 0 20px 20px;
+	max-width: 305px;
+	width: 100%;
+
+	.cf-course & {
+		// This breakpoint is explicit and shouldn’t be altered.
+		@include breakpoint( xs ) {
+			float: right;
+		}
+	}
+}
+
+.cf-hub-head {
+	text-decoration: none;
+}
+
+.bu-hub-iconstyles {
+	display: inline-block;
+	height: 25px;
+	margin: 5px 0;
+	overflow: hidden;
+
+	&::before {
+		color: $gray_mid;
+		display: block;
+		font-size: 65px;
+		height: 25px;
+		line-height: 8px;
+		overflow: hidden;
+		width: 90px;
+
+		a:hover & {
+			color: $color-hub;
+		}
+	}
+
+}
+
+.bu-hub-iconstyles.icon-buhub::before {
+	margin-right: 0;
+	width: 70px;
+}
+
+.bu-hub-iconstyles.icon-questionmark::before {
+	font-size: 16px;
+	line-height: 17px;
+}
+
+.cf-hub-offerings {
+	color: $color-hub;
+	// ! Regardless where this lives, always maintain consistent use of Benton.
+	font-family: "Benton-Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: 300;
+	list-style-type: none;
+	margin: -5px 0 10px;
+	padding: 0;
+
+	li {
+		margin-bottom: 7px;
+	}
+}

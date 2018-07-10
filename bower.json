@@ -1,10 +1,11 @@
 {
   "name": "responsive-foundation",
-  "version": "0.1.0.2",
+  "version": "0.1.0.3",
   "homepage": "https://github.com/bu-ist/responsive-foundation",
   "authors": [
     "Mike Burns <mgburns@bu.edu>",
-    "Ashley Kolodziej <kolodz10@bu.edu>"
+    "Ashley Kolodziej <kolodz10@bu.edu>",
+    "RJ Foley IV <rjfoley@bu.edu>"
   ],
   "description": "A front-end framework for developing responsive sites at Boston University.",
   "main": [
