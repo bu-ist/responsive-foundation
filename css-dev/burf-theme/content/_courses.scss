@@ -45,13 +45,17 @@ $border-coursefeed:							 $border !default;
 /// @group 09-content
 /// @access public
 /// @since 2.0.0
+/// @accessibility AA
 
 .cf-course-id {
-	color: $color-grayscale-7;
 	display: block;
 	font-family: $font-family-sans-serif;
 	font-size: 0.5em;
 	margin-bottom: 0.5em;
+}
+
+.cf-course-id-color {
+	color: $color-grayscale-6;
 }
 
 /// Controls the styling for course credits, availability, and prerequisites.
@@ -156,6 +160,7 @@ $border-coursefeed:							 $border !default;
 /// @group 09-content
 /// @access public
 /// @since 2.0.1
+/// @accessibility AA
 
 .bu-hub-iconstyles {
 	display: inline-block;

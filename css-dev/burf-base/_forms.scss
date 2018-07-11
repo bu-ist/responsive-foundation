@@ -172,6 +172,7 @@ $font-size-button:                         inherit !default;
 
 /// Controls the background color used on default buttons and
 /// things that looks like buttons across the site.
+/// @accessibility AA
 /// @group 01-config
 /// @access public
 /// @since 1.0.0
@@ -183,6 +184,7 @@ $color-button-bg:                          $color-grayscale-e !default;
 /// @group 01-config
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-button-text:                        $color-grayscale-4 !default;
 
@@ -193,13 +195,14 @@ $color-button-text:                        $color-grayscale-4 !default;
 /// @since 1.0.0
 /// @accessibility AA
 
-$color-button-primary-bg:                  #0075e2 !default;
+$color-button-primary-bg:                  #0074E0 !default;
 
 /// Controls the text color used on primary buttons and
 /// things that looks like buttons across the site.
 /// @group 01-config
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-button-primary-text:                $color-grayscale-f !default;
 
