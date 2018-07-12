@@ -7,7 +7,14 @@
 * Fixed a bug with the profile single photos [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/159)
 * Added snapchat icons [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/160)
 
-## 2.0.1
+# 2.0.2
+
+* BU Banner, Navigation and search styles updated.
+* Audit and accessibility updates.
+* Updates to the readme.
+* Incorporated adjustments to line height for BU Hub Indicator.
+
+# 2.0.1
 
 * Adds support for BU Hub Indicator within Course Feeds.
 
@@ -69,7 +76,6 @@ standards [See related pull request](https://github.com/bu-ist/responsive-founda
 * Better compliance with licensing rules for Normalize and Pure CSS
 [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/59)
 * Assortment of bug fixes
-* Added BU Hub Indicator. Incorporated adjustments to line height.
 
 # 1.4.2
 
