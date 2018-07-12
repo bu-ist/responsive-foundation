@@ -31,6 +31,7 @@ $font-family-heading:                       $font-family-sans-serif !default;
 /// @group 04-typography
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-heading:                             $color-grayscale-0 !default;
 
@@ -38,8 +39,9 @@ $color-heading:                             $color-grayscale-0 !default;
 /// @group 04-typography
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
-$color-heading-small:                       $color-grayscale-9 !default;
+$color-heading-small:                       $color-grayscale-6 !default;
 
 /// Base margin for HTML tags. Primarily affects `<p>`.
 /// @group 04-typography
@@ -52,6 +54,7 @@ $font-margin-base:                          0 0 1.5em 0 !default;
 /// @group 04-typography
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-link:                                #0f69d7 !default;
 
@@ -61,6 +64,7 @@ $color-link:                                #0f69d7 !default;
 /// @group 04-typography
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-link-visited:                        #7337af !default;
 
@@ -70,6 +74,7 @@ $color-link-visited:                        #7337af !default;
 /// @group 04-typography
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-link-active:                         $color-grayscale-0 !default;
 
@@ -91,13 +96,15 @@ $font-margin-code:                          $margin 0 !default;
 /// @group 04-typography
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
-$color-code:                                $color-grayscale-7 !default;
+$color-code:                                $color-grayscale-6 !default;
 
 /// Background color to use for the `<code>` tag.
 /// @group 04-typography
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-code-bg:                             $color-grayscale-f5 !default;
 
