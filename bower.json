@@ -1,6 +1,6 @@
 {
   "name": "responsive-foundation",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "homepage": "https://github.com/bu-ist/responsive-foundation",
   "authors": [
     "Mike Burns <mgburns@bu.edu>",
@@ -12,7 +12,8 @@
     "Inder Singh <isingh@bu.edu>",
     "Ashley Kolodziej <kolodz10@bu.edu>",
     "Jon Desroisers <jondes@bu.edu>",
-    "Tom Dodson <tdodson@bu.edu>"
+    "Tom Dodson <tdodson@bu.edu>",
+    "Andrea Cacase <acacase@bu.edu>"
   ],
   "description": "A front-end framework for developing responsive sites at Boston University.",
   "main": [

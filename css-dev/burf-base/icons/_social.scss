@@ -15,6 +15,7 @@
 	// reddit (two options)
 	// renren
 	// retweet
+	// snapchat (two options)
 	// soundcloud (two options)
 	// spotify
 	// stackexchange (two options)
@@ -391,6 +392,32 @@
 
 %icon-retweet {
 	@include icon( "retweet" );
+}
+
+/// The snapchat icon.
+/// @example scss - Add the snapchat icon to a menu item
+/// .menu-item {
+///    @extend %icon-snapchat;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 2.0
+
+%icon-snapchat {
+	@include icon( "snapchat" );
+}
+
+/// The alt snapchat icon.
+/// @example scss - Add the alt snapchat icon to a menu item
+/// .menu-item {
+///    @extend %icon-snapchat-alt;
+/// }
+/// @group 03-icons
+/// @access public
+/// @since 2.0
+
+%icon-snapchat-alt {
+	@include icon( "snapchat-alt" );
 }
 
 /// The soundcloud icon.

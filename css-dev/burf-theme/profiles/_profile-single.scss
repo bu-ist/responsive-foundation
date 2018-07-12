@@ -7,6 +7,7 @@
 /// @group 14-profiles
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-profile-info-label:					$color-grayscale-6 !default;
 $color-profile-info-item:					$color-grayscale-5 !default;
@@ -40,6 +41,7 @@ $color-profile-info-item:					$color-grayscale-5 !default;
 /// @since 2.0.0
 
 .profile-single-photo {
+	height: 300px;
 	margin: 0 auto $margin;
 	width: 300px;
 }
