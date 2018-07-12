@@ -183,6 +183,7 @@ $border-coursefeed:							 $border !default;
 	}
 
 	&.icon-buhub::before {
+		line-height: 8px;
 		margin-right: 0;
 		width: 70px;
 	}
