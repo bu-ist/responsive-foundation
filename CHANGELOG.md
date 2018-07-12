@@ -58,6 +58,7 @@ standards [See related pull request](https://github.com/bu-ist/responsive-founda
 * Better compliance with licensing rules for Normalize and Pure CSS
 [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/59)
 * Assortment of bug fixes
+* Added BU Hub Indicator. Incorporated adjustments to line height and added a safeguard to prevent any custom theme styling of a bottom border under either the BU Hub wordmark or the question mark icon.
 
 # 1.4.2
 
