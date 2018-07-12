@@ -180,6 +180,7 @@ $border-coursefeed:							 $border !default;
 	&.icon-buhub::before {
 		margin-right: 0;
 		width: 70px;
+		line-height: 8px;
 	}
 
 	&.icon-questionmark::before {
@@ -206,4 +207,13 @@ $border-coursefeed:							 $border !default;
 	li {
 		margin-bottom: 7px;
 	}
+}
+
+/// BU Hub Indicator: Whatever custom theme style overrides, NO bottom borders.
+/// @group 09-content
+/// @access public
+/// @since 2.0.0
+
+article[role="main"] .course-feed .cf-course .cf-hub-ind a {
+	border-bottom: $border-base;
 }

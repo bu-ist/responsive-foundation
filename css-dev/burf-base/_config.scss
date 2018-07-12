@@ -614,4 +614,12 @@ $color-hub:                        			 #767676;
 /// @access public
 /// @since 1.2.0
 
-$border:										 1px solid $color-grayscale-d !default;
+$border:												1px solid $color-grayscale-d !default;
+
+/// No border.
+/// @group 01-config
+/// @access public
+/// @since 2.0.0
+
+$border-base:										0px solid $color-grayscale-f !default;
+
