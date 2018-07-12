@@ -995,3 +995,53 @@ $no-nav-desktop:                    $nav-desktop !default;
 		}
 	}
 }
+
+a.skip-link {
+    left:-999px;
+    position:absolute;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    z-index:-999;
+}
+a.skip-link:focus-within, a.skip-link:active {
+    color: #fff;
+    background-color:#000;
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow:auto;
+    margin: 10px 35%;
+    padding:5px;
+    border-radius: 15px;
+    border:4px solid yellow;
+    text-align:center;
+    font-size:1.2em;
+    z-index:999;
+}
+
+// .skip-link
+// {
+//     position: absolute;
+//     top: 0;
+//     z-index: 9999;
+//     right: 100%;
+//     padding: 5px;
+//     padding: 0.5rem;
+//     font-size: 20px;
+//     font-size: 2rem;
+//     color: #000;
+//     background: #FFF;
+// }
+//
+// .admin-bar .skip-link
+// {
+//     top: 32px;
+// }
+//
+// .skip-link:focus-within
+// {
+//     right: auto;
+// }
