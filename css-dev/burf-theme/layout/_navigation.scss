@@ -300,6 +300,7 @@ $width-side-nav:                            240px !default;
 /// @access public
 /// @since 2.0.0
 
+
 $nav-desktop:                    $sm !default;
 
 nav {
@@ -387,6 +388,7 @@ $search-field-height:                          40px !default;
 		width: 15%;
 	}
 }
+
 
 /// Adjusts the size of the search and nav toggles in
 /// the main navigation. Also affects the top/bottom spacing
@@ -994,54 +996,35 @@ $no-nav-desktop:                    $nav-desktop !default;
 			}
 		}
 	}
+
+
 }
+
+// Adjusts the appearance of the skip link
 
 a.skip-link {
-    left:-999px;
-    position:absolute;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
-    z-index:-999;
-}
-a.skip-link:focus-within, a.skip-link:active {
-    color: #fff;
-    background-color:#000;
-    left: auto;
-    top: auto;
-    width: 30%;
-    height: auto;
-    overflow:auto;
-    margin: 10px 35%;
-    padding:5px;
-    border-radius: 15px;
-    border:4px solid yellow;
-    text-align:center;
-    font-size:1.2em;
-    z-index:999;
+	position: absolute;
+     top: 0;
+     right: 100%;
+     padding: 5px;
+     padding: 0.5rem;
+     font-size: 20px;
+     font-size: 2rem;
 }
 
-// .skip-link
-// {
-//     position: absolute;
-//     top: 0;
-//     z-index: 9999;
-//     right: 100%;
-//     padding: 5px;
-//     padding: 0.5rem;
-//     font-size: 20px;
-//     font-size: 2rem;
-//     color: #000;
-//     background: #FFF;
-// }
-//
-// .admin-bar .skip-link
-// {
-//     top: 32px;
-// }
-//
-// .skip-link:focus-within
-// {
-//     right: auto;
-// }
+a.skip-link:focus, a.skip-link:active {
+	color: #fff;
+	background-color: #000;
+	top: auto;
+	left: 0;
+	right: 0;
+	width: 10%;
+	height: auto;
+	overflow: auto;
+	margin: 30px auto;
+	padding: 5px;
+	border: 5px solid #d00000;
+	text-align: center;
+	font-size: 1.2em;
+	z-index: 99999;
+}
