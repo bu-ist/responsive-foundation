@@ -1002,29 +1002,29 @@ $no-nav-desktop:                    $nav-desktop !default;
 
 // Adjusts the appearance of the skip link
 
-a.skip-link {
-	position: absolute;
-     top: 0;
-     right: 100%;
-     padding: 5px;
-     padding: 0.5rem;
-     font-size: 20px;
-     font-size: 2rem;
-}
+	.skip-link {
+		font-size: 20px;
+		font-size: 2rem;
+		padding: 5px;
+		position: absolute;
+		right: 100%;
+		top: 0;
+	}
 
-a.skip-link:focus, a.skip-link:active {
-	color: #fff;
-	background-color: #000;
-	top: auto;
-	left: 0;
-	right: 0;
-	width: 10%;
-	height: auto;
-	overflow: auto;
-	margin: 30px auto;
-	padding: 5px;
-	border: 5px solid #d00000;
-	text-align: center;
-	font-size: 1.2em;
-	z-index: 99999;
-}
+	.skip-link:focus,
+	.skip-link:active {
+		background-color: $color-grayscale-0;
+		border: 5px solid #d00000;
+		color: $color-grayscale-f;
+		font-size: 1.2em;
+		height: auto;
+		left: 0;
+		margin: 30px auto;
+		overflow: auto;
+		padding: 5px;
+		right: 0;
+		text-align: center;
+		top: auto;
+		width: 10%;
+		z-index: 99999;
+	}
