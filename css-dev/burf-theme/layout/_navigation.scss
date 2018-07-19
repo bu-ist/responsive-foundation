@@ -1020,12 +1020,11 @@ $no-nav-desktop:                    $nav-desktop !default;
 	position: absolute;
 	text-decoration: none;
 	top: -100px;
-	width: auto;
-	z-index: 100000;
-
-	// Above WP toolbar
 	-webkit-transition: top 0.75s ease-out;
 	transition: top 0.75s ease-out;
+	width: auto;
+	z-index: 100000;
+	
 }
 
 .skip-link:focus,
