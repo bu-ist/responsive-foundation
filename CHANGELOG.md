@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.0
+* Color contrast accessibility fixes to comply with MWAS
+* Added skip-link feature for keyboard navigation
+
 ## Unreleased
 
 * Fixed a bug with the left hand nav layout and BU Banners [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/154)
@@ -35,7 +39,7 @@ it'll just work now! `max-width` support is deprecated as of 2.0 since the
 intention of this mixin is to print styles safely in older versions of IE -
 `max-width` styles are unlikely to be the last styles to apply.
 [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/89)
-* An new approach for centering, `center-children`, using flexbox. Old
+* A new approach for centering, `center-children`, using flexbox. Old
 approaches will still be available for the forseeable future - just use
 `vertical-center-ie8` or `vertical-center-ie9` as appropriate for your needs
 [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/89)
