@@ -300,6 +300,7 @@ $width-side-nav:                            240px !default;
 /// @access public
 /// @since 2.0.0
 
+
 $nav-desktop:                    $sm !default;
 
 nav {
@@ -387,6 +388,7 @@ $search-field-height:                          40px !default;
 		width: 20%;
 	}
 }
+
 
 /// Adjusts the size of the search and nav toggles in
 /// the main navigation. Also affects the top/bottom spacing
@@ -997,4 +999,42 @@ $no-nav-desktop:                    $nav-desktop !default;
 			}
 		}
 	}
+
+
+}
+
+// Adjusts the appearance of the skip link; Styled to match the default WordPress screen reader text
+
+.skip-link {
+
+	background-color: #f1f1f1;
+	-webkit-box-shadow: 0 0 2px 2px rgba( 0, 0, 0, 0.6 );
+	box-shadow: 0 0 2px 2px rgba( 0, 0, 0, 0.6 );
+	color: #21759b;
+	display: block;
+	font-family: "Open Sans",sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	height: auto;
+	left: 6px;
+	line-height: normal;
+	margin: 30px 45%;
+	padding: 15px 23px 14px;
+	position: absolute;
+	text-decoration: none;
+	top: -100px;
+	-webkit-transition: top 0.75s ease-out;
+	transition: top 0.75s ease-out;
+	width: auto;
+	z-index: 100000;
+	
+}
+
+.skip-link:focus,
+.skip-link:active {
+	color: #21759b;
+	top: 7px;
+
+	-webkit-transition: top 0s;
+	transition: top 0s;
 }
