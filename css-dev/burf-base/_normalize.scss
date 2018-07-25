@@ -101,3 +101,22 @@ figure {
 	height: auto;
 	max-width: 100%;
 }
+
+/// Adds a default icon for links which open
+/// in a new window or tab. This pattern may
+/// also be used for external links.
+/// @group 01-config
+/// @access public
+/// @since 2.1.0
+
+a {
+	&[target="_blank"],
+	&[target="_new"] {
+		@include icon( 'redirect', 'after' );
+
+		&:after {
+			font-size: 0.6em;
+			vertical-align: text-top;
+		}
+	}
+}
