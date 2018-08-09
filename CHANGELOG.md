@@ -1,8 +1,10 @@
 # Changelog
 
+## 2.1.1
+* Adds skip-link feature for keyboard navigation. This is a required update for all 2.0 themes.
+
 ## 2.1.0
 * Color contrast accessibility fixes to comply with MWAS
-* Added skip-link feature for keyboard navigation
 
 ## Unreleased
 
