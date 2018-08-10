@@ -108,8 +108,9 @@ figure {
 /// @group 01-config
 /// @access public
 /// @since 2.1.0
+/// TODO: This needs further testing with Hub course indicator.
 
-a {
+/*a {
 	&[target="_blank"],
 	&[target="_new"] {
 		@include icon( 'redirect', 'after' );
@@ -119,4 +120,4 @@ a {
 			vertical-align: text-top;
 		}
 	}
-}
+}*/
