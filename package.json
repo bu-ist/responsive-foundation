@@ -1,6 +1,6 @@
 {
   "name": "responsive-foundation",
-  "version": "2.1.1",
+  "version": "2.1.11",
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-bower-task": "^0.4.0",

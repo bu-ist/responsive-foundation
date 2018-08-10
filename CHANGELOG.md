@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.1.11
+* Fixes an issue with external linking. This is a required update for all 2.0 themes.
+
 ## 2.1.1
 * Adds skip-link feature for keyboard navigation. This is a required update for all 2.0 themes.
 
