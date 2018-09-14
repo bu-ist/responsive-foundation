@@ -61,6 +61,7 @@ Full usage documentation can be found in the [visual style guide](https://bu-ist
 
 After each major release, one version is maintained until everyone can be upgraded to the next major version. Currently, these versions are maintained for the purposes of hotfixes:
 
-* 0.1.0
-* 1.0.4
-* Current
+* 0.1.0.2
+* 1.0.4.2
+* 1.4.1
+* 1.4.2

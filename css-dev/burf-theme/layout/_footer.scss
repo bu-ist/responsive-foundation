@@ -34,6 +34,7 @@ $color-footbar-container-bg:               $color-footbar-bg !default;
 /// @group 10-widgets
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-footbar-widget-link:                $color-link !default;
 
@@ -41,6 +42,7 @@ $color-footbar-widget-link:                $color-link !default;
 /// @group 10-widgets
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-footbar-widget-link-hover:          $color-link !default;
 
@@ -69,6 +71,7 @@ $color-site-footer:								 $color-grayscale-f !default;
 /// @group footer
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-site-footer-link:							 $color-grayscale-8 !default;
 
@@ -76,6 +79,7 @@ $color-site-footer-link:							 $color-grayscale-8 !default;
 /// @group footer
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-site-footer-link-hover:					 $color-grayscale-f !default;
 
@@ -316,6 +320,10 @@ body {
 
 	[href*="reddit.com"] {
 		@extend %icon-reddit;
+	}
+
+	[href*="snapchat.com"] {
+		@extend %icon-snapchat;
 	}
 
 	[href*="tumblr.com"] {

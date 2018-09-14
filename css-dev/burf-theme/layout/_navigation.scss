@@ -58,6 +58,7 @@ $font-family-navigation:                    $font-family-sans-serif !default;
 /// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-primary-nav-bg:                      $color-grayscale-0 !default;
 
@@ -65,6 +66,7 @@ $color-primary-nav-bg:                      $color-grayscale-0 !default;
 /// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-primary-nav-link:                    $color-grayscale-f !default;
 
@@ -80,6 +82,7 @@ $color-primary-nav-link-hover:              $color-grayscale-a !default;
 /// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-primary-nav-link-current:            $color-grayscale-9 !default;
 
@@ -96,6 +99,7 @@ $color-primary-nav-dropdown-bg:             $color-grayscale-0 !default;
 /// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-primary-nav-dropdown-link:           $color-primary-nav-link !default;
 
@@ -103,6 +107,7 @@ $color-primary-nav-dropdown-link:           $color-primary-nav-link !default;
 /// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-primary-nav-dropdown-link-hover:     $color-primary-nav-link-hover !default;
 
@@ -127,13 +132,15 @@ $font-size-utility-nav:                      14px !default;
 /// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
-$color-utility-nav-link:                    $color-grayscale-7 !default;
+$color-utility-nav-link:                    $color-grayscale-6 !default;
 
 /// The color of links when you hover in the utility navigation.
 /// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-utility-nav-link-hover:              $color-grayscale-0 !default;
 
@@ -144,6 +151,7 @@ $color-utility-nav-link-hover:              $color-grayscale-0 !default;
 /// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-utility-nav-mobile-link:       			$color-grayscale-a !default;
 
@@ -151,6 +159,7 @@ $color-utility-nav-mobile-link:       			$color-grayscale-a !default;
 /// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-utility-nav-mobile-link-hover: 			$color-grayscale-f !default;
 
@@ -162,6 +171,7 @@ $color-utility-nav-mobile-link-hover: 			$color-grayscale-f !default;
 /// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-nav-toggle:                          $color-grayscale-f !default;
 
@@ -169,6 +179,7 @@ $color-nav-toggle:                          $color-grayscale-f !default;
 /// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-nav-toggle-hover:                    $color-grayscale-a !default;
 
@@ -177,6 +188,7 @@ $color-nav-toggle-hover:                    $color-grayscale-a !default;
 /// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-nav-toggle-alt:                      $color-grayscale-9 !default;
 
@@ -184,6 +196,7 @@ $color-nav-toggle-alt:                      $color-grayscale-9 !default;
 /// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-nav-toggle-alt-hover:                $color-grayscale-0 !default;
 
@@ -236,6 +249,7 @@ $color-search-bg:                          $color-grayscale-f5 !default;
 /// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-search-text:                        $color-grayscale-0 !default;
 
@@ -285,6 +299,7 @@ $width-side-nav:                            240px !default;
 /// @group 06-navigation
 /// @access public
 /// @since 2.0.0
+
 
 $nav-desktop:                    $sm !default;
 
@@ -336,7 +351,7 @@ nav {
 	}
 
 	label {
-		display: initial;
+		display: inline;
 	}
 }
 
@@ -357,7 +372,7 @@ $search-field-height:                          40px !default;
 	width: 75%;
 
 	@include breakpoint( $nav-desktop ) {
-		width: 85%;
+		width: 80%;
 	}
 }
 
@@ -370,9 +385,10 @@ $search-field-height:                          40px !default;
 	width: 25%;
 
 	@include breakpoint( $nav-desktop ) {
-		width: 15%;
+		width: 20%;
 	}
 }
+
 
 /// Adjusts the size of the search and nav toggles in
 /// the main navigation. Also affects the top/bottom spacing
@@ -558,7 +574,8 @@ $nav-toggle-border: 4px !default;
 		}
 
 		&:hover ul,
-		&:focus ul {
+		&:focus ul,
+		&:focus-within ul {
 			left: auto;
 		}
 
@@ -808,10 +825,11 @@ $left-nav-desktop:                    $nav-desktop !default;
 	}
 }
 
-$_search-height: 103px;
+$_search-height: 115px;
 
 .search-open.l-side-nav {
-	.primary-nav {
+	.primary-nav,
+	.bu-banner {
 		@include breakpoint( $left-nav-desktop ) {
 			top: $_search-height; // adds the height of the open search form
 		}
@@ -868,7 +886,9 @@ $_search-height: 103px;
 	}
 
 	&.nav-open {
-		.content {
+		.bu-banner,
+		.content
+		 {
 			@include breakpoint( $left-nav-desktop ) {
 				left: $width-side-nav - 60px;
 			}
@@ -980,4 +1000,42 @@ $no-nav-desktop:                    $nav-desktop !default;
 			}
 		}
 	}
+
+
+}
+
+// Adjusts the appearance of the skip link; Styled to match the default WordPress screen reader text
+
+.skip-link {
+
+	background-color: #f1f1f1;
+	-webkit-box-shadow: 0 0 2px 2px rgba( 0, 0, 0, 0.6 );
+	box-shadow: 0 0 2px 2px rgba( 0, 0, 0, 0.6 );
+	color: #21759b;
+	display: block;
+	font-family: "Open Sans",sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	height: auto;
+	left: 6px;
+	line-height: normal;
+	margin: 30px 45%;
+	padding: 15px 23px 14px;
+	position: absolute;
+	text-decoration: none;
+	top: -100px;
+	-webkit-transition: top 0.75s ease-out;
+	transition: top 0.75s ease-out;
+	width: auto;
+	z-index: 100000;
+	
+}
+
+.skip-link:focus,
+.skip-link:active {
+	color: #21759b;
+	top: 7px;
+
+	-webkit-transition: top 0s;
+	transition: top 0s;
 }

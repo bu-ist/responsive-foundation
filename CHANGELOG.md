@@ -1,5 +1,32 @@
 # Changelog
 
+## 2.1.11
+* Fixes an issue with external linking. This is a required update for all 2.0 themes.
+
+## 2.1.1
+* Adds skip-link feature for keyboard navigation. This is a required update for all 2.0 themes.
+
+## 2.1.0
+* Color contrast accessibility fixes to comply with MWAS
+
+## Unreleased
+
+* Fixed a bug with the left hand nav layout and BU Banners [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/154)
+* Fixed a bug with the search box in IE [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/156)
+* Fixed a bug with the profile single photos [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/159)
+* Added snapchat icons [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/160)
+
+# 2.0.2
+
+* BU Banner, Navigation and search styles updated.
+* Audit and accessibility updates.
+* Updates to the readme.
+* Incorporated adjustments to line height for BU Hub Indicator.
+
+# 2.0.1
+
+* Adds support for BU Hub Indicator within Course Feeds.
+
 ## 2.0.0
 
 * Support for typography mixins
@@ -17,7 +44,7 @@ it'll just work now! `max-width` support is deprecated as of 2.0 since the
 intention of this mixin is to print styles safely in older versions of IE -
 `max-width` styles are unlikely to be the last styles to apply.
 [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/89)
-* An new approach for centering, `center-children`, using flexbox. Old
+* A new approach for centering, `center-children`, using flexbox. Old
 approaches will still be available for the forseeable future - just use
 `vertical-center-ie8` or `vertical-center-ie9` as appropriate for your needs
 [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/89)

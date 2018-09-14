@@ -199,6 +199,8 @@ $icons-responsive: (
 	reddit-alt: "\F617",
 	renren: "\F61C",
 	retweet: "\F600",
+	snapchat: "\F2AC",
+	snapchat-alt: "\F2AB",
 	soundcloud: "\F6B3",
 	soundcloud-alt: "\F6B4",
 	spotify: "\F6B1",
@@ -261,6 +263,11 @@ $icons-responsive: (
 	checkbox-filled: "\ED53",
 	radio-empty: "\ED54",
 	radio-filled: "\ED55",
+
+	// BU Hub Indicator
+
+	buhub: '\F700',
+	questionmark: '\2753',
 );
 
 // Merges custom icons and overrides with the default supported icons map.
