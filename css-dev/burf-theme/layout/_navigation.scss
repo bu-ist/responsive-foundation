@@ -1007,7 +1007,7 @@ $no-nav-desktop:                    $nav-desktop !default;
 // Adjusts the appearance of the skip link; Styled to match the default WordPress screen reader text
 
 .skip-link {
-	@include box-shadow(0 0 2px 2px transparentize( $color-grayscale-0, 0.4 ));
+	@include box-shadow( 0 0 2px 2px transparentize( $color-grayscale-0, 0.4 ) );
 	background-color: #f1f1f1;
 	color: #21759b;
 	display: block;
