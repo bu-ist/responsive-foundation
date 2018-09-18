@@ -1,5 +1,8 @@
 # Changelog
 
+## Unreleased
+* Fixed size and positioning of skip-link.
+
 ## 2.1.11
 * Fixes an issue with external linking. This is a required update for all 2.0 themes.
 
@@ -8,9 +11,6 @@
 
 ## 2.1.0
 * Color contrast accessibility fixes to comply with MWAS
-
-## Unreleased
-
 * Fixed a bug with the left hand nav layout and BU Banners [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/154)
 * Fixed a bug with the search box in IE [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/156)
 * Fixed a bug with the profile single photos [See related pull request](https://github.com/bu-ist/responsive-foundation/pull/159)
