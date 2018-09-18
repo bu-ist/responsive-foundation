@@ -1007,10 +1007,8 @@ $no-nav-desktop:                    $nav-desktop !default;
 // Adjusts the appearance of the skip link; Styled to match the default WordPress screen reader text
 
 .skip-link {
-	-webkit-box-shadow: 0 0 2px 2px rgba( 0, 0, 0, 0.6 );
-	-webkit-transition: top 0.75s ease-out;
+	@include box-shadow(0 0 2px 2px transparentize( $color-grayscale-0, 0.4 ));
 	background-color: #f1f1f1;
-	box-shadow: 0 0 2px 2px rgba( 0, 0, 0, 0.6 );
 	color: #21759b;
 	display: block;
 	font-family: "Open Sans",sans-serif;
@@ -1027,6 +1025,7 @@ $no-nav-desktop:                    $nav-desktop !default;
 	text-decoration: none;
 	top: -130px;
 	transform: translateX( -50% );
+	-webkit-transition: top 0.75s ease-out;
 	transition: top 0.75s ease-out;
 	width: 90%;
 	z-index: 100000;
@@ -1037,9 +1036,9 @@ $no-nav-desktop:                    $nav-desktop !default;
 
 	&:focus,
 	&:active {
-		-webkit-transition: top 0s;
 		color: #21759b;
 		top: 37px;
+		-webkit-transition: top 0s;
 		transition: top 0s;
 	}
 }

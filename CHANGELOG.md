@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+
 * Fixed size and positioning of skip-link.
 
 ## 2.1.11
