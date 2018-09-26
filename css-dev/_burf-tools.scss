@@ -26,11 +26,10 @@ $burf-extras:								       false;
 @import "burf-base/mixins";
 @import "burf-base/normalize-variables";
 
-// Special settings for grid
-
-$grid-classes:										 false;
-
-@import "burf-base/grid/package";
+@import "burf-base/grid/grid-variables";
+@import "burf-base/grid/grid-mixins";
+@import "burf-base/grid/grid-placeholders";
+@import "burf-base/grid/grid-friendly";
 
 // Special settings for icons
 
