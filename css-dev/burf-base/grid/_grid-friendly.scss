@@ -21,16 +21,6 @@ $widths: (
 	remove: 			0
 );
 
-/// Turns the friendly grid classes on or off. This is really only
-/// for the tools partial - you shouldn't use it in a custom theme
-/// unless you're VERY sure you will never need it. Placeholders will
-/// still work when this is set to false.
-/// @group grid
-/// @access public
-/// @since 2.1.11
-
-$grid-friendly:                                       true !default;
-
 /// Creates the friendly classes and placeholders.
 /// @example
 /// 		Make something take up 1/2 of available space starting at the small breakpoint:
@@ -43,7 +33,7 @@ $grid-friendly:                                       true !default;
 		@extend %col-#{$columns} !optional;
 	}
 
-	@if $grid-friendly {
+	@if $burf-extras {
 		.col-#{$width} {
 			@extend %col-#{$width} !optional;
 		}
@@ -55,7 +45,7 @@ $grid-friendly:                                       true !default;
 				@extend %col-#{$feature}-#{$columns} !optional;
 			}
 
-			@if $grid-friendly {
+			@if $burf-extras {
 				.col-#{$feature}-#{$width} {
 					@extend %col-#{$feature}-#{$width} !optional;
 				}
@@ -79,7 +69,7 @@ $grid-friendly:                                       true !default;
 			}
 		}
 
-		@if $grid-friendly {
+		@if $burf-extras {
 			.col-#{$bp-name} {
 				&-#{$width} {
 					@extend %col-#{$bp-name}-#{$width} !optional;

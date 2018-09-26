@@ -20,6 +20,8 @@
 // Blah
 // =================================================================
 
+$burf-extras:								       false;
+
 @import "burf-base/config";
 @import "burf-base/mixins";
 @import "burf-base/normalize-variables";
@@ -27,7 +29,6 @@
 // Special settings for grid
 
 $grid-classes:										 false;
-$grid-friendly:								    false;
 
 @import "burf-base/grid/package";
 
