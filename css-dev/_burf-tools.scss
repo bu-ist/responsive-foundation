@@ -22,6 +22,7 @@
 
 @import "burf-base/config";
 @import "burf-base/mixins";
+@import "burf-base/normalize-variables";
 
 // Special settings for grid
 
@@ -34,3 +35,6 @@ $grid-classes:										 false;
 $print-icon-classes:                       false;
 
 @import "burf-base/icons/package";
+
+@import "burf-base/typography-variables";
+@import "burf-base/typography-tools";
