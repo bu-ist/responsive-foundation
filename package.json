@@ -1,9 +1,34 @@
 {
   "name": "responsive-foundation",
   "version": "2.1.11",
+  "homepage": "https://github.com/bu-ist/responsive-foundation",
+  "description": "A front-end framework for developing responsive sites at Boston University.",
+  "authors": [
+    "Mike Burns <mgburns@bu.edu>",
+    "Scott Dasse <sdasse@bu.edu>",
+    "Andy Rader <jarader@bu.edu>",
+    "Matt Fredenburg <malakhi@bu.edu>",
+    "Steve Rudolfi <srudolfi@bu.edu>",
+    "Eveleen Sung <eksung@bu.edu>",
+    "Inder Singh <isingh@bu.edu>",
+    "Ashley Kolodziej <kolodz10@bu.edu>",
+    "Jon Desroisers <jondes@bu.edu>",
+    "Tom Dodson <tdodson@bu.edu>"
+  ],
+  "keywords": [
+    "responsive",
+    "bu",
+    "foundation",
+    "bootstrap",
+    "framework"
+  ],
+  "private": true,
+  "dependencies": {
+    "mathsass": "^0.10.1",
+    "normalize-scss": "^7.0.1"
+  },
   "devDependencies": {
     "grunt": "~0.4.5",
-    "grunt-bower-task": "^0.4.0",
     "grunt-browser-sync": "^1.5.3",
     "grunt-contrib-concat": "^0.5.0",
     "grunt-contrib-copy": "^0.7.0",
