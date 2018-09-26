@@ -21,6 +21,16 @@ $widths: (
 	remove: 			0
 );
 
+/// Turns the friendly grid classes on or off. This is really only
+/// for the tools partial - you shouldn't use it in a custom theme
+/// unless you're VERY sure you will never need it. Placeholders will
+/// still work when this is set to false.
+/// @group grid
+/// @access public
+/// @since 2.1.11
+
+$grid-friendly:                                       true !default;
+
 /// Creates the friendly classes and placeholders.
 /// @example
 /// 		Make something take up 1/2 of available space starting at the small breakpoint:
@@ -29,22 +39,31 @@ $widths: (
 /// 			@extend %col-md-three-quarter;
 
 @each $width, $columns in $widths {
-	.col-#{$width},
 	%col-#{$width} {
 		@extend %col-#{$columns} !optional;
 	}
 
+	@if $grid-friendly {
+		.col-#{$width} {
+			@extend %col-#{$width} !optional;
+		}
+	}
+
 	@each $feature, $supported in $grid-supports {
 		@if $supported {
-			.col-#{$feature}-#{$width},
 			%col-#{$feature}-#{$width} {
 				@extend %col-#{$feature}-#{$columns} !optional;
+			}
+
+			@if $grid-friendly {
+				.col-#{$feature}-#{$width} {
+					@extend %col-#{$feature}-#{$width} !optional;
+				}
 			}
 		}
 	}
 
 	@each $bp-name, $bp-variable in $grid-breakpoints {
-		.col-#{$bp-name},
 		%col-#{$bp-name} {
 
 			&-#{$width} {
@@ -55,6 +74,22 @@ $widths: (
 				@if $supported {
 					&-#{$feature}-#{$width} {
 						@extend %col-#{$bp-name}-#{$feature}-#{$columns} !optional;
+					}
+				}
+			}
+		}
+
+		@if $grid-friendly {
+			.col-#{$bp-name} {
+				&-#{$width} {
+					@extend %col-#{$bp-name}-#{$width} !optional;
+				}
+
+				@each $feature, $supported in $grid-supports {
+					@if $supported {
+						&-#{$feature}-#{$width} {
+							@extend %col-#{$bp-name}-#{$feature}-#{$width} !optional;
+						}
 					}
 				}
 			}
