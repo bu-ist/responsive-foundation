@@ -33,8 +33,8 @@ $burf-extras:								       false;
 
 // Special settings for icons
 
-$use-default-icons:                        false;
-$print-icon-classes:                       false;
+$use-default-icons:                        false !default;
+$print-icon-classes:                       false !default;
 
 @import "burf-base/icons/base"; // Required
 @import "burf-base/icons/social"; // Required
