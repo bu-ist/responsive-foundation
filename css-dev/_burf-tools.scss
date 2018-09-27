@@ -20,7 +20,7 @@
 // Blah
 // =================================================================
 
-$burf-extras:								       false;
+$burf-extras:								       false !default;
 
 @import "burf-base/config";
 @import "burf-base/mixins";

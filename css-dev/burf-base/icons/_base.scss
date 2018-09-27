@@ -2,21 +2,6 @@
 // Dependencies
 // =================================================================
 
-@import "mixins";
-
-// =================================================================
-// Base Icon Styles
-// =================================================================
-
-/// Choose whether or not to use BU Default icons for icons in your
-/// stylesheet. By default, this option is set to true. Set to false
-/// to load your own icon font family.
-/// @group icons
-/// @access public
-/// @since 2.1.11
-
-$use-default-icons:                  true !default;
-
 @if $use-default-icons {
 	@font-face {
 		font-family: "bu-default-icons";
@@ -28,6 +13,12 @@ $use-default-icons:                  true !default;
 		font-style: normal;
 	}
 }
+
+@import "mixins";
+
+// =================================================================
+// Base Icon Styles
+// =================================================================
 
 /// Choose whether or not to print CSS classes for icons in your
 /// stylesheet. By default, this option is false for child themes,
