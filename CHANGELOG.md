@@ -3,6 +3,8 @@
 ## Unreleased
 
 * Fixed size and positioning of skip-link.
+* Migrate from Bower to npm for frontend dependencies
+* Add a new partial, `burf-tools`, for minimal uses of Foundation
 
 ## 2.1.11
 * Fixes an issue with external linking. This is a required update for all 2.0 themes.
