@@ -8,14 +8,25 @@
 // Base Icon Styles
 // =================================================================
 
-@font-face {
-	font-family: "bu-default-icons";
-	src: url( "//www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot?" ) format( "embedded-opentype" );
-	src: url( "//www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.woff" ) format( "woff" ),
-		url( "//www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.ttf" ) format( "truetype" ),
-		url( "//www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.svg#bu-default-icons" ) format( "svg" );
-	font-weight: normal;
-	font-style: normal;
+/// Choose whether or not to use BU Default icons for icons in your
+/// stylesheet. By default, this option is set to true. Set to false
+/// to load your own icon font family.
+/// @group icons
+/// @access public
+/// @since 2.1.11
+
+$use-default-icons:                  true !default;
+
+@if $use-default-icons {
+	@font-face {
+		font-family: "bu-default-icons";
+		src: url( "//www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot?" ) format( "embedded-opentype" );
+		src: url( "//www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.woff" ) format( "woff" ),
+			url( "//www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.ttf" ) format( "truetype" ),
+			url( "//www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.svg#bu-default-icons" ) format( "svg" );
+		font-weight: normal;
+		font-style: normal;
+	}
 }
 
 /// Choose whether or not to print CSS classes for icons in your
