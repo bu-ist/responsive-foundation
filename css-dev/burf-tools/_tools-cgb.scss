@@ -1,5 +1,12 @@
 // =================================================================
 //
+// BURF Tools (No load path dependencies)
+//
+// Use this version when you don't have loadPath or importPath
+// available to you. You will need a loader that supports ~ as a
+// shortcut to the node_modules directory. Luckily, it's
+// well-supported, according to Dakota!
+//
 // A partial for those who only want the very basic of basics. Only
 // mixins and placeholders are supported in this partial, and only
 // pieces which are used will print. Useful for plugin development
@@ -14,7 +21,7 @@
 // Dependencies
 // =================================================================
 
-@import "node_modules/mathsass/dist/math";
+@import "~mathsass/dist/math";
 
 // =================================================================
 // Blah
