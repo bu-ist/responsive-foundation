@@ -29,37 +29,37 @@
 
 $burf-extras:								       false !default;
 
-@import "burf-base/config";
-@import "burf-base/mixins";
-@import "burf-base/normalize-variables";
+@import "~responsive-foundation/css-dev/burf-base/config";
+@import "~responsive-foundation/css-dev/burf-base/mixins";
+@import "~responsive-foundation/css-dev/burf-base/normalize-variables";
 
-@import "burf-base/grid/grid-variables";
-@import "burf-base/grid/grid-mixins";
-@import "burf-base/grid/grid-placeholders";
-@import "burf-base/grid/grid-friendly";
+@import "~responsive-foundation/css-dev/burf-base/grid/grid-variables";
+@import "~responsive-foundation/css-dev/burf-base/grid/grid-mixins";
+@import "~responsive-foundation/css-dev/burf-base/grid/grid-placeholders";
+@import "~responsive-foundation/css-dev/burf-base/grid/grid-friendly";
 
 // Special settings for icons
 
 $use-default-icons:                        false !default;
 $print-icon-classes:                       false !default;
 
-@import "burf-base/icons/base"; // Required
-@import "burf-base/icons/social"; // Required
-@import "burf-base/icons/actions"; // Required
-@import "burf-base/icons/arrows";
-@import "burf-base/icons/charts";
-@import "burf-base/icons/communication";
-@import "burf-base/icons/documents";
-@import "burf-base/icons/ecommerce";
-@import "burf-base/icons/editing";
-@import "burf-base/icons/location";
-@import "burf-base/icons/media";
-@import "burf-base/icons/objects";
-@import "burf-base/icons/status";
-@import "burf-base/icons/technology";
-@import "burf-base/icons/time";
-@import "burf-base/icons/transportation";
-@import "burf-base/icons/ui";
+@import "~responsive-foundation/css-dev/burf-base/icons/base"; // Required
+@import "~responsive-foundation/css-dev/burf-base/icons/social"; // Required
+@import "~responsive-foundation/css-dev/burf-base/icons/actions"; // Required
+@import "~responsive-foundation/css-dev/burf-base/icons/arrows";
+@import "~responsive-foundation/css-dev/burf-base/icons/charts";
+@import "~responsive-foundation/css-dev/burf-base/icons/communication";
+@import "~responsive-foundation/css-dev/burf-base/icons/documents";
+@import "~responsive-foundation/css-dev/burf-base/icons/ecommerce";
+@import "~responsive-foundation/css-dev/burf-base/icons/editing";
+@import "~responsive-foundation/css-dev/burf-base/icons/location";
+@import "~responsive-foundation/css-dev/burf-base/icons/media";
+@import "~responsive-foundation/css-dev/burf-base/icons/objects";
+@import "~responsive-foundation/css-dev/burf-base/icons/status";
+@import "~responsive-foundation/css-dev/burf-base/icons/technology";
+@import "~responsive-foundation/css-dev/burf-base/icons/time";
+@import "~responsive-foundation/css-dev/burf-base/icons/transportation";
+@import "~responsive-foundation/css-dev/burf-base/icons/ui";
 
-@import "burf-base/typography-variables";
-@import "burf-base/typography-tools";
+@import "~responsive-foundation/css-dev/burf-base/typography-variables";
+@import "~responsive-foundation/css-dev/burf-base/typography-tools";
