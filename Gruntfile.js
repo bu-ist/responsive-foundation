@@ -82,8 +82,6 @@ module.exports = function(grunt) {
 				options: {
 					style: 'compressed',
 					loadPath: [
-						'bower_components/normalize.scss/sass',
-						'bower_components/mathsass/dist/',
 						'css-dev'
 					],
 				},

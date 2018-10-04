@@ -4,7 +4,8 @@
 
 // dependencies and resets
 @import "normalize/import-now";
-@import "math";
+@import "node_modules/normalize-scss/sass/normalize/import-now";
+@import "node_modules/mathsass/dist/_math";
 
 // Utilities
 @import "burf-base/config";
