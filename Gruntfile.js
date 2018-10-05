@@ -163,7 +163,25 @@ module.exports = function(grunt) {
 					'wp-admin': 'WordPress Admin',
 				},
 			},
-		}
+		},
+		kss: {
+			options: {
+				title: 'Responsive Foundation Style Guide',
+				builder: 'node_modules/id-kss-builder',
+				css: [
+				  "docs/css/docs.css",
+				],
+				extend: 'node_modules/id-kss-builder/extend',
+				gitURL: 'https://github.com/bu-ist/responsive-foundation/',
+				gitURLCSSDEV: 'https://github.com/bu-ist/responsive-foundation/tree/master/css-dev'
+			},
+			dist: {
+				src: [
+					'css-dev'
+				],
+				dest: '_styleguide'
+			}
+		},
 	});
 
 	grunt.loadNpmTasks('grunt-browser-sync');
