@@ -1,6 +1,11 @@
 # Changelog
 
-## Unreleased
+## 3.0.0
+
+* NPM all the things!
+* Remove Bower.
+
+## 2.1.12
 
 * Fixed size and positioning of skip-link.
 
