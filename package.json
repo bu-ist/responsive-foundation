@@ -1,6 +1,6 @@
 {
   "name": "responsive-foundation",
-  "version": "2.1.11",
+  "version": "2.1.12",
   "homepage": "https://github.com/bu-ist/responsive-foundation",
   "description": "A front-end framework for developing responsive sites at Boston University.",
   "authors": [
@@ -13,7 +13,8 @@
     "Inder Singh <isingh@bu.edu>",
     "Ashley Kolodziej <kolodz10@bu.edu>",
     "Jon Desroisers <jondes@bu.edu>",
-    "Tom Dodson <tdodson@bu.edu>"
+    "Tom Dodson <tdodson@bu.edu>",
+    "Alana Martin <alanam@bu.edu>"
   ],
   "keywords": [
     "responsive",
