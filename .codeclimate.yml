@@ -4,7 +4,6 @@ exclude_paths:
 - node_modules/
 - languages/
 - vendor/
-- bower_components/
 - js/vendor/
 - ".sass-cache/"
 - "*.min.css"
