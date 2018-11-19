@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.0.1
+
+* Correct paths from bower_components to node_modules.
+* Remove additional bower references.
+
 ## 3.0.0
 
 * NPM all the things!
