@@ -82,19 +82,14 @@ module.exports = function(grunt) {
 				options: {
 					style: 'compressed',
 					loadPath: [
-						'bower_components/normalize.scss/sass',
-						'bower_components/mathsass/dist/',
+						'node_modules/normalize-scss/sass',
+						'node_modules/mathsass/dist/',
 						'css-dev'
 					],
 				},
 				files: {
 					'docs/css/docs.css': '_docs/css-dev/docs.scss',
 				}
-			}
-		},
-		version: {
-			bower: {
-				src: ['bower.json']
 			}
 		},
 		watch: {
@@ -157,7 +152,6 @@ module.exports = function(grunt) {
 	});
 
 	grunt.loadNpmTasks('grunt-browser-sync');
-	grunt.loadNpmTasks('grunt-bower-task');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-sass');
