@@ -1,6 +1,25 @@
 # Changelog
 
-## Unreleased
+## 3.0.2 (Planned)
+
+* Fixes skip link issues [#173](https://github.com/bu-ist/responsive-foundation/issues/173)
+* Fixes a spacing issue with hidden page titles [#174](https://github.com/bu-ist/responsive-foundation/issues/174)
+* Adds variable to control gallery margin [#174](https://github.com/bu-ist/responsive-foundation/issues/174)
+* Fixes [#103](https://github.com/bu-ist/responsive-foundation/issues/103)
+* Fixes [#97](https://github.com/bu-ist/responsive-foundation/issues/97) with new `$padding-banner` and `$padding-banner-window-width` variables
+* Fixes [#84](https://github.com/bu-ist/responsive-foundation/issues/84)
+
+## 3.0.1
+
+* Correct paths from bower_components to node_modules.
+* Remove additional bower references.
+
+## 3.0.0
+
+* NPM all the things!
+* Remove Bower.
+
+## 2.1.12
 
 * Fixed size and positioning of skip-link.
 * Migrate from Bower to npm for frontend dependencies

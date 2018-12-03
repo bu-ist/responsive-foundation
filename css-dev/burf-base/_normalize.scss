@@ -30,18 +30,6 @@ html {
 	-moz-osx-font-smoothing: grayscale; // Normalizes font rendering in Firefox
 }
 
-/// Base styles and typography for all HTML elements.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
-
-body {
-	color: $color-base;
-	font-family: $font-family-base;
-	font-size: $font-size-base;
-	line-height: $line-height-base;
-}
-
 /// Controls spacing between section tags.
 /// @group 01-config
 /// @access public
@@ -59,23 +47,3 @@ figure {
 	height: auto;
 	max-width: 100%;
 }
-
-/// Adds a default icon for links which open
-/// in a new window or tab. This pattern may
-/// also be used for external links.
-/// @group 01-config
-/// @access public
-/// @since 2.1.0
-/// TODO: This needs further testing with Hub course indicator.
-
-/*a {
-	&[target="_blank"],
-	&[target="_new"] {
-		@include icon( 'redirect', 'after' );
-
-		&:after {
-			font-size: 0.6em;
-			vertical-align: text-top;
-		}
-	}
-}*/

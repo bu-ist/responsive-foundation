@@ -8,6 +8,18 @@
 // Typography Styles
 // =================================================================
 
+/// Base styles and typography for all HTML elements.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+body {
+	color: $color-base;
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+}
+
 // Links
 // -----------------------------------------------------------------
 
