@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.2 (Planned)
+
+* Fixes skip link issues [#173](https://github.com/bu-ist/responsive-foundation/issues/173)
+
 ## 3.0.1
 
 * Correct paths from bower_components to node_modules.
