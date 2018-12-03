@@ -1007,6 +1007,24 @@ $no-nav-desktop:                    $nav-desktop !default;
 // mega nav
 
 .l-mega-nav {
+	.brand {
+		display: flex;
+		align-items: center;
+	}
+
+	.brand-container {
+		flex-basis: 33%;
+		min-width: 250px;
+		max-width: 350px;
+		top: auto;
+		transform: translateY(0);
+	}
+
+	.nav-toggle {
+		display: block;
+		width: auto;
+	}
+
 	.primary-nav-menu {
 		display: flex;
 		flex-wrap: wrap;
@@ -1026,6 +1044,19 @@ $no-nav-desktop:                    $nav-desktop !default;
 			position: static;
 			width: auto;
 		}
+	}
+}
+
+.short-nav {
+	display: flex;
+	margin-left: auto;
+
+	ul {
+		list-style-type: none;
+	}
+
+	li {
+		display: inline-block;
 	}
 }
 
