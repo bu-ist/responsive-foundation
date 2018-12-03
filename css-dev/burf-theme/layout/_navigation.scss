@@ -1004,6 +1004,31 @@ $no-nav-desktop:                    $nav-desktop !default;
 
 }
 
+// mega nav
+
+.l-mega-nav {
+	.primary-nav-menu {
+		display: flex;
+		flex-wrap: wrap;
+
+		> li {
+			flex-basis: 20%;
+			min-width: 250px;
+
+			li a {
+				font-weight: 400;
+				padding: 0;
+			}
+		}
+
+		ul {
+			left: auto;
+			position: static;
+			width: auto;
+		}
+	}
+}
+
 // Adjusts the appearance of the skip link; Styled to match the default WordPress screen reader text
 
 .skip-link {
