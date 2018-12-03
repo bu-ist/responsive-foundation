@@ -10,6 +10,21 @@
 
 $color-banner-container:                    $color-grayscale-f0 !default;
 
+/// Controls the padding on the banner container.
+/// @group 09-content
+/// @access public
+/// @since 3.0.2
+
+$padding-banner:                                              0 !default;
+
+/// Controls the padding on the banner container when using
+/// the window-width layout.
+/// @group 09-content
+/// @access public
+/// @since 3.0.2
+
+$padding-banner-window-width:                    $padding-small !default;
+
 // =================================================================
 // Content Banner Styles
 // =================================================================
@@ -38,7 +53,7 @@ $color-banner-container:                    $color-grayscale-f0 !default;
 .banner-container-window-width {
 	@include breakpoint( $lg ) {
 		background: $color-banner-container;
-		padding: $padding-small;
+		padding: $padding-banner-window-width;
 	}
 }
 

@@ -6,6 +6,7 @@
 * Fixes a spacing issue with hidden page titles [#174](https://github.com/bu-ist/responsive-foundation/issues/174)
 * Adds variable to control gallery margin [#174](https://github.com/bu-ist/responsive-foundation/issues/174)
 * Fixes [#103](https://github.com/bu-ist/responsive-foundation/issues/103)
+* Fixes [#97](https://github.com/bu-ist/responsive-foundation/issues/97)
 
 ## 3.0.1
 
