@@ -5,7 +5,7 @@
 /// A helper variable to control the number of columns a gallery
 /// supports in our WordPress environment.
 /// @group 09-content
-/// @access priavte
+/// @access private
 /// @since 1.4.0
 
 $_wp-supported-gallery-columns: 												9;
@@ -13,7 +13,6 @@ $_wp-supported-gallery-columns: 												9;
 /// A variable which controls the color of overlays on photo hover
 /// in WordPress galleries.
 /// @group content
-/// @access priavte
 /// @since 2.0.0
 
 $color-gallery-overlay:   rgba( $color-grayscale-0, 0.75 ) !default;
@@ -21,8 +20,7 @@ $color-gallery-overlay:   rgba( $color-grayscale-0, 0.75 ) !default;
 /// A variable which controls the margin around photos
 /// in WordPress galleries.
 /// @group content
-/// @access priavte
-/// @since 2.0.0
+/// @since 3.0.2
 
 $margin-gallery: 													10px !default;
 
