@@ -342,7 +342,8 @@ body {
 		@extend %icon-vine;
 	}
 
-	[href*="youtube.com"] {
+	[href*="youtube.com"],
+	[href*="bu.edu/buniverse"] {
 		@extend %icon-youtube;
 	}
 }
