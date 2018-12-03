@@ -1,7 +1,8 @@
 # Changelog
 
-## 3.0.2 (Planned)
+## 3.1.0 (Planned)
 
+* Add a new partial, `burf-tools`, for minimal uses of Foundation
 * Fixes skip link issues [#173](https://github.com/bu-ist/responsive-foundation/issues/173)
 * Fixes a spacing issue with hidden page titles [#174](https://github.com/bu-ist/responsive-foundation/issues/174)
 * Adds variable to control gallery margin [#174](https://github.com/bu-ist/responsive-foundation/issues/174)
@@ -23,7 +24,6 @@
 
 * Fixed size and positioning of skip-link.
 * Migrate from Bower to npm for frontend dependencies
-* Add a new partial, `burf-tools`, for minimal uses of Foundation
 
 ## 2.1.11
 * Fixes an issue with external linking. This is a required update for all 2.0 themes.
