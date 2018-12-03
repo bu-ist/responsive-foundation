@@ -82,8 +82,6 @@ module.exports = function(grunt) {
 				options: {
 					style: 'compressed',
 					loadPath: [
-						'bower_components/normalize.scss/sass',
-						'bower_components/mathsass/dist/',
 						'css-dev'
 					],
 				},
@@ -157,7 +155,6 @@ module.exports = function(grunt) {
 	});
 
 	grunt.loadNpmTasks('grunt-browser-sync');
-	grunt.loadNpmTasks('grunt-bower-task');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-sass');
