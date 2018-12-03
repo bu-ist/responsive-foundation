@@ -3,6 +3,7 @@
 ## 3.0.2 (Planned)
 
 * Fixes skip link issues [#173](https://github.com/bu-ist/responsive-foundation/issues/173)
+* Fixes a spacing issue with hidden page titles [#174](https://github.com/bu-ist/responsive-foundation/issues/174)
 
 ## 3.0.1
 
