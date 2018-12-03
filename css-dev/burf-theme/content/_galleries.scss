@@ -8,7 +8,7 @@
 /// @access priavte
 /// @since 1.4.0
 
-$_wp-supported-gallery-columns: 9;
+$_wp-supported-gallery-columns: 												9;
 
 /// A variable which controls the color of overlays on photo hover
 /// in WordPress galleries.
@@ -16,7 +16,15 @@ $_wp-supported-gallery-columns: 9;
 /// @access priavte
 /// @since 2.0.0
 
-$color-gallery-overlay: rgba( $color-grayscale-0, 0.75 ) !default;
+$color-gallery-overlay:   rgba( $color-grayscale-0, 0.75 ) !default;
+
+/// A variable which controls the margin around photos
+/// in WordPress galleries.
+/// @group content
+/// @access priavte
+/// @since 2.0.0
+
+$margin-gallery: 													10px !default;
 
 // =================================================================
 // Gallery Styles
@@ -31,7 +39,7 @@ $color-gallery-overlay: rgba( $color-grayscale-0, 0.75 ) !default;
 	@extend %clearfix;
 	display: flex;
 	flex-wrap: wrap;
-	margin-right: -10px;
+	margin-right: -$margin-gallery;
 
 	.gallery-icon {
 		height: 100%;
@@ -59,9 +67,9 @@ $color-gallery-overlay: rgba( $color-grayscale-0, 0.75 ) !default;
 /// @since 1.4.0
 
 .gallery-item {
-	border-right: 10px solid transparent;
+	border-right: $margin-gallery solid transparent;
 	float: left;
-	margin-bottom: 10px;
+	margin-bottom: $margin-gallery;
 	overflow: hidden;
 	position: relative;
 	width: 33.33%;
@@ -167,7 +175,7 @@ $color-gallery-overlay: rgba( $color-grayscale-0, 0.75 ) !default;
 	color: $color-grayscale-f;
 	display: none;
 	left: 0;
-	margin-right: 10px;
+	margin-right: $margin-gallery;
 	padding: 1em;
 	position: absolute;
 	width: 100%;
@@ -227,7 +235,7 @@ $color-gallery-overlay: rgba( $color-grayscale-0, 0.75 ) !default;
 
 	// Required to override plugin CSS
 	.lg-outer .lg-thumb-outer & {
-		padding: 5px 10px 0 14px;
+		padding: 5px $margin-gallery 0 14px;
 		width: auto;
 	}
 }
