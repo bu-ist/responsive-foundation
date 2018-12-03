@@ -512,6 +512,10 @@ $_h: $_depth-headings;
 		font-size: 0.75em;
 		font-weight: normal;
 	}
+
+	.page-title.u-visually-hidden + & {
+		margin-top: 0;
+	}
 }
 
 /// Styles for all h1 tags.
