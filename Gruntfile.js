@@ -22,24 +22,13 @@ module.exports = function(grunt) {
 		browserSync: {
 			current: {
 				bsFiles: {
-					src : [
-						docsVersionFilePath + '/css/*.css',
-						docsVersionFilePath + '/*.html'
-					]
+					src : '_styleguide/*.html'
 				},
 				options: {
 					watchTask: true,
 					server: {
-						baseDir: docsVersionFilePath
-					},
-					plugins: [
-						{
-						module: 'bs-html-injector',
-							options: {
-								files: docsVersionFilePath + '/*.html'
-							}
-						}
-					]
+						baseDir: "./_styleguide"
+					}
 				}
 			},
 			all: {
@@ -192,9 +181,10 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-gh-pages');
 	grunt.loadNpmTasks('grunt-sassdoc');
+	grunt.loadNpmTasks('grunt-kss');
 	grunt.loadNpmTasks('grunt-version');
 
-	grunt.registerTask('build', ['bower:install', 'sassdoc']);
+	grunt.registerTask('build', ['bower:install', 'kss', 'sassdoc']);
 	grunt.registerTask('deploy', ['build', 'gh-pages']);
 	grunt.registerTask('serve', ['build', 'browserSync:current', 'watch']);
 	grunt.registerTask('previewall', ['build', 'browserSync:all', 'watch']);
