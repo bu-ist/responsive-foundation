@@ -140,10 +140,16 @@ $border-widget-list:                       $border !default;
 			color: $color-widget-link-hover;
 		}
 
+		&.button,
+		&.button:hover,
+		&.button:focus {
+			color: $color-button-text;
+		}
+
 		&.button-primary,
 		&.button-primary:hover,
 		&.button-primary:focus {
-			color: $color-grayscale-f;
+			color: $color-button-primary-text;
 		}
 	}
 
