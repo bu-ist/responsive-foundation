@@ -1020,9 +1020,19 @@ $no-nav-desktop:                    $nav-desktop !default;
 		transform: translateY(0);
 	}
 
+	.site-description {
+		@extend %visually-hidden;
+	}
+
 	.nav-toggle {
 		display: block;
 		width: auto;
+	}
+
+	.nav-toggle-label-closed,
+	.nav-toggle-label-open {
+		text-align: left;
+		text-indent: 0;
 	}
 
 	.primary-nav-menu {
@@ -1048,8 +1058,11 @@ $no-nav-desktop:                    $nav-desktop !default;
 }
 
 .short-nav {
+	align-items: center;
 	display: flex;
 	margin-left: auto;
+	top: auto;
+	transform: translateY(0);
 
 	ul {
 		list-style-type: none;
@@ -1057,6 +1070,10 @@ $no-nav-desktop:                    $nav-desktop !default;
 
 	li {
 		display: inline-block;
+	}
+
+	a {
+		padding: $padding-small;
 	}
 }
 
