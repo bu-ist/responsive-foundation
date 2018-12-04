@@ -2,6 +2,9 @@
 
 ## 3.1.0 (Planned)
 
+* Replaces `grunt-contrib-sass` with `grunt-sass` (uses `node-sass` under the hood)
+* Uses full path to node modules depenencies, rather than depending on loadPath
+* Small bugfixes when trying to compile sass locally in this repo, due to incorrect paths.
 * Add a new partial, `burf-tools`, for minimal uses of Foundation
 * Fixes skip link issues [#173](https://github.com/bu-ist/responsive-foundation/issues/173)
 * Fixes a spacing issue with hidden page titles [#174](https://github.com/bu-ist/responsive-foundation/issues/174)
