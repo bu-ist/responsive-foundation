@@ -88,11 +88,6 @@ module.exports = function(grunt) {
 			docs: {
 				options: {
 					style: 'compressed',
-					loadPath: [
-						'node_modules/normalize-scss/sass',
-						'node_modules/mathsass/dist/',
-						'css-dev'
-					],
 				},
 				files: {
 					'docs/css/docs.css': '_docs/css-dev/docs.scss',
