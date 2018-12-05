@@ -1035,6 +1035,10 @@ $no-nav-desktop:                    $nav-desktop !default;
 		text-indent: 0;
 	}
 
+	.primary-nav {
+		padding: $padding;
+	}
+
 	.primary-nav-menu {
 		display: flex;
 		flex-wrap: wrap;
@@ -1053,6 +1057,15 @@ $no-nav-desktop:                    $nav-desktop !default;
 			left: auto;
 			position: static;
 			width: auto;
+		}
+	}
+
+	.utility-nav {
+		text-align: center;
+		margin: $margin;
+
+		a {
+			color: $color-primary-nav-link;
 		}
 	}
 }
