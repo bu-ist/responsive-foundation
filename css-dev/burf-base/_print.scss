@@ -79,6 +79,15 @@
     font-style: italic;
   }
 
+  blockquote:before {
+    content: '' !important;
+    margin: 0 !important;
+  }
+
+  blockquote > p:first-of-type {
+    margin: 0 !important;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     page-break-after: avoid;
     page-break-inside: avoid;
@@ -106,28 +115,34 @@
   }
 
   a {
-      page-break-inside: avoid;
+    page-break-inside: avoid;
   }
 
   article a {
-      font-weight: bolder;
-      text-decoration: none;
+    font-weight: bolder;
+    text-decoration: none;
    }
 
   a[href^=http]:after {
-        content:" <" attr(href) "> ";
+    content:" <" attr(href) "> ";
   }
+
+  a[href*="mailto:"]:after {
+    content:" (" attr(href) ") ";
+    color: $color-grayscale-0;
+    font-size:14px;
+  }
+
 
   a:after > img {
      content: "";
   }
 
-  article a[href^="#"]:after,
   a[href*="bu.edu"]:after {
      content: "";
   }
 
-  /** Restore Wordpress alignright, alignleft, aligncenter */
+  /** Restore Wordpress alignright, alignleft, aligncenter classes */
 
   .alignleft {
     float: left;
@@ -191,8 +206,9 @@
   .edit-link,
   button,
   .button,
-  .button-primary
-  {
+  .button-primary,
+  .bu-slideshow-container,
+  article a[href^="#"] {
     display: none !important;
   }
 
@@ -202,16 +218,13 @@
     content: '';
   }
 
-  /* Insert custom messages after content */
-  /* NOTE: Should we move this below the masterplate and have it be a hidden php insert instead? */
+  /* Insert copyright after content */
 
-  .content-container:after {
-    content: "\ All rights reserved. (c) 2018 Boston University - bu.edu";
-    color: $color-heading-small !important;
-    font-size: 1em;
-    padding-top: 30px;
-    text-align: center;
+  .bu_copyright {
+    display: block;
     margin: 0 auto;
+    text-align: center;
+    font-size: 11pt;
   }
 
   /* remove background color from footer */
