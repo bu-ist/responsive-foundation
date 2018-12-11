@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
 	// Require external packages.
-	const sass = require('node-sass');
+	var sass = require('node-sass');
 
 	// Set up a versioned folder for SassDoc
 	var pkg = require('./package.json'),
