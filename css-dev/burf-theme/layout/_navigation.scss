@@ -1035,8 +1035,16 @@ $no-nav-desktop:                    $nav-desktop !default;
 		text-indent: 0;
 	}
 
+	.nav-toggle-label-closed {
+		@extend %icon-search;
+	}
+
+	.nav-toggle-label-open {
+		@extend %icon-delete;
+	}
+
 	.primary-nav {
-		padding: $padding;
+		padding: $padding-large;
 	}
 
 	.primary-nav-menu {
@@ -1044,8 +1052,18 @@ $no-nav-desktop:                    $nav-desktop !default;
 		flex-wrap: wrap;
 
 		> li {
+			border-left: 1px solid currentColor;
 			flex-basis: 20%;
 			min-width: 250px;
+			position: relative;
+
+			&::after {
+				bottom: 0;
+				content: "";
+				display: block;
+				border-bottom: 1px solid currentColor;
+				position: absolute;
+			}
 
 			li a {
 				font-weight: 400;
