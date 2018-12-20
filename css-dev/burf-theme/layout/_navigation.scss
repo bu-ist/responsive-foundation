@@ -1035,6 +1035,18 @@ $no-nav-desktop:                    $nav-desktop !default;
 		text-indent: 0;
 	}
 
+	.nav-toggle-label-open {
+		display: none;
+	}
+
+	.is-open .nav-toggle-label-open {
+		display: block;
+	}
+
+	.is-open .nav-toggle-label-closed {
+		display: none;
+	}
+
 	.nav-toggle-label-closed {
 		@extend %icon-search;
 	}
@@ -1066,10 +1078,17 @@ $no-nav-desktop:                    $nav-desktop !default;
 		display: flex;
 		flex-wrap: wrap;
 		padding: $padding-large;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include breakpoint( $xl ) {
+			max-width: $xl;
+		}
 
 		> li {
 			border-left: 1px solid currentColor;
 			flex-basis: 20%;
+			margin-bottom: $margin;
 			min-width: 250px;
 			position: relative;
 
@@ -1096,7 +1115,8 @@ $no-nav-desktop:                    $nav-desktop !default;
 
 	.utility-nav {
 		text-align: center;
-		margin: $margin;
+		margin: $margin-large;
+		margin-top: 0;
 
 		a {
 			color: $color-primary-nav-link;
