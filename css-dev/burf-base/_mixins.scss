@@ -712,7 +712,7 @@
 		@error 'The breakpoint shortcut "#{$point}" is no longer supported as of Responsive 2.0. \a Use the direct breakpoint variable ($#{$point}) instead. \a If want to use max-width, write a plain @media query.';
 	}
 	@if ( $mqs ) {
-		@media screen and ( min-width: $point ) {
+		@media ( min-width: $point ) {
 			@content;
 		}
 	} @else {
