@@ -1044,12 +1044,28 @@ $no-nav-desktop:                    $nav-desktop !default;
 	}
 
 	.primary-nav {
+		height: 0;
+		padding: 0;
+
+		&.is-open {
+			height: auto;
+		}
+	}
+
+	.is-open #quicksearch {
+		display: block;
+	}
+
+	#quicksearch {
+		background: transparent;
 		padding: $padding-large;
+		padding-bottom: 0;
 	}
 
 	.primary-nav-menu {
 		display: flex;
 		flex-wrap: wrap;
+		padding: $padding-large;
 
 		> li {
 			border-left: 1px solid currentColor;
