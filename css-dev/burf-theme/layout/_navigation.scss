@@ -1004,6 +1004,29 @@ $no-nav-desktop:                    $nav-desktop !default;
 
 }
 
+/// The background color of the mega nav menu toggle.
+/// @group navigation
+/// @access public
+/// @since 3.0.2
+
+$color-mega-nav-toggle-bg: $color-button-bg;
+
+/// The text color of the mega nav menu toggle.
+/// @group navigation
+/// @access public
+/// @since 3.0.2
+
+$color-mega-nav-toggle-text: $color-button-text;
+
+/// The number of columns to use in the mega navigation
+/// menu. If there are fewer nav items than this number
+/// in the first row, they will stretch
+/// @group navigation
+/// @access public
+/// @since 3.0.2
+
+$mega-nav-columns: 5;
+
 // mega nav
 
 .l-mega-nav {
@@ -1022,37 +1045,6 @@ $no-nav-desktop:                    $nav-desktop !default;
 
 	.site-description {
 		@extend %visually-hidden;
-	}
-
-	.nav-toggle {
-		display: block;
-		width: auto;
-	}
-
-	.nav-toggle-label-closed,
-	.nav-toggle-label-open {
-		text-align: left;
-		text-indent: 0;
-	}
-
-	.nav-toggle-label-open {
-		display: none;
-	}
-
-	.is-open .nav-toggle-label-open {
-		display: block;
-	}
-
-	.is-open .nav-toggle-label-closed {
-		display: none;
-	}
-
-	.nav-toggle-label-closed {
-		@extend %icon-search;
-	}
-
-	.nav-toggle-label-open {
-		@extend %icon-delete;
 	}
 
 	.primary-nav {
@@ -1087,7 +1079,7 @@ $no-nav-desktop:                    $nav-desktop !default;
 
 		> li {
 			border-left: 1px solid currentColor;
-			flex-basis: 20%;
+			flex-basis: 100% / $mega-nav-columns;
 			margin-bottom: $margin;
 			min-width: 250px;
 			position: relative;
@@ -1103,6 +1095,10 @@ $no-nav-desktop:                    $nav-desktop !default;
 			li a {
 				font-weight: 400;
 				padding: 0;
+			}
+
+			&:nth-child( -n + #{$mega-nav-columns} ) {
+				flex-grow: 1;
 			}
 		}
 
@@ -1121,6 +1117,45 @@ $no-nav-desktop:                    $nav-desktop !default;
 		a {
 			color: $color-primary-nav-link;
 		}
+	}
+}
+
+.mega-nav-toggle {
+	background: $color-mega-nav-toggle-bg;
+	color: $color-mega-nav-toggle-text;
+	display: block;
+	height: auto;
+	width: auto;
+
+	.nav-toggle-label-closed,
+	.nav-toggle-label-open {
+		overflow: hidden;
+		text-align: center;
+		text-indent: 0;
+
+		&::before {
+			margin-top: -3px;
+		}
+	}
+
+	.nav-toggle-label-open {
+		height: 0;
+	}
+
+	&.is-open .nav-toggle-label-open {
+		height: auto;
+	}
+
+	&.is-open .nav-toggle-label-closed {
+		height: 0;
+	}
+
+	.nav-toggle-label-closed {
+		@extend %icon-search;
+	}
+
+	.nav-toggle-label-open {
+		@extend %icon-delete;
 	}
 }
 
