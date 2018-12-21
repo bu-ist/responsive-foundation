@@ -134,7 +134,7 @@ $color-icons:										 unset !default;
 		@if $use-extend == false {
 			@include icon-content;
 
-			@if $content == "before" {
+			@if $position == "before" {
 				margin-right: 0.5em;
 			} @else {
 				margin-left: 0.5em;
