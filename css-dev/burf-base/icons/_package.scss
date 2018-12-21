@@ -1,20 +1,7 @@
-@import "burf-base/icons/base"; // Required
-/*@import "burf-base/icons/social"; // Required
-@import "burf-base/icons/actions"; // Required
-@import "burf-base/icons/arrows";
-@import "burf-base/icons/charts";
-@import "burf-base/icons/communication";
-@import "burf-base/icons/documents";
-@import "burf-base/icons/ecommerce";
-@import "burf-base/icons/editing";
-@import "burf-base/icons/location";
-@import "burf-base/icons/media";
-@import "burf-base/icons/objects";
-@import "burf-base/icons/status";
-@import "burf-base/icons/technology";
-@import "burf-base/icons/time";
-@import "burf-base/icons/transportation";
-@import "burf-base/icons/ui";*/
+@import "burf-base/icons/base";
+
+/// Generates the icon placeholders and classes
+/// based off the $icons-responsive Sass map.
 
 @each $name, $content in $icons-responsive {
 	%icon-#{$name} {
