@@ -1,3 +1,11 @@
+/// Controls the placement of icon content globally
+/// in placeholders and default icon classes.
+/// @group icons
+/// @access public
+/// @since 3.0.2
+
+$icons-positioning: "before" !default;
+
 @import "burf-base/icons/base";
 
 /// Generates the icon placeholders and classes
@@ -5,7 +13,7 @@
 
 @each $name, $content in $icons-responsive {
 	%icon-#{$name} {
-		@include icon( $name, "before", true );
+		@include icon( $name, $icons-positioning, true );
 	}
 
 	@if $print-icon-classes {
