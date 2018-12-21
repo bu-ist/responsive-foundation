@@ -118,12 +118,23 @@ $color-icons:										 unset !default;
 /// @access public
 /// @since 2.0.0
 
-@mixin icon( $name, $position: "before" ) {
-	@extend %icon-content-#{$position};
+@mixin icon( $name, $position: "before", $use-extend: false ) {
 	@include icon-base;
 	$content: map-get( $icons-responsive, $name );
 
+	@if $use-extend {
+		@extend %icon-content-#{$position};
+	}
+
 	&::#{$position} {
+		@if $use-extend == false {
+			@if $content == "before" {
+				margin-right: 0.5em;
+			} @else {
+				margin-left: 0.5em;
+			}
+		}
+
 		@if $content {
 			content: $content;
 		} @else {
