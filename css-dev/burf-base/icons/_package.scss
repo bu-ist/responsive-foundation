@@ -5,7 +5,7 @@
 
 @each $name, $content in $icons-responsive {
 	%icon-#{$name} {
-		@include icon( $name, "before", false );
+		@include icon( $name, "before", true );
 	}
 
 	@if $print-icon-classes {
