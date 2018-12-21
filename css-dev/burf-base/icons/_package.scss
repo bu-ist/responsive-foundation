@@ -1,5 +1,5 @@
 @import "burf-base/icons/base"; // Required
-@import "burf-base/icons/social"; // Required
+/*@import "burf-base/icons/social"; // Required
 @import "burf-base/icons/actions"; // Required
 @import "burf-base/icons/arrows";
 @import "burf-base/icons/charts";
@@ -14,10 +14,16 @@
 @import "burf-base/icons/technology";
 @import "burf-base/icons/time";
 @import "burf-base/icons/transportation";
-@import "burf-base/icons/ui";
+@import "burf-base/icons/ui";*/
 
 @each $name, $content in $icons-responsive {
 	%icon-#{$name} {
 		@include icon( $name );
+	}
+
+	@if $print-icon-classes {
+		.icon-#{$name} {
+			@extend %icon-#{$name};
+		}
 	}
 }
