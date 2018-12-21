@@ -1025,7 +1025,16 @@ $color-mega-nav-toggle-text: $color-button-text;
 /// @access public
 /// @since 3.0.2
 
-$mega-nav-columns: 5;
+$mega-nav-columns: 3;
+
+/// The number of columns to use in the mega navigation
+/// menu on desktop. If there are fewer nav items than this
+/// in the first row, they will stretch
+/// @group navigation
+/// @access public
+/// @since 3.0.2
+
+$mega-nav-columns-desktop: 5;
 
 // mega nav
 
@@ -1062,27 +1071,46 @@ $mega-nav-columns: 5;
 
 	#quicksearch {
 		background: transparent;
-		padding: $padding-large;
+		padding: $padding;
 		padding-bottom: 0;
+
+		@include breakpoint( $md ) {
+			padding: $padding-large;
+			padding-bottom: 0;
+		}
 	}
 
 	.primary-nav-menu {
 		display: flex;
 		flex-wrap: wrap;
-		padding: $padding-large;
+		padding: $padding;
 		margin-left: auto;
 		margin-right: auto;
+		margin-top: 0;
+
+		@include breakpoint( $md ) {
+			padding: $padding-large;
+		}
 
 		@include breakpoint( $xl ) {
 			max-width: $xl;
 		}
 
 		> li {
-			border-left: 1px solid currentColor;
-			flex-basis: 100% / $mega-nav-columns;
-			margin-bottom: $margin;
-			min-width: 250px;
+			flex-basis: 100%;
+			flex-grow: 1;
 			position: relative;
+
+			@include breakpoint( $sm ) {
+				border-left: 1px solid currentColor;
+				flex-basis: 100% / $mega-nav-columns;
+				flex-grow: initial;
+				margin-bottom: $margin;
+			}
+
+			@include breakpoint( $md ) {
+				flex-basis: 100% / $mega-nav-columns-desktop;
+			}
 
 			&::after {
 				bottom: 0;
@@ -1102,6 +1130,12 @@ $mega-nav-columns: 5;
 			}
 		}
 
+		@include breakpoint( $md ) {
+			> li:nth-child( -n + #{$mega-nav-columns-desktop} ) {
+				flex-grow: 1;
+			}
+		}
+
 		ul {
 			left: auto;
 			position: static;
@@ -1110,9 +1144,15 @@ $mega-nav-columns: 5;
 	}
 
 	.utility-nav {
+		border: none;
 		text-align: center;
-		margin: $margin-large;
+		margin: $margin;
 		margin-top: 0;
+
+		@include breakpoint( $md ) {
+			margin: $margin-large;
+			margin-top: 0;
+		}
 
 		a {
 			color: $color-primary-nav-link;
@@ -1151,7 +1191,11 @@ $mega-nav-columns: 5;
 	}
 
 	.nav-toggle-label-closed {
-		@extend %icon-search;
+		@include icon( 'menu' );
+
+		@include breakpoint( $sm ) {
+			@include icon( 'search' );
+		}
 	}
 
 	.nav-toggle-label-open {
@@ -1176,6 +1220,14 @@ $mega-nav-columns: 5;
 
 	a {
 		padding: $padding-small;
+	}
+}
+
+.short-nav-menu {
+	display: none;
+
+	@include breakpoint( $md ) {
+		display: block;
 	}
 }
 
