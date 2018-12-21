@@ -1045,9 +1045,7 @@ $mega-nav-columns-desktop: 5;
 	}
 
 	.brand-container {
-		flex-basis: 33%;
-		min-width: 250px;
-		max-width: 350px;
+		flex-grow: 1;
 		top: auto;
 		transform: translateY(0);
 	}
@@ -1165,7 +1163,12 @@ $mega-nav-columns-desktop: 5;
 	color: $color-mega-nav-toggle-text;
 	display: block;
 	height: auto;
-	width: auto;
+	overflow: visible;
+	width: 54px;
+
+	@include breakpoint( $sm ) {
+		width: auto;
+	}
 
 	.nav-toggle-label-closed,
 	.nav-toggle-label-open {
@@ -1228,6 +1231,10 @@ $mega-nav-columns-desktop: 5;
 
 	@include breakpoint( $md ) {
 		display: block;
+	}
+
+	a {
+		font-weight: 700;
 	}
 }
 
