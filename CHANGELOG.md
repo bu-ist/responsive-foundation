@@ -1,7 +1,8 @@
 # Changelog
 
-## 3.0.2 (Planned)
+## 3.1.0 (Planned)
 
+* Adds mega menu support for child themes by default.
 * Fixes an issue preventing the icons mixin from being used inside media queries
 * Icon placeholders and classes are now generated from the $icons-responsive map
 * Adds the ability to change the before/after placement of icons globally across
