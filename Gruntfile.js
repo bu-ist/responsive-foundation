@@ -83,7 +83,7 @@ module.exports = function(grunt) {
 		concat: {
 			docs: {
 				files: {
-					'docs/js/docs.js': 'js-dev/*.js'
+					'docs/js/docs.js': 'js/*.js'
 				}
 			}
 		},
@@ -141,7 +141,7 @@ module.exports = function(grunt) {
 			},
 			scripts: {
 				files: [
-					'js-dev/*.js'
+					'js-dev/**/*.js'
 				],
 				tasks: ['concat']
 			},
