@@ -1,0 +1,65 @@
+// =================================================================
+//
+// BURF Tools (No load path dependencies)
+//
+// Use this version when you don't have loadPath or importPath
+// available to you. You will need a loader that supports ~ as a
+// shortcut to the node_modules directory. Luckily, it's
+// well-supported, according to Dakota!
+//
+// A partial for those who only want the very basic of basics. Only
+// mixins and placeholders are supported in this partial, and only
+// pieces which are used will print. Useful for plugin development
+// where you want your dependencies and extra CSS to be at an
+// absolute minimum, or for development which will occur in another
+// pre-existing framework or environment with its own normalizing
+// partials and other opinionated stuff.
+//
+// =================================================================
+
+// =================================================================
+// Dependencies
+// =================================================================
+
+@import '~mathsass/dist/math';
+
+// =================================================================
+// Blah
+// =================================================================
+
+$burf-extras:								       false !default;
+
+@import '~responsive-foundation/css-dev/burf-base/config';
+@import '~responsive-foundation/css-dev/burf-base/mixins';
+@import '~responsive-foundation/css-dev/burf-base/normalize-variables';
+
+@import '~responsive-foundation/css-dev/burf-base/grid/grid-variables';
+@import '~responsive-foundation/css-dev/burf-base/grid/grid-mixins';
+@import '~responsive-foundation/css-dev/burf-base/grid/grid-placeholders';
+@import '~responsive-foundation/css-dev/burf-base/grid/grid-friendly';
+
+// Special settings for icons
+
+$use-default-icons:                        false !default;
+$print-icon-classes:                       false !default;
+
+@import '~responsive-foundation/css-dev/burf-base/icons/base'; // Required
+@import '~responsive-foundation/css-dev/burf-base/icons/social'; // Required
+@import '~responsive-foundation/css-dev/burf-base/icons/actions'; // Required
+@import '~responsive-foundation/css-dev/burf-base/icons/arrows';
+@import '~responsive-foundation/css-dev/burf-base/icons/charts';
+@import '~responsive-foundation/css-dev/burf-base/icons/communication';
+@import '~responsive-foundation/css-dev/burf-base/icons/documents';
+@import '~responsive-foundation/css-dev/burf-base/icons/ecommerce';
+@import '~responsive-foundation/css-dev/burf-base/icons/editing';
+@import '~responsive-foundation/css-dev/burf-base/icons/location';
+@import '~responsive-foundation/css-dev/burf-base/icons/media';
+@import '~responsive-foundation/css-dev/burf-base/icons/objects';
+@import '~responsive-foundation/css-dev/burf-base/icons/status';
+@import '~responsive-foundation/css-dev/burf-base/icons/technology';
+@import '~responsive-foundation/css-dev/burf-base/icons/time';
+@import '~responsive-foundation/css-dev/burf-base/icons/transportation';
+@import '~responsive-foundation/css-dev/burf-base/icons/ui';
+
+@import '~responsive-foundation/css-dev/burf-base/typography-variables';
+@import '~responsive-foundation/css-dev/burf-base/typography-tools';

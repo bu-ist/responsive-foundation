@@ -342,7 +342,8 @@ body {
 		@extend %icon-vine;
 	}
 
-	[href*="youtube.com"] {
+	[href*="youtube.com"],
+	[href*="bu.edu/buniverse"] {
 		@extend %icon-youtube;
 	}
 }
@@ -496,4 +497,10 @@ body {
 			max-width: 50%;
 		}
 	}
+}
+
+/// Copyright styles - only for print
+
+.bu_copyright {
+	display: none;
 }
