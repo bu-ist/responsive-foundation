@@ -1,12 +1,15 @@
 module.exports = function(grunt) {
+
+	// Require external packages.
+	var sass = require('node-sass');
+
 	// Set up a versioned folder for SassDoc
 	var pkg = require('./package.json'),
 		 docsVersionFilePath = 'docs/' + pkg.version;
 
 	grunt.file.mkdir( docsVersionFilePath );
 
-	// Configure Grunt
-
+	// Configure Grunt.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		browserify: {
@@ -113,14 +116,13 @@ module.exports = function(grunt) {
 			src: ['**']
 		},
 		sass: {
+			options: {
+				implementation: sass,
+				sourceMap: true
+			},
 			docs: {
 				options: {
 					style: 'compressed',
-					loadPath: [
-						'node_modules/normalize-scss/sass',
-						'node_modules/mathsass/dist/',
-						'css-dev'
-					],
 				},
 				files: {
 					'docs/css/docs.css': '_docs/css-dev/docs.scss',
@@ -186,14 +188,15 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.loadNpmTasks('grunt-browserify');
+	// Load Plugins.
 	grunt.loadNpmTasks('grunt-browser-sync');
+	grunt.loadNpmTasks('grunt-browserify');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-gh-pages');
+	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-sassdoc');
 	grunt.loadNpmTasks('grunt-version');
 
@@ -203,6 +206,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('serve', ['build', 'browserSync:current', 'watch']);
 	grunt.registerTask('previewall', ['build', 'browserSync:all', 'watch']);
 
+	// Register default `grunt` task.
 	grunt.registerTask('default', ['serve']);
 
 };

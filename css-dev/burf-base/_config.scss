@@ -2,6 +2,17 @@
 // Variables
 // =================================================================
 
+/// Turns a number of extra classes on or off. This is really only
+/// for the tools partial - you shouldn't use it in a custom theme
+/// unless you're VERY sure you will never need it. Placeholders will
+/// still work when this is set to false. Affects friendly grid classes,
+/// utility classes,
+/// @group grid
+/// @access public
+/// @since 2.1.11
+
+$burf-extras:                                       true !default;
+
 /// Whether or not to print media queries in your stylesheet.
 /// If you set this to false, it will print media queries in the
 /// order they are declared so that desktop styles will always

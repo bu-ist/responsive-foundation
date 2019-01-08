@@ -51,12 +51,13 @@
     "grunt-browserify": "^5.3.0",
     "grunt-contrib-concat": "^0.5.0",
     "grunt-contrib-copy": "^0.7.0",
-    "grunt-contrib-sass": "^0.8.1",
     "grunt-contrib-uglify": "^4.0.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-gh-pages": "^0.9.1",
+    "grunt-sass": "^3.0.2",
     "grunt-sassdoc": "^2.0.3",
     "grunt-version": "^0.3.0",
+    "node-sass": "^4.10.0",
     "sassdoc-theme-budocs": "git+ssh://git@github.com/ashleykolodziej/sassdoc-theme-budocs.git#master"
   }
 }

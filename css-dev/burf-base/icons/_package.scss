@@ -1,3 +1,12 @@
+/// Choose whether or not to use BU Default icons for icons in your
+/// stylesheet. By default, this option is set to true. Set to false
+/// to load your own icon font family.
+/// @group icons
+/// @access public
+/// @since 2.1.11
+
+$use-default-icons:                  true !default;
+
 /// Controls the placement of icon content globally
 /// in placeholders and default icon classes.
 /// @group icons
