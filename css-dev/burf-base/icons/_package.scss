@@ -7,20 +7,27 @@
 
 $use-default-icons:                  true !default;
 
-@import "base"; // Required
-@import "social"; // Required
-@import "actions"; // Required
-@import "arrows";
-@import "charts";
-@import "communication";
-@import "documents";
-@import "ecommerce";
-@import "editing";
-@import "location";
-@import "media";
-@import "objects";
-@import "status";
-@import "technology";
-@import "time";
-@import "transportation";
-@import "ui";
+/// Controls the placement of icon content globally
+/// in placeholders and default icon classes.
+/// @group icons
+/// @access public
+/// @since 3.0.2
+
+$icons-positioning:                   'before' !default;
+
+@import "burf-base/icons/base";
+
+/// Generates the icon placeholders and classes
+/// based off the $icons-responsive Sass map.
+
+@each $name, $content in $icons-responsive {
+	%icon-#{$name} {
+		@include icon( $name, $icons-positioning, true );
+	}
+
+	@if $print-icon-classes {
+		.icon-#{$name} {
+			@extend %icon-#{$name};
+		}
+	}
+}
