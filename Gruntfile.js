@@ -28,6 +28,23 @@ module.exports = function(grunt) {
 				]
 			}
 		},
+		uglify: {
+			options: {
+				sourceMap: true
+			},
+			dist: {
+				files: [
+					{
+						expand: true, // Enable dynamic expansion.
+						cwd: "js/", // Src matches are relative to this path.
+						src: ["*.js"], // Actual pattern(s) to match.
+						dest: "js/", // Destination path prefix.
+						ext: ".min.js", // Dest filepaths will have this extension.
+						extDot: "first" // Extensions in filenames begin after the first dot
+					}
+				]
+			}
+		},
 		browserSync: {
 			current: {
 				bsFiles: {
@@ -175,6 +192,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks("grunt-contrib-uglify");
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-gh-pages');
 	grunt.loadNpmTasks('grunt-sassdoc');
@@ -182,7 +200,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('build', ['js', 'sassdoc']);
 	grunt.registerTask('deploy', ['build', 'gh-pages']);
-	grunt.registerTask('js', ['browserify']);
+	grunt.registerTask('js', ['browserify', 'uglify']);
 	grunt.registerTask('serve', ['build', 'browserSync:current', 'watch']);
 	grunt.registerTask('previewall', ['build', 'browserSync:all', 'watch']);
 
