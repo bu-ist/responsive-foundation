@@ -1,7 +1,8 @@
+import $ from "jquery";
+
 /**
  * Toggle behavior for navigation / search buttons.
  */
-( function ( $ ) {
 	var $body = $( 'body' ),
 		 $toggle = $( '.js-nav-toggle' ),
 		 $toggleitems = $toggle.add( 'nav' ),
@@ -59,5 +60,3 @@
 			}
 		}
 	});
-
-} ( jQuery ) );
