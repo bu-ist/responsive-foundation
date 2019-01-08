@@ -295,13 +295,13 @@ $_h: $_depth-headings;
 @each $style, $settings in $font-styles {
 	%font-size-#{$style} {
 		@include font-size( $style );
-  	}
+	}
 
-  	@if $burf-extras {
+	@if $burf-extras {
 		.font-size-#{$style} {
 			@extend %font-size-#{$style} !optional;
-	  	}
-  	}
+		}
+	}
 }
 
 /// Controls base styles for all heading tags.

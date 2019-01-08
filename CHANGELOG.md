@@ -4,7 +4,8 @@
 
 * Replaces `grunt-contrib-sass` with `grunt-sass` (uses `node-sass` under the hood)
 * Uses full path to node modules depenencies, rather than depending on loadPath
-* Small bugfixes when trying to compile sass locally in this repo, due to incorrect paths.
+* Small bugfixes when trying to compile sass locally in this repo, due to incorrect
+paths.
 * Add a new partial, `burf-tools`, for minimal uses of Foundation
 * Adds mega menu support for child themes by default.
 * Fixes an issue preventing the icons mixin from being used inside media queries
