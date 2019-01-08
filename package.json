@@ -24,11 +24,19 @@
     "framework"
   ],
   "private": true,
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
   "dependencies": {
     "mathsass": "^0.10.1",
     "normalize-scss": "^7.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babelify": "^10.0.0",
     "grunt": "~0.4.5",
     "grunt-browser-sync": "^1.5.3",
     "grunt-browserify": "^5.3.0",

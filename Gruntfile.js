@@ -13,7 +13,8 @@ module.exports = function(grunt) {
 			options: {
 				watch: true,
 				browserifyOptions: {
-					debug: true
+					debug: true,
+					transform: [["babelify"]]
 				}
 			},
 			dist: {
