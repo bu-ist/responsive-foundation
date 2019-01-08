@@ -1,6 +1,6 @@
 # Changelog
 
-## 3.1.0 (Planned)
+## 3.1.0
 
 * Replaces `grunt-contrib-sass` with `grunt-sass` (uses `node-sass` under the hood)
 * Uses full path to node modules depenencies, rather than depending on loadPath
