@@ -14,16 +14,16 @@ module.exports = function(grunt) {
 				watch: true,
 				browserifyOptions: {
 					debug: true,
-					transform: [["babelify"]]
+					transform: [['babelify']]
 				}
 			},
 			dist: {
 				files: [
 					{
 						expand: true, // Enable dynamic expansion.
-						cwd: "js-dev/", // Src matches are relative to this path.
-						src: ["*.js"], // Actual pattern(s) to match.
-						dest: "js/" // Destination path prefix.
+						cwd: 'js-dev/', // Src matches are relative to this path.
+						src: ['*.js'], // Actual pattern(s) to match.
+						dest: 'js/' // Destination path prefix.
 					}
 				]
 			}
@@ -36,11 +36,11 @@ module.exports = function(grunt) {
 				files: [
 					{
 						expand: true, // Enable dynamic expansion.
-						cwd: "js/", // Src matches are relative to this path.
-						src: ["*.js"], // Actual pattern(s) to match.
-						dest: "js/", // Destination path prefix.
-						ext: ".min.js", // Dest filepaths will have this extension.
-						extDot: "first" // Extensions in filenames begin after the first dot
+						cwd: 'js/', // Src matches are relative to this path.
+						src: ['*.js'], // Actual pattern(s) to match.
+						dest: 'js/', // Destination path prefix.
+						ext: '.min.js', // Dest filepaths will have this extension.
+						extDot: 'first' // Extensions in filenames begin after the first dot
 					}
 				]
 			}
@@ -192,7 +192,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks("grunt-contrib-uglify");
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-gh-pages');
 	grunt.loadNpmTasks('grunt-sassdoc');
