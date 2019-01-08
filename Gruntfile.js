@@ -35,12 +35,11 @@ module.exports = function(grunt) {
 			dist: {
 				files: [
 					{
+						// Note: Overwrites the un-uglified version.
 						expand: true, // Enable dynamic expansion.
 						cwd: 'js/', // Src matches are relative to this path.
 						src: ['*.js'], // Actual pattern(s) to match.
 						dest: 'js/', // Destination path prefix.
-						ext: '.min.js', // Dest filepaths will have this extension.
-						extDot: 'first' // Extensions in filenames begin after the first dot
 					}
 				]
 			}
@@ -143,7 +142,7 @@ module.exports = function(grunt) {
 				files: [
 					'js-dev/**/*.js'
 				],
-				tasks: ['concat']
+				tasks: ['js', 'concat']
 			},
 			styles: {
 				files: [
