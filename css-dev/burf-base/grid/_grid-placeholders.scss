@@ -138,10 +138,15 @@
 /// @access public
 /// @since 2.0.0
 
-.col-margin-parent,
 %col-margin-parent {
 	margin-left: -$grid-margin-width#{"%"};
 	margin-right: 0;
+}
+
+@if $burf-extras {
+	.col-margin-parent {
+		@extend %col-margin-parent;
+	}
 }
 
 /// A private map to hold grid widths while
@@ -208,9 +213,14 @@ $grid-widths-margins: ();
 			@include col-margin-base;
 		}
 
-		.col-#{$breakpoint}-margin-parent,
 		%col-#{$breakpoint}-margin-parent {
 			margin-left: -$grid-margin-width#{"%"};
+		}
+
+		@if $burf-extras {
+			.col-#{$breakpoint}-margin-parent {
+				@extend %col-#{$breakpoint}-margin-parent;
+			}
 		}
 
 		@for $i from 0 to length( $grid-widths ) {

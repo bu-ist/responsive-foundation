@@ -2,22 +2,7 @@
 // Global Settings
 // =================================================================
 
-/// Controls the default color used for text across the site.
-/// Affects body text and anything else that isn't
-/// specifically overridden.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
-
-$color-base:                                $color-grayscale-5 !default;
-
-/// Base margin for the section tag.
-/// @group 01-config
-/// @access public
-/// @since 2.0.0
-
-$margin-section:                            $margin-large 0 0 !default;
+@import 'normalize-variables';
 
 // =================================================================
 // Global Styles

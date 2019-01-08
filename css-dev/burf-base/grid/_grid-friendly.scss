@@ -29,22 +29,31 @@ $widths: (
 /// 			@extend %col-md-three-quarter;
 
 @each $width, $columns in $widths {
-	.col-#{$width},
 	%col-#{$width} {
 		@extend %col-#{$columns} !optional;
 	}
 
+	@if $burf-extras {
+		.col-#{$width} {
+			@extend %col-#{$width} !optional;
+		}
+	}
+
 	@each $feature, $supported in $grid-supports {
 		@if $supported {
-			.col-#{$feature}-#{$width},
 			%col-#{$feature}-#{$width} {
 				@extend %col-#{$feature}-#{$columns} !optional;
+			}
+
+			@if $burf-extras {
+				.col-#{$feature}-#{$width} {
+					@extend %col-#{$feature}-#{$width} !optional;
+				}
 			}
 		}
 	}
 
 	@each $bp-name, $bp-variable in $grid-breakpoints {
-		.col-#{$bp-name},
 		%col-#{$bp-name} {
 
 			&-#{$width} {
@@ -55,6 +64,22 @@ $widths: (
 				@if $supported {
 					&-#{$feature}-#{$width} {
 						@extend %col-#{$bp-name}-#{$feature}-#{$columns} !optional;
+					}
+				}
+			}
+		}
+
+		@if $burf-extras {
+			.col-#{$bp-name} {
+				&-#{$width} {
+					@extend %col-#{$bp-name}-#{$width} !optional;
+				}
+
+				@each $feature, $supported in $grid-supports {
+					@if $supported {
+						&-#{$feature}-#{$width} {
+							@extend %col-#{$bp-name}-#{$feature}-#{$width} !optional;
+						}
 					}
 				}
 			}
