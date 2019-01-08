@@ -9,6 +9,24 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		browserify: {
+			options: {
+				watch: true,
+				browserifyOptions: {
+					debug: true
+				}
+			},
+			dist: {
+				files: [
+					{
+						expand: true, // Enable dynamic expansion.
+						cwd: "js-dev/", // Src matches are relative to this path.
+						src: ["*.js"], // Actual pattern(s) to match.
+						dest: "js/" // Destination path prefix.
+					}
+				]
+			}
+		},
 		browserSync: {
 			current: {
 				bsFiles: {
@@ -151,6 +169,7 @@ module.exports = function(grunt) {
 		}
 	});
 
+	grunt.loadNpmTasks('grunt-browserify');
 	grunt.loadNpmTasks('grunt-browser-sync');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-copy');
@@ -160,8 +179,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-sassdoc');
 	grunt.loadNpmTasks('grunt-version');
 
-	grunt.registerTask('build', ['sassdoc']);
+	grunt.registerTask('build', ['js', 'sassdoc']);
 	grunt.registerTask('deploy', ['build', 'gh-pages']);
+	grunt.registerTask('js', ['browserify']);
 	grunt.registerTask('serve', ['build', 'browserSync:current', 'watch']);
 	grunt.registerTask('previewall', ['build', 'browserSync:all', 'watch']);
 
