@@ -1,13 +1,13 @@
-module.exports = function(grunt) {
+// Require external packages.
+const sass = require('node-sass');
 
-	// Require external packages.
-	var sass = require('node-sass');
+// Set up a versioned folder for SassDoc
+const pkg = require('./package.json');
 
-	// Set up a versioned folder for SassDoc
-	var pkg = require('./package.json'),
-		 docsVersionFilePath = 'docs/' + pkg.version;
+module.exports = (grunt) => {
+	const docsVersionFilePath = `docs/${pkg.version}`;
 
-	grunt.file.mkdir( docsVersionFilePath );
+	grunt.file.mkdir(docsVersionFilePath);
 
 	// Configure Grunt.
 	grunt.initConfig({
@@ -17,8 +17,8 @@ module.exports = function(grunt) {
 				watch: true,
 				browserifyOptions: {
 					debug: true,
-					transform: [['babelify']]
-				}
+					transform: [['babelify']],
+				},
 			},
 			dist: {
 				files: [
@@ -26,14 +26,14 @@ module.exports = function(grunt) {
 						expand: true, // Enable dynamic expansion.
 						cwd: 'js-dev/', // Src matches are relative to this path.
 						src: ['*.js'], // Actual pattern(s) to match.
-						dest: 'js/' // Destination path prefix.
-					}
-				]
-			}
+						dest: 'js/', // Destination path prefix.
+					},
+				],
+			},
 		},
 		uglify: {
 			options: {
-				sourceMap: true
+				sourceMap: true,
 			},
 			dist: {
 				files: [
@@ -43,82 +43,82 @@ module.exports = function(grunt) {
 						cwd: 'js/', // Src matches are relative to this path.
 						src: ['*.js'], // Actual pattern(s) to match.
 						dest: 'js/', // Destination path prefix.
-					}
-				]
-			}
+					},
+				],
+			},
 		},
 		browserSync: {
 			current: {
 				bsFiles: {
-					src : [
-						docsVersionFilePath + '/css/*.css',
-						docsVersionFilePath + '/*.html'
-					]
+					src: [
+						`${docsVersionFilePath}/css/*.css`,
+						`${docsVersionFilePath}/*.html`,
+					],
 				},
 				options: {
 					watchTask: true,
 					server: {
-						baseDir: docsVersionFilePath
+						baseDir: docsVersionFilePath,
 					},
 					plugins: [
 						{
-						module: 'bs-html-injector',
+							module: 'bs-html-injector',
 							options: {
-								files: docsVersionFilePath + '/*.html'
-							}
-						}
-					]
-				}
+								files: `${docsVersionFilePath}/*.html`,
+							},
+						},
+					],
+				},
 			},
 			all: {
 				bsFiles: {
-					src : ['docs/*.html', 'docs/css/*.css', 'docs/js/*.js']
+					src: ['docs/*.html', 'docs/css/*.css', 'docs/js/*.js'],
 				},
 				options: {
 					watchTask: true,
 					server: {
-						baseDir: './docs'
-					}
-				}
-			}
+						baseDir: './docs',
+					},
+				},
+			},
 		},
 		concat: {
 			docs: {
 				files: {
-					'docs/js/docs.js': 'js/*.js'
-				}
-			}
+					'docs/js/docs.js': 'js/*.js',
+				},
+			},
 		},
 		copy: {
 			alpha: {
 				expand: true,
 				cwd: '_docs/0.1.0',
 				src: ['**/*.html', 'vendor/**/*'],
-				dest: 'docs/0.1.0'
+				dest: 'docs/0.1.0',
 			},
 			one: {
 				expand: true,
 				cwd: '_docs/1.0.0',
 				src: ['**/*.html', 'assets/**/*'],
-				dest: 'docs/1.0.0'
+				dest: 'docs/1.0.0',
 			},
 			docs: {
 				expand: true,
 				cwd: '_docs',
 				src: ['**/*.html', 'vendor/**/*'],
-				dest: 'docs'
-			}
+				dest: 'docs',
+			},
 		},
 		'gh-pages': {
 			options: {
-				base: 'docs'
+				base: 'docs',
 			},
-			src: ['**']
+			src: ['**'],
 		},
 		sass: {
 			options: {
 				implementation: sass,
-				sourceMap: true
+				sourceMap: true,
 			},
 			docs: {
 				options: {
@@ -126,37 +126,37 @@ module.exports = function(grunt) {
 				},
 				files: {
 					'docs/css/docs.css': '_docs/css-dev/docs.scss',
-				}
-			}
+				},
+			},
 		},
 		watch: {
 			grunt: {
 				options: {
-					reload: true
+					reload: true,
 				},
-				files: ['Gruntfile.js']
+				files: ['Gruntfile.js'],
 			},
 			docs: {
 				files: ['_docs/**/*.html'],
-				tasks: ['copy']
+				tasks: ['copy'],
 			},
 			scripts: {
 				files: [
-					'js-dev/**/*.js'
+					'js-dev/**/*.js',
 				],
-				tasks: ['js', 'concat']
+				tasks: ['js', 'concat'],
 			},
 			styles: {
 				files: [
 					'_docs/css-dev/*.scss',
-					'css-dev/**/*.scss'
+					'css-dev/**/*.scss',
 				],
-				tasks: ['sass']
+				tasks: ['sass'],
 			},
 			vendor: {
 				files: ['_docs/vendor/**/*'],
-				tasks: ['copy']
-			}
+				tasks: ['copy'],
+			},
 		},
 		sassdoc: {
 			src: 'css-dev/**/*.scss',
@@ -166,7 +166,7 @@ module.exports = function(grunt) {
 				},
 				dest: docsVersionFilePath,
 				theme: 'node_modules/sassdoc-theme-budocs',
-				basePath: 'https://github.com/bu-ist/responsive-foundation/tree/' + pkg.version + '/css-dev',
+				basePath: `https://github.com/bu-ist/responsive-foundation/tree/${pkg.version}/css-dev`,
 				groups: {
 					'01-config': 'Global Configuration',
 					'02-mixins': 'Helpers',
@@ -185,7 +185,7 @@ module.exports = function(grunt) {
 					'wp-admin': 'WordPress Admin',
 				},
 			},
-		}
+		},
 	});
 
 	// Load Plugins.
@@ -208,5 +208,4 @@ module.exports = function(grunt) {
 
 	// Register default `grunt` task.
 	grunt.registerTask('default', ['serve']);
-
 };
