@@ -15,7 +15,7 @@ $use-default-icons:                  true !default;
 
 $icons-positioning:                   'before' !default;
 
-@import "burf-base/icons/base";
+@import 'base';
 
 /// Generates the icon placeholders and classes
 /// based off the $icons-responsive Sass map.
