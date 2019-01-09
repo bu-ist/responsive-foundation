@@ -7,4 +7,4 @@
  * @package ResponsiveFoundation
  */
 
-import "./modules/toggle";
+import './modules/toggle';

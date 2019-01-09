@@ -1,68 +1,76 @@
-import $ from "jquery";
+import $ from 'jquery';
 
 /**
  * Toggle behavior for navigation / search buttons.
  */
-var $body = $("body"),
-	$toggle = $(".js-nav-toggle"),
-	$toggleitems = $toggle.add("nav"),
-	$searchtoggle = $(".js-search-toggle"),
-	$searchitems = $searchtoggle.add("#quicksearch");
+const $body = $('body');
+
+
+const $toggle = $('.js-nav-toggle');
+
+
+const $toggleitems = $toggle.add('nav');
+
+
+const $searchtoggle = $('.js-search-toggle');
+
+
+const $searchitems = $searchtoggle.add('#quicksearch');
 
 // Add aria attributes for control/expanded if JS is available
 $searchtoggle
-	.attr("aria-expanded", "false")
-	.attr("aria-controls", "quicksearch");
+	.attr('aria-expanded', 'false')
+	.attr('aria-controls', 'quicksearch');
 $toggle
-	.attr("aria-expanded", "false")
-	.attr("aria-controls", "primary-nav-menu");
+	.attr('aria-expanded', 'false')
+	.attr('aria-controls', 'primary-nav-menu');
 
-$toggle.on("click", function(e) {
+$toggle.on('click', (e) => {
 	e.preventDefault();
 
-	if ($toggle.attr("aria-expanded") === "false") {
-		$toggle.attr("aria-expanded", "true").attr("aria-label", "Close menu");
+	if ($toggle.attr('aria-expanded') === 'false') {
+		$toggle.attr('aria-expanded', 'true').attr('aria-label', 'Close menu');
 	} else {
-		$toggle.attr("aria-expanded", "false").attr("aria-label", "Open menu");
+		$toggle.attr('aria-expanded', 'false').attr('aria-label', 'Open menu');
 	}
 
-	$toggleitems.toggleClass("is-open");
-	$searchitems.removeClass("is-open");
-	$body.toggleClass("nav-open").removeClass("search-open");
+	$toggleitems.toggleClass('is-open');
+	$searchitems.removeClass('is-open');
+	$body.toggleClass('nav-open').removeClass('search-open');
 });
 
 function toggleSearchPanel(focus) {
-	$toggleitems.removeClass("is-open");
+	$toggleitems.removeClass('is-open');
 
-	if (focus === true && !$(this).hasClass("is-open")) {
-		setTimeout(function() {
-			$("#q").focus();
+	if (focus === true && !$(this).hasClass('is-open')) {
+		setTimeout(() => {
+			$('#q').focus();
 		}, 100);
 	}
 
-	if ($searchtoggle.attr("aria-expanded") === "false") {
+	if ($searchtoggle.attr('aria-expanded') === 'false') {
 		$searchtoggle
-			.attr("aria-expanded", "true")
-			.attr("aria-label", "Close search");
+			.attr('aria-expanded', 'true')
+			.attr('aria-label', 'Close search');
 	} else {
 		$searchtoggle
-			.attr("aria-expanded", "false")
-			.attr("aria-label", "Open search");
+			.attr('aria-expanded', 'false')
+			.attr('aria-label', 'Open search');
 	}
 
-	$searchitems.toggleClass("is-open");
-	$body.toggleClass("search-open").removeClass("nav-open");
+	$searchitems.toggleClass('is-open');
+	$body.toggleClass('search-open').removeClass('nav-open');
 }
 
 $searchtoggle.on({
-	click: function(e) {
+	click(e) {
 		e.preventDefault();
 		toggleSearchPanel(true);
 	},
-	keypress: function(e) {
+	keypress(e) {
 		if (e.keyCode === 13) {
 			e.preventDefault();
 			toggleSearchPanel(false);
 		}
-	}
+	},
 });
