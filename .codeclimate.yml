@@ -39,7 +39,7 @@ engines:
     enabled: false
   phpmd:
     enabled: false
-  scss-lint:
+  sass-lint:
     enabled: true
 ratings:
   paths:
