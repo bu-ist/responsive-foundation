@@ -161,6 +161,10 @@ module.exports = (grunt) => {
 				tasks: ['copy'],
 			},
 		},
+		sasslint: {
+			target: 'css-dev/**/*.scss',
+			// see .sasslintrc for options.
+		},
 		sassdoc: {
 			src: 'css-dev/**/*.scss',
 			options: {
@@ -201,6 +205,7 @@ module.exports = (grunt) => {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-gh-pages');
 	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-sass-lint');
 	grunt.loadNpmTasks('grunt-sassdoc');
 	grunt.loadNpmTasks('grunt-version');
 
