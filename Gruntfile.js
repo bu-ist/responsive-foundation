@@ -31,6 +31,9 @@ module.exports = (grunt) => {
 				],
 			},
 		},
+		clean: {
+			js: ['js/**/*.js', 'js/**/*.map'],
+		},
 		uglify: {
 			options: {
 				sourceMap: true,
@@ -191,6 +194,7 @@ module.exports = (grunt) => {
 	// Load Plugins.
 	grunt.loadNpmTasks('grunt-browser-sync');
 	grunt.loadNpmTasks('grunt-browserify');
+	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -202,7 +206,7 @@ module.exports = (grunt) => {
 
 	grunt.registerTask('build', ['js', 'sassdoc']);
 	grunt.registerTask('deploy', ['build', 'gh-pages']);
-	grunt.registerTask('js', ['browserify', 'uglify']);
+	grunt.registerTask('js', ['clean:js', 'browserify', 'uglify']);
 	grunt.registerTask('serve', ['build', 'browserSync:current', 'watch']);
 	grunt.registerTask('previewall', ['build', 'browserSync:all', 'watch']);
 
