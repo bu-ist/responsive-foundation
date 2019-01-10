@@ -207,7 +207,6 @@ module.exports = (grunt) => {
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-sass-lint');
 	grunt.loadNpmTasks('grunt-sassdoc');
-	grunt.loadNpmTasks('grunt-version');
 
 	grunt.registerTask('build', ['js', 'sassdoc']);
 	grunt.registerTask('deploy', ['build', 'gh-pages']);
