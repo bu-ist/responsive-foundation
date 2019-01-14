@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## Unreleased (3.2.0)
 
 * Adds es6 functionality via a variety of npm packages and Gruntfile
   modifications:
@@ -46,6 +46,7 @@
 * Updates dependencies to resolve warnings about security vulnerabilities.
 * Updates `_tools-cgb.scss` with new icons implementation introduced in versopm
   `3.1.0`.
+* Adds improved styling to Edit links throughout burf-theme.
 
 ## 3.1.0
 

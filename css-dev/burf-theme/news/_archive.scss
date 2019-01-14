@@ -136,6 +136,10 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 	& + .meta {
 		margin-top: -0.5em;
 	}
+
+	.post-thumb + & {
+		margin-top: 0;
+	}
 }
 
 /// Handles styling for metadata in the post template partial,
