@@ -4,7 +4,7 @@ Responsive Foundation is Boston University's front-end development framework. Bu
 
 This framework is currently internal, and may not be used without permission.
 
-Foundation provides a library of [Sass](http://sass-lang.com/) and Javascript files that serve as a foundation for building responsive sites. This library is designed to be imported into your project using [Bower](http://bower.io).
+Foundation provides a library of [Sass](http://sass-lang.com/) and Javascript files that serve as a foundation for building responsive sites. This library is designed to be imported into your project using [npm](https://www.npmjs.com/).
 
 It was initially conceived during the build for our custom WordPress theme framework as a way to share common front-end assets among themes, but does not have an WordPress-specific bindings and can be used for non-WordPress projects as well.
 
