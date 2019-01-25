@@ -37,6 +37,7 @@
       "browserify-shim"
     ]
   },
+  "main": "js/theme.js",
   "dependencies": {
     "mathsass": "^0.10.1",
     "normalize-scss": "^7.0.1"
