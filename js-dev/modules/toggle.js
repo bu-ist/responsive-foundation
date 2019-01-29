@@ -6,8 +6,7 @@
 
 import $ from 'jquery';
 
-export default Toggle = function($) {
-
+export default function () {
 	const $body = $('body');
 
 
@@ -79,4 +78,4 @@ export default Toggle = function($) {
 			}
 		},
 	});
-};
+}
