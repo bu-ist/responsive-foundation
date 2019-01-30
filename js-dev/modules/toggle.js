@@ -80,4 +80,4 @@ const toggle = () => {
 	});
 };
 
-export default toggle;
+export { toggle };
