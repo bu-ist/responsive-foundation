@@ -105,7 +105,7 @@
 		$required-contrast: 7;
 	}
 
-	@if $lighten-text and contrast( $background, #fff ) < $required-contrast {
+	@if $lighten-text and contrast( $background, #FFF ) < $required-contrast {
 		$lighten-text: false;
 
 		@while $suggestion-contrast < $required-contrast {
