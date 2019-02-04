@@ -32,7 +32,7 @@
 		$channel-value: pow( ($color + 0.055) / 1.055, 2.4 );
 	}
 
-  @return $channel-value;
+	@return $channel-value;
 }
 
 /// Calculates the luminance of a color, for use in
@@ -48,14 +48,14 @@
 /// @since 3.2.0
 
 @function luminance( $color ) {
-  $red: linear-color-channel( red( $color ) + 1 );
-  $green: linear-color-channel( green( $color ) + 1 );
-  $blue: linear-color-channel( blue( $color ) + 1 );
+	$red: linear-color-channel( red( $color ) + 1 );
+	$green: linear-color-channel( green( $color ) + 1 );
+	$blue: linear-color-channel( blue( $color ) + 1 );
 
-  @return .2126 * $red + .7152 * $green + .0722 * $blue;
+	@return .2126 * $red + .7152 * $green + .0722 * $blue;
 }
 
-/// Calculates the luminance of a color, for use in
+/// Calculates the contrast ratio between two colors, for use in
 /// accessibility contrast calculations.
 /// See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
 /// Based on Sérgio Gomes's accessibility work.
@@ -68,10 +68,10 @@
 /// @since 3.2.0
 
 @function contrast( $back, $front ) {
-  $backLum: luminance( $back ) + .05;
-  $foreLum: luminance( $front ) + .05;
+	$backLum: luminance( $back ) + .05;
+	$foreLum: luminance( $front ) + .05;
 
-  @return max( $backLum, $foreLum ) / min( $backLum, $foreLum );
+	@return max( $backLum, $foreLum ) / min( $backLum, $foreLum );
 }
 
 /// Returns WCAG-compliant text colors automatically, based on a
@@ -93,25 +93,49 @@
 /// @access public
 /// @since 3.2.0
 
-@function accessible-text( $background, $some-color, $compliance-method: 'AA' ){
-  $contrast: contrast( $background, $some-color );
-  $final-color: $some-color;
-  $lighten: lightness( $background ) > lightness( $some-color ); // Whether to lighten or darken the text color.
-  $required-contrast: 4.5; // Assumes AA usage.
+@function accessible-text( $background, $preferred-text-color, $compliance-method: 'AA' ){
+	$contrast: contrast( $background, $preferred-text-color );
+	$final-text-color: $preferred-text-color;
+	$lighten-text: lightness( $background ) < lightness( $preferred-text-color ); // Whether to lighten or darken the text color.
+	$required-contrast: 4.5; // Assumes AA usage.
+	$suggested-background: $background;
+	$suggestion-contrast: $contrast;
 
-  @if $compliance-method == 'AAA' {
-    $required-contrast: 7;
-  }
+	@if $compliance-method == 'AAA' {
+		$required-contrast: 7;
+	}
 
-  @while $contrast < $required-contrast {
-    @if $lighten {
-      $final-color: lighten( $final-color, 1% );
-    } @else {
-      $final-color: darken( $final-color, 1% );
-    }
+	@if $lighten-text and contrast( $background, #fff ) < $required-contrast {
+		$lighten-text: false;
 
-    $contrast: contrast( $background, $final-color );
-  }
+		@while $suggestion-contrast < $required-contrast {
+			$suggested-background: darken( $suggested-background, 1% );
+			$suggestion-contrast: contrast( $suggested-background, $preferred-text-color );
+		}
 
-  @return $final-color;
+		@warn 'Your background color is too light to use a light text color with. Switching to the closest dark color. \a You can avoid this warning and use a light text color by switching your background color to ' + $suggested-background + '.';
+
+	} @else if $lighten-text == false and contrast( $background, #000 ) < $required-contrast  {
+		$lighten-text: true;
+
+		@while $suggestion-contrast < $required-contrast {
+			$suggested-background: lighten( $suggested-background, 1% );
+			$suggestion-contrast: contrast( $suggested-background, $preferred-text-color );
+		}
+
+		@warn 'Your background color is too dark to use a dark text color with. Switching to the closest light color. \a You can avoid this warning and use a dark text color by switching your background color to ' + $suggested-background + '.'
+
+	}
+
+	@while $contrast < $required-contrast {
+		@if $lighten-text {
+			$final-text-color: lighten( $final-text-color, 1% );
+		} @else {
+			$final-text-color: darken( $final-text-color, 1% );
+		}
+
+		$contrast: contrast( $background, $final-text-color );
+	}
+
+	@return $final-text-color;
 }
