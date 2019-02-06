@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+* Adds a new function, `accessible-text()`, which returns WCAG 2.0-compliant
+  text colors when given a background color and desired text color.
 * Adds es6 functionality via a variety of npm packages and Gruntfile
   modifications:
     * `grunt-browserify`: Provides ability to use `require` for separating files into

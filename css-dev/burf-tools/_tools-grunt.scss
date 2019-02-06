@@ -25,6 +25,7 @@
 $burf-extras:								       false !default;
 
 @import 'burf-base/config';
+@import 'burf-base/accessibility';
 @import 'burf-base/mixins';
 @import 'burf-base/normalize-variables';
 
