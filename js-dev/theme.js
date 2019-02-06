@@ -8,7 +8,7 @@
  */
 
 // Import dependencies at the top of the file.
-import toggle from './modules/toggle';
+import { toggle } from './modules/toggle';
 
 // Run JS scripts here.
 toggle();

@@ -6,7 +6,7 @@
 
 import $ from 'jquery';
 
-export default function toggle() {
+export function toggle() {
 	const $body = $( 'body' );
 
 	const $toggle = $( '.js-nav-toggle' );

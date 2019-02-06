@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = toggle;
+exports.toggle = toggle;
 
 var _jquery = _interopRequireDefault(require("jquery"));
 
