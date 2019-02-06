@@ -12,6 +12,23 @@ module.exports = (grunt) => {
 	// Configure Grunt.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		babel: {
+			options: {
+				cwd: 'js-dev',
+				presets: [ '@babel/preset-env' ],
+				sourceMap: false,
+			},
+			dist: {
+				files: [
+					{
+						expand: true, // Enable dynamic expansion.
+						cwd: 'js-dev/modules/', // Src matches are relative to this path.
+						src: [ '*.js' ], // Actual pattern(s) to match.
+						dest: 'js-dev/dist/', // Destination path prefix.
+					},
+				],
+			},
+		},
 		browserify: {
 			options: {
 				watch: true,
@@ -207,12 +224,13 @@ module.exports = (grunt) => {
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-sass-lint');
 	grunt.loadNpmTasks('grunt-sassdoc');
+	grunt.loadNpmTasks( 'grunt-babel' );
 
 	grunt.registerTask('build', ['js', 'sassdoc']);
 	grunt.registerTask('deploy', ['build', 'gh-pages']);
-	grunt.registerTask('js', ['clean:js', 'browserify', 'uglify']);
 	grunt.registerTask('serve', ['build', 'browserSync:current', 'watch']);
 	grunt.registerTask('previewall', ['build', 'browserSync:all', 'watch']);
+	grunt.registerTask( 'js', [ 'clean:js', 'babel', 'browserify', 'uglify' ] );
 
 	// Register default `grunt` task.
 	grunt.registerTask('default', ['serve']);
