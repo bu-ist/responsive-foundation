@@ -107,6 +107,8 @@ nav a {
 	width: 60px;
 	height: 60px;
 	cursor: pointer;
+	text-indent: 200%;
+
 	@include breakpoint(sm) {
 		display: none;
 	}
