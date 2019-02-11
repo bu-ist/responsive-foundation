@@ -68,4 +68,4 @@ After each major release, one version is maintained until everyone can be upgrad
 * 0.1.0.2
 * 1.0.4.2
 * 1.4.1
-* 1.4.2
+* 1.4.2.2
