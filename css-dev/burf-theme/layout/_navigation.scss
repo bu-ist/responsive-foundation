@@ -1004,19 +1004,21 @@ $no-nav-desktop:                    $nav-desktop !default;
 
 }
 
+// Mega navigation
+
 /// The background color of the mega nav menu toggle.
 /// @group navigation
 /// @access public
 /// @since 3.0.2
 
-$color-mega-nav-toggle-bg: $color-button-bg;
+$color-mega-nav-toggle-bg:                     $color-button-bg !default;
 
 /// The text color of the mega nav menu toggle.
 /// @group navigation
 /// @access public
 /// @since 3.0.2
 
-$color-mega-nav-toggle-text: $color-button-text;
+$color-mega-nav-toggle-text:                   $color-button-text !default;
 
 /// The number of columns to use in the mega navigation
 /// menu. If there are fewer nav items than this number
@@ -1025,7 +1027,7 @@ $color-mega-nav-toggle-text: $color-button-text;
 /// @access public
 /// @since 3.0.2
 
-$mega-nav-columns: 3;
+$mega-nav-columns:                             3 !default;
 
 /// The number of columns to use in the mega navigation
 /// menu on desktop. If there are fewer nav items than this
@@ -1034,7 +1036,7 @@ $mega-nav-columns: 3;
 /// @access public
 /// @since 3.0.2
 
-$mega-nav-columns-desktop: 5;
+$mega-nav-columns-desktop:                     5 !default;
 
 /// The point at which the mega navigation switches from
 /// showing the icon to the full menu and short menu combo.
@@ -1043,7 +1045,7 @@ $mega-nav-columns-desktop: 5;
 /// @access public
 /// @since 3.0.2
 
-$mega-nav-show-full-menu: $sm;
+$mega-nav-show-full-menu:                      $sm !default;
 
 /// The point at which the mega navigation switches from
 /// mobile to desktop layout. Accepts a breakpoint or pixel
@@ -1052,7 +1054,7 @@ $mega-nav-show-full-menu: $sm;
 /// @access public
 /// @since 3.0.2
 
-$mega-nav-desktop-layout: $md;
+$mega-nav-desktop-layout:                      $md !default;
 
 // mega nav
 
