@@ -45,11 +45,12 @@
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
+    "@wordpress/babel-preset-default": "^3.0.2",
+    "@wordpress/eslint-plugin": "^1.0.1",
     "babelify": "^10.0.0",
     "browserify-shim": "^3.8.14",
     "bs-html-injector": "^3.0.3",
     "eslint": "^5.12.0",
-    "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.12.3",
