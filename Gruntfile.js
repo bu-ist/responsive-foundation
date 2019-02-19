@@ -145,6 +145,14 @@ module.exports = (grunt) => {
 				],
 				tasks: ['sass'],
 			},
+			styleguide: {
+				files: [
+					'_docs/css-dev/*.scss',
+					'css-dev/**/*.scss',
+					'css-dev/**/*.hbs',
+				],
+				tasks: ['kss'],
+			},
 			vendor: {
 				files: ['_docs/vendor/**/*'],
 				tasks: ['copy'],

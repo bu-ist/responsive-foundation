@@ -1,4 +1,29 @@
 // =================================================================
+// Intro Paragraph Block Base Styles
+// =================================================================
+
+// Resets the scope of styles back to the default, usually `wp`.
+// Without this reset, if this isn't the first set of styles, it'll
+// get the scope of the last time the config was modified - probably
+// `brink` in our case.
+
+// Default styles which apply to all instances of
+// this block, regardless of where it shows up,
+// go here. Intro Paragraph CSS for guidance purposes only,
+// do not use in production.
+
+// Grid
+//
+// Description.
+//
+// Status: In-Progress
+//
+// Markup: examples/grid.hbs
+//
+//
+// Styleguide Utilities.Grid.Classes
+
+// =================================================================
 // Grid Settings
 // =================================================================
 
