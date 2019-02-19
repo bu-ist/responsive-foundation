@@ -2,49 +2,7 @@
 // Global Settings
 // =================================================================
 
-/// Controls the default font used across the site.
-/// Affects body text and anything else that isn't
-/// specifically overridden.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
-
-$font-family-base:                          "TiemposText", Georgia, serif !default;
-
-/// Controls the default font size used across the site.
-/// Affects body text and anything else that isn't
-/// specifically overridden.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
-
-$font-size-base:                            18px !default;
-
-/// Controls the default line height used across the site.
-/// Affects body text and anything else that isn't
-/// specifically overridden.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
-
-$line-height-base:                          1.6 !default;
-
-/// Controls the default color used for text across the site.
-/// Affects body text and anything else that isn't
-/// specifically overridden.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
-
-$color-base:                                $color-grayscale-5 !default;
-
-/// Base margin for the section tag.
-/// @group 01-config
-/// @access public
-/// @since 2.0.0
-
-$margin-section:                            $margin-large 0 0 !default;
+@import 'normalize-variables';
 
 // =================================================================
 // Global Styles
@@ -72,18 +30,6 @@ html {
 	-moz-osx-font-smoothing: grayscale; // Normalizes font rendering in Firefox
 }
 
-/// Base styles and typography for all HTML elements.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
-
-body {
-	color: $color-base;
-	font-family: $font-family-base;
-	font-size: $font-size-base;
-	line-height: $line-height-base;
-}
-
 /// Controls spacing between section tags.
 /// @group 01-config
 /// @access public
@@ -101,23 +47,3 @@ figure {
 	height: auto;
 	max-width: 100%;
 }
-
-/// Adds a default icon for links which open
-/// in a new window or tab. This pattern may
-/// also be used for external links.
-/// @group 01-config
-/// @access public
-/// @since 2.1.0
-/// TODO: This needs further testing with Hub course indicator.
-
-/*a {
-	&[target="_blank"],
-	&[target="_new"] {
-		@include icon( 'redirect', 'after' );
-
-		&:after {
-			font-size: 0.6em;
-			vertical-align: text-top;
-		}
-	}
-}*/

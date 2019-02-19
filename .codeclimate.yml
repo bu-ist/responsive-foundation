@@ -4,7 +4,6 @@ exclude_paths:
 - node_modules/
 - languages/
 - vendor/
-- bower_components/
 - js/vendor/
 - ".sass-cache/"
 - "*.min.css"
@@ -31,7 +30,7 @@ engines:
       - javascript
   eslint:
     enabled: true
-    channel: eslint-3
+    channel: eslint-5
   fixme:
     enabled: true
   markdownlint:
@@ -40,7 +39,7 @@ engines:
     enabled: false
   phpmd:
     enabled: false
-  scss-lint:
+  sass-lint:
     enabled: true
 ratings:
   paths:

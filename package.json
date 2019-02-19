@@ -1,17 +1,70 @@
 {
   "name": "responsive-foundation",
-  "version": "2.1.11",
+  "version": "3.0.0",
+  "homepage": "https://github.com/bu-ist/responsive-foundation",
+  "description": "A front-end framework for developing responsive sites at Boston University.",
+  "authors": [
+    "Mike Burns <mgburns@bu.edu>",
+    "Scott Dasse <sdasse@bu.edu>",
+    "Andy Rader <jarader@bu.edu>",
+    "Matt Fredenburg <malakhi@bu.edu>",
+    "Steve Rudolfi <srudolfi@bu.edu>",
+    "Eveleen Sung <eksung@bu.edu>",
+    "Inder Singh <isingh@bu.edu>",
+    "Ashley Kolodziej <kolodz10@bu.edu>",
+    "Jon Desroisers <jondes@bu.edu>",
+    "Tom Dodson <tdodson@bu.edu>",
+    "Alana Martin <alanam@bu.edu>"
+  ],
+  "keywords": [
+    "responsive",
+    "bu",
+    "foundation",
+    "bootstrap",
+    "framework"
+  ],
+  "private": true,
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "browserify-shim": {
+    "jquery": "global:jQuery"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "dependencies": {
+    "mathsass": "^0.10.1",
+    "normalize-scss": "^7.0.1"
+  },
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-bower-task": "^0.4.0",
-    "grunt-browser-sync": "^1.5.3",
-    "grunt-contrib-concat": "^0.5.0",
-    "grunt-contrib-copy": "^0.7.0",
-    "grunt-contrib-sass": "^0.8.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-gh-pages": "^0.9.1",
-    "grunt-version": "^0.3.0",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babelify": "^10.0.0",
+    "browserify-shim": "^3.8.14",
+    "bs-html-injector": "^3.0.3",
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.3",
+    "grunt": "^1.0.3",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-browserify": "^5.3.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^4.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-gh-pages": "^3.1.0",
+    "grunt-sass": "^3.0.2",
+    "grunt-sass-lint": "^0.2.4",
     "grunt-sassdoc": "^2.0.3",
+    "node-sass": "^4.10.0",
     "sassdoc-theme-budocs": "git+ssh://git@github.com/ashleykolodziej/sassdoc-theme-budocs.git#master",
     "grunt-kss": "^5.0.1",
     "id-kss-builder": "git+ssh://git@github.com:bu-ist/id-kss-builder#develop"

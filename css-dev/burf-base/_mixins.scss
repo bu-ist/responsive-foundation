@@ -23,12 +23,54 @@
 /// @access public
 /// @since 1.0.0
 
-%clearfix,
-.u-clearfix {
+%clearfix {
 	&::after {
 		display: table;
 		clear: both;
 		content: "";
+	}
+}
+
+@if $burf-extras {
+	.u-clearfix {
+		@extend %clearfix;
+	}
+}
+
+/// A mixin for creating aspect ratios. Apply this mixin
+/// to the container that should be scalable in size, such
+/// as a video wrapper or an image wrapper. This will ensure
+/// the targeted element scales in size relative to its parent's
+/// width. It then absolutely positions the immediate child of
+/// this element so it fills the aspect ratio container.
+/// @example
+/// 		Adds aspect-ratio styling to a parent element and
+///         absolute positions its immediate child.
+/// 			$width: 200;
+///				$height: 150;
+///				.foo {
+///					@include aspect-ratio( $width, $height );
+///				}
+/// @group 02-mixins
+/// @access public
+/// @since 3.1.2
+
+@mixin aspect-ratio( $width, $height ) {
+	position: relative;
+
+	&:before {
+		content: "";
+		display: block;
+		padding-top: ( $height / $width ) * 100%;
+		width: 100%;
+	}
+
+	> * {
+		position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
 	}
 }
 
@@ -558,11 +600,16 @@
 /// @access public
 /// @since 1.0.0
 
-%hide-text,
-.u-hide-text {
+%hide-text {
 	overflow: hidden;
 	text-indent: 100%;
 	white-space: nowrap;
+}
+
+@if $burf-extras {
+	.u-hide-text {
+		@extend %hide-text;
+	}
 }
 
 /// Hides entire elements visually, but preserves visibility for
@@ -581,8 +628,7 @@
 /// @access public
 /// @since 1.0.0
 
-%visually-hidden,
-.u-visually-hidden {
+%visually-hidden {
 	border: 0;
 	clip: rect( 0, 0, 0, 0 ); // Deprecated. Remove when clip-path support is better.
 	-webkit-clip-path: inset( 50% );
@@ -593,6 +639,12 @@
 	padding: 0;
 	position: absolute;
 	width: 1px;
+}
+
+@if $burf-extras {
+	.u-visually-hidden {
+		@extend %visually-hidden;
+	}
 }
 
 /// Reverses `%visually-hidden`. Helpful if you want to
@@ -626,8 +678,10 @@
 /// @access public
 /// @since 2.0.0
 
-.u-hide {
-	display: none;
+@if $burf-extras {
+	.u-hide {
+		display: none;
+	}
 }
 
 /// A class for developers to use to quickly prototype filtering.
@@ -639,8 +693,10 @@
 /// @access public
 /// @since 2.0.0
 
-.u-show {
-	display: block;
+@if $burf-extras {
+	.u-show {
+		display: block;
+	}
 }
 
 /// A class for developers to use to enable style matching to
@@ -652,8 +708,10 @@
 /// @access public
 /// @since 2.0.0
 
-.u-padding {
-	padding: $padding;
+@if $burf-extras {
+	.u-padding {
+		padding: $padding;
+	}
 }
 
 /// A class for developers to use to enable style matching to
@@ -665,8 +723,10 @@
 /// @access public
 /// @since 2.0.0
 
-.u-margin {
-	margin: $margin;
+@if $burf-extras {
+	.u-margin {
+		margin: $margin;
+	}
 }
 
 /// A safe way to including responsive styles on old browers which
@@ -712,7 +772,7 @@
 		@error 'The breakpoint shortcut "#{$point}" is no longer supported as of Responsive 2.0. \a Use the direct breakpoint variable ($#{$point}) instead. \a If want to use max-width, write a plain @media query.';
 	}
 	@if ( $mqs ) {
-		@media screen and ( min-width: $point ) {
+		@media ( min-width: $point ) {
 			@content;
 		}
 	} @else {
