@@ -214,6 +214,7 @@ module.exports = (grunt) => {
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-sass-lint');
 	grunt.loadNpmTasks('grunt-sassdoc');
+	grunt.loadNpmTasks('grunt-kss');
 	grunt.registerTask('build', ['js', 'kss', 'sassdoc']);
 	grunt.registerTask('deploy', ['build', 'gh-pages']);
 	grunt.registerTask('js', ['clean:js', 'browserify', 'uglify']);
