@@ -136,14 +136,30 @@ module.exports = (grunt) => {
 			},
 		},
 		postcss: {
-			options: {
-				map: false,
-				processors: [
-					autoprefixer, // add vendor prefixes.
-				],
+			defaults: {
+				options: {
+					map: {
+						inline: false, // Save all sourcemaps as separate files.
+						annotation: 'css/', // Save to this specified directory.
+					},
+					processors: [
+						autoprefixer, // add vendor prefixes.
+					],
+				},
+				src: ['css/burf-theme.css', 'css/burf-base.css'],
 			},
-			dist: {
-				src: ['css/*.css', 'docs/css/docs.css'],
+			docs: {
+				options: {
+					map: {
+						inline: false, // Save all sourcemaps as separate files.
+						annotation: 'docs/css/', // Save to this specified directory.
+					},
+					processors: [
+						autoprefixer, // add vendor prefixes.
+					],
+				},
+				src: 'docs/css/docs.css',
+				dest: 'docs/css/docs.css',
 			},
 		},
 		watch: {
