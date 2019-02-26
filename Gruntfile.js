@@ -129,6 +129,8 @@ module.exports = (grunt) => {
 				},
 				files: {
 					'docs/css/docs.css': '_docs/css-dev/docs.scss',
+					'css/burf-base.css': 'css-dev/burf-base.scss',
+					'css/burf-theme.css': 'css-dev/burf-theme.scss',
 				},
 			},
 		},
