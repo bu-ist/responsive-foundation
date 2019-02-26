@@ -1,4 +1,5 @@
 // Require external packages.
+const autoprefixer = require('autoprefixer');
 const sass = require('node-sass');
 
 // Set up a versioned folder for SassDoc
@@ -134,6 +135,17 @@ module.exports = (grunt) => {
 				},
 			},
 		},
+		postcss: {
+			options: {
+				map: false,
+				processors: [
+					autoprefixer, // add vendor prefixes.
+				],
+			},
+			dist: {
+				src: ['css/*.css', 'docs/css/docs.css'],
+			},
+		},
 		watch: {
 			grunt: {
 				options: {
@@ -156,7 +168,7 @@ module.exports = (grunt) => {
 					'_docs/css-dev/*.scss',
 					'css-dev/**/*.scss',
 				],
-				tasks: ['sass'],
+				tasks: ['sass', 'postcss'],
 			},
 			vendor: {
 				files: ['_docs/vendor/**/*'],
@@ -206,6 +218,7 @@ module.exports = (grunt) => {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-gh-pages');
+	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-sass-lint');
 	grunt.loadNpmTasks('grunt-sassdoc');
