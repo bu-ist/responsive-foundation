@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## Unreleased (3.2.0)
 
 * Adds `grunt-postcss` and `autoprefixer`.
 * Adds a helper `aspect-ratio` mixin.
@@ -50,6 +50,7 @@
 * Updates dependencies to resolve warnings about security vulnerabilities.
 * Updates `_tools-cgb.scss` with new icons implementation introduced in version
   `3.1.0`.
+* Adds improved styling to Edit links throughout burf-theme.
 
 ## 3.1.0
 

@@ -93,15 +93,19 @@
 /// @access public
 /// @since 3.2.0
 
-@function accessible-text( $background, $preferred-text-color, $compliance-method: 'AA' ){
+@function accessible-text( $background, $preferred-text-color, $bold: false, $compliance-method: 'AA' ){
 	$contrast: contrast( $background, $preferred-text-color );
 	$final-text-color: $preferred-text-color;
 	$lighten-text: lightness( $background ) < lightness( $preferred-text-color ); // Whether to lighten or darken the text color.
-	$required-contrast: 4.5; // Assumes AA usage.
+	$required-contrast: 4.5; // Assumes AA usage or AAA bold usage.
 	$suggested-background: $background;
 	$suggestion-contrast: $contrast;
 
-	@if $compliance-method == 'AAA' {
+	@if $bold == true {
+		$required-contrast: 3; // Lower requirements for AA bold
+	}
+
+	@if $compliance-method == 'AAA' and $bold == false {
 		$required-contrast: 7;
 	}
 

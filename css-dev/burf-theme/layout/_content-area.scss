@@ -100,6 +100,7 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 
 .content-area {
 	padding-bottom: $column-padding-bottom;
+	position: relative;
 
 	@include breakpoint( $sm ) {
 		padding-bottom: $column-padding-bottom-large-screen;
@@ -114,7 +115,6 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 	// This level of specificity is necessary to prevent interfering with the narrow template.
 	.sidebar-location-left .content-container & {
 		@extend %col-md-push-#{$_sidebar-width};
-		position: relative;
 	}
 
 	// For templates without sidebars
