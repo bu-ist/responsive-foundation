@@ -4,7 +4,7 @@ Responsive Foundation is Boston University's front-end development framework. Bu
 
 This framework is currently internal, and may not be used without permission.
 
-Foundation provides a library of [Sass](http://sass-lang.com/) and Javascript files that serve as a foundation for building responsive sites. This library is designed to be imported into your project using [Bower](http://bower.io).
+Foundation provides a library of [Sass](http://sass-lang.com/) and Javascript files that serve as a foundation for building responsive sites. This library is designed to be imported into your project using [npm](https://www.npmjs.com/).
 
 It was initially conceived during the build for our custom WordPress theme framework as a way to share common front-end assets among themes, but does not have an WordPress-specific bindings and can be used for non-WordPress projects as well.
 
@@ -12,23 +12,34 @@ Note that this repository does not include any production-ready assets (e.g. min
 
 ## Installation
 
-[Bower](http://bower.io) is the recommended installation method:
+We recommend installing Foundation using Node Package Manager (npm). You can learn more about how to install npm
+here: https://www.npmjs.com/get-npm
+
+Once you're set up with npm, you can install Foundation in your project directory like so:
 
 ```bash
-$ npm install -g bower
-$ bower install git@github.com:bu-ist/responsive-foundation.git#1.0.0
+npm install git@github.com:bu-ist/responsive-foundation.git#master
 ```
+
+This will install the latest version of Responsive Foundation each time you run `npm install`.
+To lock to a specific version of Foundation in your project, just change `master` to the number of
+the [release](https://github.com/bu-ist/responsive-foundation/releases) you would like to use.
 
 ## Sass Usage
 
-The Foundation Sass files are split in to two layers:
+Foundation Sass files are split as follows:
 
-* __Base__ - The base layer provides foundational components: CSS reset, responsive grid, and typography.
-* __Theme__ - The theme layer adds a more fleshed out visual appearance on top of the base.
+- **burf-base** contains Sass, mixins, resets, and basic styling for HTML that can apply to any
+project.
+- **burf-theme** contains styling specific to WordPress, and requires burf-base.
+- **burf-tools** is a bare, minimalistic partial intended for plugin development or projects where
+you are adding to a pre-existing reset or stylesheet. It is set up to not print any CSS by default,
+and includes support for variables, mixins, the grid, icons, and typography only - in other words,
+all the "tools" you might want to use, without the bloat.
 
-Note that the theme layer makes several assumptions about your markup. It's primarily used to generate the main stylesheet for the [Responsive Framework](https://github.com/bu-ist/responsive-framework/) parent theme. If you're working on a child theme that is similar in appearance, you probably want to include both layers.
+## Get moving quickly
 
-In your project's main SCSS file:
+You can get moving quickly by importing the full package in your Sass:
 
 ```sass
 # css-dev/style.scss:
@@ -40,28 +51,21 @@ In your project's main SCSS file:
 @import "burf-theme";
 ```
 
-These lines assume that the [responsive-foundation/css-dev](css-dev) directory in this repository is included in your [Sass load path](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#load_paths-option). If you followed the install steps above and are using Grunt to manage Sass compilation, your `sass` task configuration might look like:
+You can also choose to import individual partials. Individual build tool setups vary, but if you
+are using [grunt-sass](https://github.com/sindresorhus/grunt-sass) to manage compiling your Sass,
+you can use the [`includePaths` option](https://github.com/sass/node-sass#includepaths) to simplify 
+your import paths by adding the folder path to Responsive Foundation in `node_modules`. 
 
-```javascript
-	sass: {
-		options: {
-			loadPath: "bower_components/responsive-foundation/css-dev"
-		},
-		files: {
-			"style.css": "css-dev/style.scss"
-		}
-	}
-```
+For a highly customizable implementation of Foundation that leans heavily on customization with
+Sass variables, see the [Responsive Child Starter package](https://github.com/bu-ist/responsive-child-starter).
 
-Both the base and theme layers support customization with Sass variables.
-
-Full usage documentation can be found in the [visual style guide](https://bu-ist.github.io/responsive-foundation/).
+Full usage documentation can be found in our [style guide](https://bu-ist.github.io/responsive-foundation/).
 
 ## Actively maintained versions
 
-After each major release, one version is maintained until everyone can be upgraded to the next major version. Currently, these versions are maintained for the purposes of hotfixes:
+After each major release, one version is maintained until everyone can be upgraded to the next major version. Currently, these versions are maintained for the purposes of hotfixes only:
 
 * 0.1.0.2
 * 1.0.4.2
 * 1.4.1
-* 1.4.2
+* 1.4.2.2

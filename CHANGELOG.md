@@ -2,6 +2,9 @@
 
 ## Unreleased (3.2.0)
 
+* Adds a helper `aspect-ratio` mixin.
+* Adds a new function, `accessible-text()`, which returns WCAG 2.0-compliant
+  text colors when given a background color and desired text color.
 * Adds es6 functionality via a variety of npm packages and Gruntfile
   modifications:
     * `grunt-browserify`: Provides ability to use `require` for separating files into
@@ -44,7 +47,7 @@
 * Adds `.sasslintrc` for grunt sasslint command and code climate.
 * Adds missing `bs-html-injector` package for the browserSync task.
 * Updates dependencies to resolve warnings about security vulnerabilities.
-* Updates `_tools-cgb.scss` with new icons implementation introduced in versopm
+* Updates `_tools-cgb.scss` with new icons implementation introduced in version
   `3.1.0`.
 * Adds improved styling to Edit links throughout burf-theme.
 
