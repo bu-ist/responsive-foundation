@@ -60,7 +60,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 	right: 0;
 	text-decoration: none;
 	top: 0;
-	transition: max-width .3s ease-in;
+	transition: max-width 0.3s ease-in;
 	white-space: nowrap;
 	z-index: 100;
 
@@ -72,7 +72,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 
 	&:hover {
 		max-width: 150px;
-		transition: max-width .3s ease-in;
+		transition: max-width 0.3s ease-in;
 	}
 
 	&::before {
@@ -96,9 +96,9 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 	width: 100%;
 
 	@include transition(
-		height 0s step-end .5s,
-		opacity .2s ease-in,
-		padding 0s step-end .5s,
+		height 0s step-end 0.5s,
+		opacity 0.2s ease-in,
+		padding 0s step-end 0.5s,
 	);
 
 	.edit-link:hover + & {
@@ -108,7 +108,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 
 		@include transition(
 			height 0s step-start 0s,
-			opacity .2s ease-in,
+			opacity 0.2s ease-in,
 			padding 0s step-start 0s,
 		);
 	}
