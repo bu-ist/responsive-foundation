@@ -101,7 +101,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 		padding 0s step-end .5s,
 	);
 
-	.post-edit-link:hover + & {
+	.edit-link:hover + & {
 		height: 100%;
 		opacity: 1;
 		padding: 10px;
