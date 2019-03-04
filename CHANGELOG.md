@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased (3.2.0)
+## 3.2.0
 
 * Adds `grunt-postcss` and `autoprefixer`.
 * Adds a helper `aspect-ratio` mixin.
