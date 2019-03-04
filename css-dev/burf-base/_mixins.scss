@@ -37,6 +37,43 @@
 	}
 }
 
+/// A mixin for creating aspect ratios. Apply this mixin
+/// to the container that should be scalable in size, such
+/// as a video wrapper or an image wrapper. This will ensure
+/// the targeted element scales in size relative to its parent's
+/// width. It then absolutely positions the immediate child of
+/// this element so it fills the aspect ratio container.
+/// @example
+/// 		Adds aspect-ratio styling to a parent element and
+///         absolute positions its immediate child.
+/// 			$width: 200;
+///				$height: 150;
+///				.foo {
+///					@include aspect-ratio( $width, $height );
+///				}
+/// @group 02-mixins
+/// @access public
+/// @since 3.1.2
+
+@mixin aspect-ratio( $width, $height ) {
+	position: relative;
+
+	&:before {
+		content: "";
+		display: block;
+		padding-top: ( $height / $width ) * 100%;
+		width: 100%;
+	}
+
+	> * {
+		position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+	}
+}
+
 /// A mixin for border-radius. Takes care of browser
 /// prefixes for you. You should always use this mixin
 /// when writing border-radius rules to ensure you're
