@@ -2,6 +2,7 @@
 
 ## Unreleased (3.2.0)
 
+* Adds `grunt-postcss` and `autoprefixer`.
 * Adds a helper `aspect-ratio` mixin.
 * Adds a new function, `accessible-text()`, which returns WCAG 2.0-compliant
   text colors when given a background color and desired text color.
@@ -32,7 +33,7 @@
       files to reside in, so that old irrelevant files don't stick around.
 * Adds `grunt-sass-lint` for separate `grunt sasslint` task.
 * Adds `browserslist` to package.json so front-end tooling packages like `babel`
-  and `autoprefixer` (not yet in Foundation) can share the same configurations
+  and `autoprefixer` can share the same configurations
   for browser support.
 * Adds `.eslint` configuration file
 * Adds `theme.js` in the js-dev directory. This acts as an entry point for all
