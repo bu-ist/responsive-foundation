@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.2.01
+
+* Fixes the same issue in burf-tools as in 3.2.0, but for the grunt version.
+
 ## 3.2.0
 
 * Adds `grunt-postcss` and `autoprefixer`.
