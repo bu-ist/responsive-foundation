@@ -431,6 +431,11 @@ $tint-saturation: 15% !default;
 		@return $color;
 	} @else {
 		$_amt: $tint-saturation - ( lightness( $color ) / $tint-saturation );
+
+		@if ( $_amt <= 0 ) {
+			@return $color;
+		}
+
 		$newgray: adjust-hue( $color, hue( $tint-hue ) );
 
 		@return saturate( $newgray, $_amt );
