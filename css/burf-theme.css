@@ -2545,10 +2545,53 @@ textarea {
   height: 100px;
   width: 100px; }
 
-.edit-link {
+.post-edit-link {
+  border-radius: 2px;
+  background: #fff;
+  border: 1px solid currentColor;
+  color: #0f69d7;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  line-height: 1;
+  margin: 0.5em;
+  max-width: 32px;
+  overflow: hidden;
+  padding: 0.25em 0.5em 0.4em;
   position: absolute;
   right: 0;
-  top: 0; }
+  text-decoration: none;
+  top: 0;
+  transition: max-width 0.3s ease-in;
+  white-space: nowrap;
+  z-index: 100; }
+  .post-edit-link:visited, .post-edit-link:active, .post-edit-link:hover {
+    color: #0f69d7; }
+  .post-edit-link:hover {
+    max-width: 150px;
+    transition: max-width 0.3s ease-in; }
+  .post-edit-link::before {
+    content: "\f464";
+    font-family: "dashicons";
+    font-size: 17px;
+    margin-right: 0.25em;
+    vertical-align: text-bottom; }
+
+.post-edit-hint {
+  border: 1px dashed #0f69d7;
+  box-sizing: content-box;
+  height: 0;
+  left: -10px;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  transition: height 0s step-end 0.5s, opacity 0.2s ease-in, padding 0s step-end 0.5s; }
+  .edit-link:hover + .post-edit-hint {
+    height: 100%;
+    opacity: 1;
+    padding: 10px;
+    transition: height 0s step-start 0s, opacity 0.2s ease-in, padding 0s step-start 0s; }
 
 .responsive-video {
   margin-bottom: 14px;
@@ -4047,12 +4090,11 @@ nav {
   background: #fff; }
 
 .content-area {
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  position: relative; }
   @media (min-width: 768px) {
     .content-area {
       padding-bottom: 35px; } }
-  .sidebar-location-left .content-container .content-area {
-    position: relative; }
   .page-template-no-sidebars .content-area,
   .error404 .content-area {
     left: 0;
@@ -4397,6 +4439,9 @@ body {
 .post-headline + .meta {
   margin-top: -0.5em; }
 
+.post-thumb + .post-headline {
+  margin-top: 0; }
+
 .post-meta span::before {
   color: #aaa;
   content: "\a0\b7\a0"; }
@@ -4498,6 +4543,7 @@ body {
   margin-top: 15px; }
 
 .archive-link-container {
+  clear: both;
   text-align: center; }
 
 .single-event-schedule {
@@ -4517,12 +4563,15 @@ body {
   .single-event-schedule-start:first-child, .single-event-schedule-end:first-child, .single-event-schedule-allday:first-child {
     margin-top: 0; }
 
-.single-event-label, .single-event-speakers-label, .single-event-audience-label, .single-event-departments-label, .single-event-location-label, .single-event-location-building-label, .single-event-location-room-label, .single-event-fees-label, .single-event-fee-label, .single-event-fee-general-label, .single-event-fee-public-label, .single-event-fee-staff-label, .single-event-fee-student-label, .single-event-fee-bu-student-label, .single-event-fee-senior-label, .single-event-deadline-label, .single-event-registration-label, .single-event-contact-org-label, .single-event-contact-name-label, .single-event-contact-email-label, .single-event-contact-phone-label {
+.single-event-label {
   color: #999;
   display: block;
   font-family: "Benton-Sans", "Helvetica", sans-serif;
   font-weight: 700;
   text-transform: uppercase; }
+
+.single-event-info {
+  margin: 0 0 20px; }
 
 .single-event-time {
   color: #000;
@@ -4533,9 +4582,6 @@ body {
   margin: 0 0 1.5em 0; }
 
 .single-event-additional-details {
-  margin: 0 0 20px; }
-
-.single-event-speakers-info, .single-event-audience-info, .single-event-departments-info, .single-event-location-info, .single-event-location-building-info, .single-event-location-room-info, .single-event-fees-info, .single-event-fee-info, .single-event-fee-general-info, .single-event-fee-public-info, .single-event-fee-staff-info, .single-event-fee-student-info, .single-event-fee-bu-student-info, .single-event-fee-senior-info, .single-event-deadline-info, .single-event-registration-info, .single-event-contact-org-info, .single-event-contact-name-info, .single-event-contact-email-info, .single-event-contact-phone-info {
   margin: 0 0 20px; }
 
 .profile-single-name {

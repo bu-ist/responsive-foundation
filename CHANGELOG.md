@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+* Refactors styling targeting Framework's single event view on the calendar
+  template, so custom fields + standard fields can be styled the same way
+  without very specific selectors.
+
 ## 3.2.01
 
 * Fixes the same issue in burf-tools as in 3.2.0, but for the grunt version.
