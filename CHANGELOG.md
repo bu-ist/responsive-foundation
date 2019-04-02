@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 3.2.1
 
 * Refactors styling targeting Framework's single event view on the calendar
   template, so custom fields + standard fields can be styled the same way
