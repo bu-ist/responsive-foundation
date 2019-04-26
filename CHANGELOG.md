@@ -1,3 +1,7 @@
+# 1.0.44
+
+* Fixes version number for compatibility with `npm install`.
+
 # 1.0.4.3
 
 * Includes BU Hub Indicator styles within the base & theme of responsive-foundation version 1.0.4.2.
