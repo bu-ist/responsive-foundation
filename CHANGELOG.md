@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.2.11
+
+* Fixes missing support for several BU Default Icons.
+
 ## 3.2.1
 
 * Refactors styling targeting Framework's single event view on the calendar
