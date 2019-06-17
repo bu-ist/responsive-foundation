@@ -3620,7 +3620,6 @@ nav {
     list-style-type: none; }
     @media (min-width: 768px) {
       .utility-nav li {
-        *display: inline;
         border: 0;
         display: inline-block;
         padding-left: 15px; } }

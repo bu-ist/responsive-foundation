@@ -667,7 +667,6 @@ $nav-toggle-border: 4px !default;
 		list-style-type: none;
 
 		@include breakpoint( $nav-desktop ) {
-			*display: inline;
 			border: 0;
 			display: inline-block;
 			padding-left: $padding-small;
