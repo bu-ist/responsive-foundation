@@ -3556,9 +3556,10 @@ nav {
           display: inline; } }
     .primary-nav-menu li:focus {
       outline-color: white; }
-    .primary-nav-menu li:hover ul,
-    .primary-nav-menu li:focus ul,
     .primary-nav-menu li:focus-within ul {
+      left: auto; }
+    .primary-nav-menu li:hover ul,
+    .primary-nav-menu li:focus ul {
       left: auto; }
     .primary-nav-menu li li {
       display: block;
@@ -3619,7 +3620,6 @@ nav {
     list-style-type: none; }
     @media (min-width: 768px) {
       .utility-nav li {
-        *display: inline;
         border: 0;
         display: inline-block;
         padding-left: 15px; } }
@@ -4023,8 +4023,8 @@ nav {
   -ms-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   -o-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-  background-color: #f1f1f1;
-  color: #21759b;
+  background-color: #F1F1F1;
+  color: #21759B;
   display: block;
   font-family: "Open Sans",sans-serif;
   font-size: 14px;
@@ -4048,7 +4048,7 @@ nav {
     .skip-link {
       width: 190px; } }
   .skip-link:focus, .skip-link:active {
-    color: #21759b;
+    color: #21759B;
     top: 0;
     transition: top 0s; }
 

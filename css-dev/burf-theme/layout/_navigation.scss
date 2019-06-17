@@ -573,9 +573,12 @@ $nav-toggle-border: 4px !default;
 			outline-color: invert( $color-primary-nav-bg );
 		}
 
-		&:hover ul,
-		&:focus ul,
 		&:focus-within ul {
+			left: auto;
+		}
+
+		&:hover ul,
+		&:focus ul {
 			left: auto;
 		}
 
@@ -664,7 +667,6 @@ $nav-toggle-border: 4px !default;
 		list-style-type: none;
 
 		@include breakpoint( $nav-desktop ) {
-			*display: inline;
 			border: 0;
 			display: inline-block;
 			padding-left: $padding-small;
@@ -888,7 +890,7 @@ $_search-height: 115px;
 	&.nav-open {
 		.bu-banner,
 		.content
-		 {
+		{
 			@include breakpoint( $left-nav-desktop ) {
 				left: $width-side-nav - 60px;
 			}
@@ -1267,8 +1269,8 @@ $mega-nav-desktop-layout:                      $md !default;
 
 .skip-link {
 	@include box-shadow( 0 0 2px 2px transparentize( $color-grayscale-0, 0.4 ) );
-	background-color: #f1f1f1;
-	color: #21759b;
+	background-color: #F1F1F1;
+	color: #21759B;
 	display: block;
 	font-family: "Open Sans",sans-serif;
 	font-size: 14px;
@@ -1295,7 +1297,7 @@ $mega-nav-desktop-layout:                      $md !default;
 
 	&:focus,
 	&:active {
-		color: #21759b;
+		color: #21759B;
 		top: 0;
 		-webkit-transition: top 0s;
 		transition: top 0s;
