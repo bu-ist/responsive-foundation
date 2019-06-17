@@ -573,9 +573,12 @@ $nav-toggle-border: 4px !default;
 			outline-color: invert( $color-primary-nav-bg );
 		}
 
-		&:hover ul,
-		&:focus ul,
 		&:focus-within ul {
+			left: auto;
+		}
+
+		&:hover ul,
+		&:focus ul {
 			left: auto;
 		}
 

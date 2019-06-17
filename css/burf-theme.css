@@ -3556,9 +3556,10 @@ nav {
           display: inline; } }
     .primary-nav-menu li:focus {
       outline-color: white; }
-    .primary-nav-menu li:hover ul,
-    .primary-nav-menu li:focus ul,
     .primary-nav-menu li:focus-within ul {
+      left: auto; }
+    .primary-nav-menu li:hover ul,
+    .primary-nav-menu li:focus ul {
       left: auto; }
     .primary-nav-menu li li {
       display: block;
