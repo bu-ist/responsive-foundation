@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.2.12
+
+* Fixes a bug with dropdowns in IE11 and Edge related to `:focus-within`.
+
 ## 3.2.11
 
 * Fixes missing support for several BU Default Icons.
