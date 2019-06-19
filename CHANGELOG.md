@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+* Adds Medium, Medium Alt, and Rhett support to default icons.
+
 ## 3.2.12
 
 * Fixes a bug with dropdowns in IE11 and Edge related to `:focus-within`.
