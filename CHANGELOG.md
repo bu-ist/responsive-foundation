@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 3.2.2
 
 * Adds Medium, Medium Alt, and Rhett support to default icons.
 
