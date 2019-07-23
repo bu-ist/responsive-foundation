@@ -4622,4 +4622,11 @@ body {
   list-style: none;
   margin: 0 0 30px;
   word-wrap: break-word; }
+
+.page-template-bu-landing .content-container {
+  max-width: 100%; }
+
+.page-template-bu-landing .content-area {
+  float: none;
+  margin: auto; }
 /*# sourceMappingURL=burf-theme.css.map */
