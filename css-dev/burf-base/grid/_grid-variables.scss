@@ -2,41 +2,132 @@
 // Grid Settings
 // =================================================================
 
-// $grid-number-columns
+// Change the number of columns in the grid
 //
-// The number of columns you would like in your grid.
-// To use styles in burf-theme, you must set this to a number that
-// is divisible by 2, 3, and 4.
+// `$grid-number-columns` can be used to adjust the number of columns
+// you would like to use in your grid. By default, we use a 12 column grid.
+// You may want to adjust this up or down for more design control.
+//
+// Because the grid in Responsive is dynamically generated, you can change
+// this freely and your "friendly" classes - `col-md-third`, etc - will work.
+// That means if you're mid-project and realize you need tighter control over
+// placement of items on your page, you can switch to a 24 column grid system
+// without any adverse effects.
+//
+// To use styles with the friendly grid classes in `burf-theme`, you must set
+// this to a number that is divisible by 2, 3, and 4.
+//
+// #### Examples
+//
+// ##### Change the grid system to use a 24 column grid
+//
+//
+// ```scss
+//
+// $grid-number-columns:                      24;
+// ```
+//
+// Styleguide Utilities.Grid.Change the number of columns
 //
 // Status: Ready
 //
-// Styleguide Utilities.Grid.Columns
+// Access: Public
 //
-// Access: public
 // Since: 1.2.0
 
 $grid-number-columns:                      12 !default;
 
+// Change the spacing between grid items
+//
 // The percentage you'd like a margin to take up on grid items, if you
 // are using margins on grid items.
 // By default, this will attempt to reproduce the default margin on a
-// large screen in a full-width container. If you plan to use grids include
+// large screen in a full-width container. If you plan to use grids inside
 // a smaller container, you may need to adjust this.
 //
-// Styleguide Utilities.Grid.Margin Width
+// #### Examples
 //
-// Access: public
+// ##### Change the spacing between grid items to a flat 10%.
+//
+//
+// ```scss
+//
+// $grid-margin-width:                      10;
+// ```
+//
+// Styleguide Utilities.Grid.Change the spacing between grid items
+//
+// Status: Ready
+//
+// Access: Public
+//
 // Since: 1.2.0
 
 $grid-margin-width:                        ( $margin / $container-lg ) * 100 !default;
 
-// Choose which breakpoints you want grid classes to support.
-// Small (sm) and medium (md) are required, everything else is optional.
+// Customize which breakpoints the grid supports
 //
-// Styleguide Utilities.Grid.Breakpoints
+// In Responsive, you can choose which breakpoints you want grid classes
+// to support using the `$grid-breakpoints` map. You might want to do this
+// to optimize your theme so that only the classes you need are generated,
+// or you might want to add a new breakpoint to the stack that isn't
+// supported by default.
 //
-// Access: public
-// Since: 1.2.0
+// The `sm` and `md` breakpoints are required by Responsive. All others are optional.
+//
+// Styleguide Utilities.Grid.Customize which breakpoints the grid supports
+//
+// #### Examples
+//
+// ##### Basic usage
+// By default, grid classes for all breakpoints in Responsive except `$xl`
+// are generated.
+//
+// ```scss
+//
+// $grid-breakpoints: (
+// 	xs: $xs, // optional
+// 	sm: $sm, // required for the framework
+// 	md: $md, // required for the framework
+// 	lg: $lg  // optional
+// );
+// ```
+//
+// ##### Prevent certain breakpoints from generating
+// You can optimize your theme by only choosing to generate the
+// grid classes you need for that theme.
+//
+// ```scss
+//
+// $grid-breakpoints: (
+// 	xs: $xs, // optional
+// 	sm: $sm, // required for the framework
+// 	md: $md // required for the framework
+// );
+// ```
+//
+// ##### Generate a new set of grid classes for a custom breakpoint
+// You can also add your own custom breakpoints for grid classes.
+// For example, if you are working with a large screen TV for signage,
+// you may want to add support to the grid for your TV breakpoint to
+// make it easier to manage your TV-sized layout.
+//
+// ```scss
+//
+// $grid-breakpoints: (
+// 	xs: $xs, // optional
+// 	sm: $sm, // required for the framework
+// 	md: $md, // required for the framework
+// 	lg: $lg,  // optional
+//		tv: $your-tv-breakpoint // Your new breakpoint. Usage: %col-tv-third;
+// );
+// ```
+//
+// Since: 2.0.0
+//
+// Access: Public
+//
+// Status: Ready
 
 $grid-breakpoints: (
 	xs: 		$xs, // optional
@@ -45,13 +136,38 @@ $grid-breakpoints: (
 	lg: 		$lg  // optional
 );
 
-// Determines which classes to calculate and print for the theme.
-// By default, all are on so clients can freely use these in custom CSS.
-// However, you may choose to only support the ones you like in a custom theme.
+// Change which sets of grid classes your theme generates
 //
-// Styleguide Utilities.Grid.Variables
+// Responsive is based on Bootstrap, and supports all Boostrap-style
+// grid options, including `push`, `pull`, and `offset`, by default.
+// But since we dynamically generate our grid instead of including
+// static files, there is also support for a new type, `margin`,
+// which puts a true margin between each grid item in the grid, and
+// using the `$grid-supports` map, you can choose to generate any
+// (or none!) of these grid class types.
 //
-// Access: public
+// You may want to tweak this to improve the performance of your
+// theme, especially if you do not use `push`, `pull`, or `offset`.
+//
+// #### Examples
+//
+// ##### Prevent `margin` and `offset` classes from generating.
+//
+//
+// ```scss
+//
+// $grid-supports: (
+// 	margin: false, // optional
+// 	push: true, // required for the framework
+// 	pull: true, // required for the framework
+// 	offset: false  // optional
+// );
+// ```
+//
+// Styleguide Utilities.Grid.Change which sets of grid classes your theme generates
+//
+// Access: Public
+//
 // Since: 2.0.0
 
 $grid-supports: (
@@ -67,7 +183,8 @@ $grid-supports: (
 //
 // Styleguide Utilities.Grid.Variables
 //
-// Access: public
+// Access: Public
+//
 // Since: 1.2.0
 
 $grid-classes:										 true !default;
@@ -76,7 +193,8 @@ $grid-classes:										 true !default;
 //
 // Styleguide Utilities.Grid.Variables
 //
-// Access: public
+// Access: Public
+//
 // Since: 1.0.0
 
 $grid-container-padding:                   $padding-small !default;
@@ -86,7 +204,8 @@ $grid-container-padding:                   $padding-small !default;
 //
 // Styleguide Utilities.Grid.Variables
 //
-// Access: public
+// Access: Public
+//
 // Since: 1.0.0
 
 $grid-container-padding-desktop-sides:     $padding !default;
@@ -96,7 +215,8 @@ $grid-container-padding-desktop-sides:     $padding !default;
 //
 // Styleguide Utilities.Grid.Variables
 //
-// Access: public
+// Access: Public
+//
 // Since: 1.0.0
 
 $grid-container-padding-desktop:           $padding-large $grid-container-padding-desktop-sides !default;
@@ -107,7 +227,8 @@ $grid-container-padding-desktop:           $padding-large $grid-container-paddin
 //
 // Styleguide Utilities.Grid.Variables
 //
-// Access: public
+// Access: Public
+//
 // Since: 1.0.0
 
 $grid-row-margin:                          0 -#{$grid-container-padding} !default;
@@ -118,7 +239,8 @@ $grid-row-margin:                          0 -#{$grid-container-padding} !defaul
 //
 // Styleguide Utilities.Grid.Variables
 //
-// Access: public
+// Access: Public
+//
 // Since: 1.0.0
 
 $grid-row-margin-desktop:                          0 -#{$grid-container-padding-desktop-sides} !default;
@@ -132,7 +254,8 @@ $grid-row-margin-desktop:                          0 -#{$grid-container-padding-
 //
 // Styleguide Utilities.Grid.Variables
 //
-// Access: public
+// Access: Public
+//
 // Since: 1.0.0
 
 $grid-column-padding:                      $padding !default;
@@ -142,7 +265,8 @@ $grid-column-padding:                      $padding !default;
 //
 // Styleguide Utilities.Grid.Variables
 //
-// Access: public
+// Access: Public
+//
 // Since: 2.0.0
 
 $grid-margin-padding:                      $padding !default;

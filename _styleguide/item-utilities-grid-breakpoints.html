@@ -92,17 +92,6 @@
 							  
 							  	<a
 							  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
-							  		href="item-utilities-grid-introduction.html">
-							  			<span class="id-kss-nav-name">
-							  				Introduction
-							  			</span>
-							  		</a>
-							  </li>
-							  
-							  <li class="id-kss-nav-menu-item">
-							  
-							  	<a
-							  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
 							  		href="item-utilities-grid-margin-width.html">
 							  			<span class="id-kss-nav-name">
 							  				Margin Width
@@ -229,8 +218,12 @@
 		
 								<span class="id-kss-title-section">Grid</span>
 		
-								<span class="id-kss-title-name">Choose which breakpoints you want grid classes to support. Small (sm) and medium (md) are required, everything else is optional.<a class="id-kss-title__permalink" href="#kssref-utilities-grid-breakpoints">Link</a></span>
+								<span class="id-kss-title-name">Customize which breakpoints the grid supports<a class="id-kss-title__permalink" href="#kssref-utilities-grid-breakpoints">Link</a></span>
 							</h2>
+								<span class="id-kss-since id-kss-since-2-0-0">
+									Since:
+										<a href="https://github.com/bu-ist/responsive-foundation//releases/tag/2.0.0">2.0.0</a>
+								</span>
 		
 									<span class="id-kss-open-github-issue">
 										<a href="https://github.com/bu-ist/responsive-foundation//issues/new" class="button button-small" title="Opens a new Issue on Github">New Issue</a>
@@ -244,16 +237,59 @@
 							</span>-->
 						</header>
 							<div class="id-kss-description">
-								<p>Choose which breakpoints you want grid classes to support.
-		Small (sm) and medium (md) are required, everything else is optional.</p>
-		<p>Access: public
-		Since: 1.2.0</p>
+								<p>In Responsive, you can choose which breakpoints you want grid classes
+		to support. You might want to do this to optimize your theme so that only
+		the classes you need are generated, or you might want to add a new breakpoint
+		to the stack that isn't supported by default.</p>
+		<p>The <code>sm</code> and <code>md</code> breakpoints are required by Responsive. All others are optional.</p>
+		<h4>Examples</h4>
+		<h5>Basic usage</h5>
+		<p>By default, grid classes for all breakpoints in Responsive except <code>$xl</code>
+		are generated.</p>
+		<pre class="hljs"><code class="language-scss">
+		<span class="hljs-variable">$grid-breakpoints</span>: (
+			xs: <span class="hljs-variable">$xs</span>, // optional
+			sm: <span class="hljs-variable">$sm</span>, // required for the framework
+			md: <span class="hljs-variable">$md</span>, // required for the framework
+			lg: <span class="hljs-variable">$lg</span>  // optional
+		);
+		</code></pre>
+		<h5>Prevent certain breakpoints from generating</h5>
+		<p>You can optimize your theme by only choosing to generate the
+		grid classes you need for that theme.</p>
+		<pre class="hljs"><code class="language-scss">
+		<span class="hljs-variable">$grid-breakpoints</span>: (
+			xs: <span class="hljs-variable">$xs</span>, // optional
+			sm: <span class="hljs-variable">$sm</span>, // required for the framework
+			md: <span class="hljs-variable">$md</span> // required for the framework
+		);
+		</code></pre>
+		<h5>Generate a new set of grid classes for a custom breakpoint</h5>
+		<p>You can also add your own custom breakpoints for grid classes.
+		For example, if you are working with a large screen TV for signage,
+		you may want to add support to the grid for your TV breakpoint to
+		make it easier to manage your TV-sized layout.</p>
+		<pre class="hljs"><code class="language-scss">
+		<span class="hljs-variable">$grid-breakpoints</span>: (
+			xs: <span class="hljs-variable">$xs</span>, // optional
+			sm: <span class="hljs-variable">$sm</span>, // required for the framework
+			md: <span class="hljs-variable">$md</span>, // required for the framework
+			lg: <span class="hljs-variable">$lg</span>,  // optional
+			tv: <span class="hljs-variable">$your-tv-breakpoint</span> // Your new breakpoint. Usage: %col-tv-third;
+		);
+		</code></pre>
 		
 							</div>
 		
 		
 					</div>
 		
+							<span class="id-kss-source id-kss-style">
+								Source: <code>burf-base/grid/_grid-variables.scss, line 33</code>
+									<a href="https://github.com/bu-ist/responsive-foundation/tree/master/css-devburf-base/grid/_grid-variables.scss#L33">
+										View Source
+									</a>
+							</span>
 		
 				</div>
 
