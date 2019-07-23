@@ -236,7 +236,6 @@ module.exports = ( grunt ) => {
 				},
 			},
 		},
-<<<<<<< HEAD
 		kss: {
 			options: {
 				title: 'Responsive Foundation Style Guide',
