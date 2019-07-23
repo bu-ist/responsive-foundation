@@ -969,3 +969,32 @@
 		@error 'The rgba-color mixin requires a valid CSS attribute to apply the color to, a valid RGBA color, and a valid background color to calculate the fallback color. \a Example usage: @include rgba-color(\'background-color\', rgba(black, 0.5), white);';
 	}
 }
+
+/// The root element font-size (html element).
+///
+/// @group 02-mixins
+/// @access public
+/// @since 3.2.3
+$root-font-size: 16 !default;
+
+/// Helper function to output 'em' value based on supplied px value.
+///
+/// @group 02-mixins
+/// @access public
+/// @since 3.2.3
+/// @param integer $pixels The value in pixels (without px unit)
+/// @param integer $context The parent container font-size context.
+@function em($pixels, $context: 16) {
+  @return #{$pixels / $context}em;
+}
+
+/// Helper function to output 'rem' value based on supplied px value.
+///
+/// @group 02-mixins
+/// @access public
+/// @since 3.2.3
+/// @param integer $pixels The value in pixels (without px unit)
+/// @param integer $root-font-size The html element font-size.
+@function rem($pixels, $root-font-size) {
+  @return #{$pixels / $root-font-size}rem;
+}

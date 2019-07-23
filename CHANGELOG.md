@@ -1,7 +1,30 @@
 # Changelog
 
-## Unreleased
+## 3.2.2
 
+* Adds Medium, Medium Alt, and Rhett support to default icons.
+
+## 3.2.12
+
+* Fixes a bug with dropdowns in IE11 and Edge related to `:focus-within`.
+
+## 3.2.11
+
+* Fixes missing support for several BU Default Icons.
+
+## 3.2.1
+
+* Refactors styling targeting Framework's single event view on the calendar
+  template, so custom fields + standard fields can be styled the same way
+  without very specific selectors.
+
+## 3.2.01
+
+* Fixes the same issue in burf-tools as in 3.2.0, but for the grunt version.
+
+## 3.2.0
+
+* Adds `grunt-postcss` and `autoprefixer`.
 * Adds a helper `aspect-ratio` mixin.
 * Adds a new function, `accessible-text()`, which returns WCAG 2.0-compliant
   text colors when given a background color and desired text color.
@@ -32,7 +55,7 @@
       files to reside in, so that old irrelevant files don't stick around.
 * Adds `grunt-sass-lint` for separate `grunt sasslint` task.
 * Adds `browserslist` to package.json so front-end tooling packages like `babel`
-  and `autoprefixer` (not yet in Foundation) can share the same configurations
+  and `autoprefixer` can share the same configurations
   for browser support.
 * Adds `.eslint` configuration file
 * Adds `theme.js` in the js-dev directory. This acts as an entry point for all
@@ -49,6 +72,7 @@
 * Updates dependencies to resolve warnings about security vulnerabilities.
 * Updates `_tools-cgb.scss` with new icons implementation introduced in version
   `3.1.0`.
+* Adds improved styling to Edit links throughout burf-theme.
 
 ## 3.1.0
 

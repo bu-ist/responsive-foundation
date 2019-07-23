@@ -36,15 +36,82 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 // WordPress WYSIWYG Styles
 // =================================================================
 
-/// Provides a link for clients to edit the page within the page content.
+/// Provides a link for admins to edit the page within the page content.
+/// Formerly `.edit-link`, this has been updated to better match WordPress
+/// standards from both a class naming perspective and a user interface
+/// perspective.
 /// @group wp-admin
 /// @access public
-/// @since 1.0.0
+/// @since 3.2.0
 
-.edit-link {
+.post-edit-link {
+	@include border-radius( 2px );
+	background: $color-grayscale-f;
+	border: 1px solid currentColor;
+	color: $color-link;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: 15px;
+	line-height: 1;
+	margin: 0.5em;
+	max-width: 32px;
+	overflow: hidden;
+	padding: 0.25em 0.5em 0.4em;
 	position: absolute;
 	right: 0;
+	text-decoration: none;
 	top: 0;
+	transition: max-width 0.3s ease-in;
+	white-space: nowrap;
+	z-index: 100;
+
+	&:visited,
+	&:active,
+	&:hover {
+		color: $color-link;
+	}
+
+	&:hover {
+		max-width: 150px;
+		transition: max-width 0.3s ease-in;
+	}
+
+	&::before {
+		content: "\f464";
+		font-family: "dashicons";
+		font-size: 17px;
+		margin-right: 0.25em;
+		vertical-align: text-bottom;
+	}
+}
+
+.post-edit-hint {
+	border: 1px dashed $color-link;
+	box-sizing: content-box;
+	height: 0;
+	left: -10px;
+	opacity: 0;
+	padding: 0;
+	position: absolute;
+	top: -10px;
+	width: 100%;
+
+	@include transition(
+		height 0s step-end 0.5s,
+		opacity 0.2s ease-in,
+		padding 0s step-end 0.5s,
+	);
+
+	.edit-link:hover + & {
+		height: 100%;
+		opacity: 1;
+		padding: 10px;
+
+		@include transition(
+			height 0s step-start 0s,
+			opacity 0.2s ease-in,
+			padding 0s step-start 0s,
+		);
+	}
 }
 
 /// A placeholder for responsive video styles.
