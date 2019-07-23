@@ -27,9 +27,7 @@
 // $grid-number-columns:                      24;
 // ```
 //
-// Styleguide Utilities.Grid.Change the number of columns
-//
-// Status: Ready
+// Styleguide Grid.Grid Controls.Columns
 //
 // Access: Public
 //
@@ -55,9 +53,7 @@ $grid-number-columns:                      12 !default;
 // $grid-margin-width:                      10;
 // ```
 //
-// Styleguide Utilities.Grid.Change the spacing between grid items
-//
-// Status: Ready
+// Styleguide Grid.Item Settings.Margin
 //
 // Access: Public
 //
@@ -65,7 +61,7 @@ $grid-number-columns:                      12 !default;
 
 $grid-margin-width:                        ( $margin / $container-lg ) * 100 !default;
 
-// Customize which breakpoints the grid supports
+// Choose which breakpoints to generate grid classes for
 //
 // In Responsive, you can choose which breakpoints you want grid classes
 // to support using the `$grid-breakpoints` map. You might want to do this
@@ -74,8 +70,6 @@ $grid-margin-width:                        ( $margin / $container-lg ) * 100 !de
 // supported by default.
 //
 // The `sm` and `md` breakpoints are required by Responsive. All others are optional.
-//
-// Styleguide Utilities.Grid.Customize which breakpoints the grid supports
 //
 // #### Examples
 //
@@ -123,11 +117,11 @@ $grid-margin-width:                        ( $margin / $container-lg ) * 100 !de
 // );
 // ```
 //
+// Styleguide Grid.Grid Controls.Breakpoints
+//
 // Since: 2.0.0
 //
 // Access: Public
-//
-// Status: Ready
 
 $grid-breakpoints: (
 	xs: 		$xs, // optional
@@ -136,7 +130,7 @@ $grid-breakpoints: (
 	lg: 		$lg  // optional
 );
 
-// Change which sets of grid classes your theme generates
+// Choose which sets of grid classes to generate
 //
 // Responsive is based on Bootstrap, and supports all Boostrap-style
 // grid options, including `push`, `pull`, and `offset`, by default.
@@ -164,7 +158,7 @@ $grid-breakpoints: (
 // );
 // ```
 //
-// Styleguide Utilities.Grid.Change which sets of grid classes your theme generates
+// Styleguide Grid.Grid Controls.Sets
 //
 // Access: Public
 //
@@ -177,11 +171,13 @@ $grid-supports: (
 	offset: 		true  // optional
 );
 
+// Turn numeric grid classes on or off
+//
 // Choose whether or not to print the numeric grid classes (.col-sm-5). Optional.
 // Note that friendly placeholders (.col-quarter, .col-sm-quarter) will always print.
 // You may wish to disable these on custom themes.
 //
-// Styleguide Utilities.Grid.Variables
+// Styleguide Grid.Grid Controls.Numeric Classes
 //
 // Access: Public
 //
@@ -189,9 +185,11 @@ $grid-supports: (
 
 $grid-classes:										 true !default;
 
+// Adjust padding on the mobile content container
+//
 // The amount of padding to put on the content container.
 //
-// Styleguide Utilities.Grid.Variables
+// Styleguide Grid.Container Settings.Padding
 //
 // Access: Public
 //
@@ -199,10 +197,12 @@ $grid-classes:										 true !default;
 
 $grid-container-padding:                   $padding-small !default;
 
-// The amount of padding to put on the content container
+// Adjust padding on the desktop content container
+//
+// The amount of padding to use on the sides of the content container
 // on desktop.
 //
-// Styleguide Utilities.Grid.Variables
+// Styleguide Grid.Container Settings.Padding Desktop (Sides)
 //
 // Access: Public
 //
@@ -210,10 +210,12 @@ $grid-container-padding:                   $padding-small !default;
 
 $grid-container-padding-desktop-sides:     $padding !default;
 
+// Adjust padding on the desktop content container
+//
 // The amount of padding to put on the content container
 // on desktop.
 //
-// Styleguide Utilities.Grid.Variables
+// Styleguide Grid.Container Settings.Padding Desktop (All)
 //
 // Access: Public
 //
@@ -221,11 +223,13 @@ $grid-container-padding-desktop-sides:     $padding !default;
 
 $grid-container-padding-desktop:           $padding-large $grid-container-padding-desktop-sides !default;
 
+// Adjust spacing on mobile grid rows
+//
 // Controls the margin on rows in the grid.
 // By default, this will attempt to "pull" grid items out
 // by the same amount as their margin, Boostrap-style.
 //
-// Styleguide Utilities.Grid.Variables
+// Styleguide Grid.Row Settings.Margin
 //
 // Access: Public
 //
@@ -233,17 +237,20 @@ $grid-container-padding-desktop:           $padding-large $grid-container-paddin
 
 $grid-row-margin:                          0 -#{$grid-container-padding} !default;
 
+// Adjust spacing on desktop grid rows
+//
 // Controls the margin on rows in the grid.
 // By default, this will attempt to "pull" grid items out
 // by the same amount as their margin, Boostrap-style.
 //
-// Styleguide Utilities.Grid.Variables
+// Styleguide Grid.Row Settings.Margin (Desktop)
 //
 // Access: Public
 //
 // Since: 1.0.0
 
 $grid-row-margin-desktop:                          0 -#{$grid-container-padding-desktop-sides} !default;
+
 
 // Controls the padding on child items of the grid.
 // On non-margin classes, this will act like a "margin",
@@ -252,7 +259,7 @@ $grid-row-margin-desktop:                          0 -#{$grid-container-padding-
 // if you have a background color on your grid item,
 // use the margin classes.
 //
-// Styleguide Utilities.Grid.Variables
+// Styleguide Grid.Item Settings.Padding
 //
 // Access: Public
 //
@@ -263,7 +270,7 @@ $grid-column-padding:                      $padding !default;
 // Controls the padding on child items of the grid using the
 // -margin class. Does not affect other margin classes.
 //
-// Styleguide Utilities.Grid.Variables
+// Styleguide Grid.Item Settings.Padding (Margin Items Only)
 //
 // Access: Public
 //

@@ -187,7 +187,7 @@ module.exports = ( grunt ) => {
 					'_docs/css-dev/*.scss',
 					'css-dev/**/*.scss',
 				],
-				tasks: [ 'sass', 'postcss' ],
+				tasks: [ 'sass' ],
 			},
 			styleguide: {
 				files: [

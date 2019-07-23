@@ -107,8 +107,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -503,6 +502,8 @@ template {
 *,
 *::before,
 *::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 figure {
@@ -1735,6 +1736,11 @@ button,
   :hover[type="reset"],
   :hover[type="submit"], .button:hover, .button-primary:hover,
   .button-selected:hover {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.1)));
+    background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));
+    background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));
+    background-image: -ms-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));
+    background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));
     background-image: linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#00000000', EndColorStr='#1A000000'); }
   button:active,
@@ -1742,6 +1748,8 @@ button,
   :active[type="reset"],
   :active[type="submit"], .button:active, .button-primary:active,
   .button-selected:active {
+    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
     -ms-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
     -o-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
@@ -1765,6 +1773,8 @@ button,
   [disabled][type="button"],
   [disabled][type="reset"],
   [disabled][type="submit"] {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
     -ms-box-shadow: none;
     -o-box-shadow: none;
     box-shadow: none;
@@ -1832,6 +1842,8 @@ select:focus,
 textarea:focus, [type="file"]:focus,
 [type="radio"]:focus,
 [type="checkbox"]:focus {
+  -webkit-box-shadow: 0 0 4px 0 rgba(18, 159, 234, 0.2);
+  -moz-box-shadow: 0 0 4px 0 rgba(18, 159, 234, 0.2);
   -ms-box-shadow: 0 0 4px 0 rgba(18, 159, 234, 0.2);
   -o-box-shadow: 0 0 4px 0 rgba(18, 159, 234, 0.2);
   box-shadow: 0 0 4px 0 rgba(18, 159, 234, 0.2); }
@@ -1852,9 +1864,14 @@ textarea:focus, [type="file"]:focus,
 [type="color"],
 select,
 textarea {
+  -webkit-box-shadow: inset 0 1px 3px #eee;
+  -moz-box-shadow: inset 0 1px 3px #eee;
   -ms-box-shadow: inset 0 1px 3px #eee;
   -o-box-shadow: inset 0 1px 3px #eee;
   box-shadow: inset 0 1px 3px #eee;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
   border-radius: 0;
   border: 1px solid #ddd;
   display: inline-block;
@@ -2289,4 +2306,5 @@ textarea {
   float: left;
   height: 100px;
   width: 100px; }
+
 /*# sourceMappingURL=burf-base.css.map */
