@@ -27,7 +27,7 @@
 // $grid-number-columns:                      24;
 // ```
 //
-// Styleguide Grid.Grid Controls.Columns
+// Styleguide Grid.2: Grid Controls.z: Columns
 //
 // Access: Public
 //
@@ -53,7 +53,7 @@ $grid-number-columns:                      12 !default;
 // $grid-margin-width:                      10;
 // ```
 //
-// Styleguide Grid.Item Settings.Margin
+// Styleguide Grid.6: Item Settings.z: Margin
 //
 // Access: Public
 //
@@ -117,7 +117,7 @@ $grid-margin-width:                        ( $margin / $container-lg ) * 100 !de
 // );
 // ```
 //
-// Styleguide Grid.Grid Controls.Breakpoints
+// Styleguide Grid.2: Grid Controls.z: Breakpoints
 //
 // Since: 2.0.0
 //
@@ -158,7 +158,7 @@ $grid-breakpoints: (
 // );
 // ```
 //
-// Styleguide Grid.Grid Controls.Sets
+// Styleguide Grid.2: Grid Controls.z: Sets
 //
 // Access: Public
 //
@@ -177,7 +177,7 @@ $grid-supports: (
 // Note that friendly placeholders (.col-quarter, .col-sm-quarter) will always print.
 // You may wish to disable these on custom themes.
 //
-// Styleguide Grid.Grid Controls.Numeric Classes
+// Styleguide Grid.2: Grid Controls.z: Numeric Classes
 //
 // Access: Public
 //
@@ -189,7 +189,7 @@ $grid-classes:										 true !default;
 //
 // The amount of padding to put on the content container.
 //
-// Styleguide Grid.Container Settings.Padding
+// Styleguide Grid.4: Container Settings.z: Padding
 //
 // Access: Public
 //
@@ -202,7 +202,7 @@ $grid-container-padding:                   $padding-small !default;
 // The amount of padding to use on the sides of the content container
 // on desktop.
 //
-// Styleguide Grid.Container Settings.Padding Desktop (Sides)
+// Styleguide Grid.4: Container Settings.z: Padding Desktop (Sides)
 //
 // Access: Public
 //
@@ -215,7 +215,7 @@ $grid-container-padding-desktop-sides:     $padding !default;
 // The amount of padding to put on the content container
 // on desktop.
 //
-// Styleguide Grid.Container Settings.Padding Desktop (All)
+// Styleguide Grid.4: Container Settings.z: Padding Desktop (All)
 //
 // Access: Public
 //
@@ -229,7 +229,7 @@ $grid-container-padding-desktop:           $padding-large $grid-container-paddin
 // By default, this will attempt to "pull" grid items out
 // by the same amount as their margin, Boostrap-style.
 //
-// Styleguide Grid.Row Settings.Margin
+// Styleguide Grid.5: Row Settings.z: Margin
 //
 // Access: Public
 //
@@ -243,7 +243,7 @@ $grid-row-margin:                          0 -#{$grid-container-padding} !defaul
 // By default, this will attempt to "pull" grid items out
 // by the same amount as their margin, Boostrap-style.
 //
-// Styleguide Grid.Row Settings.Margin (Desktop)
+// Styleguide Grid.5: Row Settings.z: Margin (Desktop)
 //
 // Access: Public
 //
@@ -259,7 +259,7 @@ $grid-row-margin-desktop:                          0 -#{$grid-container-padding-
 // if you have a background color on your grid item,
 // use the margin classes.
 //
-// Styleguide Grid.Item Settings.Padding
+// Styleguide Grid.6: Item Settings.z: Padding
 //
 // Access: Public
 //
@@ -270,7 +270,7 @@ $grid-column-padding:                      $padding !default;
 // Controls the padding on child items of the grid using the
 // -margin class. Does not affect other margin classes.
 //
-// Styleguide Grid.Item Settings.Padding (Margin Items Only)
+// Styleguide Grid.6: Item Settings.z: Padding (Margin Items Only)
 //
 // Access: Public
 //

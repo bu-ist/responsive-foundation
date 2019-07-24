@@ -2,13 +2,14 @@
 <html class="no-js" lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Responsive Foundation Style Guide</title>
+	<title>Responsive Foundation 3.2.2</title>
 
 	<meta name="description" content="">
 	<meta name="generator" content="id-kss-node">
 	<meta name="viewport" content="width=device-width">
 
 	<link rel="stylesheet" href="kss-assets/kss.css">
+	<link rel="stylesheet" href="kss-assets/kss-custom.css">
 
 
 </head>
@@ -16,7 +17,7 @@
 <script type="text/javascript">
 	//load the theme stylesheet as a variable to be used
 	//by iframe.js to add stylesheets to each iframe example
-	var themeStylesheetURL = 'docs/css/docs.css';
+	var themeStylesheetURL = 'kss-assets/docs.css';
 	var exampleStylesheetURL = '';
 	var themeScriptsURL = '';
 </script>
@@ -31,12 +32,13 @@
 	<div class="id-kss-header-bar">
 	<h1 class="id-kss-doc-title">
 		<a href="./">
-			Responsive Foundation Style Guide
+			Responsive Foundation 3.2.2
 		</a>
 	</h1>
 	<div class="id-kss-header-wrapper">
 		<nav class="id-kss-main-nav">
 					<a href="section-grid.html" class="id-kss-main-nav-link">Grid</a>
+					<a href="section-utilities.html" class="id-kss-main-nav-link">Utilities</a>
 		</nav>
 		<div id="id-kss-search"></div>
 	</div>
@@ -51,7 +53,7 @@
 		<div class="id-kss-homepage">
 			<div class="id-homepage-content">
 				<h1>
-					Responsive Foundation Style Guide
+					Responsive Foundation 3.2.2
 				</h1>
 				<p>Add a homepage.md file</p>
 				<form role="search" class="id-kss-search">
@@ -75,7 +77,7 @@
 		
 		
 				<ul class="id-kss-nav-menu">
-						<li class="id-kss-nav-menu-item">
+						<li class="id-kss-nav-menu-item grid">
 						
 							<a
 								class="id-kss-nav-menu-link id-kss-nav-menu-parent id-kss-nav-menu-has-children"
@@ -85,45 +87,122 @@
 									</span>
 								</a>
 								<ul class="id-kss-nav-menu-child-section">
-									  <li class="id-kss-nav-menu-item">
+									  <li class="id-kss-nav-menu-item grid-1-how-to-use-the-grid">
 									  
 									  	<a
 									  		class="id-kss-nav-menu-link id-kss-nav-menu-child id-kss-nav-menu-has-children"
-									  		href="section-grid.html#kssref-grid-container-settings">
+									  		href="section-grid.html#kssref-grid-1-how-to-use-the-grid">
 									  			<span class="id-kss-nav-name">
-									  				Container Settings
+									  				1: How to Use the Grid
 									  			</span>
 									  		</a>
 									  		<ul class="id-kss-nav-menu-child-section">
-									  			  <li class="id-kss-nav-menu-item">
+									  			  <li class="id-kss-nav-menu-item grid-1-how-to-use-the-grid-a-introduction">
 									  			  
 									  			  	<a
 									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
-									  			  		href="item-grid-container-settings-padding.html">
+									  			  		href="item-grid-1-how-to-use-the-grid-a-introduction.html">
 									  			  			<span class="id-kss-nav-name">
-									  			  				Padding
+									  			  				a: Introduction
 									  			  			</span>
 									  			  		</a>
 									  			  </li>
 									  			  
-									  			  <li class="id-kss-nav-menu-item">
+									  			  <li class="id-kss-nav-menu-item grid-1-how-to-use-the-grid-b-grid-placeholders">
 									  			  
 									  			  	<a
 									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
-									  			  		href="item-grid-container-settings-padding-desktop-all-.html">
+									  			  		href="item-grid-1-how-to-use-the-grid-b-grid-placeholders.html">
 									  			  			<span class="id-kss-nav-name">
-									  			  				Padding Desktop (All)
+									  			  				b: Grid Placeholders
 									  			  			</span>
 									  			  		</a>
 									  			  </li>
 									  			  
-									  			  <li class="id-kss-nav-menu-item">
+									  			  <li class="id-kss-nav-menu-item grid-1-how-to-use-the-grid-c-grid-mixin">
 									  			  
 									  			  	<a
 									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
-									  			  		href="item-grid-container-settings-padding-desktop-sides-.html">
+									  			  		href="item-grid-1-how-to-use-the-grid-c-grid-mixin.html">
 									  			  			<span class="id-kss-nav-name">
-									  			  				Padding Desktop (Sides)
+									  			  				c: Grid Mixin
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-1-how-to-use-the-grid-d-grid-classes">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-1-how-to-use-the-grid-d-grid-classes.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				d: Grid Classes
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-1-how-to-use-the-grid-e-margin-classes">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-1-how-to-use-the-grid-e-margin-classes.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				e: Margin Classes
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-1-how-to-use-the-grid-f-push-classes">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-1-how-to-use-the-grid-f-push-classes.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				f: Push Classes
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-1-how-to-use-the-grid-g-pull-classes">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-1-how-to-use-the-grid-g-pull-classes.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				g: Pull Classes
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-1-how-to-use-the-grid-h-offset-classes">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-1-how-to-use-the-grid-h-offset-classes.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				h: Offset Classes
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-1-how-to-use-the-grid-i-friendly-classes">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-1-how-to-use-the-grid-i-friendly-classes.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				i: Friendly Classes
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-1-how-to-use-the-grid-j-numeric-classes">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-1-how-to-use-the-grid-j-numeric-classes.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				j: Numeric Classes
 									  			  			</span>
 									  			  		</a>
 									  			  </li>
@@ -131,56 +210,56 @@
 									  		</ul>
 									  </li>
 									  
-									  <li class="id-kss-nav-menu-item">
+									  <li class="id-kss-nav-menu-item grid-2-grid-controls">
 									  
 									  	<a
 									  		class="id-kss-nav-menu-link id-kss-nav-menu-child id-kss-nav-menu-has-children"
-									  		href="section-grid.html#kssref-grid-grid-controls">
+									  		href="section-grid.html#kssref-grid-2-grid-controls">
 									  			<span class="id-kss-nav-name">
-									  				Grid Controls
+									  				2: Grid Controls
 									  			</span>
 									  		</a>
 									  		<ul class="id-kss-nav-menu-child-section">
-									  			  <li class="id-kss-nav-menu-item">
+									  			  <li class="id-kss-nav-menu-item grid-2-grid-controls-z-breakpoints">
 									  			  
 									  			  	<a
 									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
-									  			  		href="item-grid-grid-controls-breakpoints.html">
+									  			  		href="item-grid-2-grid-controls-z-breakpoints.html">
 									  			  			<span class="id-kss-nav-name">
-									  			  				Breakpoints
+									  			  				z: Breakpoints
 									  			  			</span>
 									  			  		</a>
 									  			  </li>
 									  			  
-									  			  <li class="id-kss-nav-menu-item">
+									  			  <li class="id-kss-nav-menu-item grid-2-grid-controls-z-columns">
 									  			  
 									  			  	<a
 									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
-									  			  		href="item-grid-grid-controls-columns.html">
+									  			  		href="item-grid-2-grid-controls-z-columns.html">
 									  			  			<span class="id-kss-nav-name">
-									  			  				Columns
+									  			  				z: Columns
 									  			  			</span>
 									  			  		</a>
 									  			  </li>
 									  			  
-									  			  <li class="id-kss-nav-menu-item">
+									  			  <li class="id-kss-nav-menu-item grid-2-grid-controls-z-numeric-classes">
 									  			  
 									  			  	<a
 									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
-									  			  		href="item-grid-grid-controls-numeric-classes.html">
+									  			  		href="item-grid-2-grid-controls-z-numeric-classes.html">
 									  			  			<span class="id-kss-nav-name">
-									  			  				Numeric Classes
+									  			  				z: Numeric Classes
 									  			  			</span>
 									  			  		</a>
 									  			  </li>
 									  			  
-									  			  <li class="id-kss-nav-menu-item">
+									  			  <li class="id-kss-nav-menu-item grid-2-grid-controls-z-sets">
 									  			  
 									  			  	<a
 									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
-									  			  		href="item-grid-grid-controls-sets.html">
+									  			  		href="item-grid-2-grid-controls-z-sets.html">
 									  			  			<span class="id-kss-nav-name">
-									  			  				Sets
+									  			  				z: Sets
 									  			  			</span>
 									  			  		</a>
 									  			  </li>
@@ -188,45 +267,56 @@
 									  		</ul>
 									  </li>
 									  
-									  <li class="id-kss-nav-menu-item">
+									  <li class="id-kss-nav-menu-item grid-3-global-styles">
 									  
 									  	<a
 									  		class="id-kss-nav-menu-link id-kss-nav-menu-child id-kss-nav-menu-has-children"
-									  		href="section-grid.html#kssref-grid-item-settings">
+									  		href="section-grid.html#kssref-grid-3-global-styles">
 									  			<span class="id-kss-nav-name">
-									  				Item Settings
+									  				3: Global Styles
 									  			</span>
 									  		</a>
 									  		<ul class="id-kss-nav-menu-child-section">
-									  			  <li class="id-kss-nav-menu-item">
+									  			  <li class="id-kss-nav-menu-item grid-3-global-styles-z-container-styles">
 									  			  
 									  			  	<a
 									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
-									  			  		href="item-grid-item-settings-margin.html">
+									  			  		href="item-grid-3-global-styles-z-container-styles.html">
 									  			  			<span class="id-kss-nav-name">
-									  			  				Margin
+									  			  				z: Container Styles
 									  			  			</span>
 									  			  		</a>
 									  			  </li>
 									  			  
-									  			  <li class="id-kss-nav-menu-item">
+									  			  <li class="id-kss-nav-menu-item grid-3-global-styles-z-item-styles">
 									  			  
 									  			  	<a
 									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
-									  			  		href="item-grid-item-settings-padding.html">
+									  			  		href="item-grid-3-global-styles-z-item-styles.html">
 									  			  			<span class="id-kss-nav-name">
-									  			  				Padding
+									  			  				z: Item Styles
 									  			  			</span>
 									  			  		</a>
 									  			  </li>
 									  			  
-									  			  <li class="id-kss-nav-menu-item">
+									  			  <li class="id-kss-nav-menu-item grid-3-global-styles-z-row-styles">
 									  			  
 									  			  	<a
 									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
-									  			  		href="item-grid-item-settings-padding-margin-items-only-.html">
+									  			  		href="item-grid-3-global-styles-z-row-styles.html">
 									  			  			<span class="id-kss-nav-name">
-									  			  				Padding (Margin Items Only)
+									  			  				z: Row Styles
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-3-global-styles-z-wrapper-styles">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-3-global-styles-z-wrapper-styles.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				z: Wrapper Styles
 									  			  			</span>
 									  			  		</a>
 									  			  </li>
@@ -234,34 +324,376 @@
 									  		</ul>
 									  </li>
 									  
-									  <li class="id-kss-nav-menu-item">
+									  <li class="id-kss-nav-menu-item grid-4-container-settings">
 									  
 									  	<a
 									  		class="id-kss-nav-menu-link id-kss-nav-menu-child id-kss-nav-menu-has-children"
-									  		href="section-grid.html#kssref-grid-row-settings">
+									  		href="section-grid.html#kssref-grid-4-container-settings">
 									  			<span class="id-kss-nav-name">
-									  				Row Settings
+									  				4: Container Settings
 									  			</span>
 									  		</a>
 									  		<ul class="id-kss-nav-menu-child-section">
-									  			  <li class="id-kss-nav-menu-item">
+									  			  <li class="id-kss-nav-menu-item grid-4-container-settings-z-padding">
 									  			  
 									  			  	<a
 									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
-									  			  		href="item-grid-row-settings-margin.html">
+									  			  		href="item-grid-4-container-settings-z-padding.html">
 									  			  			<span class="id-kss-nav-name">
-									  			  				Margin
+									  			  				z: Padding
 									  			  			</span>
 									  			  		</a>
 									  			  </li>
 									  			  
-									  			  <li class="id-kss-nav-menu-item">
+									  			  <li class="id-kss-nav-menu-item grid-4-container-settings-z-padding-desktop-all">
 									  			  
 									  			  	<a
 									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
-									  			  		href="item-grid-row-settings-margin-desktop-.html">
+									  			  		href="item-grid-4-container-settings-z-padding-desktop-all-.html">
 									  			  			<span class="id-kss-nav-name">
-									  			  				Margin (Desktop)
+									  			  				z: Padding Desktop (All)
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-4-container-settings-z-padding-desktop-sides">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-4-container-settings-z-padding-desktop-sides-.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				z: Padding Desktop (Sides)
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  		</ul>
+									  </li>
+									  
+									  <li class="id-kss-nav-menu-item grid-5-row-settings">
+									  
+									  	<a
+									  		class="id-kss-nav-menu-link id-kss-nav-menu-child id-kss-nav-menu-has-children"
+									  		href="section-grid.html#kssref-grid-5-row-settings">
+									  			<span class="id-kss-nav-name">
+									  				5: Row Settings
+									  			</span>
+									  		</a>
+									  		<ul class="id-kss-nav-menu-child-section">
+									  			  <li class="id-kss-nav-menu-item grid-5-row-settings-z-margin">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-5-row-settings-z-margin.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				z: Margin
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-5-row-settings-z-margin-desktop">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-5-row-settings-z-margin-desktop-.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				z: Margin (Desktop)
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  		</ul>
+									  </li>
+									  
+									  <li class="id-kss-nav-menu-item grid-6-item-settings">
+									  
+									  	<a
+									  		class="id-kss-nav-menu-link id-kss-nav-menu-child id-kss-nav-menu-has-children"
+									  		href="section-grid.html#kssref-grid-6-item-settings">
+									  			<span class="id-kss-nav-name">
+									  				6: Item Settings
+									  			</span>
+									  		</a>
+									  		<ul class="id-kss-nav-menu-child-section">
+									  			  <li class="id-kss-nav-menu-item grid-6-item-settings-z-margin">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-6-item-settings-z-margin.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				z: Margin
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-6-item-settings-z-padding">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-6-item-settings-z-padding.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				z: Padding
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-6-item-settings-z-padding-margin-items-only">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-6-item-settings-z-padding-margin-items-only-.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				z: Padding (Margin Items Only)
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  		</ul>
+									  </li>
+									  
+									  <li class="id-kss-nav-menu-item grid-9-factory">
+									  
+									  	<a
+									  		class="id-kss-nav-menu-link id-kss-nav-menu-child id-kss-nav-menu-has-children"
+									  		href="section-grid.html#kssref-grid-9-factory">
+									  			<span class="id-kss-nav-name">
+									  				9: Factory
+									  			</span>
+									  		</a>
+									  		<ul class="id-kss-nav-menu-child-section">
+									  			  <li class="id-kss-nav-menu-item grid-9-factory-a-grid-widths">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-9-factory-a-grid-widths.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				a: $grid-widths
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-9-factory-a-grid-widths-margins">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-9-factory-a-grid-widths-margins.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				a: $grid-widths-margins
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-9-factory-a-col-base">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-9-factory-a-col-base.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				a: %col-base
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-9-factory-a-col-margin-base">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-9-factory-a-col-margin-base.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				a: %col-margin-base
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-9-factory-a-col-margin-parent">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-9-factory-a-col-margin-parent.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				a: %col-margin-parent
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-9-factory-a-mixin-col-base">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-9-factory-a-mixin-col-base.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				a: @mixin col-base
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-9-factory-a-mixin-col-float">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-9-factory-a-mixin-col-float.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				a: @mixin col-float
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-9-factory-a-mixin-col-margin-base">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-9-factory-a-mixin-col-margin-base.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				a: @mixin col-margin-base
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-9-factory-a-mixin-grid-build">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-9-factory-a-mixin-grid-build.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				a: @mixin grid-build
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-9-factory-a-mixin-grid-styles">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-9-factory-a-mixin-grid-styles.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				a: @mixin grid-styles
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-9-factory-a-calculate-widths">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-9-factory-a-calculate-widths.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				a: Calculate widths
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-9-factory-a-create-breakpoint-classes">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-9-factory-a-create-breakpoint-classes.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				a: Create breakpoint classes
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-9-factory-a-create-friendly-classes">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-9-factory-a-create-friendly-classes.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				a: Create friendly classes
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-9-factory-a-create-sets">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-9-factory-a-create-sets.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				a: Create sets
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item grid-9-factory-a-friendly-class-map">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-grid-9-factory-a-friendly-class-map.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				a: Friendly class map
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  		</ul>
+									  </li>
+									  
+								</ul>
+						</li>
+						
+						<li class="id-kss-nav-menu-item utilities">
+						
+							<a
+								class="id-kss-nav-menu-link id-kss-nav-menu-parent id-kss-nav-menu-has-children"
+								href="section-utilities.html#kssref-utilities">
+									<span class="id-kss-nav-name">
+										Utilities
+									</span>
+								</a>
+								<ul class="id-kss-nav-menu-child-section">
+									  <li class="id-kss-nav-menu-item utilities-backwards-compatibility">
+									  
+									  	<a
+									  		class="id-kss-nav-menu-link id-kss-nav-menu-child id-kss-nav-menu-has-children"
+									  		href="section-utilities.html#kssref-utilities-backwards-compatibility">
+									  			<span class="id-kss-nav-name">
+									  				Backwards Compatibility
+									  			</span>
+									  		</a>
+									  		<ul class="id-kss-nav-menu-child-section">
+									  			  <li class="id-kss-nav-menu-item utilities-backwards-compatibility-equal-heights-container">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-utilities-backwards-compatibility-equal-heights-container-.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				Equal Heights (Container)
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  			  <li class="id-kss-nav-menu-item utilities-backwards-compatibility-equal-heights-items">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-utilities-backwards-compatibility-equal-heights-items-.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				Equal Heights (Items)
+									  			  			</span>
+									  			  		</a>
+									  			  </li>
+									  			  
+									  		</ul>
+									  </li>
+									  
+									  <li class="id-kss-nav-menu-item utilities-layout">
+									  
+									  	<a
+									  		class="id-kss-nav-menu-link id-kss-nav-menu-child id-kss-nav-menu-has-children"
+									  		href="section-utilities.html#kssref-utilities-layout">
+									  			<span class="id-kss-nav-name">
+									  				Layout
+									  			</span>
+									  		</a>
+									  		<ul class="id-kss-nav-menu-child-section">
+									  			  <li class="id-kss-nav-menu-item utilities-layout-equal-heights">
+									  			  
+									  			  	<a
+									  			  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
+									  			  		href="item-utilities-layout-equal-heights.html">
+									  			  			<span class="id-kss-nav-name">
+									  			  				Equal Heights
 									  			  			</span>
 									  			  		</a>
 									  			  </li>

@@ -135,6 +135,8 @@ module.exports = ( grunt ) => {
 				},
 				files: {
 					'docs/css/docs.css': '_docs/css-dev/docs.scss',
+					'_styleguide/kss-assets/docs.css': '_docs/css-dev/docs.scss',
+					'_styleguide/kss-assets/kss-custom.css': '_docs/css-dev/kss-custom.scss',
 					'css/burf-base.css': 'css-dev/burf-base.scss',
 					'css/burf-theme.css': 'css-dev/burf-theme.scss',
 				},
@@ -238,14 +240,15 @@ module.exports = ( grunt ) => {
 		},
 		kss: {
 			options: {
-				title: 'Responsive Foundation Style Guide',
+				title: 'Responsive Foundation ' + pkg.version,
 				builder: 'node_modules/id-kss-builder',
 				css: [
-				  "docs/css/docs.css",
+				  "kss-assets/docs.css",
 				],
 				extend: 'node_modules/id-kss-builder/extend',
 				gitURL: 'https://github.com/bu-ist/responsive-foundation/',
-				gitURLCSSDEV: 'https://github.com/bu-ist/responsive-foundation/tree/master/css-dev'
+				gitURLCSSDEV: 'https://github.com/bu-ist/responsive-foundation/tree/master/css-dev',
+				customCSS: 'kss-assets/kss-custom.css'
 			},
 			dist: {
 				src: [

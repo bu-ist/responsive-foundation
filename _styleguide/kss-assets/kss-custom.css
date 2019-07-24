@@ -1,0 +1,23 @@
+.id-kss-nav-menu-child-section .id-kss-nav-menu-link.id-kss-nav-menu-has-children, .id-kss-nav-menu-link.id-kss-nav-menu-child {
+  font-family: monospace;
+  overflow: hidden;
+  text-indent: -3ch; }
+
+.id-kss-homepage {
+  padding-top: 0; }
+  .id-kss-homepage .id-kss-nav-menu-parent + .id-kss-nav-menu-child-section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto); }
+    .id-kss-homepage .id-kss-nav-menu-parent + .id-kss-nav-menu-child-section li {
+      float: none !important;
+      width: 100% !important; }
+
+.grid-1-how-to-use-the-grid {
+  grid-row: span 2;
+  grid-column: span 2; }
+
+.grid-9-factory {
+  grid-column: span 5; }
+
+/*# sourceMappingURL=kss-custom.css.map */
