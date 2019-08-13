@@ -8,38 +8,52 @@
 // Icon Mixins
 // =================================================================
 
-/// The font family to use for icons across the site.
-/// Change this to use a different homegrown font family.
-/// @group icons
-/// @access public
-/// @since 2.0.0
+// Change the icon font
+//
+// The font family to use for icons across the site.
+// Change this to use a different homegrown font family.
+//
+// Styleguide Utilities.1: Icons.a: Icon font
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $font-family-icons:                     	 "bu-default-icons" !default;
 
-/// The font size to use for icons across the site.
-/// @group icons
-/// @access public
-/// @since 2.0.0
+// The font size to use for icons across the site.
+//
+// Styleguide Utilities.1: Icons.a: Icon size
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $font-size-icon: 									 21px !default;
 
-/// The color to use for icons across the site.
-/// By default, this will inherit the color of the text in the container the icon lives in.
-/// Setting this will keep the color of the icons consistent everywhere.
-/// @group icons
-/// @access public
-/// @since 1.0.0
+// The color to use for icons across the site.
+// By default, this will inherit the color of the text in the container the icon lives in.
+// Setting this will keep the color of the icons consistent everywhere.
+//
+// Styleguide Utilities.1: Icons.a: Icon color
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-icons:										 unset !default;
 
-/// Provides base icon styles normalized across browsers and optimized
-/// for accessibility.
-/// A helper mixin for the main icon mixin and icon extends.
-/// You probably don't actually want to use this unless you're working
-/// on Responsive. Use the icon mixin instead.
-/// @group icons
-/// @access private
-/// @since 2.0.0
+// Provides base icon styles normalized across browsers and optimized
+// for accessibility.
+// A helper mixin for the main icon mixin and icon extends.
+// You probably don't actually want to use this unless you're working
+// on Responsive. Use the icon mixin instead.
+//
+// Styleguide Utilities.1: Icons.a: Icon base mixin
+//
+// Access: Private
+//
+// Since: 2.0.0
 
 @mixin icon-base {
 	.lt-ie9:hover & {
@@ -52,14 +66,17 @@ $color-icons:										 unset !default;
 	}
 }
 
-/// Provides base icon styles normalized across browsers and optimized
-/// for accessibility.
-/// A helper mixin for the main icon mixin and icon extends.
-/// You probably don't actually want to use this unless you're working
-/// on Responsive. Use the icon mixin instead.
-/// @group icons
-/// @access public
-/// @since 1.2.0
+// Provides base icon styles normalized across browsers and optimized
+// for accessibility.
+// A helper mixin for the main icon mixin and icon extends.
+// You probably don't actually want to use this unless you're working
+// on Responsive. Use the icon mixin instead.
+//
+// Styleguide Utilities.1: Icons.a: Icon content mixin
+//
+// Access: Public
+//
+// Since: 1.2.0
 
 @mixin icon-content {
 	color: $color-icons;
@@ -80,14 +97,17 @@ $color-icons:										 unset !default;
 	white-space: nowrap;
 }
 
-/// Provides base icon styles normalized across browsers and optimized
-/// for accessibility.
-/// A helper placeholder for the main icon mixin and icon extends.
-/// You probably don't actually want to use this unless you're working
-/// on Responsive. Use the icon mixin instead.
-/// @group icons
-/// @access public
-/// @since 2.0.0
+// Provides base icon styles normalized across browsers and optimized
+// for accessibility.
+// A helper placeholder for the main icon mixin and icon extends.
+// You probably don't actually want to use this unless you're working
+// on Responsive. Use the icon mixin instead.
+//
+// Styleguide Utilities.1: Icons.a: Icon content placeholder
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 %icon-content-before {
 	&::before {
@@ -96,14 +116,17 @@ $color-icons:										 unset !default;
 	}
 }
 
-/// Provides base icon styles normalized across browsers and optimized
-/// for accessibility.
-/// A helper placeholder for the main icon mixin and icon extends.
-/// You probably don't actually want to use this unless you're working
-/// on Responsive. Use the icon mixin instead.
-/// @group icons
-/// @access public
-/// @since 2.0.0
+// Provides base icon styles normalized across browsers and optimized
+// for accessibility.
+// A helper placeholder for the main icon mixin and icon extends.
+// You probably don't actually want to use this unless you're working
+// on Responsive. Use the icon mixin instead.
+//
+// Styleguide Utilities.1: Icons.a: Icon content placeholder 2
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 %icon-content-after {
 	&::after {
@@ -112,15 +135,18 @@ $color-icons:										 unset !default;
 	}
 }
 
-/// A mixin to generate icons.
-/// Use any icon in `$icon-supports`.
-/// $use-extend will use the extends for performance
-/// purposes, but sacrifices your ability to use this
-/// inside a media query. Setting this to true is really
-/// only beneficial for generating the default placeholders.
-/// @group icons
-/// @access public
-/// @since 2.0.0
+// A mixin to generate icons.
+// Use any icon in `$icon-supports`.
+// $use-extend will use the extends for performance
+// purposes, but sacrifices your ability to use this
+// inside a media query. Setting this to true is really
+// only beneficial for generating the default placeholders.
+//
+// Styleguide Utilities.1: Icons.a: Icon Mixin
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 @mixin icon( $name, $position: "before", $use-extend: false ) {
 	@include icon-base;
