@@ -194,6 +194,14 @@ $border-coursefeed:							 $border !default;
 	}
 }
 
+.icon-buhub {
+	@extend %icon-buhub;
+}
+
+.icon-questionmark {
+	@extend %icon-questionmark;
+}
+
 /// BU Hub Indicator Area <ul> List
 /// @group 09-content
 /// @access public

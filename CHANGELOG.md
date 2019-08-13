@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+* Ensures BU Hub required icons are always output, even if you turn icons off.
+
 ## 3.2.2
 
 * Adds Medium, Medium Alt, and Rhett support to default icons.
