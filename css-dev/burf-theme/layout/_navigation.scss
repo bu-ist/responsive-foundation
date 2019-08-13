@@ -1268,38 +1268,5 @@ $mega-nav-desktop-layout:                      $md !default;
 // Adjusts the appearance of the skip link; Styled to match the default WordPress screen reader text
 
 .skip-link {
-	@include box-shadow( 0 0 2px 2px transparentize( $color-grayscale-0, 0.4 ) );
-	background-color: #F1F1F1;
-	color: #21759B;
-	display: block;
-	font-family: "Open Sans",sans-serif;
-	font-size: 14px;
-	font-weight: 700;
-	height: auto;
-	left: 50%;
-	line-height: normal;
-	margin: 0;
-	padding: 15px 23px 14px;
-	position: fixed;
-	right: 50%;
-	text-align: center;
-	text-decoration: none;
-	top: -130px;
-	transform: translateX( -50% );
-	-webkit-transition: top 0.3s ease-out;
-	transition: top 0.3s ease-out;
-	width: 90%;
-	z-index: 100000;
-
-	@include breakpoint( $xs ) {
-		width: 190px;
-	}
-
-	&:focus,
-	&:active {
-		color: #21759B;
-		top: 0;
-		-webkit-transition: top 0s;
-		transition: top 0s;
-	}
+	@extend %skip-link;
 }
