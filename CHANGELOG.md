@@ -4,6 +4,7 @@
 
 * Ensures BU Hub required icons are always output, even if you turn icons off.
 * Adds a skip link mixin and moves styles to the accessibility partial.
+* Fixes https://github.com/bu-ist/responsive-foundation/issues/208
 
 ## 3.2.2
 
