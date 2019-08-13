@@ -40,6 +40,20 @@
 	}
 }
 
+/// Adds grid support, if it's supported.
+/// @group global
+/// @access public
+/// @since 3.2.3
+
+%grid-parent {
+	@supports ( display: grid ) {
+		display: grid;
+		grid-template-columns: repeat( $grid-number-columns, 1fr );
+		grid-auto-rows: 1fr;
+		grid-gap: $grid-column-padding;
+	}
+}
+
 /// Base styles for containers that hold grid elements.
 /// A negative margin is included to counteract the grid item
 /// margins.
@@ -250,4 +264,12 @@ $grid-widths-margins: ();
 			}
 		}
 	}
+}
+
+
+
+
+
+.row {
+	@extend %grid-parent;
 }

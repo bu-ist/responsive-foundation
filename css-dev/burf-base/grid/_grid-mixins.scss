@@ -13,6 +13,10 @@
 	float: left;
 	position: relative;
 	min-height: 1px;
+
+	@supports ( display: grid ) {
+		float: initial;
+	}
 }
 
 /// Controls the base styles that get applied to grid margin items.
@@ -28,6 +32,11 @@
 	margin-left: $grid-margin-width#{"%"};
 	margin-top: 0;
 	padding: $grid-margin-padding;
+
+	@supports ( display: grid ) {
+		float: initial;
+		margin: 0;
+	}
 }
 
 /// A helper mixin to build grid properties.
@@ -54,6 +63,10 @@
 
 @mixin col-float {
 	float: left;
+
+	@supports ( display: grid ) {
+		float: initial;
+	}
 }
 
 /// A helper mixin to build grid styles. Does not handle breakpoints.
@@ -80,22 +93,44 @@
 		@if ( $force ) {
 			@include col-margin-base;
 		}
+
+		@supports ( display: grid ) {
+			grid-column: span $col;
+			width: auto;
+		}
 	}
 
 	@if ( $option == "" ) {
 		@include grid-build( width, $percentage );
+
+		@supports ( display: grid ) {
+			grid-column: span $col;
+			width: auto;
+		}
 	}
 
 	@if ( $option == "push" ) {
 		@include grid-build( left, $percentage );
+
+		@supports ( display: grid ) {
+			// TODO: see if it's possible to push relative
+		}
 	}
 
 	@if ( $option == "pull" ) {
 		@include grid-build( right, $percentage );
+
+		@supports ( display: grid ) {
+			// TODO: see if it's possible to pull relative
+		}
 	}
 
 	@if ( $option == "offset" ) {
 		@include grid-build( margin-left, $percentage );
+
+		@supports ( display: grid ) {
+			// TODO: see if it's possible to offset relative
+		}
 	}
 }
 
