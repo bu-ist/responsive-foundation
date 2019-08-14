@@ -49,7 +49,6 @@
 	@supports ( display: grid ) {
 		display: grid;
 		grid-template-columns: repeat( $grid-number-columns, 1fr );
-		grid-auto-rows: 1fr;
 		grid-gap: $grid-column-padding;
 	}
 }
@@ -155,6 +154,10 @@
 %col-margin-parent {
 	margin-left: -$grid-margin-width#{"%"};
 	margin-right: 0;
+
+	@supports ( display: grid ) {
+		margin-left: auto;
+	}
 }
 
 @if $burf-extras {
@@ -229,6 +232,11 @@ $grid-widths-margins: ();
 
 		%col-#{$breakpoint}-margin-parent {
 			margin-left: -$grid-margin-width#{"%"};
+
+			@supports ( display: grid ) {
+				margin-left: auto;
+				margin-right: auto;
+			}
 		}
 
 		@if $burf-extras {
