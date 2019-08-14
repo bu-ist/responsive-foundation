@@ -62,13 +62,7 @@
 /// @since 3.2.3
 
 %grid-parent {
-	@supports ( display: grid ) {
-		display: grid;
-		grid-template-columns: repeat( $grid-number-columns, 1fr );
-		grid-gap: $grid-column-padding;
-		margin-left: auto;
-		margin-right: auto;
-	}
+	@include grid-base();
 }
 
 /// Base styles for children of a row.

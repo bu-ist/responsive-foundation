@@ -151,7 +151,7 @@
 /// @param {number | string} | $col - The number of columns you want. Accepts friendly classes such as "half", or use Boostrap standard (1 - 12).
 /// @param {bool} | $force - Whether or not to override the original styles by printing them where this mixin is called. You probably don't want to change this unless you're working on Foundation.
 /// @group grid
-/// @access private
+/// @access public
 /// @since 2.0.0
 
 @mixin col( $breakpoint: "", $option: "", $col: $grid-number-columns, $force: true ) {
@@ -173,5 +173,44 @@
 		}
 	} @else {
 		@include grid-styles( $option, $col, $force );
+	}
+}
+
+/// The official CSS grid base mixin.
+/// Use only where necessary to override grid classes.
+/// Arguments are the same as you use to write grid classes,
+/// in the same order.
+/// @example
+/// 		Don't use the margin class on a modified callout.
+/// 			.callout {
+///				@extend %col-sm-margin-quarter;
+///			}
+/// 			.callout-modified {
+///				@include col( $sm, quarter );
+///			}
+/// @param {variable | number} | $breakpoint - The window width to begin applying your styles. Can be any pixel value, but `$xs`, `$sm`, `$md`, `$lg`, and `$xl` are standard in this framework.
+/// @param {string} | $option - The grid option to use, ie "push", "pull", "margin". Pass "" for no option, or leave it out altogether - the mixin will check this and fix it for you.
+/// @param {number | string} | $col - The number of columns you want. Accepts friendly classes such as "half", or use Boostrap standard (1 - 12).
+/// @param {bool} | $force - Whether or not to override the original styles by printing them where this mixin is called. You probably don't want to change this unless you're working on Foundation.
+/// @group grid
+/// @access public
+/// @since 4.0.0
+
+@mixin grid-base( $masonry: false, $flexible-columns: false ) {
+	@supports ( display: grid ) {
+		display: grid;
+		// The minmax below prevents grid items from overflowing container.
+		grid-template-columns: repeat( $grid-number-columns, minmax( 0, 1fr ) );
+		grid-gap: $grid-column-padding;
+		margin-left: auto;
+		margin-right: auto;
+
+		@if $masonry == true {
+			grid-auto-flow: dense;
+		}
+
+		@if $flexible-columns == true {
+			grid-template-columns: repeat( auto-fit, minmax( 200px, 1fr ) );
+		}
 	}
 }
