@@ -16,6 +16,7 @@
 
 .row {
 	@extend %row-styles;
+	@extend %grid-parent;
 
 	[class*="col-"] {
 		@extend %row-child-styles;

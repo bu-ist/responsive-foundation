@@ -40,19 +40,6 @@
 	}
 }
 
-/// Adds grid support, if it's supported.
-/// @group global
-/// @access public
-/// @since 3.2.3
-
-%grid-parent {
-	@supports ( display: grid ) {
-		display: grid;
-		grid-template-columns: repeat( $grid-number-columns, 1fr );
-		grid-gap: $grid-column-padding;
-	}
-}
-
 /// Base styles for containers that hold grid elements.
 /// A negative margin is included to counteract the grid item
 /// margins.
@@ -69,6 +56,21 @@
 	}
 }
 
+/// Adds grid support, if it's supported.
+/// @group global
+/// @access public
+/// @since 3.2.3
+
+%grid-parent {
+	@supports ( display: grid ) {
+		display: grid;
+		grid-template-columns: repeat( $grid-number-columns, 1fr );
+		grid-gap: $grid-column-padding;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
 /// Base styles for children of a row.
 /// Usually used for grid items.
 /// @group global
@@ -78,6 +80,11 @@
 %row-child-styles {
 	padding-left: $grid-column-padding;
 	padding-right: $grid-column-padding;
+
+	@supports ( display: grid ) {
+		padding-left: initial;
+		padding-right: initial;
+	}
 }
 
 /// A backwards-compatible equal heights solution for
@@ -272,12 +279,4 @@ $grid-widths-margins: ();
 			}
 		}
 	}
-}
-
-
-
-
-
-.row {
-	@extend %grid-parent;
 }
