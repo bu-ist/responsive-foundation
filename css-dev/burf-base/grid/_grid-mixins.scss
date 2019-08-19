@@ -103,7 +103,7 @@
 
 		@if ( $use-css-grid ) {
 			@supports ( display: grid ) {
-				grid-column: span $col;
+				grid-column: auto / span $col;
 				width: 100%;
 			}
 		}
@@ -114,7 +114,7 @@
 
 		@if ( $use-css-grid ) {
 			@supports ( display: grid ) {
-				grid-column: span $col;
+				grid-column: auto / span $col;
 				width: 100%;
 			}
 		}

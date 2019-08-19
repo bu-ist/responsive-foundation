@@ -254,6 +254,18 @@ $grid-widths-margins: ();
 	}
 }
 
+%grid-place-first {
+	@supports ( display: grid ) {
+		order: -1;
+	}
+}
+
+%grid-place-last {
+	@supports ( display: grid ) {
+		order: $grid-number-columns + 1;
+	}
+}
+
 @each $breakpoint, $value in $grid-breakpoints {
 	@if ( $enable-css-grid ) {
 		@for $i from 0 to length( $grid-widths ) {
@@ -281,6 +293,18 @@ $grid-widths-margins: ();
 
 		%grid-#{$breakpoint}-parent {
 			@include css-grid-base;
+		}
+
+		%grid-#{$breakpoint}-place-first {
+			@supports ( display: grid ) {
+				order: -1;
+			}
+		}
+
+		%grid-#{$breakpoint}-place-last {
+			@supports ( display: grid ) {
+				order: $grid-number-columns + 1;
+			}
 		}
 
 		@if $burf-extras {
