@@ -121,8 +121,8 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 	// For templates without sidebars
 	.page-template-no-sidebars &,
 	.error404 & {
+		@extend %col-md-full;
 		left: 0;
-		width: 100%;
 	}
 }
 
