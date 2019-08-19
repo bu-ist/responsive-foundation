@@ -26,6 +26,10 @@
 	padding: $grid-container-padding;
 	width: 100%;
 
+	@if ( $enable-css-grid ) {
+		@include css-grid-base;
+	}
+
 	@include breakpoint( $sm ) {
 		max-width: $container-sm;
 		padding: $grid-container-padding-desktop;
@@ -37,10 +41,7 @@
 
 	@include breakpoint( $lg ) {
 		max-width: $container-lg;
-	}
-
-	@if ( $enable-css-grid ) {
-		@include css-grid-base;
+		grid-gap: $padding * 2;
 	}
 }
 
