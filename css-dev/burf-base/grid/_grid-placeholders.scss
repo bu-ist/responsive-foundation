@@ -38,6 +38,10 @@
 	@include breakpoint( $lg ) {
 		max-width: $container-lg;
 	}
+
+	@if ( $enable-css-grid ) {
+		@include css-grid-base;
+	}
 }
 
 /// Base styles for containers that hold grid elements.
@@ -54,15 +58,21 @@
 	@include breakpoint( $sm ) {
 		margin: $grid-row-margin-desktop;
 	}
+
+	@if ( $enable-css-grid ) {
+		@include css-grid-base;
+	}
 }
 
-/// Adds grid support, if it's supported.
+/// Adds grid support to any container.
+/// Can be used on its own to enable grid in a specific
+/// place in the theme without turning it on globally.
 /// @group global
 /// @access public
-/// @since 3.2.3
+/// @since 4.0.0
 
 %grid-parent {
-	@include grid-base();
+	@include css-grid-base;
 }
 
 /// Base styles for children of a row.
@@ -75,9 +85,11 @@
 	padding-left: $grid-column-padding;
 	padding-right: $grid-column-padding;
 
-	@supports ( display: grid ) {
-		padding-left: initial;
-		padding-right: initial;
+	@if ( $enable-css-grid ) {
+		@supports ( display: grid ) {
+			padding-left: initial;
+			padding-right: initial;
+		}
 	}
 }
 
@@ -156,8 +168,10 @@
 	margin-left: -$grid-margin-width#{"%"};
 	margin-right: 0;
 
-	@supports ( display: grid ) {
-		margin-left: auto;
+	@if ( $enable-css-grid ) {
+		@supports ( display: grid ) {
+			margin-left: auto;
+		}
 	}
 }
 
@@ -209,6 +223,13 @@ $grid-widths-margins: ();
 		%col-#{$i} {
 			@extend %col-base;
 			@include grid-build( width, $percentage );
+
+			@if ( $enable-css-grid ) {
+				@supports ( display: grid ) {
+					grid-column: span $i;
+					width: 100%;
+				}
+			}
 		}
 	}
 }
@@ -219,13 +240,29 @@ $grid-widths-margins: ();
 			%col-#{$feature}-#{$i} {
 				@extend %col-#{$feature}-base !optional;
 				@extend %col-base;
-				@include col( '', $feature, $i, false );
+				@include col( '', $feature, $i, $enable-css-grid, false );
 			}
 		}
 	}
 }
 
+%grid-item-base {
+	@if ( $enable-css-grid ) {
+		@supports ( display: grid ) {
+			grid-column: span $grid-number-columns;
+		}
+	}
+}
+
 @each $breakpoint, $value in $grid-breakpoints {
+	@if ( $enable-css-grid ) {
+		@for $i from 0 to length( $grid-widths ) {
+			%col-#{$breakpoint}-#{$i} {
+				@extend %grid-item-base;
+			}
+		}
+	}
+
 	@include breakpoint( $value, false ) {
 		%col-#{$breakpoint}-margin-base {
 			@include col-margin-base;
@@ -234,10 +271,16 @@ $grid-widths-margins: ();
 		%col-#{$breakpoint}-margin-parent {
 			margin-left: -$grid-margin-width#{"%"};
 
-			@supports ( display: grid ) {
-				margin-left: auto;
-				margin-right: auto;
+			@if ( $enable-css-grid ) {
+				@supports ( display: grid ) {
+					margin-left: auto;
+					margin-right: auto;
+				}
 			}
+		}
+
+		%grid-#{$breakpoint}-parent {
+			@include css-grid-base;
 		}
 
 		@if $burf-extras {

@@ -14,8 +14,11 @@
 	position: relative;
 	min-height: 1px;
 
-	@supports ( display: grid ) {
-		float: initial;
+	@if ( $enable-css-grid ) {
+		@supports ( display: grid ) {
+			float: initial;
+			grid-column: span $grid-number-columns;
+		}
 	}
 }
 
@@ -33,9 +36,11 @@
 	margin-top: 0;
 	padding: $grid-margin-padding;
 
-	@supports ( display: grid ) {
-		float: initial;
-		margin: 0;
+	@if ( $enable-css-grid ) {
+		@supports ( display: grid ) {
+			float: initial;
+			margin: 0;
+		}
 	}
 }
 
@@ -64,8 +69,10 @@
 @mixin col-float {
 	float: left;
 
-	@supports ( display: grid ) {
-		float: initial;
+	@if ( $enable-css-grid ) {
+		@supports ( display: grid ) {
+			float: initial;
+		}
 	}
 }
 
@@ -76,7 +83,7 @@
 /// @access private
 /// @since 2.0.0
 
-@mixin grid-styles( $option, $col, $force: false ) {
+@mixin grid-styles( $option, $col, $use-css-grid: $enable-css-grid, $force: false ) {
 	$percentage: nth( $grid-widths, $col + 1 );
 
 	@if ( $force ) {
@@ -94,42 +101,59 @@
 			@include col-margin-base;
 		}
 
-		@supports ( display: grid ) {
-			grid-column: span $col;
-			width: auto;
+		@if ( $use-css-grid ) {
+			@supports ( display: grid ) {
+				grid-column: span $col;
+				width: 100%;
+			}
 		}
 	}
 
 	@if ( $option == "" ) {
 		@include grid-build( width, $percentage );
 
-		@supports ( display: grid ) {
-			grid-column: span $col;
-			width: auto;
+		@if ( $use-css-grid ) {
+			@supports ( display: grid ) {
+				grid-column: span $col;
+				width: 100%;
+			}
 		}
 	}
 
 	@if ( $option == "push" ) {
 		@include grid-build( left, $percentage );
 
-		@supports ( display: grid ) {
-			// TODO: see if it's possible to push relative
+		@if ( $use-css-grid ) {
+			@supports ( display: grid ) {
+				// CSS Grid does not support repositioning like this.
+				// You may order first or last using the new order classes.
+				// If you need control like this, do not enable CSS Grid.
+				left: auto;
+			}
 		}
 	}
 
 	@if ( $option == "pull" ) {
 		@include grid-build( right, $percentage );
 
-		@supports ( display: grid ) {
-			// TODO: see if it's possible to pull relative
+		@if ( $use-css-grid ) {
+			@supports ( display: grid ) {
+				// CSS Grid does not support repositioning like this.
+				// You may order first or last using the new order classes.
+				// If you need control like this, do not enable CSS Grid.
+				right: auto;
+			}
 		}
 	}
 
 	@if ( $option == "offset" ) {
 		@include grid-build( margin-left, $percentage );
 
-		@supports ( display: grid ) {
-			// TODO: see if it's possible to offset relative
+		@if ( $use-css-grid ) {
+			@supports ( display: grid ) {
+				grid-column-start: $col;
+				margin-left: 0;
+			}
 		}
 	}
 }
@@ -154,7 +178,7 @@
 /// @access public
 /// @since 2.0.0
 
-@mixin col( $breakpoint: "", $option: "", $col: $grid-number-columns, $force: true ) {
+@mixin col( $breakpoint: "", $option: "", $col: $grid-number-columns, $use-css-grid: $enable-css-grid, $force: true ) {
 	$valid: map-get( $grid-supports, $option );
 
 	// Automatically fixes inputs if you forget the option (usually with normal grid mixins)
@@ -169,10 +193,10 @@
 
 	@if ( $breakpoint != "" ) {
 		@include breakpoint( $breakpoint, false ) {
-			@include grid-styles( $option, $col, $force );
+			@include grid-styles( $option, $col, $use-css-grid, $force );
 		}
 	} @else {
-		@include grid-styles( $option, $col, $force );
+		@include grid-styles( $option, $col, $use-css-grid, $force );
 	}
 }
 
@@ -196,7 +220,7 @@
 /// @access public
 /// @since 4.0.0
 
-@mixin grid-base( $masonry: false, $flexible-columns: false ) {
+@mixin css-grid-base( $masonry: false, $flexible-columns: false, $flexible-column-minimum: 200px ) {
 	@supports ( display: grid ) {
 		display: grid;
 		// The minmax below prevents grid items from overflowing container.
@@ -205,12 +229,16 @@
 		margin-left: auto;
 		margin-right: auto;
 
+		@media screen and ( max-width: $xs ) {
+			grid-gap: 300px / $grid-number-columns;
+		}
+
 		@if $masonry == true {
 			grid-auto-flow: dense;
 		}
 
 		@if $flexible-columns == true {
-			grid-template-columns: repeat( auto-fit, minmax( 200px, 1fr ) );
+			grid-template-columns: repeat( auto-fit, minmax( $flexible-column-minimum, 1fr ) );
 		}
 	}
 }

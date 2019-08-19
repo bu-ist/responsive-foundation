@@ -99,6 +99,7 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 /// @since 1.0.0
 
 .content-area {
+	@extend %col-full;
 	padding-bottom: $column-padding-bottom;
 	position: relative;
 
@@ -145,6 +146,7 @@ $sidebar-padding:                          3.46667% !default; // $sidebar-paddin
 	@extend %equal-heights;
 	@extend %font-size-secondary;
 	clear: none;
+	place-content: baseline;
 
 	.content-container & {
 		@extend %col-md-#{$_sidebar-width};

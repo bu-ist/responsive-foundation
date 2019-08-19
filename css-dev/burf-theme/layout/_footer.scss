@@ -134,28 +134,8 @@ $_footbar-widget-width: $grid-number-columns / $number-widgets-footbar;
 	@extend %container-styles;
 	background: $color-footbar-container-bg;
 
-	@include breakpoint( $md ) {
-		display: grid;
-		grid-gap: $margin-large;
-		grid-template-columns: repeat( #{$number-widgets-footbar}, 1fr );
-		padding: $grid-container-padding-desktop;
-	}
-
 	.widget {
-		@include breakpoint( $md ) {
-			margin-top: 0;
-			padding: 0;
-
-			&:first-child,
-			&:nth-child(#{$number-widgets-footbar}n+1) {
-				clear: left;
-				margin-left: 0;
-			}
-		}
-
-		.no-csscolumns & { // TODO: Change to no-cssgrid when Modernizr adds build support
-			@extend %col-md-margin-#{$_footbar-widget-width};
-		}
+		@extend %col-md-#{$_footbar-widget-width};
 	}
 }
 
@@ -190,6 +170,10 @@ body {
 	padding: $padding-site-footer;
 	position: relative;
 	width: 100%;
+
+	@if ( $enable-css-grid ) {
+		@include css-grid-base;
+	}
 
 	a {
 		color: $color-site-footer-link;
