@@ -214,3 +214,12 @@ $border-widget-list:                       $border !default;
 		}
 	}
 }
+
+/// Handles styling for the WordPress calendar widget.
+/// @group 10-widgets
+/// @access public
+/// @since 4.0.0
+
+#wp-calendar {
+	font-size: 14px;
+}

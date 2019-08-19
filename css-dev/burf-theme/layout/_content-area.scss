@@ -157,6 +157,12 @@ $sidebar-padding:                          3.46667% !default; // $sidebar-paddin
 	.sidebar-location-right .content-container & {
 		@include breakpoint( $md ) {
 			padding-left: $sidebar-padding;
+
+			@if ( $enable-css-grid ) {
+				@supports ( display: grid ) {
+					padding-left: 0;
+				}
+			}
 		}
 	}
 
@@ -168,6 +174,13 @@ $sidebar-padding:                          3.46667% !default; // $sidebar-paddin
 
 		@include breakpoint( $md ) {
 			padding-right: $sidebar-padding;
+
+			@if ( $enable-css-grid ) {
+				@supports ( display: grid ) {
+					order: -1;
+					padding-right: 0;
+				}
+			}
 		}
 	}
 }
