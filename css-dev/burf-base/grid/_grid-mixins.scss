@@ -173,6 +173,7 @@
 /// @param {variable | number} | $breakpoint - The window width to begin applying your styles. Can be any pixel value, but `$xs`, `$sm`, `$md`, `$lg`, and `$xl` are standard in this framework.
 /// @param {string} | $option - The grid option to use, ie "push", "pull", "margin". Pass "" for no option, or leave it out altogether - the mixin will check this and fix it for you.
 /// @param {number | string} | $col - The number of columns you want. Accepts friendly classes such as "half", or use Boostrap standard (1 - 12).
+/// @param {bool} | $use-css-grid - Whether or not to use CSS Grid instead of floats as the basis for this grid item's styling. CSS Grid requires some parent class styling.
 /// @param {bool} | $force - Whether or not to override the original styles by printing them where this mixin is called. You probably don't want to change this unless you're working on Foundation.
 /// @group grid
 /// @access public
@@ -205,17 +206,17 @@
 /// Arguments are the same as you use to write grid classes,
 /// in the same order.
 /// @example
-/// 		Don't use the margin class on a modified callout.
-/// 			.callout {
-///				@extend %col-sm-margin-quarter;
+/// 		Add a masonry-style grid to a news and events section.
+/// 			.news-events {
+///				@include css-grid-base( true );
 ///			}
-/// 			.callout-modified {
-///				@include col( $sm, quarter );
+/// 		Make a responsive profiles grid, and set the minimum width to 300px.
+/// 			.profiles {
+///				@include css-grid-base( false, true, 300px );
 ///			}
-/// @param {variable | number} | $breakpoint - The window width to begin applying your styles. Can be any pixel value, but `$xs`, `$sm`, `$md`, `$lg`, and `$xl` are standard in this framework.
-/// @param {string} | $option - The grid option to use, ie "push", "pull", "margin". Pass "" for no option, or leave it out altogether - the mixin will check this and fix it for you.
-/// @param {number | string} | $col - The number of columns you want. Accepts friendly classes such as "half", or use Boostrap standard (1 - 12).
-/// @param {bool} | $force - Whether or not to override the original styles by printing them where this mixin is called. You probably don't want to change this unless you're working on Foundation.
+/// @param {bool} | $masonry - Whether to use a masonry-style grid, which automatically reorders items to fit the space best.
+/// @param {bool} | $flexible-columns - Whether to automatically generate columns based on the item width.
+/// @param {number} | $flexible-column-minimum - The minimum width a column should take, if using flexible columns.
 /// @group grid
 /// @access public
 /// @since 4.0.0
@@ -230,6 +231,9 @@
 		margin-right: auto;
 
 		@media screen and ( max-width: $xs ) {
+			// Because CSS Grid factors grid gap values into the total width of
+			// the grid container, if we do not set this to a lower value on very
+			// small devices, content will be cut off on those devices.
 			grid-gap: 300px / $grid-number-columns;
 		}
 
