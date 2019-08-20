@@ -135,7 +135,8 @@ $_footbar-widget-width: $grid-number-columns / $number-widgets-footbar;
 	background: $color-footbar-container-bg;
 
 	.widget {
-		@extend %col-md-#{$_footbar-widget-width};
+		@extend %col-md-margin-#{$_footbar-widget-width};
+		padding: 0;
 	}
 }
 
