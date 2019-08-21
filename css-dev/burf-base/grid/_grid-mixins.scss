@@ -237,12 +237,18 @@
 			grid-gap: 300px / $grid-number-columns;
 		}
 
-		@if $masonry == true {
+		@if ( $masonry == true ) {
 			grid-auto-flow: dense;
 		}
 
-		@if $flexible-columns == true {
+		@if ( $flexible-columns == true ) {
 			grid-template-columns: repeat( auto-fit, minmax( $flexible-column-minimum, 1fr ) );
+
+			> * {
+				@include breakpoint( $xs ) {
+					grid-column: auto / span 1;
+				}
+			}
 		}
 	}
 }
