@@ -38,7 +38,8 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 .single-event-schedule {
 	@extend %card-styles;
-	@extend %col-sm-third;
+	@include col( $sm, 'third', false );
+
 	margin: 0 0 20px;
 
 	@include breakpoint( $sm ) {

@@ -29,6 +29,10 @@ $profiles-advanced-cols-md:			3 !default;
 
 .profile-format-advanced {
 	@extend %clearfix;
+
+	@if ( $enable-css-grid ) {
+		@extend %grid-xs-parent;
+	}
 }
 
 /// A helper variable to determine which grid class to extend

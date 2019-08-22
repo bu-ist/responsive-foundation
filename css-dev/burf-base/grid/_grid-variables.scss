@@ -2,6 +2,20 @@
 // Grid Settings
 // =================================================================
 
+/// Whether or not to enable CSS grid sitewide for your theme.
+/// This is not recommended if you need to use push/pull
+/// classes, as these are not natively supported.
+/// You may, however, write your own custom grid styles
+/// to mimic what push and pull used to do.
+/// You may also choose to use the css-grid-base mixin to enable CSS
+/// grid in specific places throughout the site, and write your own
+/// custom styles.
+/// @group grid
+/// @access public
+/// @since 4.0.0
+
+$enable-css-grid:                          false !default;
+
 /// The number of columns you would like in your grid.
 /// To use styles in burf-theme, you must set this to a number that
 /// is divisible by 2, 3, and 4.
@@ -46,7 +60,7 @@ $grid-supports: (
 	margin: 		true, // optional
 	push: 		true, // required for the framework
 	pull: 		true, // required for the framework
-	offset: 		true  // optional
+	offset: 		true // optional
 );
 
 /// Choose whether or not to print the numeric grid classes (.col-sm-5). Optional.
