@@ -2,166 +2,29 @@
 // Typography Settings
 // =================================================================
 
-/// A sans-serif font to use sitewide.
-/// By default, this affects the site footer and label text in profiles.
-/// @group typography
-/// @access public
-/// @since 1.0.0
-
-$font-family-sans-serif:                    "Benton-Sans", "Helvetica", sans-serif !default;
-
-/// A monospace font to use sitewide.
-/// By default, this affects the `<code>` and `<pre>` elements.
-/// @group typography
-/// @access public
-/// @since 1.0.0
-
-$font-family-monospace:                     "Consolas", "Liberation Mono", Courier, monospace !default;
-
-/// A font to use for headings.
-/// Affects `<h1>`, `<h2>`, etc.
-/// @group typography
-/// @access public
-/// @since 1.0.0
-
-$font-family-heading:                       $font-family-sans-serif !default;
-
-/// A color to use for headings.
-/// Affects `<h1>`, `<h2>`, etc.
-/// @group typography
-/// @access public
-/// @since 1.0.0
-
-$color-heading:                             $color-grayscale-0 !default;
-
-/// A font to use for small tags within headings.
-/// @group typography
-/// @access public
-/// @since 1.0.0
-
-$color-heading-small:                       $color-grayscale-9 !default;
-
-/// Base margin for HTML tags. Primarily affects `<p>`.
-/// @group typography
-/// @access public
-/// @since 1.0.0
-
-$font-margin-base:                          0 0 1.5em 0 !default;
-
-/// Base color for links.
-/// @group typography
-/// @access public
-/// @since 1.0.0
-
-$color-link:                                #0f69d7 !default;
-
-/// Base color for visited links.
-/// Must be different from `$color-link` for accessibility
-/// reasons.
-/// @group typography
-/// @access public
-/// @since 1.0.0
-
-$color-link-visited:                        #7337af !default;
-
-/// Base color for active links.
-/// Must be different from `$color-link` for accessibility
-/// reasons.
-/// @group typography
-/// @access public
-/// @since 1.0.0
-
-$color-link-active:                         $color-grayscale-0 !default;
-
-/// Base padding for the `<code>` tag.
-/// @group typography
-/// @access public
-/// @since 1.0.0
-
-$font-padding-code:                         0.2em 0.4em !default;
-
-/// Base margin for the `<code>` tag.
-/// @group typography
-/// @access public
-/// @since 1.0.0
-
-$font-margin-code:                          $margin 0 !default;
-
-/// Text color to use for the `<code>` tag.
-/// @group typography
-/// @access public
-/// @since 1.0.0
-
-$color-code:                                $color-grayscale-7 !default;
-
-/// Background color to use for the `<code>` tag.
-/// @group typography
-/// @access public
-/// @since 1.0.0
-
-$color-code-bg:                             $color-grayscale-f5 !default;
-
-/// Base border for the `<code>` tag.
-/// @group typography
-/// @access public
-/// @since 2.0.0
-
-$border-code:                               $border !default;
-
-/// Base margin for the `<blockquote>` tag.
-/// @group typography
-/// @access public
-/// @since 1.0.0
-
-$font-margin-blockquote:                    1em $margin-large !default;
-
-/// Base margin for `<ul>` and `<ol>` tags.
-/// @group typography
-/// @access public
-/// @since 1.0.0
-
-$font-margin-list:                          $font-margin-base !default;
-
-/// Base padding for `<ul>` and `<ol>` tags.
-/// @group typography
-/// @access public
-/// @since 1.0.0
-
-$font-padding-list:                         0 0 0 40px !default;
-
-/// Base margin for `<dd>` tags.
-/// @group typography
-/// @access public
-/// @since 1.0.0
-
-$font-margin-dd:                            0 0 0 $margin !default;
-
-// Color and Typography
-// -----------------------------------------------------------------
-
-/// The default font for body copy.
-/// @group global
-/// @access public
-/// @since 1.0.0
-
-$font-family-base:                          $font-family-sans-serif !default;
-
-/// A serif font to use. This variable is not used by default.
-/// @group global
-/// @access public
-/// @since 1.0.0
-
-$font-family-serif:                         "TiemposText", Georgia, serif !default;
+@import 'typography-variables';
 
 // =================================================================
 // Typography Styles
 // =================================================================
 
+/// Base styles and typography for all HTML elements.
+/// @group 01-config
+/// @access public
+/// @since 1.0.0
+
+body {
+	color: $color-base;
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+}
+
 // Links
 // -----------------------------------------------------------------
 
 /// Controls base styling for all links.
-/// @group global
+/// @group 01-config
 /// @access public
 /// @since 1.0.0
 
@@ -188,296 +51,18 @@ a {
 	}
 }
 
-// Headings
-// -----------------------------------------------------------------
+// =================================================================
+// Heading Dependencies
+// =================================================================
 
-/// The number of headings that are supported by the theme.
-/// It's highly unlikely this will ever change - it's a web standards thing.
-/// If you just want to give your top-level headings more contrast, it's
-/// better to adjust `$heading-growth-rate` up, which will weigh the font size distribution
-/// more heavily towards the top.
-/// @group global
-/// @access private
-/// @since 2.0.0
+@import 'typography-tools';
 
-$_depth-headings: 6;
-
-/// The minimum font size in pixels for headings to use. Unless you're a designer
-/// and you know what you're doing, leave this at `$font-size-base`.
-/// Anything lower means you'll need to compensate with other design elements
-/// to preserve the visual hierarchy - think uppercasing, color, stuff like that.
-/// This directly affects the `<h6>` tag. It indirectly affects all other heading
-/// font sizes as well by serving as the lower limit to our scale.
-/// @group global
-/// @access public
-/// @since 2.0.0
-
-$min-size-headings: $font-size-base;
-
-/// The maximum font size in pixels for headings to use. This directly affects `<h1>`
-/// headings _within content_. Do not use a larger value, such as those you might find
-/// on a landing page or in a homepage slider, to determine this value. Be sure to
-/// test it against deeply nested pages, which tend to have longer page titles.
-/// It indirectly affects all other heading  font sizes as well by serving as the
-/// upper limit to our scale.
-/// @group global
-/// @access public
-/// @since 2.0.0
-
-$max-size-headings: 55px;
-
-/// The maximum font size in pixels for headings to use on mobile. This directly affects `<h1>`
-/// headings _within content_. Do not use a larger value, such as those you might find
-/// on a landing page or in a homepage slider, to determine this value. Be sure to
-/// test it against deeply nested pages, which tend to have longer page titles.
-/// It indirectly affects all other heading  font sizes as well by serving as the
-/// upper limit to our scale.
-/// @group global
-/// @access public
-/// @since 2.0.0
-
-$max-size-headings-mobile: 36px;
-
-/// The minimum line height ratio for headings to use. Do not use any units with
-/// this value. This value directly affects the `<h1>` tag and indirectly affects
-/// all other heading  font sizes as well by serving as the lower limit to our scale.
-/// In typography, the relationship between font-size and line-height is that larger
-/// font-sizes demand lower line-height values to preserve vertical rhythm.
-/// @group global
-/// @access public
-/// @since 2.0.0
-
-$min-line-height: 1.15;
-
-/// The maximum line height ratio for headings to use. Do not use any units with
-/// this value. This value directly affects the `<h6>` tag and indirectly affects
-/// all other heading  font sizes as well by serving as the upper limit to our scale.
-/// Because we set the `<h6>` tag to be the same size as our body copy by default,
-/// it also gets the same line-height ratio by default.
-/// @group global
-/// @access public
-/// @since 2.0.0
-
-$max-line-height: $line-height-base;
-
-// Adjusts the rate of growth between font sizes.
-// 1 is a completely even rate of growth.
-// Higher numbers will grow the font size exponentially. This is the way
-// most type scales are set up.
-// A higher number will adjust the font size more dramatically at larger sizes.
-// By default, this is optimized for heavy use of h1-h4, and minimal use of h5 and h6.
-
-$heading-growth-rate: 3.5;
-
-/// Calculates the multiplier needed for growth between a minimum and maximum value
-/// based on a given rate of growth.
-/// @param {int} $min - The minimum value to use. Units, if used, must match `$max`.
-/// @param {int} $max - The minimum value to use. Units, if used, must match `$min`.
-/// @param {int} $steps - The total number of values to calculate.
-/// @return {int} - A number to multiply by in an exponential equation to equal the
-/// maximum value on the last value calculated. Useful to calculate `$scale` for use
-/// in the `calc-size` function.
-/// @group global
-/// @access public
-/// @since 2.0.0
-/// @see calc-size
-/// @requires pow - an exponential function in the mathsass library
-
-@function calc-scale ( $min, $max, $steps, $rate ) {
-	@return ( $max - $min ) / pow( $steps, $rate );
-}
-
-/// Calculates a size, relative to a base size. By default, we use `$font-size-base` to
-/// assist with calculating the ratio for ems. However, you can pass your own base for
-/// using with your own unit standard. You can also choose _not_ to scale by passing
-/// 'true' to 'scaled'. You might choose to do this if your minimums and maximums
-/// are already scaled units, such as with line-height, or if you specify your min
-/// and max font-sizes in ems.
-/// @param {int} $step - The step within your scale you want to calculate.
-/// @param {int} $rate - The rate of growth at which your scale changes. Leave at 1 for even
-/// (linear) growth. Anything higher will create exponential growth.
-/// @param {int} $scale - A scaling number determined by your maximum value, if you have one.
-/// You may wish to use the `calc-scale` function to find this number. Leave at 1 if you do
-/// not need an upper limit.
-/// @param {int} $min - The minimum amount you need returned.
-/// @param {bool} $scaled - Whether or not to return a scaled value, using `$base` as the base
-/// unit. By default, this will scale to ems, returning a value based on `$font-size-base` equalling
-/// 1 em.
-/// @param {int} $base - A value to divide by in order to return a scaled value. The units on this
-/// value need to match `$min` - that is, if `$min` is in pixels, this needs to be in pixels as well.
-/// @return {int} - A unitless size.
-/// @group global
-/// @access public
-/// @since 2.0.0
-/// @requires pow - an exponential function in the mathsass library
-/// @see calc-scale
-
-@function calc-size( $step, $rate: 1, $scale: 1, $min: 0, $scaled: false, $base: $font-size-base ) {
-	@if $scaled {
-		@return pow( ( $step ), $rate ) * $scale + $min;
-	} @else {
-		@return ( pow( ( $step ), $rate ) * $scale + $min ) / $base;
-	}
-}
-
-/// Holds values for font-size and line-height for all font styles. Two special case
-/// scenarios, `font-size-secondary` and `font-size-minimum`, have pixel values. Secondary
-/// is used for information in a theme that is secondary to main content, such as widgets,
-/// asides, footbars, and shortcodes, and resets the base value which headings and paragraph
-/// text uses. `font-size-minimum` is the lowest allowable font size in pixels - it never gets
-/// scaled, because it should never be smaller than that amount.
-/// Other values, such as those used for headings (`font-size-1` for `<h1>`, `font-size-2` for
-/// `<h2>`, etc) are dynamically added after we generate the headings scale.
-/// These values are used to build the font-size placeholders. You can override invidividual
-/// values and create your own custom values and placeholders by redeclaring values you want
-/// to override and adding new values in your own `$font-styles-theme` map.
-/// @group global
-/// @access public
-/// @since 2.0.0
-
-$font-styles: (
-	secondary: (
-	  	font-size-mobile: 12px,
-	  	font-size-desktop: 16px,
-		line-height: 1,
-	),
-	minimum: (
-    	font-size-mobile: 8px,
-		font-size-desktop: 13px,
-		line-height: 1
-	),
-);
-
-/// The multiplier needed to calculate the scale between minimum and maximum
-/// font sizes on headings. This value is dependent on the heading minimum, maximum,
-/// and growth rate; it should never be changed directly. Change those instead.
-/// @group global
-/// @access private
-/// @since 2.0.0
-
-$_heading-size-scale: calc-scale( $min-size-headings, $max-size-headings, $_depth-headings, $heading-growth-rate );
-
-/// The multiplier needed to calculate the scale between minimum and maximum
-/// font sizes on headings on mobile. This value is dependent on the heading minimum, maximum,
-/// and growth rate; it should never be changed directly. Change those instead.
-/// @group global
-/// @access private
-/// @since 2.0.0
-
-$_heading-size-scale-mobile: calc-scale( $min-size-headings, $max-size-headings-mobile, $_depth-headings, $heading-growth-rate );
-
-/// The multiplier needed to calculate the scale between minimum and maximum
-/// line heights on headings. This value is dependent on the heading minimum, maximum,
-/// and growth rate; it should never be changed directly. Change those instead.
-/// @group global
-/// @access private
-/// @since 2.0.0
-
-$heading-lh-scale: calc-scale( $min-line-height, $max-line-height, $_depth-headings, $heading-growth-rate );
-
-/// A simple counter variable to help keep track of how many headings we have left
-/// to calculate.
-/// @group global
-/// @access private
-/// @since 2.0.0
-
-$_h: $_depth-headings;
-
-// Calculates font sizes and line heights for headings, and adds them to the `$font-styles` map.
-// @group global
-// @access private
-// @since 2.0.0
-
-@while $_h >= 0 {
-	$font-style: ( );
-	$size: null;
-	$size-mobile: null;
-	$lh: null;
-	$name: null;
-	$heading-name: $_depth-headings - $_h;
-
-	@if $_h == 0 {
-		$size: $min-size-headings / $font-size-base + em;
-		$size-mobile: $min-size-headings / $font-size-base + em;
-	} @else {
-		$size: calc-size( $_h + 1, $heading-growth-rate, $_heading-size-scale, $min-size-headings ) + em;
-		$size-mobile: calc-size( $_h + 1, $heading-growth-rate, $_heading-size-scale-mobile, $min-size-headings ) + em ;
-	}
-
-	@if $_h == $_depth-headings {
-		$lh: $min-line-height;
-		$name: "maximum";
-	} @else {
-		$lh: calc-size( $heading-name, $heading-growth-rate, $heading-lh-scale, $min-line-height, true );
-		$name: $heading-name;
-	}
-
-	$font-style: (
-		#{$name}: (
-			font-size-mobile: $size-mobile,
-			font-size-desktop: $size,
-			line-height: $lh
-		)
-	);
-
-	$font-styles: map_merge( $font-styles, $font-style );
-
-	$_h: $_h - 1;
-}
-
-// Merges custom styles and overrides with the default font size map.
-// $font-styles-theme must be set BEFORE this is called.
-// @group global
-// @access private
-// @since 2.0.0
-
-@if variable-exists( font-styles-theme ) {
-	$font-styles: map_merge( $font-styles, $font-styles-theme );
-}
-
-// Creates placeholders for each font style, which are used by `<h>` tags
-// as well as throughout the theme.
-// @group global
-// @access private
-// @since 2.0.0
-
-@each $style, $settings in $font-styles {
-	.font-size-#{$style},
-	%font-size-#{$style} {
-		font-size: map-get( $settings, font-size-mobile );
-		line-height: map-get( $settings, line-height );
-
-		@include breakpoint( $xs ) {
-			font-size: map-get( $settings, font-size-desktop );
-			line-height: map-get( $settings, line-height );
-		}
-  	}
-}
-
-/// Controls base styles for all heading tags.
-/// @group typography
-/// @access public
-/// @since 1.0.0
-
-%heading-base {
-	color: $color-heading;
-	font-family: $font-family-heading;
-	margin-bottom: 0.6em;
-	margin-top: 1em;
-
-	&:first-child {
-		margin-top: 0;
-	}
-
-	small {
-		color: $color-heading-small;
-		font-size: 0.75em;
-		font-weight: normal;
-	}
-}
+// =================================================================
+// Heading Styles
+// =================================================================
 
 /// Styles for all h1 tags.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -487,7 +72,7 @@ h1 {
 }
 
 /// Styles for all h2 tags.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -497,7 +82,7 @@ h2 {
 }
 
 /// Styles for all h3 tags.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -507,7 +92,7 @@ h3 {
 }
 
 /// Styles for all h4 tags.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -517,7 +102,7 @@ h4 {
 }
 
 /// Styles for all h5 tags.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -527,7 +112,7 @@ h5 {
 }
 
 /// Styles for all h6 tags.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -542,7 +127,7 @@ abbr[title] {
 }
 
 /// Styles for all blockquotes.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -551,7 +136,7 @@ blockquote {
 }
 
 /// Styles for all paragraphs and preformatted content.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -561,7 +146,7 @@ pre {
 }
 
 /// Styles for all preformatted and code content.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -582,7 +167,7 @@ samp {
 // -----------------------------------------------------------------
 
 /// Styles for all lists and list-like content.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -594,7 +179,7 @@ ul {
 }
 
 /// Styles for definition stuff.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -603,7 +188,7 @@ dd {
 }
 
 /// Styles menus and lists.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -614,7 +199,7 @@ ul {
 }
 
 /// Styles for navigation.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -638,7 +223,7 @@ ol ol {
 // -----------------------------------------------------------------
 
 /// Styles for code element.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 
@@ -651,7 +236,7 @@ code {
 
 /// Styles for the code wrapper class.
 /// Adding this class around a code element enables scrolling on mobile devices.
-/// @group typography
+/// @group 04-typography
 /// @access public
 /// @since 1.0.0
 

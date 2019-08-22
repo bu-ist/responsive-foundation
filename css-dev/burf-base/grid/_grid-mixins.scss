@@ -1,0 +1,254 @@
+// =================================================================
+// Grid Mixins
+// =================================================================
+
+/// Controls the base styles that get applied to grid items.
+/// Not intended for use outside the grid system - use the `col`
+/// mixin instead.
+/// @group grid
+/// @access private
+/// @since 2.0.0
+
+@mixin col-base {
+	float: left;
+	position: relative;
+	min-height: 1px;
+
+	@if ( $enable-css-grid ) {
+		@supports ( display: grid ) {
+			float: initial;
+			grid-column: span $grid-number-columns;
+		}
+	}
+}
+
+/// Controls the base styles that get applied to grid margin items.
+/// Not intended for use outside the grid system - use the `col`
+/// mixin instead.
+/// @group grid
+/// @access private
+/// @since 2.0.0
+
+@mixin col-margin-base {
+	float: left;
+	margin-bottom: $grid-margin-width#{"%"};
+	margin-left: $grid-margin-width#{"%"};
+	margin-top: 0;
+	padding: $grid-margin-padding;
+
+	@if ( $enable-css-grid ) {
+		@supports ( display: grid ) {
+			float: initial;
+			margin: 0;
+		}
+	}
+}
+
+/// A helper mixin to build grid properties.
+/// Not intended for use outside the grid system - use the `col`
+/// mixin instead.
+/// @group grid
+/// @access private
+/// @since 1.4.0
+
+@mixin grid-build( $cssproperty, $amount ) {
+	@if ( type_of( $amount ) == "number" ) {
+		#{$cssproperty}: #{$amount}#{"%"};
+	} @else {
+		#{$cssproperty}: #{$amount};
+	}
+}
+
+/// A helper mixin to build grid properties.
+/// Not intended for use outside the grid system - use the `col`
+/// mixin instead.
+/// @group grid
+/// @access private
+/// @since 2.0.0
+
+@mixin col-float {
+	float: left;
+
+	@if ( $enable-css-grid ) {
+		@supports ( display: grid ) {
+			float: initial;
+		}
+	}
+}
+
+/// A helper mixin to build grid styles. Does not handle breakpoints.
+/// Not intended for use outside the grid system - use the `col`
+/// mixin instead.
+/// @group grid
+/// @access private
+/// @since 2.0.0
+
+@mixin grid-styles( $option, $col, $use-css-grid: $enable-css-grid, $force: false ) {
+	$percentage: nth( $grid-widths, $col + 1 );
+
+	@if ( $force ) {
+		@include col-base;
+		left: initial;
+		margin-left: initial;
+		right: initial;
+	}
+
+	@if ( $option == "margin" ) {
+		$percentage: nth( $grid-widths-margins, $col + 1 );
+		@include grid-build( width, $percentage );
+
+		@if ( $force ) {
+			@include col-margin-base;
+		}
+
+		@if ( $use-css-grid ) {
+			@supports ( display: grid ) {
+				grid-column: auto / span $col;
+				width: 100%;
+			}
+		}
+	}
+
+	@if ( $option == "" ) {
+		@include grid-build( width, $percentage );
+
+		@if ( $use-css-grid ) {
+			@supports ( display: grid ) {
+				grid-column: auto / span $col;
+				width: 100%;
+			}
+		}
+	}
+
+	@if ( $option == "push" ) {
+		@include grid-build( left, $percentage );
+
+		@if ( $use-css-grid ) {
+			@supports ( display: grid ) {
+				// CSS Grid does not support repositioning like this.
+				// You may order first or last using the new order classes.
+				// If you need control like this, do not enable CSS Grid.
+				left: auto;
+			}
+		}
+	}
+
+	@if ( $option == "pull" ) {
+		@include grid-build( right, $percentage );
+
+		@if ( $use-css-grid ) {
+			@supports ( display: grid ) {
+				// CSS Grid does not support repositioning like this.
+				// You may order first or last using the new order classes.
+				// If you need control like this, do not enable CSS Grid.
+				right: auto;
+			}
+		}
+	}
+
+	@if ( $option == "offset" ) {
+		@include grid-build( margin-left, $percentage );
+
+		@if ( $use-css-grid ) {
+			@supports ( display: grid ) {
+				grid-column-start: $col;
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+/// The official grid mixin.
+/// Use only where necessary to override grid classes.
+/// Arguments are the same as you use to write grid classes,
+/// in the same order.
+/// @example
+/// 		Don't use the margin class on a modified callout.
+/// 			.callout {
+///				@extend %col-sm-margin-quarter;
+///			}
+/// 			.callout-modified {
+///				@include col( $sm, quarter );
+///			}
+/// @param {variable | number} | $breakpoint - The window width to begin applying your styles. Can be any pixel value, but `$xs`, `$sm`, `$md`, `$lg`, and `$xl` are standard in this framework.
+/// @param {string} | $option - The grid option to use, ie "push", "pull", "margin". Pass "" for no option, or leave it out altogether - the mixin will check this and fix it for you.
+/// @param {number | string} | $col - The number of columns you want. Accepts friendly classes such as "half", or use Boostrap standard (1 - 12).
+/// @param {bool} | $use-css-grid - Whether or not to use CSS Grid instead of floats as the basis for this grid item's styling. CSS Grid requires some parent class styling.
+/// @param {bool} | $force - Whether or not to override the original styles by printing them where this mixin is called. You probably don't want to change this unless you're working on Foundation.
+/// @group grid
+/// @access public
+/// @since 2.0.0
+
+@mixin col( $breakpoint: "", $option: "", $col: $grid-number-columns, $use-css-grid: $enable-css-grid, $force: true ) {
+	$valid: map-get( $grid-supports, $option );
+
+	// Automatically fixes inputs if you forget the option (usually with normal grid mixins)
+	@if ( $valid == null and $option != "" ) {
+		$col: $option;
+		$option: "";
+	}
+
+	@if ( "string" == type-of( $col ) ) and ( map-get( $widths, $col ) ) {
+		$col: map-get( $widths, $col );
+	}
+
+	@if ( $breakpoint != "" ) {
+		@include breakpoint( $breakpoint, false ) {
+			@include grid-styles( $option, $col, $use-css-grid, $force );
+		}
+	} @else {
+		@include grid-styles( $option, $col, $use-css-grid, $force );
+	}
+}
+
+/// The official CSS grid base mixin.
+/// Use only where necessary to override grid classes.
+/// Arguments are the same as you use to write grid classes,
+/// in the same order.
+/// @example
+/// 		Add a masonry-style grid to a news and events section.
+/// 			.news-events {
+///				@include css-grid-base( true );
+///			}
+/// 		Make a responsive profiles grid, and set the minimum width to 300px.
+/// 			.profiles {
+///				@include css-grid-base( false, true, 300px );
+///			}
+/// @param {bool} | $masonry - Whether to use a masonry-style grid, which automatically reorders items to fit the space best.
+/// @param {bool} | $flexible-columns - Whether to automatically generate columns based on the item width.
+/// @param {number} | $flexible-column-minimum - The minimum width a column should take, if using flexible columns.
+/// @group grid
+/// @access public
+/// @since 4.0.0
+
+@mixin css-grid-base( $masonry: false, $flexible-columns: false, $flexible-column-minimum: 200px ) {
+	@supports ( display: grid ) {
+		display: grid;
+		// The minmax below prevents grid items from overflowing container.
+		grid-template-columns: repeat( $grid-number-columns, minmax( 0, 1fr ) );
+		grid-gap: $grid-column-padding;
+		margin-left: auto;
+		margin-right: auto;
+
+		@media screen and ( max-width: $xs ) {
+			// Because CSS Grid factors grid gap values into the total width of
+			// the grid container, if we do not set this to a lower value on very
+			// small devices, content will be cut off on those devices.
+			grid-gap: 300px / $grid-number-columns;
+		}
+
+		@if ( $masonry == true ) {
+			grid-auto-flow: dense;
+		}
+
+		@if ( $flexible-columns == true ) {
+			grid-template-columns: repeat( auto-fit, minmax( $flexible-column-minimum, 1fr ) );
+
+			> * {
+				@include breakpoint( $xs ) {
+					grid-column: auto / span 1;
+				}
+			}
+		}
+	}
+}

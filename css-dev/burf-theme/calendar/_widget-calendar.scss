@@ -3,22 +3,23 @@
 // =================================================================
 
 /// Controls the font family used on dates in the calendar widget.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 1.0.0
 
 $font-family-widget-calendar-date:          $font-family-sans-serif !default;
 
 /// Controls the color of dates in the calendar widget.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-widget-calendar-date:                $color-grayscale-0 !default;
 
 /// Controls the size of the day when using the graphic style in the
 /// calendar widget.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 1.0.0
 
@@ -26,23 +27,25 @@ $font-size-widget-calendar-date-day:          22px !default;
 
 /// Controls the color of the day when using the graphic style in the
 /// calendar widget.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-widget-calendar-date-day:             inherit !default;
 
 /// Controls the size of the month when using the graphic style in the
 /// calendar widget.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $font-size-widget-calendar-date-month:        12px !default;
 
 /// Controls the color of the month when using the graphic style in the
 /// calendar widget.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 1.0.0
 
@@ -55,14 +58,14 @@ $color-widget-calendar-date-month:           inherit !default;
 /// A helper variable for absolute positioning in formats which use it.
 /// Sets the width of the calendar date.
 /// By default, affects the default and graphic formats.
-/// @group widgets
+/// @group 10-widgets
 /// @access private
 /// @since 1.2.0
 
 $_width-calendar-date: 48px;
 
 /// Styles events in the calendar widget. Affects all formats.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 2.0.0
 
@@ -77,7 +80,7 @@ $_width-calendar-date: 48px;
 }
 
 /// Styles links in the calendar widget. Affects all formats.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 2.0.0
 
@@ -86,7 +89,7 @@ $_width-calendar-date: 48px;
 }
 
 /// Styles dates in the calendar widget. Affects all formats.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 2.0.0
 
@@ -99,7 +102,7 @@ $_width-calendar-date: 48px;
 }
 
 /// Styles an event in the calendar widget default format.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 2.0.0
 
@@ -108,7 +111,7 @@ $_width-calendar-date: 48px;
 }
 
 /// Styles dates in the calendar widget default format.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 2.0.0
 
@@ -120,7 +123,7 @@ $_width-calendar-date: 48px;
 }
 
 /// Styles titles in the calendar widget default format.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 2.0.0
 
@@ -130,7 +133,7 @@ $_width-calendar-date: 48px;
 }
 
 /// Styles links in the calendar widget graphic format.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 2.0.0
 
@@ -140,7 +143,7 @@ $_width-calendar-date: 48px;
 }
 
 /// Styles dates in the calendar widget graphic format.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 2.0.0
 
@@ -153,7 +156,7 @@ $_width-calendar-date: 48px;
 }
 
 /// Styles the day of the month in the calendar widget graphic format.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 2.0.0
 
@@ -164,7 +167,7 @@ $_width-calendar-date: 48px;
 }
 
 /// Styles the month in the calendar widget graphic format.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 2.0.0
 
@@ -175,7 +178,7 @@ $_width-calendar-date: 48px;
 }
 
 /// Styles the title in the calendar widget graphic format.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 2.0.0
 

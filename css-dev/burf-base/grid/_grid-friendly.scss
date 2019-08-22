@@ -1,0 +1,88 @@
+// =================================================================
+// Grid - Friendly Classes
+//
+// Creates "friendly" classes that are easier to read, use, and
+// understand than standard Boostrap grid classes, such as -half,
+// -quarter, etc.
+// Placeholders are defined below, in the `$widths` map.
+// These always print, regardless of grid settings.
+// @group grid
+// @access public
+// @since 1.2.0
+// =================================================================
+
+$widths: (
+	quarter: 		$grid-number-columns * (1/4),
+	third: 			$grid-number-columns * (1/3),
+	half:				$grid-number-columns * (1/2),
+	two-third:		$grid-number-columns * (2/3),
+	three-quarter:	$grid-number-columns * (3/4),
+	full: 			$grid-number-columns,
+	remove: 			0
+);
+
+/// Creates the friendly classes and placeholders.
+/// @example
+/// 		Make something take up 1/2 of available space starting at the small breakpoint:
+/// 			@extend %col-sm-one-half;
+/// 		Make something take up 3/4 of available space starting at the medium breakpoint:
+/// 			@extend %col-md-three-quarter;
+
+@each $width, $columns in $widths {
+	%col-#{$width} {
+		@extend %col-#{$columns} !optional;
+	}
+
+	@if $burf-extras {
+		.col-#{$width} {
+			@extend %col-#{$width} !optional;
+		}
+	}
+
+	@each $feature, $supported in $grid-supports {
+		@if $supported {
+			%col-#{$feature}-#{$width} {
+				@extend %col-#{$feature}-#{$columns} !optional;
+			}
+
+			@if $burf-extras {
+				.col-#{$feature}-#{$width} {
+					@extend %col-#{$feature}-#{$width} !optional;
+				}
+			}
+		}
+	}
+
+	@each $bp-name, $bp-variable in $grid-breakpoints {
+		%col-#{$bp-name} {
+
+			&-#{$width} {
+				@extend %col-#{$bp-name}-#{$columns} !optional;
+			}
+
+			@each $feature, $supported in $grid-supports {
+				@if $supported {
+					&-#{$feature}-#{$width} {
+						@extend %col-#{$bp-name}-#{$feature}-#{$columns} !optional;
+					}
+				}
+			}
+		}
+
+		@if $burf-extras {
+			.col-#{$bp-name} {
+				&-#{$width} {
+					@extend %col-#{$bp-name}-#{$width} !optional;
+				}
+
+				@each $feature, $supported in $grid-supports {
+					@if $supported {
+						&-#{$feature}-#{$width} {
+							@extend %col-#{$bp-name}-#{$feature}-#{$width} !optional;
+						}
+					}
+				}
+			}
+		}
+	}
+}

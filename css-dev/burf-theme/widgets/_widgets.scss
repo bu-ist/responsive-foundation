@@ -3,43 +3,44 @@
 // =================================================================
 
 /// Controls the spacing between widgets in the sidebar.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 1.0.0
 
 $widget-margin-bottom:                      $margin !default;
 
 /// Controls the font family used for the widget title.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 1.0.0
 
 $font-family-widget-title:                  $font-family-sans-serif !default;
 
 /// Controls the border style used on the widget title.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 1.0.0
 
 $border-widget-title:                       $border !default;
 
 /// Controls the border width used on the widget title.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 1.0.0
 
 $border-width-widget-title:                 0 0 4px 0 !default;
 
 /// Controls the color of the widget title.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-widget-title:                        $color-grayscale-0 !default;
 
 /// Controls the shape which shows after the widget title if it is a link.
 /// By default, this is set to be an arrow.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 1.0.0
 
@@ -47,7 +48,7 @@ $widget-title-link-after:                   " →" !default;
 
 /// Controls the color of the shape which shows after the widget title
 /// if it is a link.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 1.0.0
 
@@ -55,36 +56,38 @@ $color-widget-title-link-after:             currentColor !default;
 
 /// Controls the color of the shape which shows after the widget title
 /// when you hover.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 1.0.0
 
 $color-widget-title-link-after-hover:       $color-grayscale-0 !default;
 
 /// Controls the font family used for headings in widget content.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 1.0.0
 
 $font-family-widget-heading:                $font-family-sans-serif !default;
 
 /// Controls the color of links in the widget content.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-widget-link:                        $color-link !default;
 
 /// Controls the color of links when you hover in the widget content.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-widget-link-hover:                  $color-link !default;
 
 /// Controls the style of border used between items in widgets which use a
 /// list format, such as content navigation and the calendar widget.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 1.0.0
 
@@ -107,7 +110,7 @@ $border-widget-list:                       $border !default;
 // -----------------------------------------------------------------
 
 /// Handles global widget styling.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 1.0.0
 
@@ -136,6 +139,18 @@ $border-widget-list:                       $border !default;
 		&:focus {
 			color: $color-widget-link-hover;
 		}
+
+		&.button,
+		&.button:hover,
+		&.button:focus {
+			color: $color-button-text;
+		}
+
+		&.button-primary,
+		&.button-primary:hover,
+		&.button-primary:focus {
+			color: $color-button-primary-text;
+		}
 	}
 
 	ul {
@@ -145,7 +160,7 @@ $border-widget-list:                       $border !default;
 }
 
 /// Handles title styles for all widgets.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 1.0.0
 
@@ -172,7 +187,7 @@ $border-widget-list:                       $border !default;
 }
 
 /// Styles the blog list in the blogroll widget.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 2.0.0
 
@@ -184,7 +199,7 @@ $border-widget-list:                       $border !default;
 // -----------------------------------------------------------------
 
 /// Handles styling for archive and link widgets.
-/// @group widgets
+/// @group 10-widgets
 /// @access public
 /// @since 2.0.0
 
@@ -197,5 +212,27 @@ $border-widget-list:                       $border !default;
 		&:first-child {
 			border: 0;
 		}
+	}
+}
+
+/// Handles styling for the WordPress calendar widget.
+/// @group 10-widgets
+/// @access public
+/// @since 4.0.0
+
+#wp-calendar {
+	background: $color-grayscale-f;
+	font-size: 14px;
+	table-layout: fixed;
+
+	td {
+		height: 30px;
+		padding: 0;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	a {
+		display: block;
 	}
 }

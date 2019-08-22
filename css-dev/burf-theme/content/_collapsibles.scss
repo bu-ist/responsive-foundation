@@ -3,21 +3,21 @@
 // =================================================================
 
 /// Controls the color of icons on collapsibles.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 2.0.0
 
 $color-collapsible-icon:           $color-icons !default;
 
 /// Controls the color of icons on collapsibles when you hover.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 2.0.0
 
 $color-collapsible-icon-hover:     $color-link !default;
 
 /// Controls the border between collapsibles.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 2.0.0
 
@@ -28,7 +28,7 @@ $border-collapsible:               $border !default;
 // =================================================================
 
 /// Styles a collapsible item.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 1.0.0
 
@@ -42,7 +42,7 @@ $border-collapsible:               $border !default;
 }
 
 /// Styles the header on a collapsible item.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 1.0.0
 
@@ -68,13 +68,13 @@ $border-collapsible:               $border !default;
 		}
 	}
 
-	.bu_collapsible_open & {
+	.bu_collapsible_open > & {
 		@extend %icon-hyphen;
 	}
 }
 
 /// Print styles for collapsibles.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 1.0.0
 

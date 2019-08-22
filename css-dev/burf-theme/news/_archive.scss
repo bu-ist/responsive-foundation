@@ -5,7 +5,7 @@
 /// Controls the shape used in "back" links, such as the links you
 /// see at the bottom of the page when viewing a single profile.
 /// By default, this is an arrow.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 1.0.0
 
@@ -13,21 +13,21 @@ $back-link-before:                          "← " !default;
 
 /// Controls the color of the arrow in "back" links, such as the links you
 /// see at the bottom of the page when viewing a single profile.
-/// @group content
+/// @group 09-content
 /// @access public
 /// @since 1.0.0
 
 $color-back-link-before:                    $color-grayscale-f !default;
 
 /// Controls the border style between posts on post listing templates.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
 $border-news-post:                         $border !default;
 
 /// Controls the color of the separators between metadata.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
@@ -35,7 +35,7 @@ $color-news-meta-em:                        $color-grayscale-7 !default;
 
 /// Controls the shape of the separators between metadata.
 /// By default, this is set to a dot.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
@@ -47,7 +47,7 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 // =================================================================
 
 /// A placeholder to mimic the styles of the "Back" link on archive pages.
-/// @group utilities
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -61,7 +61,7 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 /// Controls the styles of the "Back" link on archive pages.
 /// Use this class to only style CSS with the back link. Use the placeholder
 /// to style anything that looks like a back link.
-/// @group utilities
+/// @group 02-mixins
 /// @access public
 /// @since 1.0.0
 
@@ -74,7 +74,7 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 }
 
 /// Handles the previous and next links at the bottom of post listings.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
@@ -91,7 +91,7 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 }
 
 /// Handles the previous link at the bottom of post listings.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
@@ -100,7 +100,7 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 }
 
 /// Handles the next link at the bottom of post listings.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
@@ -109,7 +109,7 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 }
 
 /// Handles styling for posts in news listings and archive pages.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 2.0.0
 
@@ -128,7 +128,7 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 
 /// Handles styling for headlines in the post template partial,
 /// usually used on post listings and archive pages.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 2.0.0
 
@@ -136,11 +136,15 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 	& + .meta {
 		margin-top: -0.5em;
 	}
+
+	.post-thumb + & {
+		margin-top: 0;
+	}
 }
 
 /// Handles styling for metadata in the post template partial,
 /// usually used on post listings and archive pages.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 1.0.0
 
@@ -159,7 +163,7 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 
 /// Handles styling for thumbnails in the post template partial,
 /// usually used on post listings and archive pages.
-/// @group news
+/// @group 12-news
 /// @access public
 /// @since 2.0.0
 

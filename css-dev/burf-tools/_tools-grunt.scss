@@ -1,0 +1,45 @@
+// =================================================================
+//
+// BURF Tools for Grunt builds (responsive-child-starter, etc.)
+//
+// A partial for those who only want the very basic of basics. Only
+// mixins and placeholders are supported in this partial, and only
+// pieces which are used will print. Useful for plugin development
+// where you want your dependencies and extra CSS to be at an
+// absolute minimum, or for development which will occur in another
+// pre-existing framework or environment with its own normalizing
+// partials and other opinionated stuff.
+//
+// =================================================================
+
+// =================================================================
+// Dependencies
+// =================================================================
+
+@import 'node_modules/mathsass/dist/math';
+
+// =================================================================
+// Blah
+// =================================================================
+
+$burf-extras:								       false !default;
+
+@import 'burf-base/config';
+@import 'burf-base/mixins';
+@import 'burf-base/accessibility';
+@import 'burf-base/normalize-variables';
+
+@import 'burf-base/grid/grid-variables';
+@import 'burf-base/grid/grid-mixins';
+@import 'burf-base/grid/grid-placeholders';
+@import 'burf-base/grid/grid-friendly';
+
+// Special settings for icons
+
+$use-default-icons:                        false !default;
+$print-icon-classes:                       false !default;
+
+@import 'burf-base/icons/package';
+
+@import 'burf-base/typography-variables';
+@import 'burf-base/typography-tools';

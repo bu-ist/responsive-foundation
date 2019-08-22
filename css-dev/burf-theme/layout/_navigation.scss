@@ -8,7 +8,7 @@
 /// The style of border to use on the masthead.
 /// This shows directly below navigation or brand depending on the layout
 /// you've chosen for your site.
-/// @group header
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
 
@@ -16,7 +16,7 @@ $border-masthead:                          $border !default;
 
 /// The background color of the masthead.
 /// Bright colors are not recommended.
-/// @group header
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
 
@@ -27,49 +27,51 @@ $color-masthead-bg:                        $color-grayscale-f !default;
 
 /// The style of border used on primary navigation.
 /// By default, this border shows above primary navigation on mobile only.
-/// @group primary-navigation
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
 
 $border-width-primary-nav:                   1px 0 0 0 !default;
 
 /// The width of border used on primary navigation at desktop sizes.
-/// @group primary-navigation
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
 
 $border-primary-nav-desktop: 					 0 !default;
 
 /// The color of border used on primary navigation.
-/// @group primary-navigation
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
 
 $color-primary-nav-border:                  $color-grayscale-3 !default;
 
 /// The font used in primary navigation.
-/// @group primary-navigation
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
 
 $font-family-navigation:                    $font-family-sans-serif !default;
 
 /// The color to use behind primary navigation.
-/// @group primary-navigation
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-primary-nav-bg:                      $color-grayscale-0 !default;
 
 /// The color of links in primary navigation.
-/// @group primary-navigation
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-primary-nav-link:                    $color-grayscale-f !default;
 
 /// The color of links when you hover in primary navigation.
-/// @group primary-navigation
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
 
@@ -77,32 +79,35 @@ $color-primary-nav-link-hover:              $color-grayscale-a !default;
 
 /// The color of an active link in primary navigation - in other words, the
 /// color that a link will be when you are on that link's page.
-/// @group primary-navigation
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-primary-nav-link-current:            $color-grayscale-9 !default;
 
 /// The color to use behind dropdown menus. Only affects non-mobile devices.
 /// This variable is not used in the left hand navigation layout as dropdowns
 /// are not supported.
-/// @group primary-navigation
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
 
 $color-primary-nav-dropdown-bg:             $color-grayscale-0 !default;
 
 /// The color of links in dropdown menus.
-/// @group primary-navigation
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-primary-nav-dropdown-link:           $color-primary-nav-link !default;
 
 /// The color of links in dropdown menus when you hover over them.
-/// @group primary-navigation
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-primary-nav-dropdown-link-hover:     $color-primary-nav-link-hover !default;
 
@@ -110,30 +115,32 @@ $color-primary-nav-dropdown-link-hover:     $color-primary-nav-link-hover !defau
 // -----------------------------------------------------------------
 
 /// The width and style of border used in the utility navigation.
-/// @group utility-navigation
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
 
 $border-width-utility-nav:                   1px 0 0 0 !default;
 
 /// The font size used in the utility navigation.
-/// @group utility-navigation
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
 
 $font-size-utility-nav:                      14px !default;
 
 /// The color of links in the utility navigation.
-/// @group utility-navigation
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
-$color-utility-nav-link:                    $color-grayscale-7 !default;
+$color-utility-nav-link:                    $color-grayscale-6 !default;
 
 /// The color of links when you hover in the utility navigation.
-/// @group utility-navigation
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-utility-nav-link-hover:              $color-grayscale-0 !default;
 
@@ -141,16 +148,18 @@ $color-utility-nav-link-hover:              $color-grayscale-0 !default;
 /// The placement of utility navigation on mobile usually means
 /// the utility navigation will be on a different background color,
 /// so it's important to double check that this is set correctly.
-/// @group utility-navigation
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-utility-nav-mobile-link:       			$color-grayscale-a !default;
 
 /// The color of links in the utility navigation when you hover on mobile.
-/// @group utility-navigation
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-utility-nav-mobile-link-hover: 			$color-grayscale-f !default;
 
@@ -159,31 +168,35 @@ $color-utility-nav-mobile-link-hover: 			$color-grayscale-f !default;
 
 /// Controls the color of toggles in the navigation at mobile sizes.
 /// By default, this affects both the menu and search toggles.
-/// @group header
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-nav-toggle:                          $color-grayscale-f !default;
 
 /// Controls the color of toggles in the navigation at mobile sizes on hover.
-/// @group header
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-nav-toggle-hover:                    $color-grayscale-a !default;
 
 /// Controls the color of toggles in the navigation at desktop sizes.
 /// By default, this affects both the menu and search toggles.
-/// @group header
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-nav-toggle-alt:                      $color-grayscale-9 !default;
 
 /// Controls the color of toggles in the navigation at desktop sizes on hover.
-/// @group header
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-nav-toggle-alt-hover:                $color-grayscale-0 !default;
 
@@ -191,56 +204,57 @@ $color-nav-toggle-alt-hover:                $color-grayscale-0 !default;
 // -----------------------------------------------------------------
 
 /// Controls the width of the border used on the search pane.
-/// @group header
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
 
 $border-width-quicksearch:                  1px 0 0 0 !default;
 
 /// Controls the color of the border used on the search form.
-/// @group header
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
 
 $color-quicksearch-border:                 $color-grayscale-d !default;
 
 /// Controls how much rounding is applied to the search form field corners.
-/// @group header
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
 
 $border-radius-quicksearch-input:           20px 0 0 20px !default;
 
 /// Controls how much rounding is applied to the search form submit button.
-/// @group header
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
 
 $border-radius-quicksearch-button:          0 20px 20px 0 !default;
 
 /// Controls the width of the border used on the search field.
-/// @group header
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
 
 $border-search:                            0 !default;
 
 /// Controls the background color of the search field.
-/// @group header
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
 
 $color-search-bg:                          $color-grayscale-f5 !default;
 
 /// Controls the color of the text in the search field.
-/// @group header
+/// @group 06-navigation
 /// @access public
 /// @since 1.0.0
+/// @accessibility AA
 
 $color-search-text:                        $color-grayscale-0 !default;
 
 /// The width of the side nav, if you are using the left hand layout.
-/// @group grid
+/// @group 05-grid
 /// @access public
 /// @since 1.2.0
 
@@ -255,7 +269,7 @@ $width-side-nav:                            240px !default;
 
 /// Controls all styling related to the masthead. This includes
 /// navigation, branding, and search.
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 1.0.0
 
@@ -268,7 +282,7 @@ $width-side-nav:                            240px !default;
 
 /// A wrapper for items in the masthead. Often used to restrict the
 /// masthead to a certain width without interfering with the background.
-/// @group layout
+/// @group 08-layout
 /// @access public
 /// @since 1.0.0
 
@@ -282,9 +296,10 @@ $width-side-nav:                            240px !default;
 // =================================================================
 
 /// The default breakpoint to switch to the desktop view in navigation.
-/// @group primary-navigation
+/// @group 06-navigation
 /// @access public
 /// @since 2.0.0
+
 
 $nav-desktop:                    $sm !default;
 
@@ -312,10 +327,13 @@ nav {
 
 #quicksearch {
 	background: $color-search-bg;
-	display: none;
 	margin: 0;
 	padding: $padding $padding-small;
 	position: relative;
+
+	.js & {
+		display: none;
+	}
 
 	&.is-open {
 		border-bottom: $border-search;
@@ -333,19 +351,28 @@ nav {
 	}
 
 	label {
-		display: initial;
+		display: inline;
 	}
 }
+
+
+/// The height of the search field. Affects both search and search button.
+/// @group navigation
+/// @access public
+/// @since 1.0.0
+
+$search-field-height:                          40px !default;
 
 .search-field {
 	@include border-radius( $border-radius-quicksearch-input );
 	color: $color-search-text;
+	height: $search-field-height;
 	padding-left: $padding-small;
 	padding-right: $padding-small;
 	width: 75%;
 
 	@include breakpoint( $nav-desktop ) {
-		width: 85%;
+		width: 80%;
 	}
 }
 
@@ -353,18 +380,20 @@ nav {
 	@extend %button-styles-primary;
 	@include border-radius( $border-radius-quicksearch-button );
 	float: right;
+	height: $search-field-height;
 	margin: 0;
 	width: 25%;
 
 	@include breakpoint( $nav-desktop ) {
-		width: 15%;
+		width: 20%;
 	}
 }
+
 
 /// Adjusts the size of the search and nav toggles in
 /// the main navigation. Also affects the top/bottom spacing
 /// around main navigation items in the nav bar.
-/// @group navigation
+/// @group 06-navigation
 /// @access public
 /// @since 2.0.0
 
@@ -375,11 +404,13 @@ $nav-toggle-size: 60px !default;
 .search-toggle {
 	@extend %icon-search;
 	@include transition( color 200ms ease-in-out 0s );
+	background: transparent;
 	color: $color-nav-toggle;
 	float: right;
 	font-size: $nav-toggle-size / 2;
 	height: $nav-toggle-size;
 	line-height: $nav-toggle-size;
+	margin: 0;
 	padding: 0;
 	text-align: center;
 	width: $nav-toggle-size;
@@ -392,27 +423,23 @@ $nav-toggle-size: 60px !default;
 		color: $color-nav-toggle-hover;
 	}
 
+	&:focus {
+		outline-color: invert( $color-primary-nav-bg );
+	}
+
 	&.is-open {
 		@extend %icon-close;
 	}
 
 	span {
-		display: none;
+		@extend %visually-hidden;
 	}
 }
-
-// when nav or search are opened
-.is-open .primary-nav-menu,
-.is-open .utility-nav {
-	clear: left;
-	display: block;
-}
-
 
 /// Adjusts the size of border on the nav toggle icon
 /// in the main navigation. Also affects spacing of borders
 /// in this icon.
-/// @group navigation
+/// @group 06-navigation
 /// @access public
 /// @since 2.0.0
 
@@ -420,14 +447,20 @@ $nav-toggle-border: 4px !default;
 
 .nav-toggle {
 	@extend %hide-text;
+	background: transparent;
 	cursor: pointer;
 	float: left;
 	height: $nav-toggle-size;
+	margin: 0;
 	position: relative;
 	width: $nav-toggle-size;
 
 	@include breakpoint( $nav-desktop ) {
 		display: none;
+	}
+
+	&:focus {
+		outline-color: invert( $color-primary-nav-bg );
 	}
 
 	span {
@@ -439,7 +472,8 @@ $nav-toggle-border: 4px !default;
 		height: $nav-toggle-border;
 		left: $nav-toggle-size / 4;
 		position: absolute;
-		top: $nav-toggle-size / 2;
+		text-indent: 100px;
+		top: $nav-toggle-size / 2 - 2px;
 		width: $nav-toggle-size / 2;
 
 		&::before,
@@ -491,7 +525,10 @@ $nav-toggle-border: 4px !default;
 	@extend %clearfix;
 	background: $color-primary-nav-bg;
 	display: block;
-	padding: 0 $padding-small;
+
+	@include breakpoint( $nav-desktop ) {
+		padding: 0 $padding-small;
+	}
 
 	&.is-open {
 		height: auto;
@@ -504,8 +541,14 @@ $nav-toggle-border: 4px !default;
 }
 
 .primary-nav-menu {
-	display: none;
-	margin: $nav-toggle-size 10px 0; // Keeps menu from overlapping nav toggle
+	clear: left;
+	margin: $nav-toggle-size $margin-small 0; // Keeps menu from overlapping nav toggle
+
+	@media screen and ( max-width: $sm - 1 ) {
+		.js & {
+			display: none;
+		}
+	}
 
 	@include breakpoint( $nav-desktop ) {
 		border: 0;
@@ -524,6 +567,14 @@ $nav-toggle-border: 4px !default;
 			.lt-ie8 & {
 				display: inline;
 			}
+		}
+
+		&:focus {
+			outline-color: invert( $color-primary-nav-bg );
+		}
+
+		&:focus-within ul {
+			left: auto;
 		}
 
 		&:hover ul,
@@ -587,11 +638,18 @@ $nav-toggle-border: 4px !default;
 	}
 }
 
+// when nav or search are opened
+.is-open .primary-nav-menu,
+.is-open .utility-nav {
+	display: block;
+}
+
 // utilityNav
 
 .utility-nav {
 	border: 1px solid $color-primary-nav-border;
 	border-width: $border-width-utility-nav;
+	clear: left;
 	color: $color-utility-nav-mobile-link;
 	display: none;
 	font-size: $font-size-utility-nav;
@@ -606,9 +664,9 @@ $nav-toggle-border: 4px !default;
 	li {
 		border: 0;
 		padding: 0;
+		list-style-type: none;
 
 		@include breakpoint( $nav-desktop ) {
-			*display: inline;
 			border: 0;
 			display: inline-block;
 			padding-left: $padding-small;
@@ -644,7 +702,7 @@ $nav-toggle-border: 4px !default;
 		@include breakpoint( $nav-desktop ) {
 			line-height: 1;
 			position: absolute;
-			right: 20px;
+			right: $padding;
 			top: ( $height-brand / 2 ) - ( $font-size-utility-nav / 2 );
 		}
 	}
@@ -654,7 +712,7 @@ $nav-toggle-border: 4px !default;
 
 /// The breakpoint to switch to the desktop view in the left
 /// navigation layout.
-/// @group primary-navigation
+/// @group 06-navigation
 /// @access public
 /// @since 2.0.0
 
@@ -769,10 +827,11 @@ $left-nav-desktop:                    $nav-desktop !default;
 	}
 }
 
-$_search-height: 103px;
+$_search-height: 115px;
 
 .search-open.l-side-nav {
-	.primary-nav {
+	.primary-nav,
+	.bu-banner {
 		@include breakpoint( $left-nav-desktop ) {
 			top: $_search-height; // adds the height of the open search form
 		}
@@ -829,7 +888,9 @@ $_search-height: 103px;
 	}
 
 	&.nav-open {
-		.content {
+		.bu-banner,
+		.content
+		{
 			@include breakpoint( $left-nav-desktop ) {
 				left: $width-side-nav - 60px;
 			}
@@ -856,7 +917,7 @@ $_search-height: 103px;
 
 /// The breakpoint to switch to the desktop view in the top
 /// navigation layout.
-/// @group primary-navigation
+/// @group 06-navigation
 /// @access public
 /// @since 2.0.0
 
@@ -867,7 +928,7 @@ $top-nav-desktop:                    $nav-desktop !default;
 		@include breakpoint( $top-nav-desktop ) {
 			line-height: 1;
 			position: absolute;
-			right: 20px;
+			right: $padding;
 			top: ( ( $height-brand / 2 ) - ( $font-size-utility-nav / 2 ) ) + 60;
 		}
 	}
@@ -887,7 +948,7 @@ $top-nav-desktop:                    $nav-desktop !default;
 
 /// The breakpoint to switch to the desktop view in the no
 /// navigation layout.
-/// @group primary-navigation
+/// @group 06-navigation
 /// @access public
 /// @since 2.0.0
 
@@ -941,4 +1002,271 @@ $no-nav-desktop:                    $nav-desktop !default;
 			}
 		}
 	}
+
+
+}
+
+// Mega navigation
+
+/// The background color of the mega nav menu toggle.
+/// @group navigation
+/// @access public
+/// @since 3.0.2
+
+$color-mega-nav-toggle-bg:                     $color-button-bg !default;
+
+/// The text color of the mega nav menu toggle.
+/// @group navigation
+/// @access public
+/// @since 3.0.2
+
+$color-mega-nav-toggle-text:                   $color-button-text !default;
+
+/// The number of columns to use in the mega navigation
+/// menu. If there are fewer nav items than this number
+/// in the first row, they will stretch
+/// @group navigation
+/// @access public
+/// @since 3.0.2
+
+$mega-nav-columns:                             3 !default;
+
+/// The number of columns to use in the mega navigation
+/// menu on desktop. If there are fewer nav items than this
+/// in the first row, they will stretch
+/// @group navigation
+/// @access public
+/// @since 3.0.2
+
+$mega-nav-columns-desktop:                     5 !default;
+
+/// The point at which the mega navigation switches from
+/// showing the icon to the full menu and short menu combo.
+/// Accepts a breakpoint or pixel value.
+/// @group navigation
+/// @access public
+/// @since 3.0.2
+
+$mega-nav-show-full-menu:                      $sm !default;
+
+/// The point at which the mega navigation switches from
+/// mobile to desktop layout. Accepts a breakpoint or pixel
+/// value.
+/// @group navigation
+/// @access public
+/// @since 3.0.2
+
+$mega-nav-desktop-layout:                      $md !default;
+
+// mega nav
+
+.l-mega-nav {
+	.brand {
+		display: flex;
+		align-items: center;
+	}
+
+	.brand-container {
+		flex-grow: 1;
+		top: auto;
+		transform: translateY( 0 );
+	}
+
+	.site-description {
+		@extend %visually-hidden;
+	}
+
+	.primary-nav {
+		height: 0;
+		padding: 0;
+
+		&.is-open {
+			height: auto;
+		}
+	}
+
+	.is-open #quicksearch {
+		display: block;
+	}
+
+	#quicksearch {
+		background: transparent;
+		padding: $padding;
+		padding-bottom: 0;
+
+		@include breakpoint( $mega-nav-desktop-layout ) {
+			padding: $padding-large;
+			padding-bottom: 0;
+		}
+	}
+
+	.primary-nav-menu {
+		display: flex;
+		flex-wrap: wrap;
+		padding: $padding;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0;
+
+		@include breakpoint( $mega-nav-desktop-layout ) {
+			padding: $padding-large;
+		}
+
+		@include breakpoint( $xl ) {
+			max-width: $xl;
+		}
+
+		> li {
+			flex-basis: 100%;
+			flex-grow: 1;
+			position: relative;
+
+			@include breakpoint( $mega-nav-show-full-menu ) {
+				border-left: 1px solid currentColor;
+				flex-basis: 100% / $mega-nav-columns;
+				flex-grow: initial;
+				margin-bottom: $margin;
+			}
+
+			@include breakpoint( $mega-nav-desktop-layout ) {
+				flex-basis: 100% / $mega-nav-columns-desktop;
+			}
+
+			&::after {
+				bottom: 0;
+				content: "";
+				display: block;
+				border-bottom: 1px solid currentColor;
+				position: absolute;
+			}
+
+			li a {
+				font-weight: 400;
+				padding: 0;
+			}
+
+			&:nth-child( -n + #{$mega-nav-columns} ) {
+				flex-grow: 1;
+			}
+		}
+
+		@include breakpoint( $mega-nav-desktop-layout ) {
+			> li:nth-child( -n + #{$mega-nav-columns-desktop} ) {
+				flex-grow: 1;
+			}
+		}
+
+		ul {
+			left: auto;
+			position: static;
+			width: auto;
+		}
+
+		a {
+			line-height: 1.3;
+			margin-bottom: 0.75em;
+		}
+	}
+
+	.utility-nav {
+		border: none;
+		text-align: center;
+		margin: $margin;
+		margin-top: 0;
+
+		@include breakpoint( $mega-nav-desktop-layout ) {
+			margin: $margin-large;
+			margin-top: 0;
+		}
+
+		a {
+			color: $color-primary-nav-link;
+		}
+	}
+}
+
+.mega-nav-toggle {
+	background: $color-mega-nav-toggle-bg;
+	color: $color-mega-nav-toggle-text;
+	display: block;
+	height: auto;
+	overflow: visible;
+	width: 54px;
+
+	@include breakpoint( $mega-nav-show-full-menu ) {
+		width: auto;
+	}
+
+	.nav-toggle-label-closed,
+	.nav-toggle-label-open {
+		overflow: hidden;
+		text-align: center;
+		text-indent: 0;
+
+		&::before {
+			margin-top: -3px;
+		}
+	}
+
+	.nav-toggle-label-open {
+		height: 0;
+	}
+
+	&.is-open .nav-toggle-label-open {
+		height: auto;
+	}
+
+	&.is-open .nav-toggle-label-closed {
+		height: 0;
+	}
+
+	.nav-toggle-label-closed {
+		@include icon( 'menu' );
+
+		@include breakpoint( $mega-nav-show-full-menu ) {
+			@include icon( 'search' );
+		}
+	}
+
+	.nav-toggle-label-open {
+		@extend %icon-delete;
+	}
+}
+
+.short-nav {
+	align-items: center;
+	display: flex;
+	margin-left: auto;
+	top: auto;
+	transform: translateY( 0 );
+
+	ul {
+		list-style-type: none;
+	}
+
+	li {
+		display: inline-block;
+	}
+
+	a {
+		padding: $padding-small;
+	}
+}
+
+.short-nav-menu {
+	display: none;
+
+	@include breakpoint( $mega-nav-show-full-menu ) {
+		display: block;
+	}
+
+	a {
+		font-weight: 700;
+	}
+}
+
+// Adjusts the appearance of the skip link; Styled to match the default WordPress screen reader text
+
+.skip-link {
+	@extend %skip-link;
 }
