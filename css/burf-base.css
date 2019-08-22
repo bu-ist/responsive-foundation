@@ -483,14 +483,14 @@ template {
   src: url("//www.bu.edu/cdn/fonts/TiemposText/TiemposText-Semibold.eot");
   src: url("//www.bu.edu/cdn/fonts/TiemposText/TiemposText-Semibold.eot?#iefix") format("embedded-opentype"), url("//www.bu.edu/cdn/fonts/TiemposText/TiemposText-Semibold.woff") format("woff");
   font-style: normal;
-  font-weight: 700; }
+  font-weight: 600; }
 
 @font-face {
   font-family: "TiemposText";
   src: url("//www.bu.edu/cdn/fonts/TiemposText/TiemposText-Semibold-Italic.eot");
   src: url("//www.bu.edu/cdn/fonts/TiemposText/TiemposText-Semibold-Italic.eot?#iefix") format("embedded-opentype"), url("//www.bu.edu/cdn/fonts/TiemposText/TiemposText-Semibold-Italic.woff") format("woff");
   font-style: italic;
-  font-weight: 700; }
+  font-weight: 600; }
 
 @font-face {
   font-family: "bu-default-icons";

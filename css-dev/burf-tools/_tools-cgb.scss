@@ -30,8 +30,8 @@
 $burf-extras:								       false !default;
 
 @import '~responsive-foundation/css-dev/burf-base/config';
-@import '~responsive-foundation/css-dev/burf-base/accessibility';
 @import '~responsive-foundation/css-dev/burf-base/mixins';
+@import '~responsive-foundation/css-dev/burf-base/accessibility';
 @import '~responsive-foundation/css-dev/burf-base/normalize-variables';
 
 @import '~responsive-foundation/css-dev/burf-base/grid/grid-variables';

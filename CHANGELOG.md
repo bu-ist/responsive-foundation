@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased
+
+* Adds CSS Grid support to the grid, with an automatic fallback to floats
+  for unsupported browsers.
+* Adds support for color stops to the linear gradient mixin. New syntax:
+  `@include linear-gradient(to right, #E47D7D 0%, #C195D3 50%, #4FB4E8 100%);`
+* Ensures BU Hub required icons are always output, even if you turn icons off.
+* Adds a skip link mixin and moves styles to the accessibility partial.
+* Fixes https://github.com/bu-ist/responsive-foundation/issues/208
+
 ## 3.2.2
 
 * Adds Medium, Medium Alt, and Rhett support to default icons.

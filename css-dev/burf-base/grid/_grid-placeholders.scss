@@ -32,6 +32,10 @@
 	padding: $grid-container-padding;
 	width: 100%;
 
+	@if ( $enable-css-grid ) {
+		@include css-grid-base;
+	}
+
 	@include breakpoint( $sm ) {
 		max-width: $container-sm;
 		padding: $grid-container-padding-desktop;
@@ -43,6 +47,7 @@
 
 	@include breakpoint( $lg ) {
 		max-width: $container-lg;
+		grid-gap: $padding * 2;
 	}
 }
 
@@ -63,6 +68,21 @@
 	@include breakpoint( $sm ) {
 		margin: $grid-row-margin-desktop;
 	}
+
+	@if ( $enable-css-grid ) {
+		@include css-grid-base;
+	}
+}
+
+/// Adds grid support to any container.
+/// Can be used on its own to enable grid in a specific
+/// place in the theme without turning it on globally.
+/// @group global
+/// @access public
+/// @since 4.0.0
+
+%grid-parent {
+	@include css-grid-base;
 }
 
 // Base styles for children of a row.
@@ -77,6 +97,13 @@
 %row-child-styles {
 	padding-left: $grid-column-padding;
 	padding-right: $grid-column-padding;
+
+	@if ( $enable-css-grid ) {
+		@supports ( display: grid ) {
+			padding-left: initial;
+			padding-right: initial;
+		}
+	}
 }
 
 // A backwards-compatible equal heights solution for
@@ -171,6 +198,12 @@
 %col-margin-parent {
 	margin-left: -$grid-margin-width#{"%"};
 	margin-right: 0;
+
+	@if ( $enable-css-grid ) {
+		@supports ( display: grid ) {
+			margin-left: auto;
+		}
+	}
 }
 
 @if $burf-extras {
@@ -238,6 +271,13 @@ $grid-widths-margins: ();
 		%col-#{$i} {
 			@extend %col-base;
 			@include grid-build( width, $percentage );
+
+			@if ( $enable-css-grid ) {
+				@supports ( display: grid ) {
+					grid-column: span $i;
+					width: 100%;
+				}
+			}
 		}
 	}
 }
@@ -259,9 +299,29 @@ $grid-widths-margins: ();
 			%col-#{$feature}-#{$i} {
 				@extend %col-#{$feature}-base !optional;
 				@extend %col-base;
-				@include col( '', $feature, $i, false );
+				@include col( '', $feature, $i, $enable-css-grid, false );
 			}
 		}
+	}
+}
+
+%grid-item-base {
+	@if ( $enable-css-grid ) {
+		@supports ( display: grid ) {
+			grid-column: span $grid-number-columns;
+		}
+	}
+}
+
+%grid-place-first {
+	@supports ( display: grid ) {
+		order: -1;
+	}
+}
+
+%grid-place-last {
+	@supports ( display: grid ) {
+		order: $grid-number-columns + 1;
 	}
 }
 
@@ -277,6 +337,14 @@ $grid-widths-margins: ();
 // Since: 2.0.0
 
 @each $breakpoint, $value in $grid-breakpoints {
+	@if ( $enable-css-grid ) {
+		@for $i from 0 to length( $grid-widths ) {
+			%col-#{$breakpoint}-#{$i} {
+				@extend %grid-item-base;
+			}
+		}
+	}
+
 	@include breakpoint( $value, false ) {
 		%col-#{$breakpoint}-margin-base {
 			@include col-margin-base;
@@ -284,6 +352,29 @@ $grid-widths-margins: ();
 
 		%col-#{$breakpoint}-margin-parent {
 			margin-left: -$grid-margin-width#{"%"};
+
+			@if ( $enable-css-grid ) {
+				@supports ( display: grid ) {
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+
+		%grid-#{$breakpoint}-parent {
+			@include css-grid-base;
+		}
+
+		%grid-#{$breakpoint}-place-first {
+			@supports ( display: grid ) {
+				order: -1;
+			}
+		}
+
+		%grid-#{$breakpoint}-place-last {
+			@supports ( display: grid ) {
+				order: $grid-number-columns + 1;
+			}
 		}
 
 		@if $burf-extras {

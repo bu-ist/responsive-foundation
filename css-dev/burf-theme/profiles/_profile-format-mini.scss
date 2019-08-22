@@ -30,6 +30,17 @@ $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 // Mini Profile Format Styles
 // =================================================================
 
+/// Container for the mini profile format.
+/// @group 14-profiles
+/// @access public
+/// @since 2.0.0
+
+.profile-format-mini {
+	@if ( $enable-css-grid ) {
+		@extend %grid-xs-parent;
+	}
+}
+
 /// Styles the mini profile format.
 /// @group 14-profiles
 /// @access public
@@ -43,6 +54,10 @@ $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 		clear: left;
 		padding-right: $margin-small;
 	}
+
+	@if ( $enable-css-grid ) {
+		@extend %grid-parent;
+	}
 }
 
 /// Styles the mini profile photo.
@@ -51,9 +66,15 @@ $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 /// @since 2.0.0
 
 .profile-photo-mini {
-	@extend %col-2;
+	@extend %col-3;
 	height: 0;
 	padding-bottom: 16%;
+
+	@if ( $enable-css-grid ) {
+		@supports ( display: grid ) {
+			padding-bottom: 100%;
+		}
+	}
 }
 
 /// Styles the mini profile details.
@@ -62,8 +83,14 @@ $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 /// @since 2.0.0
 
 .profile-details-mini {
-	@extend %col-10;
+	@extend %col-9;
 	padding-left: 20px;
+
+	@if ( $enable-css-grid ) {
+		@supports ( display: grid ) {
+			padding-left: 0;
+		}
+	}
 
 	p {
 		@extend %font-size-minimum;
