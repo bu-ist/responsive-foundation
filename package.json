@@ -71,6 +71,7 @@
     "grunt-sass-lint": "^0.2.4",
     "grunt-sassdoc": "^2.0.3",
     "id-kss-builder": "git+ssh://git@github.com/bu-ist/id-kss-builder.git#feature/add-author-support",
+    "kss": "^3.0.0-beta.25",
     "node-sass": "^4.12.0",
     "sassdoc-theme-budocs": "git+ssh://git@github.com/ashleykolodziej/sassdoc-theme-budocs.git#master"
   }
