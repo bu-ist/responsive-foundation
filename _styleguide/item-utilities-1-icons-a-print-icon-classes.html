@@ -258,14 +258,14 @@
 
 
 		
-				<div id="kssref-utilities-1-icons-a-icon-mixin" class="id-kss-section id-kss-section--depth-3">
+				<div id="kssref-utilities-1-icons-a-print-icon-classes" class="id-kss-section id-kss-section--depth-3">
 					<div class="id-kss-style id-kss-component-content">
 						<header class="id-kss-title-block">
 							<h2 class="id-kss-title id-kss-title--level-3 ">
 		
 								<span class="id-kss-title-section">1: Icons</span>
 		
-								<span class="id-kss-title-name">A mixin to generate icons. Use any icon in &#x60;$icon-supports&#x60;. $use-extend will use the extends for performance purposes, but sacrifices your ability to use this inside a media query. Setting this to true is really only beneficial for generating the default placeholders.<a class="id-kss-title__permalink" href="#kssref-utilities-1-icons-a-icon-mixin">Link</a></span>
+								<span class="id-kss-title-name">Print Icon Classes<a class="id-kss-title__permalink" href="#kssref-utilities-1-icons-a-print-icon-classes">Link</a></span>
 							</h2>
 								<span class="id-kss-since id-kss-since-2-0-0">
 									Since:
@@ -277,19 +277,33 @@
 									</span>
 		
 							<!--<span class="id-kss-title__ref">
-								2.2.9
+								2.2.11
 								<span class="id-kss-title__permalink-hash">
-										#Utilities.1: Icons.a: Icon Mixin
+										#Utilities.1: Icons.a: Print Icon Classes
 								</span>
 							</span>-->
 						</header>
+							<div class="id-kss-description">
+								<p>Choose whether or not to print CSS classes for icons in your
+		stylesheet. By default, this option is false for child themes,
+		and true for the framework. Set this to true when you want to
+		give the client flexibility to choose their own icons using CSS
+		and custom HTML.</p>
+		<h4>Examples</h4>
+		<h5>Print all icon classes in your stylesheet.</h5>
+		<pre class="hljs"><code class="language-">
+		$print-icon-classes: true;
+		
+		</code></pre>
+		
+							</div>
 		
 		
 					</div>
 		
 							<span class="id-kss-source id-kss-style">
-								Source: <code>burf-base/icons/_mixins.scss, line 138</code>
-									<a href="https://github.com/bu-ist/responsive-foundation/tree/master/css-devburf-base/icons/_mixins.scss#L138">
+								Source: <code>burf-base/icons/_base.scss, line 23</code>
+									<a href="https://github.com/bu-ist/responsive-foundation/tree/master/css-devburf-base/icons/_base.scss#L23">
 										View Source
 									</a>
 							</span>

@@ -258,18 +258,18 @@
 
 
 		
-				<div id="kssref-utilities-1-icons-a-icon-mixin" class="id-kss-section id-kss-section--depth-3">
+				<div id="kssref-utilities-1-icons-a-icon-base-placeholder" class="id-kss-section id-kss-section--depth-3">
 					<div class="id-kss-style id-kss-component-content">
 						<header class="id-kss-title-block">
 							<h2 class="id-kss-title id-kss-title--level-3 ">
 		
 								<span class="id-kss-title-section">1: Icons</span>
 		
-								<span class="id-kss-title-name">A mixin to generate icons. Use any icon in &#x60;$icon-supports&#x60;. $use-extend will use the extends for performance purposes, but sacrifices your ability to use this inside a media query. Setting this to true is really only beneficial for generating the default placeholders.<a class="id-kss-title__permalink" href="#kssref-utilities-1-icons-a-icon-mixin">Link</a></span>
+								<span class="id-kss-title-name">Icon Base placeholder<a class="id-kss-title__permalink" href="#kssref-utilities-1-icons-a-icon-base-placeholder">Link</a></span>
 							</h2>
-								<span class="id-kss-since id-kss-since-2-0-0">
+								<span class="id-kss-since id-kss-since-1-2-0">
 									Since:
-										<a href="https://github.com/bu-ist/responsive-foundation//releases/tag/2.0.0">2.0.0</a>
+										<a href="https://github.com/bu-ist/responsive-foundation//releases/tag/1.2.0">1.2.0</a>
 								</span>
 		
 									<span class="id-kss-open-github-issue">
@@ -277,19 +277,39 @@
 									</span>
 		
 							<!--<span class="id-kss-title__ref">
-								2.2.9
+								2.2.2
 								<span class="id-kss-title__permalink-hash">
-										#Utilities.1: Icons.a: Icon Mixin
+										#Utilities.1: Icons.a: Icon Base Placeholder
 								</span>
 							</span>-->
 						</header>
+							<div class="id-kss-description">
+								<p>Provides base icon styles normalized across browsers and optimized
+		for accessibility.</p>
+		<p>Use this placeholder if you are loading your own font library
+		and can't use the built-in icons because the content is different.</p>
+		<p>This should go on your base element. The complimentary placeholder,
+		<code>%icon-content</code>, needs to go on a <code>:before</code> or <code>:after</code> underneath.</p>
+		<h4>Examples</h4>
+		<h5>Add the icon base to a custom icon you've created.</h5>
+		<pre class="hljs"><code class="language-">
+		.your-custom-icon {
+			@extend %icon-base;
+		
+			&amp;::after {
+				@extend %icon-content;
+			}
+		}
+		</code></pre>
+		
+							</div>
 		
 		
 					</div>
 		
 							<span class="id-kss-source id-kss-style">
-								Source: <code>burf-base/icons/_mixins.scss, line 138</code>
-									<a href="https://github.com/bu-ist/responsive-foundation/tree/master/css-devburf-base/icons/_mixins.scss#L138">
+								Source: <code>burf-base/icons/_base.scss, line 49</code>
+									<a href="https://github.com/bu-ist/responsive-foundation/tree/master/css-devburf-base/icons/_base.scss#L49">
 										View Source
 									</a>
 							</span>

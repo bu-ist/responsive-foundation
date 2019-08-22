@@ -20,40 +20,99 @@
 // Base Icon Styles
 // =================================================================
 
-/// Choose whether or not to print CSS classes for icons in your
-/// stylesheet. By default, this option is false for child themes,
-/// and true for the framework. Set this to true when you want to
-/// give the client flexibility to choose their own icons using CSS
-/// and custom HTML.
-/// @group icons
-/// @access public
-/// @since 2.0.0
+// Print Icon Classes
+//
+// Choose whether or not to print CSS classes for icons in your
+// stylesheet. By default, this option is false for child themes,
+// and true for the framework. Set this to true when you want to
+// give the client flexibility to choose their own icons using CSS
+// and custom HTML.
+//
+// #### Examples
+//
+// ##### Print all icon classes in your stylesheet.
+//
+// ```
+//
+// $print-icon-classes: true;
+//
+// ```
+//
+// Styleguide Utilities.1: Icons.a: Print Icon Classes
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $print-icon-classes:                 false !default;
 
-/// Provides base icon styles normalized across browsers and optimized
-/// for accessibility.
-/// Use this placeholder if you are loading your own font library
-/// and can't use the built-in icons because the content is different.
-/// This should go on your base element. The complimentary placeholder,
-/// `%icon`, needs to go on a `:before` or `:after` underneath.
-/// @group 03-icons
-/// @access public
-/// @since 1.2.0
+// Icon Base placeholder
+//
+// Provides base icon styles normalized across browsers and optimized
+// for accessibility.
+//
+// Use this placeholder if you are loading your own font library
+// and can't use the built-in icons because the content is different.
+//
+// This should go on your base element. The complimentary placeholder,
+// `%icon-content`, needs to go on a `:before` or `:after` underneath.
+//
+// #### Examples
+//
+// ##### Add the icon base to a custom icon you've created.
+//
+// ```
+//
+// .your-custom-icon {
+// 	@extend %icon-base;
+//
+//		&::after {
+// 		@extend %icon-content;
+//		}
+//	}
+// ```
+//
+// Styleguide Utilities.1: Icons.a: Icon Base Placeholder
+//
+// Access: Public
+//
+// Since: 1.2.0
 
 %icon-base {
 	@include icon-base;
 }
 
-/// Provides base icon styles normalized across browsers and optimized
-/// for accessibility.
-/// Use this placeholder on :before or :after if you are loading your own
-/// font library and can't use the built-in icons because the content is different.
-/// You will also need the %icon-base placeholder on your hoverable element if you
-/// need compatibility before IE9.
-/// @group 03-icons
-/// @access public
-/// @since 1.2.0
+// Icon Content Placeholder
+//
+// Provides base icon styles normalized across browsers and optimized
+// for accessibility.
+//
+// Use this placeholder on :before or :after if you are loading your own
+// font library and can't use the built-in icons because the content is different.
+//
+// You will also need the %icon-base placeholder on your hoverable element if you
+// need compatibility before IE9.
+//
+// #### Examples
+//
+// ##### Add the icon base to a custom icon you've created.
+//
+// ```
+//
+// .your-custom-icon {
+// 	@extend %icon-base;
+//
+//		&::after {
+// 		@extend %icon-content;
+//		}
+//	}
+// ```
+//
+// Styleguide Utilities.1: Icons.a: Icon Content Placeholder
+//
+// Access: Public
+//
+// Since: 1.2.0
 
 %icon-content {
 	@include icon-content;
