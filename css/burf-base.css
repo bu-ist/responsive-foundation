@@ -539,7 +539,8 @@ figure {
       max-width: 970px; } }
   @media (min-width: 1200px) {
     .container {
-      max-width: 1170px; } }
+      max-width: 1170px;
+      grid-gap: 60px; } }
 
 .row {
   margin: 0 -15px; }
@@ -1736,13 +1737,9 @@ button,
   :hover[type="reset"],
   :hover[type="submit"], .button:hover, .button-primary:hover,
   .button-selected:hover {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.1)));
-    background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));
-    background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));
-    background-image: -ms-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));
-    background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));
-    background-image: linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#00000000', EndColorStr='#1A000000'); }
+    background: transparent;
+    background: -webkit-linear-gradient(-90deg, transparent, rgba(0, 0, 0, 0.1));
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.1)); }
   button:active,
   :active[type="button"],
   :active[type="reset"],

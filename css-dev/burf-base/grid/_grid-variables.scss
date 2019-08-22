@@ -9,9 +9,18 @@
 // classes, as these are not natively supported.
 // You may, however, write your own custom grid styles
 // to mimic what push and pull used to do.
-// You may also choose to use the css-grid-base mixin to enable CSS
+// You may also choose to use the `css-grid-base` mixin to enable CSS
 // grid in specific places throughout the site, and write your own
 // custom styles.
+//
+// #### Examples
+//
+// ##### Enable CSS Grid as the grid base sitewide.
+//
+// ```
+//
+// $enable-css-grid: true;
+//
 //
 // Styleguide Grid.2: Grid Controls.a: Grid Type
 //

@@ -618,31 +618,56 @@
 
 
 		
-				<div id="kssref-grid-2-grid-controls" class="id-kss-section id-kss-section--depth-2">
+				<div id="kssref-grid-2-grid-controls-a-grid-type" class="id-kss-section id-kss-section--depth-3">
 					<div class="id-kss-style id-kss-component-content">
 						<header class="id-kss-title-block">
-							<h2 class="id-kss-title id-kss-title--level-2 ">
+							<h2 class="id-kss-title id-kss-title--level-3 ">
 		
 								<span class="id-kss-title-section">2: Grid Controls</span>
 		
-								<span class="id-kss-title-name">Grid.2: Grid Controls<a class="id-kss-title__permalink" href="#kssref-grid-2-grid-controls">Link</a></span>
+								<span class="id-kss-title-name">Choose CSS Grid or floats<a class="id-kss-title__permalink" href="#kssref-grid-2-grid-controls-a-grid-type">Link</a></span>
 							</h2>
+								<span class="id-kss-since id-kss-since-4-0-0">
+									Since:
+										<a href="https://github.com/bu-ist/responsive-foundation//releases/tag/4.0.0">4.0.0</a>
+								</span>
 		
 									<span class="id-kss-open-github-issue">
 										<a href="https://github.com/bu-ist/responsive-foundation//issues/new" class="button button-small" title="Opens a new Issue on Github">New Issue</a>
 									</span>
 		
 							<!--<span class="id-kss-title__ref">
-								1.2
+								1.2.1
 								<span class="id-kss-title__permalink-hash">
-										#Grid.2: Grid Controls
+										#Grid.2: Grid Controls.a: Grid Type
 								</span>
 							</span>-->
 						</header>
+							<div class="id-kss-description">
+								<p>Whether or not to enable CSS grid sitewide for your theme.
+		This is not recommended if you need to use push/pull
+		classes, as these are not natively supported.
+		You may, however, write your own custom grid styles
+		to mimic what push and pull used to do.
+		You may also choose to use the <code>css-grid-base</code> mixin to enable CSS
+		grid in specific places throughout the site, and write your own
+		custom styles.</p>
+		<h4>Examples</h4>
+		<h5>Enable CSS Grid as the grid base sitewide.</h5>
+		<pre class="hljs"><code class="language-">
+		$enable-css-grid: true;</code></pre>
+		
+							</div>
 		
 		
 					</div>
 		
+							<span class="id-kss-source id-kss-style">
+								Source: <code>burf-base/grid/_grid-variables.scss, line 5</code>
+									<a href="https://github.com/bu-ist/responsive-foundation/tree/master/css-devburf-base/grid/_grid-variables.scss#L5">
+										View Source
+									</a>
+							</span>
 		
 				</div>
 
