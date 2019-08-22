@@ -2,98 +2,175 @@
 // Variables
 // =================================================================
 
-/// Turns a number of extra classes on or off. This is really only
-/// for the tools partial - you shouldn't use it in a custom theme
-/// unless you're VERY sure you will never need it. Placeholders will
-/// still work when this is set to false. Affects friendly grid classes,
-/// utility classes,
-/// @group grid
-/// @access public
-/// @since 2.1.11
+// BURF Extras
+//
+// Turns a number of extra classes on or off. This is really only
+// for the tools partial - you shouldn't use it in a custom theme
+// unless you're VERY sure you will never need it. Placeholders will
+// still work when this is set to false. Affects friendly grid classes,
+// utility classes, and icon classes.
+//
+// Author: Ashley Kolodziej
+//
+// Styleguide Configuration.1: Optimization.a: BURF Extras
+//
+// Access: Public
+//
+// Since: 3.2.0
 
 $burf-extras:                                       true !default;
 
-/// Whether or not to print media queries in your stylesheet.
-/// If you set this to false, it will print media queries in the
-/// order they are declared so that desktop styles will always
-/// override mobile styles, regardless of screen size.
-/// This is mostly useful for browsers which do not support media queries.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// Enable media queries
+//
+// Choose whether or not to enable media queries in your stylesheet.
+// If you set this to false, it will print media queries in the
+// order they are declared so that desktop styles will always
+// override mobile styles, regardless of screen size.
+// This is mostly useful for browsers which do not support media queries.
+// By default, an older IE stylesheet is generated using this variable.
+//
+// Styleguide Configuration.1: Media Queries.a: Enable media queries
+//
+// Access: Public
+//
+// Since: 0.1.0
 
 $mqs: true !default;
 
-/// The window width at which extra small styles will begin.
-/// By default, this is set to target most large phones.
-/// @group 01-config
-/// @access public
-/// @since 1.2.0
+// Extra small breakpoint
+//
+// The window width at which extra small styles will begin.
+// By default, this is set to target most large phones.
+//
+// Deprecated versions of this variable include `$XS`.
+//
+// Styleguide Configuration.1: Media Queries.b: $xs
+//
+// Access: Public
+//
+// Since: 0.1.0
 
 $xs:                                       500px !default;
 
-/// The window width at which small styles will begin.
-/// By default, this is set to target most small tablets
-/// and iPads in vertical orientation.
-/// @group 01-config
-/// @access public
-/// @since 1.2.0
+// Small breakpoint
+//
+// The window width at which small styles will begin.
+// By default, this is set to target most small tablets
+// and iPads in vertical orientation.
+//
+// Deprecated versions of this variable include `$S`, `$SM`.
+//
+// Styleguide Configuration.1: Media Queries.c: $sm
+//
+// Access: Public
+//
+// Since: 0.1.0
 
 $sm:                                       768px !default;
 
-/// The window width at which medium styles will begin.
-/// By default, this is set to target older desktops
-/// and iPads in horizontal orientation.
-/// @group 01-config
-/// @access public
-/// @since 1.2.0
+// Medium breakpoint
+//
+// The window width at which medium styles will begin.
+// By default, this is set to target older desktops
+// and iPads in horizontal orientation.
+//
+// Deprecated versions of this variable include `$M`. `$MD`.
+//
+// Styleguide Configuration.1: Media Queries.d: $md
+//
+// Access: Public
+//
+// Since: 0.1.0
 
 $md:                                       992px !default;
 
-/// The window width at which large styles will begin.
-/// By default, this is set to target most laptops.
-/// @group 01-config
-/// @access public
-/// @since 1.2.0
+// Large breakpoint
+//
+// The window width at which large styles will begin.
+// By default, this is set to target most laptops.
+//
+// Deprecated versions of this variable include `$L`, `$LG`.
+//
+// Styleguide Configuration.1: Media Queries.e: $lg
+//
+// Access: Public
+//
+// Since: 0.1.0
 
 $lg:                                       1200px !default;
 
-/// The window width at which extra large styles will begin.
-/// By default, this is set to target most modern desktops.
-/// @group 01-config
-/// @access public
-/// @since 1.2.0
+// Extra Large breakpoint
+//
+// The window width at which extra large styles will begin.
+// By default, this is set to target most modern desktops.
+//
+// Styleguide Configuration.1: Media Queries.f: $xl
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $xl:                                       1500px !default;
 
-/// The window width to target for IE8 and below.
-/// Because older versions of IE don't support media queries,
-/// we use this width to target the most likely browser width
-/// an older IE user will be viewing the site in.
-/// @group 01-config
-/// @access public
-/// @since 2.0.0
+// IE8 Target Width
+//
+// The window width to target for IE8 and below.
+// Because older versions of IE don't support media queries,
+// we use this width to target the most likely browser width
+// an older IE user will be viewing the site in.
+//
+// Styleguide Configuration.1: Media Queries.g: IE8 Target Width
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $lte-ie8-target-width:                     $lg !default;
 
-/// The container width for the small (sm) breakpoint.
+
 /// @group 08-layout
 /// @access public
 /// @since 1.2.0
+
+// Small Container Width
+//
+// The container width for the small (sm) breakpoint.
+//
+// Deprecated versions of this variable include `$container_S`, `$container-SM`.
+//
+// Styleguide Configuration.1: Containers.a: Small Container Width
+//
+// Access: Public
+//
+// Since: 0.1.0
 
 $container-sm:                             750px !default;
 
-/// The container width for the medium (md) breakpoint.
-/// @group 08-layout
-/// @access public
-/// @since 1.2.0
+// Medium Container Width
+//
+// The container width for the medium (md) breakpoint.
+//
+// Deprecated versions of this variable include `$container_M`, `$container-MD`.
+//
+// Styleguide Configuration.1: Containers.b: Medium Container Width
+//
+// Access: Public
+//
+// Since: 0.1.0
 
 $container-md:                             970px !default;
 
-/// The container width for the large (lg) breakpoint.
-/// @group 08-layout
-/// @access public
-/// @since 1.2.0
+// Large Container Width
+//
+// The container width for the large (lg) breakpoint.
+//
+// Deprecated versions of this variable include `$container_L`, `$container-LG`.
+//
+// Styleguide Configuration.1: Containers.c: Large Container Width
+//
+// Access: Public
+//
+// Since: 0.1.0
 
 $container-lg:                             1170px !default;
 
@@ -107,87 +184,167 @@ $container-lg:                             1170px !default;
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
 
-/// The lowest priority z-index possible.
-/// Used for content by default.
-/// @group 01-config
-/// @access private
-/// @since 1.0.0
+// Z-Index 1
+//
+// The lowest priority z-index possible.
+// Used for content by default.
+// Based on Medium's z-index scale.
+//
+// Deprecated versions of this variable include `$zIndex-1`.
+//
+// Styleguide Configuration.1: Z-Index.a: $z-index-1
+//
+// Access: Private
+//
+// Since: 1.0.0
 
 $z-index-1:                                 100;
 
-/// A low priority z-index for use in themes.
-/// Can be used for items that should overlap content
-/// but still sit below stated content.
-/// @group 01-config
-/// @access private
-/// @since 1.0.0
+// Z-Index 2
+//
+// A low priority z-index for use in themes.
+// Can be used for items that should overlap content
+// but still sit below stated content.
+// Based on Medium's z-index scale.
+//
+// Deprecated versions of this variable include `$zIndex-2`.
+//
+// Styleguide Configuration.1: Z-Index.a: $z-index-2
+//
+// Access: Private
+//
+// Since: 1.0.0
 
 $z-index-2:                                 200;
 
-/// A low priority z-index for use in themes.
-/// Used for content with multiple states by default.
-/// @group 01-config
-/// @access private
-/// @since 1.0.0
+// Z-Index 3
+//
+// A low priority z-index for use in themes.
+// Used for content with multiple states by default.
+// Based on Medium's z-index scale.
+//
+// Deprecated versions of this variable include `$zIndex-3`.
+//
+// Styleguide Configuration.1: Z-Index.a: $z-index-3
+//
+// Access: Private
+//
+// Since: 1.0.0
 
 $z-index-3:                                 300;
 
-/// A medium priority z-index for use in themes.
-/// Can be used for items that should sit above
-/// stated content but below panel-like content.
-/// @group 01-config
-/// @access private
-/// @since 1.0.0
+// Z-Index 4
+//
+// A medium priority z-index for use in themes.
+// Can be used for items that should sit above
+// stated content but below panel-like content.
+// Based on Medium's z-index scale.
+//
+// Deprecated versions of this variable include `$zIndex-4`.
+//
+// Styleguide Configuration.1: Z-Index.a: $z-index-4
+//
+// Access: Private
+//
+// Since: 1.0.0
 
 $z-index-4:                                 400;
 
-/// A medium priority z-index for use in themes.
-/// Used for panel-like content by default.
-/// @group 01-config
-/// @access private
-/// @since 1.0.0
+// Z-Index 5
+//
+// A medium priority z-index for use in themes.
+// Used for panel-like content by default.
+// Based on Medium's z-index scale.
+//
+// Deprecated versions of this variable include `$zIndex-5`.
+//
+// Styleguide Configuration.1: Z-Index.a: $z-index-5
+//
+// Access: Private
+//
+// Since: 1.0.0
 
 $z-index-5:                                 500;
 
-/// A medium priority z-index for use in themes.
-/// Can be used for items that should sit above
-/// panel-like content but below the primary navigation.
-/// @group 01-config
-/// @access private
-/// @since 1.0.0
+// Z-Index 6
+//
+// A medium priority z-index for use in themes.
+// Can be used for items that should sit above
+// panel-like content but below the primary navigation.
+// Based on Medium's z-index scale.
+//
+// Deprecated versions of this variable include `$zIndex-6`.
+//
+// Styleguide Configuration.1: Z-Index.a: $z-index-6
+//
+// Access: Private
+//
+// Since: 1.0.0
 
 $z-index-6:                                 600;
 
-/// A high priority z-index for use in themes.
-/// Used for the primary navigation by default.
-/// @group 01-config
-/// @access private
-/// @since 1.0.0
+// Z-Index 7
+//
+// A high priority z-index for use in themes.
+// Used for the primary navigation by default.
+// Based on Medium's z-index scale.
+//
+// Deprecated versions of this variable include `$zIndex-7`.
+//
+// Styleguide Configuration.1: Z-Index.a: $z-index-7
+//
+// Access: Private
+//
+// Since: 1.0.0
 
 $z-index-7:                                 700;
 
-/// A high priority z-index for use in themes.
-/// Can be used for items that should sit above
-/// primary navigation but below overlays.
-/// @group 01-config
-/// @access private
-/// @since 1.0.0
+// Z-Index 8
+//
+// A high priority z-index for use in themes.
+// Can be used for items that should sit above
+// primary navigation but below overlays.
+// Based on Medium's z-index scale.
+//
+// Deprecated versions of this variable include `$zIndex-8`.
+//
+// Styleguide Configuration.1: Z-Index.a: $z-index-8
+//
+// Access: Private
+//
+// Since: 1.0.0
 
 $z-index-8:                                 800;
 
-/// The highest priority z-index for use in themes.
-/// Used for overlays and lightboxes by default.
-/// @group 01-config
-/// @access private
-/// @since 1.0.0
+// Z-Index 9
+//
+// The highest priority z-index for use in themes.
+// Used for overlays and lightboxes by default.
+// Based on Medium's z-index scale.
+//
+// Deprecated versions of this variable include `$zIndex-9`.
+//
+// Styleguide Configuration.1: Z-Index.a: $z-index-9
+//
+// Access: Private
+//
+// Since: 1.0.0
 
 $z-index-9:                                 900;
 
-/// A z-index which overrides all other z-indexes.
-/// Strictly for development and debugging.
-/// @group 01-config
-/// @access private
-/// @since 1.0.0
+// Z-Index 10
+//
+// A z-index which overrides all other z-indexes.
+// Strictly for development and debugging.
+// Based on Medium's z-index scale.
+//
+// Deprecated versions of this variable include `$zIndex-10`.
+//
+// Styleguide Configuration.1: Z-Index.a: $z-index-10
+//
+// Access: Private
+//
+// Since: 1.0.0
 
 $z-index-10:                                1000;
 
