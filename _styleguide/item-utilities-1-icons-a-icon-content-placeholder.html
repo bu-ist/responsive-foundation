@@ -155,24 +155,24 @@
 							  		</a>
 							  </li>
 							  
-							  <li class="id-kss-nav-menu-item utilities-1-icons-a-icon-content-placeholder">
+							  <li class="id-kss-nav-menu-item utilities-1-icons-a-icon-content-placeholder-after">
 							  
 							  	<a
 							  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
-							  		href="item-utilities-1-icons-a-icon-content-placeholder.html">
+							  		href="item-utilities-1-icons-a-icon-content-placeholder-after.html">
 							  			<span class="id-kss-nav-name">
-							  				a: Icon content placeholder
+							  				a: Icon content placeholder after
 							  			</span>
 							  		</a>
 							  </li>
 							  
-							  <li class="id-kss-nav-menu-item utilities-1-icons-a-icon-content-placeholder-2">
+							  <li class="id-kss-nav-menu-item utilities-1-icons-a-icon-content-placeholder-before">
 							  
 							  	<a
 							  		class="id-kss-nav-menu-link id-kss-nav-menu-child "
-							  		href="item-utilities-1-icons-a-icon-content-placeholder-2.html">
+							  		href="item-utilities-1-icons-a-icon-content-placeholder-before.html">
 							  			<span class="id-kss-nav-name">
-							  				a: Icon content placeholder 2
+							  				a: Icon content placeholder before
 							  			</span>
 							  		</a>
 							  </li>
@@ -265,11 +265,11 @@
 		
 								<span class="id-kss-title-section">1: Icons</span>
 		
-								<span class="id-kss-title-name">Provides base icon styles normalized across browsers and optimized for accessibility. A helper placeholder for the main icon mixin and icon extends. You probably don&#x27;t actually want to use this unless you&#x27;re working on Responsive. Use the icon mixin instead.<a class="id-kss-title__permalink" href="#kssref-utilities-1-icons-a-icon-content-placeholder">Link</a></span>
+								<span class="id-kss-title-name">Icon Content Placeholder<a class="id-kss-title__permalink" href="#kssref-utilities-1-icons-a-icon-content-placeholder">Link</a></span>
 							</h2>
-								<span class="id-kss-since id-kss-since-2-0-0">
+								<span class="id-kss-since id-kss-since-1-2-0">
 									Since:
-										<a href="https://github.com/bu-ist/responsive-foundation//releases/tag/2.0.0">2.0.0</a>
+										<a href="https://github.com/bu-ist/responsive-foundation//releases/tag/1.2.0">1.2.0</a>
 								</span>
 		
 									<span class="id-kss-open-github-issue">
@@ -277,19 +277,39 @@
 									</span>
 		
 							<!--<span class="id-kss-title__ref">
-								2.2.6
+								2.2.5
 								<span class="id-kss-title__permalink-hash">
-										#Utilities.1: Icons.a: Icon content placeholder
+										#Utilities.1: Icons.a: Icon Content Placeholder
 								</span>
 							</span>-->
 						</header>
+							<div class="id-kss-description">
+								<p>Provides base icon styles normalized across browsers and optimized
+		for accessibility.</p>
+		<p>Use this placeholder on :before or :after if you are loading your own
+		font library and can't use the built-in icons because the content is different.</p>
+		<p>You will also need the %icon-base placeholder on your hoverable element if you
+		need compatibility before IE9.</p>
+		<h4>Examples</h4>
+		<h5>Add the icon base to a custom icon you've created.</h5>
+		<pre class="hljs"><code class="language-">
+		.your-custom-icon {
+			@extend %icon-base;
+		
+			&amp;::after {
+				@extend %icon-content;
+			}
+		}
+		</code></pre>
+		
+							</div>
 		
 		
 					</div>
 		
 							<span class="id-kss-source id-kss-style">
-								Source: <code>burf-base/icons/_mixins.scss, line 100</code>
-									<a href="https://github.com/bu-ist/responsive-foundation/tree/master/css-devburf-base/icons/_mixins.scss#L100">
+								Source: <code>burf-base/icons/_base.scss, line 85</code>
+									<a href="https://github.com/bu-ist/responsive-foundation/tree/master/css-devburf-base/icons/_base.scss#L85">
 										View Source
 									</a>
 							</span>
@@ -329,25 +349,6 @@
 		bodyClass: 'id-kss-guides-mode'
 	});
 	var kssBreakpoints = new KssBreakpoints({
-		bodyClass: 'id-kss-breakpoint-xs'
-	});
-	var kssMarkup = new KssMarkup({
-		bodyClass: 'id-kss-markup-mode',
-		detailsClass: 'id-kss-markup'
-	});
-	var kssSearch = new KssSearch({
-		inputID: 'kss-search-field',
-		searchButtonID: 'kss-search-button',
-    	searchAreaClass: '.id-homepage-nav'
-	});
-
-</script>
-
-
-<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
-</body>
-</html>
-KssBreakpoints({
 		bodyClass: 'id-kss-breakpoint-xs'
 	});
 	var kssMarkup = new KssMarkup({
