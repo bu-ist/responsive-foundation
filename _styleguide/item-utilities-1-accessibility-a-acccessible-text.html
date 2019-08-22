@@ -370,18 +370,19 @@
 
 
 		
-				<div id="kssref-utilities-1-backwards-compatibility-z-equal-heights-items-" class="id-kss-section id-kss-section--depth-3">
+				<div id="kssref-utilities-1-accessibility-a-acccessible-text" class="id-kss-section id-kss-section--depth-3">
 					<div class="id-kss-style id-kss-component-content">
 						<header class="id-kss-title-block">
 							<h2 class="id-kss-title id-kss-title--level-3 ">
 		
-								<span class="id-kss-title-section">1: Backwards Compatibility</span>
+								<span class="id-kss-title-section">1: Accessibility</span>
 		
-								<span class="id-kss-title-name">A backwards-compatible equal heights solution for older browsers. Base styles for children of the equal-height-parent. These styles will make children appear to be equal heights, even if the actual content is different heights. If you need padding on the bottom of the child items, you might have to adjust the margin-bottom to be lower.<a class="id-kss-title__permalink" href="#kssref-utilities-1-backwards-compatibility-z-equal-heights-items-">Link</a></span>
+								<span class="id-kss-title-name">Accessible Text<a class="id-kss-title__permalink" href="#kssref-utilities-1-accessibility-a-acccessible-text">Link</a></span>
 							</h2>
-								<span class="id-kss-since id-kss-since-1-2-0">
+								<span class="id-kss-author id-kss-author-ashley-kolodziej">Ashley Kolodziej</span>
+								<span class="id-kss-since id-kss-since-3-2-0">
 									Since:
-										<a href="https://github.com/bu-ist/responsive-foundation//releases/tag/1.2.0">1.2.0</a>
+										<a href="https://github.com/bu-ist/responsive-foundation//releases/tag/3.2.0">3.2.0</a>
 								</span>
 		
 									<span class="id-kss-open-github-issue">
@@ -389,19 +390,32 @@
 									</span>
 		
 							<!--<span class="id-kss-title__ref">
-								2.2.2
+								2.1.1
 								<span class="id-kss-title__permalink-hash">
-										#Utilities.1: Backwards Compatibility.z: Equal Heights (Items)
+										#Utilities.1: Accessibility.a: Acccessible Text
 								</span>
 							</span>-->
 						</header>
+							<div class="id-kss-description">
+								<p>Returns WCAG-compliant text colors automatically, based on a
+		desired background and foreground color, by lightening or
+		darkening the text color until it meets compliance standards.</p>
+		<p>By default, the compliance method is set to AA, but you can
+		pass an optional compliance method argument to support AAA.</p>
+		<h4>Examples</h4>
+		<h5>Automatically fix a link text color to be AA compliant based on the background color of widgets.</h5>
+		<pre><code>		.widget a {
+				color: accessible-text( $widget-bg, $color-secondary );
+			}</code></pre>
+		
+							</div>
 		
 		
 					</div>
 		
 							<span class="id-kss-source id-kss-style">
-								Source: <code>burf-base/grid/_grid-placeholders.scss, line 124</code>
-									<a href="https://github.com/bu-ist/responsive-foundation/tree/master/css-devburf-base/grid/_grid-placeholders.scss#L124">
+								Source: <code>burf-base/_accessibility.scss, line 97</code>
+									<a href="https://github.com/bu-ist/responsive-foundation/tree/master/css-devburf-base/_accessibility.scss#L97">
 										View Source
 									</a>
 							</span>
