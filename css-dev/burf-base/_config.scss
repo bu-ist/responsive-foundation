@@ -348,119 +348,153 @@ $z-index-9:                                 900;
 
 $z-index-10:                                1000;
 
-/// A base z-index to use for interactive content in the
-/// content area that isn't an overlay. Some examples are
-/// callouts that scale up on hover, or tooltip definitions.
-/// Use this variable for your default state.
-/// Use `+` or `-` with this variable to set z-index relative
-/// to the default state - plus for above, minus for below.
-/// Change this variable to change the stacking order for
-/// all states in the site.
-/// @example
-/// 		Make sure a callout that scales up on hover is always
-/// 		above the other callouts next to it.
-/// 			.callout {
-///				@include scale( 1 );
-///				z-index: $z-index-content;
-///
-///				&:hover {
-///					@include scale( 1.2 );
-///					z-index: $z-index-content + 1;
-///				}
-///			}
-/// @group 08-layout
-/// @access public
-/// @since 2.0.0
+// Z-Index - Content
+//
+// A base z-index to use for interactive content in the
+// content area that isn't an overlay. Some examples are
+// callouts that scale up on hover, or tooltip definitions.
+// Use this variable for your default state.
+//
+// Use `+` or `-` with this variable to set z-index relative
+// to the default state - plus for above, minus for below.
+// Change this variable to change the stacking order for
+// all states in the site.
+//
+// #### Examples
+//
+// ##### Ensure callouts that expand on hover show over others.
+// 			.callout:hover {
+//				transform: scale(1.25);
+//				z-index: $z-index-content;
+//			}
+//
+// Styleguide Configuration.1: Z-Index.a: $z-index-content
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $z-index-content:                          $z-index-1 !default;
 
-/// A base z-index to use for content with multiple states.
-/// A good example of this content might be a form with
-/// multiple states stacked on one another that you animate.
-/// Use this variable for your default state.
-/// Use `+` or `-` with this variable to set z-index relative
-/// to the default state - plus for above, minus for below.
-/// Change this variable to change the stacking order for
-/// all states in the site.
-/// @example
-/// 		Set z-index on a stacked form with states.
-/// 			.form-state-start,
-///			.form-state-active {
-///				z-index: $z-index-states;
-///			}
-///
-///			.form-state-getinfo {
-///				z-index: $z-index-states - 1;
-///			}
-///
-///			.form-state-end {
-///				z-index: $z-index-states - 2;
-///			}
-/// @group 08-layout
-/// @access public
-/// @since 2.0.0
+// Z-Index - States
+//
+// A base z-index to use for content with multiple states.
+// A good example of this content might be a form with
+// multiple states stacked on one another that you animate.
+// Use this variable for your default state.
+//
+// Use `+` or `-` with this variable to set z-index relative
+// to the default state - plus for above, minus for below.
+// Change this variable to change the stacking order for
+// all states in the site.
+//
+// #### Examples
+//
+// ##### Set z-index on a stacked form with states.
+// 			.form-state-start,
+//			.form-state-active {
+//				z-index: $z-index-states;
+//			}
+//
+//			.form-state-getinfo {
+//				z-index: $z-index-states - 1;
+//			}
+//
+//			.form-state-end {
+//				z-index: $z-index-states - 2;
+//			}
+//
+// Styleguide Configuration.1: Z-Index.a: $z-index-states
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $z-index-states:                           $z-index-3 !default;
 
-/// A base z-index to use for panel-like content.
-/// Panel-like content can include panels that open
-/// and close, such as horizontal secondary navigation
-/// menus or filters, which push aside or overlap other content.
-/// Use this variable alone to set a default z-index which
-/// will play nicely with other types of interactive content
-/// on your site. Use `+` or `-` with it to set a z-index relative
-/// to all panels. Change this variable to change the
-/// default z-index for all panel-like content.
-/// @example
-/// 		Ensure two stacked filters on a degree page overlap correctly.
-///			.degree-filter {
-///				z-index: $z-index-panels;
-///			}
-///
-///			.degree-subfilter {
-///				z-index: $z-index-panels - 1;
-///			}
-/// @group 08-layout
-/// @access public
-/// @since 2.0.0
+// Z-Index - Panels
+//
+// A base z-index to use for panel-like content.
+// Panel-like content can include panels that open
+// and close, such as horizontal secondary navigation
+// menus or filters, which push aside or overlap other content.
+//
+// Use this variable alone to set a default z-index which
+// will play nicely with other types of interactive content
+// on your site. Use `+` or `-` with it to set a z-index relative
+// to all panels. Change this variable to change the
+// default z-index for all panel-like content.
+//
+// #### Examples
+//
+// ##### Ensure two stacked filters on a degree page overlap correctly.
+//			.degree-filter {
+//				z-index: $z-index-panels;
+//			}
+//
+//			.degree-subfilter {
+//				z-index: $z-index-panels - 1;
+//			}
+//
+// Styleguide Configuration.1: Z-Index.a: $z-index-panels
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $z-index-panels:                           $z-index-5 !default;
 
-/// A base z-index to use for the primary navigation.
-/// By default, this sets a z-index which will put dropdown
-/// menus above content, but below overlays.
-/// Use this variable alone to set a default z-index which
-/// will play nicely with other types of interactive content
-/// on your site. Use `+` or `-` with it to set a z-index relative
-/// to the primary navigation. Change this variable to change the
-/// stacking order of the primary navigation.
-/// @group 08-layout
-/// @access public
-/// @since 2.0.0
+// Z-Index - Primary Navigation
+//
+// A base z-index to use for the primary navigation.
+// By default, this sets a z-index which will put dropdown
+// menus above content, but below overlays.
+//
+// Use this variable alone to set a default z-index which
+// will play nicely with other types of interactive content
+// on your site. Use `+` or `-` with it to set a z-index relative
+// to the primary navigation. Change this variable to change the
+// stacking order of the primary navigation.
+//
+// Styleguide Configuration.1: Z-Index.a: $z-index-primarynav
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $z-index-primarynav:                       $z-index-7 !default;
 
-/// A base z-index to use for overlays and lightboxes.
-/// This z-index will always be on top unless you are using `$z-index-dev`.
-/// Use this variable alone to set a default z-index which
-/// will play nicely with other types of interactive content
-/// on your site. Use `+` or `-` with it to set a z-index relative
-/// to the default overlay. Change this variable to change the
-/// stacking order of all overlays. (You may want to do this if you
-/// have a fixed sticky navigation so that the sticky navigation isn't
-/// always on top, even with lightboxes.)
-/// @group 08-layout
-/// @access public
-/// @since 2.0.0
+// Z-Index - Overlays
+//
+// A base z-index to use for overlays and lightboxes.
+// This z-index will always be on top unless you are using `$z-index-dev`.
+// Use this variable alone to set a default z-index which
+// will play nicely with other types of interactive content
+// on your site. Use `+` or `-` with it to set a z-index relative
+// to the default overlay. Change this variable to change the
+// stacking order of all overlays. (You may want to do this if you
+// have a fixed sticky navigation so that the sticky navigation isn't
+// always on top, even with lightboxes.)
+//
+// Styleguide Configuration.1: Z-Index.a: $z-index-overlays
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $z-index-overlays:                         $z-index-9 !default;
 
-/// A z-index that will override all other z-indexes for development
-/// and debugging purposes only. Avoid where possible and do not commit
-/// to production code.
-/// @group 08-layout
-/// @access public
-/// @since 2.0.0
+// Z-Index - Development / Debugging
+//
+// A z-index that will override all other z-indexes for development
+// and debugging purposes only. Avoid where possible and do not commit
+// to production code.
+//
+// Styleguide Configuration.1: Z-Index.a: $z-index-dev
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $z-index-dev:                              $z-index-10 !default;
 
@@ -474,75 +508,91 @@ $z-index-dev:                              $z-index-10 !default;
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
 
-/// The base margin to use sitewide.
-/// All margins are based on this number. Larger margins
-/// will be a multiple of this, smaller margins will be a
-/// fraction of this, except in cases of UI or typography
-/// where margin should be related to font size.
-/// @group 01-config
-/// @access public
-/// @since 2.0.0
+// Margin
+//
+// The base margin to use sitewide.
+// All margins are based on this number. Larger margins
+// will be a multiple of this, smaller margins will be a
+// fraction of this, except in cases of UI or typography
+// where margin should be related to font size.
+//
+// Styleguide Configuration.1: Spacing.a: $margin
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $margin:                                    30px !default;
 
-/// The base margin to use for content sitewide.
-/// This affects floated content in the WordPress editor,
-/// and would be good for any sort of floated content you
-/// may add in a custom theme, like a floated callout.
-/// @group 01-config
-/// @access public
-/// @since 2.0.0
+// Margin - Small
+//
+// The base margin to use for content sitewide.
+// This affects floated content in the WordPress editor,
+// and would be good for any sort of floated content you
+// may add in a custom theme, like a floated callout.
+//
+// Styleguide Configuration.1: Spacing.a: $margin-small
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $margin-small:                              $margin / 2 !default;
 
-/// The base margin to use for large spacing sitewide.
-/// This affects elements like the banner, section tags,
-/// and any other larger elements.
-/// @group 01-config
-/// @access public
-/// @since 2.0.0
+// Margin - Large
+//
+// The base margin to use for large spacing sitewide.
+// This affects elements like the banner, section tags,
+// and any other larger elements.
+//
+// Styleguide Configuration.1: Spacing.a: $margin-large
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $margin-large:                              $margin * 2 !default;
 
-/// The base padding to use sitewide.
-/// All padding is based on this number. Larger padding
-/// will be a multiple of this, smaller padding will be a
-/// fraction of this.
-/// @group 01-config
-/// @access public
-/// @since 2.0.0
+// Padding
+//
+// The base padding to use sitewide.
+// All padding is based on this number. Larger padding
+// will be a multiple of this, smaller padding will be a
+// fraction of this.
+//
+// Styleguide Configuration.1: Spacing.a: $padding
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $padding:                                   30px !default;
 
-/// A padding variable for situations where you need a
-/// smaller amount of padding.
-/// @group 01-config
-/// @access public
-/// @since 2.0.0
+// Padding - Small
+//
+// A padding variable for situations where you need a
+// smaller amount of padding.
+//
+// Styleguide Configuration.1: Spacing.a: $padding-small
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $padding-small:                              $padding / 2 !default;
 
-/// A padding variable for situations where you need a
-/// larger amount of padding.
-/// @group 01-config
-/// @access public
-/// @since 2.0.0
+// Padding - Large
+//
+// A padding variable for situations where you need a
+// larger amount of padding.
+//
+// Styleguide Configuration.1: Spacing.a: $padding-large
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $padding-large:                              $padding * 2 !default;
-
-/// The base padding to use for content sitewide.
-/// @group config
-/// @access public
-/// @since 2.0.0
-
-$padding-small:                              $padding / 2;
-
-/// The base padding to use for large spacing sitewide.
-/// @group config
-/// @access public
-/// @since 2.0.0
-
-$padding-large:                              $padding * 2;
 
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
@@ -554,34 +604,49 @@ $padding-large:                              $padding * 2;
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
 
-/// A color to tint your grays with.
-/// Affects grayscale variables. Try cool colors, like blues.
-/// Accepts any valid color.
-/// @group 01-config
-/// @type color
-/// @access public
-/// @since 2.0.0
+// Tint Hue
+//
+// A color to tint your grays with.
+// Affects grayscale variables. Try cool colors, like blues.
+// Accepts any valid color.
+//
+// Styleguide Configuration.1: Styling.a: Grayscale Tint Hue
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $tint-hue: none !default;
 
-/// The amount to tint your grays, from 0-100%.
-/// This will affect the maximum saturation of your tint.
-/// @group 01-config
-/// @access public
-/// @since 2.0.0
+// Tint Saturation
+//
+// The amount to tint your grays, from 0-100%.
+// This will affect the maximum saturation of your tint.
+//
+// Styleguide Configuration.1: Styling.a: Grayscale Tint Saturation
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $tint-saturation: 15% !default;
 
-/// A tinting helper function for grayscale variables.
-/// If you're adding your own grays and want to take advantage
-/// of tinting, you can use this function to tint your grays.
-/// The actual tint is dependent on two variables: `$tint-hue`,
-/// which is the color to use as a tint, and `$tint-saturation`,
-/// which is the maximum saturation of that tint. More saturation
-/// happens with dark colors, less or none with very light colors.
-/// @group 01-config
-/// @access public
-/// @since 2.0.0
+// Tint Color Function
+//
+// A tinting helper function for grayscale variables.
+// If you're adding your own grays and want to take advantage
+// of tinting, you can use this function to tint your grays.
+//
+// The actual tint is dependent on two variables: `$tint-hue`,
+// which is the color to use as a tint, and `$tint-saturation`,
+// which is the maximum saturation of that tint. More saturation
+// happens with dark colors, less or none with very light colors.
+//
+// Styleguide Configuration.1: Styling.a: Tint Color Function
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 @function tint-gray( $color ) {
 	@if ( $tint-hue == "none" ) {
@@ -599,173 +664,319 @@ $tint-saturation: 15% !default;
 	}
 }
 
-/// A grayscale variable that takes advantage of the tint system.
-/// Produces a plain black.
-/// Overriding this variable is not supported.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// Grayscale Variables
+//
+// Grayscale variables that takes advantage of the tint system.
+// Overriding these variables is not supported.
+//
+// Colors:
+// $color-grayscale-0: #000
+// $color-grayscale-1: #111
+// $color-grayscale-2: #222
+// $color-grayscale-3: #333
+// $color-grayscale-4: #444
+// $color-grayscale-5: #555
+// $color-grayscale-6: #666
+// $color-grayscale-7: #777
+// $color-grayscale-8: #888
+// $color-grayscale-9: #999
+// $color-grayscale-a: #aaa
+// $color-grayscale-b: #bbb
+// $color-grayscale-c: #ccc
+// $color-grayscale-d: #ddd
+// $color-grayscale-e: #eee
+// $color-grayscale-f0: #f0f0f0
+// $color-grayscale-f5: #f5f5f5
+// $color-grayscale-f: #fff
+//
+// Styleguide Configuration.1: Styling.a: Grayscale Variables
+//
+// Access: Public
+//
+// Since: 1.0.0
+
+// A grayscale variable that takes advantage of the tint system.
+// Produces a very dark gray suitable for text.
+// Overriding this variable is not supported.
+//
+// Colors:
+// $color-grayscale-0: #000
+//
+// Styleguide Utilities.1: Colors.a: $color-grayscale-0
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-grayscale-0:                        tint-gray( #000 );
 
-/// A grayscale variable that takes advantage of the tint system.
-/// Produces a very dark gray suitable for text.
-/// Overriding this variable is not supported.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// A grayscale variable that takes advantage of the tint system.
+// Produces a very dark gray suitable for text.
+// Overriding this variable is not supported.
+//
+// Colors:
+// $color-grayscale-1: #111
+//
+// Styleguide Utilities.1: Colors.a: $color-grayscale-1
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-grayscale-1:                        tint-gray( #111 );
 
-/// A grayscale variable that takes advantage of the tint system.
-/// Produces a very dark gray suitable for text.
-/// Overriding this variable is not supported.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// A grayscale variable that takes advantage of the tint system.
+// Produces a dark gray suitable for text or backgrounds.
+// Overriding this variable is not supported.
+//
+// Colors:
+// $color-grayscale-2: #222
+//
+// Styleguide Utilities.1: Colors.a: $color-grayscale-2
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-grayscale-2:                        tint-gray( #222 );
 
-/// A grayscale variable that takes advantage of the tint system.
-/// Produces a dark gray suitable for text or backgrounds.
-/// Overriding this variable is not supported.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// A grayscale variable that takes advantage of the tint system.
+// Produces a dark gray suitable for text or backgrounds.
+// Overriding this variable is not supported.
+//
+// Colors:
+// $color-grayscale-3: #333
+//
+// Styleguide Utilities.1: Colors.a: $color-grayscale-3
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-grayscale-3:                        tint-gray( #333 );
 
-/// A grayscale variable that takes advantage of the tint system.
-/// Produces a dark gray suitable for backgrounds or metadata.
-/// Overriding this variable is not supported.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// A grayscale variable that takes advantage of the tint system.
+// Produces a dark gray suitable for backgrounds or metadata.
+// Overriding this variable is not supported.
+//
+// Colors:
+// $color-grayscale-4: #444
+//
+// Styleguide Utilities.1: Colors.a: $color-grayscale-4
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-grayscale-4:                        tint-gray( #444 );
 
-/// A grayscale variable that takes advantage of the tint system.
-/// Produces a dark gray suitable for backgrounds.
-/// Overriding this variable is not supported.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// A grayscale variable that takes advantage of the tint system.
+// Produces a dark gray suitable for backgrounds.
+// Overriding this variable is not supported.
+//
+// Colors:
+// $color-grayscale-5: #555
+//
+// Styleguide Utilities.1: Colors.a: $color-grayscale-5
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-grayscale-5:                        tint-gray( #555 );
 
-/// A grayscale variable that takes advantage of the tint system.
-/// Produces a middle gray suitable for backgrounds or large typography.
-/// Overriding this variable is not supported.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// A grayscale variable that takes advantage of the tint system.
+// Produces a middle gray suitable for backgrounds or large typography.
+// Overriding this variable is not supported.
+//
+// Colors:
+// $color-grayscale-6: #666
+//
+// Styleguide Utilities.1: Colors.a: $color-grayscale-6
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-grayscale-6:                        tint-gray( #666 );
 
-/// A grayscale variable that takes advantage of the tint system.
-/// Produces a middle gray suitable for backgrounds or large typography.
-/// Overriding this variable is not supported.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// A grayscale variable that takes advantage of the tint system.
+// Produces a middle gray suitable for backgrounds or large typography.
+// Overriding this variable is not supported.
+//
+// Colors:
+// $color-grayscale-7: #777
+//
+// Styleguide Utilities.1: Colors.a: $color-grayscale-7
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-grayscale-7:                        tint-gray( #777 );
 
-/// A grayscale variable that takes advantage of the tint system.
-/// Produces a middle gray suitable for backgrounds or large typography.
-/// Overriding this variable is not supported.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// A grayscale variable that takes advantage of the tint system.
+// Produces a middle gray suitable for backgrounds or large typography.
+// Overriding this variable is not supported.
+//
+// Colors:
+// $color-grayscale-8: #888
+//
+// Styleguide Utilities.1: Colors.a: $color-grayscale-8
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-grayscale-8:                        tint-gray( #888 );
 
-/// A grayscale variable that takes advantage of the tint system.
-/// Produces a middle gray suitable for backgrounds or large typography.
-/// Overriding this variable is not supported.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// A grayscale variable that takes advantage of the tint system.
+// Produces a middle gray suitable for backgrounds or large typography.
+// Overriding this variable is not supported.
+//
+// Colors:
+// $color-grayscale-9: #999
+//
+// Styleguide Utilities.1: Colors.a: $color-grayscale-9
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-grayscale-9:                        tint-gray( #999 );
 
-/// A grayscale variable that takes advantage of the tint system.
-/// Produces a middle gray suitable for backgrounds.
-/// Overriding this variable is not supported.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// A grayscale variable that takes advantage of the tint system.
+// Produces a middle gray suitable for backgrounds.
+// Overriding this variable is not supported.
+//
+// Colors:
+// $color-grayscale-a: #a
+//
+// Styleguide Utilities.1: Colors.a: $color-grayscale-a
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-grayscale-a:                        tint-gray( #aaa );
 
-/// A grayscale variable that takes advantage of the tint system.
-/// Produces a light gray suitable for backgrounds.
-/// Overriding this variable is not supported.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// A grayscale variable that takes advantage of the tint system.
+// Produces a light gray suitable for backgrounds.
+// Overriding this variable is not supported.
+//
+// Colors:
+// $color-grayscale-b: #bbb
+//
+// Styleguide Utilities.1: Colors.a: $color-grayscale-b
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-grayscale-b:                        tint-gray( #bbb );
 
-/// A grayscale variable that takes advantage of the tint system.
-/// Produces a light gray suitable for backgrounds, borders, and metadata.
-/// Overriding this variable is not supported.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// A grayscale variable that takes advantage of the tint system.
+// Produces a light gray suitable for backgrounds, borders, and metadata.
+// Overriding this variable is not supported.
+//
+// Colors:
+// $color-grayscale-c: #ccc
+//
+// Styleguide Utilities.1: Colors.a: $color-grayscale-c
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-grayscale-c:                        tint-gray( #ccc );
 
-/// A grayscale variable that takes advantage of the tint system.
-/// Produces a light gray suitable for backgrounds.
-/// Overriding this variable is not supported.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// A grayscale variable that takes advantage of the tint system.
+// Produces a light gray suitable for backgrounds.
+// Overriding this variable is not supported.
+//
+// Colors:
+// $color-grayscale-d: #ddd
+//
+// Styleguide Utilities.1: Colors.a: $color-grayscale-d
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-grayscale-d:                        tint-gray( #ddd );
 
-/// A grayscale variable that takes advantage of the tint system.
-/// Produces a light gray suitable for backgrounds.
-/// Overriding this variable is not supported.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// A grayscale variable that takes advantage of the tint system.
+// Produces a light gray suitable for backgrounds.
+// Overriding this variable is not supported.
+//
+// Colors:
+// $color-grayscale-e: #eee
+//
+// Styleguide Utilities.1: Colors.a: $color-grayscale-e
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-grayscale-e:                        tint-gray( #eee );
 
-/// A grayscale variable that takes advantage of the tint system.
-/// Produces a near-white gray suitable for backgrounds.
-/// Overriding this variable is not supported.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// A grayscale variable that takes advantage of the tint system.
+// Produces a near-white gray suitable for backgrounds.
+// Overriding this variable is not supported.
+//
+// Colors:
+// $color-grayscale-f0: #f0f0f0
+//
+// Styleguide Utilities.1: Colors.a: $color-grayscale-f0
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-grayscale-f0:                       tint-gray( #f0f0f0 );
 
-/// A grayscale variable that takes advantage of the tint system.
-/// Produces a near-white gray suitable for backgrounds.
-/// Overriding this variable is not supported.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// A grayscale variable that takes advantage of the tint system.
+// Produces a near-white gray suitable for backgrounds.
+// Overriding this variable is not supported.
+//
+// Colors:
+// $color-grayscale-f5: #f5f5f5
+//
+// Styleguide Utilities.1: Colors.a: $color-grayscale-f5
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-grayscale-f5:                       tint-gray( #f5f5f5 );
 
-/// A grayscale variable that takes advantage of the tint system.
-/// Produces a plain white.
-/// Overriding this variable is not supported.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// A grayscale variable that takes advantage of the tint system.
+// Produces a plain white.
+// Overriding this variable is not supported.
+//
+// Colors:
+// $color-grayscale-f: #fff
+//
+// Styleguide Utilities.1: Colors.a: $color-grayscale-f
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-grayscale-f:                        tint-gray( #fff );
 
-/// A grayscale variable for hover state of the BU Hub webfont. Not intended for editing.
-/// @group 01-config
-/// @type color
-/// @access public
-/// @since 2.0.0
+// Color Hub
+//
+// A grayscale variable for hover state of the BU Hub webfont. Not intended for editing.
+//
+// Colors:
+// $color-hub: #767676
+//
+// Styleguide Utilities.1: Colors.a: $color-hub
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-hub:                        			 #767676;
 
@@ -782,9 +993,24 @@ $color-hub:                        			 #767676;
 // Borders
 // -----------------------------------------------------------------
 
-/// The default border style.
-/// @group 01-config
-/// @access public
-/// @since 1.2.0
+// Change the Default Border
+//
+// The default border style.
+//
+// Styleguide Configuration.1: Styling.a: Change the Default Border
+//
+// Access: Public
+//
+// Since: 1.0.0
+
+// $border
+//
+// A variable that applies the default border style.
+//
+// Styleguide Utilities.1: Styling.a: $border
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $border:												1px solid $color-grayscale-d !default;
