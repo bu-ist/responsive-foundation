@@ -1125,18 +1125,18 @@
 
 
 		
-				<div id="kssref-configuration-1-print-a-print-font-size-5" class="id-kss-section id-kss-section--depth-3">
+				<div id="kssref-configuration-1-headings-a-minimum-heading-size" class="id-kss-section id-kss-section--depth-3">
 					<div class="id-kss-style id-kss-component-content">
 						<header class="id-kss-title-block">
 							<h2 class="id-kss-title id-kss-title--level-3 ">
 		
-								<span class="id-kss-title-section">1: Print</span>
+								<span class="id-kss-title-section">1: Headings</span>
 		
-								<span class="id-kss-title-name">Print Heading 5<a class="id-kss-title__permalink" href="#kssref-configuration-1-print-a-print-font-size-5">Link</a></span>
+								<span class="id-kss-title-name">Minimum Heading Size<a class="id-kss-title__permalink" href="#kssref-configuration-1-headings-a-minimum-heading-size">Link</a></span>
 							</h2>
-								<span class="id-kss-since id-kss-since-4-0-0">
+								<span class="id-kss-since id-kss-since-2-0-0">
 									Since:
-										<a href="https://github.com/bu-ist/responsive-foundation//releases/tag/4.0.0">4.0.0</a>
+										<a href="https://github.com/bu-ist/responsive-foundation//releases/tag/2.0.0">2.0.0</a>
 								</span>
 		
 									<span class="id-kss-open-github-issue">
@@ -1144,14 +1144,19 @@
 									</span>
 		
 							<!--<span class="id-kss-title__ref">
-								1.7.7
+								1.4.5
 								<span class="id-kss-title__permalink-hash">
-										#Configuration.1: Print.a: $print-font-size-5
+										#Configuration.1: Headings.a: Minimum Heading Size
 								</span>
 							</span>-->
 						</header>
 							<div class="id-kss-description">
-								<p>Controls the size of <code>h5</code> on the print stylesheet.</p>
+								<p>The minimum font size in pixels for headings to use. Unless you're a designer
+		and you know what you're doing, leave this at <code>$font-size-base</code>.
+		Anything lower means you'll need to compensate with other design elements
+		to preserve the visual hierarchy - think uppercasing, color, stuff like that.
+		This directly affects the <code>&lt;h6&gt;</code> tag. It indirectly affects all other heading
+		font sizes as well by serving as the lower limit to our scale.</p>
 		
 							</div>
 		
@@ -1159,8 +1164,8 @@
 					</div>
 		
 							<span class="id-kss-source id-kss-style">
-								Source: <code>burf-base/_print.scss, line 120</code>
-									<a href="https://github.com/bu-ist/responsive-foundation/tree/master/css-devburf-base/_print.scss#L120">
+								Source: <code>burf-base/_typography-tools.scss, line 24</code>
+									<a href="https://github.com/bu-ist/responsive-foundation/tree/master/css-devburf-base/_typography-tools.scss#L24">
 										View Source
 									</a>
 							</span>

@@ -30,7 +30,7 @@ $_depth-headings: 6;
 // This directly affects the `<h6>` tag. It indirectly affects all other heading
 // font sizes as well by serving as the lower limit to our scale.
 //
-// Styleguide Configuration.1: Typography.a: Minimum Heading Size
+// Styleguide Configuration.1: Headings.a: Minimum Heading Size
 //
 // Access: Public
 //
@@ -62,7 +62,7 @@ $min-size-headings: $font-size-base !default;
 // This directly affects the `<h6>` tag. It indirectly affects all other heading
 // font sizes as well by serving as the lower limit to our scale.
 //
-// Styleguide Configuration.1: Typography.a: Minimum Heading Size (Mobile)
+// Styleguide Configuration.1: Headings.a: Minimum Heading Size (Mobile)
 //
 // Access: Public
 //
@@ -94,7 +94,7 @@ $min-size-headings-mobile: $min-size-headings !default;
 // It indirectly affects all other heading  font sizes as well by serving as the
 // upper limit to our scale.
 //
-// Styleguide Configuration.1: Typography.a: Maximum Heading Size
+// Styleguide Configuration.1: Headings.a: Maximum Heading Size
 //
 // Access: Public
 //
@@ -126,7 +126,7 @@ $max-size-headings: 55px !default;
 // It indirectly affects all other heading  font sizes as well by serving as the
 // upper limit to our scale.
 //
-// Styleguide Configuration.1: Typography.a: Maximum Heading Size (Mobile)
+// Styleguide Configuration.1: Headings.a: Maximum Heading Size (Mobile)
 //
 // Access: Public
 //
@@ -157,7 +157,7 @@ $max-size-headings-mobile: 36px !default;
 // In typography, the relationship between font-size and line-height is that larger
 // font-sizes demand lower line-height values to preserve vertical rhythm.
 //
-// Styleguide Configuration.1: Typography.a: Minimum Line Height
+// Styleguide Configuration.1: Headings.a: Minimum Line Height
 //
 // Access: Public
 //
@@ -187,7 +187,7 @@ $min-line-height: 1.15 !default;
 // Because we set the `<h6>` tag to be the same size as our body copy by default,
 // it also gets the same line-height ratio by default.
 //
-// Styleguide Configuration.1: Typography.a: Maximum Line Height
+// Styleguide Configuration.1: Headings.a: Maximum Line Height
 //
 // Access: Public
 //
@@ -219,7 +219,7 @@ $max-line-height: $line-height-base !default;
 // A higher number will adjust the font size more dramatically at larger sizes.
 // By default, this is optimized for heavy use of h1-h4, and minimal use of h5 and h6.
 //
-// Styleguide Configuration.1: Typography.a: Heading Growth Rate (Size)
+// Styleguide Configuration.1: Headings.a: Heading Growth Rate (Size)
 //
 // Access: Public
 //
