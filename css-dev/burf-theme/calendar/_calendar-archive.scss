@@ -2,35 +2,58 @@
 // Calendar List Settings
 // =================================================================
 
-/// Controls the color of the date range on the calendar listing template.
-/// By default, this is right after the topic.
-/// @group 13-calendar
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Date Range Color
+//
+// Controls the color of the date range on the calendar listing template.
+// By default, this is right after the topic.
+//
+// Styleguide WordPress.1: Calendar Listing.a: Date Range Color
+//
+// Access: Public
+//
+// @since 1.0.0
+//
+// Accessibility: AA
 
 $color-calendar-heading-date-range:          $color-grayscale-6 !default;
 
-/// Controls the color of links on the calendar listing template.
-/// @group 13-calendar
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Event Link Color
+//
+// Controls the color of links on the calendar listing template.
+//
+// Styleguide WordPress.1: Calendar Listing.a: Event Link Color
+//
+// Access: Public
+//
+// @since 1.0.0
+//
+// Accessibility: AA
 
 $color-calendar-event-link:                 $color-link !default;
 
-/// Controls the color of links on the calendar listing template when you hover.
-/// @group 13-calendar
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Event Link Hover Color
+//
+// Controls the color of links on the calendar listing template when you hover.
+//
+// Styleguide WordPress.1: Calendar Listing.a: Event Link Hover Color
+//
+// Access: Public
+//
+// @since 1.0.0
+//
+// Accessibility: AA
 
 $color-calendar-event-link-hover:           $color-link !default;
 
-/// Controls the border between events on the calendar listing template.
-/// @group 13-calendar
-/// @access public
-/// @since 2.0.0
+// List Border
+//
+// Controls the border between events on the calendar listing template.
+//
+// Styleguide WordPress.1: Calendar Listing.a: List Border
+//
+// Access: Public
+//
+// @since 2.0.0
 
 $border-calendar-list:                      $border !default;
 
@@ -38,40 +61,44 @@ $border-calendar-list:                      $border !default;
 // Calendar List Styles
 // =================================================================
 
-/// Handles styling for the calendar topic on the calendar listing page.
-/// @group 13-calendar
-/// @access public
-/// @since 2.0.0
+// Handles styling for the calendar topic on the calendar listing page.
+//
+// Access: Public
+//
+// @since 2.0.0
 
 .calendar-list-topic {
 	@extend %font-size-6;
 }
 
-/// Handles styling for the selected date range in the calendar listing page.
-/// @group 13-calendar
-/// @access public
-/// @since 2.0.0
+// Handles styling for the selected date range in the calendar listing page.
+//
+// Access: Public
+//
+// @since 2.0.0
 
 .calendar-list-range {
 	color: $color-calendar-heading-date-range;
 }
 
-/// Handles styling for groups of events on a given day
-/// in the calendar listing page.
-/// @group 13-calendar
-/// @access public
-/// @since 2.0.0
+// Handles styling for groups of events on a given day
+// in the calendar listing page.
+//
+// Access: Public
+//
+// @since 2.0.0
 
 .calendar-list-events {
 	margin-bottom: $margin-large;
 	padding: 0;
 }
 
-/// Handles styling for an individual event on a given day
-/// in the calendar listing page.
-/// @group 13-calendar
-/// @access public
-/// @since 2.0.0
+// Handles styling for an individual event on a given day
+// in the calendar listing page.
+//
+// Access: Public
+//
+// @since 2.0.0
 
 .calendar-list-event {
 	font-size: 0.9em;
@@ -80,11 +107,12 @@ $border-calendar-list:                      $border !default;
 	margin-bottom: 0.5em;
 }
 
-/// Handles styling for the first event in a group of events at
-/// the same time in the calendar listing page.
-/// @group 13-calendar
-/// @access public
-/// @since 2.0.0
+// Handles styling for the first event in a group of events at
+// the same time in the calendar listing page.
+//
+// Access: Public
+//
+// @since 2.0.0
 
 .calendar-list-event-first-at-time {
 	border-top: $border-calendar-list;
@@ -92,11 +120,12 @@ $border-calendar-list:                      $border !default;
 	padding-top: 0.75em;
 }
 
-/// Handles styling for an individual event on a given day
-/// in the calendar listing page.
-/// @group 13-calendar
-/// @access public
-/// @since 2.0.0
+// Handles styling for an individual event on a given day
+// in the calendar listing page.
+//
+// Access: Public
+//
+// @since 2.0.0
 
 .calendar-list-event-time {
 	color: $color-grayscale-6;
@@ -104,11 +133,12 @@ $border-calendar-list:                      $border !default;
 	position: absolute;
 }
 
-/// Handles styling for the link to an individual event
-/// in the calendar listing page.
-/// @group 13-calendar
-/// @access public
-/// @since 2.0.0
+// Handles styling for the link to an individual event
+// in the calendar listing page.
+//
+// Access: Public
+//
+// @since 2.0.0
 
 .calendar-list-event-link {
 	color: $color-calendar-event-link;
