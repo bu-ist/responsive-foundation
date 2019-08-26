@@ -2,62 +2,104 @@
 // Tables Settings
 // =================================================================
 
-/// Base margin for the table tag.
-/// @group 09-content
-/// @access public
-/// @since 1.0.0
+// Table Margin
+//
+// Base margin for the table tag.
+//
+// Styleguide Content.1: Tables.a: Margin
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $table-margin:                             $margin 0 !default;
 
-/// Base padding for the table.
-/// @group 09-content
-/// @access public
-/// @since 1.0.0
+// Table Padding
+//
+// Base padding for the table.
+//
+// Styleguide Content.1: Tables.a: Padding
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $table-padding:                            0.5em 1em !default;
 
-/// Default border for tables.
-/// @group 09-content
-/// @access public
-/// @since 1.0.0
+// Border
+//
+// Default border for tables.
+//
+// Styleguide Content.1: Tables.a: Border
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $table-border:                             $border !default;
 
-/// Default color for table headings.
-/// @group 09-content
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Table Heading Color
+//
+// Default color for table headings.
+//
+// Styleguide Content.1: Tables.a: Table Heading Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-table-head:                         $color-heading !default;
 
-/// Default background for table headings.
-/// @group 09-content
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Table Heading Background Color
+//
+// Default background for table headings.
+//
+// Styleguide Content.1: Tables.a: Table Heading Background Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $table-head-bg:                            $color-grayscale-e !default;
 
-/// Default padding for table captions.
-/// @group 09-content
-/// @access public
-/// @since 1.0.0
+// Table Caption Padding
+//
+// Default padding for table captions.
+//
+// Styleguide Content.1: Tables.a: Caption Padding
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $table-caption-padding:                    0 0 10px !default;
 
-/// Default color for table captions.
-/// @group 09-content
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Table Caption Color
+//
+// Default color for table captions.
+//
+// Styleguide Content.1: Tables.a: Caption Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-table-caption:                      $color-grayscale-6 !default;
 
-/// Default background for striped table backgrounds.
-/// @group 09-content
-/// @access public
-/// @since 1.0.0
+// Table Striped Background Color
+// Default background for striped table backgrounds.
+//
+// Styleguide Content.1: Tables.a: Striped Background Color
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $table-stripes:                            $color-grayscale-f5 !default;
 
@@ -65,10 +107,11 @@ $table-stripes:                            $color-grayscale-f5 !default;
 // Tables Styles
 // =================================================================
 
-/// Controls base styling for tables.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// Controls base styling for tables.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 table {
 	@extend %font-size-secondary;
@@ -125,10 +168,15 @@ table {
 	}
 }
 
-/// Adds stripes to tables.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// Striped Table Class
+//
+// Adds stripes to tables using the `table-striped` class.
+//
+// Styleguide Content.1: Tables.a: Striped Table Class
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .table-striped tr:nth-child(2n-1),
 .u-odd {
@@ -140,10 +188,16 @@ table {
 // Bordered tables
 // -----------------------------------------------------------------
 
-/// Adds both horizontal and vertical borders.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// Bordered Table Class
+//
+// Adds both horizontal and vertical borders
+// using the `table-bordered` class.
+//
+// Styleguide Content.1: Tables.a: Bordered Table Class
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .table-bordered {
 	td {
@@ -154,10 +208,16 @@ table {
 // Horizontal tables
 // -----------------------------------------------------------------
 
-/// Switches the border on tables from vertical to horizontal.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// Horizontal Tables
+//
+// Switches the border on tables from vertical to horizontal
+// using the `table-horizontal` class.
+//
+// Styleguide Content.1: Tables.a: Horizontal Table Class
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .table-horizontal {
 	td,
