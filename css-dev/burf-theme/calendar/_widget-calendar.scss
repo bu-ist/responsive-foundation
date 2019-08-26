@@ -2,52 +2,85 @@
 // Calendar Widget Settings
 // =================================================================
 
-/// Controls the font family used on dates in the calendar widget.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
+// Calendar Widget Font Family
+//
+// Controls the font family used on dates in the calendar widget.
+//
+// Styleguide WordPress.1: Calendar Widget.a: Font Family
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-family-widget-calendar-date:          $font-family-sans-serif !default;
 
-/// Controls the color of dates in the calendar widget.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Calendar Widget Date Color
+//
+// Controls the color of dates in the calendar widget.
+//
+// Styleguide WordPress.1: Calendar Widget.a: Date Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-widget-calendar-date:                $color-grayscale-0 !default;
 
-/// Controls the size of the day when using the graphic style in the
-/// calendar widget.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
+// Calendar Widget Graphic Format Day Size
+//
+// Controls the size of the day when using the graphic style in the
+// calendar widget.
+//
+// Styleguide WordPress.1: Calendar Widget.a: Graphic Format Day Size
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-size-widget-calendar-date-day:          22px !default;
 
-/// Controls the color of the day when using the graphic style in the
-/// calendar widget.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Calendar Widget Graphic Format Day Color
+//
+// Controls the color of the day when using the graphic style in the
+// calendar widget.
+//
+// Styleguide WordPress.1: Calendar Widget.a: Graphic Format Day Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-widget-calendar-date-day:             inherit !default;
 
-/// Controls the size of the month when using the graphic style in the
-/// calendar widget.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Calendar Widget Graphic Format Month Size
+//
+// Controls the size of the month when using the graphic style in the
+// calendar widget.
+//
+// Styleguide WordPress.1: Calendar Widget.a: Graphic Format Month Size
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $font-size-widget-calendar-date-month:        12px !default;
 
-/// Controls the color of the month when using the graphic style in the
-/// calendar widget.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
+// Calendar Widget Graphic Format Month Color
+//
+// Controls the color of the month when using the graphic style in the
+// calendar widget.
+//
+// Styleguide WordPress.1: Calendar Widget.a: Graphic Format Month Color
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-widget-calendar-date-month:           inherit !default;
 
@@ -55,19 +88,21 @@ $color-widget-calendar-date-month:           inherit !default;
 // Calendar Widget Styles
 // =================================================================
 
-/// A helper variable for absolute positioning in formats which use it.
-/// Sets the width of the calendar date.
-/// By default, affects the default and graphic formats.
-/// @group 10-widgets
-/// @access private
-/// @since 1.2.0
+// A helper variable for absolute positioning in formats which use it.
+// Sets the width of the calendar date.
+// By default, affects the default and graphic formats.
+//
+// Access: Private
+//
+// Since: 1.2.0
 
 $_width-calendar-date: 48px;
 
-/// Styles events in the calendar widget. Affects all formats.
-/// @group 10-widgets
-/// @access public
-/// @since 2.0.0
+// Styles events in the calendar widget. Affects all formats.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .widget-calendar-event {
 	border-top: $border-widget-list;
@@ -79,19 +114,21 @@ $_width-calendar-date: 48px;
 	}
 }
 
-/// Styles links in the calendar widget. Affects all formats.
-/// @group 10-widgets
-/// @access public
-/// @since 2.0.0
+// Styles links in the calendar widget. Affects all formats.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .widget-calendar-link {
 	display: block;
 }
 
-/// Styles dates in the calendar widget. Affects all formats.
-/// @group 10-widgets
-/// @access public
-/// @since 2.0.0
+// Styles dates in the calendar widget. Affects all formats.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .widget-calendar-date {
 	color: $color-widget-calendar-date;
@@ -101,19 +138,21 @@ $_width-calendar-date: 48px;
 	margin-bottom: 0.5em;
 }
 
-/// Styles an event in the calendar widget default format.
-/// @group 10-widgets
-/// @access public
-/// @since 2.0.0
+// Styles an event in the calendar widget default format.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .widget-calendar-event-default {
 	position: relative;
 }
 
-/// Styles dates in the calendar widget default format.
-/// @group 10-widgets
-/// @access public
-/// @since 2.0.0
+// Styles dates in the calendar widget default format.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .widget-calendar-date-default {
 	left: 0;
@@ -122,30 +161,33 @@ $_width-calendar-date: 48px;
 	width: $_width-calendar-date;
 }
 
-/// Styles titles in the calendar widget default format.
-/// @group 10-widgets
-/// @access public
-/// @since 2.0.0
+// Styles titles in the calendar widget default format.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .widget-calendar-title-default {
 	padding-left: $_width-calendar-date + 12;
 	position: relative;
 }
 
-/// Styles links in the calendar widget graphic format.
-/// @group 10-widgets
-/// @access public
-/// @since 2.0.0
+// Styles links in the calendar widget graphic format.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .widget-calendar-link-graphic {
 	display: table;
 	text-decoration: none;
 }
 
-/// Styles dates in the calendar widget graphic format.
-/// @group 10-widgets
-/// @access public
-/// @since 2.0.0
+// Styles dates in the calendar widget graphic format.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .widget-calendar-date-graphic {
 	color: $color-widget-calendar-date;
@@ -155,10 +197,11 @@ $_width-calendar-date: 48px;
 	width: $_width-calendar-date;
 }
 
-/// Styles the day of the month in the calendar widget graphic format.
-/// @group 10-widgets
-/// @access public
-/// @since 2.0.0
+// Styles the day of the month in the calendar widget graphic format.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .widget-calendar-day-graphic {
 	color: $color-widget-calendar-date-day;
@@ -166,10 +209,11 @@ $_width-calendar-date: 48px;
 	font-size: $font-size-widget-calendar-date-day;
 }
 
-/// Styles the month in the calendar widget graphic format.
-/// @group 10-widgets
-/// @access public
-/// @since 2.0.0
+// Styles the month in the calendar widget graphic format.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .widget-calendar-month-graphic {
 	color: $color-widget-calendar-date-month;
@@ -177,10 +221,11 @@ $_width-calendar-date: 48px;
 	text-transform: uppercase;
 }
 
-/// Styles the title in the calendar widget graphic format.
-/// @group 10-widgets
-/// @access public
-/// @since 2.0.0
+// Styles the title in the calendar widget graphic format.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .widget-calendar-title-graphic {
 	display: table-cell;
