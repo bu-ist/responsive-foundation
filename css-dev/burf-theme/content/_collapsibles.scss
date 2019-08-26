@@ -2,24 +2,39 @@
 // Collapsible Settings
 // =================================================================
 
-/// Controls the color of icons on collapsibles.
-/// @group 09-content
-/// @access public
-/// @since 2.0.0
+// Collapsible Icon Color
+//
+// Controls the color of icons on collapsibles.
+//
+// Styleguide WordPress.1: Collapsible.a: Icon Color
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $color-collapsible-icon:           $color-icons !default;
 
-/// Controls the color of icons on collapsibles when you hover.
-/// @group 09-content
-/// @access public
-/// @since 2.0.0
+// Collapsible Icon Hover Color
+//
+// Controls the color of icons on collapsibles when you hover.
+//
+// Styleguide WordPress.1: Collapsible.a: Icon Hover Color
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $color-collapsible-icon-hover:     $color-link !default;
 
-/// Controls the border between collapsibles.
-/// @group 09-content
-/// @access public
-/// @since 2.0.0
+// Collapsible Border
+//
+// Controls the border between collapsibles.
+//
+// Styleguide WordPress.1: Collapsible.a: Border
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $border-collapsible:               $border !default;
 
@@ -27,10 +42,11 @@ $border-collapsible:               $border !default;
 // Collapsible Styles
 // =================================================================
 
-/// Styles a collapsible item.
-/// @group 09-content
-/// @access public
-/// @since 1.0.0
+// Styles a collapsible item.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .bu_collapsible_container {
 	padding: 0.5em 0;
@@ -41,10 +57,11 @@ $border-collapsible:               $border !default;
 	}
 }
 
-/// Styles the header on a collapsible item.
-/// @group 09-content
-/// @access public
-/// @since 1.0.0
+// Styles the header on a collapsible item.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .bu_collapsible {
 	@extend %icon-plus;
@@ -73,10 +90,11 @@ $border-collapsible:               $border !default;
 	}
 }
 
-/// Print styles for collapsibles.
-/// @group 09-content
-/// @access public
-/// @since 1.0.0
+// Print styles for collapsibles.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 @media print {
 	.bu_collapsible_section {
