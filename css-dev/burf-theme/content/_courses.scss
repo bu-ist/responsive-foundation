@@ -2,10 +2,13 @@
 // Course Feed Settings
 // =================================================================
 
-/// Controls the border between course feed items.
-/// @group 09-content
-/// @access public
-/// @since 2.0.0
+// Controls the border between course feed items.
+//
+// Styleguide WordPress.1: Course Feeds.a: Border
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $border-coursefeed:							 $border !default;
 
@@ -13,10 +16,11 @@ $border-coursefeed:							 $border !default;
 // Course Feed Styles
 // =================================================================
 
-/// Controls the styling for a single course in a course feed.
-/// @group 09-content
-/// @access public
-/// @since 1.0.0
+// Controls the styling for a single course in a course feed.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .cf-course {
 	border-top: $border-coursefeed;
@@ -30,22 +34,25 @@ $border-coursefeed:							 $border !default;
 	}
 }
 
-/// Controls the styling for the course title in a course feed.
-/// @group 09-content
-/// @access public
-/// @since 2.0.0
+// Controls the styling for the course title in a course feed.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .cf-course-title {
 	margin-bottom: 0.2em;
 }
 
-/// Controls the styling for the course id (college, department, and number) in a course feed.
-/// You may style each of these individually as well using `.cf-course-college`,
-/// `.cf-course-dept`, etc.
-/// @group 09-content
-/// @access public
-/// @since 2.0.0
-/// @accessibility AA
+// Controls the styling for the course id (college, department, and number) in a course feed.
+// You may style each of these individually as well using `.cf-course-college`,
+// `.cf-course-dept`, etc.
+//
+// Access: Public
+//
+// Since: 2.0.0
+//
+// Accessibility: AA
 
 .cf-course-id {
 	display: block;
@@ -54,33 +61,46 @@ $border-coursefeed:							 $border !default;
 	margin-bottom: 0.5em;
 }
 
+// Controls the styling for the course id (college, department, and number) in a course feed.
+// You may style each of these individually as well using `.cf-course-college`,
+// `.cf-course-dept`, etc.
+//
+// Access: Public
+//
+// Since: 2.0.0
+//
+// Accessibility: AA
+
 .cf-course-id-color {
 	color: $color-grayscale-6;
 }
 
-/// Controls the styling for course credits, availability, and prerequisites.
-/// @group 09-content
-/// @access public
-/// @since 2.0.0
+// Controls the styling for course credits, availability, and prerequisites.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .cf-course-info {
 	font-size: 0.8em;
 }
 
-/// Controls the styling for the section table.
-/// @group 09-content
-/// @access public
-/// @since 2.0.0
+// Controls the styling for the section table.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .cf-table {
 	font-size: 0.8em;
 	width: 100%;
 }
 
-/// Controls the styling for the section title.
-/// @group 09-content
-/// @access public
-/// @since 2.0.0
+// Controls the styling for the section title.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .cf-section-title {
 	color: inherit;
@@ -89,20 +109,22 @@ $border-coursefeed:							 $border !default;
 	text-align: left;
 }
 
-/// Controls the styling for the section start and end dates.
-/// @group 09-content
-/// @access public
-/// @since 2.0.0
+// Controls the styling for the section start and end dates.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .cf-section-dates {
 	float: right;
 }
 
-/// Conditional styling to label course availability.
-/// There isn't currently a way to do this in the course template reliably.
-/// @group 09-content
-/// @access public
-/// @since 2.0.0
+// Conditional styling to label course availability.
+// There isn't currently a way to do this in the course template reliably.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .cf-course-offered {
 	&:not(:empty)::before {
@@ -110,11 +132,12 @@ $border-coursefeed:							 $border !default;
 	}
 }
 
-/// Conditional styling to label course prerequisites.
-/// There isn't currently a way to do this in the course template reliably.
-/// @group 09-content
-/// @access public
-/// @since 2.0.0
+// Conditional styling to label course prerequisites.
+// There isn't currently a way to do this in the course template reliably.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .cf-course-prereqs {
 	&:not(:empty)::before {
@@ -127,10 +150,11 @@ $border-coursefeed:							 $border !default;
 // =================================================================
 
 
-/// BU Hub Indicator Wrapper
-/// @group 09-content
-/// @access public
-/// @since 2.0.1
+// BU Hub Indicator Wrapper
+//
+// Access: Public
+//
+// Since: 2.0.1
 
 .cf-hub-ind {
 	display: block;
@@ -147,20 +171,23 @@ $border-coursefeed:							 $border !default;
 	}
 }
 
-/// BU Hub Indicator Title
-/// @group 09-content
-/// @access public
-/// @since 2.0.1
+// BU Hub Indicator Title
+//
+// Access: Public
+//
+// Since: 2.0.1
 
 .cf-hub-head {
 	text-decoration: none;
 }
 
-/// BU Hub Indicator Title Iconstyles
-/// @group 09-content
-/// @access public
-/// @since 2.0.1
-/// @accessibility AA
+// BU Hub Indicator Title Iconstyles
+//
+// Access: Public
+//
+// Since: 2.0.1
+//
+// Accessibility: AA
 
 .bu-hub-iconstyles {
 	display: inline-block;
@@ -202,10 +229,11 @@ $border-coursefeed:							 $border !default;
 	@extend %icon-questionmark;
 }
 
-/// BU Hub Indicator Area <ul> List
-/// @group 09-content
-/// @access public
-/// @since 2.0.1
+// BU Hub Indicator Area <ul> List
+//
+// Access: Public
+//
+// Since: 2.0.1
 
 .cf-hub-offerings {
 	color: $color-hub;
