@@ -8,10 +8,11 @@
 // Typography Styles
 // =================================================================
 
-/// Base styles and typography for all HTML elements.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// Base styles and typography for all HTML elements.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 body {
 	color: $color-base;
@@ -23,10 +24,11 @@ body {
 // Links
 // -----------------------------------------------------------------
 
-/// Controls base styling for all links.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// Controls base styling for all links.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 a {
 	color: $color-link;
@@ -61,60 +63,66 @@ a {
 // Heading Styles
 // =================================================================
 
-/// Styles for all h1 tags.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// Styles for all h1 tags.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 h1 {
 	@extend %heading-base;
 	@extend %font-size-1;
 }
 
-/// Styles for all h2 tags.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// Styles for all h2 tags.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 h2 {
 	@extend %heading-base;
 	@extend %font-size-2;
 }
 
-/// Styles for all h3 tags.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// Styles for all h3 tags.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 h3 {
 	@extend %heading-base;
 	@extend %font-size-3;
 }
 
-/// Styles for all h4 tags.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// Styles for all h4 tags.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 h4 {
 	@extend %heading-base;
 	@extend %font-size-4;
 }
 
-/// Styles for all h5 tags.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// Styles for all h5 tags.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 h5 {
 	@extend %heading-base;
 	@extend %font-size-5;
 }
 
-/// Styles for all h6 tags.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// Styles for all h6 tags.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 h6 {
 	@extend %heading-base;
@@ -126,29 +134,32 @@ abbr[title] {
 	cursor: help;
 }
 
-/// Styles for all blockquotes.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// Styles for all blockquotes.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 blockquote {
 	margin: $font-margin-blockquote;
 }
 
-/// Styles for all paragraphs and preformatted content.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// Styles for all paragraphs and preformatted content.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 p,
 pre {
 	margin: $font-margin-base;
 }
 
-/// Styles for all preformatted and code content.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// Styles for all preformatted and code content.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 code,
 kbd,
@@ -166,10 +177,11 @@ samp {
 // Lists
 // -----------------------------------------------------------------
 
-/// Styles for all lists and list-like content.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// Styles for all lists and list-like content.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 dl,
 menu,
@@ -178,19 +190,21 @@ ul {
 	margin: $font-margin-list;
 }
 
-/// Styles for definition stuff.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// Styles for definition stuff.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 dd {
 	margin: $font-margin-dd;
 }
 
-/// Styles menus and lists.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// Styles menus and lists.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 menu,
 ol,
@@ -198,10 +212,11 @@ ul {
 	padding: $font-padding-list;
 }
 
-/// Styles for navigation.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// Styles for navigation.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 nav {
 	ul,
@@ -222,10 +237,11 @@ ol ol {
 // Code
 // -----------------------------------------------------------------
 
-/// Styles for code element.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// Styles for code element.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 code {
 	background: $color-code-bg;
@@ -234,11 +250,16 @@ code {
 	white-space: nowrap;
 }
 
-/// Styles for the code wrapper class.
-/// Adding this class around a code element enables scrolling on mobile devices.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// Code Responsive Wrapper
+//
+// Styles for the code wrapper class.
+// Adding this class around a code element enables scrolling on mobile devices.
+//
+// Styleguide Content.1: Code.a: Responsive Wrapper Class
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .code {
 	background: $color-code-bg;
