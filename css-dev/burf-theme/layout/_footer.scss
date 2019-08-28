@@ -2,92 +2,132 @@
 // Footer Settings
 // =================================================================
 
-/// Controls the spacing at the bottom of the footer widget area.
-/// @group footer
-/// @access public
-/// @since 1.0.0
+// Controls the spacing at the bottom of the footer widget area.
+//
+// Styleguide WordPress.1: Footer.a: Footbar Padding
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $footbar-padding-bottom:                    $padding !default;
 
-/// Controls the background color of the footer widget area.
-/// @group footer
-/// @access public
-/// @since 1.0.0
+// Controls the background color of the footer widget area.
+//
+// Styleguide WordPress.1: Footer.a: Footbar Background
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-footbar-bg:                         $color-grayscale-f5 !default;
 
-/// Controls the border style of the footer widget area.
-/// @group footer
-/// @access public
-/// @since 1.0.0
+// Controls the border style of the footer widget area.
+//
+// Styleguide WordPress.1: Footer.a: Footbar Border
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $border-footbar:                           $border !default;
 
-/// Controls the background of the footer widget container.
-/// @group footer
-/// @access public
-/// @since 1.0.0
+// Controls the background of the footer widget container.
+//
+// Styleguide WordPress.1: Footer.a: Footbar Container Background
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-footbar-container-bg:               $color-footbar-bg !default;
 
-/// Controls the color of links in widgets in the footbar.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Controls the color of links in widgets in the footbar.
+//
+// Styleguide WordPress.1: Footer.a: Widget Link Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-footbar-widget-link:                $color-link !default;
 
-/// Controls the color of links in widgets in the footbar when you hover.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Controls the color of links in widgets in the footbar when you hover.
+//
+// Styleguide WordPress.1: Footer.a: Widget Link Color Hover
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-footbar-widget-link-hover:          $color-link !default;
 
-/// Controls the padding of the site footer.
-/// @group footer
-/// @access public
-/// @since 1.0.0
+// Controls the padding of the site footer.
+//
+// Styleguide WordPress.1: Footer.a: Site Footer Padding
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $padding-site-footer:                       $padding $padding $padding-small !default;
 
-/// Controls the background color of the site footer.
-/// @group footer
-/// @access public
-/// @since 1.0.0
+// Controls the background color of the site footer.
+//
+// Styleguide WordPress.1: Footer.a: Site Footer Background
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-site-footer-bg:                      $color-grayscale-0 !default;
 
-/// Controls the color of text in the site footer.
-/// @group footer
-/// @access public
-/// @since 1.0.0
+// Controls the color of text in the site footer.
+//
+// Styleguide WordPress.1: Footer.a: Site Footer Color
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-site-footer:								 $color-grayscale-f !default;
 
-/// Controls the color of links in the site footer.
-/// @group footer
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Controls the color of links in the site footer.
+//
+// Styleguide WordPress.1: Footer.a: Site Footer Link Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-site-footer-link:							 $color-grayscale-8 !default;
 
-/// Controls the color of links when you hover in the site footer.
-/// @group footer
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Controls the color of links when you hover in the site footer.
+//
+// Styleguide WordPress.1: Footer.a: Site Footer Link Color Hover
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-site-footer-link-hover:					 $color-grayscale-f !default;
 
-/// Sets the number of supported widgets in the footbar.
-/// Matches the number of columns in the theme by default.
-/// @group 05-grid
-/// @access public
-/// @since 1.2.0
+// Sets the number of supported widgets in the footbar.
+// Matches the number of columns in the theme by default.
+//
+// Styleguide WordPress.1: Footer.a: Widgets Per Row
+//
+// Access: Public
+//
+// Since: 1.2.0
 
 $number-widgets-footbar: 						 $number-columns !default;
 
@@ -95,10 +135,11 @@ $number-widgets-footbar: 						 $number-columns !default;
 // Footer Styles
 // =================================================================
 
-/// Controls styling for the footbar.
-/// @group 08-layout
-/// @access public
-/// @since 1.0.0
+// Controls styling for the footbar.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .footbar {
 	@extend %clearfix;
@@ -117,18 +158,20 @@ $number-widgets-footbar: 						 $number-columns !default;
 	}
 }
 
-/// The number of grid columns a widget should take up, in the footbar.
-/// @group 08-layout
-/// @access private
-/// @since 1.0.0
+// The number of grid columns a widget should take up, in the footbar.
+//
+// Access: Private
+//
+// Since: 1.0.0
 
 $_footbar-widget-width: $grid-number-columns / $number-widgets-footbar;
 
-/// Controls styling for the footbar container and width of widgets inside.
-/// Often used to put a maximum width on the footbar without affecting the background.
-/// @group 08-layout
-/// @access public
-/// @since 1.0.0
+// Controls styling for the footbar container and width of widgets inside.
+// Often used to put a maximum width on the footbar without affecting the background.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .footbar-container {
 	@extend %container-styles;
@@ -143,11 +186,14 @@ $_footbar-widget-width: $grid-number-columns / $number-widgets-footbar;
 // Footer
 // -----------------------------------------------------------------
 
-/// Affects the site footer background color as well as any other areas which
-/// do not have a background color.
-/// @group footer
-/// @access public
-/// @since 1.0.0
+// Affects the site footer background color as well as any other areas which
+// do not have a background color.
+//
+// Styleguide WordPress.1: Footer.a: Site Footer Background
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-body-bg:                            $color-grayscale-0 !default;
 
@@ -155,10 +201,11 @@ body {
 	background-color: $color-body-bg;
 }
 
-/// Controls styling for the site footer - branding, address, and social links.
-/// @group 08-layout
-/// @access public
-/// @since 1.0.0
+// Controls styling for the site footer - branding, address, and social links.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .site-footer {
 	@extend %font-size-secondary;
@@ -206,10 +253,11 @@ body {
 	}
 }
 
-/// A helper placeholder for listing links in an inline style.
-/// @group 08-layout
-/// @access private
-/// @since 1.0.0
+// A helper placeholder for listing links in an inline style.
+//
+// Access: Private
+//
+// Since: 1.0.0
 
 %_u-list-inlineLinks {
 	display: inline-block;
@@ -221,11 +269,12 @@ body {
 	}
 }
 
-/// Styles the social media links menu in the footer based on
-/// the content around it.
-/// @group 08-layout
-/// @access public
-/// @since 1.0.0
+// Styles the social media links menu in the footer based on
+// the content around it.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .site-footer-social {
 	@extend %col-sm-half;
@@ -253,10 +302,11 @@ body {
 	}
 }
 
-/// Styles social links in menus.
-/// @group widgets
-/// @access public
-/// @since 2.0.0
+// Styles social links in menus.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .menu-item {
 	[href*="dropbox.com"] {
@@ -333,10 +383,11 @@ body {
 	}
 }
 
-/// Styles the container which holds branding assets in the site footer.
-/// @group 08-layout
-/// @access public
-/// @since 2.0.0
+// Styles the container which holds branding assets in the site footer.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .site-footer-brand-assets {
 	@extend %col-sm-half;
@@ -368,20 +419,22 @@ body {
 	}
 }
 
-/// Styles the disclaimer, which shows in the site footer.
-/// @group 08-layout
-/// @access public
-/// @since 1.0.0
+// Styles the disclaimer, which shows in the site footer.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .disclaimer {
 	line-height: 50px;
 }
 
-/// Styles the container which holds menus (footer links and social) in the site footer
-/// based on the content around it.
-/// @group 08-layout
-/// @access public
-/// @since 2.0.0
+// Styles the container which holds menus (footer links and social) in the site footer
+// based on the content around it.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .site-footer-menus {
 	clear: both;
@@ -406,11 +459,12 @@ body {
 	}
 }
 
-/// Styles the container which holds footer links
-/// based on the content around it.
-/// @group 08-layout
-/// @access public
-/// @since 1.0.0
+// Styles the container which holds footer links
+// based on the content around it.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .site-footer-links {
 	@extend %col-sm-half;
@@ -430,13 +484,14 @@ body {
 	}
 }
 
-/// Styles the container which holds footer information
-/// based on the content around it.
-/// Note: this is slated to be controlled by the branding plugin
-/// in a future release.
-/// @group 08-layout
-/// @access public
-/// @since 1.0.0
+// Styles the container which holds footer information
+// based on the content around it.
+// Note: this is slated to be controlled by the branding plugin
+// in a future release.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .site-footer-info {
 	clear: both;
@@ -484,7 +539,7 @@ body {
 	}
 }
 
-/// Copyright styles - only for print
+// Copyright styles - only for print
 
 .bu_copyright {
 	display: none;
