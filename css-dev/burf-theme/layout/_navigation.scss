@@ -5,258 +5,429 @@
 // Masthead and Brand
 // -----------------------------------------------------------------
 
-/// The style of border to use on the masthead.
-/// This shows directly below navigation or brand depending on the layout
-/// you've chosen for your site.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
+// Masthead Border
+//
+// The style of border to use on the masthead.
+// This shows directly below navigation or brand depending on the layout
+// you've chosen for your site.
+//
+// Styleguide WordPress.1: Masthead.a: Border
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $border-masthead:                          $border !default;
 
-/// The background color of the masthead.
-/// Bright colors are not recommended.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
+// Masthead Background
+//
+// The background color of the masthead.
+// Bright colors are not recommended.
+//
+// Styleguide WordPress.1: Masthead.a: Background Color
+//
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-masthead-bg:                        $color-grayscale-f !default;
 
 // Primary Navigation
 // -----------------------------------------------------------------
 
-/// The style of border used on primary navigation.
-/// By default, this border shows above primary navigation on mobile only.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
+// Primary Navigation Border
+//
+// The style of border used on primary navigation.
+// By default, this border shows above primary navigation on mobile only.
+//
+// Styleguide WordPress.1: Navigation.a: Border Width
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $border-width-primary-nav:                   1px 0 0 0 !default;
 
-/// The width of border used on primary navigation at desktop sizes.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
+// Primary Navigation Border
+//
+// The width of border used on primary navigation at desktop sizes.
+//
+// Styleguide WordPress.1: Navigation.a: Border Width (Desktop)
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $border-primary-nav-desktop: 					 0 !default;
 
-/// The color of border used on primary navigation.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
+// Primary Navigation Border Color
+//
+// The color of border used on primary navigation.
+//
+// Styleguide WordPress.1: Navigation.a: Border Color
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-primary-nav-border:                  $color-grayscale-3 !default;
 
-/// The font used in primary navigation.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
+// Primary Navigation Font Family
+//
+// The font used in primary navigation.
+//
+// Styleguide WordPress.1: Navigation.a: Font Family
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-family-navigation:                    $font-family-sans-serif !default;
 
-/// The color to use behind primary navigation.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Primary Navigation Link Background Color
+//
+// The color to use behind primary navigation.
+//
+// Styleguide WordPress.1: Navigation.a: Background Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-primary-nav-bg:                      $color-grayscale-0 !default;
 
-/// The color of links in primary navigation.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Primary Navigation Link Color
+//
+// The color of links in primary navigation.
+//
+// Styleguide WordPress.1: Navigation.a: Link Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-primary-nav-link:                    $color-grayscale-f !default;
 
-/// The color of links when you hover in primary navigation.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
+// Primary Navigation Link Color Hover
+//
+// The color of links when you hover in primary navigation.
+//
+// Styleguide WordPress.1: Navigation.a: Link Color Hover
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-primary-nav-link-hover:              $color-grayscale-a !default;
 
-/// The color of an active link in primary navigation - in other words, the
-/// color that a link will be when you are on that link's page.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Primary Navigation Current Link Color
+//
+// The color of an active link in primary navigation - in other words, the
+// color that a link will be when you are on that link's page.
+//
+// Styleguide WordPress.1: Navigation.a: Link Color Current
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-primary-nav-link-current:            $color-grayscale-9 !default;
 
-/// The color to use behind dropdown menus. Only affects non-mobile devices.
-/// This variable is not used in the left hand navigation layout as dropdowns
-/// are not supported.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
+// Primary Navigation Dropdown Background Color
+//
+// The color to use behind dropdown menus. Only affects non-mobile devices.
+// This variable is not used in the left hand navigation layout as dropdowns
+// are not supported.
+//
+// Styleguide WordPress.1: Navigation.a: Dropdown Background Color
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-primary-nav-dropdown-bg:             $color-grayscale-0 !default;
 
-/// The color of links in dropdown menus.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Primary Navigation Dropdown Link Color
+//
+// The color of links in dropdown menus.
+//
+// Styleguide WordPress.1: Navigation.a: Dropdown Link Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-primary-nav-dropdown-link:           $color-primary-nav-link !default;
 
-/// The color of links in dropdown menus when you hover over them.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Primary Navigation Dropdown Link Hover Color
+//
+// The color of links in dropdown menus when you hover over them.
+//
+// Styleguide WordPress.1: Navigation.a: Dropdown Link Color Hover
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-primary-nav-dropdown-link-hover:     $color-primary-nav-link-hover !default;
 
 // Utility Navigation
 // -----------------------------------------------------------------
 
-/// The width and style of border used in the utility navigation.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
+// Utility Navigation Border
+//
+// The width and style of border used in the utility navigation.
+//
+// Styleguide WordPress.1: Navigation.a: Footbar Padding
+//
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $border-width-utility-nav:                   1px 0 0 0 !default;
 
-/// The font size used in the utility navigation.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
+// Utility Navigation Font Size
+//
+// The font size used in the utility navigation.
+//
+// Styleguide WordPress.1: Utility Navigation.a: Font Size
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-size-utility-nav:                      14px !default;
 
-/// The color of links in the utility navigation.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Utility Navigation Link Color
+//
+// The color of links in the utility navigation.
+//
+// Styleguide WordPress.1: Utility Navigation.a: Link Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-utility-nav-link:                    $color-grayscale-6 !default;
 
-/// The color of links when you hover in the utility navigation.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Utility Navigation Link Color Hover
+//
+// The color of links when you hover in the utility navigation.
+//
+// Styleguide WordPress.1: Utility Navigation.a: Link Color Hover
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-utility-nav-link-hover:              $color-grayscale-0 !default;
 
-/// The color of links in the utility navigation on mobile.
-/// The placement of utility navigation on mobile usually means
-/// the utility navigation will be on a different background color,
-/// so it's important to double check that this is set correctly.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Utility Navigation Link Color - Mobile
+//
+// The color of links in the utility navigation on mobile.
+// The placement of utility navigation on mobile usually means
+// the utility navigation will be on a different background color,
+// so it's important to double check that this is set correctly.
+//
+// Styleguide WordPress.1: Utility Navigation.a: Link Color Mobile
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-utility-nav-mobile-link:       			$color-grayscale-a !default;
 
-/// The color of links in the utility navigation when you hover on mobile.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Utility Navigation Link Color Hover - Mobile
+//
+// The color of links in the utility navigation when you hover on mobile.
+//
+// Styleguide WordPress.1: Utility Navigation.a: Link Color Mobile Hover
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-utility-nav-mobile-link-hover: 			$color-grayscale-f !default;
 
 // Navigation and Search Toggles
 // -----------------------------------------------------------------
 
-/// Controls the color of toggles in the navigation at mobile sizes.
-/// By default, this affects both the menu and search toggles.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Navigation and Search Toggle Color
+//
+// Controls the color of toggles in the navigation at mobile sizes.
+// By default, this affects both the menu and search toggles.
+//
+// Styleguide WordPress.1: Navigation.a: Toggle Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-nav-toggle:                          $color-grayscale-f !default;
 
-/// Controls the color of toggles in the navigation at mobile sizes on hover.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Navigation and Search Toggle Color Hover
+//
+// Controls the color of toggles in the navigation at mobile sizes on hover.
+//
+// Styleguide WordPress.1: Navigation.a: Toggle Color Hover
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-nav-toggle-hover:                    $color-grayscale-a !default;
 
-/// Controls the color of toggles in the navigation at desktop sizes.
-/// By default, this affects both the menu and search toggles.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Navigation and Search Toggle Color Desktop
+//
+// Controls the color of toggles in the navigation at desktop sizes.
+// By default, this affects both the menu and search toggles.
+//
+// Styleguide WordPress.1: Navigation.a: Toggle Color Desktop
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-nav-toggle-alt:                      $color-grayscale-9 !default;
 
-/// Controls the color of toggles in the navigation at desktop sizes on hover.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Navigation and Search Toggle Color Hover
+//
+// Controls the color of toggles in the navigation at desktop sizes on hover.
+//
+// Styleguide WordPress.1: Navigation.a: Toggle Color Desktop Hover
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-nav-toggle-alt-hover:                $color-grayscale-0 !default;
 
 // Search
 // -----------------------------------------------------------------
 
-/// Controls the width of the border used on the search pane.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
+// Search Form Border Width
+//
+// Controls the width of the border used on the search pane.
+//
+// Styleguide WordPress.1: Search.a: Search Border Width
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $border-width-quicksearch:                  1px 0 0 0 !default;
 
-/// Controls the color of the border used on the search form.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
+// Search Form Border Color
+//
+// Controls the color of the border used on the search form.
+//
+// Styleguide WordPress.1: Search.a: Search Form Border
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-quicksearch-border:                 $color-grayscale-d !default;
 
-/// Controls how much rounding is applied to the search form field corners.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
+// Search Field Form Radius
+//
+// Controls how much rounding is applied to the search form field corners.
+//
+// Styleguide WordPress.1: Search.a: Search Border Radius
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $border-radius-quicksearch-input:           20px 0 0 20px !default;
 
-/// Controls how much rounding is applied to the search form submit button.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
+// Search Field Button Radius
+//
+// Controls how much rounding is applied to the search form submit button.
+//
+// Styleguide WordPress.1: Search.a: Search Border Button Radius
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $border-radius-quicksearch-button:          0 20px 20px 0 !default;
 
-/// Controls the width of the border used on the search field.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
+// Search Field Border
+//
+// Controls the width of the border used on the search field.
+//
+// Styleguide WordPress.1: Search.a: Search Field Border
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $border-search:                            0 !default;
 
-/// Controls the background color of the search field.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
+// Search Field Background Color
+//
+// Controls the background color of the search field.
+//
+// Styleguide WordPress.1: Search.a: Search Field Background
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-search-bg:                          $color-grayscale-f5 !default;
 
-/// Controls the color of the text in the search field.
-/// @group 06-navigation
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Search Field Text Color
+//
+// Controls the color of the text in the search field.
+//
+// Styleguide WordPress.1: Search.a: Search Field Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-search-text:                        $color-grayscale-0 !default;
 
-/// The width of the side nav, if you are using the left hand layout.
-/// @group 05-grid
-/// @access public
-/// @since 1.2.0
+// Side Navigation Width
+//
+// The width of the side nav, if you are using the left hand layout.
+//
+// Styleguide WordPress.1: Navigation.a: Side Nav Width
+//
+// Access: Public
+//
+// Since: 1.2.0
 
 $width-side-nav:                            240px !default;
 
@@ -267,11 +438,12 @@ $width-side-nav:                            240px !default;
 // Masthead
 // -----------------------------------------------------------------
 
-/// Controls all styling related to the masthead. This includes
-/// navigation, branding, and search.
-/// @group 08-layout
-/// @access public
-/// @since 1.0.0
+// Controls all styling related to the masthead. This includes
+// navigation, branding, and search.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .masthead {
 	@extend %clearfix;
@@ -280,11 +452,12 @@ $width-side-nav:                            240px !default;
 	position: relative;
 }
 
-/// A wrapper for items in the masthead. Often used to restrict the
-/// masthead to a certain width without interfering with the background.
-/// @group 08-layout
-/// @access public
-/// @since 1.0.0
+// A wrapper for items in the masthead. Often used to restrict the
+// masthead to a certain width without interfering with the background.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .masthead-container {
 	position: relative;
@@ -295,10 +468,15 @@ $width-side-nav:                            240px !default;
 // Navigation
 // =================================================================
 
-/// The default breakpoint to switch to the desktop view in navigation.
-/// @group 06-navigation
-/// @access public
-/// @since 2.0.0
+// Navigation Desktop Layout Breakpoint
+//
+// The default breakpoint to switch to the desktop view in navigation.
+//
+// Styleguide WordPress.1: Navigation.a: Desktop View Breakpoint
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 
 $nav-desktop:                    $sm !default;
@@ -312,6 +490,7 @@ nav {
 }
 
 // .search-toggle appears only when header is small and above, otherwise it's hidden
+
 .brand {
 	.search-toggle {
 		display: none;
@@ -323,6 +502,7 @@ nav {
 		width: auto;
 	}
 }
+
 // quicksearch (use WordPress plugin class name)
 
 #quicksearch {
@@ -355,11 +535,15 @@ nav {
 	}
 }
 
-
-/// The height of the search field. Affects both search and search button.
-/// @group navigation
-/// @access public
-/// @since 1.0.0
+// Search Field Height
+//
+// The height of the search field. Affects both search and search button.
+//
+// Styleguide WordPress.1: Search.a: Search Field Height
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $search-field-height:                          40px !default;
 
@@ -389,13 +573,17 @@ $search-field-height:                          40px !default;
 	}
 }
 
-
-/// Adjusts the size of the search and nav toggles in
-/// the main navigation. Also affects the top/bottom spacing
-/// around main navigation items in the nav bar.
-/// @group 06-navigation
-/// @access public
-/// @since 2.0.0
+// Navigation and Search Toggle Size
+//
+// Adjusts the size of the search and nav toggles in
+// the main navigation. Also affects the top/bottom spacing
+// around main navigation items in the nav bar.
+//
+// Styleguide WordPress.1: Navigation.a: Toggle Size
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $nav-toggle-size: 60px !default;
 
@@ -436,12 +624,17 @@ $nav-toggle-size: 60px !default;
 	}
 }
 
-/// Adjusts the size of border on the nav toggle icon
-/// in the main navigation. Also affects spacing of borders
-/// in this icon.
-/// @group 06-navigation
-/// @access public
-/// @since 2.0.0
+// Toggle Border
+//
+// Adjusts the size of border on the nav toggle icon
+// in the main navigation. Also affects spacing of borders
+// in this icon.
+//
+// Styleguide WordPress.1: Navigation.a: Toggle Border
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $nav-toggle-border: 4px !default;
 
@@ -519,7 +712,7 @@ $nav-toggle-border: 4px !default;
 	}
 }
 
-// primaryNav and menu
+// primary navigation and menu
 
 .primary-nav {
 	@extend %clearfix;
@@ -639,12 +832,13 @@ $nav-toggle-border: 4px !default;
 }
 
 // when nav or search are opened
+
 .is-open .primary-nav-menu,
 .is-open .utility-nav {
 	display: block;
 }
 
-// utilityNav
+// utility navigation
 
 .utility-nav {
 	border: 1px solid $color-primary-nav-border;
@@ -710,11 +904,16 @@ $nav-toggle-border: 4px !default;
 
 // side-nav
 
-/// The breakpoint to switch to the desktop view in the left
-/// navigation layout.
-/// @group 06-navigation
-/// @access public
-/// @since 2.0.0
+// Side Navigation Breakpoint
+//
+// The breakpoint to switch to the desktop view in the left
+// navigation layout.
+//
+// Styleguide WordPress.1: Navigation.a: Side Navigation Breakpoint
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $left-nav-desktop:                    $nav-desktop !default;
 
@@ -915,11 +1114,15 @@ $_search-height: 115px;
 
 // top nav
 
-/// The breakpoint to switch to the desktop view in the top
-/// navigation layout.
-/// @group 06-navigation
-/// @access public
-/// @since 2.0.0
+// The breakpoint to switch to the desktop view in the top
+// navigation layout.
+//
+// Styleguide WordPress.1: Navigation.a: Footbar Padding
+//
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $top-nav-desktop:                    $nav-desktop !default;
 
@@ -946,11 +1149,15 @@ $top-nav-desktop:                    $nav-desktop !default;
 
 // no-nav
 
-/// The breakpoint to switch to the desktop view in the no
-/// navigation layout.
-/// @group 06-navigation
-/// @access public
-/// @since 2.0.0
+// The breakpoint to switch to the desktop view in the no
+// navigation layout.
+//
+// Styleguide WordPress.1: Navigation.a: Footbar Padding
+//
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $no-nav-desktop:                    $nav-desktop !default;
 
@@ -1008,53 +1215,71 @@ $no-nav-desktop:                    $nav-desktop !default;
 
 // Mega navigation
 
-/// The background color of the mega nav menu toggle.
-/// @group navigation
-/// @access public
-/// @since 3.0.2
+// The background color of the mega nav menu toggle.
+//
+// @group navigation
+//
+// Access: Public
+//
+// Since: 3.0.2
 
 $color-mega-nav-toggle-bg:                     $color-button-bg !default;
 
-/// The text color of the mega nav menu toggle.
-/// @group navigation
-/// @access public
-/// @since 3.0.2
+// The text color of the mega nav menu toggle.
+//
+// @group navigation
+//
+// Access: Public
+//
+// Since: 3.0.2
 
 $color-mega-nav-toggle-text:                   $color-button-text !default;
 
-/// The number of columns to use in the mega navigation
-/// menu. If there are fewer nav items than this number
-/// in the first row, they will stretch
-/// @group navigation
-/// @access public
-/// @since 3.0.2
+// The number of columns to use in the mega navigation
+// menu. If there are fewer nav items than this number
+// in the first row, they will stretch
+//
+// @group navigation
+//
+// Access: Public
+//
+// Since: 3.0.2
 
 $mega-nav-columns:                             3 !default;
 
-/// The number of columns to use in the mega navigation
-/// menu on desktop. If there are fewer nav items than this
-/// in the first row, they will stretch
-/// @group navigation
-/// @access public
-/// @since 3.0.2
+// The number of columns to use in the mega navigation
+// menu on desktop. If there are fewer nav items than this
+// in the first row, they will stretch
+//
+// @group navigation
+//
+// Access: Public
+//
+// Since: 3.0.2
 
 $mega-nav-columns-desktop:                     5 !default;
 
-/// The point at which the mega navigation switches from
-/// showing the icon to the full menu and short menu combo.
-/// Accepts a breakpoint or pixel value.
-/// @group navigation
-/// @access public
-/// @since 3.0.2
+// The point at which the mega navigation switches from
+// showing the icon to the full menu and short menu combo.
+// Accepts a breakpoint or pixel value.
+//
+// @group navigation
+//
+// Access: Public
+//
+// Since: 3.0.2
 
 $mega-nav-show-full-menu:                      $sm !default;
 
-/// The point at which the mega navigation switches from
-/// mobile to desktop layout. Accepts a breakpoint or pixel
-/// value.
-/// @group navigation
-/// @access public
-/// @since 3.0.2
+// The point at which the mega navigation switches from
+// mobile to desktop layout. Accepts a breakpoint or pixel
+// value.
+//
+// @group navigation
+//
+// Access: Public
+//
+// Since: 3.0.2
 
 $mega-nav-desktop-layout:                      $md !default;
 
