@@ -1114,11 +1114,12 @@ $_search-height: 115px;
 
 // top nav
 
+// Top Navigation Breakpoint
+//
 // The breakpoint to switch to the desktop view in the top
 // navigation layout.
 //
-// Styleguide WordPress.1: Navigation.a: Footbar Padding
-//
+// Styleguide WordPress.1: Navigation.a: Top Navigation Breakpoint
 //
 // Access: Public
 //
@@ -1149,11 +1150,12 @@ $top-nav-desktop:                    $nav-desktop !default;
 
 // no-nav
 
+// No Navigation Desktop Layout Breakpoint
+//
 // The breakpoint to switch to the desktop view in the no
 // navigation layout.
 //
 // Styleguide WordPress.1: Navigation.a: Footbar Padding
-//
 //
 // Access: Public
 //
@@ -1215,9 +1217,11 @@ $no-nav-desktop:                    $nav-desktop !default;
 
 // Mega navigation
 
+// Mega Navigation Background Color
+//
 // The background color of the mega nav menu toggle.
 //
-// @group navigation
+// Styleguide WordPress.1: Mega Navigation.a: Background Color
 //
 // Access: Public
 //
@@ -1225,9 +1229,9 @@ $no-nav-desktop:                    $nav-desktop !default;
 
 $color-mega-nav-toggle-bg:                     $color-button-bg !default;
 
-// The text color of the mega nav menu toggle.
+// Mega Navigation Toggle Text Color
 //
-// @group navigation
+// Styleguide WordPress.1: Mega Navigation.a: Menu Toggle Text
 //
 // Access: Public
 //
@@ -1235,11 +1239,13 @@ $color-mega-nav-toggle-bg:                     $color-button-bg !default;
 
 $color-mega-nav-toggle-text:                   $color-button-text !default;
 
+// Mega Navigation Columns
+//
 // The number of columns to use in the mega navigation
 // menu. If there are fewer nav items than this number
-// in the first row, they will stretch
+// in the first row, they will stretch.
 //
-// @group navigation
+// Styleguide WordPress.1: Mega Navigation.a: Number of Columns
 //
 // Access: Public
 //
@@ -1247,11 +1253,13 @@ $color-mega-nav-toggle-text:                   $color-button-text !default;
 
 $mega-nav-columns:                             3 !default;
 
+// Mega Navigation Columns - Desktop
+//
 // The number of columns to use in the mega navigation
 // menu on desktop. If there are fewer nav items than this
 // in the first row, they will stretch
 //
-// @group navigation
+// Styleguide WordPress.1: Mega Navigation.a: Number of Columns Desktop
 //
 // Access: Public
 //
@@ -1259,11 +1267,13 @@ $mega-nav-columns:                             3 !default;
 
 $mega-nav-columns-desktop:                     5 !default;
 
+// Mega Navigation Full Menu Breakpoint
+//
 // The point at which the mega navigation switches from
 // showing the icon to the full menu and short menu combo.
 // Accepts a breakpoint or pixel value.
 //
-// @group navigation
+// Styleguide WordPress.1: Mega Navigation.a: Full Menu Breakpoint
 //
 // Access: Public
 //
@@ -1271,11 +1281,13 @@ $mega-nav-columns-desktop:                     5 !default;
 
 $mega-nav-show-full-menu:                      $sm !default;
 
+// Mega Navigation Desktop Layout Breakpoint
+//
 // The point at which the mega navigation switches from
 // mobile to desktop layout. Accepts a breakpoint or pixel
 // value.
 //
-// @group navigation
+// Styleguide WordPress.1: Mega Navigation.a: Desktop Layout Breakpoint
 //
 // Access: Public
 //
