@@ -2,23 +2,29 @@
 // Templates
 // =================================================================
 
-/// Handles styling for narrow content container pages.
-/// Do not override this class. Instead, add or remove
-/// templates from the narrow content container PHP filter
-/// in your theme.
-/// @group 08-layout
-/// @access public
-/// @since 2.0.0
+// Narrow Content Container
+//
+// Handles styling for narrow content container pages.
+// Do not override this class. Instead, add or remove
+// templates from the narrow content container PHP filter
+// in your theme.
+//
+// Styleguide Utilities.1: Classes.a: Narrow Content Container
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .content-container-narrow {
 	@extend %container-styles;
 	max-width: $container-sm;
 }
 
-/// Handles styling for the 404 page.
-/// @group 08-layout
-/// @access public
-/// @since 2.0.0
+// Handles styling for the 404 page.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .error-404 {
 	left: 0;
