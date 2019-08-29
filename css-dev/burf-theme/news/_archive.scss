@@ -2,42 +2,66 @@
 // Post Archive Settings
 // =================================================================
 
-/// Controls the shape used in "back" links, such as the links you
-/// see at the bottom of the page when viewing a single profile.
-/// By default, this is an arrow.
-/// @group 09-content
-/// @access public
-/// @since 1.0.0
+// Back Link Icon
+//
+// Controls the shape used in "back" links, such as the links you
+// see at the bottom of the page when viewing a single profile.
+// By default, this is an arrow.
+//
+// Styleguide News.1: News Listing.a: Back Link Icon
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $back-link-before:                          "← " !default;
 
-/// Controls the color of the arrow in "back" links, such as the links you
-/// see at the bottom of the page when viewing a single profile.
-/// @group 09-content
-/// @access public
-/// @since 1.0.0
+// Back Link Icon Color
+//
+// Controls the color of the arrow in "back" links, such as the links you
+// see at the bottom of the page when viewing a single profile.
+//
+// Styleguide News.1: News Listing.a: Back Link Icon Color
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-back-link-before:                    $color-grayscale-f !default;
 
-/// Controls the border style between posts on post listing templates.
-/// @group 12-news
-/// @access public
-/// @since 1.0.0
+// Post Border
+//
+// Controls the border style between posts on post listing templates.
+//
+// Styleguide News.1: News Listing.a: Post Border
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $border-news-post:                         $border !default;
 
-/// Controls the color of the separators between metadata.
-/// @group 12-news
-/// @access public
-/// @since 1.0.0
+// Metadata Color
+//
+// Controls the color of the separators between metadata.
+//
+// Styleguide News.1: News Listing.a: Metadata Color
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-news-meta-em:                        $color-grayscale-7 !default;
 
-/// Controls the shape of the separators between metadata.
-/// By default, this is set to a dot.
-/// @group 12-news
-/// @access public
-/// @since 1.0.0
+// Metadata Separator Color
+//
+// Controls the color of the separators between metadata.
+//
+// Styleguide News.1: News Listing.a: Metadata Separator Color
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-news-meta-before:                    $color-grayscale-a !default;
 
@@ -46,10 +70,11 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 // Post Archive Styles
 // =================================================================
 
-/// A placeholder to mimic the styles of the "Back" link on archive pages.
-/// @group 02-mixins
-/// @access public
-/// @since 1.0.0
+// A placeholder to mimic the styles of the "Back" link on archive pages.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 %back-link-styles {
 	&::before {
@@ -58,12 +83,13 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 	}
 }
 
-/// Controls the styles of the "Back" link on archive pages.
-/// Use this class to only style CSS with the back link. Use the placeholder
-/// to style anything that looks like a back link.
-/// @group 02-mixins
-/// @access public
-/// @since 1.0.0
+// Controls the styles of the "Back" link on archive pages.
+// Use this class to only style CSS with the back link. Use the placeholder
+// to style anything that looks like a back link.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .back-link {
 	@extend %back-link-styles;
@@ -73,10 +99,11 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 	@extend %font-size-secondary;
 }
 
-/// Handles the previous and next links at the bottom of post listings.
-/// @group 12-news
-/// @access public
-/// @since 1.0.0
+// Handles the previous and next links at the bottom of post listings.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .paging-navigation {
 	@extend %clearfix;
@@ -90,28 +117,31 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 	}
 }
 
-/// Handles the previous link at the bottom of post listings.
-/// @group 12-news
-/// @access public
-/// @since 1.0.0
+// Handles the previous link at the bottom of post listings.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .nav-previous {
 	float: left;
 }
 
-/// Handles the next link at the bottom of post listings.
-/// @group 12-news
-/// @access public
-/// @since 1.0.0
+// Handles the next link at the bottom of post listings.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .nav-next {
 	float: right;
 }
 
-/// Handles styling for posts in news listings and archive pages.
-/// @group 12-news
-/// @access public
-/// @since 2.0.0
+// Handles styling for posts in news listings and archive pages.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .post-part {
 	border-top: $border-news-post;
@@ -126,11 +156,12 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 	}
 }
 
-/// Handles styling for headlines in the post template partial,
-/// usually used on post listings and archive pages.
-/// @group 12-news
-/// @access public
-/// @since 2.0.0
+// Handles styling for headlines in the post template partial,
+// usually used on post listings and archive pages.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .post-headline {
 	& + .meta {
@@ -142,11 +173,12 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 	}
 }
 
-/// Handles styling for metadata in the post template partial,
-/// usually used on post listings and archive pages.
-/// @group 12-news
-/// @access public
-/// @since 1.0.0
+// Handles styling for metadata in the post template partial,
+// usually used on post listings and archive pages.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .post-meta {
 	span {
@@ -161,11 +193,12 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 	}
 }
 
-/// Handles styling for thumbnails in the post template partial,
-/// usually used on post listings and archive pages.
-/// @group 12-news
-/// @access public
-/// @since 2.0.0
+// Handles styling for thumbnails in the post template partial,
+// usually used on post listings and archive pages.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .post-thumb {
 	float: right;
