@@ -2,29 +2,48 @@
 // Profile Archive Settings
 // =================================================================
 
-/// Controls the shape of the profile photo.
-/// By default, this is set to a circle.
-/// @group 14-profiles
-/// @access public
-/// @since 1.0.0
+// Profile Image Radius
+//
+// Controls the shape of the profile photo.
+// By default, this is set to a circle.
+//
+// Styleguide Profiles.1: Profiles Listing.Image Radius
+//
+// Weight: 42
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $border-radius-profile-figure:              50% !default;
 
-/// Controls the color used for profile names in the profile
-/// listing template.
-/// @group 14-profiles
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Profile Name Color
+//
+// Controls the color used for profile names in the profile
+// listing template.
+//
+// Styleguide Profiles.1: Profiles Listing.a: Name Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-profile-name:                       $color-link !default;
 
-/// Controls the color used for profile titles in the profile
-/// listing template.
-/// @group 14-profiles
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Profile Title Color
+//
+// Controls the color used for profile titles in the profile
+// listing template.
+//
+// Styleguide Profiles.1: Profiles Listing.a: Title Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-profile-title:                      $color-base !default;
 
@@ -32,20 +51,22 @@ $color-profile-title:                      $color-base !default;
 // Profile Archive Styles
 // =================================================================
 
-/// Styles for all profile listings.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles for all profile listings.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-listing {
 	@extend %clearfix;
 	padding: 0;
 }
 
-/// Styles for all profile items in a listing.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles for all profile items in a listing.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-item {
 	list-style: none;
@@ -53,10 +74,11 @@ $color-profile-title:                      $color-base !default;
 	position: relative;
 }
 
-/// Styles for all profile photos.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles for all profile photos.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-photo {
 	@include border-radius( $border-radius-profile-figure );
@@ -69,10 +91,11 @@ $color-profile-title:                      $color-base !default;
 	}
 }
 
-/// Styles for all profile names.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles for all profile names.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-name {
 	color: $color-profile-name;
@@ -80,23 +103,25 @@ $color-profile-title:                      $color-base !default;
 	text-decoration: underline;
 }
 
-/// Styles for all profile titles.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles for all profile titles.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-title {
 	color: $color-profile-title;
 	display: block;
 }
 
-/// Styles for all profile links.
-/// Since links are usually wrapped around the whole profile,
-/// we leave link styling to specific child elements to avoid
-/// visual chaos.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles for all profile links.
+// Since links are usually wrapped around the whole profile,
+// we leave link styling to specific child elements to avoid
+// visual chaos.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-link {
 	display: block;
