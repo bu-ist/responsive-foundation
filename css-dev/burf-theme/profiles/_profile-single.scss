@@ -2,43 +2,72 @@
 // Profile Single Settings
 // =================================================================
 
-/// Controls the color used for labels in the single profile
-/// listing template sidebar.
-/// @group 14-profiles
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Single Profile Information Label Color
+//
+// Controls the color used for labels in the single profile
+// listing template sidebar.
+//
+// Styleguide Profiles.1: Single Profile.a: Information Label Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-profile-info-label:					$color-grayscale-6 !default;
+
+// Single Profile Information Item Color
+//
+// Controls the color used for information items in the single profile
+// listing template sidebar.
+//
+// Styleguide Profiles.1: Single Profile.a: Information Item Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
+
 $color-profile-info-item:					$color-grayscale-5 !default;
 
 // =================================================================
 // Profile Single Styles
 // =================================================================
 
-/// Styles the single profile name - typically the title of the page.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles the single profile name - typically the title of the page.
+//
+// Styleguide Components.1: Profile Item.profile-single-name
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-single-name {
 	margin-bottom: 0;
 	text-align: center;
 }
 
-/// Styles the single profile title - typically the subtitle of the page.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles the single profile title - typically the subtitle of the page.
+//
+// Styleguide Components.1: Profile Item.profile-single-title
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-single-title {
 	text-align: center;
 }
 
-/// Styles the single profile photo.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles the single profile photo.
+//
+// Styleguide Components.1: Profile Item.profile-single-photo
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-single-photo {
 	height: 300px;
@@ -46,10 +75,13 @@ $color-profile-info-item:					$color-grayscale-5 !default;
 	width: 300px;
 }
 
-/// Styles the single profile details sidebar.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles the single profile details sidebar.
+//
+// Styleguide Components.1: Profile Item.profile-single-details
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-single-details {
 	@extend %card-styles;
@@ -62,10 +94,13 @@ $color-profile-info-item:					$color-grayscale-5 !default;
 	}
 }
 
-/// General styles for labels.
-/// @group 09-content
-/// @access public
-/// @since 1.0.0
+// General styles for labels.
+//
+// Styleguide Components.1: Profile Item.label
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .label {
 	@extend %font-size-minimum;
@@ -75,29 +110,38 @@ $color-profile-info-item:					$color-grayscale-5 !default;
 	text-transform: uppercase;
 }
 
-/// Styles the single profile details labels.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles the single profile details labels.
+//
+// Styleguide Components.1: Profile Item.profile-details-label
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-details-label {
 	color: $color-profile-info-label;
 }
 
-/// Styles the single profile details list.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles the single profile details list.
+//
+// Styleguide Components.1: Profile Item.profile-details-list
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-details-list {
 	margin: 0;
 	padding: 0;
 }
 
-/// Styles the single profile details items.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles the single profile details items.
+//
+// Styleguide Components.1: Profile Item.profile-details-item
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-details-item {
 	color: $color-profile-info-item;
