@@ -38,6 +38,7 @@
 	<div class="id-kss-header-wrapper">
 		<nav class="id-kss-main-nav">
 					<a href="section-calendar.html" class="id-kss-main-nav-link">Calendar</a>
+					<a href="section-components.html" class="id-kss-main-nav-link">Components</a>
 					<a href="section-configuration.html" class="id-kss-main-nav-link">Configuration</a>
 					<a href="section-content.html" class="id-kss-main-nav-link">Content</a>
 					<a href="section-forms.html" class="id-kss-main-nav-link">Forms</a>
@@ -547,7 +548,7 @@
 		
 								<span class="id-kss-title-section">1: Buttons</span>
 		
-								<span class="id-kss-title-name">Input styles<a class="id-kss-title__permalink" href="#kssref-forms-1-buttons-a-button-styles">Link</a></span>
+								<span class="id-kss-title-name">Make an element look like a button<a class="id-kss-title__permalink" href="#kssref-forms-1-buttons-a-button-styles">Link</a></span>
 							</h2>
 								<span class="id-kss-author id-kss-author-ashley-kolodziej">Ashley Kolodziej</span>
 								<span class="id-kss-since id-kss-since-1-2-0">
@@ -560,15 +561,23 @@
 									</span>
 		
 							<!--<span class="id-kss-title__ref">
-								4.1.11
+								5.1.11
 								<span class="id-kss-title__permalink-hash">
 										#Forms.1: Buttons.a: %button-styles
 								</span>
 							</span>-->
 						</header>
 							<div class="id-kss-description">
-								<p>Controls button styles for input tags globally.
-		Only to be used with form element tags.</p>
+								<p>This placeholder class controls button styles globally.
+		Extend this class for custom buttons or for elements whose HTML
+		and CSS you don't have control over.</p>
+		<p>May be used on both form element tags and regular links to make
+		them look like buttons.</p>
+		<h4>Examples</h4>
+		<h5>Make a custom toggle look like a button.</h5>
+		<pre><code>		.custom-toggle {
+				@extend %button-styles;
+			}</code></pre>
 		
 							</div>
 		
@@ -576,8 +585,8 @@
 					</div>
 		
 							<span class="id-kss-source id-kss-style">
-								Source: <code>burf-base/_forms.scss, line 749</code>
-									<a href="https://github.com/bu-ist/responsive-foundation/tree/master/css-devburf-base/_forms.scss#L749">
+								Source: <code>burf-base/_forms.scss, line 698</code>
+									<a href="https://github.com/bu-ist/responsive-foundation/tree/master/css-devburf-base/_forms.scss#L698">
 										View Source
 									</a>
 							</span>
@@ -621,21 +630,6 @@
 	});
 	var kssMarkup = new KssMarkup({
 		bodyClass: 'id-kss-markup-mode',
-		detailsClass: 'id-kss-markup'
-	});
-	var kssSearch = new KssSearch({
-		inputID: 'kss-search-field',
-		searchButtonID: 'kss-search-button',
-    	searchAreaClass: '.id-homepage-nav'
-	});
-
-</script>
-
-
-<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
-</body>
-</html>
-dyClass: 'id-kss-markup-mode',
 		detailsClass: 'id-kss-markup'
 	});
 	var kssSearch = new KssSearch({

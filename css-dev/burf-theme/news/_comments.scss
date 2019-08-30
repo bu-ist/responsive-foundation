@@ -221,6 +221,8 @@ $border-width-comment-form:                  3px !default;
 
 // Controls styling for the comments section on posts.
 //
+// Styleguide Components.1: Comments.comments-area
+//
 // Access: Public
 //
 // Since: 1.0.0
@@ -238,6 +240,8 @@ $border-width-comment-form:                  3px !default;
 
 // Controls styling for comment threads on posts.
 //
+// Styleguide Components.1: Comments.comments-list
+//
 // Access: Public
 //
 // Since: 1.0.0
@@ -252,6 +256,8 @@ $border-width-comment-form:                  3px !default;
 }
 
 // Controls styling for the comment container.
+//
+// Styleguide Components.1: Comments.comment
 //
 // Access: Public
 //
@@ -275,6 +281,8 @@ $border-width-comment-form:                  3px !default;
 }
 
 // Controls styling for individual comments on posts.
+//
+// Styleguide Components.1: Comments.comment-body
 //
 // Access: Public
 //
@@ -302,6 +310,8 @@ $border-width-comment-form:                  3px !default;
 
 // Controls styling for the comment reply link.
 //
+// Styleguide Components.1: Comments.comment-reply-link
+//
 // Access: Public
 //
 // Since: 1.0.0
@@ -313,6 +323,8 @@ $border-width-comment-form:                  3px !default;
 
 // Controls styling for the comment author.
 //
+// Styleguide Components.1: Comments.comment-author
+//
 // Access: Public
 //
 // Since: 1.0.0
@@ -323,6 +335,8 @@ $border-width-comment-form:                  3px !default;
 }
 
 // Controls styling for the "says" text after comment author.
+//
+// Styleguide Components.1: Comments.says
 //
 // Access: Public
 //
@@ -337,6 +351,8 @@ $border-width-comment-form:                  3px !default;
 // are often used as a means of communication, both officially and unofficially.
 // Readers need to know how recent the last reliable update was should this happen.
 // Disable or hide only with great caution, only using the `%visually-hidden` placeholder.
+//
+// Styleguide Components.1: Comments.comment-metadata
 //
 // Access: Public
 //
@@ -356,6 +372,8 @@ $border-width-comment-form:                  3px !default;
 
 // Styles the container which holds the comment content.
 //
+// Styleguide Components.1: Comments.comment-content
+//
 // Access: Public
 //
 // Since: 1.0.0
@@ -369,6 +387,8 @@ $border-width-comment-form:                  3px !default;
 }
 
 // Styles the comment form container.
+//
+// Styleguide Components.1: Comments.comment-respond
 //
 // Access: Public
 //
@@ -408,6 +428,8 @@ $border-width-comment-form:                  3px !default;
 
 // Styles the comment form title.
 //
+// Styleguide Components.1: Comments.comment-respond-title
+//
 // Access: Public
 //
 // Since: 1.0.0
@@ -418,6 +440,8 @@ $border-width-comment-form:                  3px !default;
 
 // Styles the container around the comment form submit button.
 //
+// Styleguide Components.1: Comments.comment-form-submit
+//
 // Access: Public
 //
 // Since: 1.0.0
@@ -427,6 +451,8 @@ $border-width-comment-form:                  3px !default;
 }
 
 // Styles "view guidelines" and other helper text in the comment form.
+//
+// Styleguide Components.1: Comments.// Accessibility:
 //
 // Access: Public
 //
@@ -448,6 +474,8 @@ $border-width-comment-form:                  3px !default;
 }
 
 // Styles the comment text area in the comments form.
+//
+// Styleguide Components.1: Comments.comment
 //
 // Access: Public
 //
@@ -471,6 +499,8 @@ $border-width-comment-form:                  3px !default;
 
 // Styles the comment form submit button.
 //
+// Styleguide Components.1: Comments.comment-submit
+//
 // Access: Public
 //
 // Since: 2.0.0
@@ -485,6 +515,8 @@ $border-width-comment-form:                  3px !default;
 // WordPress hides this on the comment form with an inline attribute when
 // the comment is not a reply to another comment. To test this, hit the "Reply"
 // link on any comment. You should be be able to see it.
+//
+// Styleguide Components.1: Comments.cancel-comment-reply
 //
 // Access: Public
 //
