@@ -13,7 +13,7 @@
 // better to adjust `$heading-growth-rate` up, which will weigh the font size distribution
 // more heavily towards the top.
 //
-// Styleguide Typography.1: Factory.a: $_depth-headings
+// Styleguide Typography.Factory.$_depth-headings
 //
 // Access: Private
 //
@@ -30,7 +30,7 @@ $_depth-headings: 6;
 // This directly affects the `<h6>` tag. It indirectly affects all other heading
 // font sizes as well by serving as the lower limit to our scale.
 //
-// Styleguide Configuration.1: Headings.a: Minimum Heading Size
+// Styleguide Configuration.Headings.Minimum Heading Size
 //
 // Access: Public
 //
@@ -45,7 +45,7 @@ $_depth-headings: 6;
 // This directly affects the `<h6>` tag. It indirectly affects all other heading
 // font sizes as well by serving as the lower limit to our scale.
 //
-// Styleguide Typography.1: Headings.a: $min-size-headings
+// Styleguide Typography.Headings.$min-size-headings
 //
 // Access: Public
 //
@@ -62,7 +62,7 @@ $min-size-headings: $font-size-base !default;
 // This directly affects the `<h6>` tag. It indirectly affects all other heading
 // font sizes as well by serving as the lower limit to our scale.
 //
-// Styleguide Configuration.1: Headings.a: Minimum Heading Size (Mobile)
+// Styleguide Configuration.Headings.Minimum Heading Size (Mobile)
 //
 // Access: Public
 //
@@ -77,7 +77,7 @@ $min-size-headings: $font-size-base !default;
 // This directly affects the `<h6>` tag. It indirectly affects all other heading
 // font sizes as well by serving as the lower limit to our scale.
 //
-// Styleguide Typography.1: Headings.a: $min-size-headings-mobile
+// Styleguide Typography.Headings.$min-size-headings-mobile
 //
 // Access: Public
 //
@@ -94,7 +94,7 @@ $min-size-headings-mobile: $min-size-headings !default;
 // It indirectly affects all other heading  font sizes as well by serving as the
 // upper limit to our scale.
 //
-// Styleguide Configuration.1: Headings.a: Maximum Heading Size
+// Styleguide Configuration.Headings.Maximum Heading Size
 //
 // Access: Public
 //
@@ -109,7 +109,7 @@ $min-size-headings-mobile: $min-size-headings !default;
 // It indirectly affects all other heading  font sizes as well by serving as the
 // upper limit to our scale.
 //
-// Styleguide Typography.1: Headings.a: $max-size-headings
+// Styleguide Typography.Headings.$max-size-headings
 //
 // Access: Public
 //
@@ -126,7 +126,7 @@ $max-size-headings: 55px !default;
 // It indirectly affects all other heading  font sizes as well by serving as the
 // upper limit to our scale.
 //
-// Styleguide Configuration.1: Headings.a: Maximum Heading Size (Mobile)
+// Styleguide Configuration.Headings.Maximum Heading Size (Mobile)
 //
 // Access: Public
 //
@@ -141,7 +141,7 @@ $max-size-headings: 55px !default;
 // It indirectly affects all other heading  font sizes as well by serving as the
 // upper limit to our scale.
 //
-// Styleguide Typography.1: Headings.a: $max-size-headings-mobile
+// Styleguide Typography.Headings.$max-size-headings-mobile
 //
 // Access: Public
 //
@@ -157,7 +157,7 @@ $max-size-headings-mobile: 36px !default;
 // In typography, the relationship between font-size and line-height is that larger
 // font-sizes demand lower line-height values to preserve vertical rhythm.
 //
-// Styleguide Configuration.1: Headings.a: Minimum Line Height
+// Styleguide Configuration.Headings.Minimum Line Height
 //
 // Access: Public
 //
@@ -171,7 +171,7 @@ $max-size-headings-mobile: 36px !default;
 // In typography, the relationship between font-size and line-height is that larger
 // font-sizes demand lower line-height values to preserve vertical rhythm.
 //
-// Styleguide Typography.1: Headings.a: $min-line-height
+// Styleguide Typography.Headings.$min-line-height
 //
 // Access: Public
 //
@@ -187,7 +187,7 @@ $min-line-height: 1.15 !default;
 // Because we set the `<h6>` tag to be the same size as our body copy by default,
 // it also gets the same line-height ratio by default.
 //
-// Styleguide Configuration.1: Headings.a: Maximum Line Height
+// Styleguide Configuration.Headings.Maximum Line Height
 //
 // Access: Public
 //
@@ -201,7 +201,7 @@ $min-line-height: 1.15 !default;
 // Because we set the `<h6>` tag to be the same size as our body copy by default,
 // it also gets the same line-height ratio by default.
 //
-// Styleguide Typography.1: Headings.a: $max-line-height
+// Styleguide Typography.Headings.$max-line-height
 //
 // Access: Public
 //
@@ -219,7 +219,7 @@ $max-line-height: $line-height-base !default;
 // A higher number will adjust the font size more dramatically at larger sizes.
 // By default, this is optimized for heavy use of h1-h4, and minimal use of h5 and h6.
 //
-// Styleguide Configuration.1: Headings.a: Heading Growth Rate (Size)
+// Styleguide Configuration.Headings.Heading Growth Rate (Size)
 //
 // Access: Public
 //
@@ -242,7 +242,7 @@ $heading-growth-rate: 3.5 !default;
 // @see calc-size
 // @requires pow - an exponential function in the mathsass library
 //
-// Styleguide Typography.1: Factory.a: calc-scale
+// Styleguide Typography.Factory.calc-scale
 //
 // Access: Public
 //
@@ -278,7 +278,7 @@ $heading-growth-rate: 3.5 !default;
 // @requires pow - an exponential function in the mathsass library
 // @see calc-scale
 //
-// Styleguide Typography.1: Factory.a: calc-size
+// Styleguide Typography.Factory.calc-size
 //
 // Access: Public
 //
@@ -310,7 +310,7 @@ $heading-growth-rate: 3.5 !default;
 //
 // $font-styles-theme must be set BEFORE this file is imported.
 //
-// Styleguide Typography.1: Placeholders and Classes.a: $font-styles-theme
+// Styleguide Typography.Placeholders and Classes.$font-styles-theme
 //
 // Access: Public
 //
@@ -335,7 +335,7 @@ $font-styles: (
 // font sizes on headings. This value is dependent on the heading minimum, maximum,
 // and growth rate; it should never be changed directly. Change those instead.
 //
-// Styleguide Typography.1: Factory.a: $_heading-size-scale
+// Styleguide Typography.Factory.$_heading-size-scale
 //
 // Access: Private
 //
@@ -349,7 +349,7 @@ $_heading-size-scale: calc-scale( $min-size-headings, $max-size-headings, $_dept
 // font sizes on headings on mobile. This value is dependent on the heading minimum, maximum,
 // and growth rate; it should never be changed directly. Change those instead.
 //
-// Styleguide Typography.1: Factory.a: $_heading-size-scale-mobile
+// Styleguide Typography.Factory.$_heading-size-scale-mobile
 //
 // Access: Private
 //
@@ -363,7 +363,7 @@ $_heading-size-scale-mobile: calc-scale( $min-size-headings-mobile, $max-size-he
 // line heights on headings. This value is dependent on the heading minimum, maximum,
 // and growth rate; it should never be changed directly. Change those instead.
 //
-// Styleguide Typography.1: Factory.a: $heading-lh-scale
+// Styleguide Typography.Factory.$heading-lh-scale
 //
 // Access: Private
 //
@@ -452,7 +452,7 @@ $_h: $_depth-headings;
 //			}
 // ```
 //
-// Styleguide Typography.1: Mixins.a: font-size
+// Styleguide Typography.Mixins.font-size
 //
 // Access: Public
 //
@@ -493,7 +493,7 @@ $_h: $_depth-headings;
 //
 // Controls base styles for all heading tags.
 //
-// Styleguide Typography.1: Placeholders and Classes.a: %heading-base
+// Styleguide Typography.Placeholders and Classes.%heading-base
 //
 // Access: Public
 //
@@ -537,7 +537,7 @@ $_h: $_depth-headings;
 //			}
 // ```
 //
-// Styleguide Typography.1: Placeholders and Classes.a: %font-size-1
+// Styleguide Typography.Placeholders and Classes.%font-size-1
 //
 // Access: Public
 //
@@ -558,7 +558,7 @@ $_h: $_depth-headings;
 //			}
 // ```
 //
-// Styleguide Typography.1: Placeholders and Classes.a: %font-size-2
+// Styleguide Typography.Placeholders and Classes.%font-size-2
 //
 // Access: Public
 //
@@ -579,7 +579,7 @@ $_h: $_depth-headings;
 //			}
 // ```
 //
-// Styleguide Typography.1: Placeholders and Classes.a: %font-size-3
+// Styleguide Typography.Placeholders and Classes.%font-size-3
 //
 // Access: Public
 //
@@ -600,7 +600,7 @@ $_h: $_depth-headings;
 //			}
 // ```
 //
-// Styleguide Typography.1: Placeholders and Classes.a: %font-size-4
+// Styleguide Typography.Placeholders and Classes.%font-size-4
 //
 // Access: Public
 //
@@ -621,7 +621,7 @@ $_h: $_depth-headings;
 //			}
 // ```
 //
-// Styleguide Typography.1: Placeholders and Classes.a: %font-size-5
+// Styleguide Typography.Placeholders and Classes.%font-size-5
 //
 // Access: Public
 //
@@ -642,7 +642,7 @@ $_h: $_depth-headings;
 //			}
 // ```
 //
-// Styleguide Typography.1: Placeholders and Classes.a: %font-size-6
+// Styleguide Typography.Placeholders and Classes.%font-size-6
 //
 // Access: Public
 //
@@ -665,7 +665,7 @@ $_h: $_depth-headings;
 //			}
 // ```
 //
-// Styleguide Typography.1: Placeholders and Classes.a: %font-size-maximum
+// Styleguide Typography.Placeholders and Classes.%font-size-maximum
 //
 // Access: Public
 //
@@ -687,7 +687,7 @@ $_h: $_depth-headings;
 //			}
 // ```
 //
-// Styleguide Typography.1: Placeholders and Classes.a: %font-size-minimum
+// Styleguide Typography.Placeholders and Classes.%font-size-minimum
 //
 // Access: Public
 //
@@ -709,7 +709,7 @@ $_h: $_depth-headings;
 //			}
 // ```
 //
-// Styleguide Typography.1: Placeholders and Classes.a: %font-size-secondary
+// Styleguide Typography.Placeholders and Classes.%font-size-secondary
 //
 // Access: Public
 //

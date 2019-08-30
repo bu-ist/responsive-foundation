@@ -6,7 +6,7 @@
 //
 // Base margin for the table tag.
 //
-// Styleguide Content.1: Tables.a: Margin
+// Styleguide Content.Tables.Margin
 //
 // Access: Public
 //
@@ -18,7 +18,7 @@ $table-margin:                             $margin 0 !default;
 //
 // Base padding for the table.
 //
-// Styleguide Content.1: Tables.a: Padding
+// Styleguide Content.Tables.Padding
 //
 // Access: Public
 //
@@ -30,7 +30,7 @@ $table-padding:                            0.5em 1em !default;
 //
 // Default border for tables.
 //
-// Styleguide Content.1: Tables.a: Border
+// Styleguide Content.Tables.Border
 //
 // Access: Public
 //
@@ -42,7 +42,7 @@ $table-border:                             $border !default;
 //
 // Default color for table headings.
 //
-// Styleguide Content.1: Tables.a: Table Heading Color
+// Styleguide Content.Tables.Table Heading Color
 //
 // Access: Public
 //
@@ -56,7 +56,7 @@ $color-table-head:                         $color-heading !default;
 //
 // Default background for table headings.
 //
-// Styleguide Content.1: Tables.a: Table Heading Background Color
+// Styleguide Content.Tables.Table Heading Background Color
 //
 // Access: Public
 //
@@ -70,7 +70,7 @@ $table-head-bg:                            $color-grayscale-e !default;
 //
 // Default padding for table captions.
 //
-// Styleguide Content.1: Tables.a: Caption Padding
+// Styleguide Content.Tables.Caption Padding
 //
 // Access: Public
 //
@@ -82,7 +82,7 @@ $table-caption-padding:                    0 0 10px !default;
 //
 // Default color for table captions.
 //
-// Styleguide Content.1: Tables.a: Caption Color
+// Styleguide Content.Tables.Caption Color
 //
 // Access: Public
 //
@@ -95,7 +95,7 @@ $color-table-caption:                      $color-grayscale-6 !default;
 // Table Striped Background Color
 // Default background for striped table backgrounds.
 //
-// Styleguide Content.1: Tables.a: Striped Background Color
+// Styleguide Content.Tables.Striped Background Color
 //
 // Access: Public
 //
@@ -172,7 +172,7 @@ table {
 //
 // Adds stripes to tables using the `table-striped` class.
 //
-// Styleguide Content.1: Tables.a: Striped Table Class
+// Styleguide Content.Tables.Striped Table Class
 //
 // Access: Public
 //
@@ -193,7 +193,7 @@ table {
 // Adds both horizontal and vertical borders
 // using the `table-bordered` class.
 //
-// Styleguide Content.1: Tables.a: Bordered Table Class
+// Styleguide Content.Tables.Bordered Table Class
 //
 // Access: Public
 //
@@ -213,7 +213,7 @@ table {
 // Switches the border on tables from vertical to horizontal
 // using the `table-horizontal` class.
 //
-// Styleguide Content.1: Tables.a: Horizontal Table Class
+// Styleguide Content.Tables.Horizontal Table Class
 //
 // Access: Public
 //

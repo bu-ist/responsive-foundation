@@ -6,7 +6,7 @@
 //
 // Controls the style of border used on the content navigation list.
 //
-// Styleguide Widgets.1: Content Navigation.a: Border
+// Styleguide Widgets.Content Navigation.Border
 //
 // Access: Public
 //
@@ -18,7 +18,7 @@ $border-widget-contentnav:                 $border !default;
 //
 // Controls the font family used in the content navigation widget.
 //
-// Styleguide Widgets.1: Content Navigation.a: Font Family
+// Styleguide Widgets.Content Navigation.Font Family
 //
 // Access: Public
 //
@@ -31,7 +31,7 @@ $font-family-widget-contentnav:             $font-family-sans-serif !default;
 // Controls the font size used for items on the first level in the
 // content navigation widget.
 //
-// Styleguide Widgets.1: Content Navigation.a: Font Size
+// Styleguide Widgets.Content Navigation.Font Size
 //
 // Access: Public
 //
@@ -44,7 +44,7 @@ $font-size-widget-contentnav-link:          inherit !default;
 // Controls the font size used for items below the first level in the
 // content navigation widget.
 //
-// Styleguide Widgets.1: Content Navigation.a: Nested Link Color
+// Styleguide Widgets.Content Navigation.Nested Link Color
 //
 // Access: Public
 //
@@ -56,7 +56,7 @@ $font-size-widget-contentnav-nested-link:    inherit !default;
 //
 // Controls the color of nav items in the content navigation widget.
 //
-// Styleguide Widgets.1: Content Navigation.a: Link Color
+// Styleguide Widgets.Content Navigation.Link Color
 //
 // Access: Public
 //
@@ -70,7 +70,7 @@ $color-widget-contentnav:                  $color-link !default;
 //
 // Controls the color of nav items when you hover in the content navigation widget.
 //
-// Styleguide Widgets.1: Content Navigation.a: Link Hover
+// Styleguide Widgets.Content Navigation.Link Hover
 //
 // Access: Public
 //
@@ -84,7 +84,7 @@ $color-widget-contentnav-hover:            $color-link !default;
 //
 // Controls the active color of nav items in the content navigation widget.
 //
-// Styleguide Widgets.1: Content Navigation.a: Link Active
+// Styleguide Widgets.Content Navigation.Link Active
 //
 // Access: Public
 //
@@ -101,7 +101,7 @@ $color-widget-contentnav-active:           $color-link-active !default;
 
 // Handles styling for content navigation widgets (BU Pages and Content Navigation, aka side nav).
 //
-// Styleguide Components.1: Widgets.widget_bu_pages
+// Styleguide Components.Widgets.widget_bu_pages
 //
 // Access: Public
 //
@@ -109,7 +109,7 @@ $color-widget-contentnav-active:           $color-link-active !default;
 
 // Handles styling for content navigation widgets (BU Pages and Content Navigation, aka side nav).
 //
-// Styleguide Components.1: Widgets.widget_nav_menu
+// Styleguide Components.Widgets.widget_nav_menu
 //
 // Access: Public
 //

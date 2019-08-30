@@ -6,7 +6,7 @@
 //
 // Controls the amount of spacing between comment threads on a post.
 //
-// Styleguide News.1: Comments.a: Comment Margin
+// Styleguide News.Comments.Comment Margin
 //
 // Access: Public
 //
@@ -18,7 +18,7 @@ $comment-margin:                           $margin !default;
 //
 // Controls the amount of spacing between comment threads on a post on mobile.
 //
-// Styleguide News.1: Comments.a: Comment Margin Mobile
+// Styleguide News.Comments.Comment Margin Mobile
 //
 // Access: Public
 //
@@ -31,7 +31,7 @@ $comment-margin-mobile:               		 $margin-small !default;
 // Controls the amount of spacing between comments within a thread on desktop.
 // By default, there is no margin between comments on mobile.
 //
-// Styleguide News.1: Comments.a: Reply Margin
+// Styleguide News.Comments.Reply Margin
 //
 // Access: Public
 //
@@ -43,7 +43,7 @@ $comment-reply-margin:                     $margin-small !default;
 //
 // Controls the amount of space a reply comment is indented from the parent.
 //
-// Styleguide News.1: Comments.a: Reply Depth
+// Styleguide News.Comments.Reply Depth
 //
 // Access: Public
 //
@@ -55,7 +55,7 @@ $comment-reply-depth:                      $margin-small !default;
 //
 // Controls the amount of space a reply comment is indented from the parent on mobile.
 //
-// Styleguide News.1: Comments.a: Reply Depth Mobile
+// Styleguide News.Comments.Reply Depth Mobile
 //
 // Access: Public
 //
@@ -67,7 +67,7 @@ $comment-reply-depth-mobile:               $comment-reply-depth / 3 !default;
 //
 // Controls the border style between comments on a post.
 //
-// Styleguide News.1: Comments.a: Comment Border
+// Styleguide News.Comments.Comment Border
 //
 // Access: Public
 //
@@ -79,7 +79,7 @@ $border-comment:                           $border !default;
 //
 // Controls the border width between comments on a post.
 //
-// Styleguide News.1: Comments.a: Comment Border Width
+// Styleguide News.Comments.Comment Border Width
 //
 // Access: Public
 //
@@ -91,7 +91,7 @@ $border-width-comment:                      1px 1px 1px 5px !default;
 //
 // Controls the amount of spacing within comments.
 //
-// Styleguide News.1: Comments.a: Comment Padding
+// Styleguide News.Comments.Comment Padding
 //
 // Access: Public
 //
@@ -103,7 +103,7 @@ $comment-padding:                           $padding-small !default;
 //
 // Controls the amount of spacing within comments on mobile.
 //
-// Styleguide News.1: Comments.a: Comment Padding Mobile
+// Styleguide News.Comments.Comment Padding Mobile
 //
 // Access: Public
 //
@@ -115,7 +115,7 @@ $comment-padding-mobile:                           $padding-small !default;
 //
 // Controls the font family used for comments on a post.
 //
-// Styleguide News.1: Comments.a: Comment Font Family
+// Styleguide News.Comments.Comment Font Family
 //
 // Access: Public
 //
@@ -127,7 +127,7 @@ $font-family-comment:                       $font-family-sans-serif !default;
 //
 // Controls the color of comments on a post.
 //
-// Styleguide News.1: Comments.a: Comment Color
+// Styleguide News.Comments.Comment Color
 //
 // Access: Public
 //
@@ -141,7 +141,7 @@ $color-comments:                           $color-base !default;
 //
 // Controls the color of replies to comments on a post.
 //
-// Styleguide News.1: Comments.a: Reply Color
+// Styleguide News.Comments.Reply Color
 //
 // Access: Public
 //
@@ -155,7 +155,7 @@ $color-comment-reply:                      $color-grayscale-6 !default;
 //
 // Controls the color of the author name in a comment.
 //
-// Styleguide News.1: Comments.a: Author Color
+// Styleguide News.Comments.Author Color
 //
 // Access: Public
 //
@@ -169,7 +169,7 @@ $color-comment-author-name:                 $color-grayscale-0 !default;
 //
 // Controls the color of the "says" text after author name in a comment.
 //
-// Styleguide News.1: Comments.a: Says Color
+// Styleguide News.Comments.Says Color
 //
 // Access: Public
 //
@@ -183,7 +183,7 @@ $color-comment-author-says:                     $color-grayscale-6 !default;
 //
 // Controls the background color of the comment submission form.
 //
-// Styleguide News.1: Comments.a: Submission Background Color
+// Styleguide News.Comments.Submission Background Color
 //
 // Access: Public
 //
@@ -195,7 +195,7 @@ $color-comment-form-bg:                     $color-grayscale-f5 !default;
 //
 // Controls the border style on the comment submission form.
 //
-// Styleguide News.1: Comments.a: Submission Border
+// Styleguide News.Comments.Submission Border
 //
 // Access: Public
 //
@@ -207,7 +207,7 @@ $border-comment-form:                       $border !default;
 //
 // Controls the border width on the comment submission form.
 //
-// Styleguide News.1: Comments.a: Submission Border Width
+// Styleguide News.Comments.Submission Border Width
 //
 // Access: Public
 //
@@ -221,7 +221,7 @@ $border-width-comment-form:                  3px !default;
 
 // Controls styling for the comments section on posts.
 //
-// Styleguide Components.1: Comments.comments-area
+// Styleguide Components.Comments.comments-area
 //
 // Access: Public
 //
@@ -240,7 +240,7 @@ $border-width-comment-form:                  3px !default;
 
 // Controls styling for comment threads on posts.
 //
-// Styleguide Components.1: Comments.comments-list
+// Styleguide Components.Comments.comments-list
 //
 // Access: Public
 //
@@ -257,7 +257,7 @@ $border-width-comment-form:                  3px !default;
 
 // Controls styling for the comment container.
 //
-// Styleguide Components.1: Comments.comment
+// Styleguide Components.Comments.comment
 //
 // Access: Public
 //
@@ -282,7 +282,7 @@ $border-width-comment-form:                  3px !default;
 
 // Controls styling for individual comments on posts.
 //
-// Styleguide Components.1: Comments.comment-body
+// Styleguide Components.Comments.comment-body
 //
 // Access: Public
 //
@@ -310,7 +310,7 @@ $border-width-comment-form:                  3px !default;
 
 // Controls styling for the comment reply link.
 //
-// Styleguide Components.1: Comments.comment-reply-link
+// Styleguide Components.Comments.comment-reply-link
 //
 // Access: Public
 //
@@ -323,7 +323,7 @@ $border-width-comment-form:                  3px !default;
 
 // Controls styling for the comment author.
 //
-// Styleguide Components.1: Comments.comment-author
+// Styleguide Components.Comments.comment-author
 //
 // Access: Public
 //
@@ -336,7 +336,7 @@ $border-width-comment-form:                  3px !default;
 
 // Controls styling for the "says" text after comment author.
 //
-// Styleguide Components.1: Comments.says
+// Styleguide Components.Comments.says
 //
 // Access: Public
 //
@@ -352,7 +352,7 @@ $border-width-comment-form:                  3px !default;
 // Readers need to know how recent the last reliable update was should this happen.
 // Disable or hide only with great caution, only using the `%visually-hidden` placeholder.
 //
-// Styleguide Components.1: Comments.comment-metadata
+// Styleguide Components.Comments.comment-metadata
 //
 // Access: Public
 //
@@ -372,7 +372,7 @@ $border-width-comment-form:                  3px !default;
 
 // Styles the container which holds the comment content.
 //
-// Styleguide Components.1: Comments.comment-content
+// Styleguide Components.Comments.comment-content
 //
 // Access: Public
 //
@@ -388,7 +388,7 @@ $border-width-comment-form:                  3px !default;
 
 // Styles the comment form container.
 //
-// Styleguide Components.1: Comments.comment-respond
+// Styleguide Components.Comments.comment-respond
 //
 // Access: Public
 //
@@ -428,7 +428,7 @@ $border-width-comment-form:                  3px !default;
 
 // Styles the comment form title.
 //
-// Styleguide Components.1: Comments.comment-respond-title
+// Styleguide Components.Comments.comment-respond-title
 //
 // Access: Public
 //
@@ -440,7 +440,7 @@ $border-width-comment-form:                  3px !default;
 
 // Styles the container around the comment form submit button.
 //
-// Styleguide Components.1: Comments.comment-form-submit
+// Styleguide Components.Comments.comment-form-submit
 //
 // Access: Public
 //
@@ -452,7 +452,7 @@ $border-width-comment-form:                  3px !default;
 
 // Styles "view guidelines" and other helper text in the comment form.
 //
-// Styleguide Components.1: Comments.// Accessibility:
+// Styleguide Components.Comments.form-tip
 //
 // Access: Public
 //
@@ -475,7 +475,7 @@ $border-width-comment-form:                  3px !default;
 
 // Styles the comment text area in the comments form.
 //
-// Styleguide Components.1: Comments.comment
+// Styleguide Components.Comments.comment
 //
 // Access: Public
 //
@@ -499,7 +499,7 @@ $border-width-comment-form:                  3px !default;
 
 // Styles the comment form submit button.
 //
-// Styleguide Components.1: Comments.comment-submit
+// Styleguide Components.Comments.comment-submit
 //
 // Access: Public
 //
@@ -516,7 +516,7 @@ $border-width-comment-form:                  3px !default;
 // the comment is not a reply to another comment. To test this, hit the "Reply"
 // link on any comment. You should be be able to see it.
 //
-// Styleguide Components.1: Comments.cancel-comment-reply
+// Styleguide Components.Comments.cancel-comment-reply
 //
 // Access: Public
 //

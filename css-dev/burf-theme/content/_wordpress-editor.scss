@@ -6,7 +6,7 @@
 //
 // The margin to use around anything floated in the content area.
 //
-// Styleguide WordPress.1: Visual Editor.a: Floated Content Margin
+// Styleguide WordPress.Visual Editor.Floated Content Margin
 //
 // Access: Public
 //
@@ -18,7 +18,7 @@ $margin-floated-content: 						 $margin-small !default;
 //
 // The font to use for captions.
 //
-// Styleguide WordPress.1: Visual Editor.a: Caption Font
+// Styleguide WordPress.Visual Editor.Caption Font
 //
 // Access: Public
 //
@@ -30,7 +30,7 @@ $font-family-caption:                       $font-family-sans-serif !default;
 //
 // The color to use for captions.
 //
-// Styleguide WordPress.1: Visual Editor.a: Caption Color
+// Styleguide WordPress.Visual Editor.Caption Color
 //
 // Access: Public
 //
@@ -44,7 +44,7 @@ $color-caption:                            $color-grayscale-6 !default;
 //
 // The shadow to use in tables.
 //
-// Styleguide Content.1: Tables.a: Table Shadow
+// Styleguide Content.Tables.Table Shadow
 //
 // Access: Public
 //
@@ -153,7 +153,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 // to a unique class, and adjusting the padding-bottom value on that class
 // to match the aspect ratio you're looking for.
 //
-// Styleguide Content.1: Video.a: Responsive Video Placeholder
+// Styleguide Content.Video.Responsive Video Placeholder
 //
 // Access: Public
 //
@@ -183,7 +183,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 // Wrap this around any video or iframe which is not supported by oEmbed,
 // or if you are manually putting in HTML for a video for some reason.
 //
-// Styleguide Content.1: Video.a: Responsive Video Class
+// Styleguide Content.Video.Responsive Video Class
 //
 // Access: Public
 //
@@ -226,7 +226,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 // The class WordPress generates when you align something right in the
 // visual editor.
 //
-// Styleguide WordPress.1: Visual Editor.a: Align Right Class
+// Styleguide WordPress.Visual Editor.Align Right Class
 //
 // Access: Public
 //
@@ -246,7 +246,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 // The class WordPress generates when you align something left in the
 // visual editor.
 //
-// Styleguide WordPress.1: Visual Editor.a: Align Left Class
+// Styleguide WordPress.Visual Editor.Align Left Class
 //
 // Access: Public
 //
@@ -266,7 +266,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 // The class WordPress generates when you center something in the
 // visual editor.
 //
-// Styleguide WordPress.1: Visual Editor.a: Align Center Class
+// Styleguide WordPress.Visual Editor.Align Center Class
 //
 // Access: Public
 //
@@ -300,7 +300,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 // You must wrap the class this uses around a table for it to work. It will
 // not work if you just put it on the table.
 //
-// Styleguide Content.1: Tables.a: Responsive Table Placeholder
+// Styleguide Content.Tables.Responsive Table Placeholder
 //
 // Access: Public
 //
@@ -336,7 +336,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 // You must wrap the table in a div with this class. It will not work if you
 // put it directly on the table.
 //
-// Styleguide Content.1: Tables.a: Responsive Table Class
+// Styleguide Content.Tables.Responsive Table Class
 //
 // Access: Public
 //

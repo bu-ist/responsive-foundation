@@ -13,7 +13,7 @@
 // The font family to use for icons across the site.
 // Change this to use a different homegrown font family.
 //
-// Styleguide Utilities.1: Icons.a: Icon font
+// Styleguide Utilities.Icons.Icon font
 //
 // Access: Public
 //
@@ -25,7 +25,7 @@ $font-family-icons:                     	 "bu-default-icons" !default;
 //
 // The font size to use for icons across the site.
 //
-// Styleguide Utilities.1: Icons.a: Icon size
+// Styleguide Utilities.Icons.Icon size
 //
 // Access: Public
 //
@@ -39,7 +39,7 @@ $font-size-icon: 									 21px !default;
 // By default, this will inherit the color of the text in the container the icon lives in.
 // Setting this will keep the color of the icons consistent everywhere.
 //
-// Styleguide Utilities.1: Icons.a: Icon color
+// Styleguide Utilities.Icons.Icon color
 //
 // Access: Public
 //
@@ -55,7 +55,7 @@ $color-icons:										 unset !default;
 // You probably don't actually want to use this unless you're working
 // on Responsive. Use the icon mixin instead.
 //
-// Styleguide Utilities.1: Icons.a: Icon base mixin
+// Styleguide Utilities.Icons.Icon base mixin
 //
 // Access: Private
 //
@@ -80,7 +80,7 @@ $color-icons:										 unset !default;
 // You probably don't actually want to use this unless you're working
 // on Responsive. Use the icon mixin instead.
 //
-// Styleguide Utilities.1: Icons.a: Icon content mixin
+// Styleguide Utilities.Icons.Icon content mixin
 //
 // Access: Public
 //
@@ -113,7 +113,7 @@ $color-icons:										 unset !default;
 // You probably don't actually want to use this unless you're working
 // on Responsive. Use the icon mixin instead.
 //
-// Styleguide Utilities.1: Icons.a: Icon content placeholder before
+// Styleguide Utilities.Icons.Icon content placeholder before
 //
 // Access: Public
 //
@@ -134,7 +134,7 @@ $color-icons:										 unset !default;
 // You probably don't actually want to use this unless you're working
 // on Responsive. Use the icon mixin instead.
 //
-// Styleguide Utilities.1: Icons.a: Icon content placeholder after
+// Styleguide Utilities.Icons.Icon content placeholder after
 //
 // Access: Public
 //
@@ -156,7 +156,7 @@ $color-icons:										 unset !default;
 // inside a media query. Setting this to true is really
 // only beneficial for generating the default placeholders.
 //
-// Styleguide Utilities.1: Icons.a: Icon Mixin
+// Styleguide Utilities.Icons.Icon Mixin
 //
 // Access: Public
 //

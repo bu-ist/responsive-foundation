@@ -8,7 +8,7 @@
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Configuration.1: Forms.a: Form Font
+// Styleguide Configuration.Forms.Form Font
 //
 // Access: Public
 //
@@ -20,7 +20,7 @@
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Forms.1: General Settings.a: $font-family-form
+// Styleguide Forms.General Settings.$font-family-form
 //
 // Access: Public
 //
@@ -34,7 +34,7 @@ $font-family-form:                          $font-family-sans-serif !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Configuration.1: Forms.a: Legend Border
+// Styleguide Configuration.Forms.Legend Border
 //
 // Access: Public
 //
@@ -46,7 +46,7 @@ $font-family-form:                          $font-family-sans-serif !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Forms.1: Legends.a: $form-legend-border
+// Styleguide Forms.Legends.$form-legend-border
 //
 // Access: Public
 //
@@ -60,7 +60,7 @@ $form-legend-border:                        $border !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Configuration.1: Forms.a: Legend Margin
+// Styleguide Configuration.Forms.Legend Margin
 //
 // Access: Public
 //
@@ -72,7 +72,7 @@ $form-legend-border:                        $border !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Forms.1: Legends.a: $form-legend-margin
+// Styleguide Forms.Legends.$form-legend-margin
 //
 // Access: Public
 //
@@ -86,7 +86,7 @@ $form-legend-margin:                       0 0 $margin !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Configuration.1: Forms.a: Legend Padding
+// Styleguide Configuration.Forms.Legend Padding
 //
 // Access: Public
 //
@@ -98,7 +98,7 @@ $form-legend-margin:                       0 0 $margin !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Forms.1: Legends.a: $form-legend-padding
+// Styleguide Forms.Legends.$form-legend-padding
 //
 // Access: Public
 //
@@ -112,7 +112,7 @@ $form-legend-padding:                      0 0 0.5em !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Configuration.1: Forms.a: Fieldset Border
+// Styleguide Configuration.Forms.Fieldset Border
 //
 // Access: Public
 //
@@ -124,7 +124,7 @@ $form-legend-padding:                      0 0 0.5em !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Forms.1: Fieldsets.a: $form-fieldset-border
+// Styleguide Forms.Fieldsets.$form-fieldset-border
 //
 // Access: Public
 //
@@ -138,7 +138,7 @@ $form-fieldset-border:                     0 !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Configuration.1: Forms.a: Fieldset Margin
+// Styleguide Configuration.Forms.Fieldset Margin
 //
 // Access: Public
 //
@@ -150,7 +150,7 @@ $form-fieldset-border:                     0 !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Forms.1: Fieldsets.a: $form-fieldset-margin
+// Styleguide Forms.Fieldsets.$form-fieldset-margin
 //
 // Access: Public
 //
@@ -164,7 +164,7 @@ $form-fieldset-margin:                     $margin 0 !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Configuration.1: Forms.a: Fieldset Padding
+// Styleguide Configuration.Forms.Fieldset Padding
 //
 // Access: Public
 //
@@ -176,7 +176,7 @@ $form-fieldset-margin:                     $margin 0 !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Forms.1: Fieldsets.a: $form-fieldset-padding
+// Styleguide Forms.Fieldsets.$form-fieldset-padding
 //
 // Access: Public
 //
@@ -190,7 +190,7 @@ $form-fieldset-padding:                    0 !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Configuration.1: Forms.a: Label Margin
+// Styleguide Configuration.Forms.Label Margin
 //
 // Access: Public
 //
@@ -202,7 +202,7 @@ $form-fieldset-padding:                    0 !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Forms.1: Labels.a: $form-label-margin
+// Styleguide Forms.General Settings.$form-label-margin
 //
 // Access: Public
 //
@@ -216,7 +216,7 @@ $form-label-margin:                        0.5em 0 !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Configuration.1: Forms.a: Row Margin
+// Styleguide Configuration.Forms.Row Margin
 //
 // Access: Public
 //
@@ -228,7 +228,7 @@ $form-label-margin:                        0.5em 0 !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Forms.1: Rows.a: $form-row-margin
+// Styleguide Forms.General Settings.$form-row-margin
 //
 // Access: Public
 //
@@ -242,7 +242,7 @@ $form-row-margin:                          0 0 $margin-small !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Configuration.1: Forms.a: Input Margin
+// Styleguide Configuration.Forms.Input Margin
 //
 // Access: Public
 //
@@ -254,7 +254,7 @@ $form-row-margin:                          0 0 $margin-small !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Forms.1: Inputs.a: $form-input-margin
+// Styleguide Forms.Inputs.$form-input-margin
 //
 // Access: Public
 //
@@ -268,7 +268,7 @@ $form-input-margin:                        0 0 $margin-small !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Configuration.1: Forms.a: Input Padding
+// Styleguide Configuration.Forms.Input Padding
 //
 // Access: Public
 //
@@ -280,7 +280,7 @@ $form-input-margin:                        0 0 $margin-small !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Forms.1: Inputs.a: $form-input-padding
+// Styleguide Forms.Inputs.$form-input-padding
 //
 // Access: Public
 //
@@ -294,7 +294,7 @@ $form-input-padding:                       0.5em !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Configuration.1: Forms.a: Input Border
+// Styleguide Configuration.Forms.Input Border
 //
 // Access: Public
 //
@@ -306,7 +306,7 @@ $form-input-padding:                       0.5em !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Forms.1: Inputs.a: $form-input-border
+// Styleguide Forms.Inputs.$form-input-border
 //
 // Access: Public
 //
@@ -320,7 +320,7 @@ $form-input-border:                        $border !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Configuration.1: Forms.a: Input Shadow
+// Styleguide Configuration.Forms.Input Shadow
 //
 // Access: Public
 //
@@ -332,7 +332,7 @@ $form-input-border:                        $border !default;
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Forms.1: Inputs.a: $form-input-shadow
+// Styleguide Forms.Inputs.$form-input-shadow
 //
 // Access: Public
 //
@@ -346,7 +346,7 @@ $form-input-shadow:                        inset 0 1px 3px $color-grayscale-e !d
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Configuration.1: Forms.a: Input Border Radius
+// Styleguide Configuration.Forms.Input Border Radius
 //
 // Access: Public
 //
@@ -358,7 +358,7 @@ $form-input-shadow:                        inset 0 1px 3px $color-grayscale-e !d
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Forms.1: Inputs.a: $form-input-border-radius
+// Styleguide Forms.Inputs.$form-input-border-radius
 //
 // Access: Public
 //
@@ -374,7 +374,7 @@ $form-input-border-radius:                 0 !default;
 // to ensure it is still clear which item is keyboard
 // focused afterwards.
 //
-// Styleguide Configuration.1: Forms.a: Input Focus Shadow
+// Styleguide Configuration.Forms.Input Focus Shadow
 //
 // Access: Public
 //
@@ -388,7 +388,7 @@ $form-input-border-radius:                 0 !default;
 // to ensure it is still clear which item is keyboard
 // focused afterwards.
 //
-// Styleguide Forms.1: Inputs.a: $form-input-focus-shadow
+// Styleguide Forms.Inputs.$form-input-focus-shadow
 //
 // Access: Public
 //
@@ -407,7 +407,7 @@ $form-input-focus-shadow:                  0 0 4px 0 rgba( 18, 159, 234, 0.2 ) !
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Configuration.1: Forms.a: Input Focus Border Color
+// Styleguide Configuration.Forms.Input Focus Border Color
 //
 // Access: Public
 //
@@ -424,7 +424,7 @@ $form-input-focus-shadow:                  0 0 4px 0 rgba( 18, 159, 234, 0.2 ) !
 // Note: this style may not apply to Gravity Forms
 // due to overly specific plugin CSS.
 //
-// Styleguide Forms.1: Inputs.a: $color-input-focus-border
+// Styleguide Forms.Inputs.$color-input-focus-border
 //
 // Access: Public
 //
@@ -437,7 +437,7 @@ $color-input-focus-border:                 #129fea !default;
 // Controls the font used on all buttons and
 // things that looks like buttons across the site.
 //
-// Styleguide Configuration.1: Buttons.a: Button Font Family
+// Styleguide Configuration.Buttons.Button Font Family
 //
 // Access: Public
 //
@@ -448,7 +448,7 @@ $color-input-focus-border:                 #129fea !default;
 // Controls the font used on all buttons and
 // things that looks like buttons across the site.
 //
-// Styleguide Forms.1: Buttons.a: $font-family-button
+// Styleguide Forms.Buttons.$font-family-button
 //
 // Access: Public
 //
@@ -461,7 +461,7 @@ $font-family-button:                       $font-family-sans-serif !default;
 // Controls the font size used on all buttons and
 // things that looks like buttons across the site.
 //
-// Styleguide Configuration.1: Buttons.a: Button Font Size
+// Styleguide Configuration.Buttons.Button Font Size
 //
 // Access: Public
 //
@@ -472,7 +472,7 @@ $font-family-button:                       $font-family-sans-serif !default;
 // Controls the font size used on all buttons and
 // things that looks like buttons across the site.
 //
-// Styleguide Forms.1: Buttons.a: $font-size-button
+// Styleguide Forms.Buttons.$font-size-button
 //
 // Access: Public
 //
@@ -485,7 +485,7 @@ $font-size-button:                         inherit !default;
 // Controls the background color used on all buttons and
 // things that looks like buttons across the site.
 //
-// Styleguide Configuration.1: Buttons.a: Button Background Color
+// Styleguide Configuration.Buttons.Button Background Color
 //
 // Accessibility: AA
 //
@@ -498,7 +498,7 @@ $font-size-button:                         inherit !default;
 // Controls the background color used on all buttons and
 // things that looks like buttons across the site.
 //
-// Styleguide Forms.1: Buttons.a: $color-button-bg
+// Styleguide Forms.Buttons.$color-button-bg
 //
 // Accessibility: AA
 //
@@ -513,7 +513,7 @@ $color-button-bg:                          $color-grayscale-e !default;
 // Controls the text color used on default buttons and
 // things that looks like buttons across the site.
 //
-// Styleguide Configuration.1: Buttons.a: Button Text Color
+// Styleguide Configuration.Buttons.Button Text Color
 //
 // Accessibility: AA
 //
@@ -526,7 +526,7 @@ $color-button-bg:                          $color-grayscale-e !default;
 // Controls the text color used on default buttons and
 // things that looks like buttons across the site.
 //
-// Styleguide Forms.1: Buttons.a: $color-button-text
+// Styleguide Forms.Buttons.$color-button-text
 //
 // Accessibility: AA
 //
@@ -541,7 +541,7 @@ $color-button-text:                        $color-grayscale-4 !default;
 // Controls the background color used on all primary buttons and
 // things that looks like primary buttons across the site.
 //
-// Styleguide Configuration.1: Buttons.a: Primary Button Background Color
+// Styleguide Configuration.Buttons.Primary Button Background Color
 //
 // Accessibility: AA
 //
@@ -554,7 +554,7 @@ $color-button-text:                        $color-grayscale-4 !default;
 // Controls the background color used on all primary buttons and
 // things that looks like buttons across the site.
 //
-// Styleguide Forms.1: Buttons.a: $color-button-primary-bg
+// Styleguide Forms.Buttons.$color-button-primary-bg
 //
 // Accessibility: AA
 //
@@ -569,7 +569,7 @@ $color-button-primary-bg:                  #0074E0 !default;
 // Controls the text color used on primary buttons and
 // things that looks like buttons across the site.
 //
-// Styleguide Configuration.1: Buttons.a: Primary Button Text Color
+// Styleguide Configuration.Buttons.Primary Button Text Color
 //
 // Accessibility: AA
 //
@@ -582,7 +582,7 @@ $color-button-primary-bg:                  #0074E0 !default;
 // Controls the text color used on primary buttons and
 // things that looks like buttons across the site.
 //
-// Styleguide Forms.1: Buttons.a: $color-button-primary-text
+// Styleguide Forms.Buttons.$color-button-primary-text
 //
 // Accessibility: AA
 //
@@ -597,7 +597,7 @@ $color-button-primary-text:                $color-grayscale-f !default;
 // Controls the margin used on all buttons and
 // things that looks like buttons across the site.
 //
-// Styleguide Configuration.1: Buttons.a: Button Margin
+// Styleguide Configuration.Buttons.Button Margin
 //
 // Access: Public
 //
@@ -608,7 +608,7 @@ $color-button-primary-text:                $color-grayscale-f !default;
 // Controls the margin used on all buttons and
 // things that looks like buttons across the site.
 //
-// Styleguide Forms.1: Buttons.a: $margin-button
+// Styleguide Forms.Buttons.$margin-button
 //
 // Access: Public
 //
@@ -621,7 +621,7 @@ $margin-button:                            0 $margin-small $margin-small 0 !defa
 // Controls the padding used on all buttons and
 // things that looks like buttons across the site.
 //
-// Styleguide Configuration.1: Buttons.a: Button Padding
+// Styleguide Configuration.Buttons.Button Padding
 //
 // Access: Public
 //
@@ -632,7 +632,7 @@ $margin-button:                            0 $margin-small $margin-small 0 !defa
 // Controls the padding used on all buttons and
 // things that looks like buttons across the site.
 //
-// Styleguide Forms.1: Buttons.a: $padding-button
+// Styleguide Forms.Buttons.$padding-button
 //
 // Access: Public
 //
@@ -645,7 +645,7 @@ $padding-button:                           0.5em 1em !default;
 // Controls the border used on all buttons and
 // things that looks like buttons across the site.
 //
-// Styleguide Configuration.1: Buttons.a: Button Border
+// Styleguide Configuration.Buttons.Button Border
 //
 // Access: Public
 //
@@ -656,7 +656,7 @@ $padding-button:                           0.5em 1em !default;
 // Controls the border used on all buttons and
 // things that looks like buttons across the site.
 //
-// Styleguide Forms.1: Buttons.a: $$border-button
+// Styleguide Forms.Buttons.$border-button
 //
 // Access: Public
 //
@@ -669,7 +669,7 @@ $border-button:                            0;
 // Controls the border radius used on all buttons and
 // things that looks like buttons across the site.
 //
-// Styleguide Configuration.1: Buttons.a: Button Border Radius
+// Styleguide Configuration.Buttons.Button Border Radius
 //
 // Access: Public
 //
@@ -680,7 +680,7 @@ $border-button:                            0;
 // Controls the border radius used on all buttons and
 // things that looks like buttons across the site.
 //
-// Styleguide Forms.1: Buttons.a: $border-radius-button
+// Styleguide Forms.Buttons.$border-radius-button
 //
 // Access: Public
 //
@@ -711,7 +711,7 @@ $border-radius-button:                     2px !default;
 //				@extend %button-styles;
 //			}
 //
-// Styleguide Forms.1: Buttons.a: %button-styles
+// Styleguide Forms.Buttons.%button-styles
 //
 // Author: Ashley Kolodziej
 //
@@ -751,7 +751,7 @@ $border-radius-button:                     2px !default;
 // Controls button styles for input tags globally.
 // Only to be used with form element tags.
 //
-// Styleguide Forms.1: Buttons.a: %button-styles
+// Styleguide Forms.Buttons.%button-styles
 //
 // Author: Ashley Kolodziej
 //
@@ -805,7 +805,7 @@ $border-radius-button:                     2px !default;
 //				@extend %button-styles;
 //			}
 //
-// Styleguide Forms.1: Buttons.a: %button-styles-primary
+// Styleguide Forms.Buttons.%button-styles-primary
 //
 // Author: Ashley Kolodziej
 //
@@ -1085,7 +1085,7 @@ select {
 // Styles form rows, if you are not using Gravity Forms.
 // From Pure v0.5.0.
 //
-// Styleguide Forms.1: Utilities.a: Row styles
+// Styleguide Forms.Utilities.Row styles
 //
 // Access: Public
 //
@@ -1111,7 +1111,7 @@ select {
 // This class styles required items, if you are not using Gravity Forms.
 // From Pure v0.5.0.
 //
-// Styleguide Forms.1: Utilities.a: Required
+// Styleguide Forms.Utilities.Required
 //
 // Access: Public
 //
@@ -1233,7 +1233,7 @@ textarea {
 // you have control over HTML and do not need any styles for your
 // button in particular.
 //
-// Styleguide Forms.1: Utilities.a: Button Class
+// Styleguide Forms.Utilities.Button Class
 //
 // Access: Public
 //
@@ -1249,7 +1249,7 @@ textarea {
 // you have control over HTML and do not need any styles for your
 // button in particular.
 //
-// Styleguide Forms.1: Utilities.a: Button Primary Class
+// Styleguide Forms.Utilities.Button Primary Class
 //
 // Access: Public
 //

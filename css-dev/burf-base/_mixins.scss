@@ -26,7 +26,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: Clearfix
+// Styleguide Utilities.Mixins.Clearfix
 //
 // Access: Public
 //
@@ -66,7 +66,7 @@
 //				}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: Aspect Ratio
+// Styleguide Utilities.Mixins.Aspect Ratio
 //
 // Access: Public
 //
@@ -110,7 +110,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: Border Radius
+// Styleguide Utilities.Mixins.Border Radius
 //
 // Access: Public
 //
@@ -156,7 +156,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: Box Shadow
+// Styleguide Utilities.Mixins.Box Shadow
 //
 // Access: Public
 //
@@ -194,7 +194,7 @@
 // }
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: Linear Gradient
+// Styleguide Utilities.Mixins.Linear Gradient
 //
 // Access: Public
 //
@@ -278,7 +278,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: Linear Gradient (Legacy)
+// Styleguide Utilities.Mixins.Linear Gradient (Legacy)
 //
 // Access: Public
 //
@@ -324,7 +324,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: Opacity
+// Styleguide Utilities.Mixins.Opacity
 //
 // Access: Public
 //
@@ -399,7 +399,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: Transition
+// Styleguide Utilities.Mixins.Transition
 //
 // Access: Public
 //
@@ -444,7 +444,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: Transform
+// Styleguide Utilities.Mixins.Transform
 //
 // Access: Public
 //
@@ -475,7 +475,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: Rotate
+// Styleguide Utilities.Mixins.Rotate
 //
 // Access: Public
 //
@@ -513,7 +513,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: Scale
+// Styleguide Utilities.Mixins.Scale
 //
 // Access: Public
 //
@@ -541,7 +541,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: Translate
+// Styleguide Utilities.Mixins.Translate
 //
 // Access: Public
 //
@@ -578,7 +578,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: BURF Extras
+// Styleguide Utilities.Mixins.BURF Extras
 //
 // Access: Public
 //
@@ -624,7 +624,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: Keyframes
+// Styleguide Utilities.Mixins.Keyframes
 //
 // Access: Public
 //
@@ -681,7 +681,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: Animation
+// Styleguide Utilities.Mixins.Animation
 //
 // Access: Public
 //
@@ -722,7 +722,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: Vertically Center (Legacy IE8)
+// Styleguide Utilities.Mixins.Vertically Center (Legacy IE8)
 //
 // Access: Public
 //
@@ -769,7 +769,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: Vertically Center (Legacy IE9)
+// Styleguide Utilities.Mixins.Vertically Center (Legacy IE9)
 //
 // Access: Public
 //
@@ -818,7 +818,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: Vertically Center
+// Styleguide Utilities.Mixins.Vertically Center
 //
 // @param {string} | $align-content [center] - Removes the gap between multiple child items.
 // @param {string} | $align-items [center] - Centers child items vertically.
@@ -862,7 +862,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: Hide Text
+// Styleguide Utilities.Mixins.Hide Text
 //
 // Access: Public
 //
@@ -900,7 +900,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Extras.a: Hide Text Class
+// Styleguide Utilities.Extras.Hide Text Class
 //
 // Access: Public
 //
@@ -933,7 +933,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: Visually Hidden (Screen Reader Text)
+// Styleguide Utilities.Mixins.Visually Hidden (Screen Reader Text)
 //
 // Access: Public
 //
@@ -975,7 +975,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Extras.a: Visually Hidden (Screen Reader Text) Class
+// Styleguide Utilities.Extras.Visually Hidden (Screen Reader Text) Class
 //
 // Access: Public
 //
@@ -1002,7 +1002,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: Remove visually hidden
+// Styleguide Utilities.Mixins.Remove visually hidden
 //
 // Access: Public
 //
@@ -1029,7 +1029,7 @@
 //
 // Available when `$burf-extras` is enabled.
 //
-// Styleguide Utilities.1: Extras.a: Hide Class
+// Styleguide Utilities.Extras.Hide Class
 //
 // Access: Public
 //
@@ -1052,7 +1052,7 @@
 //
 // Available when `$burf-extras` is enabled.
 //
-// Styleguide Utilities.1: Extras.a: Show Class
+// Styleguide Utilities.Extras.Show Class
 //
 // Access: Public
 //
@@ -1074,7 +1074,7 @@
 //
 // Available when `$burf-extras` is enabled.
 //
-// Styleguide Utilities.1: Extras.a: Padding Class
+// Styleguide Utilities.Extras.Padding Class
 //
 // Access: Public
 //
@@ -1097,7 +1097,7 @@
 //
 // Available when `$burf-extras` is enabled.
 //
-// Styleguide Utilities.1: Extras.a: Margin Class
+// Styleguide Utilities.Extras.Margin Class
 //
 // Access: Public
 //
@@ -1156,7 +1156,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: Breakpoints Mixin
+// Styleguide Utilities.Mixins.Breakpoints Mixin
 //
 // @param {variable | number} | $breakpoint - The window width to begin applying your styles. Can be any pixel value, but `$xs`, `$sm`, `$md`, `$lg`, and `$xl` are standard in this framework.
 //
@@ -1214,7 +1214,7 @@
 //		}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: Angle
+// Styleguide Utilities.Mixins.Angle
 //
 // @param {string} | $pseudo [after] - The pseudo-element to apply the angle to. Use before to get an angle on top, after to get an angle on bottom.
 // @param {bool} | $flip [false] - Whether or not to flip the default angle slant. By default, the angle will slant upwards to the right.
@@ -1305,7 +1305,7 @@
 // Sends output to terminal on compile.
 // From <https://www.sitepoint.com/debugging-sass-maps/>
 //
-// Styleguide Utilities.1: Mixins.a: Debug Map
+// Styleguide Utilities.Mixins.Debug Map
 //
 // @param {map} | $map - A sass map to debug.
 //
@@ -1349,7 +1349,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: Retina
+// Styleguide Utilities.Mixins.Retina
 //
 // Access: Public
 //
@@ -1384,7 +1384,7 @@
 //			}
 // ```
 //
-// Styleguide Utilities.1: Mixins.a: RGBA Color
+// Styleguide Utilities.Mixins.RGBA Color
 //
 // @param {string} | $attribute - The CSS attribute to apply your color to.
 // @param {string} | $color - The rgba color to use for modern browsers.
@@ -1423,7 +1423,7 @@ $root-font-size: 16 !default;
 //
 // Helper function to output 'em' value based on supplied px value.
 //
-// Styleguide Utilities.1: Mixins.a: em Conversion
+// Styleguide Utilities.Mixins.em Conversion
 //
 // @param integer $pixels The value in pixels (without px unit)
 // @param integer $context The parent container font-size context.
@@ -1441,7 +1441,7 @@ $root-font-size: 16 !default;
 //
 // Helper function to output 'rem' value based on supplied px value.
 //
-// Styleguide Utilities.1: Mixins.a: rem Conversion
+// Styleguide Utilities.Mixins.rem Conversion
 //
 // Access: Public
 //

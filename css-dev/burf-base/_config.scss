@@ -12,7 +12,7 @@
 //
 // Author: Ashley Kolodziej
 //
-// Styleguide Configuration.1: Optimization.a: BURF Extras
+// Styleguide Configuration.Optimization.BURF Extras
 //
 // Access: Public
 //
@@ -29,7 +29,7 @@ $burf-extras:                                       true !default;
 // This is mostly useful for browsers which do not support media queries.
 // By default, an older IE stylesheet is generated using this variable.
 //
-// Styleguide Configuration.1: Media Queries.a: Enable media queries
+// Styleguide Configuration.Media Queries.Enable media queries
 //
 // Access: Public
 //
@@ -44,7 +44,7 @@ $mqs: true !default;
 //
 // Deprecated versions of this variable include `$XS`.
 //
-// Styleguide Configuration.1: Media Queries.b: $xs
+// Styleguide Configuration.Media Queries.$xs
 //
 // Access: Public
 //
@@ -60,7 +60,7 @@ $xs:                                       500px !default;
 //
 // Deprecated versions of this variable include `$S`, `$SM`.
 //
-// Styleguide Configuration.1: Media Queries.c: $sm
+// Styleguide Configuration.Media Queries.$sm
 //
 // Access: Public
 //
@@ -76,7 +76,7 @@ $sm:                                       768px !default;
 //
 // Deprecated versions of this variable include `$M`. `$MD`.
 //
-// Styleguide Configuration.1: Media Queries.d: $md
+// Styleguide Configuration.Media Queries.$md
 //
 // Access: Public
 //
@@ -91,7 +91,7 @@ $md:                                       992px !default;
 //
 // Deprecated versions of this variable include `$L`, `$LG`.
 //
-// Styleguide Configuration.1: Media Queries.e: $lg
+// Styleguide Configuration.Media Queries.$lg
 //
 // Access: Public
 //
@@ -104,7 +104,7 @@ $lg:                                       1200px !default;
 // The window width at which extra large styles will begin.
 // By default, this is set to target most modern desktops.
 //
-// Styleguide Configuration.1: Media Queries.f: $xl
+// Styleguide Configuration.Media Queries.f: $xl
 //
 // Access: Public
 //
@@ -119,7 +119,7 @@ $xl:                                       1500px !default;
 // we use this width to target the most likely browser width
 // an older IE user will be viewing the site in.
 //
-// Styleguide Configuration.1: Media Queries.g: IE8 Target Width
+// Styleguide Configuration.Media Queries.g: IE8 Target Width
 //
 // Access: Public
 //
@@ -138,7 +138,7 @@ $lte-ie8-target-width:                     $lg !default;
 //
 // Deprecated versions of this variable include `$container_S`, `$container-SM`.
 //
-// Styleguide Configuration.1: Containers.a: Small Container Width
+// Styleguide Configuration.Containers.Small Container Width
 //
 // Access: Public
 //
@@ -152,7 +152,7 @@ $container-sm:                             750px !default;
 //
 // Deprecated versions of this variable include `$container_M`, `$container-MD`.
 //
-// Styleguide Configuration.1: Containers.b: Medium Container Width
+// Styleguide Configuration.Containers.Medium Container Width
 //
 // Access: Public
 //
@@ -166,7 +166,7 @@ $container-md:                             970px !default;
 //
 // Deprecated versions of this variable include `$container_L`, `$container-LG`.
 //
-// Styleguide Configuration.1: Containers.c: Large Container Width
+// Styleguide Configuration.Containers.Large Container Width
 //
 // Access: Public
 //
@@ -192,7 +192,7 @@ $container-lg:                             1170px !default;
 //
 // Deprecated versions of this variable include `$zIndex-1`.
 //
-// Styleguide Configuration.1: Z-Index.a: $z-index-1
+// Styleguide Configuration.Z-Index.$z-index-1
 //
 // Access: Private
 //
@@ -209,13 +209,13 @@ $z-index-1:                                 100;
 //
 // Deprecated versions of this variable include `$zIndex-2`.
 //
-// Styleguide Configuration.1: Z-Index.a: $z-index-2
+// Styleguide Configuration.Z-Index.$z-index-2
 //
 // Access: Private
 //
 // Since: 1.0.0
 
-$z-index-2:                                 200;
+$z-index-.                                200;
 
 // Z-Index 3
 //
@@ -225,7 +225,7 @@ $z-index-2:                                 200;
 //
 // Deprecated versions of this variable include `$zIndex-3`.
 //
-// Styleguide Configuration.1: Z-Index.a: $z-index-3
+// Styleguide Configuration.Z-Index.$z-index-3
 //
 // Access: Private
 //
@@ -242,7 +242,7 @@ $z-index-3:                                 300;
 //
 // Deprecated versions of this variable include `$zIndex-4`.
 //
-// Styleguide Configuration.1: Z-Index.a: $z-index-4
+// Styleguide Configuration.Z-Index.$z-index-4
 //
 // Access: Private
 //
@@ -258,7 +258,7 @@ $z-index-4:                                 400;
 //
 // Deprecated versions of this variable include `$zIndex-5`.
 //
-// Styleguide Configuration.1: Z-Index.a: $z-index-5
+// Styleguide Configuration.Z-Index.$z-index-5
 //
 // Access: Private
 //
@@ -275,7 +275,7 @@ $z-index-5:                                 500;
 //
 // Deprecated versions of this variable include `$zIndex-6`.
 //
-// Styleguide Configuration.1: Z-Index.a: $z-index-6
+// Styleguide Configuration.Z-Index.$z-index-6
 //
 // Access: Private
 //
@@ -291,7 +291,7 @@ $z-index-6:                                 600;
 //
 // Deprecated versions of this variable include `$zIndex-7`.
 //
-// Styleguide Configuration.1: Z-Index.a: $z-index-7
+// Styleguide Configuration.Z-Index.$z-index-7
 //
 // Access: Private
 //
@@ -308,7 +308,7 @@ $z-index-7:                                 700;
 //
 // Deprecated versions of this variable include `$zIndex-8`.
 //
-// Styleguide Configuration.1: Z-Index.a: $z-index-8
+// Styleguide Configuration.Z-Index.$z-index-8
 //
 // Access: Private
 //
@@ -324,7 +324,7 @@ $z-index-8:                                 800;
 //
 // Deprecated versions of this variable include `$zIndex-9`.
 //
-// Styleguide Configuration.1: Z-Index.a: $z-index-9
+// Styleguide Configuration.Z-Index.$z-index-9
 //
 // Access: Private
 //
@@ -340,7 +340,7 @@ $z-index-9:                                 900;
 //
 // Deprecated versions of this variable include `$zIndex-10`.
 //
-// Styleguide Configuration.1: Z-Index.a: $z-index-10
+// Styleguide Configuration.Z-Index.$z-index-10
 //
 // Access: Private
 //
@@ -368,7 +368,7 @@ $z-index-10:                                1000;
 //				z-index: $z-index-content;
 //			}
 //
-// Styleguide Configuration.1: Z-Index.a: $z-index-content
+// Styleguide Configuration.Z-Index.$z-index-content
 //
 // Access: Public
 //
@@ -404,7 +404,7 @@ $z-index-content:                          $z-index-1 !default;
 //				z-index: $z-index-states - 2;
 //			}
 //
-// Styleguide Configuration.1: Z-Index.a: $z-index-states
+// Styleguide Configuration.Z-Index.$z-index-states
 //
 // Access: Public
 //
@@ -436,7 +436,7 @@ $z-index-states:                           $z-index-3 !default;
 //				z-index: $z-index-panels - 1;
 //			}
 //
-// Styleguide Configuration.1: Z-Index.a: $z-index-panels
+// Styleguide Configuration.Z-Index.$z-index-panels
 //
 // Access: Public
 //
@@ -456,7 +456,7 @@ $z-index-panels:                           $z-index-5 !default;
 // to the primary navigation. Change this variable to change the
 // stacking order of the primary navigation.
 //
-// Styleguide Configuration.1: Z-Index.a: $z-index-primarynav
+// Styleguide Configuration.Z-Index.$z-index-primarynav
 //
 // Access: Public
 //
@@ -476,7 +476,7 @@ $z-index-primarynav:                       $z-index-7 !default;
 // have a fixed sticky navigation so that the sticky navigation isn't
 // always on top, even with lightboxes.)
 //
-// Styleguide Configuration.1: Z-Index.a: $z-index-overlays
+// Styleguide Configuration.Z-Index.$z-index-overlays
 //
 // Access: Public
 //
@@ -490,7 +490,7 @@ $z-index-overlays:                         $z-index-9 !default;
 // and debugging purposes only. Avoid where possible and do not commit
 // to production code.
 //
-// Styleguide Configuration.1: Z-Index.a: $z-index-dev
+// Styleguide Configuration.Z-Index.$z-index-dev
 //
 // Access: Public
 //
@@ -516,7 +516,7 @@ $z-index-dev:                              $z-index-10 !default;
 // fraction of this, except in cases of UI or typography
 // where margin should be related to font size.
 //
-// Styleguide Configuration.1: Spacing.a: $margin
+// Styleguide Configuration.Spacing.$margin
 //
 // Access: Public
 //
@@ -531,7 +531,7 @@ $margin:                                    30px !default;
 // and would be good for any sort of floated content you
 // may add in a custom theme, like a floated callout.
 //
-// Styleguide Configuration.1: Spacing.a: $margin-small
+// Styleguide Configuration.Spacing.$margin-small
 //
 // Access: Public
 //
@@ -545,7 +545,7 @@ $margin-small:                              $margin / 2 !default;
 // This affects elements like the banner, section tags,
 // and any other larger elements.
 //
-// Styleguide Configuration.1: Spacing.a: $margin-large
+// Styleguide Configuration.Spacing.$margin-large
 //
 // Access: Public
 //
@@ -560,7 +560,7 @@ $margin-large:                              $margin * 2 !default;
 // will be a multiple of this, smaller padding will be a
 // fraction of this.
 //
-// Styleguide Configuration.1: Spacing.a: $padding
+// Styleguide Configuration.Spacing.$padding
 //
 // Access: Public
 //
@@ -573,7 +573,7 @@ $padding:                                   30px !default;
 // A padding variable for situations where you need a
 // smaller amount of padding.
 //
-// Styleguide Configuration.1: Spacing.a: $padding-small
+// Styleguide Configuration.Spacing.$padding-small
 //
 // Access: Public
 //
@@ -586,7 +586,7 @@ $padding-small:                              $padding / 2 !default;
 // A padding variable for situations where you need a
 // larger amount of padding.
 //
-// Styleguide Configuration.1: Spacing.a: $padding-large
+// Styleguide Configuration.Spacing.$padding-large
 //
 // Access: Public
 //
@@ -610,7 +610,7 @@ $padding-large:                              $padding * 2 !default;
 // Affects grayscale variables. Try cool colors, like blues.
 // Accepts any valid color.
 //
-// Styleguide Configuration.1: Styling.a: Grayscale Tint Hue
+// Styleguide Configuration.Styling.Grayscale Tint Hue
 //
 // Access: Public
 //
@@ -623,7 +623,7 @@ $tint-hue: none !default;
 // The amount to tint your grays, from 0-100%.
 // This will affect the maximum saturation of your tint.
 //
-// Styleguide Configuration.1: Styling.a: Grayscale Tint Saturation
+// Styleguide Configuration.Styling.Grayscale Tint Saturation
 //
 // Access: Public
 //
@@ -642,7 +642,7 @@ $tint-saturation: 15% !default;
 // which is the maximum saturation of that tint. More saturation
 // happens with dark colors, less or none with very light colors.
 //
-// Styleguide Configuration.1: Styling.a: Tint Color Function
+// Styleguide Configuration.Styling.Tint Color Function
 //
 // Access: Public
 //
@@ -672,7 +672,7 @@ $tint-saturation: 15% !default;
 // Colors:
 // $color-grayscale-0: #000
 // $color-grayscale-1: #111
-// $color-grayscale-2: #222
+// $color-grayscale-.#222
 // $color-grayscale-3: #333
 // $color-grayscale-4: #444
 // $color-grayscale-5: #555
@@ -689,7 +689,7 @@ $tint-saturation: 15% !default;
 // $color-grayscale-f5: #f5f5f5
 // $color-grayscale-f: #fff
 //
-// Styleguide Configuration.1: Styling.a: Grayscale Variables
+// Styleguide Configuration.Styling.Grayscale Variables
 //
 // Access: Public
 //
@@ -702,7 +702,7 @@ $tint-saturation: 15% !default;
 // Colors:
 // $color-grayscale-0: #000
 //
-// Styleguide Utilities.1: Colors.a: $color-grayscale-0
+// Styleguide Utilities.Colors.$color-grayscale-0
 //
 // Access: Public
 //
@@ -717,7 +717,7 @@ $color-grayscale-0:                        tint-gray( #000 );
 // Colors:
 // $color-grayscale-1: #111
 //
-// Styleguide Utilities.1: Colors.a: $color-grayscale-1
+// Styleguide Utilities.Colors.$color-grayscale-1
 //
 // Access: Public
 //
@@ -730,15 +730,15 @@ $color-grayscale-1:                        tint-gray( #111 );
 // Overriding this variable is not supported.
 //
 // Colors:
-// $color-grayscale-2: #222
+// $color-grayscale-.#222
 //
-// Styleguide Utilities.1: Colors.a: $color-grayscale-2
+// Styleguide Utilities.Colors.$color-grayscale-2
 //
 // Access: Public
 //
 // Since: 1.0.0
 
-$color-grayscale-2:                        tint-gray( #222 );
+$color-grayscale-.                       tint-gray( #222 );
 
 // A grayscale variable that takes advantage of the tint system.
 // Produces a dark gray suitable for text or backgrounds.
@@ -747,7 +747,7 @@ $color-grayscale-2:                        tint-gray( #222 );
 // Colors:
 // $color-grayscale-3: #333
 //
-// Styleguide Utilities.1: Colors.a: $color-grayscale-3
+// Styleguide Utilities.Colors.$color-grayscale-3
 //
 // Access: Public
 //
@@ -762,7 +762,7 @@ $color-grayscale-3:                        tint-gray( #333 );
 // Colors:
 // $color-grayscale-4: #444
 //
-// Styleguide Utilities.1: Colors.a: $color-grayscale-4
+// Styleguide Utilities.Colors.$color-grayscale-4
 //
 // Access: Public
 //
@@ -777,7 +777,7 @@ $color-grayscale-4:                        tint-gray( #444 );
 // Colors:
 // $color-grayscale-5: #555
 //
-// Styleguide Utilities.1: Colors.a: $color-grayscale-5
+// Styleguide Utilities.Colors.$color-grayscale-5
 //
 // Access: Public
 //
@@ -792,7 +792,7 @@ $color-grayscale-5:                        tint-gray( #555 );
 // Colors:
 // $color-grayscale-6: #666
 //
-// Styleguide Utilities.1: Colors.a: $color-grayscale-6
+// Styleguide Utilities.Colors.$color-grayscale-6
 //
 // Access: Public
 //
@@ -807,7 +807,7 @@ $color-grayscale-6:                        tint-gray( #666 );
 // Colors:
 // $color-grayscale-7: #777
 //
-// Styleguide Utilities.1: Colors.a: $color-grayscale-7
+// Styleguide Utilities.Colors.$color-grayscale-7
 //
 // Access: Public
 //
@@ -822,7 +822,7 @@ $color-grayscale-7:                        tint-gray( #777 );
 // Colors:
 // $color-grayscale-8: #888
 //
-// Styleguide Utilities.1: Colors.a: $color-grayscale-8
+// Styleguide Utilities.Colors.$color-grayscale-8
 //
 // Access: Public
 //
@@ -837,7 +837,7 @@ $color-grayscale-8:                        tint-gray( #888 );
 // Colors:
 // $color-grayscale-9: #999
 //
-// Styleguide Utilities.1: Colors.a: $color-grayscale-9
+// Styleguide Utilities.Colors.$color-grayscale-9
 //
 // Access: Public
 //
@@ -852,7 +852,7 @@ $color-grayscale-9:                        tint-gray( #999 );
 // Colors:
 // $color-grayscale-a: #a
 //
-// Styleguide Utilities.1: Colors.a: $color-grayscale-a
+// Styleguide Utilities.Colors.$color-grayscale-a
 //
 // Access: Public
 //
@@ -867,7 +867,7 @@ $color-grayscale-a:                        tint-gray( #aaa );
 // Colors:
 // $color-grayscale-b: #bbb
 //
-// Styleguide Utilities.1: Colors.a: $color-grayscale-b
+// Styleguide Utilities.Colors.$color-grayscale-b
 //
 // Access: Public
 //
@@ -882,7 +882,7 @@ $color-grayscale-b:                        tint-gray( #bbb );
 // Colors:
 // $color-grayscale-c: #ccc
 //
-// Styleguide Utilities.1: Colors.a: $color-grayscale-c
+// Styleguide Utilities.Colors.$color-grayscale-c
 //
 // Access: Public
 //
@@ -897,7 +897,7 @@ $color-grayscale-c:                        tint-gray( #ccc );
 // Colors:
 // $color-grayscale-d: #ddd
 //
-// Styleguide Utilities.1: Colors.a: $color-grayscale-d
+// Styleguide Utilities.Colors.$color-grayscale-d
 //
 // Access: Public
 //
@@ -912,7 +912,7 @@ $color-grayscale-d:                        tint-gray( #ddd );
 // Colors:
 // $color-grayscale-e: #eee
 //
-// Styleguide Utilities.1: Colors.a: $color-grayscale-e
+// Styleguide Utilities.Colors.$color-grayscale-e
 //
 // Access: Public
 //
@@ -927,7 +927,7 @@ $color-grayscale-e:                        tint-gray( #eee );
 // Colors:
 // $color-grayscale-f0: #f0f0f0
 //
-// Styleguide Utilities.1: Colors.a: $color-grayscale-f0
+// Styleguide Utilities.Colors.$color-grayscale-f0
 //
 // Access: Public
 //
@@ -942,7 +942,7 @@ $color-grayscale-f0:                       tint-gray( #f0f0f0 );
 // Colors:
 // $color-grayscale-f5: #f5f5f5
 //
-// Styleguide Utilities.1: Colors.a: $color-grayscale-f5
+// Styleguide Utilities.Colors.$color-grayscale-f5
 //
 // Access: Public
 //
@@ -957,7 +957,7 @@ $color-grayscale-f5:                       tint-gray( #f5f5f5 );
 // Colors:
 // $color-grayscale-f: #fff
 //
-// Styleguide Utilities.1: Colors.a: $color-grayscale-f
+// Styleguide Utilities.Colors.$color-grayscale-f
 //
 // Access: Public
 //
@@ -972,7 +972,7 @@ $color-grayscale-f:                        tint-gray( #fff );
 // Colors:
 // $color-hub: #767676
 //
-// Styleguide Utilities.1: Colors.a: $color-hub
+// Styleguide Utilities.Colors.$color-hub
 //
 // Access: Public
 //
@@ -997,7 +997,7 @@ $color-hub:                        			 #767676;
 //
 // The default border style.
 //
-// Styleguide Configuration.1: Styling.a: Change the Default Border
+// Styleguide Configuration.Styling.Change the Default Border
 //
 // Access: Public
 //
@@ -1007,7 +1007,7 @@ $color-hub:                        			 #767676;
 //
 // A variable that applies the default border style.
 //
-// Styleguide Utilities.1: Styling.a: $border
+// Styleguide Utilities.Styling.$border
 //
 // Access: Public
 //

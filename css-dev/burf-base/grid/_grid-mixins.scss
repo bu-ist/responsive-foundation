@@ -6,7 +6,7 @@
 // Not intended for use outside the grid system - use the `col`
 // mixin instead.
 //
-// Styleguide Grid.9: Factory.a: @mixin col-base
+// Styleguide Grid.Factory.@mixin col-base
 //
 // Access: Private
 //
@@ -29,7 +29,7 @@
 // Not intended for use outside the grid system - use the `col`
 // mixin instead.
 //
-// Styleguide Grid.9: Factory.a: @mixin col-margin-base
+// Styleguide Grid.Factory.@mixin col-margin-base
 //
 // Access: Private
 //
@@ -54,7 +54,7 @@
 // Not intended for use outside the grid system - use the `col`
 // mixin instead.
 //
-// Styleguide Grid.9: Factory.a: @mixin grid-build
+// Styleguide Grid.Factory.@mixin grid-build
 //
 // Access: Private
 //
@@ -72,7 +72,7 @@
 // Not intended for use outside the grid system - use the `col`
 // mixin instead.
 //
-// Styleguide Grid.9: Factory.a: @mixin col-float
+// Styleguide Grid.Factory.@mixin col-float
 //
 // Access: Private
 //
@@ -92,7 +92,7 @@
 // Not intended for use outside the grid system - use the `col`
 // mixin instead.
 //
-// Styleguide Grid.9: Factory.a: @mixin grid-styles
+// Styleguide Grid.Factory.@mixin grid-styles
 //
 // Access: Private
 //
@@ -200,7 +200,7 @@
 // @param {bool} | $use-css-grid - Whether or not to use CSS Grid instead of floats as the basis for this grid item's styling. CSS Grid requires some parent class styling.
 // @param {bool} | $force - Whether or not to override the original styles by printing them where this mixin is called. You probably don't want to change this unless you're working on Foundation.
 //
-// Styleguide Grid.1: How to Use the Grid.c: Grid Mixin
+// Styleguide Grid.How to Use the Grid.Grid Mixin
 //
 // Access: Public
 //

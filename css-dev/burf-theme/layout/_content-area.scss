@@ -13,7 +13,7 @@
 // while the content area would take up 3/4 of the space.
 // By default, the number of supported widgets in your footer will match this number.
 //
-// Styleguide Configuration.1: Content Area.a: Columns
+// Styleguide Configuration.Content Area.Columns
 //
 // Access: Public
 //
@@ -25,7 +25,7 @@ $number-columns: 									 3 !default;
 //
 // Sets the margin width for content and footbar widgets.
 //
-// Styleguide Configuration.1: Content Area.a: Margin Width
+// Styleguide Configuration.Content Area.Margin Width
 //
 // Access: Public
 //
@@ -37,7 +37,7 @@ $margin-width: 			  					    5.2% !default;
 //
 // Controls the background color of the content.
 //
-// Styleguide Configuration.1: Content Area.a: Background Color
+// Styleguide Configuration.Content Area.Background Color
 //
 // Access: Public
 //
@@ -49,7 +49,7 @@ $color-content-bg:                         $color-grayscale-f !default;
 //
 // The amount of padding to add to columns on mobile.
 //
-// Styleguide Configuration.1: Content Area.a: Mobile Column Padding
+// Styleguide Configuration.Content Area.Mobile Column Padding
 //
 // Access: Public
 //
@@ -61,7 +61,7 @@ $column-padding-bottom:                     10px !default;
 //
 // The amount of padding to add to columns on desktop.
 //
-// Styleguide Configuration.1: Content Area.a: Desktop Column Padding
+// Styleguide Configuration.Content Area.Desktop Column Padding
 //
 // Access: Public
 //

@@ -7,7 +7,7 @@
 // The font to use for branding.
 // You may not change this unless you have permission from Marketing &amp; Communications.
 //
-// Styleguide WordPress.1: Branding.a: Font Family
+// Styleguide WordPress.Branding.Font Family
 //
 // Access: Public
 //
@@ -19,7 +19,7 @@ $font-family-brand:                         "Whitney SSm A", "Whitney SSm B", "H
 //
 // The font family to use for the sponsored branding type.
 //
-// Styleguide WordPress.1: Branding.a: Font Family Sponsored
+// Styleguide WordPress.Branding.Font Family Sponsored
 //
 // Access: Public
 //
@@ -31,7 +31,7 @@ $font-family-brand-sponsored:               $font-family-brand !default;
 //
 // The font family to use for the unbranded branding type.
 //
-// Styleguide WordPress.1: Branding.a: Font Family Unbranded
+// Styleguide WordPress.Branding.Font Family Unbranded
 //
 // Access: Public
 //
@@ -43,7 +43,7 @@ $font-family-brand-unbranded:               $font-family-sans-serif !default;
 //
 // The height of the branding area.
 //
-// Styleguide WordPress.1: Branding.a: Height
+// Styleguide WordPress.Branding.Height
 //
 // Access: Public
 //
@@ -55,7 +55,7 @@ $height-brand:                             120px !default;
 //
 // The color used for the site name when a site is using BU branding.
 //
-// Styleguide WordPress.1: Branding.a: Color
+// Styleguide WordPress.Branding.Color
 //
 // Access: Public
 //
@@ -69,7 +69,7 @@ $color-brand:                              $color-grayscale-0 !default;
 //
 // The color used for the site name when a site is not using BU branding.
 //
-// Styleguide WordPress.1: Branding.a: Color Unbranded
+// Styleguide WordPress.Branding.Color Unbranded
 //
 // Access: Public
 //
@@ -84,7 +84,7 @@ $color-unbranded:                            #c00;
 // The image used for the BU Masterplate.
 // Do not change this without permission from Marketing &amp; Communications.
 //
-// Styleguide WordPress.1: Branding.a: Masterplate Image
+// Styleguide WordPress.Branding.Masterplate Image
 //
 // Access: Public
 //
@@ -97,7 +97,7 @@ $image-masterplate:         "https://www.bu.edu/cdn/images/logos/masterplate112x
 // The image used for the BU Masterplate on retina devices.
 // Do not change this without permission from Marketing &amp; Communications.
 //
-// Styleguide WordPress.1: Branding.a: Masterplate Image Retina
+// Styleguide WordPress.Branding.Masterplate Image Retina
 //
 // Access: Public
 //
@@ -110,7 +110,7 @@ $image-masterplate-retina:  "https://www.bu.edu/cdn/images/logos/masterplate112x
 // The image used for the BU plate in the Signature style.
 // Do not change this without permission from Marketing &amp; Communications.
 //
-// Styleguide WordPress.1: Branding.a: Subbrand Image
+// Styleguide WordPress.Branding.Subbrand Image
 //
 // Access: Public
 //
@@ -123,7 +123,7 @@ $image-subbrand:            "https://www.bu.edu/cdn/images/logos/subbrand49x35.p
 // The image used for the BU plate in the Signature style on retina devices.
 // Do not change this without permission from Marketing &amp; Communications.
 //
-// Styleguide WordPress.1: Branding.a: Subbrand Image Retina
+// Styleguide WordPress.Branding.Subbrand Image Retina
 //
 // Access: Public
 //
@@ -136,7 +136,7 @@ $image-subbrand-retina:     "https://www.bu.edu/cdn/images/logos/subbrand49x35-r
 // The image used for the BUMC logo.
 // Do not change this without permission from Marketing &amp; Communications.
 //
-// Styleguide WordPress.1: Branding.a: BUMC Image
+// Styleguide WordPress.Branding.BUMC Image
 //
 // Access: Public
 //
@@ -149,7 +149,7 @@ $image-bumclogo:         "https://www.bu.edu/cdn/images/logos/bumclogo96x40.png"
 // The image used for the BUMC logo on retina devices.
 // Do not change this without permission from Marketing &amp; Communications.
 //
-// Styleguide WordPress.1: Branding.a: BUMC Image Retina
+// Styleguide WordPress.Branding.BUMC Image Retina
 //
 // Access: Public
 //

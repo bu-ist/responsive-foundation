@@ -10,6 +10,8 @@ module.exports = ( grunt ) => {
 
 	grunt.file.mkdir( docsVersionFilePath );
 
+	require('time-grunt')(grunt);
+
 	// Configure Grunt.
 	grunt.initConfig( {
 		pkg: grunt.file.readJSON( 'package.json' ),
@@ -208,36 +210,6 @@ module.exports = ( grunt ) => {
 			target: 'css-dev/**/*.scss',
 			// see .sasslintrc for options.
 		},
-		sassdoc: {
-			src: 'css-dev/**/*.scss',
-			options: {
-				display: {
-					access: [ 'public' ],
-				},
-				dest: docsVersionFilePath,
-				theme: 'node_modules/sassdoc-theme-budocs',
-				basePath: `https://github.com/bu-ist/responsive-foundation/tree/${
-					pkg.version
-				}/css-dev`,
-				groups: {
-					'01-config': 'Global Configuration',
-					'02-mixins': 'Helpers',
-					'03-icons': 'Icons',
-					'04-typography': 'Typography',
-					'05-grid': 'Grid',
-					'06-navigation': 'Navigation',
-					'07-branding': 'Branding',
-					'08-layout': 'Layout',
-					'09-content': 'Content',
-					'10-widgets': 'Widgets',
-					'11-forms': 'Forms',
-					'12-news': 'News',
-					'13-calendar': 'Calendar',
-					'14-profiles': 'Profiles',
-					'wp-admin': 'WordPress Admin',
-				},
-			},
-		},
 		kss: {
 			options: {
 				title: 'Responsive Foundation ' + pkg.version,
@@ -271,9 +243,8 @@ module.exports = ( grunt ) => {
 	grunt.loadNpmTasks( 'grunt-gh-pages' );
 	grunt.loadNpmTasks( 'grunt-sass' );
 	grunt.loadNpmTasks( 'grunt-sass-lint' );
-	grunt.loadNpmTasks( 'grunt-sassdoc' );
 	grunt.loadNpmTasks( 'grunt-kss' );
-	grunt.registerTask( 'build', [ 'js', 'kss', 'sassdoc' ] );
+	grunt.registerTask( 'build', [ 'js', 'kss' ] );
 	grunt.registerTask( 'deploy', [ 'build', 'gh-pages' ] );
 	grunt.registerTask( 'js', [ 'clean:js', 'babel', 'browserify', 'uglify' ] );
 	grunt.registerTask( 'serve', [ 'build', 'browserSync:current', 'watch' ] );

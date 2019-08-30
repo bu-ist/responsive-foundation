@@ -6,7 +6,7 @@
 //
 // The style of the border on comments and items using the card styles.
 //
-// Styleguide News.1: News Item.a:  Message Border
+// Styleguide News.News Item. Message Border
 //
 // Access: Public
 //
@@ -18,7 +18,7 @@ $border-message:                           $border !default;
 //
 // The width of the border on comments and items using the card styles.
 //
-// Styleguide News.1: News Item.a: Message Border Width
+// Styleguide News.News Item.Message Border Width
 //
 // Access: Public
 //
@@ -31,7 +31,7 @@ $border-width-message:                     1px 1px 1px 5px !default;
 // The amount of rounding (border radius) to apply to the corners
 // of comments.
 //
-// Styleguide News.1: News Item.a: Message Radius
+// Styleguide News.News Item.Message Radius
 //
 // Access: Public
 //
@@ -43,7 +43,7 @@ $border-radius-message:                     3px !default;
 //
 // The amount of padding to apply to comments.
 //
-// Styleguide News.1: News Item.a: Message Padding
+// Styleguide News.News Item.Message Padding
 //
 // Access: Public
 //
@@ -55,7 +55,7 @@ $padding-message:                          20px !default;
 //
 // The background of comments.
 //
-// Styleguide News.1: News Item.a: Message Background
+// Styleguide News.News Item.Message Background
 //
 // Access: Public
 //
@@ -67,7 +67,7 @@ $color-message-bg:                         $color-grayscale-f0 !default;
 //
 // The left border color of comments.
 //
-// Styleguide News.1: News Item.a: Message Left Border
+// Styleguide News.News Item.Message Left Border
 //
 // Access: Public
 //
@@ -80,7 +80,7 @@ $color-message-border-left:                $color-grayscale-0 !default;
 // Controls the padding of the metadata card at the bottom of news posts
 // on the single post template.
 //
-// Styleguide News.1: News Item.a: Metadata Padding
+// Styleguide News.News Item.Metadata Padding
 //
 // Access: Public
 //
@@ -93,7 +93,7 @@ $padding-single-meta:                      20px !default;
 // Controls the border style on the metadata card at the bottom of news posts
 // on the single post template.
 //
-// Styleguide News.1: News Item.a: Metadata Border
+// Styleguide News.News Item.Metadata Border
 //
 // Access: Public
 //
@@ -106,7 +106,7 @@ $border-single-meta:                       $border-message !default;
 // Controls the border width on the metadata card at the bottom of news posts
 // on the single post template.
 //
-// Styleguide News.1: News Item.a: Metadata Border Width
+// Styleguide News.News Item.Metadata Border Width
 //
 // Access: Public
 //
@@ -119,7 +119,7 @@ $border-width-single-meta:                  $border-width-message !default;
 // Controls the amount of rounding applied to corners of the metadata card
 // at the bottom of the single post template.
 //
-// Styleguide News.1: News Item.a: Metadata Radius
+// Styleguide News.News Item.Metadata Radius
 //
 // Access: Public
 //
@@ -132,7 +132,7 @@ $border-radius-single-meta:                 $border-radius-message !default;
 // Controls the background of the metadata card at the bottom of the single
 // post template.
 //
-// Styleguide News.1: News Item.a: Metadata Background
+// Styleguide News.News Item.Metadata Background
 //
 // Access: Public
 //
@@ -145,7 +145,7 @@ $color-single-meta-bg:                     $color-grayscale-f0 !default;
 // Controls the color of the left border in the metadata card
 // at the bottom of the single post template.
 //
-// Styleguide News.1: News Item.a: Metadata Left Border Color
+// Styleguide News.News Item.Metadata Left Border Color
 //
 // Access: Public
 //
@@ -164,7 +164,7 @@ $color-single-meta-border-left:             $color-message-border-left !default;
 // By default, this controls single profile info styling in the sidebar,
 // the metadata styling at the bottom of single posts, and the date summary.
 //
-// Styleguide Utilities.1: Styling.a: Card Styles
+// Styleguide Utilities.Styling.Card Styles
 //
 // Access: Public
 //
@@ -193,7 +193,7 @@ $color-single-meta-border-left:             $color-message-border-left !default;
 
 // Handles styling for the metadata card at the bottom of posts.
 //
-// Styleguide Components.1: News Item.single-meta
+// Styleguide Components.News Item.single-meta
 //
 // Access: Public
 //
@@ -212,7 +212,7 @@ $color-single-meta-border-left:             $color-message-border-left !default;
 
 // Handles styling for the title in the metadata card at the bottom of posts.
 //
-// Styleguide Components.1: News Item.single-meta-post-title
+// Styleguide Components.News Item.single-meta-post-title
 //
 // Access: Public
 //
@@ -224,7 +224,7 @@ $color-single-meta-border-left:             $color-message-border-left !default;
 
 // Handles styling for the byline in the metadata card at the bottom of posts.
 //
-// Styleguide Components.1: News Item.single-meta-byline
+// Styleguide Components.News Item.single-meta-byline
 //
 // Access: Public
 //
@@ -238,7 +238,7 @@ $color-single-meta-border-left:             $color-message-border-left !default;
 
 // Handles styling for categories and tags in the metadata card at the bottom of posts.
 //
-// Styleguide Components.1: News Item.single-meta-info
+// Styleguide Components.News Item.single-meta-info
 //
 // Access: Public
 //
@@ -251,7 +251,7 @@ $color-single-meta-border-left:             $color-message-border-left !default;
 
 // Handles styling for the archive (View all posts) link container.
 //
-// Styleguide Components.1: News Item.archive-link-container
+// Styleguide Components.News Item.archive-link-container
 //
 // Access: Public
 //
@@ -264,7 +264,7 @@ $color-single-meta-border-left:             $color-message-border-left !default;
 
 // Handles styling for the archive (View all posts) link.
 //
-// Styleguide Components.1: News Item.archive-link
+// Styleguide Components.News Item.archive-link
 //
 // Access: Public
 //

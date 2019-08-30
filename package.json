@@ -40,7 +40,8 @@
   "main": "js/theme.js",
   "dependencies": {
     "mathsass": "^0.10.1",
-    "normalize-scss": "^7.0.1"
+    "normalize-scss": "^7.0.1",
+    "kss": "^3.0.0-beta.25"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -69,10 +70,9 @@
     "grunt-postcss": "^0.9.0",
     "grunt-sass": "^3.0.2",
     "grunt-sass-lint": "^0.2.4",
-    "grunt-sassdoc": "^2.0.3",
     "id-kss-builder": "git+ssh://git@github.com/bu-ist/id-kss-builder.git#feature/add-author-support",
-    "kss": "^3.0.0-beta.25",
     "node-sass": "^4.12.0",
-    "sassdoc-theme-budocs": "git+ssh://git@github.com/ashleykolodziej/sassdoc-theme-budocs.git#master"
+    "sassdoc-theme-budocs": "git+ssh://git@github.com/ashleykolodziej/sassdoc-theme-budocs.git#master",
+    "time-grunt": "^2.0.0"
   }
 }

@@ -25,7 +25,7 @@
 //
 // Controls the font family used on the print stylesheet.
 //
-// Styleguide Configuration.1: Print.a: $print-font-family
+// Styleguide Configuration.Print.$print-font-family
 //
 // Access: Public
 //
@@ -37,7 +37,7 @@ $print-font-family: Georgia, 'Times New Roman', Times, serif !default;
 //
 // Controls the font size used on the print stylesheet.
 //
-// Styleguide Configuration.1: Print.a: $print-font-size
+// Styleguide Configuration.Print.$print-font-size
 //
 // Access: Public
 //
@@ -49,7 +49,7 @@ $print-font-size: 13pt !default;
 //
 // Controls the text color used on the print stylesheet.
 //
-// Styleguide Configuration.1: Print.a: $print-text-color
+// Styleguide Configuration.Print.$print-text-color
 //
 // Access: Public
 //
@@ -61,7 +61,7 @@ $print-text-color: $color-base !default;
 //
 // Controls the margins used on the print stylesheet.
 //
-// Styleguide Configuration.1: Print.a: $print-margins
+// Styleguide Configuration.Print.$print-margins
 //
 // Access: Public
 //
@@ -73,7 +73,7 @@ $print-margins: 2cm !default;
 //
 // Controls the size of `h1` on the print stylesheet.
 //
-// Styleguide Configuration.1: Print.a: $print-font-size-1
+// Styleguide Configuration.Print.$print-font-size-1
 //
 // Access: Public
 //
@@ -85,19 +85,19 @@ $print-font-size-1: 24pt !default;
 //
 // Controls the size of `h2` on the print stylesheet.
 //
-// Styleguide Configuration.1: Print.a: $print-font-size-2
+// Styleguide Configuration.Print.$print-font-size-2
 //
 // Access: Public
 //
 // Since: 4.0.0
 
-$print-font-size-2: 14pt !default;
+$print-font-size-.14pt !default;
 
 // Print Heading 3
 //
 // Controls the size of `h3` on the print stylesheet.
 //
-// Styleguide Configuration.1: Print.a: $print-font-size-3
+// Styleguide Configuration.Print.$print-font-size-3
 //
 // Access: Public
 //
@@ -109,7 +109,7 @@ $print-font-size-3: 14pt !default;
 //
 // Controls the size of `h4` on the print stylesheet.
 //
-// Styleguide Configuration.1: Print.a: $print-font-size-4
+// Styleguide Configuration.Print.$print-font-size-4
 //
 // Access: Public
 //
@@ -121,7 +121,7 @@ $print-font-size-4: 14pt !default;
 //
 // Controls the size of `h5` on the print stylesheet.
 //
-// Styleguide Configuration.1: Print.a: $print-font-size-5
+// Styleguide Configuration.Print.$print-font-size-5
 //
 // Access: Public
 //
@@ -133,7 +133,7 @@ $print-font-size-5: 12pt !default;
 //
 // Controls the size of `h6` on the print stylesheet.
 //
-// Styleguide Configuration.1: Print.a: $print-font-size-6
+// Styleguide Configuration.Print.$print-font-size-6
 //
 // Access: Public
 //

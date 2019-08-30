@@ -4,7 +4,7 @@
 
 // Base styles for all wrapper elements.
 //
-// Styleguide Grid.3: Global Styles.z: Wrapper Styles
+// Styleguide Grid.Global Styles.Wrapper Styles
 //
 // Access: Public
 //
@@ -20,7 +20,7 @@
 // page where you are overriding that class to use the full width
 // of the screen.
 //
-// Styleguide Grid.3: Global Styles.z: Container Styles
+// Styleguide Grid.Global Styles.Container Styles
 //
 // Access: Public
 //
@@ -55,7 +55,7 @@
 // A negative margin is included to counteract the grid item
 // margins.
 //
-// Styleguide Grid.3: Global Styles.z: Row Styles
+// Styleguide Grid.Global Styles.Row Styles
 //
 // Access: Public
 //
@@ -88,7 +88,7 @@
 // Base styles for children of a row.
 // Usually used for grid items.
 //
-// Styleguide Grid.3: Global Styles.z: Item Styles
+// Styleguide Grid.Global Styles.Item Styles
 //
 // Access: Public
 //
@@ -111,7 +111,7 @@
 // Base styles for a container whose children should
 // be equal heights.
 //
-// Styleguide Utilities.1: Backwards Compatibility.z: Equal Heights (Container)
+// Styleguide Utilities.Backwards Compatibility.Equal Heights (Container)
 //
 // Access: Public
 //
@@ -129,7 +129,7 @@
 // If you need padding on the bottom of the child items, you might have to adjust
 // the margin-bottom to be lower.
 //
-// Styleguide Utilities.1: Backwards Compatibility.z: Equal Heights (Items)
+// Styleguide Utilities.Backwards Compatibility.Equal Heights (Items)
 //
 // Access: Public
 //
@@ -149,7 +149,7 @@
 // support. You may want to provide a min-height on a
 // case by case basis as a fallback.
 //
-// Styleguide Utilities.2: Layout.z: Equal Heights
+// Styleguide Utilities.Layout.Equal Heights
 //
 // Access: Public
 //
@@ -162,7 +162,7 @@
 
 // An extend for base grid styles.
 //
-// Styleguide Grid.9: Factory.a: %col-base
+// Styleguide Grid.Factory.%col-base
 //
 // Access: Private
 //
@@ -174,7 +174,7 @@
 
 // An extend for base grid styles using the margin feature.
 //
-// Styleguide Grid.9: Factory.a: %col-margin-base
+// Styleguide Grid.Factory.%col-margin-base
 //
 // Access: Private
 //
@@ -189,7 +189,7 @@
 // just like the grid classes - for example,
 // `.col-md-margin-parent`.
 //
-// Styleguide Grid.9: Factory.a: %col-margin-parent
+// Styleguide Grid.Factory.%col-margin-parent
 //
 // Access: Public
 //
@@ -215,7 +215,7 @@
 // A private map to hold grid widths while
 // calculating the grid.
 //
-// Styleguide Grid.9: Factory.a: $grid-widths
+// Styleguide Grid.Factory.$grid-widths
 //
 // Access: Private
 //
@@ -226,7 +226,7 @@ $grid-widths: ();
 // A private map to hold grid widths for margins
 // while calculating the grid.
 //
-// Styleguide Grid.9: Factory.a: $grid-widths-margins
+// Styleguide Grid.Factory.$grid-widths-margins
 //
 // Access: Private
 //
@@ -239,7 +239,7 @@ $grid-widths-margins: ();
 // Loops through all columns to set widths in a map
 // and create basic grid classes based on grid control settings.
 //
-// Styleguide Grid.9: Factory.a: Calculate widths
+// Styleguide Grid.Factory.Calculate widths
 //
 // Access: Private
 //
@@ -287,7 +287,7 @@ $grid-widths-margins: ();
 // Loops through all supported feature sets to create placeholder
 // classes for use in Sass.
 //
-// Styleguide Grid.9: Factory.a: Create sets
+// Styleguide Grid.Factory.Create sets
 //
 // Access: Private
 //
@@ -330,7 +330,7 @@ $grid-widths-margins: ();
 // Loops through all supported breakpoints to create placeholder
 // classes for each available feature set to use in Sass.
 //
-// Styleguide Grid.9: Factory.a: Create breakpoint classes
+// Styleguide Grid.Factory.Create breakpoint classes
 //
 // Access: Private
 //
@@ -429,7 +429,7 @@ $grid-widths-margins: ();
 // 	@extend %col-sm-margin-quarter;
 //	}
 //
-// Styleguide Grid.1: How to Use the Grid.b: Grid Placeholders
+// Styleguide Grid.How to Use the Grid.Grid Placeholders
 //
 // Access: Public
 //

@@ -1,3 +1,21 @@
+.id-kss-header-bar {
+	flex-wrap: wrap;
+}
+
+.id-kss-doc-title {
+	width: 100%;
+}
+
+.id-kss-main-nav {
+	font-size: 17px;
+	text-align: left;
+	margin-top: 10px;
+
+	a:first-child {
+		margin-left: 0;
+	}
+}
+
 .id-kss-nav-menu-link {
 	.id-kss-nav-menu-child-section &.id-kss-nav-menu-has-children,
 	&.id-kss-nav-menu-child {
