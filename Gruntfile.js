@@ -72,12 +72,12 @@ module.exports = ( grunt ) => {
 		browserSync: {
 			current: {
 				bsFiles: {
-					src : '_styleguide/*.html'
+					src : 'docs/' + pkg.version + '*.html'
 				},
 				options: {
 					watchTask: true,
 					server: {
-						baseDir: "./_styleguide"
+						baseDir: 'docs/' + pkg.version
 					}
 				}
 			},
@@ -226,7 +226,7 @@ module.exports = ( grunt ) => {
 				src: [
 					'css-dev'
 				],
-				dest: '_styleguide'
+				dest: 'docs/' + pkg.version
 			}
 		},
 	});
