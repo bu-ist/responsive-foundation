@@ -7,6 +7,8 @@ const pkg = require( './package.json' );
 
 module.exports = ( grunt ) => {
 	const docsVersionFilePath = `docs/${ pkg.version }`;
+	const kssDocsFilePath = docsVersionFilePath + '/kss-assets/docs.css';
+	const kssDocsCustomCSSPath = docsVersionFilePath + '/kss-assets/kss-custom.css';
 
 	grunt.file.mkdir( docsVersionFilePath );
 
@@ -72,26 +74,15 @@ module.exports = ( grunt ) => {
 		browserSync: {
 			current: {
 				bsFiles: {
-					src : 'docs/' + pkg.version + '*.html'
+					src : docsVersionFilePath + '*.html'
 				},
 				options: {
 					watchTask: true,
 					server: {
-						baseDir: 'docs/' + pkg.version
+						baseDir: docsVersionFilePath
 					}
 				}
-			},
-			all: {
-				bsFiles: {
-					src: [ 'docs/*.html', 'docs/css/*.css', 'docs/js/*.js' ],
-				},
-				options: {
-					watchTask: true,
-					server: {
-						baseDir: './docs',
-					},
-				},
-			},
+			}
 		},
 		concat: {
 			docs: {
@@ -101,28 +92,17 @@ module.exports = ( grunt ) => {
 			},
 		},
 		copy: {
-			alpha: {
-				expand: true,
-				cwd: '_docs/0.1.0',
-				src: [ '**/*.html', 'vendor/**/*' ],
-				dest: 'docs/0.1.0',
-			},
-			one: {
-				expand: true,
-				cwd: '_docs/1.0.0',
-				src: [ '**/*.html', 'assets/**/*' ],
-				dest: 'docs/1.0.0',
-			},
 			docs: {
 				expand: true,
 				cwd: '_docs',
-				src: [ '**/*.html', 'vendor/**/*' ],
+				src: [ '**/*.html' ],
 				dest: 'docs',
 			},
 		},
 		'gh-pages': {
 			options: {
 				base: 'docs',
+				only: [ 'index.html', docsVersionFilePath ]
 			},
 			src: [ '**' ],
 		},
@@ -137,10 +117,8 @@ module.exports = ( grunt ) => {
 				},
 				files: {
 					'docs/css/docs.css': '_docs/css-dev/docs.scss',
-					'_styleguide/kss-assets/docs.css': '_docs/css-dev/docs.scss',
-					'_styleguide/kss-assets/kss-custom.css': '_docs/css-dev/kss-custom.scss',
-					'css/burf-base.css': 'css-dev/burf-base.scss',
-					'css/burf-theme.css': 'css-dev/burf-theme.scss',
+					kssDocsFilePath: '_docs/css-dev/docs.scss',
+					kssDocsCustomCSSPath: '_docs/css-dev/kss-custom.scss'
 				},
 			},
 		},
@@ -156,20 +134,7 @@ module.exports = ( grunt ) => {
 					],
 				},
 				src: [ 'css/burf-theme.css', 'css/burf-base.css' ],
-			},
-			docs: {
-				options: {
-					map: {
-						inline: false, // Save all sourcemaps as separate files.
-						annotation: 'docs/css/', // Save to this specified directory.
-					},
-					processors: [
-						autoprefixer, // add vendor prefixes.
-					],
-				},
-				src: 'docs/css/docs.css',
-				dest: 'docs/css/docs.css',
-			},
+			}
 		},
 		watch: {
 			grunt: {
@@ -200,11 +165,7 @@ module.exports = ( grunt ) => {
 					'css-dev/**/*.hbs',
 				],
 				tasks: [ 'kss' ],
-			},
-			vendor: {
-				files: [ '_docs/vendor/**/*' ],
-				tasks: [ 'copy' ],
-			},
+			}
 		},
 		sasslint: {
 			target: 'css-dev/**/*.scss',
@@ -226,7 +187,7 @@ module.exports = ( grunt ) => {
 				src: [
 					'css-dev'
 				],
-				dest: 'docs/' + pkg.version
+				dest: docsVersionFilePath
 			}
 		},
 	});
