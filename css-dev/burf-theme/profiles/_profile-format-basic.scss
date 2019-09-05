@@ -2,10 +2,15 @@
 // Profile Basic Format Settings
 // =================================================================
 
-/// Adjusts the size of the basic profile photo.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Basic Profiles Format Photo Size
+//
+// Adjusts the size of the basic profile photo.
+//
+// Styleguide Profiles.Basic Format.Photo Size
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $profile-photo-basic-size:                  $profile-photo-default-size;
 
@@ -13,19 +18,25 @@ $profile-photo-basic-size:                  $profile-photo-default-size;
 // Profile Basic Format Styles
 // =================================================================
 
-/// Styles the basic profile format.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles the basic profile format.
+//
+// Styleguide Components.Profiles Basic Format.profile-format-basic
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-format-basic {
 	border-top: $border-profiles;
 }
 
-/// Styles a basic profile item.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles a basic profile item.
+//
+// Styleguide Components.Profiles Basic Format.profile-item-basic
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-item-basic {
 	border-bottom: $border-profiles;
@@ -34,10 +45,13 @@ $profile-photo-basic-size:                  $profile-photo-default-size;
 	padding: $padding ( $profile-photo-basic-size + $margin-small ) $padding 0;
 }
 
-/// Styles a basic profile photo.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles a basic profile photo.
+//
+// Styleguide Components.Profiles Basic Format.profile-photo-basic
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-photo-basic {
 	height: $profile-photo-basic-size;

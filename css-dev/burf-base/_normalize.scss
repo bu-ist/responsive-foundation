@@ -30,10 +30,9 @@ html {
 	-moz-osx-font-smoothing: grayscale; // Normalizes font rendering in Firefox
 }
 
-/// Controls spacing between section tags.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// Controls spacing between section tags.
+// Access: Public
+// Since: 1.0.0
 
 section {
 	margin: $margin-section;

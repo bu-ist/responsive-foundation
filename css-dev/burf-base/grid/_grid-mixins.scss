@@ -2,12 +2,15 @@
 // Grid Mixins
 // =================================================================
 
-/// Controls the base styles that get applied to grid items.
-/// Not intended for use outside the grid system - use the `col`
-/// mixin instead.
-/// @group grid
-/// @access private
-/// @since 2.0.0
+// Controls the base styles that get applied to grid items.
+// Not intended for use outside the grid system - use the `col`
+// mixin instead.
+//
+// Styleguide Grid.Factory.@mixin col-base
+//
+// Access: Private
+//
+// Since: 2.0.0
 
 @mixin col-base {
 	float: left;
@@ -22,12 +25,15 @@
 	}
 }
 
-/// Controls the base styles that get applied to grid margin items.
-/// Not intended for use outside the grid system - use the `col`
-/// mixin instead.
-/// @group grid
-/// @access private
-/// @since 2.0.0
+// Controls the base styles that get applied to grid margin items.
+// Not intended for use outside the grid system - use the `col`
+// mixin instead.
+//
+// Styleguide Grid.Factory.@mixin col-margin-base
+//
+// Access: Private
+//
+// Since: 2.0.0
 
 @mixin col-margin-base {
 	float: left;
@@ -44,12 +50,15 @@
 	}
 }
 
-/// A helper mixin to build grid properties.
-/// Not intended for use outside the grid system - use the `col`
-/// mixin instead.
-/// @group grid
-/// @access private
-/// @since 1.4.0
+// A helper mixin to build grid properties.
+// Not intended for use outside the grid system - use the `col`
+// mixin instead.
+//
+// Styleguide Grid.Factory.@mixin grid-build
+//
+// Access: Private
+//
+// Since: 1.4.0
 
 @mixin grid-build( $cssproperty, $amount ) {
 	@if ( type_of( $amount ) == "number" ) {
@@ -59,12 +68,15 @@
 	}
 }
 
-/// A helper mixin to build grid properties.
-/// Not intended for use outside the grid system - use the `col`
-/// mixin instead.
-/// @group grid
-/// @access private
-/// @since 2.0.0
+// A helper mixin to build grid properties.
+// Not intended for use outside the grid system - use the `col`
+// mixin instead.
+//
+// Styleguide Grid.Factory.@mixin col-float
+//
+// Access: Private
+//
+// Since: 2.0.0
 
 @mixin col-float {
 	float: left;
@@ -76,12 +88,15 @@
 	}
 }
 
-/// A helper mixin to build grid styles. Does not handle breakpoints.
-/// Not intended for use outside the grid system - use the `col`
-/// mixin instead.
-/// @group grid
-/// @access private
-/// @since 2.0.0
+// A helper mixin to build grid styles. Does not handle breakpoints.
+// Not intended for use outside the grid system - use the `col`
+// mixin instead.
+//
+// Styleguide Grid.Factory.@mixin grid-styles
+//
+// Access: Private
+//
+// Since: 2.0.0
 
 @mixin grid-styles( $option, $col, $use-css-grid: $enable-css-grid, $force: false ) {
 	$percentage: nth( $grid-widths, $col + 1 );
@@ -158,26 +173,38 @@
 	}
 }
 
-/// The official grid mixin.
-/// Use only where necessary to override grid classes.
-/// Arguments are the same as you use to write grid classes,
-/// in the same order.
-/// @example
-/// 		Don't use the margin class on a modified callout.
-/// 			.callout {
-///				@extend %col-sm-margin-quarter;
-///			}
-/// 			.callout-modified {
-///				@include col( $sm, quarter );
-///			}
-/// @param {variable | number} | $breakpoint - The window width to begin applying your styles. Can be any pixel value, but `$xs`, `$sm`, `$md`, `$lg`, and `$xl` are standard in this framework.
-/// @param {string} | $option - The grid option to use, ie "push", "pull", "margin". Pass "" for no option, or leave it out altogether - the mixin will check this and fix it for you.
-/// @param {number | string} | $col - The number of columns you want. Accepts friendly classes such as "half", or use Boostrap standard (1 - 12).
-/// @param {bool} | $use-css-grid - Whether or not to use CSS Grid instead of floats as the basis for this grid item's styling. CSS Grid requires some parent class styling.
-/// @param {bool} | $force - Whether or not to override the original styles by printing them where this mixin is called. You probably don't want to change this unless you're working on Foundation.
-/// @group grid
-/// @access public
-/// @since 2.0.0
+// Grid Mixin
+//
+// The official grid mixin.
+// Use only where necessary to override grid classes.
+// Arguments are the same as you use to write grid classes,
+// in the same order.
+//
+// #### Examples
+//
+// ##### Override the margin class on a modified callout.
+//
+// ```
+//
+// .callout {
+// 	@extend %col-sm-margin-quarter;
+//	}
+//
+// .callout-modified {
+// 	@include col( $sm, quarter );
+//	}
+//
+// @param {variable | number} | $breakpoint - The window width to begin applying your styles. Can be any pixel value, but `$xs`, `$sm`, `$md`, `$lg`, and `$xl` are standard in this framework.
+// @param {string} | $option - The grid option to use, ie "push", "pull", "margin". Pass "" for no option, or leave it out altogether - the mixin will check this and fix it for you.
+// @param {number | string} | $col - The number of columns you want. Accepts friendly classes such as "half", or use Boostrap standard (1 - 12).
+// @param {bool} | $use-css-grid - Whether or not to use CSS Grid instead of floats as the basis for this grid item's styling. CSS Grid requires some parent class styling.
+// @param {bool} | $force - Whether or not to override the original styles by printing them where this mixin is called. You probably don't want to change this unless you're working on Foundation.
+//
+// Styleguide Grid.How to Use the Grid.Grid Mixin
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 @mixin col( $breakpoint: "", $option: "", $col: $grid-number-columns, $use-css-grid: $enable-css-grid, $force: true ) {
 	$valid: map-get( $grid-supports, $option );

@@ -2,45 +2,155 @@
 // Grid Settings
 // =================================================================
 
-/// Whether or not to enable CSS grid sitewide for your theme.
-/// This is not recommended if you need to use push/pull
-/// classes, as these are not natively supported.
-/// You may, however, write your own custom grid styles
-/// to mimic what push and pull used to do.
-/// You may also choose to use the css-grid-base mixin to enable CSS
-/// grid in specific places throughout the site, and write your own
-/// custom styles.
-/// @group grid
-/// @access public
-/// @since 4.0.0
+// Choose CSS Grid or floats
+//
+// Whether or not to enable CSS grid sitewide for your theme.
+// This is not recommended if you need to use push/pull
+// classes, as these are not natively supported.
+// You may, however, write your own custom grid styles
+// to mimic what push and pull used to do.
+// You may also choose to use the `css-grid-base` mixin to enable CSS
+// grid in specific places throughout the site, and write your own
+// custom styles.
+//
+// #### Examples
+//
+// ##### Enable CSS Grid as the grid base sitewide.
+//
+// ```
+//
+// $enable-css-grid: true;
+//
+// ```
+//
+// Styleguide Grid.Grid Controls.Grid Type
+//
+// Access: Public
+//
+// Since: 4.0.0
 
 $enable-css-grid:                          false !default;
 
-/// The number of columns you would like in your grid.
-/// To use styles in burf-theme, you must set this to a number that
-/// is divisible by 2, 3, and 4.
-/// @group grid
-/// @access public
-/// @since 1.2.0
+// Change the number of columns in the grid
+//
+// `$grid-number-columns` can be used to adjust the number of columns
+// you would like to use in your grid. By default, we use a 12 column grid.
+// You may want to adjust this up or down for more design control.
+//
+// Because the grid in Responsive is dynamically generated, you can change
+// this freely and your "friendly" classes - `col-md-third`, etc - will work.
+// That means if you're mid-project and realize you need tighter control over
+// placement of items on your page, you can switch to a 24 column grid system
+// without any adverse effects.
+//
+// To use styles with the friendly grid classes in `burf-theme`, you must set
+// this to a number that is divisible by 2, 3, and 4.
+//
+// #### Examples
+//
+// ##### Change the grid system to use a 24 column grid
+//
+//
+// ```scss
+//
+// $grid-number-columns:                      24;
+// ```
+//
+// Styleguide Grid.Grid Controls.Columns
+//
+// Access: Public
+//
+// Since: 1.2.0
 
 $grid-number-columns:                      12 !default;
 
-/// The percentage you'd like a margin to take up on grid items, if you
-/// are using margins on grid items.
-/// By default, this will attempt to reproduce the default margin on a
-/// large screen in a full-width container. If you plan to use grids include
-/// a smaller container, you may need to adjust this.
-/// @group grid
-/// @access public
-/// @since 1.2.0
+// Change the spacing between grid items
+//
+// The percentage you'd like a margin to take up on grid items, if you
+// are using margins on grid items.
+// By default, this will attempt to reproduce the default margin on a
+// large screen in a full-width container. If you plan to use grids inside
+// a smaller container, you may need to adjust this.
+//
+// #### Examples
+//
+// ##### Change the spacing between grid items to a flat 10%.
+//
+//
+// ```scss
+//
+// $grid-margin-width:                      10;
+// ```
+//
+// Styleguide Grid.Item Settings.Margin
+//
+// Access: Public
+//
+// Since: 1.2.0
 
 $grid-margin-width:                        ( $margin / $container-lg ) * 100 !default;
 
-/// Choose which breakpoints you want grid classes to support.
-/// Small (sm) and medium (md) are required, everything else is optional.
-/// @group grid
-/// @access public
-/// @since 1.2.0
+// Choose which breakpoints to generate grid classes for
+//
+// In Responsive, you can choose which breakpoints you want grid classes
+// to support using the `$grid-breakpoints` map. You might want to do this
+// to optimize your theme so that only the classes you need are generated,
+// or you might want to add a new breakpoint to the stack that isn't
+// supported by default.
+//
+// The `sm` and `md` breakpoints are required by Responsive. All others are optional.
+//
+// #### Examples
+//
+// ##### Basic usage
+// By default, grid classes for all breakpoints in Responsive except `$xl`
+// are generated.
+//
+// ```scss
+//
+// $grid-breakpoints: (
+// 	xs: $xs, // optional
+// 	sm: $sm, // required for the framework
+// 	md: $md, // required for the framework
+// 	lg: $lg  // optional
+// );
+// ```
+//
+// ##### Prevent certain breakpoints from generating
+// You can optimize your theme by only choosing to generate the
+// grid classes you need for that theme.
+//
+// ```scss
+//
+// $grid-breakpoints: (
+// 	xs: $xs, // optional
+// 	sm: $sm, // required for the framework
+// 	md: $md // required for the framework
+// );
+// ```
+//
+// ##### Generate a new set of grid classes for a custom breakpoint
+// You can also add your own custom breakpoints for grid classes.
+// For example, if you are working with a large screen TV for signage,
+// you may want to add support to the grid for your TV breakpoint to
+// make it easier to manage your TV-sized layout.
+//
+// ```scss
+//
+// $grid-breakpoints: (
+// 	xs: $xs, // optional
+// 	sm: $sm, // required for the framework
+// 	md: $md, // required for the framework
+// 	lg: $lg,  // optional
+//		tv: $your-tv-breakpoint // Your new breakpoint. Usage: %col-tv-third;
+// );
+// ```
+//
+// Styleguide Grid.Grid Controls.Breakpoints
+//
+// Since: 2.0.0
+//
+// Access: Public
 
 $grid-breakpoints: (
 	xs: 		$xs, // optional
@@ -49,12 +159,39 @@ $grid-breakpoints: (
 	lg: 		$lg  // optional
 );
 
-/// Determines which classes to calculate and print for the theme.
-/// By default, all are on so clients can freely use these in custom CSS.
-/// However, you may choose to only support the ones you like in a custom theme.
-/// @group grid
-/// @access public
-/// @since 2.0.0
+// Choose which sets of grid classes to generate
+//
+// Responsive is based on Bootstrap, and supports all Boostrap-style
+// grid options, including `push`, `pull`, and `offset`, by default.
+// But since we dynamically generate our grid instead of including
+// static files, there is also support for a new type, `margin`,
+// which puts a true margin between each grid item in the grid, and
+// using the `$grid-supports` map, you can choose to generate any
+// (or none!) of these grid class types.
+//
+// You may want to tweak this to improve the performance of your
+// theme, especially if you do not use `push`, `pull`, or `offset`.
+//
+// #### Examples
+//
+// ##### Prevent `margin` and `offset` classes from generating.
+//
+//
+// ```scss
+//
+// $grid-supports: (
+// 	margin: false, // optional
+// 	push: true, // required for the framework
+// 	pull: true, // required for the framework
+// 	offset: false  // optional
+// );
+// ```
+//
+// Styleguide Grid.Grid Controls.Sets
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $grid-supports: (
 	margin: 		true, // optional
@@ -63,72 +200,109 @@ $grid-supports: (
 	offset: 		true // optional
 );
 
-/// Choose whether or not to print the numeric grid classes (.col-sm-5). Optional.
-/// Note that friendly placeholders (.col-quarter, .col-sm-quarter) will always print.
-/// You may wish to disable these on custom themes.
-/// @group grid
-/// @access public
-/// @since 1.2.0
+// Turn numeric grid classes on or off
+//
+// Choose whether or not to print the numeric grid classes (.col-sm-5). Optional.
+// Note that friendly placeholders (.col-quarter, .col-sm-quarter) will always print.
+// You may wish to disable these on custom themes.
+//
+// Styleguide Grid.Grid Controls.Numeric Classes
+//
+// Access: Public
+//
+// Since: 1.2.0
 
 $grid-classes:										 true !default;
 
-/// The amount of padding to put on the content container.
-/// @group grid
-/// @access public
-/// @since 1.0.0
+// Adjust padding on the mobile content container
+//
+// The amount of padding to put on the content container.
+//
+// Styleguide Grid.Container Settings.Padding
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $grid-container-padding:                   $padding-small !default;
 
-/// The amount of padding to put on the content container
-/// on desktop.
-/// @group grid
-/// @access public
-/// @since 1.0.0
+// Adjust padding on the desktop content container
+//
+// The amount of padding to use on the sides of the content container
+// on desktop.
+//
+// Styleguide Grid.Container Settings.Padding Desktop (Sides)
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $grid-container-padding-desktop-sides:     $padding !default;
 
-/// The amount of padding to put on the content container
-/// on desktop.
-/// @group grid
-/// @access public
-/// @since 1.0.0
+// Adjust padding on the desktop content container
+//
+// The amount of padding to put on the content container
+// on desktop.
+//
+// Styleguide Grid.Container Settings.Padding Desktop (All)
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $grid-container-padding-desktop:           $padding-large $grid-container-padding-desktop-sides !default;
 
-/// Controls the margin on rows in the grid.
-/// By default, this will attempt to "pull" grid items out
-/// by the same amount as their margin, Boostrap-style.
-/// @group grid
-/// @access public
-/// @since 1.0.0
+// Adjust spacing on mobile grid rows
+//
+// Controls the margin on rows in the grid.
+// By default, this will attempt to "pull" grid items out
+// by the same amount as their margin, Boostrap-style.
+//
+// Styleguide Grid.Row Settings.Margin
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $grid-row-margin:                          0 -#{$grid-container-padding} !default;
 
-/// Controls the margin on rows in the grid.
-/// By default, this will attempt to "pull" grid items out
-/// by the same amount as their margin, Boostrap-style.
-/// @group grid
-/// @access public
-/// @since 1.0.0
+// Adjust spacing on desktop grid rows
+//
+// Controls the margin on rows in the grid.
+// By default, this will attempt to "pull" grid items out
+// by the same amount as their margin, Boostrap-style.
+//
+// Styleguide Grid.Row Settings.Margin (Desktop)
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $grid-row-margin-desktop:                          0 -#{$grid-container-padding-desktop-sides} !default;
 
-/// Controls the padding on child items of the grid.
-/// On non-margin classes, this will act like a "margin",
-/// putting space between grid items, Boostrap-style.
-/// If you need to use the padding for something else, like
-/// if you have a background color on your grid item,
-/// use the margin classes.
-/// @group grid
-/// @access public
-/// @since 1.0.0
+
+// Controls the padding on child items of the grid.
+// On non-margin classes, this will act like a "margin",
+// putting space between grid items, Boostrap-style.
+// If you need to use the padding for something else, like
+// if you have a background color on your grid item,
+// use the margin classes.
+//
+// Styleguide Grid.Item Settings.Padding
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $grid-column-padding:                      $padding !default;
 
-/// Controls the padding on child items of the grid using the
-/// -margin class. Does not affect other margin classes.
-/// @group grid
-/// @access public
-/// @since 2.0.0
+// Controls the padding on child items of the grid using the
+// -margin class. Does not affect other margin classes.
+//
+// Styleguide Grid.Item Settings.Padding (Margin Items Only)
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $grid-margin-padding:                      $padding !default;

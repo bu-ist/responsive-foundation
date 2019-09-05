@@ -2,19 +2,44 @@
 // Global Settings
 // =================================================================
 
-/// Controls the default color used for text across the site.
-/// Affects body text and anything else that isn't
-/// specifically overridden.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Text Color
+//
+// Controls the default color used for text across the site.
+// Affects body text and anything else that isn't
+// specifically overridden.
+//
+// Styleguide Configuration.Typography.Text Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
+
+// Text Color
+//
+// Controls the default color used for text across the site.
+// Affects body text and anything else that isn't
+// specifically overridden.
+//
+// Styleguide Typography.Variables.$color-base
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-base:                                $color-grayscale-5 !default;
 
-/// Base margin for the section tag.
-/// @group 01-config
-/// @access public
-/// @since 2.0.0
+// Section margin
+//
+// Base margin for the section tag.
+//
+// Styleguide Configuration.Spacing.$margin-section
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $margin-section:                            $margin-large 0 0 !default;

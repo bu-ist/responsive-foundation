@@ -1,11 +1,20 @@
-// =================================================================
 // Grid Classes
 //
 // Creates CSS classes for all grid items, Boostrap-style.
-// @group grid
-// @access public
-// @since 1.2.0
-// =================================================================
+//
+// #### Examples
+//
+// ##### Quickly prototype a half width layout on desktop.
+//
+// ```html
+//
+// <div class="col-md-half">Half Column</div>
+//
+// Styleguide Grid.How to Use the Grid.Grid Classes
+//
+// Access: Public
+//
+// Since: 1.2.0
 
 @if $grid-classes {
 	@for $i from 0 through $grid-number-columns {

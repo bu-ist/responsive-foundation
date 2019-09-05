@@ -2,96 +2,158 @@
 // Branding Settings
 // =================================================================
 
-/// The font to use for branding.
-/// You may not change this unless you have permission from Marketing &amp; Communications.
-/// @group 07-branding
-/// @access public
-/// @since 1.0.0
+// Branding Font Family
+//
+// The font to use for branding.
+// You may not change this unless you have permission from Marketing &amp; Communications.
+//
+// Styleguide WordPress.Branding.Font Family
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-family-brand:                         "Whitney SSm A", "Whitney SSm B", "Helvetica", "Arial", sans-serif !default;
 
-/// The font family to use for the sponsored branding type.
-/// @group 07-branding
-/// @access public
-/// @since 1.0.0
+// Branding Font Family - Sponsored
+//
+// The font family to use for the sponsored branding type.
+//
+// Styleguide WordPress.Branding.Font Family Sponsored
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-family-brand-sponsored:               $font-family-brand !default;
 
-/// The font family to use for the unbranded branding type.
-/// @group 07-branding
-/// @access public
-/// @since 1.0.0
+// Branding Font Family - Unbranded
+//
+// The font family to use for the unbranded branding type.
+//
+// Styleguide WordPress.Branding.Font Family Unbranded
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-family-brand-unbranded:               $font-family-sans-serif !default;
 
-/// The height of the branding area.
-/// @group 07-branding
-/// @access public
-/// @since 1.0.0
+// Branding Height
+//
+// The height of the branding area.
+//
+// Styleguide WordPress.Branding.Height
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $height-brand:                             120px !default;
 
-/// The color used for the site name when a site is using BU branding.
-/// @group 07-branding
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Branding Color
+//
+// The color used for the site name when a site is using BU branding.
+//
+// Styleguide WordPress.Branding.Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-brand:                              $color-grayscale-0 !default;
 
-/// The color used for the site name when a site is not using BU branding.
-/// @group 07-branding
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Branding Color - Unbranded
+//
+// The color used for the site name when a site is not using BU branding.
+//
+// Styleguide WordPress.Branding.Color Unbranded
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-unbranded:                            #c00;
 
-/// The image used for the BU Masterplate.
-/// Do not change this without permission from Marketing &amp; Communications.
-/// @group 07-branding
-/// @access public
-/// @since 1.0.0
+// Branding Masterplate Image
+//
+// The image used for the BU Masterplate.
+// Do not change this without permission from Marketing &amp; Communications.
+//
+// Styleguide WordPress.Branding.Masterplate Image
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $image-masterplate:         "https://www.bu.edu/cdn/images/logos/masterplate112x50.png" !default;
 
-/// The image used for the BU Masterplate on retina devices.
-/// Do not change this without permission from Marketing &amp; Communications.
-/// @group 07-branding
-/// @access public
-/// @since 1.0.0
+// Branding Masterplate Image Retina
+//
+// The image used for the BU Masterplate on retina devices.
+// Do not change this without permission from Marketing &amp; Communications.
+//
+// Styleguide WordPress.Branding.Masterplate Image Retina
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $image-masterplate-retina:  "https://www.bu.edu/cdn/images/logos/masterplate112x50-retina.png" !default;
 
-/// The image used for the BU plate in the Signature style.
-/// Do not change this without permission from Marketing &amp; Communications.
-/// @group 07-branding
-/// @access public
-/// @since 1.0.0
+// Branding Subbrand Image
+//
+// The image used for the BU plate in the Signature style.
+// Do not change this without permission from Marketing &amp; Communications.
+//
+// Styleguide WordPress.Branding.Subbrand Image
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $image-subbrand:            "https://www.bu.edu/cdn/images/logos/subbrand49x35.png" !default;
 
-/// The image used for the BU plate in the Signature style on retina devices.
-/// Do not change this without permission from Marketing &amp; Communications.
-/// @group 07-branding
-/// @access public
-/// @since 1.0.0
+// Branding Subbrand Image Retina
+//
+// The image used for the BU plate in the Signature style on retina devices.
+// Do not change this without permission from Marketing &amp; Communications.
+//
+// Styleguide WordPress.Branding.Subbrand Image Retina
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $image-subbrand-retina:     "https://www.bu.edu/cdn/images/logos/subbrand49x35-retina.png" !default;
 
-/// The image used for the BUMC logo.
-/// Do not change this without permission from Marketing &amp; Communications.
-/// @group 07-branding
-/// @access public
-/// @since 1.0.0
+// Branding BUMC Image
+//
+// The image used for the BUMC logo.
+// Do not change this without permission from Marketing &amp; Communications.
+//
+// Styleguide WordPress.Branding.BUMC Image
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $image-bumclogo:         "https://www.bu.edu/cdn/images/logos/bumclogo96x40.png" !default;
 
-/// The image used for the BUMC logo on retina devices.
-/// Do not change this without permission from Marketing &amp; Communications.
-/// @group 07-branding
-/// @access public
-/// @since 1.0.0
+// Branding BUMC Image Retina
+//
+// The image used for the BUMC logo on retina devices.
+// Do not change this without permission from Marketing &amp; Communications.
+//
+// Styleguide WordPress.Branding.BUMC Image Retina
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-retina.png" !default;
 
@@ -99,28 +161,31 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 // Branding Styles
 // =================================================================
 
-/// A placeholder for vertically centering children in the branding partial.
-/// @group 07-branding
-/// @access private
-/// @since 1.4.0
+// A placeholder for vertically centering children in the branding partial.
+//
+// Access: Private
+//
+// Since: 1.4.0
 
 %_vertical-center-child {
 	@include vertical-center-child-ie8;
 }
 
-/// A placeholder for vertical centering in the branding partial.
-/// @group 07-branding
-/// @access private
-/// @since 1.4.0
+// A placeholder for vertical centering in the branding partial.
+//
+// Access: Private
+//
+// Since: 1.4.0
 
 %_vertical-center {
 	@include vertical-center-ie9;
 }
 
-/// A placeholder for ensuring background images print.
-/// @group 07-branding
-/// @access private
-/// @since 1.4.0
+// A placeholder for ensuring background images print.
+//
+// Access: Private
+//
+// Since: 1.4.0
 
 %_brand-print {
 	@media print {
@@ -128,11 +193,12 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 	}
 }
 
-/// Controls styling for elements in the branding area, including the logo and
-/// site description.
-/// @group 07-branding
-/// @access public
-/// @since 1.0.0
+// Controls styling for elements in the branding area, including the logo and
+// site description.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .brand {
 	@extend %_vertical-center-child;
@@ -155,10 +221,11 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 	}
 }
 
-/// Controls styling for the logo container.
-/// @group 07-branding
-/// @access public
-/// @since 1.0.0
+// Controls styling for the logo container.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .brand-container {
 	@extend %_vertical-center;
@@ -173,19 +240,21 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 	}
 }
 
-/// Resets the font-weight to the appropriate weight for branding.
-/// @group 07-branding
-/// @access private
-/// @since 1.0.0
+// Resets the font-weight to the appropriate weight for branding.
+//
+// Access: Private
+//
+// Since: 1.0.0
 
 %_brand-strong {
 	font-weight: 600;
 }
 
-/// Controls styling for the signature brand style.
-/// @group 07-branding
-/// @access public
-/// @since 1.4.0
+// Controls styling for the signature brand style.
+//
+// Access: Public
+//
+// Since: 1.4.0
 
 .brand-signature {
 	@extend %_brand-print;
@@ -205,10 +274,11 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 	}
 }
 
-/// Controls styling for the unbranded brand style.
-/// @group 07-branding
-/// @access public
-/// @since 1.4.0
+// Controls styling for the unbranded brand style.
+//
+// Access: Public
+//
+// Since: 1.4.0
 
 .brand-unbranded {
 	@extend %_brand-strong;
@@ -221,19 +291,21 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 	}
 }
 
-/// Controls styling for the logotype brand part.
-/// @group 07-branding
-/// @access public
-/// @since 1.4.0
+// Controls styling for the logotype brand part.
+//
+// Access: Public
+//
+// Since: 1.4.0
 
 .brand-part-logotype {
 	@extend %_brand-strong;
 }
 
-/// Controls styling for the site name brand part.
-/// @group 07-branding
-/// @access public
-/// @since 1.4.0
+// Controls styling for the site name brand part.
+//
+// Access: Public
+//
+// Since: 1.4.0
 
 .brand-part-sitename {
 	display: block;
@@ -243,10 +315,11 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 	}
 }
 
-/// Controls styling for the parent entity brand part.
-/// @group 07-branding
-/// @access public
-/// @since 1.4.0
+// Controls styling for the parent entity brand part.
+//
+// Access: Public
+//
+// Since: 1.4.0
 
 .brand-part-parent {
 	@extend %_brand-strong;
@@ -256,19 +329,21 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 	}
 }
 
-/// Controls styling for the subparent entity brand part.
-/// @group 07-branding
-/// @access public
-/// @since 1.4.0
+// Controls styling for the subparent entity brand part.
+//
+// Access: Public
+//
+// Since: 1.4.0
 
 .brand-part-subparent {
 	display: block;
 }
 
-/// Controls styling for the site description.
-/// @group 07-branding
-/// @access public
-/// @since 1.4.0
+// Controls styling for the site description.
+//
+// Access: Public
+//
+// Since: 1.4.0
 
 .brand-site-description {
 	@extend %font-size-secondary;
@@ -283,10 +358,11 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 }
 
 
-/// Controls styling for the masterplate.
-/// @group 07-branding
-/// @access public
-/// @since 1.0.0
+// Controls styling for the masterplate.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .brand-masterplate {
 	@extend %_brand-print;
@@ -302,10 +378,11 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 	}
 }
 
-/// Controls styling for the BUMC logo.
-/// @group 07-branding
-/// @access public
-/// @since 1.0.0
+// Controls styling for the BUMC logo.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .brand-bumclogo {
 	@extend %_brand-print;

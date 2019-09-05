@@ -2,94 +2,157 @@
 // Widget Settings
 // =================================================================
 
-/// Controls the spacing between widgets in the sidebar.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
+// Widget Bottom Margin
+//
+// Controls the spacing between widgets in the sidebar.
+//
+// Styleguide Widgets.General Styles.Bottom Margin
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $widget-margin-bottom:                      $margin !default;
 
-/// Controls the font family used for the widget title.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
+// Widget Title Font Family
+//
+// Controls the font family used for the widget title.
+//
+// Styleguide Widgets.General Styles.Title Font Family
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-family-widget-title:                  $font-family-sans-serif !default;
 
-/// Controls the border style used on the widget title.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
+// Widget Title Border
+//
+// Controls the border style used on the widget title.
+//
+// Styleguide Widgets.General Styles.Title Border
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $border-widget-title:                       $border !default;
 
-/// Controls the border width used on the widget title.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
+// Widget Title Border Width
+//
+// Controls the border width used on the widget title.
+//
+// Styleguide Widgets.General Styles.Title Border Width
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $border-width-widget-title:                 0 0 4px 0 !default;
 
-/// Controls the color of the widget title.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Widget Title Color
+//
+// Controls the color of the widget title.
+//
+// Styleguide Widgets.General Styles.Title Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-widget-title:                        $color-grayscale-0 !default;
 
-/// Controls the shape which shows after the widget title if it is a link.
-/// By default, this is set to be an arrow.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
+// Widget Title Link Icon
+//
+// Controls the shape which shows after the widget title if it is a link.
+// By default, this is set to be an arrow.
+//
+// Styleguide Widgets.General Styles.Title Link Icon
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $widget-title-link-after:                   " →" !default;
 
-/// Controls the color of the shape which shows after the widget title
-/// if it is a link.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
+// Widget Title Link Icon Color
+//
+// Controls the color of the shape which shows after the widget title
+// if it is a link.
+//
+// Styleguide Widgets.General Styles.Title Link Icon Color
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-widget-title-link-after:             currentColor !default;
 
-/// Controls the color of the shape which shows after the widget title
-/// when you hover.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
+// Widget Title Link Icon Color Hover
+//
+// Controls the color of the shape which shows after the widget title
+// when you hover.
+//
+// Styleguide Widgets.General Styles.Title Link Icon Color Hover
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-widget-title-link-after-hover:       $color-grayscale-0 !default;
 
-/// Controls the font family used for headings in widget content.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
+// Widget Headings Font Family
+//
+// Controls the font family used for headings in widget content.
+//
+// Styleguide Widgets.General Styles.Headings Font Family
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-family-widget-heading:                $font-family-sans-serif !default;
 
-/// Controls the color of links in the widget content.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Widget Link Color
+//
+// Controls the color of links in the widget content.
+//
+// Styleguide Widgets.General Styles.Link Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-widget-link:                        $color-link !default;
 
-/// Controls the color of links when you hover in the widget content.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Widget Link Color Hover
+//
+// Controls the color of links when you hover in the widget content.
+//
+// Styleguide Widgets.General Styles.Link Color Hover
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-widget-link-hover:                  $color-link !default;
 
-/// Controls the style of border used between items in widgets which use a
-/// list format, such as content navigation and the calendar widget.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
+// Widget List Border
+//
+// Controls the style of border used between items in widgets which use a
+// list format, such as content navigation and the calendar widget.
+//
+// Styleguide Widgets.General Styles.List Border
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $border-widget-list:                       $border !default;
 
@@ -109,10 +172,13 @@ $border-widget-list:                       $border !default;
 // Basic Widgets
 // -----------------------------------------------------------------
 
-/// Handles global widget styling.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
+// Handles global widget styling.
+//
+// Styleguide Components.Widgets.widget
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .widget {
 	@extend %col-full;
@@ -159,10 +225,13 @@ $border-widget-list:                       $border !default;
 	}
 }
 
-/// Handles title styles for all widgets.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
+// Handles title styles for all widgets.
+//
+// Styleguide Components.Widgets.widget-title
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .widget-title {
 	border: $border-widget-title;
@@ -186,10 +255,13 @@ $border-widget-list:                       $border !default;
 	}
 }
 
-/// Styles the blog list in the blogroll widget.
-/// @group 10-widgets
-/// @access public
-/// @since 2.0.0
+// Styles the blog list in the blogroll widget.
+//
+// Styleguide Components.Widgets.blogroll
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .blogroll {
 	padding: 0;
@@ -198,10 +270,21 @@ $border-widget-list:                       $border !default;
 // Content Nav
 // -----------------------------------------------------------------
 
-/// Handles styling for archive and link widgets.
-/// @group 10-widgets
-/// @access public
-/// @since 2.0.0
+// Handles styling for archive and link widgets.
+//
+// Styleguide Components.Widgets.widget_links
+//
+// Access: Public
+//
+// Since: 2.0.0
+
+// Handles styling for archive and link widgets.
+//
+// Styleguide Components.Widgets.widget_archive
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .widget_links,
 .widget_archive {
@@ -215,10 +298,13 @@ $border-widget-list:                       $border !default;
 	}
 }
 
-/// Handles styling for the WordPress calendar widget.
-/// @group 10-widgets
-/// @access public
-/// @since 4.0.0
+// Handles styling for the WordPress calendar widget.
+//
+// Styleguide Components.Widgets.wp-calendar
+//
+// Access: Public
+//
+// Since: 4.0.0
 
 #wp-calendar {
 	background: $color-grayscale-f;

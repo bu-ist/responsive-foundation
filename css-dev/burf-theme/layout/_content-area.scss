@@ -2,44 +2,70 @@
 // Content Area Settings
 // =================================================================
 
-/// The number of columns you would like to use in your layout.
-/// This controls the width of the content area vs. the sidebar.
-/// By default, setting this to 3 will make the sidebar take up 1 column,
-/// and the content area 2 columns.
-/// If you were to set this to 4, the sidebar would take up 1/4 of the space,
-/// while the content area would take up 3/4 of the space.
-/// By default, the number of supported widgets in your footer will match this number.
-/// @group 05-grid
-/// @access public
-/// @since 1.2.0
+// Set Content Area Columns
+//
+// The number of columns you would like to use in your layout.
+// This controls the width of the content area vs. the sidebar.
+// By default, setting this to 3 will make the sidebar take up 1 column,
+// and the content area 2 columns.
+//
+// If you were to set this to 4, the sidebar would take up 1/4 of the space,
+// while the content area would take up 3/4 of the space.
+// By default, the number of supported widgets in your footer will match this number.
+//
+// Styleguide Configuration.Content Area.Columns
+//
+// Access: Public
+//
+// Since: 1.2.0
 
 $number-columns: 									 3 !default;
 
-/// Sets the margin width for content and footbar widgets.
-/// @group 05-grid
-/// @access public
-/// @since 1.2.0
+// Set Content Area Margin
+//
+// Sets the margin width for content and footbar widgets.
+//
+// Styleguide Configuration.Content Area.Margin Width
+//
+// Access: Public
+//
+// Since: 1.2.0
 
 $margin-width: 			  					    5.2% !default;
 
-/// Controls the background color of the content.
-/// @group 09-content
-/// @access public
-/// @since 1.0.0
+// Content Area Background Color
+//
+// Controls the background color of the content.
+//
+// Styleguide Configuration.Content Area.Background Color
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-content-bg:                         $color-grayscale-f !default;
 
-/// The amount of padding to add to columns on mobile.
-/// @group 05-grid
-/// @access public
-/// @since 1.2.0
+// Content Area Column Padding - Mobile
+//
+// The amount of padding to add to columns on mobile.
+//
+// Styleguide Configuration.Content Area.Mobile Column Padding
+//
+// Access: Public
+//
+// Since: 1.2.0
 
 $column-padding-bottom:                     10px !default;
 
-/// The amount of padding to add to columns on desktop.
-/// @group 05-grid
-/// @access public
-/// @since 1.2.0
+// Content Area Column Padding - Desktop
+//
+// The amount of padding to add to columns on desktop.
+//
+// Styleguide Configuration.Content Area.Desktop Column Padding
+//
+// Access: Public
+//
+// Since: 1.2.0
 
 $column-padding-bottom-large-screen:         35px !default;
 
@@ -47,20 +73,22 @@ $column-padding-bottom-large-screen:         35px !default;
 // Content Area Styles
 // =================================================================
 
-/// Controls styling for all content, from the masthead to the site footer.
-/// @group 08-layout
-/// @access public
-/// @since 1.0.0
+// Controls styling for all content, from the masthead to the site footer.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .content {
 	background: $color-content-bg;
 }
 
-/// A wrapper to contain content to a certain size. Sits just below the window
-/// width banner and just above the footbar.
-/// @group 08-layout
-/// @access public
-/// @since 1.0.0
+// A wrapper to contain content to a certain size. Sits just below the window
+// width banner and just above the footbar.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .content-container {
 	@extend %container-styles;
@@ -70,33 +98,38 @@ $column-padding-bottom-large-screen:         35px !default;
 // Content Area
 // -----------------------------------------------------------------
 
-/// A helper variable to figure out the proper width for the content
-/// based on the desired number of columns in the design.
-/// Note that this is different from the number of columns supported in
-/// the grid.
-/// By default, the width is one less than the number of columns.
-/// @group 08-layout
-/// @access private
-/// @since 1.0.0
+// A helper variable to figure out the proper width for the content
+// based on the desired number of columns in the design.
+// Note that this is different from the number of columns supported in
+// the grid.
+//
+// By default, the width is one less than the number of columns.
+//
+// Access: Private
+//
+// Since: 1.0.0
 
 $_content-width: $grid-number-columns * ( ( $number-columns - 1 ) / $number-columns );
 
-/// A helper variable to figure out the proper width for the sidebar
-/// based on the desired number of columns in the design.
-/// Note that this is different from the number of columns supported in
-/// the grid.
-/// By default, the width is one column.
-/// @group 08-layout
-/// @access private
-/// @since 1.0.0
+// A helper variable to figure out the proper width for the sidebar
+// based on the desired number of columns in the design.
+// Note that this is different from the number of columns supported in
+// the grid.
+//
+// By default, the width is one column.
+//
+// Access: Private
+//
+// Since: 1.0.0
 
 $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 
-/// Styles for the content area (formerly styled by article[role=main]).
-/// Sits next to the sidebar.
-/// @group 08-layout
-/// @access public
-/// @since 1.0.0
+// Styles for the content area (formerly styled by article[role=main]).
+// Sits next to the sidebar.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .content-area {
 	@extend %col-full;
@@ -129,18 +162,20 @@ $_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
 // Sidebar
 // -----------------------------------------------------------------
 
-/// The amount of padding to add to the sidebar.
-/// Calculated based on the number of columns by default.
-/// @group 05-grid
-/// @access public
-/// @since 1.2.0
+// The amount of padding to add to the sidebar.
+// Calculated based on the number of columns by default.
+//
+// Access: Public
+//
+// Since: 1.2.0
 
 $sidebar-padding:                          3.46667% !default; // $sidebar-padding:                          ( $margin-width - $margin-width * ( 1 / ( $number-widgets-footbar ) ) ) !default;
 
-/// The default class for styling sidebars.
-/// @group 08-layout
-/// @access public
-/// @since 1.0.0
+// The default class for styling sidebars.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .sidebar {
 	@extend %equal-heights;
@@ -188,10 +223,11 @@ $sidebar-padding:                          3.46667% !default; // $sidebar-paddin
 // Layouts
 // -----------------------------------------------------------------
 
-/// Styles for the left sidebar location.
-/// @group 08-layout
-/// @access public
-/// @since 1.2.0
+// Styles for the left sidebar location.
+//
+// Access: Public
+//
+// Since: 1.2.0
 
 .sidebar-location-left {
 	.sidebar {
@@ -199,10 +235,11 @@ $sidebar-padding:                          3.46667% !default; // $sidebar-paddin
 	}
 }
 
-/// Styles for narrow content.
-/// @group 08-layout
-/// @access public
-/// @since 1.4.0
+// Styles for narrow content.
+//
+// Access: Public
+//
+// Since: 1.4.0
 
 .content-container-narrow {
 	.sidebar {

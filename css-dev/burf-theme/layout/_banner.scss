@@ -2,26 +2,41 @@
 // Content Banner Settings
 // =================================================================
 
-/// Controls the background color of the banner container.
-/// By default, this only affects the window width banner container.
-/// @group 09-content
-/// @access public
-/// @since 1.0.0
+// Content Banner Background Color
+//
+// Controls the background color of the banner container.
+// By default, this only affects the window width banner container.
+//
+// Styleguide WordPress.Content Banner.Background Color
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-banner-container:                    $color-grayscale-f0 !default;
 
-/// Controls the padding on the banner container.
-/// @group 09-content
-/// @access public
-/// @since 3.0.2
+// Content Banner Padding
+//
+// Controls the padding on the banner container.
+//
+// Styleguide WordPress.Content Banner.Padding
+//
+// Access: Public
+//
+// Since: 3.0.2
 
 $padding-banner:                                              0 !default;
 
-/// Controls the padding on the banner container when using
-/// the window-width layout.
-/// @group 09-content
-/// @access public
-/// @since 3.0.2
+// Content Banner Padding - Window Width
+//
+// Controls the padding on the banner container when using
+// the window-width layout.
+//
+// Styleguide WordPress.Content Banner.Padding Window Width
+//
+// Access: Public
+//
+// Since: 3.0.2
 
 $padding-banner-window-width:                    $padding-small !default;
 
@@ -29,10 +44,11 @@ $padding-banner-window-width:                    $padding-small !default;
 // Content Banner Styles
 // =================================================================
 
-/// General styles for all content banner positions.
-/// @group 08-layout
-/// @access public
-/// @since 1.0.0
+// General styles for all content banner positions.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .banner-container {
 	padding: 0;
@@ -44,11 +60,12 @@ $padding-banner-window-width:                    $padding-small !default;
 	}
 }
 
-/// Styles for the window-width content banner position.
-/// Sits outside of `.content-container`.
-/// @group 08-layout
-/// @access public
-/// @since 1.0.0
+// Styles for the window-width content banner position.
+// Sits outside of `.content-container`.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .banner-container-window-width {
 	@include breakpoint( $lg ) {
@@ -57,12 +74,13 @@ $padding-banner-window-width:                    $padding-small !default;
 	}
 }
 
-/// Styles for the page-width content banner position.
-/// Sits directly inside `.content-container` and just
-/// outside of `.content-area`.
-/// @group 08-layout
-/// @access public
-/// @since 1.0.0
+// Styles for the page-width content banner position.
+// Sits directly inside `.content-container` and just
+// outside of `.content-area`.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .banner-container-page-width {
 	margin: -$grid-container-padding;
@@ -80,11 +98,12 @@ $padding-banner-window-width:                    $padding-small !default;
 	}
 }
 
-/// Styles for the content-width content banner position.
-/// Sits directly inside `.content-area`.
-/// @group 08-layout
-/// @access public
-/// @since 1.0.0
+// Styles for the content-width content banner position.
+// Sits directly inside `.content-area`.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .banner-container-content-width {
 	background: none;

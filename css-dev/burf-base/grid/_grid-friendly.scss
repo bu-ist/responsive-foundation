@@ -1,4 +1,3 @@
-// =================================================================
 // Grid - Friendly Classes
 //
 // Creates "friendly" classes that are easier to read, use, and
@@ -6,10 +5,12 @@
 // -quarter, etc.
 // Placeholders are defined below, in the `$widths` map.
 // These always print, regardless of grid settings.
-// @group grid
-// @access public
-// @since 1.2.0
-// =================================================================
+//
+// Styleguide Grid.Factory.Friendly class map
+//
+// Access: Public
+//
+// Since: 1.2.0
 
 $widths: (
 	quarter: 		$grid-number-columns * (1/4),
@@ -21,12 +22,19 @@ $widths: (
 	remove: 			0
 );
 
-/// Creates the friendly classes and placeholders.
-/// @example
-/// 		Make something take up 1/2 of available space starting at the small breakpoint:
-/// 			@extend %col-sm-one-half;
-/// 		Make something take up 3/4 of available space starting at the medium breakpoint:
-/// 			@extend %col-md-three-quarter;
+
+// Creates friendly classes
+// Creates "friendly" classes that are easier to read, use, and
+// understand than standard Boostrap grid classes, such as -half,
+// -quarter, etc.
+// Placeholders are defined below, in the `$widths` map.
+// These always print, regardless of grid settings.
+//
+// Styleguide Grid.Factory.Create friendly classes
+//
+// Access: Public
+//
+// Since: 1.2.0
 
 @each $width, $columns in $widths {
 	%col-#{$width} {

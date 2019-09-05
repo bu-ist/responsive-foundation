@@ -21,7 +21,125 @@
 //  23px => 17pt
 //  24px => 18pt
 
-$print-body-text: 13pt Georgia, 'Times New Roman', Times, serif;
+// Print Font Family
+//
+// Controls the font family used on the print stylesheet.
+//
+// Styleguide Configuration.Print.$print-font-family
+//
+// Access: Public
+//
+// Since: 4.0.0
+
+$print-font-family: Georgia, 'Times New Roman', Times, serif !default;
+
+// Print Font Size
+//
+// Controls the font size used on the print stylesheet.
+//
+// Styleguide Configuration.Print.$print-font-size
+//
+// Access: Public
+//
+// Since: 4.0.0
+
+$print-font-size: 13pt !default;
+
+// Print Text Color
+//
+// Controls the text color used on the print stylesheet.
+//
+// Styleguide Configuration.Print.$print-text-color
+//
+// Access: Public
+//
+// Since: 4.0.0
+
+$print-text-color: $color-base !default;
+
+// Print Margins
+//
+// Controls the margins used on the print stylesheet.
+//
+// Styleguide Configuration.Print.$print-margins
+//
+// Access: Public
+//
+// Since: 4.0.0
+
+$print-margins: 2cm !default;
+
+// Print Heading 1
+//
+// Controls the size of `h1` on the print stylesheet.
+//
+// Styleguide Configuration.Print.$print-font-size-1
+//
+// Access: Public
+//
+// Since: 4.0.0
+
+$print-font-size-1: 24pt !default;
+
+// Print Heading 2
+//
+// Controls the size of `h2` on the print stylesheet.
+//
+// Styleguide Configuration.Print.$print-font-size-2
+//
+// Access: Public
+//
+// Since: 4.0.0
+
+$print-font-size-2: 14pt !default;
+
+// Print Heading 3
+//
+// Controls the size of `h3` on the print stylesheet.
+//
+// Styleguide Configuration.Print.$print-font-size-3
+//
+// Access: Public
+//
+// Since: 4.0.0
+
+$print-font-size-3: 14pt !default;
+
+// Print Heading 4
+//
+// Controls the size of `h4` on the print stylesheet.
+//
+// Styleguide Configuration.Print.$print-font-size-4
+//
+// Access: Public
+//
+// Since: 4.0.0
+
+$print-font-size-4: 14pt !default;
+
+// Print Heading 5
+//
+// Controls the size of `h5` on the print stylesheet.
+//
+// Styleguide Configuration.Print.$print-font-size-5
+//
+// Access: Public
+//
+// Since: 4.0.0
+
+$print-font-size-5: 12pt !default;
+
+// Print Heading 6
+//
+// Controls the size of `h6` on the print stylesheet.
+//
+// Styleguide Configuration.Print.$print-font-size-6
+//
+// Access: Public
+//
+// Since: 4.0.0
+
+$print-font-size-6: 12pt !default;
 
 @media print {
 	// Set content width, remove floats and margins
@@ -44,7 +162,7 @@ $print-body-text: 13pt Georgia, 'Times New Roman', Times, serif;
 	// Adjust margins
 
 	@page {
-		margin: 2cm;
+		margin: $print-margins;
 	}
 
 	// Font set to 16px / 13pt, background set to white and font set to black.
@@ -52,21 +170,40 @@ $print-body-text: 13pt Georgia, 'Times New Roman', Times, serif;
 
 	body {
 		background: $color-grayscale-f !important;
-		color: $color-base;
-		font: $print-body-text;
+		color: $print-text-color;
+		font-family: $print-font-family;
+		font-size: $print-font-size;
 		line-height: 1.3;
 		margin: 0;
 		padding: 0;
 	}
 
 	h1 {
-		font-size: 24pt;
+		font-size: $print-font-size-1;
 	}
 
-	h2,
-	h3,
+	h2 {
+		font-size: $print-font-size-2;
+		margin-top: 25px;
+	}
+
+	h3 {
+		font-size: $print-font-size-3;
+		margin-top: 25px;
+	}
+
 	h4 {
-		font-size: 14pt;
+		font-size: $print-font-size-4;
+		margin-top: 25px;
+	}
+
+	h5 {
+		font-size: $print-font-size-5;
+		margin-top: 25px;
+	}
+
+	h6 {
+		font-size: $print-font-size-6;
 		margin-top: 25px;
 	}
 

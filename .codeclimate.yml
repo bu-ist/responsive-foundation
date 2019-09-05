@@ -5,6 +5,9 @@ exclude_paths:
   - languages/
   - vendor/
   - js/vendor/
+  - _styleguide/
+  - _docs/
+  - docs/
   - ".sass-cache/"
   - "*.min.css"
   - "*.min.js"
