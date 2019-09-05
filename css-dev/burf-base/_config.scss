@@ -672,7 +672,7 @@ $tint-saturation: 15% !default;
 // Colors:
 // $color-grayscale-0: #000
 // $color-grayscale-1: #111
-// $color-grayscale-.#222
+// $color-grayscale-2: #222
 // $color-grayscale-3: #333
 // $color-grayscale-4: #444
 // $color-grayscale-5: #555
@@ -730,7 +730,7 @@ $color-grayscale-1:                        tint-gray( #111 );
 // Overriding this variable is not supported.
 //
 // Colors:
-// $color-grayscale-.#222
+// $color-grayscale-2: #222
 //
 // Styleguide Utilities.Colors.$color-grayscale-2
 //
@@ -738,7 +738,7 @@ $color-grayscale-1:                        tint-gray( #111 );
 //
 // Since: 1.0.0
 
-$color-grayscale-.                       tint-gray( #222 );
+$color-grayscale-2:                        tint-gray( #222 );
 
 // A grayscale variable that takes advantage of the tint system.
 // Produces a dark gray suitable for text or backgrounds.
