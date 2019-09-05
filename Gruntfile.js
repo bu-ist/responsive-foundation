@@ -205,7 +205,7 @@ module.exports = ( grunt ) => {
 	grunt.loadNpmTasks( 'grunt-sass' );
 	grunt.loadNpmTasks( 'grunt-sass-lint' );
 	grunt.loadNpmTasks( 'grunt-kss' );
-	grunt.registerTask( 'build', [ 'js', 'kss' ] );
+	grunt.registerTask( 'build', [ 'js', 'kss', 'copy' ] );
 	grunt.registerTask( 'deploy', [ 'build', 'gh-pages' ] );
 	grunt.registerTask( 'js', [ 'clean:js', 'babel', 'browserify', 'uglify' ] );
 	grunt.registerTask( 'serve', [ 'build', 'browserSync:current', 'watch' ] );
