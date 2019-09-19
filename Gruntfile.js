@@ -180,7 +180,7 @@ module.exports = ( grunt ) => {
 				],
 				extend: 'node_modules/id-kss-builder/extend',
 				gitURL: 'https://github.com/bu-ist/responsive-foundation/',
-				gitURLCSSDEV: 'https://github.com/bu-ist/responsive-foundation/tree/master/css-dev',
+				gitURLCSSDEV: 'https://github.com/bu-ist/responsive-foundation/tree/master/css-dev/',
 				customCSS: 'kss-assets/kss-custom.css'
 			},
 			dist: {
