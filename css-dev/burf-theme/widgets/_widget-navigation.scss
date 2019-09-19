@@ -2,57 +2,95 @@
 // Content Navigation Settings
 // =================================================================
 
-/// Controls the style of border used on the content navigation list.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
+// Content Navigation Widget Border
+//
+// Controls the style of border used on the content navigation list.
+//
+// Styleguide Widgets.Content Navigation.Border
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $border-widget-contentnav:                 $border !default;
 
-/// Controls the font family used in the content navigation widget.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
+// Content Navigation Widget Font Family
+//
+// Controls the font family used in the content navigation widget.
+//
+// Styleguide Widgets.Content Navigation.Font Family
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-family-widget-contentnav:             $font-family-sans-serif !default;
 
-/// Controls the font size used for items on the first level in the
-/// content navigation widget.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
+// Content Navigation Widget Font Size
+//
+// Controls the font size used for items on the first level in the
+// content navigation widget.
+//
+// Styleguide Widgets.Content Navigation.Font Size
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-size-widget-contentnav-link:          inherit !default;
 
-/// Controls the font size used for items below the first level in the
-/// content navigation widget.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
+// Content Navigation Widget Nested Link Color
+//
+// Controls the font size used for items below the first level in the
+// content navigation widget.
+//
+// Styleguide Widgets.Content Navigation.Nested Link Color
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-size-widget-contentnav-nested-link:    inherit !default;
 
-/// Controls the color of nav items in the content navigation widget.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Content Navigation Widget Link Color
+//
+// Controls the color of nav items in the content navigation widget.
+//
+// Styleguide Widgets.Content Navigation.Link Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-widget-contentnav:                  $color-link !default;
 
-/// Controls the color of nav items when you hover in the content navigation widget.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Content Navigation Widget Link Hover
+//
+// Controls the color of nav items when you hover in the content navigation widget.
+//
+// Styleguide Widgets.Content Navigation.Link Hover
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-widget-contentnav-hover:            $color-link !default;
 
-/// Controls the active color of nav items in the content navigation widget.
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Content Navigation Widget Link Active
+//
+// Controls the active color of nav items in the content navigation widget.
+//
+// Styleguide Widgets.Content Navigation.Link Active
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-widget-contentnav-active:           $color-link-active !default;
 
@@ -61,10 +99,21 @@ $color-widget-contentnav-active:           $color-link-active !default;
 // Content Navigation Styles
 // =================================================================
 
-/// Handles styling for content navigation widgets (BU Pages and Content Navigation, aka side nav).
-/// @group 10-widgets
-/// @access public
-/// @since 1.0.0
+// Handles styling for content navigation widgets (BU Pages and Content Navigation, aka side nav).
+//
+// Styleguide Components.Widgets.widget_bu_pages
+//
+// Access: Public
+//
+// Since: 1.0.0
+
+// Handles styling for content navigation widgets (BU Pages and Content Navigation, aka side nav).
+//
+// Styleguide Components.Widgets.widget_nav_menu
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .widget_bu_pages,
 .widget_nav_menu {

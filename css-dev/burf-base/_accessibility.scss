@@ -3,24 +3,31 @@
 // Requires MathSass.
 // =================================================================
 
-/// Calculates linear color channel values, for use in
-/// accessibility contrast calculations.
-/// See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
-/// Based on Sérgio Gomes's accessibility work.
-///
-/// Algorithm, for c in 0 to 255:
-///
-/// f(c) {
-///   c = c / 255;
-///   return c < 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
-/// }
-///
-/// More info: https://medium.com/dev-channel/using-sass-to-automatically-pick-text-colors-4ba7645d2796
-///
-/// @author Sérgio Gomes
-/// @group accessibility
-/// @access private
-/// @since 3.2.0
+// Linear color channel
+//
+// Calculates linear color channel values, for use in
+// accessibility contrast calculations.
+// See <https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests>
+// Based on Sérgio Gomes's accessibility work.
+//
+// Algorithm, for c in 0 to 255:
+//
+// ```
+// f(c) {
+//   c = c / 255;
+//   return c < 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+// }
+// ```
+//
+// More info: <https://medium.com/dev-channel/using-sass-to-automatically-pick-text-colors-4ba7645d2796>
+//
+// Author: Sérgio Gomes
+//
+// Styleguide Utilities.Accessibility.Linear color channel
+//
+// Access: Private
+//
+// Since: 3.2.0
 
 @function linear-color-channel( $color ) {
 	$color: $color / 255;
@@ -35,17 +42,24 @@
 	@return $channel-value;
 }
 
-/// Calculates the luminance of a color, for use in
-/// accessibility contrast calculations.
-/// See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
-/// Based on Sérgio Gomes's accessibility work.
-///
-/// More info: https://medium.com/dev-channel/using-sass-to-automatically-pick-text-colors-4ba7645d2796
-///
-/// @author Sérgio Gomes
-/// @group accessibility
-/// @access private
-/// @since 3.2.0
+
+// Luminance
+//
+// Calculates the luminance of a color, for use in
+// accessibility contrast calculations.
+// See <https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests>
+// Based on Sérgio Gomes's accessibility work.
+//
+//
+// More info: <https://medium.com/dev-channel/using-sass-to-automatically-pick-text-colors-4ba7645d2796>
+//
+// Author: Sérgio Gomes
+//
+// Styleguide Utilities.Accessibility.Luminance
+//
+// Access: Private
+//
+// Since: 3.2.0
 
 @function luminance( $color ) {
 	$red: linear-color-channel( red( $color ) + 1 );
@@ -55,17 +69,23 @@
 	@return .2126 * $red + .7152 * $green + .0722 * $blue;
 }
 
-/// Calculates the contrast ratio between two colors, for use in
-/// accessibility contrast calculations.
-/// See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
-/// Based on Sérgio Gomes's accessibility work.
-///
-/// More info: https://medium.com/dev-channel/using-sass-to-automatically-pick-text-colors-4ba7645d2796
-///
-/// @author Sérgio Gomes
-/// @group accessibility
-/// @access private
-/// @since 3.2.0
+// Contrast
+//
+// Calculates the contrast ratio between two colors, for use in
+// accessibility contrast calculations.
+// See <https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests>
+// Based on Sérgio Gomes's accessibility work.
+//
+//
+// More info: <https://medium.com/dev-channel/using-sass-to-automatically-pick-text-colors-4ba7645d2796>
+//
+// Author: Sérgio Gomes
+//
+// Styleguide Utilities.Accessibility.Contrast
+//
+// Access: Private
+//
+// Since: 3.2.0
 
 @function contrast( $back, $front ) {
 	$backLum: luminance( $back ) + .05;
@@ -74,24 +94,29 @@
 	@return max( $backLum, $foreLum ) / min( $backLum, $foreLum );
 }
 
-/// Returns WCAG-compliant text colors automatically, based on a
-/// desired background and foreground color, by lightening or
-/// darkening the text color until it meets compliance standards.
-///
-/// By default, the compliance method is set to AA, but you can
-/// pass an optional compliance method argument to support AAA.
-///
-/// @example
-/// 		Automatically fix a link text color to be AA compliant
-///		based on the background color of widgets.
-/// 			.widget a {
-///				color: accessible-text( $widget-bg, $color-secondary );
-///			}
-///
-/// @author Ashley Kolodziej
-/// @group accessibility
-/// @access public
-/// @since 3.2.0
+// Accessible Text
+//
+// Returns WCAG-compliant text colors automatically, based on a
+// desired background and foreground color, by lightening or
+// darkening the text color until it meets compliance standards.
+//
+// By default, the compliance method is set to AA, but you can
+// pass an optional compliance method argument to support AAA.
+//
+// #### Examples
+//
+// ##### Automatically fix a link text color to be AA compliant based on the background color of widgets.
+// 			.widget a {
+//				color: accessible-text( $widget-bg, $color-secondary );
+//			}
+//
+// Author: Ashley Kolodziej
+//
+// Styleguide Utilities.Accessibility.Acccessible Text
+//
+// Access: Public
+//
+// Since: 3.2.0
 
 @function accessible-text( $background, $preferred-text-color, $bold: false, $compliance-method: 'AA' ){
 	$contrast: contrast( $background, $preferred-text-color );
@@ -142,4 +167,53 @@
 	}
 
 	@return $final-text-color;
+}
+
+// Skip Link
+//
+// Creates styles for a skip link.
+//
+// Author: Ashley Kolodziej
+//
+// Styleguide Utilities.Accessibility.Skip Link
+//
+// Access: Public
+//
+// Since: 3.2.3
+
+%skip-link {
+	@include box-shadow( 0 0 2px 2px transparentize( $color-grayscale-0, 0.4 ) );
+	background-color: #F1F1F1;
+	color: #21759B;
+	display: block;
+	font-family: "Open Sans",sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	height: auto;
+	left: 50%;
+	line-height: normal;
+	margin: 0;
+	padding: 15px 23px 14px;
+	position: fixed;
+	right: 50%;
+	text-align: center;
+	text-decoration: none;
+	top: -130px;
+	transform: translateX( -50% );
+	-webkit-transition: top 0.3s ease-out;
+	transition: top 0.3s ease-out;
+	width: 90%;
+	z-index: 100000;
+
+	@include breakpoint( $xs ) {
+		width: 190px;
+	}
+
+	&:focus,
+	&:active {
+		color: #21759B;
+		top: 0;
+		-webkit-transition: top 0s;
+		transition: top 0s;
+	}
 }

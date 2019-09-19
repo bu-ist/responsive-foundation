@@ -27,11 +27,22 @@
 // Blah
 // =================================================================
 
+// BURF Extras
+//
+// Whether or not to output Responsive default classes when using
+// burf-tools.
+//
+// Styleguide Configuration.Tools.$burf-extras
+//
+// Access: Public
+//
+// Since: 3.0.0
+
 $burf-extras:								       false !default;
 
 @import '~responsive-foundation/css-dev/burf-base/config';
-@import '~responsive-foundation/css-dev/burf-base/accessibility';
 @import '~responsive-foundation/css-dev/burf-base/mixins';
+@import '~responsive-foundation/css-dev/burf-base/accessibility';
 @import '~responsive-foundation/css-dev/burf-base/normalize-variables';
 
 @import '~responsive-foundation/css-dev/burf-base/grid/grid-variables';
@@ -39,9 +50,30 @@ $burf-extras:								       false !default;
 @import '~responsive-foundation/css-dev/burf-base/grid/grid-placeholders';
 @import '~responsive-foundation/css-dev/burf-base/grid/grid-friendly';
 
-// Special settings for icons
+// Use Default Icons
+//
+// Whether or not to use BU Default Icons as your icon font.
+// when using burf-tools.
+//
+// Styleguide Configuration.Tools.$use-default-icons
+//
+// Access: Public
+//
+// Since: 3.0.0
 
 $use-default-icons:                        false !default;
+
+// Print Icon Classes
+//
+// Whether or not to print the default icon classes
+// when using burf-tools.
+//
+// Styleguide Configuration.Tools.$print-icon-classes
+//
+// Access: Public
+//
+// Since: 3.0.0
+
 $print-icon-classes:                       false !default;
 
 @import '~responsive-foundation/css-dev/burf-base/icons/package';

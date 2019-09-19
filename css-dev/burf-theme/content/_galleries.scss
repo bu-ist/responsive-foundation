@@ -2,25 +2,34 @@
 // Gallery Settings
 // =================================================================
 
-/// A helper variable to control the number of columns a gallery
-/// supports in our WordPress environment.
-/// @group 09-content
-/// @access private
-/// @since 1.4.0
+// A helper variable to control the number of columns a gallery
+// supports in our WordPress environment.
+//
+// Access: Private
+//
+// Since: 1.4.0
 
 $_wp-supported-gallery-columns: 												9;
 
-/// A variable which controls the color of overlays on photo hover
-/// in WordPress galleries.
-/// @group content
-/// @since 2.0.0
+// Gallery Hover Overlay Color
+//
+// A variable which controls the color of overlays on photo hover
+// in WordPress galleries.
+//
+// Styleguide WordPress.Gallery.Hover Overlay Color
+//
+// Since: 2.0.0
 
 $color-gallery-overlay:   rgba( $color-grayscale-0, 0.75 ) !default;
 
-/// A variable which controls the margin around photos
-/// in WordPress galleries.
-/// @group content
-/// @since 3.0.2
+// Gallery Margin
+//
+// A variable which controls the margin around photos
+// in WordPress galleries.
+//
+// Styleguide WordPress.Gallery.Margin
+//
+// Since: 3.0.2
 
 $margin-gallery: 													10px !default;
 
@@ -28,10 +37,11 @@ $margin-gallery: 													10px !default;
 // Gallery Styles
 // =================================================================
 
-/// Base styles for the gallery shortcode in WordPress.
-/// @group 09-content
-/// @access public
-/// @since 1.4.0
+// Base styles for the gallery shortcode in WordPress.
+//
+// Access: Public
+//
+// Since: 1.4.0
 
 .gallery {
 	@extend %clearfix;
@@ -59,10 +69,11 @@ $margin-gallery: 													10px !default;
 	}
 }
 
-/// Styles for each supported number of columns in the WordPress gallery shortcode.
-/// @group 09-content
-/// @access public
-/// @since 1.4.0
+// Styles for each supported number of columns in the WordPress gallery shortcode.
+//
+// Access: Public
+//
+// Since: 1.4.0
 
 .gallery-item {
 	border-right: $margin-gallery solid transparent;
@@ -85,6 +96,12 @@ $margin-gallery: 													10px !default;
 	}
 }
 
+// Styles for single column galleries in the WordPress gallery shortcode.
+//
+// Access: Public
+//
+// Since: 1.4.0
+
 .gallery-columns-1 {
 	.gallery-item {
 		float: none;
@@ -98,6 +115,12 @@ $margin-gallery: 													10px !default;
 		width: auto;
 	}
 }
+
+// Styles for the gallery icon and hover states.
+//
+// Access: Public
+//
+// Since: 1.4.0
 
 .gallery-icon {
 	a {
@@ -162,10 +185,11 @@ $margin-gallery: 													10px !default;
 	}
 }
 
-/// Styles for captions in the WordPress gallery shortcode.
-/// @group content
-/// @access public
-/// @since 1.4.0
+// Styles for captions in the WordPress gallery shortcode.
+//
+// Access: Public
+//
+// Since: 1.4.0
 
 .gallery-caption {
 	@include rgba-color( background-color, $color-gallery-overlay, $color-grayscale-0 );

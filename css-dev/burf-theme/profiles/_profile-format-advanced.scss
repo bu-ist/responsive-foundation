@@ -2,19 +2,28 @@
 // Profile Advanced Format Settings
 // =================================================================
 
-/// Controls the number of profiles in a row in the advanced format.
-/// Kicks in at the extra small breakpoint.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Columns (Mobile)
+// Controls the number of profiles in a row in the advanced format.
+// Kicks in at the extra small breakpoint.
+//
+// Styleguide Profiles.Advanced Format.Columns Mobile
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $profiles-advanced-cols-xs:			2 !default;
 
-/// Controls the number of profiles in a row in the advanced format.
-/// Kicks in at the medium breakpoint.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Columns
+//
+// Controls the number of profiles in a row in the advanced format.
+// Kicks in at the medium breakpoint.
+//
+// Styleguide Profiles.Advanced Format.Columns
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $profiles-advanced-cols-md:			3 !default;
 
@@ -22,35 +31,45 @@ $profiles-advanced-cols-md:			3 !default;
 // Profile Advanced Format Styles
 // =================================================================
 
-/// Styles the advanced profile format.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles the advanced profile format.
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-format-advanced {
 	@extend %clearfix;
+
+	@if ( $enable-css-grid ) {
+		@extend %grid-xs-parent;
+	}
 }
 
-/// A helper variable to determine which grid class to extend
-/// for advanced profile items at the `xs` breakpoint.
-/// @group 14-profiles
-/// @access private
-/// @since 2.0.0
+// A helper variable to determine which grid class to extend
+// for advanced profile items at the `xs` breakpoint.
+//
+// Access: Private
+//
+// Since: 2.0.0
 
 $_profile-adv-cols-xs: $grid-number-columns / $profiles-advanced-cols-xs;
 
-/// A helper variable to determine which grid class to extend
-/// for advanced profile items at the `md` breakpoint.
-/// @group 14-profiles
-/// @access private
-/// @since 2.0.0
+// A helper variable to determine which grid class to extend
+// for advanced profile items at the `md` breakpoint.
+//
+// Access: Private
+//
+// Since: 2.0.0
 
 $_profile-adv-cols-md: $grid-number-columns / $profiles-advanced-cols-md;
 
-/// Styles an advanced profile item.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles an advanced profile item.
+//
+// Styleguide Components.Profile Advanced Format.profile-item-advanced
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-item-advanced {
 	@extend %col-xs-#{$_profile-adv-cols-xs};
@@ -71,10 +90,13 @@ $_profile-adv-cols-md: $grid-number-columns / $profiles-advanced-cols-md;
 	}
 }
 
-/// Styles an advanced profile item link.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles an advanced profile item link.
+//
+// Styleguide Components.Profile Advanced Format.profile-link-advanced
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-link-advanced {
 	display: block;
@@ -82,10 +104,13 @@ $_profile-adv-cols-md: $grid-number-columns / $profiles-advanced-cols-md;
 	text-align: center;
 }
 
-/// Styles an advanced profile item photo.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles an advanced profile item photo.
+//
+// Styleguide Components.Profile Advanced Format.profile-photo-advanced
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-photo-advanced {
 	height: 150px;

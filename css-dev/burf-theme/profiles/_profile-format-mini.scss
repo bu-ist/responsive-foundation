@@ -2,27 +2,34 @@
 // Mini Profile Format Settings
 // =================================================================
 
-/// Controls the color of the border on the mini profile format
-/// in the profiles shortcode.
-/// @group 14-profiles
-/// @access public
-/// @since 1.0.0
+// Controls the color of the border on the mini profile format
+// in the profiles shortcode.
+//
+// Styleguide Profiles.Mini Format.Photo Size
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-profile-mini-border:                $color-grayscale-e !default;
 
-/// Controls the number of profiles in a row in the mini format.
-/// Kicks in at the small breakpoint.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Controls the number of profiles in a row in the mini format.
+// Kicks in at the small breakpoint.
+//
+// Styleguide Profiles.Mini Format.Photo Size
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $profiles-mini-cols-sm:			2 !default;
 
-/// A helper variable to determine which grid class to extend
-/// for mini profile items at the `sm` breakpoint.
-/// @group 14-profiles
-/// @access private
-/// @since 2.0.0
+// A helper variable to determine which grid class to extend
+// for mini profile items at the `sm` breakpoint.
+//
+// Access: Private
+//
+// Since: 2.0.0
 
 $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 
@@ -30,10 +37,27 @@ $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 // Mini Profile Format Styles
 // =================================================================
 
-/// Styles the mini profile format.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Container for the mini profile format.
+//
+// Styleguide Components.Profiles Mini Format.profile-format-mini
+//
+// Access: Public
+//
+// Since: 2.0.0
+
+.profile-format-mini {
+	@if ( $enable-css-grid ) {
+		@extend %grid-xs-parent;
+	}
+}
+
+// Styles the mini profile format.
+//
+// Styleguide Components.Profiles Mini Format.profile-item-mini
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-item-mini {
 	@extend %clearfix;
@@ -43,47 +67,75 @@ $_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
 		clear: left;
 		padding-right: $margin-small;
 	}
+
+	@if ( $enable-css-grid ) {
+		@extend %grid-parent;
+	}
 }
 
-/// Styles the mini profile photo.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles the mini profile photo.
+//
+// Styleguide Components.Profiles Mini Format.profile-photo-mini
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-photo-mini {
-	@extend %col-2;
+	@extend %col-3;
 	height: 0;
 	padding-bottom: 16%;
+
+	@if ( $enable-css-grid ) {
+		@supports ( display: grid ) {
+			padding-bottom: 100%;
+		}
+	}
 }
 
-/// Styles the mini profile details.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles the mini profile details.
+//
+// Styleguide Components.Profiles Mini Format.profile-details-mini
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-details-mini {
-	@extend %col-10;
+	@extend %col-9;
 	padding-left: 20px;
+
+	@if ( $enable-css-grid ) {
+		@supports ( display: grid ) {
+			padding-left: 0;
+		}
+	}
 
 	p {
 		@extend %font-size-minimum;
 	}
 }
 
-/// Styles the mini profile name.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles the mini profile name.
+//
+// Styleguide Components.Profiles Mini Format.profile-name-mini
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-name-mini {
 	color: inherit;
 	text-decoration: none;
 }
 
-/// Styles the mini profile email.
-/// @group 14-profiles
-/// @access public
-/// @since 2.0.0
+// Styles the mini profile email.
+//
+// Styleguide Components.Profiles Mini Format.profile-email-mini
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .profile-email-mini {
 	margin: 5px 0;

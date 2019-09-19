@@ -2,94 +2,154 @@
 // Single Post Settings
 // =================================================================
 
-/// The style of the border on comments and items using the card styles.
-/// @group 12-news
-/// @access public
-/// @since 1.0.0
+// Message Border
+//
+// The style of the border on comments and items using the card styles.
+//
+// Styleguide News.News Item. Message Border
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $border-message:                           $border !default;
 
-/// The width of the border on comments and items using the card styles.
-/// @group 12-news
-/// @access public
-/// @since 1.0.0
+// Message Border Width
+//
+// The width of the border on comments and items using the card styles.
+//
+// Styleguide News.News Item.Message Border Width
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $border-width-message:                     1px 1px 1px 5px !default;
 
-/// The amount of rounding (border radius) to apply to the corners
-/// of comments.
-/// @group 12-news
-/// @access public
-/// @since 1.0.0
+// Message Radius
+//
+// The amount of rounding (border radius) to apply to the corners
+// of comments.
+//
+// Styleguide News.News Item.Message Radius
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $border-radius-message:                     3px !default;
 
-/// The amount of padding to apply to comments.
-/// @group 12-news
-/// @access public
-/// @since 1.0.0
+// Message Padding
+//
+// The amount of padding to apply to comments.
+//
+// Styleguide News.News Item.Message Padding
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $padding-message:                          20px !default;
 
-/// The background of comments.
-/// @group 12-news
-/// @access public
-/// @since 1.0.0
+// Message Background Color
+//
+// The background of comments.
+//
+// Styleguide News.News Item.Message Background
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-message-bg:                         $color-grayscale-f0 !default;
 
-/// The left border color of comments.
-/// @group 12-news
-/// @access public
-/// @since 1.0.0
+// Message Left Border
+//
+// The left border color of comments.
+//
+// Styleguide News.News Item.Message Left Border
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-message-border-left:                $color-grayscale-0 !default;
 
-/// Controls the padding of the metadata card at the bottom of news posts
-/// on the single post template.
-/// @group 12-news
-/// @access public
-/// @since 1.0.0
+// Metadata Padding
+//
+// Controls the padding of the metadata card at the bottom of news posts
+// on the single post template.
+//
+// Styleguide News.News Item.Metadata Padding
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $padding-single-meta:                      20px !default;
 
-/// Controls the border style on the metadata card at the bottom of news posts
-/// on the single post template.
-/// @group 12-news
-/// @access public
-/// @since 1.0.0
+// Metadata Border
+//
+// Controls the border style on the metadata card at the bottom of news posts
+// on the single post template.
+//
+// Styleguide News.News Item.Metadata Border
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $border-single-meta:                       $border-message !default;
 
-/// Controls the border width on the metadata card at the bottom of news posts
-/// on the single post template.
-/// @group 12-news
-/// @access public
-/// @since 1.0.0
+// Metadata Border Width
+//
+// Controls the border width on the metadata card at the bottom of news posts
+// on the single post template.
+//
+// Styleguide News.News Item.Metadata Border Width
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $border-width-single-meta:                  $border-width-message !default;
 
-/// Controls the amount of rounding applied to corners of the metadata card
-/// at the bottom of the single post template.
-/// @group 12-news
-/// @access public
-/// @since 1.0.0
+// Metadata Radius
+//
+// Controls the amount of rounding applied to corners of the metadata card
+// at the bottom of the single post template.
+//
+// Styleguide News.News Item.Metadata Radius
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $border-radius-single-meta:                 $border-radius-message !default;
 
-/// Controls the background of the metadata card at the bottom of the single
-/// post template.
-/// @group 12-news
-/// @access public
-/// @since 1.0.0
+// Metadata Background
+//
+// Controls the background of the metadata card at the bottom of the single
+// post template.
+//
+// Styleguide News.News Item.Metadata Background
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-single-meta-bg:                     $color-grayscale-f0 !default;
 
-/// Controls the color of the left border in the metadata card
-/// at the bottom of the single post template.
-/// @group 12-news
-/// @access public
-/// @since 1.0.0
+// Metadata Left Border Color
+//
+// Controls the color of the left border in the metadata card
+// at the bottom of the single post template.
+//
+// Styleguide News.News Item.Metadata Left Border Color
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $color-single-meta-border-left:             $color-message-border-left !default;
 
@@ -98,12 +158,17 @@ $color-single-meta-border-left:             $color-message-border-left !default;
 // Single Post Styles
 // =================================================================
 
-/// Controls card-like styles used throughout Foundation.
-/// By default, this controls single profile info styling in the sidebar,
-/// the metadata styling at the bottom of single posts, and the date summary.
-/// @group 02-mixins
-/// @access public
-/// @since 1.0.0
+// Card Styles Placeholder
+//
+// Controls card-like styles used throughout Foundation.
+// By default, this controls single profile info styling in the sidebar,
+// the metadata styling at the bottom of single posts, and the date summary.
+//
+// Styleguide Utilities.Styling.Card Styles
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 %card-styles {
 	@extend %font-size-secondary;
@@ -115,20 +180,24 @@ $color-single-meta-border-left:             $color-message-border-left !default;
 	padding: $padding-message;
 }
 
-/// Controls the styling for messages.
-/// @group 02-mixins
-/// @access public
-/// @since 1.0.0
+// Controls the styling for messages.
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 .message {
 	@extend %card-styles;
 }
 
 
-/// Handles styling for the metadata card at the bottom of posts.
-/// @group 12-news
-/// @access public
-/// @since 2.0.0
+// Handles styling for the metadata card at the bottom of posts.
+//
+// Styleguide Components.News Item.single-meta
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .single-meta {
 	@extend %card-styles;
@@ -141,19 +210,25 @@ $color-single-meta-border-left:             $color-message-border-left !default;
 	padding: $padding-single-meta;
 }
 
-/// Handles styling for the title in the metadata card at the bottom of posts.
-/// @group 12-news
-/// @access public
-/// @since 2.0.0
+// Handles styling for the title in the metadata card at the bottom of posts.
+//
+// Styleguide Components.News Item.single-meta-post-title
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .single-meta-post-title {
 	margin-bottom: 10px;
 }
 
-/// Handles styling for the byline in the metadata card at the bottom of posts.
-/// @group 12-news
-/// @access public
-/// @since 2.0.0
+// Handles styling for the byline in the metadata card at the bottom of posts.
+//
+// Styleguide Components.News Item.single-meta-byline
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .single-meta-byline {
 	font-size: inherit;
@@ -161,30 +236,39 @@ $color-single-meta-border-left:             $color-message-border-left !default;
 	margin-bottom: $margin-small;
 }
 
-/// Handles styling for categories and tags in the metadata card at the bottom of posts.
-/// @group 12-news
-/// @access public
-/// @since 2.0.0
+// Handles styling for categories and tags in the metadata card at the bottom of posts.
+//
+// Styleguide Components.News Item.single-meta-info
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .single-meta-info {
 	margin-bottom: 0;
 	margin-top: $margin-small;
 }
 
-/// Handles styling for the archive (View all posts) link container.
-/// @group 12-news
-/// @access public
-/// @since 2.0.0
+// Handles styling for the archive (View all posts) link container.
+//
+// Styleguide Components.News Item.archive-link-container
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .archive-link-container {
 	clear: both;
 	text-align: center;
 }
 
-/// Handles styling for the archive (View all posts) link.
-/// @group 12-news
-/// @access public
-/// @since 2.0.0
+// Handles styling for the archive (View all posts) link.
+//
+// Styleguide Components.News Item.archive-link
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 .archive-link {
 	@extend %button-styles;

@@ -1,0 +1,19 @@
+// BU Landing Pages overrides
+//
+// Basic styles to override Responsive defaults
+// for BU Landing Pages plugin.
+//
+// Access: Public
+//
+// Since: 4.0.0
+
+.page-template-bu-landing {
+	.content-container {
+		max-width: 100%;
+	}
+
+	.content-area {
+		float: none;
+		margin: auto;
+	}
+}

@@ -2,13 +2,18 @@
 // Supported Icons
 // =================================================================
 
-/// The icons this site supports.
-/// All icons get a name and a UTF-8 value. It's unlikely you'll
-/// need to change these, and you probably shouldn't. However,
-/// if you're using your own icon font, you may want to add to it.
-/// @group icons
-/// @access public
-/// @since 2.0.0
+// Supported Icons
+//
+// A map of all the icons this site supports.
+// All icons get a name and a UTF-8 value. It's unlikely you'll
+// need to change these, and you probably shouldn't. However,
+// if you're using your own icon font, you may want to add to it.
+//
+// Styleguide Utilities.Icons.Supported Icons
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $icons-responsive: (
 
@@ -281,11 +286,11 @@ $icons-responsive: (
 	questionmark: '\2753',
 );
 
-// Merges custom icons and overrides with the default supported icons map.
-// $icons-theme must be set BEFORE this is called.
-// @group global
-// @access private
-// @since 2.0.0
+/// Merges custom icons and overrides with the default supported icons map.
+/// $icons-theme must be set BEFORE this is called.
+/// @group global
+/// @access private
+/// @since 2.0.0
 
 @if variable-exists( icons-theme ) {
 	$icons-responsive: map_merge( $icons-responsive, $icons-theme );

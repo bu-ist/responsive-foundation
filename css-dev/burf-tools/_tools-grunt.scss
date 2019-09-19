@@ -22,11 +22,20 @@
 // Blah
 // =================================================================
 
+// BURF Extras
+//
+// Whether or not to output Responsive default classes when using
+// burf-tools.
+//
+// Access: Public
+//
+// Since: 3.0.0
+
 $burf-extras:								       false !default;
 
 @import 'burf-base/config';
-@import 'burf-base/accessibility';
 @import 'burf-base/mixins';
+@import 'burf-base/accessibility';
 @import 'burf-base/normalize-variables';
 
 @import 'burf-base/grid/grid-variables';
@@ -34,9 +43,26 @@ $burf-extras:								       false !default;
 @import 'burf-base/grid/grid-placeholders';
 @import 'burf-base/grid/grid-friendly';
 
-// Special settings for icons
+// Use Default Icons
+//
+// Whether or not to use BU Default Icons as your icon font.
+// when using burf-tools.
+//
+// Access: Public
+//
+// Since: 3.0.0
 
 $use-default-icons:                        false !default;
+
+// Print Icon Classes
+//
+// Whether or not to print the default icon classes
+// when using burf-tools.
+//
+// Access: Public
+//
+// Since: 3.0.0
+
 $print-icon-classes:                       false !default;
 
 @import 'burf-base/icons/package';

@@ -2,175 +2,291 @@
 // Typography Settings
 // =================================================================
 
-/// Controls the default font size used across the site.
-/// Affects body text and anything else that isn't
-/// specifically overridden.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// Base Font Size
+//
+// Controls the default font size used across the site.
+// Affects body text and anything else that isn't
+// specifically overridden.
+//
+// Styleguide Configuration.Typography.Base Font Size
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-size-base:                            18px !default;
 
-/// Controls the default line height used across the site.
-/// Affects body text and anything else that isn't
-/// specifically overridden.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// Base Line Height
+//
+// Controls the default line height used across the site.
+// Affects body text and anything else that isn't
+// specifically overridden.
+//
+// Styleguide Configuration.Typography.Base Line Height
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $line-height-base:                          1.6 !default;
 
-/// A serif font to use. This variable is not used by default.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// Serif Font
+//
+// A serif font to use. This variable is not used by default.
+//
+// Styleguide Configuration.Typography.Serif Font
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-family-serif:                         "TiemposText", Georgia, serif !default;
 
-/// A sans-serif font to use sitewide.
-/// By default, this affects the site footer and label text in profiles.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// Sans-serif Font
+// A sans-serif font to use sitewide.
+// By default, this affects the site footer and label text in profiles.
+//
+// Styleguide Configuration.Typography.Sans Serif Font
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-family-sans-serif:                    "Benton-Sans", "Helvetica", sans-serif !default;
 
-/// A monospace font to use sitewide.
-/// By default, this affects the `<code>` and `<pre>` elements.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// Monospace Font
+//
+// A monospace font to use sitewide.
+// By default, this affects the `<code>` and `<pre>` elements.
+//
+// Styleguide Configuration.Typography.Monospace Font
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-family-monospace:                     "Consolas", "Liberation Mono", Courier, monospace !default;
 
-/// The default font for body copy.
-/// @group 01-config
-/// @access public
-/// @since 1.0.0
+// Body Copy Font
+//
+// The default font for body copy.
+//
+// Styleguide Configuration.Typography.Body Copy Font
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-family-base:                          $font-family-sans-serif !default;
 
-/// A font to use for headings.
-/// Affects `<h1>`, `<h2>`, etc.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// Heading Font
+//
+// A font to use for headings.
+// Affects `<h1>`, `<h2>`, etc.
+//
+// Styleguide Configuration.Headings.Heading Font
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-family-heading:                       $font-family-sans-serif !default;
 
-/// A color to use for headings.
-/// Affects `<h1>`, `<h2>`, etc.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Heading Color
+//
+// A color to use for headings.
+// Affects `<h1>`, `<h2>`, etc.
+//
+// Styleguide Configuration.Headings.Heading Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-heading:                             $color-grayscale-0 !default;
 
-/// A font to use for small tags within headings.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Heading Small Color
+//
+// A font to use for small tags within headings.
+//
+// Styleguide Configuration.Typography.Heading Small Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-heading-small:                       $color-grayscale-6 !default;
 
-/// Base margin for HTML tags. Primarily affects `<p>`.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// Paragraph Margin
+//
+// Base margin for HTML tags. Primarily affects `<p>`.
+//
+// Styleguide Configuration.Typography.Paragraph Margin
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-margin-base:                          0 0 1.5em 0 !default;
 
-/// Base color for links.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Link Color
+//
+// Base color for links.
+//
+// Styleguide Configuration.Typography.Link Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-link:                                #0f69d7 !default;
 
-/// Base color for visited links.
-/// Must be different from `$color-link` for accessibility
-/// reasons.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Link Color - Visited
+//
+// Base color for visited links.
+// Must be different from `$color-link` for accessibility
+// reasons.
+//
+// Styleguide Configuration.Typography.Link Color Visited
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-link-visited:                        #7337af !default;
 
-/// Base color for active links.
-/// Must be different from `$color-link` for accessibility
-/// reasons.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Link Color - Active
+//
+// Base color for active links.
+// Must be different from `$color-link` for accessibility
+// reasons.
+//
+// Styleguide Configuration.Typography.Link Color Active
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-link-active:                         $color-grayscale-0 !default;
 
-/// Base padding for the `<code>` tag.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// Code Padding
+//
+// Base padding for the `<code>` tag.
+//
+// Styleguide Content.Code.Padding
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-padding-code:                         0.2em 0.4em !default;
 
-/// Base margin for the `<code>` tag.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// Code Margin
+//
+// Base margin for the `<code>` tag.
+//
+// Styleguide Content.Code.Margin
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-margin-code:                          $margin 0 !default;
 
-/// Text color to use for the `<code>` tag.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Code Color
+//
+// Text color to use for the `<code>` tag.
+//
+// Styleguide Content.Code.Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-code:                                $color-grayscale-6 !default;
 
-/// Background color to use for the `<code>` tag.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
-/// @accessibility AA
+// Code Background Color
+//
+// Background color to use for the `<code>` tag.
+//
+// Styleguide Content.Code.Background Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
 $color-code-bg:                             $color-grayscale-f5 !default;
 
-/// Base border for the `<code>` tag.
-/// @group 04-typography
-/// @access public
-/// @since 2.0.0
+// Code Border
+//
+// Base border for the `<code>` tag.
+//
+// Styleguide Content.Code.Border
+//
+// Access: Public
+//
+// Since: 2.0.0
 
 $border-code:                               $border !default;
 
-/// Base margin for the `<blockquote>` tag.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// Blockquote Margin
+//
+// Base margin for the `<blockquote>` tag.
+//
+// Styleguide Content.Blockquotes.Margin
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-margin-blockquote:                    1em $margin-large !default;
 
-/// Base margin for `<ul>` and `<ol>` tags.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// List Margin
+//
+// Base margin for `<ul>` and `<ol>` tags.
+//
+// Styleguide Content.Lists.Margin
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-margin-list:                          $font-margin-base !default;
 
-/// Base padding for `<ul>` and `<ol>` tags.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// List Padding
+//
+// Base padding for `<ul>` and `<ol>` tags.
+//
+// Styleguide Content.Lists.Padding
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-padding-list:                         0 0 0 40px !default;
 
-/// Base margin for `<dd>` tags.
-/// @group 04-typography
-/// @access public
-/// @since 1.0.0
+// Definition List Padding
+//
+// Base margin for `<dd>` tags.
+//
+// Styleguide Content.Lists.Definition List Padding
+//
+// Access: Public
+//
+// Since: 1.0.0
 
 $font-margin-dd:                            0 0 0 $margin !default;
