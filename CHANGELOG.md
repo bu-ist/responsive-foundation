@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.0.0
+
 * Adds CSS Grid support to the grid, with an automatic fallback to floats
   for unsupported browsers.
 * Adds support for color stops to the linear gradient mixin. New syntax:
