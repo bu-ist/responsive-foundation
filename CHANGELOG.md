@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.0.1
+
 Security updates.
 
 ## 4.0.0
