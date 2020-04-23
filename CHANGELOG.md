@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 4.0.1
+
+Security updates.
+
 ## 4.0.0
 
 * Adds CSS Grid support to the grid, with an automatic fallback to floats

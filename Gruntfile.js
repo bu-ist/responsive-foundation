@@ -203,7 +203,6 @@ module.exports = ( grunt ) => {
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-gh-pages' );
 	grunt.loadNpmTasks( 'grunt-sass' );
-	grunt.loadNpmTasks( 'grunt-sass-lint' );
 	grunt.loadNpmTasks( 'grunt-kss' );
 	grunt.registerTask( 'build', [ 'js', 'kss', 'copy' ] );
 	grunt.registerTask( 'deploy', [ 'build', 'gh-pages' ] );
