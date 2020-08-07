@@ -42,6 +42,14 @@ h1::before {
 	content: "✅";
 }
 
+.section_title.needs-input {
+	background: #FFE8A9;
+}
+
+.section_title.needs-input::before {
+	content: "🧐";
+}
+
 .section_widgets {
 	display: grid;
 	grid-auto-flow: column;
@@ -70,6 +78,10 @@ h1::before {
 	position: absolute;
 	white-space: nowrap;
 	width: 1px;
+}
+
+td {
+	vertical-align: baseline;
 }
 
 td a {
