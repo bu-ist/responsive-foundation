@@ -125,6 +125,44 @@ th {
 	text-align: left;
 }
 
+/* Graph widgets */
+
+.graph {
+	display: table;
+}
+.graph_item {
+	display: table-row;
+}
+.graph_item_title {
+	display: table-cell;
+	vertical-align: right;
+	padding: 5px 10px 5px 0;
+	white-space: nowrap;
+}
+.graph_item_value {
+	display: table-cell;
+	width: 100%;
+	padding-right: 7px;
+	border-left: solid 1px #dddddd;
+}
+.graph_item_value .value {
+	display: block;
+	height: 15px;
+	text-align: right;
+	padding-right: 5px;
+	font-size: 11px;
+	background-color: #000000;
+	color: #ffffff;
+}
+
+.graph_item_value .empty_value {
+	padding-right: 0;
+}
+
+.graph_item:last-of-type .graph_item_value {
+	border-bottom: solid 1px #dddddd;
+}
+
 #footer {
 	background: #24292e;
 	color: #fff;
