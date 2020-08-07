@@ -28,7 +28,7 @@ jobs:
             format: html
             filename: 'out/dashboard.html'
           sections:
-          - title: '✅ What's left to do?'
+          - title: "✅ What's left to do?"
             widgets:
             - type: 'table'
               title: 'Wireframe'
