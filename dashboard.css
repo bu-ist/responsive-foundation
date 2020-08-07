@@ -30,12 +30,27 @@ h1::before {
 }
 
 .table_widget {
-	padding: 15px;
-	margin-bottom: 20px;
-	font-size: 14px;
 	background-color: #fafbfc;
-	border: 1px solid #d1d5da;
 	border-radius: 6px;
+	border: 1px solid #d1d5da;
+	display: none; /* Only show tables with data. */
+	font-size: 14px;
+	margin-bottom: 20px;
+	padding: 15px;
+}
+
+.table_widget.show {
+	display: block;
+}
+
+.table_widget th {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
 }
 
 h3 {
