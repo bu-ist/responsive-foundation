@@ -1,4 +1,4 @@
-window.onload( function () {
+window.onload = function () {
 	const tables = document.querySelectorAll( '.table_element' );
 	console.log(tables);
 	const tablesArray = Array.from( tables );
@@ -6,4 +6,4 @@ window.onload( function () {
 	tablesArray.map( table => {
 		table.parentElement.parentElement.parentElement.classList.add( 'show' )
 	});
-} );
+};
