@@ -23,6 +23,25 @@ h1::before {
 	padding: 24px;
 }
 
+.section_title {
+	border-radius: 25px;
+	display: inline-block;
+	font-size: 17px;
+	padding: 9px 19px;
+}
+
+.section_title::before {
+	margin-right: 10px;
+}
+
+.section_title.to-do {
+	background: #D0F3AE;
+}
+
+.section_title.to-do::before {
+	content: "✅";
+}
+
 .section_widgets {
 	display: grid;
 	grid-auto-flow: column;
@@ -51,6 +70,29 @@ h1::before {
 	position: absolute;
 	white-space: nowrap;
 	width: 1px;
+}
+
+td a {
+	color: inherit;
+	font-size: 13px;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+td:first-child a {
+	border-radius: 2px;
+	border: 1px solid;
+	color: #28a745;
+	display: block;
+	font-size: 12px;
+	margin-right: 2px;
+	padding: 2px;
+	text-align: center;
+	text-decoration: none;
+}
+
+td:first-child a::before {
+    content: "#";
 }
 
 h3 {
