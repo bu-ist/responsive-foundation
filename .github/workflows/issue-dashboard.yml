@@ -28,7 +28,18 @@ jobs:
             format: html
             filename: 'out/dashboard.html'
           sections:
+          - title: "Project Status"
+            widgets:
+            - type: graph
+              elements:
+                - title: 'All Issues'
+                  issue_query: 'repo:${{ github.repository }} is:open is:issue is:closed'
+                - title: 'Open issues unassigned to projects'
+                  issue_query: 'repo:${{ github.repository }} is:open is:issue no:project'
+                - title: 'Closed Issues'
+                  issue_query: 'repo:${{ github.repository }} is:issue is:closed'
           - title: "To Do"
+            description: "Issues in this section still need to be done. Help the project out by joining in with your area of expertise!"
             widgets:
             - type: 'table'
               title: 'Wireframe'
@@ -55,6 +66,7 @@ jobs:
               title: 'Documentation'
               issue_query: 'repo:${{ github.repository }} is:open is:issue label:"✅ To Do: Documentation" sort:created-asc'
           - title: "Needs Input"
+            description: "Issues in this section need someone's input. Get their feedback to help move them along!"
             widgets:
             - type: 'table'
               title: 'Client'
