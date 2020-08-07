@@ -28,14 +28,14 @@ jobs:
             format: html
             filename: 'out/dashboard.html'
           sections:
-          - title: "Project Status"
+          - title: "Repository Health"
             widgets:
             - type: graph
               elements:
-                - title: 'All Issues'
-                  issue_query: 'repo:${{ github.repository }} is:open is:issue is:closed'
-                - title: 'Open issues unassigned to projects'
+                - title: 'Open issues unassigned to a project'
                   issue_query: 'repo:${{ github.repository }} is:open is:issue no:project'
+                - title: 'Open Issues'
+                  issue_query: 'repo:${{ github.repository }} is:issue is:open'
                 - title: 'Closed Issues'
                   issue_query: 'repo:${{ github.repository }} is:issue is:closed'
           - title: "To Do"
