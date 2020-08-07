@@ -125,6 +125,10 @@ th {
 	text-align: left;
 }
 
+.description {
+	margin-bottom: 24px;
+}
+
 /* Graph widgets */
 
 .graph {
