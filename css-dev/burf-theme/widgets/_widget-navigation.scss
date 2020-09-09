@@ -133,7 +133,7 @@ $color-widget-contentnav-active:           $color-link-active !default;
 	}
 
 	li {
-		border-top: $border-widget-list;
+		border-top: $border-widget-contentnav;
 		font-family: $font-family-widget-contentnav;
 
 		&:first-child {
