@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+* Fixes #235
+
 ## 4.0.1
 
 Security updates.
