@@ -39,9 +39,10 @@
   },
   "main": "js/theme.js",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "kss": "^3.0.0-beta.25",
     "mathsass": "^0.10.1",
-    "normalize-scss": "^7.0.1",
-    "kss": "^3.0.0-beta.25"
+    "normalize-scss": "^7.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

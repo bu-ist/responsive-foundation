@@ -19,7 +19,7 @@
 //
 // Since: 2.0.0
 
-$font-family-icons:                     	 "bu-default-icons" !default;
+$font-family-icons:                     	 "Font Awesome 5 Free" !default;
 
 // Change the icon font size
 //
@@ -62,11 +62,6 @@ $color-icons:										 unset !default;
 // Since: 2.0.0
 
 @mixin icon-base {
-	.lt-ie9:hover & {
-		// This triggers a redraw in IE to Fix IE8's :before content rendering.
-		-ms-zoom: 1;
-	}
-
 	span {
 		display: none; // Hide labels
 	}
@@ -94,7 +89,7 @@ $color-icons:										 unset !default;
 	-webkit-font-smoothing: antialiased;
 	font-style: normal;
 	font-variant: normal;
-	font-weight: normal;
+	font-weight: $font-weight-icon;
 	line-height: 1;
 	padding-bottom: 0.2em; // Accomodate for inline icons
 	speak: none;
@@ -164,7 +159,7 @@ $color-icons:										 unset !default;
 
 @mixin icon( $name, $position: "before", $use-extend: false ) {
 	@include icon-base;
-	$content: map-get( $icons-responsive, $name );
+	$content: fa-content( map-get( $icons-responsive, $name ) );
 
 	@if $use-extend {
 		@extend %icon-content-#{$position};

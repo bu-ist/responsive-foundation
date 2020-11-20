@@ -121,6 +121,15 @@ module.exports = ( grunt ) => {
 					kssDocsCustomCSSPath: '_docs/css-dev/kss-custom.scss'
 				},
 			},
+			build: {
+				options: {
+					style: 'expanded',
+				},
+				files: {
+					'css/burf-base.css': 'css-dev/burf-base.scss',
+					'css/burf-theme.css': 'css-dev/burf-theme.scss',
+				},
+			},
 		},
 		postcss: {
 			defaults: {
@@ -164,7 +173,7 @@ module.exports = ( grunt ) => {
 					'css-dev/**/*.scss',
 					'css-dev/**/*.hbs',
 				],
-				tasks: [ 'kss' ],
+				//tasks: [ 'kss' ],
 			}
 		},
 		sasslint: {
@@ -204,7 +213,8 @@ module.exports = ( grunt ) => {
 	grunt.loadNpmTasks( 'grunt-gh-pages' );
 	grunt.loadNpmTasks( 'grunt-sass' );
 	grunt.loadNpmTasks( 'grunt-kss' );
-	grunt.registerTask( 'build', [ 'js', 'kss', 'copy' ] );
+	//grunt.registerTask( 'build', [ 'js', 'kss', 'copy' ] );
+	grunt.registerTask( 'build', [ 'js', 'copy' ] );
 	grunt.registerTask( 'deploy', [ 'build', 'gh-pages' ] );
 	grunt.registerTask( 'js', [ 'clean:js', 'babel', 'browserify', 'uglify' ] );
 	grunt.registerTask( 'serve', [ 'build', 'browserSync:current', 'watch' ] );
