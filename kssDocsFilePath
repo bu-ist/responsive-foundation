@@ -529,24 +529,24 @@ template {
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.eot");
-  src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/fa-regular-400.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
+  src: url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-regular-400.eot");
+  src: url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-regular-400.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-regular-400.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-regular-400.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
 
 @font-face {
   font-family: "Font Awesome 5 Free";
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-solid-900.eot");
-  src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/fa-solid-900.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-solid-900.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-solid-900.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
+  src: url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-solid-900.eot");
+  src: url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-solid-900.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-solid-900.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-solid-900.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
 
 @font-face {
   font-family: "Font Awesome 5 Brands";
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-brands-400.eot");
-  src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/fa-brands-400.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-brands-400.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-brands-400.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
+  src: url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.eot");
+  src: url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
 
 .menu-item [href*="dropbox.com"]::before, .menu-item [href*="facebook.com"]::before, .menu-item [href*="flickr.com"]::before, .menu-item [href*="foursquare.com"]::before, .menu-item [href*="github.com"]::before, .menu-item [href*="instagram.com"]::before, .menu-item [href*="kickstarter.com"]::before, .menu-item [href*="linkedin.com"]::before, .menu-item [href*="pinterest.com"]::before, .bu_collapsible::before, .menu-item [href*="reddit.com"]::before, .search-toggle::before, .menu-item [href*="snapchat.com"]::before, .menu-item [href*="tumblr.com"]::before, .menu-item [href*="twitter.com"]::before, .menu-item [href*="vimeo.com"]::before, .menu-item [href*="vine.co"]::before, .menu-item [href*="youtube.com"]::before,
 .menu-item [href*="bu.edu/buniverse"]::before, .bu_collapsible_open > .bu_collapsible::before, .gallery-icon a::before, .search-toggle.is-open::before, .mega-nav-toggle .nav-toggle-label-open::before, .menu-item [href*="plus.google.com"]::before, .menu-item [href*="getpocket.com"]::before, .icon-buhub::before, .icon-questionmark::before {
@@ -3047,24 +3047,24 @@ template {
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.eot");
-  src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/fa-regular-400.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
+  src: url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-regular-400.eot");
+  src: url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-regular-400.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-regular-400.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-regular-400.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
 
 @font-face {
   font-family: "Font Awesome 5 Free";
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-solid-900.eot");
-  src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/fa-solid-900.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-solid-900.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-solid-900.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
+  src: url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-solid-900.eot");
+  src: url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-solid-900.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-solid-900.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-solid-900.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
 
 @font-face {
   font-family: "Font Awesome 5 Brands";
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-brands-400.eot");
-  src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/fa-brands-400.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-brands-400.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-brands-400.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
+  src: url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.eot");
+  src: url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
 
 .menu-item [href*="dropbox.com"]::before, .menu-item [href*="facebook.com"]::before, .menu-item [href*="flickr.com"]::before, .menu-item [href*="foursquare.com"]::before, .menu-item [href*="github.com"]::before, .menu-item [href*="instagram.com"]::before, .menu-item [href*="kickstarter.com"]::before, .menu-item [href*="linkedin.com"]::before, .menu-item [href*="pinterest.com"]::before, .bu_collapsible::before, .menu-item [href*="reddit.com"]::before, .search-toggle::before, .menu-item [href*="snapchat.com"]::before, .menu-item [href*="tumblr.com"]::before, .menu-item [href*="twitter.com"]::before, .menu-item [href*="vimeo.com"]::before, .menu-item [href*="vine.co"]::before, .menu-item [href*="youtube.com"]::before,
 .menu-item [href*="bu.edu/buniverse"]::before, .bu_collapsible_open > .bu_collapsible::before, .gallery-icon a::before, .search-toggle.is-open::before, .mega-nav-toggle .nav-toggle-label-open::before, .menu-item [href*="plus.google.com"]::before, .menu-item [href*="getpocket.com"]::before, .icon-buhub::before, .icon-questionmark::before {
