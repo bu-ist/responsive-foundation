@@ -308,77 +308,99 @@ body {
 //
 // Since: 2.0.0
 
+%icon-brands {
+	font-family: "Font Awesome 5 Brands";
+}
+
 .menu-item {
 	[href*="dropbox.com"] {
+		@extend %icon-brands;
 		@extend %icon-dropbox;
 	}
 
 	[href*="facebook.com"] {
+		@extend %icon-brands;
 		@extend %icon-facebook;
 	}
 
 	[href*="flickr.com"] {
+		@extend %icon-brands;
 		@extend %icon-flickr;
 	}
 
 	[href*="foursquare.com"] {
+		@extend %icon-brands;
 		@extend %icon-foursquare;
 	}
 
 	[href*="github.com"] {
+		@extend %icon-brands;
 		@extend %icon-github;
 	}
 
 	[href*="instagram.com"] {
+		@extend %icon-brands;
 		@extend %icon-instagram;
 	}
 
 	[href*="kickstarter.com"] {
+		@extend %icon-brands;
 		@extend %icon-kickstarter;
 	}
 
 	[href*="linkedin.com"] {
+		@extend %icon-brands;
 		@extend %icon-linkedin;
 	}
 
 	[href*="pinterest.com"] {
+		@extend %icon-brands;
 		@extend %icon-pinterest;
 	}
 
 	[href*="plus.google.com"] {
+		@extend %icon-brands;
 		@extend %icon-googleplus;
 	}
 
 	[href*="getpocket.com"] {
+		@extend %icon-brands;
 		@extend %icon-pocket;
 	}
 
 	[href*="reddit.com"] {
+		@extend %icon-brands;
 		@extend %icon-reddit;
 	}
 
 	[href*="snapchat.com"] {
+		@extend %icon-brands;
 		@extend %icon-snapchat;
 	}
 
 	[href*="tumblr.com"] {
+		@extend %icon-brands;
 		@extend %icon-tumblr;
 	}
 
 	[href*="twitter.com"] {
+		@extend %icon-brands;
 		@extend %icon-twitter;
 	}
 
 	[href*="vimeo.com"] {
+		@extend %icon-brands;
 		@extend %icon-vimeo;
 	}
 
 	[href*="vine.co"] {
+		@extend %icon-brands;
 		@extend %icon-vine;
 	}
 
 	[href*="youtube.com"],
 	[href*="bu.edu/buniverse"] {
+		@extend %icon-brands;
 		@extend %icon-youtube;
 	}
 }
