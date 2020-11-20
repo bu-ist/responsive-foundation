@@ -498,7 +498,7 @@ template {
   font-weight: 400;
   font-display: block;
   src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.eot");
-  src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-regular-400.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
+  src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/fa-regular-400.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
 
 @font-face {
   font-family: "Font Awesome 5 Free";
@@ -506,7 +506,7 @@ template {
   font-weight: 900;
   font-display: block;
   src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-solid-900.eot");
-  src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-solid-900.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-solid-900.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-solid-900.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
+  src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/fa-solid-900.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-solid-900.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-solid-900.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
 
 @font-face {
   font-family: "Font Awesome 5 Brands";
@@ -514,7 +514,7 @@ template {
   font-weight: 400;
   font-display: block;
   src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-brands-400.eot");
-  src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-brands-400.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-brands-400.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-brands-400.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
+  src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/fa-brands-400.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-brands-400.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-brands-400.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
 
 /*!
  * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
