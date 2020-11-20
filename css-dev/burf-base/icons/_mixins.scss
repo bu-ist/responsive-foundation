@@ -164,7 +164,7 @@ $color-icons:										 unset !default;
 
 @mixin icon( $name, $position: "before", $use-extend: false ) {
 	@include icon-base;
-	$content: unquote("\"#{ map-get( $icons-responsive, $name ) }\"");
+	$content: fa-content( map-get( $icons-responsive, $name ) );
 
 	@if $use-extend {
 		@extend %icon-content-#{$position};
