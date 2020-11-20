@@ -493,12 +493,17 @@ template {
   font-weight: 600; }
 
 @font-face {
-  font-family: "bu-default-icons";
-  src: url("//www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot?") format("embedded-opentype");
-  src: url("//www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.woff") format("woff"), url("//www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.ttf") format("truetype"), url("//www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.svg#bu-default-icons") format("svg");
-  font-weight: normal;
-  font-style: normal; }
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.eot");
+  src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-regular-400.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
 
+/*!
+ * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
 *,
 *::before,
 *::after {

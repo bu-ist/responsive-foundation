@@ -440,12 +440,8 @@ template {
   margin: 30px; }
 
 .skip-link {
-  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-  -ms-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-  -o-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   background-color: #F1F1F1;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   color: #21759B;
   display: block;
   font-family: "Open Sans",sans-serif;
@@ -464,11 +460,8 @@ template {
   transform: translateX(-50%);
   -webkit-transition: top 0.3s ease-out;
   transition: top 0.3s ease-out;
-  width: 90%;
+  width: 190px;
   z-index: 100000; }
-  @media (min-width: 500px) {
-    .skip-link {
-      width: 190px; } }
   .skip-link:focus, .skip-link:active {
     color: #21759B;
     top: 0;
@@ -532,11 +525,12 @@ template {
   font-weight: 600; }
 
 @font-face {
-  font-family: "bu-default-icons";
-  src: url("//www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot?") format("embedded-opentype");
-  src: url("//www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.woff") format("woff"), url("//www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.ttf") format("truetype"), url("//www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.svg#bu-default-icons") format("svg");
-  font-weight: normal;
-  font-style: normal; }
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.eot");
+  src: url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-regular-400.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/icons/FontAwesome-Free/webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
 
 .menu-item [href*="dropbox.com"]::before, .menu-item [href*="facebook.com"]::before, .menu-item [href*="flickr.com"]::before, .menu-item [href*="foursquare.com"]::before, .menu-item [href*="github.com"]::before, .menu-item [href*="instagram.com"]::before, .menu-item [href*="kickstarter.com"]::before, .menu-item [href*="linkedin.com"]::before, .menu-item [href*="pinterest.com"]::before, .bu_collapsible::before, .menu-item [href*="reddit.com"]::before, .search-toggle::before, .menu-item [href*="snapchat.com"]::before, .menu-item [href*="tumblr.com"]::before, .menu-item [href*="twitter.com"]::before, .menu-item [href*="vimeo.com"]::before, .menu-item [href*="vine.co"]::before, .menu-item [href*="youtube.com"]::before,
 .menu-item [href*="bu.edu/buniverse"]::before, .bu_collapsible_open > .bu_collapsible::before, .gallery-icon a::before, .search-toggle.is-open::before, .mega-nav-toggle .nav-toggle-label-open::before, .menu-item [href*="plus.google.com"]::before, .menu-item [href*="getpocket.com"]::before, .icon-buhub::before, .icon-questionmark::before {
@@ -558,6 +552,10 @@ template {
   white-space: nowrap;
   margin-right: 0.5em; }
 
+/*!
+ * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
 .lt-ie9:hover .menu-item [href*="dropbox.com"], .menu-item .lt-ie9:hover [href*="dropbox.com"] {
   -ms-zoom: 1; }
 
