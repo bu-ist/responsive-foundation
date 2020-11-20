@@ -563,7 +563,7 @@ template {
   display: none; }
 
 .menu-item [href*="dropbox.com"]::before {
-  content: \f16b; }
+  content: "\f16b"; }
 
 .lt-ie9:hover .menu-item [href*="facebook.com"], .menu-item .lt-ie9:hover [href*="facebook.com"] {
   -ms-zoom: 1; }
@@ -572,7 +572,7 @@ template {
   display: none; }
 
 .menu-item [href*="facebook.com"]::before {
-  content: \f09a; }
+  content: "\f09a"; }
 
 .lt-ie9:hover .menu-item [href*="flickr.com"], .menu-item .lt-ie9:hover [href*="flickr.com"] {
   -ms-zoom: 1; }
@@ -581,7 +581,7 @@ template {
   display: none; }
 
 .menu-item [href*="flickr.com"]::before {
-  content: \f16e; }
+  content: "\f16e"; }
 
 .lt-ie9:hover .menu-item [href*="foursquare.com"], .menu-item .lt-ie9:hover [href*="foursquare.com"] {
   -ms-zoom: 1; }
@@ -590,7 +590,7 @@ template {
   display: none; }
 
 .menu-item [href*="foursquare.com"]::before {
-  content: \f180; }
+  content: "\f180"; }
 
 .lt-ie9:hover .menu-item [href*="github.com"], .menu-item .lt-ie9:hover [href*="github.com"] {
   -ms-zoom: 1; }
@@ -599,7 +599,7 @@ template {
   display: none; }
 
 .menu-item [href*="github.com"]::before {
-  content: \f09b; }
+  content: "\f09b"; }
 
 .lt-ie9:hover .menu-item [href*="instagram.com"], .menu-item .lt-ie9:hover [href*="instagram.com"] {
   -ms-zoom: 1; }
@@ -608,7 +608,7 @@ template {
   display: none; }
 
 .menu-item [href*="instagram.com"]::before {
-  content: \f16d; }
+  content: "\f16d"; }
 
 .lt-ie9:hover .menu-item [href*="kickstarter.com"], .menu-item .lt-ie9:hover [href*="kickstarter.com"] {
   -ms-zoom: 1; }
@@ -617,7 +617,7 @@ template {
   display: none; }
 
 .menu-item [href*="kickstarter.com"]::before {
-  content: \f3bb; }
+  content: "\f3bb"; }
 
 .lt-ie9:hover .menu-item [href*="linkedin.com"], .menu-item .lt-ie9:hover [href*="linkedin.com"] {
   -ms-zoom: 1; }
@@ -626,7 +626,7 @@ template {
   display: none; }
 
 .menu-item [href*="linkedin.com"]::before {
-  content: \f08c; }
+  content: "\f08c"; }
 
 .lt-ie9:hover .menu-item [href*="pinterest.com"], .menu-item .lt-ie9:hover [href*="pinterest.com"] {
   -ms-zoom: 1; }
@@ -635,7 +635,7 @@ template {
   display: none; }
 
 .menu-item [href*="pinterest.com"]::before {
-  content: \f0d2; }
+  content: "\f0d2"; }
 
 .lt-ie9:hover .bu_collapsible {
   -ms-zoom: 1; }
@@ -644,7 +644,7 @@ template {
   display: none; }
 
 .bu_collapsible::before {
-  content: \f067; }
+  content: "\f067"; }
 
 .lt-ie9:hover .menu-item [href*="reddit.com"], .menu-item .lt-ie9:hover [href*="reddit.com"] {
   -ms-zoom: 1; }
@@ -653,7 +653,7 @@ template {
   display: none; }
 
 .menu-item [href*="reddit.com"]::before {
-  content: \f1a1; }
+  content: "\f1a1"; }
 
 .lt-ie9:hover .search-toggle {
   -ms-zoom: 1; }
@@ -662,7 +662,7 @@ template {
   display: none; }
 
 .search-toggle::before {
-  content: \f002; }
+  content: "\f002"; }
 
 .lt-ie9:hover .menu-item [href*="snapchat.com"], .menu-item .lt-ie9:hover [href*="snapchat.com"] {
   -ms-zoom: 1; }
@@ -671,7 +671,7 @@ template {
   display: none; }
 
 .menu-item [href*="snapchat.com"]::before {
-  content: \f2ab; }
+  content: "\f2ab"; }
 
 .lt-ie9:hover .menu-item [href*="tumblr.com"], .menu-item .lt-ie9:hover [href*="tumblr.com"] {
   -ms-zoom: 1; }
@@ -680,7 +680,7 @@ template {
   display: none; }
 
 .menu-item [href*="tumblr.com"]::before {
-  content: \f173; }
+  content: "\f173"; }
 
 .lt-ie9:hover .menu-item [href*="twitter.com"], .menu-item .lt-ie9:hover [href*="twitter.com"] {
   -ms-zoom: 1; }
@@ -689,7 +689,7 @@ template {
   display: none; }
 
 .menu-item [href*="twitter.com"]::before {
-  content: \f099; }
+  content: "\f099"; }
 
 .lt-ie9:hover .menu-item [href*="vimeo.com"], .menu-item .lt-ie9:hover [href*="vimeo.com"] {
   -ms-zoom: 1; }
@@ -698,7 +698,7 @@ template {
   display: none; }
 
 .menu-item [href*="vimeo.com"]::before {
-  content: \f40a; }
+  content: "\f40a"; }
 
 .lt-ie9:hover .menu-item [href*="vine.co"], .menu-item .lt-ie9:hover [href*="vine.co"] {
   -ms-zoom: 1; }
@@ -707,7 +707,7 @@ template {
   display: none; }
 
 .menu-item [href*="vine.co"]::before {
-  content: \f1ca; }
+  content: "\f1ca"; }
 
 .lt-ie9:hover .menu-item [href*="youtube.com"], .menu-item .lt-ie9:hover [href*="youtube.com"],
 .lt-ie9:hover .menu-item [href*="bu.edu/buniverse"], .menu-item .lt-ie9:hover [href*="bu.edu/buniverse"] {
@@ -718,7 +718,7 @@ template {
 
 .menu-item [href*="youtube.com"]::before,
 .menu-item [href*="bu.edu/buniverse"]::before {
-  content: \f167; }
+  content: "\f167"; }
 
 .lt-ie9:hover .bu_collapsible_open > .bu_collapsible {
   -ms-zoom: 1; }
@@ -727,7 +727,7 @@ template {
   display: none; }
 
 .bu_collapsible_open > .bu_collapsible::before {
-  content: \f068; }
+  content: "\f068"; }
 
 .lt-ie9:hover .gallery-icon a, .gallery-icon .lt-ie9:hover a {
   -ms-zoom: 1; }
@@ -736,7 +736,7 @@ template {
   display: none; }
 
 .gallery-icon a::before {
-  content: \f31e; }
+  content: "\f31e"; }
 
 .lt-ie9:hover .search-toggle.is-open {
   -ms-zoom: 1; }
@@ -745,7 +745,7 @@ template {
   display: none; }
 
 .search-toggle.is-open::before {
-  content: \f00d; }
+  content: "\f00d"; }
 
 .lt-ie9:hover .mega-nav-toggle .nav-toggle-label-open, .mega-nav-toggle .lt-ie9:hover .nav-toggle-label-open {
   -ms-zoom: 1; }
@@ -754,7 +754,7 @@ template {
   display: none; }
 
 .mega-nav-toggle .nav-toggle-label-open::before {
-  content: \f00d; }
+  content: "\f00d"; }
 
 .lt-ie9:hover .menu-item [href*="plus.google.com"], .menu-item .lt-ie9:hover [href*="plus.google.com"] {
   -ms-zoom: 1; }
@@ -763,7 +763,7 @@ template {
   display: none; }
 
 .menu-item [href*="plus.google.com"]::before {
-  content: \f0d5; }
+  content: "\f0d5"; }
 
 .lt-ie9:hover .menu-item [href*="getpocket.com"], .menu-item .lt-ie9:hover [href*="getpocket.com"] {
   -ms-zoom: 1; }
@@ -772,7 +772,7 @@ template {
   display: none; }
 
 .menu-item [href*="getpocket.com"]::before {
-  content: \f265; }
+  content: "\f265"; }
 
 .lt-ie9:hover .icon-buhub {
   -ms-zoom: 1; }
@@ -3061,7 +3061,7 @@ template {
   display: none; }
 
 .menu-item [href*="dropbox.com"]::before {
-  content: \f16b; }
+  content: "\f16b"; }
 
 .lt-ie9:hover .menu-item [href*="facebook.com"], .menu-item .lt-ie9:hover [href*="facebook.com"] {
   -ms-zoom: 1; }
@@ -3070,7 +3070,7 @@ template {
   display: none; }
 
 .menu-item [href*="facebook.com"]::before {
-  content: \f09a; }
+  content: "\f09a"; }
 
 .lt-ie9:hover .menu-item [href*="flickr.com"], .menu-item .lt-ie9:hover [href*="flickr.com"] {
   -ms-zoom: 1; }
@@ -3079,7 +3079,7 @@ template {
   display: none; }
 
 .menu-item [href*="flickr.com"]::before {
-  content: \f16e; }
+  content: "\f16e"; }
 
 .lt-ie9:hover .menu-item [href*="foursquare.com"], .menu-item .lt-ie9:hover [href*="foursquare.com"] {
   -ms-zoom: 1; }
@@ -3088,7 +3088,7 @@ template {
   display: none; }
 
 .menu-item [href*="foursquare.com"]::before {
-  content: \f180; }
+  content: "\f180"; }
 
 .lt-ie9:hover .menu-item [href*="github.com"], .menu-item .lt-ie9:hover [href*="github.com"] {
   -ms-zoom: 1; }
@@ -3097,7 +3097,7 @@ template {
   display: none; }
 
 .menu-item [href*="github.com"]::before {
-  content: \f09b; }
+  content: "\f09b"; }
 
 .lt-ie9:hover .menu-item [href*="instagram.com"], .menu-item .lt-ie9:hover [href*="instagram.com"] {
   -ms-zoom: 1; }
@@ -3106,7 +3106,7 @@ template {
   display: none; }
 
 .menu-item [href*="instagram.com"]::before {
-  content: \f16d; }
+  content: "\f16d"; }
 
 .lt-ie9:hover .menu-item [href*="kickstarter.com"], .menu-item .lt-ie9:hover [href*="kickstarter.com"] {
   -ms-zoom: 1; }
@@ -3115,7 +3115,7 @@ template {
   display: none; }
 
 .menu-item [href*="kickstarter.com"]::before {
-  content: \f3bb; }
+  content: "\f3bb"; }
 
 .lt-ie9:hover .menu-item [href*="linkedin.com"], .menu-item .lt-ie9:hover [href*="linkedin.com"] {
   -ms-zoom: 1; }
@@ -3124,7 +3124,7 @@ template {
   display: none; }
 
 .menu-item [href*="linkedin.com"]::before {
-  content: \f08c; }
+  content: "\f08c"; }
 
 .lt-ie9:hover .menu-item [href*="pinterest.com"], .menu-item .lt-ie9:hover [href*="pinterest.com"] {
   -ms-zoom: 1; }
@@ -3133,7 +3133,7 @@ template {
   display: none; }
 
 .menu-item [href*="pinterest.com"]::before {
-  content: \f0d2; }
+  content: "\f0d2"; }
 
 .lt-ie9:hover .bu_collapsible {
   -ms-zoom: 1; }
@@ -3142,7 +3142,7 @@ template {
   display: none; }
 
 .bu_collapsible::before {
-  content: \f067; }
+  content: "\f067"; }
 
 .lt-ie9:hover .menu-item [href*="reddit.com"], .menu-item .lt-ie9:hover [href*="reddit.com"] {
   -ms-zoom: 1; }
@@ -3151,7 +3151,7 @@ template {
   display: none; }
 
 .menu-item [href*="reddit.com"]::before {
-  content: \f1a1; }
+  content: "\f1a1"; }
 
 .lt-ie9:hover .search-toggle {
   -ms-zoom: 1; }
@@ -3160,7 +3160,7 @@ template {
   display: none; }
 
 .search-toggle::before {
-  content: \f002; }
+  content: "\f002"; }
 
 .lt-ie9:hover .menu-item [href*="snapchat.com"], .menu-item .lt-ie9:hover [href*="snapchat.com"] {
   -ms-zoom: 1; }
@@ -3169,7 +3169,7 @@ template {
   display: none; }
 
 .menu-item [href*="snapchat.com"]::before {
-  content: \f2ab; }
+  content: "\f2ab"; }
 
 .lt-ie9:hover .menu-item [href*="tumblr.com"], .menu-item .lt-ie9:hover [href*="tumblr.com"] {
   -ms-zoom: 1; }
@@ -3178,7 +3178,7 @@ template {
   display: none; }
 
 .menu-item [href*="tumblr.com"]::before {
-  content: \f173; }
+  content: "\f173"; }
 
 .lt-ie9:hover .menu-item [href*="twitter.com"], .menu-item .lt-ie9:hover [href*="twitter.com"] {
   -ms-zoom: 1; }
@@ -3187,7 +3187,7 @@ template {
   display: none; }
 
 .menu-item [href*="twitter.com"]::before {
-  content: \f099; }
+  content: "\f099"; }
 
 .lt-ie9:hover .menu-item [href*="vimeo.com"], .menu-item .lt-ie9:hover [href*="vimeo.com"] {
   -ms-zoom: 1; }
@@ -3196,7 +3196,7 @@ template {
   display: none; }
 
 .menu-item [href*="vimeo.com"]::before {
-  content: \f40a; }
+  content: "\f40a"; }
 
 .lt-ie9:hover .menu-item [href*="vine.co"], .menu-item .lt-ie9:hover [href*="vine.co"] {
   -ms-zoom: 1; }
@@ -3205,7 +3205,7 @@ template {
   display: none; }
 
 .menu-item [href*="vine.co"]::before {
-  content: \f1ca; }
+  content: "\f1ca"; }
 
 .lt-ie9:hover .menu-item [href*="youtube.com"], .menu-item .lt-ie9:hover [href*="youtube.com"],
 .lt-ie9:hover .menu-item [href*="bu.edu/buniverse"], .menu-item .lt-ie9:hover [href*="bu.edu/buniverse"] {
@@ -3216,7 +3216,7 @@ template {
 
 .menu-item [href*="youtube.com"]::before,
 .menu-item [href*="bu.edu/buniverse"]::before {
-  content: \f167; }
+  content: "\f167"; }
 
 .lt-ie9:hover .bu_collapsible_open > .bu_collapsible {
   -ms-zoom: 1; }
@@ -3225,7 +3225,7 @@ template {
   display: none; }
 
 .bu_collapsible_open > .bu_collapsible::before {
-  content: \f068; }
+  content: "\f068"; }
 
 .lt-ie9:hover .gallery-icon a, .gallery-icon .lt-ie9:hover a {
   -ms-zoom: 1; }
@@ -3234,7 +3234,7 @@ template {
   display: none; }
 
 .gallery-icon a::before {
-  content: \f31e; }
+  content: "\f31e"; }
 
 .lt-ie9:hover .search-toggle.is-open {
   -ms-zoom: 1; }
@@ -3243,7 +3243,7 @@ template {
   display: none; }
 
 .search-toggle.is-open::before {
-  content: \f00d; }
+  content: "\f00d"; }
 
 .lt-ie9:hover .mega-nav-toggle .nav-toggle-label-open, .mega-nav-toggle .lt-ie9:hover .nav-toggle-label-open {
   -ms-zoom: 1; }
@@ -3252,7 +3252,7 @@ template {
   display: none; }
 
 .mega-nav-toggle .nav-toggle-label-open::before {
-  content: \f00d; }
+  content: "\f00d"; }
 
 .lt-ie9:hover .menu-item [href*="plus.google.com"], .menu-item .lt-ie9:hover [href*="plus.google.com"] {
   -ms-zoom: 1; }
@@ -3261,7 +3261,7 @@ template {
   display: none; }
 
 .menu-item [href*="plus.google.com"]::before {
-  content: \f0d5; }
+  content: "\f0d5"; }
 
 .lt-ie9:hover .menu-item [href*="getpocket.com"], .menu-item .lt-ie9:hover [href*="getpocket.com"] {
   -ms-zoom: 1; }
@@ -3270,7 +3270,7 @@ template {
   display: none; }
 
 .menu-item [href*="getpocket.com"]::before {
-  content: \f265; }
+  content: "\f265"; }
 
 .lt-ie9:hover .icon-buhub {
   -ms-zoom: 1; }
@@ -6499,7 +6499,7 @@ nav {
     vertical-align: middle;
     white-space: nowrap;
     margin-right: 0.5em;
-    content: \f0c9; }
+    content: "\f0c9"; }
   @media (min-width: 768px) {
     .lt-ie9:hover .mega-nav-toggle .nav-toggle-label-closed {
       -ms-zoom: 1; }
@@ -6523,7 +6523,7 @@ nav {
       vertical-align: middle;
       white-space: nowrap;
       margin-right: 0.5em;
-      content: \f002; } }
+      content: "\f002"; } }
 
 .short-nav {
   align-items: center;
