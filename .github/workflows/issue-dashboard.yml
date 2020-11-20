@@ -1,103 +1,18 @@
-name: Build Dashboard
-
+name: Publish GitHub Package
 on:
-  issues:
-    types: [opened, edited, milestoned]
-  schedule:
-  - cron: 0 * * * *
-
+  release:
+    types: [created]
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Check out repository
-      uses: actions/checkout@v2
-    - name: Check out GitHub Pages branch
-      uses: actions/checkout@v2
-      with:
-        ref: 'gh-pages'
-        path: 'out'
-
-    - name: 'Generate Dashboard'
-      uses: ethomson/issue-dashboard@v1.0.2
-      with:
-        config: |
-          title: 'Mission Control - ${{ github.repository }}'
-          output:
-            format: html
-            filename: 'out/dashboard.html'
-          sections:
-          - title: "Repository Health"
-            widgets:
-            - type: graph
-              elements:
-                - title: 'Open issues unassigned to a project'
-                  issue_query: 'repo:${{ github.repository }} is:open is:issue no:project'
-                - title: 'Open Issues'
-                  issue_query: 'repo:${{ github.repository }} is:issue is:open'
-                - title: 'Closed Issues'
-                  issue_query: 'repo:${{ github.repository }} is:issue is:closed'
-          - title: "To Do"
-            description: "Issues in this section still need to be done. Help the project out by joining in with your area of expertise!"
-            widgets:
-            - type: 'table'
-              title: 'Wireframe'
-              issue_query: 'repo:${{ github.repository }} is:open is:issue label:"✅ To Do: Wireframe" sort:created-asc'
-            - type: 'table'
-              title: 'Design'
-              issue_query: 'repo:${{ github.repository }} is:open is:issue label:"✅ To Do: Design" sort:created-asc'
-            - type: 'table'
-              title: 'HTML/CSS'
-              issue_query: 'repo:${{ github.repository }} is:open is:issue label:"✅ To Do: HTML/CSS" sort:created-asc'
-            - type: 'table'
-              title: 'JavaScript'
-              issue_query: 'repo:${{ github.repository }} is:open is:issue label:"✅ To Do: JavaScript" sort:created-asc'
-            - type: 'table'
-              title: 'PHP'
-              issue_query: 'repo:${{ github.repository }} is:open is:issue label:"✅ To Do: PHP" sort:created-asc'
-            - type: 'table'
-              title: 'Testing'
-              issue_query: 'repo:${{ github.repository }} is:open is:issue label:"✅ To Do: Testing" sort:created-asc'
-            - type: 'table'
-              title: 'Release'
-              issue_query: 'repo:${{ github.repository }} is:open is:issue label:"✅ To Do: Release" sort:created-asc'
-            - type: 'table'
-              title: 'Documentation'
-              issue_query: 'repo:${{ github.repository }} is:open is:issue label:"✅ To Do: Documentation" sort:created-asc'
-          - title: "Needs Input"
-            description: "Issues in this section need someone's input. Get their feedback to help move them along!"
-            widgets:
-            - type: 'table'
-              title: 'Client'
-              issue_query: 'repo:${{ github.repository }} is:open is:issue label:"🧐 Needs: Client" sort:created-asc'
-            - type: 'table'
-              title: 'Creative Director'
-              issue_query: 'repo:${{ github.repository }} is:open is:issue label:"🧐 Needs: Creative Director" sort:created-asc'
-            - type: 'table'
-              title: 'Designer'
-              issue_query: 'repo:${{ github.repository }} is:open is:issue label:"🧐 Needs: Designer" sort:created-asc'
-            - type: 'table'
-              title: 'Developer'
-              issue_query: 'repo:${{ github.repository }} is:open is:issue label:"🧐 Needs: Developer" sort:created-asc'
-            - type: 'table'
-              title: 'Producer'
-              issue_query: 'repo:${{ github.repository }} is:open is:issue label:"🧐 Needs: Producer" sort:created-asc'
-            - type: 'table'
-              title: 'Strategist'
-              issue_query: 'repo:${{ github.repository }} is:open is:issue label:"🧐 Needs: Strategist" sort:created-asc'
-          - title: 'Pull Requests'
-            widgets:
-            - type: 'table'
-              title: 'New Pull Requests (This Week)'
-              issue_query: 'repo:${{ github.repository }} is:open is:issue created:>{{ date("-7 days") }} sort:created-asc'
-        token: ${{ github.token }}
-
-    - name: Publish Documentation
-      run: |
-        git add .
-        git config user.name 'Dashboard User'
-        git config user.email 'nobody@nowhere'
-        git commit -m 'Documentation update' --allow-empty
-        git push origin gh-pages
-      working-directory: out
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@ashleykolodziej'
+      - run: npm install --production
+      - run: npm publish burf-tools
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
