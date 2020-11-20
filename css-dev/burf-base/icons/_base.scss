@@ -154,6 +154,6 @@ $print-icon-classes:                 false !default;
 	@include icon-content;
 }
 
-%icon-family-brands {
+%icon-family-brands::before {
 	font-family: "Font Awesome 5 Brands";
 }
