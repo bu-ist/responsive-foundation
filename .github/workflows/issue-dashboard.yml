@@ -13,6 +13,6 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@ashleykolodziej'
       - run: npm install --production
-      - run: npm publish burf-tools
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
