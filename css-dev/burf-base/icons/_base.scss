@@ -118,6 +118,10 @@ $print-icon-classes:                 false !default;
 	@include icon-base;
 }
 
+%icon-base-brands {
+	font-family: "Font Awesome 5 Brands";
+}
+
 // Icon Content Placeholder
 //
 // Provides base icon styles normalized across browsers and optimized

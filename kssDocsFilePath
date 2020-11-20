@@ -572,6 +572,10 @@ template {
  * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
+.menu-item [href*="dropbox.com"], .menu-item [href*="facebook.com"], .menu-item [href*="flickr.com"], .menu-item [href*="foursquare.com"], .menu-item [href*="github.com"], .menu-item [href*="instagram.com"], .menu-item [href*="kickstarter.com"], .menu-item [href*="linkedin.com"], .menu-item [href*="pinterest.com"], .menu-item [href*="plus.google.com"], .menu-item [href*="getpocket.com"], .menu-item [href*="reddit.com"], .menu-item [href*="snapchat.com"], .menu-item [href*="tumblr.com"], .menu-item [href*="twitter.com"], .menu-item [href*="vimeo.com"], .menu-item [href*="vine.co"], .menu-item [href*="youtube.com"],
+.menu-item [href*="bu.edu/buniverse"] {
+  font-family: "Font Awesome 5 Brands"; }
+
 .lt-ie9:hover .menu-item [href*="dropbox.com"], .menu-item .lt-ie9:hover [href*="dropbox.com"] {
   -ms-zoom: 1; }
 
@@ -3086,6 +3090,10 @@ template {
  * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
+.menu-item [href*="dropbox.com"], .menu-item [href*="facebook.com"], .menu-item [href*="flickr.com"], .menu-item [href*="foursquare.com"], .menu-item [href*="github.com"], .menu-item [href*="instagram.com"], .menu-item [href*="kickstarter.com"], .menu-item [href*="linkedin.com"], .menu-item [href*="pinterest.com"], .menu-item [href*="plus.google.com"], .menu-item [href*="getpocket.com"], .menu-item [href*="reddit.com"], .menu-item [href*="snapchat.com"], .menu-item [href*="tumblr.com"], .menu-item [href*="twitter.com"], .menu-item [href*="vimeo.com"], .menu-item [href*="vine.co"], .menu-item [href*="youtube.com"],
+.menu-item [href*="bu.edu/buniverse"] {
+  font-family: "Font Awesome 5 Brands"; }
+
 .lt-ie9:hover .menu-item [href*="dropbox.com"], .menu-item .lt-ie9:hover [href*="dropbox.com"] {
   -ms-zoom: 1; }
 
@@ -6712,10 +6720,6 @@ body {
     -o-transition: color 200ms ease-in-out 0s;
     transition: color 200ms ease-in-out 0s;
     font-size: 21px; }
-
-.menu-item [href*="dropbox.com"], .menu-item [href*="facebook.com"], .menu-item [href*="flickr.com"], .menu-item [href*="foursquare.com"], .menu-item [href*="github.com"], .menu-item [href*="instagram.com"], .menu-item [href*="kickstarter.com"], .menu-item [href*="linkedin.com"], .menu-item [href*="pinterest.com"], .menu-item [href*="plus.google.com"], .menu-item [href*="getpocket.com"], .menu-item [href*="reddit.com"], .menu-item [href*="snapchat.com"], .menu-item [href*="tumblr.com"], .menu-item [href*="twitter.com"], .menu-item [href*="vimeo.com"], .menu-item [href*="vine.co"], .menu-item [href*="youtube.com"],
-.menu-item [href*="bu.edu/buniverse"] {
-  font-family: "Font Awesome 5 Brands"; }
 
 .site-footer-brand-assets {
   text-align: center; }
