@@ -536,7 +536,7 @@ template {
 .menu-item [href*="bu.edu/buniverse"]::before, .bu_collapsible_open > .bu_collapsible::before, .gallery-icon a::before, .search-toggle.is-open::before, .mega-nav-toggle .nav-toggle-label-open::before, .menu-item [href*="plus.google.com"]::before, .menu-item [href*="getpocket.com"]::before, .icon-buhub::before, .icon-questionmark::before {
   color: unset;
   display: inline-block;
-  font-family: "bu-default-icons";
+  font-family: "Font Awesome 5 Free";
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-style: normal;
@@ -3986,7 +3986,7 @@ nav {
   .mega-nav-toggle .nav-toggle-label-closed::before {
     color: unset;
     display: inline-block;
-    font-family: "bu-default-icons";
+    font-family: "Font Awesome 5 Free";
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-style: normal;
@@ -4010,7 +4010,7 @@ nav {
     .mega-nav-toggle .nav-toggle-label-closed::before {
       color: unset;
       display: inline-block;
-      font-family: "bu-default-icons";
+      font-family: "Font Awesome 5 Free";
       -moz-osx-font-smoothing: grayscale;
       -webkit-font-smoothing: antialiased;
       font-style: normal;
