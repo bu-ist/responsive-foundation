@@ -1,0 +1,29 @@
+{
+  "name": "@bu-ist/burf-tools",
+  "version": "4.0.1",
+  "homepage": "https://bu-ist.github.io/responsive-foundation/",
+  "description": "BU Responsive Foundation for those who only want the very basic of basics, and to print absolutely minimal CSS. Only mixins and placeholders are supported in this partial, and only pieces which are used will print. Useful for plugin development where you want your dependencies and extra CSS to be at an absolute minimum, or for development which will occur in another pre-existing framework or environment with its own normalizing partials and other opinionated stuff.",
+  "authors": [
+    "Ashley Kolodziej <kolodz10@bu.edu>",
+  ],
+  "keywords": [
+    "responsive",
+    "bu",
+    "foundation",
+    "bootstrap",
+    "framework"
+  ],
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
+  "repository" : {
+    "type" : "git",
+    "url": "ssh://git@github.com:bu-ist/responsive-foundation.git",
+    "directory": "css-dev/burf-tools"
+  },
+  "dependencies": {
+    "mathsass": "^0.10.1",
+    "normalize-scss": "^7.0.1",
+    "kss": "^3.0.0-beta.25",
+  }
+}

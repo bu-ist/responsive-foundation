@@ -1,0 +1,83 @@
+{
+  "name": "@bu-ist/burf-base",
+  "version": "4.0.1",
+  "homepage": "https://bu-ist.github.io/responsive-foundation/",
+  "description": "A front-end framework for developing responsive sites at Boston University.",
+  "authors": [
+    "Mike Burns <mgburns@bu.edu>",
+    "Scott Dasse <sdasse@bu.edu>",
+    "Andy Rader <jarader@bu.edu>",
+    "Matt Fredenburg <malakhi@bu.edu>",
+    "Steve Rudolfi <srudolfi@bu.edu>",
+    "Eveleen Sung <eksung@bu.edu>",
+    "Inder Singh <isingh@bu.edu>",
+    "Ashley Kolodziej <kolodz10@bu.edu>",
+    "Jon Desroisers <jondes@bu.edu>",
+    "Tom Dodson <tdodson@bu.edu>",
+    "Alana Martin <alanam@bu.edu>"
+  ],
+  "keywords": [
+    "responsive",
+    "bu",
+    "foundation",
+    "bootstrap",
+    "framework"
+  ],
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
+  "repository" : {
+    "type" : "git",
+    "url": "ssh://git@github.com:bu-ist/responsive-foundation.git",
+    "directory": "css-dev/burf-tools"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "browserify-shim": {
+    "jquery": "global:jQuery"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "main": "js/theme.js",
+  "dependencies": {
+    "mathsass": "^0.10.1",
+    "normalize-scss": "^7.0.1",
+    "kss": "^3.0.0-beta.25"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@wordpress/babel-preset-default": "^3.0.2",
+    "@wordpress/eslint-plugin": "^1.0.1",
+    "autoprefixer": "^9.4.9",
+    "babelify": "^10.0.0",
+    "browserify-shim": "^3.8.14",
+    "bs-html-injector": "^3.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "grunt": "^1.0.4",
+    "grunt-babel": "^8.0.0",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-browserify": "^5.3.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-gh-pages": "^4.0.0",
+    "grunt-kss": "^5.0.1",
+    "grunt-postcss": "^0.9.0",
+    "grunt-sass": "^3.0.2",
+    "id-kss-builder": "git+ssh://git@github.com/bu-ist/id-kss-builder.git#1.1.0",
+    "node-sass": "^4.14.0",
+    "time-grunt": "^2.0.0"
+  }
+}
