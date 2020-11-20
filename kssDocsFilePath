@@ -548,7 +548,7 @@ template {
   src: url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.eot");
   src: url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
 
-.menu-item [href*="dropbox.com"]::before, .menu-item [href*="facebook.com"]::before, .menu-item [href*="flickr.com"]::before, .menu-item [href*="github.com"]::before, .menu-item [href*="instagram.com"]::before, .menu-item [href*="kickstarter.com"]::before, .menu-item [href*="linkedin.com"]::before, .menu-item [href*="medium.com"]::before, .menu-item [href*="pinterest.com"]::before, .bu_collapsible::before, .menu-item [href*="reddit.com"]::before, .menu-item [href*="renren.com"]::before, .search-toggle::before, .menu-item [href*="snapchat.com"]::before, .menu-item [href*="weibo.com"]::before, .menu-item [href*="tumblr.com"]::before, .menu-item [href*="twitter.com"]::before, .menu-item [href*="vimeo.com"]::before, .menu-item [href*="youtube.com"]::before,
+.menu-item [href*="dropbox.com"]::before, .menu-item [href*="facebook.com"]::before, .menu-item [href*="flickr.com"]::before, .menu-item [href*="github.com"]::before, .menu-item [href*="instagram.com"]::before, .menu-item [href*="kickstarter.com"]::before, .menu-item [href*="linkedin.com"]::before, .menu-item [href*="medium.com"]::before, .menu-item [href*="pinterest.com"]::before, .bu_collapsible::before, .menu-item [href*="reddit.com"]::before, .menu-item [href*="renren.com"]::before, .search-toggle::before, .menu-item [href*="snapchat.com"]::before, .menu-item [href*="tumblr.com"]::before, .menu-item [href*="twitter.com"]::before, .menu-item [href*="vimeo.com"]::before, .menu-item [href*="weibo.com"]::before, .menu-item [href*="youtube.com"]::before,
 .menu-item [href*="bu.edu/buniverse"]::before, .bu_collapsible_open > .bu_collapsible::before, .gallery-icon a::before, .search-toggle.is-open::before, .mega-nav-toggle .nav-toggle-label-open::before, .menu-item [href*="getpocket.com"]::before, .icon-buhub::before, .icon-questionmark::before {
   color: unset;
   display: inline-block;
@@ -702,15 +702,6 @@ template {
 .menu-item [href*="snapchat.com"]::before {
   content: "\f2ab"; }
 
-.lt-ie9:hover .menu-item [href*="weibo.com"], .menu-item .lt-ie9:hover [href*="weibo.com"] {
-  -ms-zoom: 1; }
-
-.menu-item [href*="weibo.com"] span {
-  display: none; }
-
-.menu-item [href*="weibo.com"]::before {
-  content: "\f1d5"; }
-
 .lt-ie9:hover .menu-item [href*="tumblr.com"], .menu-item .lt-ie9:hover [href*="tumblr.com"] {
   -ms-zoom: 1; }
 
@@ -737,6 +728,15 @@ template {
 
 .menu-item [href*="vimeo.com"]::before {
   content: "\f40a"; }
+
+.lt-ie9:hover .menu-item [href*="weibo.com"], .menu-item .lt-ie9:hover [href*="weibo.com"] {
+  -ms-zoom: 1; }
+
+.menu-item [href*="weibo.com"] span {
+  display: none; }
+
+.menu-item [href*="weibo.com"]::before {
+  content: "\f18a"; }
 
 .lt-ie9:hover .menu-item [href*="youtube.com"], .menu-item .lt-ie9:hover [href*="youtube.com"],
 .lt-ie9:hover .menu-item [href*="bu.edu/buniverse"], .menu-item .lt-ie9:hover [href*="bu.edu/buniverse"] {
@@ -3066,7 +3066,7 @@ template {
   src: url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.eot");
   src: url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
 
-.menu-item [href*="dropbox.com"]::before, .menu-item [href*="facebook.com"]::before, .menu-item [href*="flickr.com"]::before, .menu-item [href*="github.com"]::before, .menu-item [href*="instagram.com"]::before, .menu-item [href*="kickstarter.com"]::before, .menu-item [href*="linkedin.com"]::before, .menu-item [href*="medium.com"]::before, .menu-item [href*="pinterest.com"]::before, .bu_collapsible::before, .menu-item [href*="reddit.com"]::before, .menu-item [href*="renren.com"]::before, .search-toggle::before, .menu-item [href*="snapchat.com"]::before, .menu-item [href*="weibo.com"]::before, .menu-item [href*="tumblr.com"]::before, .menu-item [href*="twitter.com"]::before, .menu-item [href*="vimeo.com"]::before, .menu-item [href*="youtube.com"]::before,
+.menu-item [href*="dropbox.com"]::before, .menu-item [href*="facebook.com"]::before, .menu-item [href*="flickr.com"]::before, .menu-item [href*="github.com"]::before, .menu-item [href*="instagram.com"]::before, .menu-item [href*="kickstarter.com"]::before, .menu-item [href*="linkedin.com"]::before, .menu-item [href*="medium.com"]::before, .menu-item [href*="pinterest.com"]::before, .bu_collapsible::before, .menu-item [href*="reddit.com"]::before, .menu-item [href*="renren.com"]::before, .search-toggle::before, .menu-item [href*="snapchat.com"]::before, .menu-item [href*="tumblr.com"]::before, .menu-item [href*="twitter.com"]::before, .menu-item [href*="vimeo.com"]::before, .menu-item [href*="weibo.com"]::before, .menu-item [href*="youtube.com"]::before,
 .menu-item [href*="bu.edu/buniverse"]::before, .bu_collapsible_open > .bu_collapsible::before, .gallery-icon a::before, .search-toggle.is-open::before, .mega-nav-toggle .nav-toggle-label-open::before, .menu-item [href*="getpocket.com"]::before, .icon-buhub::before, .icon-questionmark::before {
   color: unset;
   display: inline-block;
@@ -3220,15 +3220,6 @@ template {
 .menu-item [href*="snapchat.com"]::before {
   content: "\f2ab"; }
 
-.lt-ie9:hover .menu-item [href*="weibo.com"], .menu-item .lt-ie9:hover [href*="weibo.com"] {
-  -ms-zoom: 1; }
-
-.menu-item [href*="weibo.com"] span {
-  display: none; }
-
-.menu-item [href*="weibo.com"]::before {
-  content: "\f1d5"; }
-
 .lt-ie9:hover .menu-item [href*="tumblr.com"], .menu-item .lt-ie9:hover [href*="tumblr.com"] {
   -ms-zoom: 1; }
 
@@ -3255,6 +3246,15 @@ template {
 
 .menu-item [href*="vimeo.com"]::before {
   content: "\f40a"; }
+
+.lt-ie9:hover .menu-item [href*="weibo.com"], .menu-item .lt-ie9:hover [href*="weibo.com"] {
+  -ms-zoom: 1; }
+
+.menu-item [href*="weibo.com"] span {
+  display: none; }
+
+.menu-item [href*="weibo.com"]::before {
+  content: "\f18a"; }
 
 .lt-ie9:hover .menu-item [href*="youtube.com"], .menu-item .lt-ie9:hover [href*="youtube.com"],
 .lt-ie9:hover .menu-item [href*="bu.edu/buniverse"], .menu-item .lt-ie9:hover [href*="bu.edu/buniverse"] {
