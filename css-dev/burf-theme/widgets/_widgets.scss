@@ -77,8 +77,6 @@ $color-widget-title:                        $color-grayscale-0 !default;
 //
 // Since: 1.0.0
 
-$widget-title-link-after:                   " →" !default;
-
 // Widget Title Link Icon
 //
 // Controls the icon which shows after the widget title if it is a link.
@@ -88,9 +86,21 @@ $widget-title-link-after:                   " →" !default;
 //
 // Access: Public
 //
-// Since: 1.0.0
+// Since: 5.0.0
 
 $widget-title-link-icon:                   "angle-right" !default;
+
+// Widget Title Link Icon Placement
+//
+// Controls whether the icon shows before or after the title.
+//
+// Styleguide Widgets.General Styles.Title Link Icon Placement
+//
+// Access: Public
+//
+// Since: 5.0.0
+
+$widget-title-link-icon-placement:                   "after" !default;
 
 // Widget Title Link Icon Color
 //
@@ -103,7 +113,7 @@ $widget-title-link-icon:                   "angle-right" !default;
 //
 // Since: 1.0.0
 
-$color-widget-title-link-after:             currentColor !default;
+$color-widget-title-link-icon:             currentColor !default;
 
 // Widget Title Link Icon Color Hover
 //
@@ -116,7 +126,7 @@ $color-widget-title-link-after:             currentColor !default;
 //
 // Since: 1.0.0
 
-$color-widget-title-link-after-hover:       $color-grayscale-0 !default;
+$color-widget-title-link-icon-hover:       $color-grayscale-0 !default;
 
 // Widget Headings Font Family
 //
@@ -256,16 +266,16 @@ $border-widget-list:                       $border !default;
 	padding: 0 0 4px;
 
 	a {
-		@extend %icon-#{$widget-title-link-icon};
+		@include icon($widget-title-link-icon, $widget-title-link-icon-placement);
 		color: inherit;
 		text-decoration: none;
 
 		&::after {
-			color: $color-widget-title-link-after;
+			color: $color-widget-title-link-icon;
 		}
 
 		&:hover::after {
-			color: $color-widget-title-link-after-hover;
+			color: $color-widget-title-link-icon-hover;
 		}
 	}
 }

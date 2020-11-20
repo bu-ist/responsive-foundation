@@ -540,7 +540,7 @@ template {
   src: url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.eot");
   src: url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
 
-.widget-title a::before, .menu-item [href*="dropbox.com"]::before, .menu-item [href*="facebook.com"]::before, .menu-item [href*="flickr.com"]::before, .menu-item [href*="github.com"]::before, .menu-item [href*="instagram.com"]::before, .menu-item [href*="kickstarter.com"]::before, .menu-item [href*="linkedin.com"]::before, .menu-item [href*="medium.com"]::before, .menu-item [href*="pinterest.com"]::before, .bu_collapsible::before, .menu-item [href*="reddit.com"]::before, .menu-item [href*="renren.com"]::before, .search-toggle::before, .menu-item [href*="snapchat.com"]::before, .menu-item [href*="tumblr.com"]::before, .menu-item [href*="twitter.com"]::before, .menu-item [href*="vimeo.com"]::before, .menu-item [href*="weibo.com"]::before, .menu-item [href*="youtube.com"]::before,
+.menu-item [href*="dropbox.com"]::before, .menu-item [href*="facebook.com"]::before, .menu-item [href*="flickr.com"]::before, .menu-item [href*="github.com"]::before, .menu-item [href*="instagram.com"]::before, .menu-item [href*="kickstarter.com"]::before, .menu-item [href*="linkedin.com"]::before, .menu-item [href*="medium.com"]::before, .menu-item [href*="pinterest.com"]::before, .bu_collapsible::before, .menu-item [href*="reddit.com"]::before, .menu-item [href*="renren.com"]::before, .search-toggle::before, .menu-item [href*="snapchat.com"]::before, .menu-item [href*="tumblr.com"]::before, .menu-item [href*="twitter.com"]::before, .menu-item [href*="vimeo.com"]::before, .menu-item [href*="weibo.com"]::before, .menu-item [href*="youtube.com"]::before,
 .menu-item [href*="bu.edu/buniverse"]::before, .bu_collapsible_open > .bu_collapsible::before, .gallery-icon a::before, .search-toggle.is-open::before, .mega-nav-toggle .nav-toggle-label-open::before, .menu-item [href*="getpocket.com"]::before, .icon-buhub::before, .icon-questionmark::before {
   color: unset;
   display: inline-block;
@@ -567,15 +567,6 @@ template {
 .menu-item [href*="dropbox.com"]::before, .menu-item [href*="facebook.com"]::before, .menu-item [href*="flickr.com"]::before, .menu-item [href*="github.com"]::before, .menu-item [href*="instagram.com"]::before, .menu-item [href*="kickstarter.com"]::before, .menu-item [href*="linkedin.com"]::before, .menu-item [href*="medium.com"]::before, .menu-item [href*="pinterest.com"]::before, .menu-item [href*="getpocket.com"]::before, .menu-item [href*="reddit.com"]::before, .menu-item [href*="snapchat.com"]::before, .menu-item [href*="renren.com"]::before, .menu-item [href*="tumblr.com"]::before, .menu-item [href*="weibo.com"]::before, .menu-item [href*="twitter.com"]::before, .menu-item [href*="vimeo.com"]::before, .menu-item [href*="youtube.com"]::before,
 .menu-item [href*="bu.edu/buniverse"]::before {
   font-family: "Font Awesome 5 Brands"; }
-
-.lt-ie9:hover .widget-title a, .widget-title .lt-ie9:hover a {
-  -ms-zoom: 1; }
-
-.widget-title a span {
-  display: none; }
-
-.widget-title a::before {
-  content: "\f105"; }
 
 .lt-ie9:hover .menu-item [href*="dropbox.com"], .menu-item .lt-ie9:hover [href*="dropbox.com"] {
   -ms-zoom: 1; }
@@ -3059,7 +3050,7 @@ template {
   src: url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.eot");
   src: url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
 
-.widget-title a::before, .menu-item [href*="dropbox.com"]::before, .menu-item [href*="facebook.com"]::before, .menu-item [href*="flickr.com"]::before, .menu-item [href*="github.com"]::before, .menu-item [href*="instagram.com"]::before, .menu-item [href*="kickstarter.com"]::before, .menu-item [href*="linkedin.com"]::before, .menu-item [href*="medium.com"]::before, .menu-item [href*="pinterest.com"]::before, .bu_collapsible::before, .menu-item [href*="reddit.com"]::before, .menu-item [href*="renren.com"]::before, .search-toggle::before, .menu-item [href*="snapchat.com"]::before, .menu-item [href*="tumblr.com"]::before, .menu-item [href*="twitter.com"]::before, .menu-item [href*="vimeo.com"]::before, .menu-item [href*="weibo.com"]::before, .menu-item [href*="youtube.com"]::before,
+.menu-item [href*="dropbox.com"]::before, .menu-item [href*="facebook.com"]::before, .menu-item [href*="flickr.com"]::before, .menu-item [href*="github.com"]::before, .menu-item [href*="instagram.com"]::before, .menu-item [href*="kickstarter.com"]::before, .menu-item [href*="linkedin.com"]::before, .menu-item [href*="medium.com"]::before, .menu-item [href*="pinterest.com"]::before, .bu_collapsible::before, .menu-item [href*="reddit.com"]::before, .menu-item [href*="renren.com"]::before, .search-toggle::before, .menu-item [href*="snapchat.com"]::before, .menu-item [href*="tumblr.com"]::before, .menu-item [href*="twitter.com"]::before, .menu-item [href*="vimeo.com"]::before, .menu-item [href*="weibo.com"]::before, .menu-item [href*="youtube.com"]::before,
 .menu-item [href*="bu.edu/buniverse"]::before, .bu_collapsible_open > .bu_collapsible::before, .gallery-icon a::before, .search-toggle.is-open::before, .mega-nav-toggle .nav-toggle-label-open::before, .menu-item [href*="getpocket.com"]::before, .icon-buhub::before, .icon-questionmark::before {
   color: unset;
   display: inline-block;
@@ -3086,15 +3077,6 @@ template {
 .menu-item [href*="dropbox.com"]::before, .menu-item [href*="facebook.com"]::before, .menu-item [href*="flickr.com"]::before, .menu-item [href*="github.com"]::before, .menu-item [href*="instagram.com"]::before, .menu-item [href*="kickstarter.com"]::before, .menu-item [href*="linkedin.com"]::before, .menu-item [href*="medium.com"]::before, .menu-item [href*="pinterest.com"]::before, .menu-item [href*="getpocket.com"]::before, .menu-item [href*="reddit.com"]::before, .menu-item [href*="snapchat.com"]::before, .menu-item [href*="renren.com"]::before, .menu-item [href*="tumblr.com"]::before, .menu-item [href*="weibo.com"]::before, .menu-item [href*="twitter.com"]::before, .menu-item [href*="vimeo.com"]::before, .menu-item [href*="youtube.com"]::before,
 .menu-item [href*="bu.edu/buniverse"]::before {
   font-family: "Font Awesome 5 Brands"; }
-
-.lt-ie9:hover .widget-title a, .widget-title .lt-ie9:hover a {
-  -ms-zoom: 1; }
-
-.widget-title a span {
-  display: none; }
-
-.widget-title a::before {
-  content: "\f105"; }
 
 .lt-ie9:hover .menu-item [href*="dropbox.com"], .menu-item .lt-ie9:hover [href*="dropbox.com"] {
   -ms-zoom: 1; }
@@ -5622,6 +5604,29 @@ textarea {
   .widget-title a {
     color: inherit;
     text-decoration: none; }
+    .lt-ie9:hover .widget-title a {
+      -ms-zoom: 1; }
+    .widget-title a span {
+      display: none; }
+    .widget-title a::after {
+      color: unset;
+      display: inline-block;
+      font-family: "Font Awesome 5 Free";
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 900;
+      line-height: 1;
+      padding-bottom: 0.2em;
+      speak: none;
+      text-decoration: none;
+      text-rendering: optimizeLegibility;
+      text-transform: none;
+      vertical-align: middle;
+      white-space: nowrap;
+      margin-left: 0.5em;
+      content: "\f105"; }
     .widget-title a::after {
       color: currentColor; }
     .widget-title a:hover::after {
