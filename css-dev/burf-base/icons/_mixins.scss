@@ -62,11 +62,6 @@ $color-icons:										 unset !default;
 // Since: 2.0.0
 
 @mixin icon-base {
-	.lt-ie9:hover & {
-		// This triggers a redraw in IE to Fix IE8's :before content rendering.
-		-ms-zoom: 1;
-	}
-
 	span {
 		display: none; // Hide labels
 	}

@@ -568,17 +568,11 @@ template {
 .menu-item [href*="bu.edu/buniverse"]::before {
   font-family: "Font Awesome 5 Brands"; }
 
-.lt-ie9:hover .menu-item [href*="dropbox.com"], .menu-item .lt-ie9:hover [href*="dropbox.com"] {
-  -ms-zoom: 1; }
-
 .menu-item [href*="dropbox.com"] span {
   display: none; }
 
 .menu-item [href*="dropbox.com"]::before {
   content: "\f16b"; }
-
-.lt-ie9:hover .menu-item [href*="facebook.com"], .menu-item .lt-ie9:hover [href*="facebook.com"] {
-  -ms-zoom: 1; }
 
 .menu-item [href*="facebook.com"] span {
   display: none; }
@@ -586,17 +580,11 @@ template {
 .menu-item [href*="facebook.com"]::before {
   content: "\f09a"; }
 
-.lt-ie9:hover .menu-item [href*="flickr.com"], .menu-item .lt-ie9:hover [href*="flickr.com"] {
-  -ms-zoom: 1; }
-
 .menu-item [href*="flickr.com"] span {
   display: none; }
 
 .menu-item [href*="flickr.com"]::before {
   content: "\f16e"; }
-
-.lt-ie9:hover .menu-item [href*="github.com"], .menu-item .lt-ie9:hover [href*="github.com"] {
-  -ms-zoom: 1; }
 
 .menu-item [href*="github.com"] span {
   display: none; }
@@ -604,17 +592,11 @@ template {
 .menu-item [href*="github.com"]::before {
   content: "\f09b"; }
 
-.lt-ie9:hover .menu-item [href*="instagram.com"], .menu-item .lt-ie9:hover [href*="instagram.com"] {
-  -ms-zoom: 1; }
-
 .menu-item [href*="instagram.com"] span {
   display: none; }
 
 .menu-item [href*="instagram.com"]::before {
   content: "\f16d"; }
-
-.lt-ie9:hover .menu-item [href*="kickstarter.com"], .menu-item .lt-ie9:hover [href*="kickstarter.com"] {
-  -ms-zoom: 1; }
 
 .menu-item [href*="kickstarter.com"] span {
   display: none; }
@@ -622,17 +604,11 @@ template {
 .menu-item [href*="kickstarter.com"]::before {
   content: "\f3bb"; }
 
-.lt-ie9:hover .menu-item [href*="linkedin.com"], .menu-item .lt-ie9:hover [href*="linkedin.com"] {
-  -ms-zoom: 1; }
-
 .menu-item [href*="linkedin.com"] span {
   display: none; }
 
 .menu-item [href*="linkedin.com"]::before {
   content: "\f08c"; }
-
-.lt-ie9:hover .menu-item [href*="medium.com"], .menu-item .lt-ie9:hover [href*="medium.com"] {
-  -ms-zoom: 1; }
 
 .menu-item [href*="medium.com"] span {
   display: none; }
@@ -640,17 +616,11 @@ template {
 .menu-item [href*="medium.com"]::before {
   content: "\f23a"; }
 
-.lt-ie9:hover .menu-item [href*="pinterest.com"], .menu-item .lt-ie9:hover [href*="pinterest.com"] {
-  -ms-zoom: 1; }
-
 .menu-item [href*="pinterest.com"] span {
   display: none; }
 
 .menu-item [href*="pinterest.com"]::before {
   content: "\f0d2"; }
-
-.lt-ie9:hover .bu_collapsible {
-  -ms-zoom: 1; }
 
 .bu_collapsible span {
   display: none; }
@@ -658,17 +628,11 @@ template {
 .bu_collapsible::before {
   content: "\f067"; }
 
-.lt-ie9:hover .menu-item [href*="reddit.com"], .menu-item .lt-ie9:hover [href*="reddit.com"] {
-  -ms-zoom: 1; }
-
 .menu-item [href*="reddit.com"] span {
   display: none; }
 
 .menu-item [href*="reddit.com"]::before {
   content: "\f1a1"; }
-
-.lt-ie9:hover .menu-item [href*="renren.com"], .menu-item .lt-ie9:hover [href*="renren.com"] {
-  -ms-zoom: 1; }
 
 .menu-item [href*="renren.com"] span {
   display: none; }
@@ -676,17 +640,11 @@ template {
 .menu-item [href*="renren.com"]::before {
   content: "\f18b"; }
 
-.lt-ie9:hover .search-toggle {
-  -ms-zoom: 1; }
-
 .search-toggle span {
   display: none; }
 
 .search-toggle::before {
   content: "\f002"; }
-
-.lt-ie9:hover .menu-item [href*="snapchat.com"], .menu-item .lt-ie9:hover [href*="snapchat.com"] {
-  -ms-zoom: 1; }
 
 .menu-item [href*="snapchat.com"] span {
   display: none; }
@@ -694,17 +652,11 @@ template {
 .menu-item [href*="snapchat.com"]::before {
   content: "\f2ab"; }
 
-.lt-ie9:hover .menu-item [href*="tumblr.com"], .menu-item .lt-ie9:hover [href*="tumblr.com"] {
-  -ms-zoom: 1; }
-
 .menu-item [href*="tumblr.com"] span {
   display: none; }
 
 .menu-item [href*="tumblr.com"]::before {
   content: "\f173"; }
-
-.lt-ie9:hover .menu-item [href*="twitter.com"], .menu-item .lt-ie9:hover [href*="twitter.com"] {
-  -ms-zoom: 1; }
 
 .menu-item [href*="twitter.com"] span {
   display: none; }
@@ -712,27 +664,17 @@ template {
 .menu-item [href*="twitter.com"]::before {
   content: "\f099"; }
 
-.lt-ie9:hover .menu-item [href*="vimeo.com"], .menu-item .lt-ie9:hover [href*="vimeo.com"] {
-  -ms-zoom: 1; }
-
 .menu-item [href*="vimeo.com"] span {
   display: none; }
 
 .menu-item [href*="vimeo.com"]::before {
   content: "\f40a"; }
 
-.lt-ie9:hover .menu-item [href*="weibo.com"], .menu-item .lt-ie9:hover [href*="weibo.com"] {
-  -ms-zoom: 1; }
-
 .menu-item [href*="weibo.com"] span {
   display: none; }
 
 .menu-item [href*="weibo.com"]::before {
   content: "\f18a"; }
-
-.lt-ie9:hover .menu-item [href*="youtube.com"], .menu-item .lt-ie9:hover [href*="youtube.com"],
-.lt-ie9:hover .menu-item [href*="bu.edu/buniverse"], .menu-item .lt-ie9:hover [href*="bu.edu/buniverse"] {
-  -ms-zoom: 1; }
 
 .menu-item [href*="youtube.com"] span, .menu-item [href*="bu.edu/buniverse"] span {
   display: none; }
@@ -741,17 +683,11 @@ template {
 .menu-item [href*="bu.edu/buniverse"]::before {
   content: "\f167"; }
 
-.lt-ie9:hover .bu_collapsible_open > .bu_collapsible {
-  -ms-zoom: 1; }
-
 .bu_collapsible_open > .bu_collapsible span {
   display: none; }
 
 .bu_collapsible_open > .bu_collapsible::before {
   content: "\f068"; }
-
-.lt-ie9:hover .gallery-icon a, .gallery-icon .lt-ie9:hover a {
-  -ms-zoom: 1; }
 
 .gallery-icon a span {
   display: none; }
@@ -759,17 +695,11 @@ template {
 .gallery-icon a::before {
   content: "\f31e"; }
 
-.lt-ie9:hover .search-toggle.is-open {
-  -ms-zoom: 1; }
-
 .search-toggle.is-open span {
   display: none; }
 
 .search-toggle.is-open::before {
   content: "\f00d"; }
-
-.lt-ie9:hover .mega-nav-toggle .nav-toggle-label-open, .mega-nav-toggle .lt-ie9:hover .nav-toggle-label-open {
-  -ms-zoom: 1; }
 
 .mega-nav-toggle .nav-toggle-label-open span {
   display: none; }
@@ -777,26 +707,17 @@ template {
 .mega-nav-toggle .nav-toggle-label-open::before {
   content: "\f00d"; }
 
-.lt-ie9:hover .menu-item [href*="getpocket.com"], .menu-item .lt-ie9:hover [href*="getpocket.com"] {
-  -ms-zoom: 1; }
-
 .menu-item [href*="getpocket.com"] span {
   display: none; }
 
 .menu-item [href*="getpocket.com"]::before {
   content: "\f265"; }
 
-.lt-ie9:hover .icon-buhub {
-  -ms-zoom: 1; }
-
 .icon-buhub span {
   display: none; }
 
 .icon-buhub::before {
   content: ""; }
-
-.lt-ie9:hover .icon-questionmark {
-  -ms-zoom: 1; }
 
 .icon-questionmark span {
   display: none; }
@@ -3094,8 +3015,6 @@ textarea {
   .widget-title a {
     color: inherit;
     text-decoration: none; }
-    .lt-ie9:hover .widget-title a {
-      -ms-zoom: 1; }
     .widget-title a span {
       display: none; }
     .widget-title a::after {
@@ -4013,8 +3932,6 @@ nav {
     height: auto; }
   .mega-nav-toggle.is-open .nav-toggle-label-closed {
     height: 0; }
-  .lt-ie9:hover .mega-nav-toggle .nav-toggle-label-closed {
-    -ms-zoom: 1; }
   .mega-nav-toggle .nav-toggle-label-closed span {
     display: none; }
   .mega-nav-toggle .nav-toggle-label-closed::before {
@@ -4037,8 +3954,6 @@ nav {
     margin-right: 0.5em;
     content: "\f0c9"; }
   @media (min-width: 768px) {
-    .lt-ie9:hover .mega-nav-toggle .nav-toggle-label-closed {
-      -ms-zoom: 1; }
     .mega-nav-toggle .nav-toggle-label-closed span {
       display: none; }
     .mega-nav-toggle .nav-toggle-label-closed::before {
