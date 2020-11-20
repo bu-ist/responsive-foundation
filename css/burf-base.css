@@ -495,14 +495,6 @@ template {
 @font-face {
   font-family: "Font Awesome 5 Free";
   font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-regular-400.eot");
-  src: url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-regular-400.woff2") format("woff2"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-regular-400.woff") format("woff"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-regular-400.ttf") format("truetype"), url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
-
-@font-face {
-  font-family: "Font Awesome 5 Free";
-  font-style: normal;
   font-weight: 900;
   font-display: block;
   src: url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-solid-900.eot");

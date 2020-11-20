@@ -12,6 +12,18 @@
 
 $use-default-icons:                  true !default;
 
+// Controls which FontAwesome library loads.
+// Solid will load by default. Switch to 400 for regular.
+// Note that the regular library is much smaller than solid.
+//
+// Styleguide Utilities.Icons.Icon Weight
+//
+// Access: Public
+//
+// Since: 5.0.0
+
+$font-weight-icon: 									 900 !default;
+
 // Choose whether icons go before or after content by default
 //
 // Controls the placement of icon content globally

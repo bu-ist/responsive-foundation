@@ -94,7 +94,7 @@ $color-icons:										 unset !default;
 	-webkit-font-smoothing: antialiased;
 	font-style: normal;
 	font-variant: normal;
-	font-weight: normal;
+	font-weight: $font-weight-icon;
 	line-height: 1;
 	padding-bottom: 0.2em; // Accomodate for inline icons
 	speak: none;
