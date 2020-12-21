@@ -13,61 +13,61 @@
 // Global dependencies
 // =================================================================
 
-@import 'burf-base';
+@import '../burf-base/burf-base';
 
 // =================================================================
 // Content and Shortcodes
 // =================================================================
 
-@import 'burf-theme/content/wordpress-editor';
-@import 'burf-theme/content/collapsibles';
-@import 'burf-theme/content/courses';
-@import 'burf-theme/content/galleries';
-@import 'burf-theme/profiles/profile-format-default';
-@import 'burf-theme/profiles/profile-format-basic';
-@import 'burf-theme/profiles/profile-format-advanced';
-@import 'burf-theme/profiles/profile-format-mini';
-@import 'burf-theme/content/slideshows';
+@import 'content/wordpress-editor';
+@import 'content/collapsibles';
+@import 'content/courses';
+@import 'content/galleries';
+@import 'profiles/profile-format-default';
+@import 'profiles/profile-format-basic';
+@import 'profiles/profile-format-advanced';
+@import 'profiles/profile-format-mini';
+@import 'content/slideshows';
 
 // =================================================================
 // Widgets
 // =================================================================
 
-@import 'burf-theme/widgets/widgets';
-@import 'burf-theme/calendar/widget-calendar';
-@import 'burf-theme/calendar/calendar-picker';
-@import 'burf-theme/widgets/widget-navigation';
-@import 'burf-theme/widgets/widget-posts';
+@import 'widgets/widgets';
+@import 'calendar/widget-calendar';
+@import 'calendar/calendar-picker';
+@import 'widgets/widget-navigation';
+@import 'widgets/widget-posts';
 
 // =================================================================
 // Layout
 // =================================================================
 
-@import 'burf-theme/layout/branding';
-@import 'burf-theme/layout/navigation';
-@import 'burf-theme/layout/banner';
-@import 'burf-theme/layout/content-area';
-@import 'burf-theme/layout/footer';
+@import 'layout/branding';
+@import 'layout/navigation';
+@import 'layout/banner';
+@import 'layout/content-area';
+@import 'layout/footer';
 
 // =================================================================
 // Templates
 // =================================================================
 
-@import 'burf-theme/news/base';
-@import 'burf-theme/news/comments';
+@import 'news/base';
+@import 'news/comments';
 
 // Archive Templates
 
-@import 'burf-theme/news/archive';
-@import 'burf-theme/calendar/calendar-archive';
-@import 'burf-theme/profiles/profile-archive';
+@import 'news/archive';
+@import 'calendar/calendar-archive';
+@import 'profiles/profile-archive';
 
 // Single Templates
 
-@import 'burf-theme/news/single';
-@import 'burf-theme/calendar/calendar-single';
-@import 'burf-theme/profiles/profile-single';
+@import 'news/single';
+@import 'calendar/calendar-single';
+@import 'profiles/profile-single';
 
 // Other
 
-@import 'burf-theme/bulp/bulp-base';
+@import 'bulp/bulp-base';
