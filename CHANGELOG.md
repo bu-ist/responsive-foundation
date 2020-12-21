@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Fixes #235
+* Moves to Github Packages for publishing
 
 ## 4.0.1
 
