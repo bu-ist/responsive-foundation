@@ -9,6 +9,7 @@
 * `$widget-title-link-after` has been deprecated in favor of `$widget-title-link-icon`
 * Removes pre-IE9 support for icons, per FontAwesome standard.
 * Moves to Github Packages for releases.
+* Renames `tools-cgb` to `tools-webpack`.
 
 ## 4.0.1
 

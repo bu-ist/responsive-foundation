@@ -1,6 +1,11 @@
 // =================================================================
 //
-// BURF Tools for Grunt builds (responsive-child-starter, etc.)
+// BURF Tools (No load path dependencies)
+//
+// Use this version when you don't have loadPath or importPath
+// available to you. You will need a loader that supports ~ as a
+// shortcut to the node_modules directory. Luckily, it's
+// well-supported, according to Dakota!
 //
 // A partial for those who only want the very basic of basics. Only
 // mixins and placeholders are supported in this partial, and only
@@ -16,7 +21,7 @@
 // Dependencies
 // =================================================================
 
-@import 'node_modules/mathsass/dist/math';
+@import '~mathsass/dist/math';
 
 // =================================================================
 // Blah
@@ -27,26 +32,30 @@
 // Whether or not to output Responsive default classes when using
 // burf-tools.
 //
+// Styleguide Configuration.Tools.$burf-extras
+//
 // Access: Public
 //
 // Since: 3.0.0
 
 $burf-extras:								       false !default;
 
-@import 'burf-base/config';
-@import 'burf-base/mixins';
-@import 'burf-base/accessibility';
-@import 'burf-base/normalize-variables';
+@import '~@bu-ist/burf-base/config';
+@import '~@bu-ist/burf-base/mixins';
+@import '~@bu-ist/burf-base/accessibility';
+@import '~@bu-ist/burf-base/normalize-variables';
 
-@import 'burf-base/grid/grid-variables';
-@import 'burf-base/grid/grid-mixins';
-@import 'burf-base/grid/grid-placeholders';
-@import 'burf-base/grid/grid-friendly';
+@import '~@bu-ist/burf-base/grid/grid-variables';
+@import '~@bu-ist/burf-base/grid/grid-mixins';
+@import '~@bu-ist/burf-base/grid/grid-placeholders';
+@import '~@bu-ist/burf-base/grid/grid-friendly';
 
 // Use Default Icons
 //
 // Whether or not to use BU Default Icons as your icon font.
 // when using burf-tools.
+//
+// Styleguide Configuration.Tools.$use-default-icons
 //
 // Access: Public
 //
@@ -59,13 +68,15 @@ $use-default-icons:                        false !default;
 // Whether or not to print the default icon classes
 // when using burf-tools.
 //
+// Styleguide Configuration.Tools.$print-icon-classes
+//
 // Access: Public
 //
 // Since: 3.0.0
 
 $print-icon-classes:                       false !default;
 
-@import 'burf-base/icons/package';
+@import '~@bu-ist/burf-base/icons/package';
 
-@import 'burf-base/typography-variables';
-@import 'burf-base/typography-tools';
+@import '~@bu-ist/burf-base/typography-variables';
+@import '~@bu-ist/burf-base/typography-tools';
