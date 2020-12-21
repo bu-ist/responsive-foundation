@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## Unreleased (5.0.0)
 
 * Fixes #235
 * Removes BU Default Icons
@@ -8,6 +8,7 @@
 * Adds a new variable, `$font-weight-icon`, to control which set of FontAwesome icons loads
 * `$widget-title-link-after` has been deprecated in favor of `$widget-title-link-icon`
 * Removes pre-IE9 support for icons, per FontAwesome standard.
+* Moves to Github Packages for releases.
 
 ## 4.0.1
 
