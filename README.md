@@ -1,8 +1,8 @@
 # Responsive Foundation
 
-Responsive Foundation is Boston University's front-end development framework. Built in Sass and JavaScript, Foundation powers the frontend of custom WordPress themes, longform editorial work, and special projects such as our Annual Report. 
+Responsive Foundation is Boston University's front-end development framework. Built in Sass and JavaScript, Foundation powers the frontend of custom WordPress themes, longform editorial work, and special projects such as our Annual Report. It is maintained by the [Boston University Interactive Design team](https://www.bu.edu/interactive-design/).
 
-This framework is currently internal, and may not be used without permission.
+All packages in this repository except `burf-customizations` are open source. Feel free to use them in your projects!
 
 **Contribute!** If you'd like to contribute, check out some of our [open issues in Mission Control](https://bu-ist.github.io/responsive-foundation/dashboard.html).
 
@@ -92,3 +92,10 @@ After each major release, one version is maintained until everyone can be upgrad
 * 1.0.4.2
 * 1.4.1
 * 1.4.2.2
+
+## Upgrading to 5.0.0
+
+Version `5.0.0` is a major update that will require you to reconfigure some of your settings in order for your builds to run correctly. Here's what you'll need to do:
+
+- `css-dev` is now split into `burf-base`, `burf-theme`, and `burf-tools` folders. Be sure to update your `includePaths` in your Sass compilation settings.
+- All pacakges are now scoped to `@bu-ist`. In your settings, you may have referenced `responsive-foundation` inside the `node_modules` folder. You'll now find all packages inside of `@bu-ist`.
