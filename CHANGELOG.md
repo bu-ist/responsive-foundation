@@ -10,8 +10,8 @@
 * Removes pre-IE9 support for icons, per FontAwesome standard.
 * Moves to Github Packages for releases.
 * Renames `tools-cgb` to `tools-webpack`.
-* Reorganizes foundation into `burf-base`, `burf-theme`, `burf-tools`, and a new `burf-bu`
-* Migrates the following partials from `burf-theme` to `burf-bu`:
+* Reorganizes foundation into `burf-base`, `burf-theme`, `burf-tools`, and a new `burf-customizations`
+* Migrates the following partials from `burf-theme` to `burf-customizations`:
     - 'content/collapsibles';
     - 'content/courses';
     - 'profiles/profile-format-default';
@@ -27,7 +27,7 @@
     - 'calendar/calendar-single';
     - 'profiles/profile-single';
     - 'bulp/bulp-base';
-* Migrates the following partials from `burf-base` to `burf-bu`:
+* Migrates the following partials from `burf-base` to `burf-customizations`:
     - 'fonts';
 
 ## 4.0.1
