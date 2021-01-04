@@ -13,6 +13,7 @@
     "bootstrap",
     "framework"
   ],
+  "license": "GPL-3.0-or-later",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@bu-ist"
   },
