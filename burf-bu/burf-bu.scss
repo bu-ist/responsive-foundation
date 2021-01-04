@@ -14,42 +14,47 @@
 // =================================================================
 
 @import '../burf-base/burf-base';
+@import '../burf-theme/burf-theme';
 
 // =================================================================
 // Content and Shortcodes
 // =================================================================
 
-@import 'content/wordpress-editor';
-@import 'content/galleries';
+@import 'content/collapsibles';
+@import 'content/courses';
+@import 'profiles/profile-format-default';
+@import 'profiles/profile-format-basic';
+@import 'profiles/profile-format-advanced';
+@import 'profiles/profile-format-mini';
+@import 'content/slideshows';
 
 // =================================================================
 // Widgets
 // =================================================================
 
-@import 'widgets/widgets';
-@import 'widgets/widget-navigation';
-@import 'widgets/widget-posts';
+@import 'calendar/widget-calendar';
+@import 'calendar/calendar-picker';
 
 // =================================================================
 // Layout
 // =================================================================
 
-@import 'layout/navigation';
-@import 'layout/banner';
-@import 'layout/content-area';
-@import 'layout/footer';
+@import 'layout/branding';
 
 // =================================================================
 // Templates
 // =================================================================
 
-@import 'news/base';
-@import 'news/comments';
-
 // Archive Templates
 
-@import 'news/archive';
+@import 'calendar/calendar-archive';
+@import 'profiles/profile-archive';
 
 // Single Templates
 
-@import 'news/single';
+@import 'calendar/calendar-single';
+@import 'profiles/profile-single';
+
+// Other
+
+@import 'bulp/bulp-base';
