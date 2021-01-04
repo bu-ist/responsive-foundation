@@ -7,16 +7,16 @@
 @import 'node_modules/mathsass/dist/math';
 
 // Utilities
-@import 'burf-base/config';
-@import 'burf-base/mixins';
-@import 'burf-base/accessibility';
-@import 'burf-base/fonts';
-@import 'burf-base/icons/package';
+@import 'config';
+@import 'mixins';
+@import 'accessibility';
+@import 'fonts';
+@import 'icons/package';
 
 // Styles
-@import "burf-base/normalize";
-@import "burf-base/grid/package";
-@import "burf-base/typography";
-@import "burf-base/tables";
-@import "burf-base/forms";
-@import 'burf-base/print';
+@import "normalize";
+@import "grid/package";
+@import "typography";
+@import "tables";
+@import "forms";
+@import 'print';

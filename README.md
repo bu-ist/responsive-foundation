@@ -1,8 +1,12 @@
 # Responsive Foundation
 
-Responsive Foundation is Boston University's front-end development framework. Built in Sass and JavaScript, Foundation powers the frontend of custom WordPress themes, longform editorial work, and special projects such as our Annual Report. 
+Responsive Foundation is Boston University's front-end development framework. Built in Sass and JavaScript, Foundation powers the frontend of custom WordPress themes, longform editorial work, and special projects such as our Annual Report. It is maintained by the [Boston University Interactive Design team](https://www.bu.edu/interactive-design/).
 
-This framework is currently internal, and may not be used without permission.
+All packages in this repository except `burf-customizations` are open source. Feel free to use them in your projects!
+
+**Contribute!** If you'd like to contribute, check out some of our [open issues in Mission Control](https://bu-ist.github.io/responsive-foundation/dashboard.html).
+
+## About
 
 Foundation provides a library of [Sass](http://sass-lang.com/) and Javascript files that serve as a foundation for building responsive sites. This library is designed to be imported into your project using [npm](https://www.npmjs.com/).
 
@@ -15,19 +19,38 @@ Note that this repository does not include any production-ready assets (e.g. min
 We recommend installing Foundation using Node Package Manager (npm). You can learn more about how to install npm
 here: https://www.npmjs.com/get-npm
 
-Once you're set up with npm, you can install Foundation in your project directory like so:
+### Generate your access token
 
-```bash
-npm install git@github.com:bu-ist/responsive-foundation.git#master
-```
+This repository uses Github Packages to manage packages. To install it, you'll need to create a [Github Personal Access Token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token) with the `read:packages` scope only. This only needs to happen once!
 
-This will install the latest version of Responsive Foundation each time you run `npm install`.
-To lock to a specific version of Foundation in your project, just change `master` to the number of
-the [release](https://github.com/bu-ist/responsive-foundation/releases) you would like to use.
+### Add your access token to the global NPM settings (npmrc)
+
+After you've generated your personal access token, you can update your global `.npmrc` so that anytime you want to use a package from Responsive Foundation, you can just install and go. You'll only need to do this once. In a new Terminal window, run the following commands, replacing `YOURTOKENHERE` with the Personal Access Token you generated above:
+
+`npm config set "@bu-ist:registry" https://npm.pkg.github.com`
+
+Then run:
+
+`npm config set "//npm.pkg.github.com/:_authToken" YOURTOKENHERE`
+
+### Install and go!
+
+Once you're set up, you can install Foundation in your project directory like so (be sure to `cd` first!). You can choose from any of the following setups depending on your project's needs:
+
+- **WordPress Themes**
+	- We recommend using both `burf-base` and `burf-theme` when working with WordPress themes.
+	- To install, run `npm install --save-dev @bu-ist/burf-base@latest @bu-ist/burf-theme@latest`.
+	- **Boston University themes only:** Please also run `npm install --save-dev @bu-ist/burf-customizations@latest` to install BU-specific styles.
+- **Websites Outside of WordPress** 
+	- If you are building a website outside of WordPress and don't already have your own CSS reset and basic styles for HTML elements, `burf-base` is probably the best match for you.
+	- To install, run `npm install --save-dev @bu-ist/burf-base@latest @bu-ist/burf-base@latest`.
+- **Plugins and Code Inside Existing Websites** 
+	- If you already have a CSS reset, or plan to use this code in an environment where you only want the absolute minimum amount of CSS to print (such as a WordPress plugin or code for a single page inside of an existing website), `burf-tools` gives you access to all of the mixins, extends, and functionality of Responsive Foundation without any of the fluff whatsoever.
+	- To install, run `npm install --save-dev @bu-ist/burf-tools@latest`.
 
 ## Sass Usage
 
-Foundation Sass files are split as follows:
+Responsive Foundation Sass files are split as follows:
 
 - **burf-base** contains Sass, mixins, resets, and basic styling for HTML that can apply to any
 project.
@@ -69,3 +92,11 @@ After each major release, one version is maintained until everyone can be upgrad
 * 1.0.4.2
 * 1.4.1
 * 1.4.2.2
+
+## Upgrading to 5.0.0
+
+Version `5.0.0` is a major update that will require you to reconfigure some of your settings in order for your builds to run correctly. Here's what you'll need to do:
+
+- `css-dev` is now split into `burf-base`, `burf-theme`, and `burf-tools` folders. Be sure to update your `includePaths` in your Sass compilation settings.
+- All pacakges are now scoped to `@bu-ist`. In your settings, you may have referenced `responsive-foundation` inside the `node_modules` folder. You'll now find all packages inside of `@bu-ist`.
+- `tools-cgb` has been renamed to `tools-webpack` to better describe the type of build process that set of tools is compatible with.
