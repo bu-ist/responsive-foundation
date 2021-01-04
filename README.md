@@ -1,4 +1,4 @@
-# Responsive Foundation
+[![Welcome to Boston University Responsive Foundation 5.0. Install now](https://user-images.githubusercontent.com/1828613/103576393-11302080-4ea1-11eb-8ed8-a1d08a1cdb67.jpg)](#installation) 
 
 Responsive Foundation is Boston University's front-end development framework. Built in Sass and JavaScript, Foundation powers the frontend of custom WordPress themes, longform editorial work, and special projects such as our Annual Report. It is maintained by the [Boston University Interactive Design team](https://www.bu.edu/interactive-design/).
 
