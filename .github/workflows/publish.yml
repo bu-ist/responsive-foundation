@@ -2,6 +2,7 @@ name: Publish Packages
 on:
   release:
     types: [created]
+  workflow_dispatch:
 jobs:  
   getPackages:
     runs-on: ubuntu-latest
