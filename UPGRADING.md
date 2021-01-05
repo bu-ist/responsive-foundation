@@ -34,6 +34,13 @@ likely, this is `burf-base` and `burf-theme`. [See recommended configurations he
 
 `npm install @bu-ist/burf-base@latest @bu-ist/burf-theme@latest --save-dev`
 
+#### Boston University IS&T and Interactive Design themes only
+
+This release separated out BU-specific styles so that we could open source everything
+else. Run the following command to install the BU-specific stuff as well:
+
+`npm install @bu-ist/burf-customizations@latest --save-dev`
+
 ### Update Gruntfile.js
 
 Do a find and replace in the `Gruntfile.js` file for the following text:
