@@ -1,0 +1,185 @@
+// =================================================================
+// Dependencies
+// =================================================================
+
+@import "supported";
+
+// =================================================================
+// Icon Mixins
+// =================================================================
+
+// Change the icon font
+//
+// The font family to use for icons across the site.
+// Change this to use a different homegrown font family.
+//
+// Styleguide Utilities.Icons.Icon font
+//
+// Access: Public
+//
+// Since: 2.0.0
+
+$font-family-icons:                     	 "Font Awesome 5 Free" !default;
+
+// Change the icon font size
+//
+// The font size to use for icons across the site.
+//
+// Styleguide Utilities.Icons.Icon size
+//
+// Access: Public
+//
+// Since: 2.0.0
+
+$font-size-icon: 									 21px !default;
+
+// Change the icon color sitewide
+//
+// The color to use for icons across the site.
+// By default, this will inherit the color of the text in the container the icon lives in.
+// Setting this will keep the color of the icons consistent everywhere.
+//
+// Styleguide Utilities.Icons.Icon color
+//
+// Access: Public
+//
+// Since: 1.0.0
+
+$color-icons:										 unset !default;
+
+// Icon base mixin
+//
+// Provides base icon styles normalized across browsers and optimized
+// for accessibility.
+// A helper mixin for the main icon mixin and icon extends.
+// You probably don't actually want to use this unless you're working
+// on Responsive. Use the icon mixin instead.
+//
+// Styleguide Utilities.Icons.Icon base mixin
+//
+// Access: Private
+//
+// Since: 2.0.0
+
+@mixin icon-base {
+	span {
+		display: none; // Hide labels
+	}
+}
+
+// Icon content mixin
+//
+// Provides base icon styles normalized across browsers and optimized
+// for accessibility.
+// A helper mixin for the main icon mixin and icon extends.
+// You probably don't actually want to use this unless you're working
+// on Responsive. Use the icon mixin instead.
+//
+// Styleguide Utilities.Icons.Icon content mixin
+//
+// Access: Public
+//
+// Since: 1.2.0
+
+@mixin icon-content {
+	color: $color-icons;
+	display: inline-block;
+	font-family: $font-family-icons;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: $font-weight-icon;
+	line-height: 1;
+	padding-bottom: 0.2em; // Accomodate for inline icons
+	speak: none;
+	text-decoration: none;
+	text-rendering: optimizeLegibility;
+	text-transform: none;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+// Icon content placeholder - before
+//
+// Provides base icon styles normalized across browsers and optimized
+// for accessibility.
+// A helper placeholder for the main icon mixin and icon extends.
+// You probably don't actually want to use this unless you're working
+// on Responsive. Use the icon mixin instead.
+//
+// Styleguide Utilities.Icons.Icon content placeholder before
+//
+// Access: Public
+//
+// Since: 2.0.0
+
+%icon-content-before {
+	&::before {
+		@include icon-content;
+		margin-right: 0.5em;
+	}
+}
+
+// Icon content placeholder - after
+//
+// Provides base icon styles normalized across browsers and optimized
+// for accessibility.
+// A helper placeholder for the main icon mixin and icon extends.
+// You probably don't actually want to use this unless you're working
+// on Responsive. Use the icon mixin instead.
+//
+// Styleguide Utilities.Icons.Icon content placeholder after
+//
+// Access: Public
+//
+// Since: 2.0.0
+
+%icon-content-after {
+	&::after {
+		@include icon-content;
+		margin-left: 0.5em;
+	}
+}
+
+// Icon mixin
+//
+// A mixin to generate icons.
+// Use any icon in `$icon-supports`.
+// $use-extend will use the extends for performance
+// purposes, but sacrifices your ability to use this
+// inside a media query. Setting this to true is really
+// only beneficial for generating the default placeholders.
+//
+// Styleguide Utilities.Icons.Icon Mixin
+//
+// Access: Public
+//
+// Since: 2.0.0
+
+@mixin icon( $name, $position: "before", $use-extend: false ) {
+	@include icon-base;
+	$content: fa-content( map-get( $icons-responsive, $name ) );
+
+	@if $use-extend {
+		@extend %icon-content-#{$position};
+	}
+
+	&::#{$position} {
+		@if $use-extend == false {
+			@include icon-content;
+
+			@if $position == "before" {
+				margin-right: 0.5em;
+			} @else {
+				margin-left: 0.5em;
+			}
+		}
+
+		@if $content {
+			content: $content;
+		} @else {
+			@error "`#{$name}` is not a supported icon. See www.bu.edu/cdn/fonts/icons/bu-default-icons/specimen-icons.html for a list of supported icons. If this is a custom icon you meant to add for your own icon font, be sure you've added it to the `$icons-theme` map.";
+		}
+	}
+}

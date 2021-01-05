@@ -1,8 +1,8 @@
 {
-  "name": "responsive-foundation",
-  "version": "5.0.0-alpha.0",
-  "homepage": "https://github.com/bu-ist/responsive-foundation",
-  "description": "A front-end framework for developing responsive sites at Boston University.",
+  "name": "@bu-ist/burf-base",
+  "version": "5.0.0",
+  "homepage": "https://bu-ist.github.io/responsive-foundation/",
+  "description": "A sensible boilerplate and library of styles for responsive web design, based on the best ideas from Foundation and Bootstrap.",
   "authors": [
     "Mike Burns <mgburns@bu.edu>",
     "Scott Dasse <sdasse@bu.edu>",
@@ -16,6 +16,7 @@
     "Tom Dodson <tdodson@bu.edu>",
     "Alana Martin <alanam@bu.edu>"
   ],
+  "license": "GPL-3.0-or-later",
   "keywords": [
     "responsive",
     "bu",
@@ -23,7 +24,14 @@
     "bootstrap",
     "framework"
   ],
-  "private": true,
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/@bu-ist"
+  },
+  "repository" : {
+    "type" : "git",
+    "url": "ssh://git@github.com:bu-ist/responsive-foundation.git",
+    "directory": "burf-base"
+  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
@@ -39,10 +47,9 @@
   },
   "main": "js/theme.js",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.1",
-    "kss": "^3.0.0-beta.25",
     "mathsass": "^0.10.1",
-    "normalize-scss": "^7.0.1"
+    "normalize-scss": "^7.0.1",
+    "kss": "^3.0.0-beta.25"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

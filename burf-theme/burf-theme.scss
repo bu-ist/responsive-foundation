@@ -1,0 +1,55 @@
+// =================================================================
+// Styling for the WordPress theme framework
+//
+// BURF Theme contains styles that work with the Boston University
+// WordPress environment. If you're not using WordPress for your
+// project, you probably don't need these styles. You can import
+// just BURF Base for special situations where you don't need all
+// the extra styling to support WordPress.
+//
+// =================================================================
+
+// =================================================================
+// Global dependencies
+// =================================================================
+
+@import '../burf-base/burf-base';
+
+// =================================================================
+// Content and Shortcodes
+// =================================================================
+
+@import 'content/wordpress-editor';
+@import 'content/galleries';
+
+// =================================================================
+// Widgets
+// =================================================================
+
+@import 'widgets/widgets';
+@import 'widgets/widget-navigation';
+@import 'widgets/widget-posts';
+
+// =================================================================
+// Layout
+// =================================================================
+
+@import 'layout/navigation';
+@import 'layout/banner';
+@import 'layout/content-area';
+@import 'layout/footer';
+
+// =================================================================
+// Templates
+// =================================================================
+
+@import 'news/base';
+@import 'news/comments';
+
+// Archive Templates
+
+@import 'news/archive';
+
+// Single Templates
+
+@import 'news/single';
