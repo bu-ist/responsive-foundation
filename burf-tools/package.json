@@ -23,6 +23,6 @@
     "directory": "burf-tools"
   },
   "dependencies": {
-    "@bu-ist/burf-base": "5.0.0-alpha.0"
+    "@bu-ist/burf-base": "5.0.0-alpha.1"
   }
 }
