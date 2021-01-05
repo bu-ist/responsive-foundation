@@ -1,8 +1,34 @@
 # Changelog
 
-## Unreleased
+## Unreleased (5.0.0)
 
 * Fixes #235
+* Removes BU Default Icons
+* Adds FontAwesome Free and FontAwesome Brands
+* Adds a new variable, `$font-weight-icon`, to control which set of FontAwesome icons loads
+* `$widget-title-link-after` has been deprecated in favor of `$widget-title-link-icon`
+* Removes pre-IE9 support for icons, per FontAwesome standard.
+* Moves to Github Packages for releases.
+* Renames `tools-cgb` to `tools-webpack`.
+* Reorganizes foundation into `burf-base`, `burf-theme`, `burf-tools`, and a new `burf-customizations`
+* Migrates the following partials from `burf-theme` to `burf-customizations`:
+    - `content/collapsibles`;
+    - `content/courses`;
+    - `profiles/profile-format-default`;
+    - `profiles/profile-format-basic`;
+    - `profiles/profile-format-advanced`;
+    - `profiles/profile-format-mini`;
+    - `content/slideshows`;
+    - `calendar/widget-calendar`;
+    - `calendar/calendar-picker`;
+    - `layout/branding`;
+    - `calendar/calendar-archive`;
+    - `profiles/profile-archive`;
+    - `calendar/calendar-single`;
+    - `profiles/profile-single`;
+    - `bulp/bulp-base`;
+* Migrates the following partials from `burf-base` to `burf-customizations`:
+    - `fonts`;
 
 ## 4.0.1
 

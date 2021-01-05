@@ -310,75 +310,98 @@ body {
 
 .menu-item {
 	[href*="dropbox.com"] {
+		@extend %icon-family-brands;
 		@extend %icon-dropbox;
 	}
 
 	[href*="facebook.com"] {
+		@extend %icon-family-brands;
 		@extend %icon-facebook;
 	}
 
 	[href*="flickr.com"] {
+		@extend %icon-family-brands;
 		@extend %icon-flickr;
 	}
 
-	[href*="foursquare.com"] {
-		@extend %icon-foursquare;
-	}
-
 	[href*="github.com"] {
+		@extend %icon-family-brands;
 		@extend %icon-github;
 	}
 
 	[href*="instagram.com"] {
+		@extend %icon-family-brands;
 		@extend %icon-instagram;
 	}
 
 	[href*="kickstarter.com"] {
+		@extend %icon-family-brands;
 		@extend %icon-kickstarter;
 	}
 
 	[href*="linkedin.com"] {
+		@extend %icon-family-brands;
 		@extend %icon-linkedin;
 	}
 
+	[href*="medium.com"] {
+		@extend %icon-family-brands;
+		@extend %icon-medium;
+	}
+
 	[href*="pinterest.com"] {
+		@extend %icon-family-brands;
 		@extend %icon-pinterest;
 	}
 
-	[href*="plus.google.com"] {
-		@extend %icon-googleplus;
-	}
-
 	[href*="getpocket.com"] {
+		@extend %icon-family-brands;
 		@extend %icon-pocket;
 	}
 
 	[href*="reddit.com"] {
+		@extend %icon-family-brands;
 		@extend %icon-reddit;
 	}
 
 	[href*="snapchat.com"] {
+		@extend %icon-family-brands;
 		@extend %icon-snapchat;
 	}
 
+	[href*="linkedin.com"] {
+		@extend %icon-family-brands;
+		@extend %icon-linkedin;
+	}
+
+	[href*="renren.com"] {
+		@extend %icon-family-brands;
+		@extend %icon-renren;
+	}
+
 	[href*="tumblr.com"] {
+		@extend %icon-family-brands;
 		@extend %icon-tumblr;
 	}
 
+	[href*="weibo.com"] {
+		@extend %icon-family-brands;
+		@extend %icon-weibo;
+	}
+
 	[href*="twitter.com"] {
+		@extend %icon-family-brands;
 		@extend %icon-twitter;
 	}
 
 	[href*="vimeo.com"] {
+		@extend %icon-family-brands;
 		@extend %icon-vimeo;
-	}
-
-	[href*="vine.co"] {
-		@extend %icon-vine;
 	}
 
 	[href*="youtube.com"],
 	[href*="bu.edu/buniverse"] {
+		@extend %icon-family-brands;
 		@extend %icon-youtube;
 	}
 }

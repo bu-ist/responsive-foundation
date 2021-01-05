@@ -182,8 +182,8 @@
 // Since: 3.2.3
 
 %skip-link {
-	@include box-shadow( 0 0 2px 2px transparentize( $color-grayscale-0, 0.4 ) );
 	background-color: #F1F1F1;
+	box-shadow: 0 0 2px 2px transparentize( #000, 0.4 );
 	color: #21759B;
 	display: block;
 	font-family: "Open Sans",sans-serif;
@@ -202,12 +202,8 @@
 	transform: translateX( -50% );
 	-webkit-transition: top 0.3s ease-out;
 	transition: top 0.3s ease-out;
-	width: 90%;
+	width: 190px;
 	z-index: 100000;
-
-	@include breakpoint( $xs ) {
-		width: 190px;
-	}
 
 	&:focus,
 	&:active {

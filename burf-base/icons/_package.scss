@@ -1,6 +1,6 @@
 // Choose whether or not to load the default icon library
 //
-// Choose whether or not to use BU Default icons for icons in your
+// Choose whether or not to use FontAwesome Free icons for icons in your
 // stylesheet. By default, this option is set to true. Set to false
 // to load your own icon font family.
 //
@@ -11,6 +11,18 @@
 // Since: 2.1.11
 
 $use-default-icons:                  true !default;
+
+// Controls which FontAwesome library loads.
+// Solid will load by default. Switch to 400 for regular.
+// Note that the regular library is much smaller than solid.
+//
+// Styleguide Utilities.Icons.Icon Weight
+//
+// Access: Public
+//
+// Since: 5.0.0
+
+$font-weight-icon: 									 900 !default;
 
 // Choose whether icons go before or after content by default
 //
