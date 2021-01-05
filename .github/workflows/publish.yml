@@ -9,6 +9,7 @@ jobs:
       burf-base-version: ${{ fromJSON(steps.get_latest_package.outputs.data).repository.packages.nodes[0].latestVersion.version }}
       burf-theme-version: ${{ fromJSON(steps.get_latest_package.outputs.data).repository.packages.nodes[1].latestVersion.version }}
       burf-tools-version: ${{ fromJSON(steps.get_latest_package.outputs.data).repository.packages.nodes[2].latestVersion.version }}
+      burf-customizations-version: ${{ fromJSON(steps.get_latest_package.outputs.data).repository.packages.nodes[3].latestVersion.version }}
     steps:
       - uses: octokit/graphql-action@v2.x
         id: get_latest_package
@@ -16,7 +17,7 @@ jobs:
           query: |
             query packages($owner:String!,$repo:String!) {
               repository(owner:$owner,name:$repo) {
-                packages(last: 3, names: ["burf-base", "burf-theme", "burf-tools"]) {
+                packages(last: 3, names: ["burf-base", "burf-theme", "burf-tools", "burf-customizations"]) {
                   nodes {
                     name
                     latestVersion {
@@ -36,6 +37,7 @@ jobs:
       burf-base-version: ${{ fromJSON(steps.burf-base-release.outputs.content).version }}
       burf-theme-version: ${{ fromJSON(steps.burf-theme-release.outputs.content).version }}
       burf-tools-version: ${{ fromJSON(steps.burf-tools-release.outputs.content).version }}
+      burf-customizations-version: ${{ fromJSON(steps.burf-customizations-release.outputs.content).version }}
     steps:
       - uses: actions/checkout@v2
       - name: Read burf-base package.json
@@ -54,6 +56,11 @@ jobs:
         uses: juliangruber/read-file-action@v1
         with:
           path: ./burf-tools/package.json
+      - name: Read burf-customizations package.json
+        id: burf-customizations-release
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: ./burf-customizations/package.json
   publishBase:
     needs: [ getPackages, getReleases ]
     runs-on: ubuntu-latest
@@ -126,3 +133,27 @@ jobs:
       - name: Skip publishing burf-tools
         if: ${{ needs.getReleases.outputs.burf-tools-version == needs.getPackages.outputs.burf-tools-version }}
         run: 'echo "::warning file=package.json,line=3::No new version of burf-tools detected.'
+  publishCustomizations:
+    needs: [ getPackages, getReleases ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Version
+        run: |
+          echo 'Current package version for burf-customizations: ${{ needs.getPackages.outputs.burf-customizations-version }}'
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@bu-ist'  
+      - name: Publish burf-customizations
+        if: ${{ needs.getReleases.outputs.burf-customizations-version != needs.getPackages.outputs.burf-customizations-version }}
+        run: |
+          echo "New version of burf-customizations detected: ${{ needs.getReleases.outputs.burf-customizations-version }}. Old version: ${{ needs.getPackages.outputs.burf-customizations-version }}. Publishing now..."
+          npm install --production
+          npm publish burf-customizations
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Skip publishing burf-customizations
+        if: ${{ needs.getReleases.outputs.burf-customizations-version == needs.getPackages.outputs.burf-customizations-version }}
+        run: 'echo "::warning file=package.json,line=3::No new version of burf-customizations detected.'
