@@ -8,7 +8,55 @@ of our functionality.
 
 ## Updating to 5x
 
-Add a step by step process for upgrades here.
+### Uninstall older versions of Foundation
+
+`cd` to your project folder, and run the following commands in Terminal
+to remove old versions of Responsive Foundation:
+
+`npm uninstall responsive-foundation --save-dev`
+
+### Configure your development environment for Github Packages
+
+If you haven't already done so at least once on your current computer,
+you will need to configure your development environment to work with
+Github Packages. You'll do this in two steps:
+
+1. [Generate your Personal Access Token](https://github.com/bu-ist/responsive-foundation#generate-your-access-token)
+2. [Add your access token to the global NPM settings (npmrc)](https://github.com/bu-ist/responsive-foundation#add-your-access-token-to-the-global-npm-settings-npmrc)
+
+If you've done this once already, you can move on to the next step!
+
+### Install updated packages
+
+`cd` to your project folder, and run the following commands to install the
+latest version of the components you need from Responsive Foundation. Most
+likely, this is `burf-base` and `burf-theme`. [See recommended configurations here.](https://github.com/bu-ist/responsive-foundation#install-and-go)
+
+`npm install @bu-ist/burf-base@latest @bu-ist/burf-theme@latest --save-dev`
+
+### Update Gruntfile.js
+
+Do a find and replace in the `Gruntfile.js` file for the following text:
+
+| Text to find                                 | Replace with                         |
+| -------------------------------------------- | ------------------------------------ |
+| `node_modules/responsive-foundation/css-dev` | `node_modules/responsive-foundation` |
+
+
+### Update import paths
+
+Do a find and replace in the `css-dev` folder for the following text:
+
+| Text to find                      | Replace with                               |
+| --------------------------------- | ------------------------------------------ |
+| `burf-base/fonts`                 | `burf-customizations/fonts`                |
+| `burf-theme/bulp`                 | `burf-customizations/bulp`                 |
+| `burf-theme/calendar`             | `burf-customizations/calendar`             |
+| `burf-theme/content/collapsibles` | `burf-customizations/content/collapsibles` |
+| `burf-theme/content/courses`      | `burf-customizations/content/courses`      |
+| `burf-theme/content/slideshows`   | `burf-customizations/content/slideshows`   |
+| `burf-theme/layout/branding`      | `burf-customizations/layout/branding`      |
+| `burf-theme/profiles`             | `burf-customizations/profiles`             |
 
 More details on the exact changes are here: https://github.com/bu-ist/responsive-foundation/releases/tag/5.0.0
 
