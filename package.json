@@ -1,6 +1,6 @@
 {
   "name": "responsive-foundation",
-  "version": "5.0.0-alpha.0",
+  "version": "5.0.0-alpha.1",
   "homepage": "https://github.com/bu-ist/responsive-foundation",
   "description": "A front-end framework for developing responsive sites at Boston University.",
   "authors": [
@@ -39,10 +39,10 @@
   },
   "main": "js/theme.js",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.1",
+    "@bu-ist/burf-base": "^5.0.0-alpha.1",
+    "@bu-ist/burf-customizations": "^5.0.0-alpha.2",
+    "@bu-ist/burf-theme": "^5.0.0-alpha.0",
     "kss": "^3.0.0-beta.25",
-    "mathsass": "^0.10.1",
-    "normalize-scss": "^7.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

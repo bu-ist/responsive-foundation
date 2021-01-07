@@ -47,7 +47,7 @@ Do a find and replace in the `Gruntfile.js` file for the following text:
 
 | Text to find                                 | Replace with                         |
 | -------------------------------------------- | ------------------------------------ |
-| `node_modules/responsive-foundation/css-dev` | `node_modules/responsive-foundation` |
+| `node_modules/responsive-foundation/css-dev` | `node_modules/@bu-ist` |
 
 
 ### Update import paths
