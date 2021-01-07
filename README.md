@@ -51,9 +51,10 @@ Once you're set up, you can install Foundation in your project directory like so
 - **Plugins and Code Inside Existing Websites** 
 	- If you already have a CSS reset, or plan to use this code in an environment where you only want the absolute minimum amount of CSS to print (such as a WordPress plugin or code for a single page inside of an existing website), `burf-tools` gives you access to all of the mixins, extends, and functionality of Responsive Foundation without any of the fluff whatsoever.
 	- To install, run `npm install --save-dev @bu-ist/burf-tools@latest`.
-- **Official Boston University Websites** 
+- **Official Boston University WordPress Themes** 
 	- Official Boston University websites which reside on our servers should also install `burf-customizations`. These additional styles are meant to work with our customized WordPress environment, including our university-specific plugins.
-	- To install, run `npm install --save-dev @bu-ist/burf-customizations@latest`.
+	- Please note that only employees of Boston University Interactive Design or IS&T are authorized to use or grant access to this package. 
+	- To install everything you need for an official Boston University website, run `npm install --save-dev @bu-ist/burf-base@latest @bu-ist/burf-theme@latest @bu-ist/burf-customizations@latest`.
 
 ## Sass Usage
 
