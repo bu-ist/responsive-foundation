@@ -5,6 +5,13 @@ const sass = require( 'node-sass' );
 // Set up a versioned folder for SassDoc
 const pkg = require( './package.json' );
 
+// Get current versions of each package inside this repo
+
+const pkgBase = require( './burf-base/package.json' );
+const pkgCustomizations = require( './burf-customizations/package.json' );
+const pkgTheme = require( './burf-theme/package.json' );
+const pkgTools = require( './burf-tools/package.json' );
+
 module.exports = ( grunt ) => {
 	const docsVersionFilePath = `docs/${ pkg.version }`;
 	const kssDocsFilePath = docsVersionFilePath + '/kss-assets/docs.css';
@@ -199,6 +206,44 @@ module.exports = ( grunt ) => {
 				dest: docsVersionFilePath
 			}
 		},
+		version: {
+			base: {
+				options: {
+					pkg: 'burf-base/package.json',
+			        prefix: 'burf\\-base\\"\\:\\ \\"\\^'
+			    },
+				src: [
+					'package.json',
+					'burf-customizations/package.json',
+					'burf-theme/package.json',
+					'burf-tools/package.json'
+				]
+			},
+			customizations: {
+				options: {
+					pkg: 'burf-customizations/package.json',
+			        prefix: 'burf\\-customizations\\"\\:\\ \\"\\^'
+			    },
+				src: ['package.json']
+			},
+			theme: {
+				options: {
+					pkg: 'burf-theme/package.json',
+			        prefix: 'burf\\-theme\\"\\:\\ \\"\\^'
+			    },
+				src: [
+					'package.json',
+					'burf-customizations/package.json',
+				]
+			},
+			tools: {
+				options: {
+					pkg: 'burf-tools/package.json',
+			        prefix: 'burf\\-tools\\"\\:\\ \\"\\^'
+			    },
+				src: ['package.json']
+			}
+		}
 	});
 
 	// Load Plugins.
@@ -213,6 +258,7 @@ module.exports = ( grunt ) => {
 	grunt.loadNpmTasks( 'grunt-gh-pages' );
 	grunt.loadNpmTasks( 'grunt-sass' );
 	grunt.loadNpmTasks( 'grunt-kss' );
+	grunt.loadNpmTasks( 'grunt-version' );
 	//grunt.registerTask( 'build', [ 'js', 'kss', 'copy' ] );
 	grunt.registerTask( 'build', [ 'js', 'copy' ] );
 	grunt.registerTask( 'deploy', [ 'build', 'gh-pages' ] );

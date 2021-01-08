@@ -1,6 +1,6 @@
 {
   "name": "responsive-foundation",
-  "version": "5.0.0-alpha.1",
+  "version": "5.0.0-alpha.3",
   "homepage": "https://github.com/bu-ist/responsive-foundation",
   "description": "A front-end framework for developing responsive sites at Boston University.",
   "authors": [
@@ -39,10 +39,10 @@
   },
   "main": "js/theme.js",
   "dependencies": {
-    "@bu-ist/burf-base": "^5.0.0-alpha.1",
-    "@bu-ist/burf-customizations": "^5.0.0-alpha.2",
-    "@bu-ist/burf-theme": "^5.0.0-alpha.0",
-    "kss": "^3.0.0-beta.25",
+    "@bu-ist/burf-base": "^5.0.0-alpha.3",
+    "@bu-ist/burf-customizations": "^5.0.0-alpha.3",
+    "@bu-ist/burf-theme": "^5.0.0-alpha.3",
+    "@bu-ist/burf-tools": "^5.0.0-alpha.3"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -70,7 +70,9 @@
     "grunt-kss": "^5.0.1",
     "grunt-postcss": "^0.9.0",
     "grunt-sass": "^3.0.2",
+    "grunt-version": "^2.0.0",
     "id-kss-builder": "git+ssh://git@github.com/bu-ist/id-kss-builder.git#1.1.0",
+    "kss": "^3.0.0-beta.25",
     "node-sass": "^4.14.0",
     "time-grunt": "^2.0.0"
   }
