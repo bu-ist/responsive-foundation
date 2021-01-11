@@ -87,7 +87,7 @@ jobs:
         if: ${{ needs.getReleases.outputs.burf-base-version == needs.getPackages.outputs.burf-base-version }}
         run: 'echo "::warning file=package.json,line=3::No new version of burf-base detected. Continuing on..."'
   publishTheme:
-    needs: [ getPackages, getReleases ]
+    needs: [ getPackages, getReleases, publishBase ]
     runs-on: ubuntu-latest
     steps:
       - name: Print Version
@@ -111,7 +111,7 @@ jobs:
         if: ${{ needs.getReleases.outputs.burf-theme-version == needs.getPackages.outputs.burf-theme-version }}
         run: 'echo "::warning file=package.json,line=3::No new version of burf-theme detected. Continuing on..."'
   publishTools:
-    needs: [ getPackages, getReleases ]
+    needs: [ getPackages, getReleases, publishBase ]
     runs-on: ubuntu-latest
     steps:
       - name: Print Version
@@ -135,7 +135,7 @@ jobs:
         if: ${{ needs.getReleases.outputs.burf-tools-version == needs.getPackages.outputs.burf-tools-version }}
         run: 'echo "::warning file=package.json,line=3::No new version of burf-tools detected.'
   publishCustomizations:
-    needs: [ getPackages, getReleases ]
+    needs: [ getPackages, getReleases, publishBase, publishTheme ]
     runs-on: ubuntu-latest
     steps:
       - name: Print Version
