@@ -37,7 +37,11 @@ Then run:
 
 `npm config set "//npm.pkg.github.com/:_authToken" YOURTOKENHERE`
 
-### Install and go!
+**If you're working on an existing theme or plugin that's been upgraded to Foundation 5.0, stop here!** You don't need to do anything else. Hop back over to your project and get working!
+
+Otherwise, instructions for choosing the best package for your project are below.
+
+## Choose your package and go!
 
 Once you're set up, you can install Foundation in your project directory like so (be sure to `cd` first!). You can choose from any of the following setups depending on your project's needs:
 
