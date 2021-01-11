@@ -79,7 +79,7 @@ jobs:
         if: ${{ needs.getReleases.outputs.burf-base-version != needs.getPackages.outputs.burf-base-version }}
         run: |
           echo "New version of burf-base detected: ${{ needs.getReleases.outputs.burf-base-version }}. Old version: ${{ needs.getPackages.outputs.burf-base-version }}. Publishing now..."
-          npm install --production
+          npm install burf-base --production
           npm publish burf-base
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
