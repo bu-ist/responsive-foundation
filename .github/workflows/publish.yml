@@ -18,7 +18,7 @@ jobs:
           query: |
             query packages($owner:String!,$repo:String!) {
               repository(owner:$owner,name:$repo) {
-                packages(last: 3, names: ["burf-base", "burf-theme", "burf-tools", "burf-customizations"]) {
+                packages(first: 5, names: ["burf-base", "burf-theme", "burf-tools", "burf-customizations"]) {
                   nodes {
                     name
                     latestVersion {
