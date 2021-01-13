@@ -68,6 +68,13 @@ Do a find and replace in the `css-dev` folder for the following text:
 | `burf-theme/layout/branding`      | `burf-customizations/layout/branding`      |
 | `burf-theme/profiles`             | `burf-customizations/profiles`             |
 
+
+Do a find and replace in the `js-dev` folder for the following text:
+
+| Text to find                      | Replace with                               |
+| --------------------------------- | ------------------------------------------ |
+| `responsive-foundation/`          | `@bu-ist/burf-theme/`                      |
+
 More details on the exact changes are here: https://github.com/bu-ist/responsive-foundation/releases/tag/5.0.0
 
 ## Updating to 4x
