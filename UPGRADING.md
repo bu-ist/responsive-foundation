@@ -28,18 +28,21 @@ If you've done this once already, you can move on to the next step!
 
 ### Install updated packages
 
-`cd` to your project folder, and run the following commands to install the
-latest version of the components you need from Responsive Foundation. Most
-likely, this is `burf-base` and `burf-theme`. [See recommended configurations here.](https://github.com/bu-ist/responsive-foundation#install-and-go)
-
-`npm install @bu-ist/burf-base@latest @bu-ist/burf-theme@latest --save-dev`
-
 #### Boston University IS&T and Interactive Design themes only
 
 This release separated out BU-specific styles so that we could open source everything
-else. Run the following command to install the BU-specific stuff as well:
+else. `cd` to your project folder, and run the following command to install everything 
+you need, including the BU-specific stuff:
 
 `npm install @bu-ist/burf-customizations@latest --save-dev`
+
+#### All other themes and projects
+
+`cd` to your project folder, and run the following commands to install the
+latest version of the components you need from Responsive Foundation. Most
+likely, this is `burf-theme`. [See recommended configurations here.](https://github.com/bu-ist/responsive-foundation#install-and-go)
+
+`npm install @bu-ist/burf-theme@latest --save-dev`
 
 ### Update Gruntfile.js
 
