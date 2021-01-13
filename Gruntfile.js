@@ -5,13 +5,6 @@ const sass = require( 'node-sass' );
 // Set up a versioned folder for SassDoc
 const pkg = require( './package.json' );
 
-// Get current versions of each package inside this repo
-
-const pkgBase = require( './burf-base/package.json' );
-const pkgCustomizations = require( './burf-customizations/package.json' );
-const pkgTheme = require( './burf-theme/package.json' );
-const pkgTools = require( './burf-tools/package.json' );
-
 module.exports = ( grunt ) => {
 	const docsVersionFilePath = `docs/${ pkg.version }`;
 	const kssDocsFilePath = docsVersionFilePath + '/kss-assets/docs.css';
@@ -24,6 +17,8 @@ module.exports = ( grunt ) => {
 	// Configure Grunt.
 	grunt.initConfig( {
 		pkg: grunt.file.readJSON( 'package.json' ),
+		kssDocsFilePath: kssDocsFilePath, 
+		kssDocsCustomCSSPath: kssDocsCustomCSSPath, 
 		babel: {
 			options: {
 				cwd: 'js-dev',
@@ -33,9 +28,9 @@ module.exports = ( grunt ) => {
 				files: [
 					{
 						expand: true, // Enable dynamic expansion.
-						cwd: 'js-dev/modules/', // Src matches are relative to this path.
+						cwd: 'burf-theme/js-dev/modules/', // Src matches are relative to this path.
 						src: [ '*.js' ], // Actual pattern(s) to match.
-						dest: 'js-dev/dist/', // Destination path prefix.
+						dest: 'burf-theme/js-dev/dist/', // Destination path prefix.
 					},
 				],
 			},
@@ -52,15 +47,15 @@ module.exports = ( grunt ) => {
 				files: [
 					{
 						expand: true, // Enable dynamic expansion.
-						cwd: 'js-dev/', // Src matches are relative to this path.
+						cwd: 'burf-theme/js-dev/', // Src matches are relative to this path.
 						src: [ '*.js' ], // Actual pattern(s) to match.
-						dest: 'js/', // Destination path prefix.
+						dest: 'burf-theme/js/', // Destination path prefix.
 					},
 				],
 			},
 		},
 		clean: {
-			js: [ 'js/**/*.js', 'js/**/*.map' ],
+			js: [ 'burf-theme/js/**/*.js', 'burf-theme/js/**/*.map' ],
 		},
 		uglify: {
 			options: {
@@ -71,9 +66,9 @@ module.exports = ( grunt ) => {
 					{
 						// Note: Overwrites the un-uglified version.
 						expand: true, // Enable dynamic expansion.
-						cwd: 'js/', // Src matches are relative to this path.
+						cwd: 'burf-theme/js/', // Src matches are relative to this path.
 						src: [ '*.js' ], // Actual pattern(s) to match.
-						dest: 'js/', // Destination path prefix.
+						dest: 'burf-theme/js/', // Destination path prefix.
 					},
 				],
 			},
@@ -117,15 +112,16 @@ module.exports = ( grunt ) => {
 			options: {
 				implementation: sass,
 				sourceMap: true,
+				includePaths: [ 'burf-base', 'burf-theme', 'burf-customizations' ]
 			},
 			docs: {
 				options: {
 					style: 'compressed',
 				},
 				files: {
-					'docs/css/docs.css': '_docs/css-dev/docs.scss',
-					kssDocsFilePath: '_docs/css-dev/docs.scss',
-					kssDocsCustomCSSPath: '_docs/css-dev/kss-custom.scss'
+					'docs/css/docs.css' : '_docs/css-dev/docs.scss',
+					'<%= kssDocsFilePath %>' : '_docs/css-dev/docs.scss',
+					'<%= kssDocsCustomCSSPath %>' : '_docs/css-dev/kss-custom.scss'
 				},
 			},
 			build: {
@@ -133,8 +129,9 @@ module.exports = ( grunt ) => {
 					style: 'expanded',
 				},
 				files: {
-					'css/burf-base.css': 'css-dev/burf-base.scss',
-					'css/burf-theme.css': 'css-dev/burf-theme.scss',
+					'burf-base/dist/burf-base.css': 'burf-base/burf-base.scss',
+					'burf-base/dist/burf-theme.css': 'burf-theme/burf-theme.scss',
+					'burf-customizations/dist/burf-customizations.css': 'burf-customizations/burf-customizations.scss',
 				},
 			},
 		},
@@ -164,7 +161,7 @@ module.exports = ( grunt ) => {
 				tasks: [ 'copy' ],
 			},
 			scripts: {
-				files: [ 'js-dev/**/*.js' ],
+				files: [ 'burf-theme/js-dev/**/*.js' ],
 				tasks: [ 'js', 'concat' ],
 			},
 			styles: {

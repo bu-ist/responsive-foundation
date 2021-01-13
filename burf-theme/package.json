@@ -27,6 +27,7 @@
   "publishConfig": {
     "registry":"https://npm.pkg.github.com/@bu-ist"
   },
+  "main": "js/theme.js",
   "repository" : {
     "type" : "git",
     "url": "ssh://git@github.com:bu-ist/responsive-foundation.git",
