@@ -196,7 +196,10 @@ module.exports = ( grunt ) => {
 			},
 			dist: {
 				src: [
-					'css-dev'
+					'burf-base',
+					'burf-theme',
+					'burf-tools',
+					'burf-customizations'
 				],
 				dest: docsVersionFilePath
 			}
@@ -254,8 +257,8 @@ module.exports = ( grunt ) => {
 	grunt.loadNpmTasks( 'grunt-sass' );
 	grunt.loadNpmTasks( 'grunt-kss' );
 	grunt.loadNpmTasks( 'grunt-version' );
-	//grunt.registerTask( 'build', [ 'js', 'kss', 'copy' ] );
-	grunt.registerTask( 'build', [ 'js', 'copy' ] );
+	grunt.registerTask( 'build', [ 'js', 'kss', 'copy' ] );
+	//grunt.registerTask( 'build', [ 'js', 'copy' ] );
 	grunt.registerTask( 'deploy', [ 'build', 'gh-pages' ] );
 	grunt.registerTask( 'js', [ 'clean:js', 'babel', 'browserify', 'uglify' ] );
 	grunt.registerTask( 'serve', [ 'build', 'browserSync:current', 'watch' ] );
