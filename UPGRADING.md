@@ -26,32 +26,37 @@ Github Packages. You'll do this in two steps:
 
 If you've done this once already, you can move on to the next step!
 
-### Install updated packages
-
 #### Boston University IS&T and Interactive Design themes only
 
 This release separated out BU-specific styles so that we could open source everything
-else. `cd` to your project folder, and run the following command to install everything 
-you need, including the BU-specific stuff:
+else. Run the following command to install everything you need, including BU-specific stuff:
 
 `npm install @bu-ist/burf-customizations@latest --save-dev`
 
-#### All other themes and projects
+### All other projects
 
 `cd` to your project folder, and run the following commands to install the
 latest version of the components you need from Responsive Foundation. Most
-likely, this is `burf-theme`. [See recommended configurations here.](https://github.com/bu-ist/responsive-foundation#install-and-go)
+likely, this is `burf-base` and `burf-theme`. [See recommended configurations here.](https://github.com/bu-ist/responsive-foundation#install-and-go)
 
-`npm install @bu-ist/burf-theme@latest --save-dev`
+`npm install @bu-ist/burf-base@latest @bu-ist/burf-theme@latest --save-dev`
 
 ### Update Gruntfile.js
 
 Do a find and replace in the `Gruntfile.js` file for the following text:
 
-| Text to find                                 | Replace with                         |
-| -------------------------------------------- | ------------------------------------ |
-| `node_modules/responsive-foundation/css-dev` | `node_modules/@bu-ist` |
+| Text to find                                 | Replace with                              |
+| -------------------------------------------- | ----------------------------------------- |
+| `node_modules/responsive-foundation/css-dev` | `node_modules/@bu-ist`                    |
+| `node_modules/responsive-foundation/js-dev/` | `node_modules/@bu-ist/burf-theme/js-dev/` |
 
+### Update script.js
+
+Do a find and replace in the `js-dev/script.js` file for the following text:
+
+| Text to find                                 | Replace with                              |
+| -------------------------------------------- | ----------------------------------------- |
+| `responsive-foundation/js-dev/dist/toggle`   | `@bu-ist/burf-theme/js-dev/dist/toggle`   |
 
 ### Update import paths
 

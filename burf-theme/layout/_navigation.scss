@@ -33,6 +33,18 @@ $border-masthead:                          $border !default;
 
 $color-masthead-bg:                        $color-grayscale-f !default;
 
+// Masthead Height
+//
+// The height of the masthead area.
+//
+// Styleguide WordPress.Masthead.Height
+//
+// Access: Public
+//
+// Since: 5.0.0
+
+$height-masthead:                          120px !default;
+
 // Primary Navigation
 // -----------------------------------------------------------------
 
@@ -897,7 +909,7 @@ $nav-toggle-border: 4px !default;
 			line-height: 1;
 			position: absolute;
 			right: $padding;
-			top: ( $height-brand / 2 ) - ( $font-size-utility-nav / 2 );
+			top: ( $height-masthead / 2 ) - ( $font-size-utility-nav / 2 );
 		}
 	}
 }
@@ -999,7 +1011,7 @@ $left-nav-desktop:                    $nav-desktop !default;
 }
 
 .l-side-nav .search-toggle {
-	//top: $height-brand + 30px;
+	//top: $height-masthead + 30px;
 	color: $color-grayscale-f;
 	position: absolute;
 	right: 0;
@@ -1133,7 +1145,7 @@ $top-nav-desktop:                    $nav-desktop !default;
 			line-height: 1;
 			position: absolute;
 			right: $padding;
-			top: ( ( $height-brand / 2 ) - ( $font-size-utility-nav / 2 ) ) + 60;
+			top: ( ( $height-masthead / 2 ) - ( $font-size-utility-nav / 2 ) ) + 60;
 		}
 	}
 
@@ -1207,7 +1219,7 @@ $no-nav-desktop:                    $nav-desktop !default;
 				display: block;
 				position: absolute;
 				right: 80px;
-				top: ( $height-brand / 2 ) - ( $font-size-utility-nav / 2 ) - 5;
+				top: ( $height-masthead / 2 ) - ( $font-size-utility-nav / 2 ) - 5;
 			}
 		}
 	}

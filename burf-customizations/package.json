@@ -46,6 +46,6 @@
   },
   "dependencies": {
     "@bu-ist/burf-base": "^5.0.0-alpha.3",
-    "@bu-ist/burf-theme": "^5.0.0-alpha.3"
+    "@bu-ist/burf-theme": "^5.0.0-alpha.4"
   }
 }

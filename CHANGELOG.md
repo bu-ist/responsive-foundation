@@ -29,6 +29,9 @@
     - `bulp/bulp-base`;
 * Migrates the following partials from `burf-base` to `burf-customizations`:
     - `fonts`;
+* Migrates the following folders from `responsive-foundation` to `burf-theme`:
+    - `js`;
+    - `js-dev`;
 
 ## 4.0.1
 
