@@ -21,16 +21,14 @@ module.exports = ( grunt ) => {
 		kssDocsCustomCSSPath: kssDocsCustomCSSPath, 
 		babel: {
 			options: {
-				cwd: 'js-dev',
+				cwd: 'burf-theme/js-dev/modules/',
 				sourceMap: false,
+				presets: ['@babel/preset-env', "@wordpress/default"] // A temporary solution because the repo can't find babelrc.
 			},
 			dist: {
 				files: [
 					{
-						expand: true, // Enable dynamic expansion.
-						cwd: 'burf-theme/js-dev/modules/', // Src matches are relative to this path.
-						src: [ '*.js' ], // Actual pattern(s) to match.
-						dest: 'burf-theme/js-dev/dist/', // Destination path prefix.
+						'burf-theme/js-dev/dist/toggle.js': 'burf-theme/js-dev/modules/toggle.js'
 					},
 				],
 			},
@@ -40,7 +38,7 @@ module.exports = ( grunt ) => {
 				watch: true,
 				browserifyOptions: {
 					debug: false,
-					transform: [ [ 'babelify' ] ],
+					transform: [['babelify', { "presets": ["@babel/preset-env", "@wordpress/default"] }]]
 				},
 			},
 			dist: {
