@@ -50,13 +50,13 @@ Do a find and replace in the `Gruntfile.js` file for the following text:
 | `node_modules/responsive-foundation/css-dev` | `node_modules/@bu-ist`                    |
 | `node_modules/responsive-foundation/js-dev/` | `node_modules/@bu-ist/burf-theme/js-dev/` |
 
-### Update script.js
+### Update scripts
 
-Do a find and replace in the `js-dev/script.js` file for the following text:
+Do a find and replace in the `js-dev` folder for the following text:
 
-| Text to find                                 | Replace with                              |
-| -------------------------------------------- | ----------------------------------------- |
-| `responsive-foundation/js-dev/dist/toggle`   | `@bu-ist/burf-theme/js-dev/dist/toggle`   |
+| Text to find                      | Replace with                               |
+| --------------------------------- | ------------------------------------------ |
+| `responsive-foundation/`          | `@bu-ist/burf-theme/`                      |
 
 ### Update import paths
 
@@ -73,12 +73,14 @@ Do a find and replace in the `css-dev` folder for the following text:
 | `burf-theme/layout/branding`      | `burf-customizations/layout/branding`      |
 | `burf-theme/profiles`             | `burf-customizations/profiles`             |
 
+### Update import order
 
-Do a find and replace in the `js-dev` folder for the following text:
+In `css-dev/style.scss`, reverse the order of the navigation and branding imports,
+like so:
 
-| Text to find                      | Replace with                               |
-| --------------------------------- | ------------------------------------------ |
-| `responsive-foundation/`          | `@bu-ist/burf-theme/`                      |
+| Old                                                     | New                                                     |
+| ------------------------------------------------------- | ------------------------------------------------------- |
+| `@import "layout/branding" @import "layout/navigation"` | `@import "layout/navigation" @import "layout/branding"` |
 
 More details on the exact changes are here: https://github.com/bu-ist/responsive-foundation/releases/tag/5.0.0
 

@@ -110,8 +110,4 @@ After each major release, one version is maintained until everyone can be upgrad
 
 ## Upgrading to 5.0.0
 
-Version `5.0.0` is a major update that will require you to reconfigure some of your settings in order for your builds to run correctly. Here's what you'll need to do:
-
-- `css-dev` is now split into `burf-base`, `burf-theme`, and `burf-tools` folders. Be sure to update your `includePaths` in your Sass compilation settings.
-- All pacakges are now scoped to `@bu-ist`. In your settings, you may have referenced `responsive-foundation` inside the `node_modules` folder. You'll now find all packages inside of `@bu-ist`.
-- `tools-cgb` has been renamed to `tools-webpack` to better describe the type of build process that set of tools is compatible with.
+Version `5.0.0` is a major update that will require you to reconfigure some of your settings in order for your builds to run correctly. Head to [UPGRADING.md](/UPGRADING.md) to find out what you'll need to do.
