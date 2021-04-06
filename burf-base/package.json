@@ -1,5 +1,5 @@
 {
-  "name": "@bu-ist/burf-base",
+  "name": "@bostonuniversity/burf-base",
   "version": "5.0.0-alpha.5",
   "homepage": "https://bu-ist.github.io/responsive-foundation/",
   "description": "A sensible boilerplate and library of styles for responsive web design, based on the best ideas from Foundation and Bootstrap.",
@@ -24,9 +24,6 @@
     "bootstrap",
     "framework"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@bu-ist"
-  },
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:bu-ist/responsive-foundation.git",
