@@ -49,6 +49,10 @@
 		max-width: $container-lg;
 		grid-gap: $padding * 2;
 	}
+
+	@include breakpoint( $xl ) {
+		max-width: $container-xl;
+	}
 }
 
 // Base styles for containers that hold grid elements.
