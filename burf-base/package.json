@@ -26,7 +26,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com:bu-ist/responsive-foundation.git",
+    "url": "https://github.com/bu-ist/responsive-foundation.git",
     "directory": "burf-base"
   },
   "browserslist": [
