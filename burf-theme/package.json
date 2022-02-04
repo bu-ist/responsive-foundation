@@ -27,7 +27,7 @@
   "main": "js/theme.js",
   "repository" : {
     "type" : "git",
-    "url": "ssh://git@github.com:bu-ist/responsive-foundation.git",
+    "url": "https://github.com:bu-ist/responsive-foundation.git",
     "directory": "burf-theme"
   },
   "browserslist": [
@@ -44,6 +44,6 @@
     ]
   },
   "dependencies": {
-    "@bu-ist/burf-base": "^5.0.0-alpha.5"
+    "@bostonuniversity/burf-base": "^5.0.0-alpha.5"
   }
 }
