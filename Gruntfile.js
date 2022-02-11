@@ -205,9 +205,21 @@ module.exports = ( grunt ) => {
 			}
 		},
 		version: {
+			options: {
+				pkg: pkg,
+			},
+			bump: {
+				options: {
+			        prefix: 'version\\"\\:\\ \\"'
+			    },
+				src: [
+					'burf-customizations/package.json',
+					'burf-theme/package.json',
+					'burf-tools/package.json'
+				]
+			},
 			base: {
 				options: {
-					pkg: 'burf-base/package.json',
 			        prefix: 'burf\\-base\\"\\:\\ \\"\\^'
 			    },
 				src: [
@@ -219,14 +231,12 @@ module.exports = ( grunt ) => {
 			},
 			customizations: {
 				options: {
-					pkg: 'burf-customizations/package.json',
 			        prefix: 'burf\\-customizations\\"\\:\\ \\"\\^'
 			    },
 				src: ['package.json']
 			},
 			theme: {
 				options: {
-					pkg: 'burf-theme/package.json',
 			        prefix: 'burf\\-theme\\"\\:\\ \\"\\^'
 			    },
 				src: [
@@ -236,7 +246,6 @@ module.exports = ( grunt ) => {
 			},
 			tools: {
 				options: {
-					pkg: 'burf-tools/package.json',
 			        prefix: 'burf\\-tools\\"\\:\\ \\"\\^'
 			    },
 				src: ['package.json']
