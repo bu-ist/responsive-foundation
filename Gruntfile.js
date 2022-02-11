@@ -213,6 +213,7 @@ module.exports = ( grunt ) => {
 			        prefix: 'version\\"\\:\\ \\"'
 			    },
 				src: [
+					'burf-base/package.json',
 					'burf-customizations/package.json',
 					'burf-theme/package.json',
 					'burf-tools/package.json'
