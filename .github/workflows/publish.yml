@@ -2,10 +2,6 @@ name: Publish all packages to npmjs
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      # Temporarily add this branch to test the workflow
-      - "update-publish-workflow"
   release:
     types:
       - published
