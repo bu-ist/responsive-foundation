@@ -23,24 +23,6 @@ Note that this repository does not include any production-ready assets (e.g. min
 We recommend installing Foundation using Node Package Manager (npm). You can learn more about how to install npm
 here: https://www.npmjs.com/get-npm
 
-### Generate your access token
-
-This repository uses Github Packages to manage packages. To install it, you'll need to create a [Github Personal Access Token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token) with the `read:packages` scope only. This only needs to happen once!
-
-### Add your access token to the global NPM settings (npmrc)
-
-After you've generated your personal access token, you can update your global `.npmrc` so that anytime you want to use a package from Responsive Foundation, you can just install and go. You'll only need to do this once. In a new Terminal window, run the following commands, replacing `YOURTOKENHERE` with the Personal Access Token you generated above:
-
-`npm config set "@bu-ist:registry" https://npm.pkg.github.com`
-
-Then run:
-
-`npm config set "//npm.pkg.github.com/:_authToken" YOURTOKENHERE`
-
-**If you're working on an existing theme or plugin that's been upgraded to Foundation 5.0, stop here!** You don't need to do anything else. Hop back over to your project and get working!
-
-Otherwise, instructions for choosing the best package for your project are below.
-
 ## Choose your package and go!
 
 Once you're set up, you can install Foundation in your project directory like so (be sure to `cd` first!). You can choose from any of the following setups depending on your project's needs:
