@@ -23,42 +23,24 @@ Note that this repository does not include any production-ready assets (e.g. min
 We recommend installing Foundation using Node Package Manager (npm). You can learn more about how to install npm
 here: https://www.npmjs.com/get-npm
 
-### Generate your access token
-
-This repository uses Github Packages to manage packages. To install it, you'll need to create a [Github Personal Access Token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token) with the `read:packages` scope only. This only needs to happen once!
-
-### Add your access token to the global NPM settings (npmrc)
-
-After you've generated your personal access token, you can update your global `.npmrc` so that anytime you want to use a package from Responsive Foundation, you can just install and go. You'll only need to do this once. In a new Terminal window, run the following commands, replacing `YOURTOKENHERE` with the Personal Access Token you generated above:
-
-`npm config set "@bu-ist:registry" https://npm.pkg.github.com`
-
-Then run:
-
-`npm config set "//npm.pkg.github.com/:_authToken" YOURTOKENHERE`
-
-**If you're working on an existing theme or plugin that's been upgraded to Foundation 5.0, stop here!** You don't need to do anything else. Hop back over to your project and get working!
-
-Otherwise, instructions for choosing the best package for your project are below.
-
 ## Choose your package and go!
 
 Once you're set up, you can install Foundation in your project directory like so (be sure to `cd` first!). You can choose from any of the following setups depending on your project's needs:
 
 - **WordPress Themes**
 	- We recommend using  the `burf-theme` package when working with WordPress themes.
-	- To install, run `npm install --save-dev @bu-ist/burf-theme@latest`.
+	- To install, run `npm install --save-dev @bostonuniversity/burf-theme@latest`.
 	- **Boston University themes only:** See below for instructions on how to install BU-specific styles.
 - **Websites Outside of WordPress** 
 	- If you are building a website outside of WordPress and don't already have your own CSS reset and basic styles for HTML elements, `burf-base` is probably the best match for you.
-	- To install, run `npm install --save-dev @bu-ist/burf-base@latest`.
+	- To install, run `npm install --save-dev @bostonuniversity/burf-base@latest`.
 - **Plugins and Code Inside Existing Websites** 
 	- If you already have a CSS reset, or plan to use this code in an environment where you only want the absolute minimum amount of CSS to print (such as a WordPress plugin or code for a single page inside of an existing website), `burf-tools` gives you access to all of the mixins, extends, and functionality of Responsive Foundation without any of the fluff whatsoever.
-	- To install, run `npm install --save-dev @bu-ist/burf-tools@latest`.
+	- To install, run `npm install --save-dev @bostonuniversity/burf-tools@latest`.
 - **Official Boston University WordPress Themes** 
 	- Official Boston University websites which reside on our servers should also install `burf-customizations`. These additional styles are meant to work with our customized WordPress environment, including our university-specific plugins.
 	- Please note that only employees of Boston University Interactive Design or IS&T are authorized to use or grant access to this package. 
-	- To install everything you need for an official Boston University website, run `npm install --save-dev @bu-ist/burf-customizations@latest`.
+	- To install everything you need for an official Boston University website, run `npm install --save-dev @bostonuniversity/burf-customizations@latest`.
 
 ## Sass Usage
 
