@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+* Officially publishes to npm under the @bostonuniversity account!
+* Removes support for the tripadvisor icon in FontAwesome
+
 ## 5.0.0-alpha
 
 * Fixes #235
