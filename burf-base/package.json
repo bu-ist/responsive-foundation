@@ -1,6 +1,6 @@
 {
   "name": "@bostonuniversity/burf-base",
-  "version": "5.0.0-alpha.5",
+  "version": "5.0.0-alpha.6",
   "homepage": "https://bu-ist.github.io/responsive-foundation/",
   "description": "A sensible boilerplate and library of styles for responsive web design, based on the best ideas from Foundation and Bootstrap.",
   "authors": [

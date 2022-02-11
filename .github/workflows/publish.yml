@@ -1,160 +1,26 @@
-name: Publish Packages
+name: Publish all packages to npmjs
+
 on:
-  release:
-    types: [created]
   workflow_dispatch:
-jobs:  
-  getPackages:
-    runs-on: ubuntu-latest
-    outputs:
-      burf-base-version: ${{ fromJSON(steps.get_latest_package.outputs.data).repository.packages.nodes[0].latestVersion.version }}
-      burf-theme-version: ${{ fromJSON(steps.get_latest_package.outputs.data).repository.packages.nodes[1].latestVersion.version }}
-      burf-tools-version: ${{ fromJSON(steps.get_latest_package.outputs.data).repository.packages.nodes[2].latestVersion.version }}
-      burf-customizations-version: ${{ fromJSON(steps.get_latest_package.outputs.data).repository.packages.nodes[3].latestVersion.version }}
-    steps:
-      - uses: octokit/graphql-action@v2.x
-        id: get_latest_package
-        with:
-          query: |
-            query packages($owner:String!,$repo:String!) {
-              repository(owner:$owner,name:$repo) {
-                packages(first: 5, names: ["burf-base", "burf-theme", "burf-tools", "burf-customizations"]) {
-                  nodes {
-                    name
-                    latestVersion {
-                      version
-                    }
-                  }
-                }
-              }
-            }
-          owner: 'bu-ist'
-          repo: ${{ github.event.repository.name }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
-  getReleases:
-    runs-on: ubuntu-latest
-    outputs:
-      burf-base-version: ${{ fromJSON(steps.burf-base-release.outputs.content).version }}
-      burf-theme-version: ${{ fromJSON(steps.burf-theme-release.outputs.content).version }}
-      burf-tools-version: ${{ fromJSON(steps.burf-tools-release.outputs.content).version }}
-      burf-customizations-version: ${{ fromJSON(steps.burf-customizations-release.outputs.content).version }}
-    steps:
-      - uses: actions/checkout@v2
-      - name: Read burf-base package.json
-        id: burf-base-release
-        uses: juliangruber/read-file-action@v1
-        with:
-          path: ./burf-base/package.json
-      - uses: actions/checkout@v2
-      - name: Read burf-theme package.json
-        id: burf-theme-release
-        uses: juliangruber/read-file-action@v1
-        with:
-          path: ./burf-theme/package.json
-      - name: Read burf-tools package.json
-        id: burf-tools-release
-        uses: juliangruber/read-file-action@v1
-        with:
-          path: ./burf-tools/package.json
-      - name: Read burf-customizations package.json
-        id: burf-customizations-release
-        uses: juliangruber/read-file-action@v1
-        with:
-          path: ./burf-customizations/package.json
-  publishBase:
-    needs: [ getPackages, getReleases ]
+  release:
+    types:
+      - published
+
+jobs:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Version
-        run: |
-          echo 'Current package version for burf-base: ${{ needs.getPackages.outputs.burf-base-version }}'
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@bu-ist'   
-      - name: Publish burf-base
-        if: ${{ needs.getReleases.outputs.burf-base-version != needs.getPackages.outputs.burf-base-version }}
-        run: |
-          echo "New version of burf-base detected: ${{ needs.getReleases.outputs.burf-base-version }}. Old version: ${{ needs.getPackages.outputs.burf-base-version }}. Publishing now..."
-          npm install burf-base --production
-          npm publish burf-base
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Skip publishing burf-base
-        if: ${{ needs.getReleases.outputs.burf-base-version == needs.getPackages.outputs.burf-base-version }}
-        run: 'echo "::warning file=package.json,line=3::No new version of burf-base detected. Continuing on..."'
-  publishTheme:
-    needs: [ getPackages, getReleases, publishBase ]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print Version
-        run: |
-          echo 'Current package version for burf-theme: ${{ needs.getPackages.outputs.burf-theme-version }}'
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@bu-ist'  
-      - name: Publish burf-theme
-        if: ${{ needs.getReleases.outputs.burf-theme-version != needs.getPackages.outputs.burf-theme-version }}
-        run: |
-          echo "New version of burf-theme detected: ${{ needs.getReleases.outputs.burf-theme-version }}. Old version: ${{ needs.getPackages.outputs.burf-theme-version }}. Publishing now..."
-          npm install burf-theme --production
-          npm publish burf-theme
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Skip publishing burf-theme
-        if: ${{ needs.getReleases.outputs.burf-theme-version == needs.getPackages.outputs.burf-theme-version }}
-        run: 'echo "::warning file=package.json,line=3::No new version of burf-theme detected. Continuing on..."'
-  publishTools:
-    needs: [ getPackages, getReleases, publishBase ]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print Version
-        run: |
-          echo 'Current package version for burf-tools: ${{ needs.getPackages.outputs.burf-tools-version }}'
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@bu-ist'  
-      - name: Publish burf-tools
-        if: ${{ needs.getReleases.outputs.burf-tools-version != needs.getPackages.outputs.burf-tools-version }}
-        run: |
-          echo "New version of burf-tools detected: ${{ needs.getReleases.outputs.burf-tools-version }}. Old version: ${{ needs.getPackages.outputs.burf-tools-version }}. Publishing now..."
-          npm install burf-tools --production
-          npm publish burf-tools
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Skip publishing burf-tools
-        if: ${{ needs.getReleases.outputs.burf-tools-version == needs.getPackages.outputs.burf-tools-version }}
-        run: 'echo "::warning file=package.json,line=3::No new version of burf-tools detected.'
-  publishCustomizations:
-    needs: [ getPackages, getReleases, publishBase, publishTheme ]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print Version
-        run: |
-          echo 'Current package version for burf-customizations: ${{ needs.getPackages.outputs.burf-customizations-version }}'
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@bu-ist'  
-      - name: Publish burf-customizations
-        if: ${{ needs.getReleases.outputs.burf-customizations-version != needs.getPackages.outputs.burf-customizations-version }}
-        run: |
-          echo "New version of burf-customizations detected: ${{ needs.getReleases.outputs.burf-customizations-version }}. Old version: ${{ needs.getPackages.outputs.burf-customizations-version }}. Publishing now..."
-          npm install burf-customizations --production
-          npm publish burf-customizations
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Skip publishing burf-customizations
-        if: ${{ needs.getReleases.outputs.burf-customizations-version == needs.getPackages.outputs.burf-customizations-version }}
-        run: 'echo "::warning file=package.json,line=3::No new version of burf-customizations detected.'
+    - uses: actions/checkout@v2
+    - uses: author/action-publish@stable
+      with:
+        # Optionally specify the directories to scan 
+        # for modules. If this is not specified, the 
+        # root directory is scanned.
+        scan: "./burf-base, ./burf-tools, ./burf-theme, ./burf-customizations"
+        # Optionally force publishing as a public 
+        # module. We don't recommend setting this,
+        # unless you have a very specific use case.
+        force: true
+      env:
+        # Typically an npm token
+        REGISTRY_TOKEN: "${{ secrets.NPM_TOKEN }}"
