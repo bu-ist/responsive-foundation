@@ -20,6 +20,6 @@
     "directory": "burf-tools"
   },
   "dependencies": {
-    "@bostonuniversity/burf-base": "^5.0.0-alpha.7"
+    "@bostonuniversity/burf-base": "^5.0.0-alpha.9"
   }
 }
