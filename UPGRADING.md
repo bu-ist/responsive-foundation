@@ -15,17 +15,6 @@ to remove old versions of Responsive Foundation:
 
 `npm uninstall responsive-foundation --save-dev`
 
-### Configure your development environment for Github Packages
-
-If you haven't already done so at least once on your current computer,
-you will need to configure your development environment to work with
-Github Packages. You'll do this in two steps:
-
-1. [Generate your Personal Access Token](https://github.com/bu-ist/responsive-foundation#generate-your-access-token)
-2. [Add your access token to the global NPM settings (npmrc)](https://github.com/bu-ist/responsive-foundation#add-your-access-token-to-the-global-npm-settings-npmrc)
-
-If you've done this once already, you can move on to the next step!
-
 #### Boston University IS&T and Interactive Design themes only
 
 This release separated out BU-specific styles so that we could open source everything
