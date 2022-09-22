@@ -93,3 +93,6 @@ After each major release, one version is maintained until everyone can be upgrad
 ## Upgrading to 5.0.0
 
 Version `5.0.0` is a major update that will require you to reconfigure some of your settings in order for your builds to run correctly. Head to [UPGRADING.md](/UPGRADING.md) to find out what you'll need to do.
+
+## Contributing
+Follow the instructions in [Framework Development and Release Workflows](https://github.com/bu-ist/responsive-framework/wiki/Framework-Development-and-Release-Workflows) to test your Foundation changes.
