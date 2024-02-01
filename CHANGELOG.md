@@ -1,5 +1,8 @@
 # Changelog
 
+## Unreleased
+- Fix #247 - BU Profiles Post title not centered.
+
 ## 5.0.0-alpha.7
 * Officially publishes to npm under the @bostonuniversity account!
 * Removes support for the tripadvisor icon in FontAwesome
