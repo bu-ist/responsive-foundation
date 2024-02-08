@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 3.2.4
 - 3.2.3 version hotfix: #269 Layout issue for Profiles Advanced View.
 
 ## 3.2.2
