@@ -14,7 +14,8 @@
     "Ashley Kolodziej <kolodz10@bu.edu>",
     "Jon Desroisers <jondes@bu.edu>",
     "Tom Dodson <tdodson@bu.edu>",
-    "Alana Martin <alanam@bu.edu>"
+    "Alana Martin <alanam@bu.edu>",
+    "Dakota Chichester <acketon@bu.edu>"
   ],
   "license": "GPL-3.0-or-later",
   "keywords": [
@@ -25,8 +26,8 @@
     "framework"
   ],
   "main": "js/theme.js",
-  "repository" : {
-    "type" : "git",
+  "repository": {
+    "type": "git",
     "url": "https://github.com:bu-ist/responsive-foundation.git",
     "directory": "burf-theme"
   },
