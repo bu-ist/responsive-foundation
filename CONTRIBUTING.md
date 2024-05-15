@@ -24,28 +24,47 @@ to highlight changes since the previous release, and all version references in
 source files should be bumped to reflect the new version. (Just run `grunt
 version`).
 
+
+### Development Setup
+
+1. Use NVM `nvum use` to switch to the current supported version of Node which is defined in the .nvmrc file.
+2. Run `npm install` to ensure all dependencies are installed.
+3. When working on SASS changes you will need a way to preview those changes in your theme or in Responsive Framework. We previously used NPM Link to create a local symlink between Responsive Foundation's repo on your computer and the theme framework so that Responsive Framework would load SASS partials from your in development local copy of Foundation instead of pulling them down from NPM/Github. NPM Link has changed after Node 16 and is no longer suitable. Instead we've switched to the package `Yalc`. 
+
+New scripts have been added to package.json to watch and monitor for changes and publish those changes to a local Yalc package repository. Then in Responsive Framework you can run the `npx yalc link @bostonuniversity/burf-theme` command to link burf-theme to your Responsive Framework repo. 
+
+To get started with Yalc run the `npm watch` command to watch for any changes in burf-base, burf-theme, burf-customizations, or burf-tools and automatically publish those changes via Yalc to your local package repository. Then you can link those packages in the other repo.
+
+Several Yalc specific scripts are included for triggering different Yalc Publish commands. 
+
 ## Sass
 
-Sass files are separated into two layers.
+Sass files are separated into three layers.
 
 ### Base
 
-Base components live in the [css-dev/burf](css-dev/burf) directory:
+Base components live in the [burf-base](burf-base) directory:
 
-* [Reset](css-dev/burf/_reset.scss)
-* [Responsive Grid](css-dev/burf/_grid.scss)
-* [Fonts](css-dev/burf/_fonts.scss)
-* [Typography](css-dev/burf/_typography.scss)
+* [Responsive Grid](burf-base/grid)
+* [Fonts](burf-base/_fonts.scss)
+* [Typography](burf-base/_typography.scss)
 
-Global mixins utilized by these base components are located in [css-dev/burf/_mixins.scss](css-dev/burf/_mixins.scss).
+Global mixins utilized by these base components are located in [burf-base/_mixins.scss](burf-base/_mixins.scss).
 
 Variables defined in this framework should always be defined using the [!default](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#variable_defaults_)
 flag so that they can be easily overridden.
 
 ### Theme
 
-The theme layer is importable by way of [css-dev/burf-theme.scss](css-dev/burf-theme.scss),
-which imports components from the [css-dev/burf-theme](css-dev/burf-theme) directory.
+The theme layer is importable by way of [burf-theme](burf-theme/burf-theme.scss),
+which imports components from the [burf-theme](burf-theme) directory.
+
+
+### Customizations
+
+The customizations layer for BU sites is importable by way of [burf-customizations](burf-customizations/burf-customizations.scss),
+which imports components from the [burf-customizations](burf-customizations) directory.
+
 
 ## Style Guide
 
