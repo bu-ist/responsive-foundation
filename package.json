@@ -74,7 +74,8 @@
       "patterns": [
         "burf-base",
         "burf-theme",
-        "burf-customizations"
+        "burf-customizations",
+        "burf-tools"
       ],
       "extensions": "js,scss",
       "quiet": false
