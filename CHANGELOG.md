@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+- Updates the build process to remove grunt
+- updates the KSS styleguide build process
+- Adds Yalc to handle local linking of Foundation to the Framework repo (or child-starter) to preview SASS changes
+- Removes old package dependencies
+
+
 ## 5.0.0-alpha.7
 * Officially publishes to npm under the @bostonuniversity account!
 * Removes support for the tripadvisor icon in FontAwesome

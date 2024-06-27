@@ -14,7 +14,8 @@
     "Ashley Kolodziej <kolodz10@bu.edu>",
     "Jon Desroisers <jondes@bu.edu>",
     "Tom Dodson <tdodson@bu.edu>",
-    "Alana Martin <alanam@bu.edu>"
+    "Alana Martin <alanam@bu.edu>",
+    "Dakota Chichester <acketon@bu.edu>"
   ],
   "keywords": [
     "responsive",
@@ -23,8 +24,8 @@
     "bootstrap",
     "framework"
   ],
-  "repository" : {
-    "type" : "git",
+  "repository": {
+    "type": "git",
     "url": "https://github.com:bu-ist/responsive-foundation.git",
     "directory": "burf-customizations"
   },

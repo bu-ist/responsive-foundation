@@ -1,0 +1,23 @@
+{
+    "//": "The source and destination paths are relative to this file.",
+    "source": [
+      "burf-base",
+      "burf-theme",
+      "burf-customizations",
+      "burf-tools"
+    ],
+      
+    "//": "The css and js paths are URLs relative to the generated style guide.",
+    "css": [
+        "kss-assets/css/docs.css"
+    ],
+    "js": [
+    ],
+    "builder": "node_modules/id-kss-builder",
+    "extend": "node_modules/id-kss-builder/extend",
+    "title": "Responsive Foundation",
+    "gitURL": "https://github.com/bu-ist/responsive-foundation/",
+	"gitURLCSSDEV": "https://github.com/bu-ist/responsive-foundation/tree/master/css-dev/",
+	"customCSS": "kss-assets/css/kss-custom.css"
+
+  }
