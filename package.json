@@ -1,6 +1,6 @@
 {
   "name": "responsive-foundation",
-  "version": "5.0.0-alpha.10",
+  "version": "6.0.0",
   "homepage": "https://github.com/bu-ist/responsive-foundation",
   "description": "A front-end framework for developing responsive sites at Boston University.",
   "authors": [
@@ -58,7 +58,7 @@
   "scripts": {
     "kss:startcss": "wp-scripts start _docs/docs.js _docs/kss-custom.js --output-path=docs/$npm_package_version/kss-assets/css --webpack-no-externals",
     "kss:buildcss": "wp-scripts build _docs/docs.js _docs/kss-custom.js --output-path=docs/$npm_package_version/kss-assets/css --webpack-no-externals",
-    "kss:builddocs": "cross-var kss --config kss-config.json --destination docs/$npm_package_version",
+    "kss:builddocs": "cross-var kss --config kss-config.json --title 'Responsive Foundation $npm_package_version'  --destination docs/$npm_package_version",
     "kss:copy": "cross-var copyfiles --flat _docs/**/*.html docs && copyfiles --flat docs/$npm_package_version/kss-assets/css/**.css docs/css",
     "serve": "browser-sync start --config bs-config.js",
     "kss:watch": "npm run kss:builddocs && npm run kss:buildcss && npm run kss:copy && npm run kss:startcss",
