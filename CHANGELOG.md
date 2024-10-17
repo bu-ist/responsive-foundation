@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## Unreleased (target: 6.0)
 - Updates the build process to remove grunt
 - updates the KSS styleguide build process
 - Adds Yalc to handle local linking of Foundation to the Framework repo (or child-starter) to preview SASS changes
