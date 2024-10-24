@@ -31,11 +31,32 @@ version`).
 2. Run `npm install` to ensure all dependencies are installed.
 3. When working on SASS changes you will need a way to preview those changes in your theme or in Responsive Framework. We previously used NPM Link to create a local symlink between Responsive Foundation's repo on your computer and the theme framework so that Responsive Framework would load SASS partials from your in development local copy of Foundation instead of pulling them down from NPM/Github. NPM Link has changed after Node 16 and is no longer suitable. Instead we've switched to the package `Yalc`. 
 
-New scripts have been added to package.json to watch and monitor for changes and publish those changes to a local Yalc package repository. Then in Responsive Framework you can run the `npx yalc link @bostonuniversity/burf-theme` command to link burf-theme to your Responsive Framework repo. 
+New scripts have been added to package.json to watch and monitor for changes and publish those changes to a local Yalc package repository. 
 
-To get started with Yalc run the `npm watch` command to watch for any changes in burf-base, burf-theme, burf-customizations, or burf-tools and automatically publish those changes via Yalc to your local package repository. Then you can link those packages in the other repo.
+#### In Responsive Foundation's terminal: 
+Run `npm run yalc:all` or better use the `npm run yalc:watch` script which will automate the process in Responsive Foundation. What you need to do in Foundation is have yalc publish each npm package you want to work on to the local repository store. So if you are making changes to burf-theme you'll want to ensure that yalc is publishing @bostonuniversity/burf-theme package and doing so every time you make a code change to it. That is where the `watch` script comes in handy as that will watch for changes and automatically publish updates to the package from your local repo files to the yalc local package repository on your machine.
+
+#### In the theme: Responsive Child Starter or Responsive Framework:
+Run `npx yalc link <package-name>`. For example `npx yalc link @bostonuniversity/burf-theme` will link up the burf-tools package to this repo so your
+local changes in burf-tools within Responsive Foundation will show up here in this repo. The normal `npm start` and `npm run build` commands should
+see your local changes to burf-tools and use that code. This will let you test out those code changes in this repo. 
+
+Each package from foundatioin will need to linked up separately as each is published to NPM as a separate package: 
+`npx yalc link @bostonunversity/burf-base`
+`npx yalc link @bostonuniversity/burf-theme`
+`npx yalc link @bostonuniversity/burf-customizations`
+`npx yalc link @bostonuniversity/burf-tools`
+
+
+To get started with Yalc run the `npm run yalc:watch` command to watch for any changes in burf-base, burf-theme, burf-customizations, or burf-tools and automatically publish those changes via Yalc to your local package repository. Then you can link those packages in the other repo.
 
 Several Yalc specific scripts are included for triggering different Yalc Publish commands. 
+
+
+## Documentation: 
+There are several NPM scripts for generating and publishing the documentation for Responsie Foundation. It is built to be version specific and will compile to a docs/version folder path so be sure to make sure the package.json file has the version set correctly for what you are working on.
+
+The `start` and `build` npm commands are your typical build and compile commands that will create the docs. However you'll also probably want to make use of the `npm run kss:serve` command to spin up a local server hosting the docs. The command `npm run kss:deploy` will publish the documentation to Github Pages so be sure you are ready to do that before running it. It will deploy the documentation for the version you are working on but should leave the older documentation alone in their respective folders. You can update the links to the documentation in the `_docs/index.html` page which is deployed as the "homepage" for the Responsive Foundation documentation.
 
 ## Sass
 
