@@ -42,7 +42,7 @@ local changes in burf-tools within Responsive Foundation will show up here in th
 see your local changes to burf-tools and use that code. This will let you test out those code changes in this repo. 
 
 Each package from foundatioin will need to linked up separately as each is published to NPM as a separate package: 
-`npx yalc link @bostonunversity/burf-base`
+`npx yalc link @bostonuniversity/burf-base`
 `npx yalc link @bostonuniversity/burf-theme`
 `npx yalc link @bostonuniversity/burf-customizations`
 `npx yalc link @bostonuniversity/burf-tools`
