@@ -27,7 +27,7 @@ version`).
 
 ### Development Setup
 
-1. Use NVM `nvum use` to switch to the current supported version of Node which is defined in the .nvmrc file.
+1. Use NVM `nvm use` to switch to the current supported version of Node which is defined in the .nvmrc file.
 2. Run `npm install` to ensure all dependencies are installed.
 3. When working on SASS changes you will need a way to preview those changes in your theme or in Responsive Framework. We previously used NPM Link to create a local symlink between Responsive Foundation's repo on your computer and the theme framework so that Responsive Framework would load SASS partials from your in development local copy of Foundation instead of pulling them down from NPM/Github. NPM Link has changed after Node 16 and is no longer suitable. Instead we've switched to the package `Yalc`. 
 
