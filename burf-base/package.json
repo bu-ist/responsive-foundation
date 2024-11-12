@@ -45,9 +45,8 @@
   },
   "main": "js/theme.js",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.1",
-    "mathsass": "^0.10.1",
-    "normalize-scss": "^7.0.1"
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "normalize-scss": "^8.0.0"
   },
   "devDependencies": {
 
