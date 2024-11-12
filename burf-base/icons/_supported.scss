@@ -2,6 +2,7 @@
 // Supported Icons
 // =================================================================
 
+@import 'node_modules/@fortawesome/fontawesome-free/scss/functions';
 @import 'node_modules/@fortawesome/fontawesome-free/scss/variables';
 
 // Supported Icons
@@ -27,7 +28,6 @@ $icons-fontawesome: (
 	500px: $fa-var-500px,
 	accessible-icon: $fa-var-accessible-icon,
 	accusoft: $fa-var-accusoft,
-	acquisitions-incorporated: $fa-var-acquisitions-incorporated,
 	ad: $fa-var-ad,
 	address-book: $fa-var-address-book,
 	address-card: $fa-var-address-card,
@@ -951,7 +951,6 @@ $icons-fontawesome: (
 	pen-square: $fa-var-pen-square,
 	pencil-alt: $fa-var-pencil-alt,
 	pencil-ruler: $fa-var-pencil-ruler,
-	penny-arcade: $fa-var-penny-arcade,
 	people-arrows: $fa-var-people-arrows,
 	people-carry: $fa-var-people-carry,
 	pepper-hot: $fa-var-pepper-hot,
