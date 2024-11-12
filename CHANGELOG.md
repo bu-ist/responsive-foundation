@@ -5,6 +5,8 @@
 - updates the KSS styleguide build process
 - Adds Yalc to handle local linking of Foundation to the Framework repo (or child-starter) to preview SASS changes
 - Removes old package dependencies
+- Update font-awesome and normalize-scss dev dependecies
+- Update math functions for Dart-Sass compatibility
 
 
 ## 5.0.0-alpha.7
