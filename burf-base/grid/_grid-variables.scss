@@ -2,6 +2,8 @@
 // Grid Settings
 // =================================================================
 
+@use "sass:math";
+
 // Choose CSS Grid or floats
 //
 // Whether or not to enable CSS grid sitewide for your theme.
@@ -88,7 +90,7 @@ $grid-number-columns:                      12 !default;
 //
 // Since: 1.2.0
 
-$grid-margin-width:                        ( $margin / $container-lg ) * 100 !default;
+$grid-margin-width:                        math.div( $margin, $container-lg ) * 100 !default;
 
 // Choose which breakpoints to generate grid classes for
 //

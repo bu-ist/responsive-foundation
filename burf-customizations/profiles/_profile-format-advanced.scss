@@ -2,6 +2,8 @@
 // Profile Advanced Format Settings
 // =================================================================
 
+@use "sass:math";
+
 // Columns (Mobile)
 // Controls the number of profiles in a row in the advanced format.
 // Kicks in at the extra small breakpoint.
@@ -52,7 +54,7 @@ $profiles-advanced-cols-md:			3 !default;
 //
 // Since: 2.0.0
 
-$_profile-adv-cols-xs: $grid-number-columns / $profiles-advanced-cols-xs;
+$_profile-adv-cols-xs: math.div( $grid-number-columns, $profiles-advanced-cols-xs );
 
 // A helper variable to determine which grid class to extend
 // for advanced profile items at the `md` breakpoint.
@@ -61,7 +63,7 @@ $_profile-adv-cols-xs: $grid-number-columns / $profiles-advanced-cols-xs;
 //
 // Since: 2.0.0
 
-$_profile-adv-cols-md: $grid-number-columns / $profiles-advanced-cols-md;
+$_profile-adv-cols-md: math.div( $grid-number-columns, $profiles-advanced-cols-md );
 
 // Styles an advanced profile item.
 //

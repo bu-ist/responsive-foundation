@@ -2,6 +2,8 @@
 // Variables
 // =================================================================
 
+@use "sass:math";
+
 // BURF Extras
 //
 // Turns a number of extra classes on or off. This is really only
@@ -537,7 +539,7 @@ $margin:                                    30px !default;
 //
 // Since: 2.0.0
 
-$margin-small:                              $margin / 2 !default;
+$margin-small:                              $margin * 0.5 !default;
 
 // Margin - Large
 //
@@ -579,7 +581,7 @@ $padding:                                   30px !default;
 //
 // Since: 2.0.0
 
-$padding-small:                              $padding / 2 !default;
+$padding-small:                              $padding * 0.5 !default;
 
 // Padding - Large
 //
@@ -652,7 +654,7 @@ $tint-saturation: 15% !default;
 	@if ( $tint-hue == "none" ) {
 		@return $color;
 	} @else {
-		$_amt: $tint-saturation - ( lightness( $color ) / $tint-saturation );
+		$_amt: $tint-saturation -  math.div( lightness( $color ), $tint-saturation ) ;
 
 		@if ( $_amt <= 0 ) {
 			@return $color;

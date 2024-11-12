@@ -2,6 +2,8 @@
 // Typography Tools
 // =================================================================
 
+@use "sass:math";
+
 // Headings
 // -----------------------------------------------------------------
 
@@ -249,7 +251,7 @@ $heading-growth-rate: 3.5 !default;
 // Since: 2.0.0
 
 @function calc-scale ( $min, $max, $steps, $rate ) {
-	@return ( $max - $min ) / pow( $steps, $rate );
+	@return math.div( $max - $min , math.pow( $steps, $rate ) );
 }
 
 // Calculate Relative Size
@@ -286,9 +288,9 @@ $heading-growth-rate: 3.5 !default;
 
 @function calc-size( $step, $rate: 1, $scale: 1, $min: 0, $scaled: false, $base: $font-size-base ) {
 	@if $scaled {
-		@return pow( ( $step ), $rate ) * $scale + $min;
+		@return math.pow( ( $step ), $rate ) * $scale + $min;
 	} @else {
-		@return ( pow( ( $step ), $rate ) * $scale + $min ) / $base;
+		@return math.div( math.pow( ( $step ), $rate ) * $scale + $min , $base );
 	}
 }
 
@@ -396,8 +398,8 @@ $_h: $_depth-headings;
 	$heading-name: $_depth-headings - $_h;
 
 	@if $_h == 0 {
-		$size: $min-size-headings / $font-size-base + em;
-		$size-mobile: $min-size-headings-mobile / $font-size-base + em;
+		$size: math.div( $min-size-headings, $font-size-base ) + em;
+		$size-mobile: math.div( $min-size-headings-mobile, $font-size-base ) + em;
 	} @else {
 		$size: calc-size( $_h + 1, $heading-growth-rate, $_heading-size-scale, $min-size-headings ) + em;
 		$size-mobile: calc-size( $_h + 1, $heading-growth-rate, $_heading-size-scale-mobile, $min-size-headings-mobile ) + em;

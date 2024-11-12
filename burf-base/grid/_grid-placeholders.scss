@@ -2,6 +2,8 @@
 // Grid Styles and Placeholders
 // =================================================================
 
+@use "sass:math";
+
 // Base styles for all wrapper elements.
 //
 // Styleguide Grid.Global Styles.Wrapper Styles
@@ -247,7 +249,7 @@ $grid-widths-margins: ();
 
 @for $i from 0 through $grid-number-columns {
 	// Determine current base width
-	$percentage: ( $i / $grid-number-columns ) * 100;
+	$percentage: math.div( $i, $grid-number-columns ) * 100;
 
 	@if ( $percentage <= 0 ) {
 		$percentage: initial;
@@ -256,7 +258,7 @@ $grid-widths-margins: ();
 	// Create a list of widths for grid-build to use later
 	$grid-widths: append( $grid-widths, $percentage, comma );
 
-	$percentage-margins: ( ( $i / $grid-number-columns ) * 100 ) - $grid-margin-width;
+	$percentage-margins: ( math.div( $i, $grid-number-columns ) * 100 ) - $grid-margin-width;
 
 	@if ( $percentage-margins <= 0 ) {
 		$percentage-margins: initial;

@@ -2,6 +2,8 @@
 // Comments Settings
 // =================================================================
 
+@use "sass:math";
+
 // Comment margin
 //
 // Controls the amount of spacing between comment threads on a post.
@@ -61,7 +63,7 @@ $comment-reply-depth:                      $margin-small !default;
 //
 // Since: 2.0.0
 
-$comment-reply-depth-mobile:               $comment-reply-depth / 3 !default;
+$comment-reply-depth-mobile:               math.div( $comment-reply-depth, 3 ) !default;
 
 // Comment Border
 //
@@ -302,7 +304,7 @@ $border-width-comment-form:                  3px !default;
 	}
 
 	.children & {
-		@media screen and ( max-width: $sm - 1 ) {
+		@media screen and ( max-width: ( $sm - 1 ) ) {
 			border-top: 0; // Prevents borders from stacking on child comments
 		}
 	}

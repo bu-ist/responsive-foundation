@@ -2,6 +2,8 @@
 // Footer Settings
 // =================================================================
 
+@use "sass:math";
+
 // Controls the spacing at the bottom of the footer widget area.
 //
 // Styleguide WordPress.Footer.Footbar Padding
@@ -164,7 +166,7 @@ $number-widgets-footbar: 						 $number-columns !default;
 //
 // Since: 1.0.0
 
-$_footbar-widget-width: $grid-number-columns / $number-widgets-footbar;
+$_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar );
 
 // Controls styling for the footbar container and width of widgets inside.
 // Often used to put a maximum width on the footbar without affecting the background.

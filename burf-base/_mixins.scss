@@ -2,6 +2,8 @@
 // Mixins & Extends
 // =================================================================
 
+@use "sass:math";
+
 // Clears floats on a container.
 // Use when an element contains floated items and
 // isn't getting the correct height because it doesn't
@@ -78,7 +80,7 @@
 	&:before {
 		content: "";
 		display: block;
-		padding-top: ( $height / $width ) * 100%;
+		padding-top:  math.div( $height, $width )  * 100%;
 		width: 100%;
 	}
 
@@ -1233,6 +1235,7 @@
 
 		#{$selector} {
 			-webkit-backface-visibility: hidden; // for Chrome Windows
+			backface-visibility: hidden; // for Chrome Windows
 			background: inherit;
 			content: "";
 			display: block;
@@ -1322,7 +1325,7 @@
 			__keys__: map-keys( $map );
 			__properties__ {
 				@each $key, $value in $map {
-					#{"(" + type-of( $value ) + ") " + $key}: inspect( $value );
+					#{ "(" + type-of( $value ) + ") " + $key }: inspect( $value );
 				}
 			}
 		}
@@ -1433,8 +1436,8 @@ $root-font-size: 16 !default;
 // Since: 3.2.3
 
 
-@function em($pixels, $context: 16) {
-  @return #{$pixels / $context}em;
+@function em( $pixels, $context: 16 ) {
+  @return #{ math.div( $pixels, $context ) }em;
 }
 
 // rem Conversion
@@ -1451,5 +1454,5 @@ $root-font-size: 16 !default;
 // @param integer $root-font-size The html element font-size.
 
 @function rem($pixels, $root-font-size) {
-  @return #{$pixels / $root-font-size}rem;
+  @return #{ math.div( $pixels, $root-font-size ) }rem;
 }
