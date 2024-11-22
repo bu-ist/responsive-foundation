@@ -680,7 +680,7 @@ $nav-toggle-border: 4px !default;
 		left: math.div( $nav-toggle-size, 4 );
 		position: absolute;
 		text-indent: 100px;
-		top: math.div( $nav-toggle-size, ( 2 - 2px ) );
+		top: math.div( $nav-toggle-size, 2 ) - 2px;
 		width: math.div( $nav-toggle-size, 2 );
 
 		&::before,
