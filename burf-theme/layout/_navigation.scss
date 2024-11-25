@@ -5,6 +5,8 @@
 // Masthead and Brand
 // -----------------------------------------------------------------
 
+@use "sass:math";
+
 // Masthead Border
 //
 // The style of border to use on the masthead.
@@ -607,7 +609,7 @@ $nav-toggle-size: 60px !default;
 	background: transparent;
 	color: $color-nav-toggle;
 	float: right;
-	font-size: $nav-toggle-size / 2;
+	font-size: math.div( $nav-toggle-size, 2 );
 	height: $nav-toggle-size;
 	line-height: $nav-toggle-size;
 	margin: 0;
@@ -675,11 +677,11 @@ $nav-toggle-border: 4px !default;
 		cursor: pointer;
 		display: block;
 		height: $nav-toggle-border;
-		left: $nav-toggle-size / 4;
+		left: math.div( $nav-toggle-size, 4 );
 		position: absolute;
 		text-indent: 100px;
-		top: $nav-toggle-size / 2 - 2px;
-		width: $nav-toggle-size / 2;
+		top: math.div( $nav-toggle-size, 2 ) - 2px;
+		width: math.div( $nav-toggle-size, 2 );
 
 		&::before,
 		&::after {
@@ -689,10 +691,10 @@ $nav-toggle-border: 4px !default;
 			cursor: pointer;
 			display: block;
 			height: $nav-toggle-border;
-			left: $nav-toggle-size / 4;
+			left: math.div( $nav-toggle-size, 4 );
 			position: absolute;
-			top: $nav-toggle-size / 2;
-			width: $nav-toggle-size / 2;
+			top: math.div( $nav-toggle-size, 2 );
+			width: math.div( $nav-toggle-size, 2 );
 		}
 
 		&::before {
@@ -909,7 +911,7 @@ $nav-toggle-border: 4px !default;
 			line-height: 1;
 			position: absolute;
 			right: $padding;
-			top: ( $height-masthead / 2 ) - ( $font-size-utility-nav / 2 );
+			top: math.div( $height-masthead, 2 ) - math.div( $font-size-utility-nav, 2 );
 		}
 	}
 }
@@ -1145,7 +1147,7 @@ $top-nav-desktop:                    $nav-desktop !default;
 			line-height: 1;
 			position: absolute;
 			right: $padding;
-			top: ( ( $height-masthead / 2 ) - ( $font-size-utility-nav / 2 ) ) + 60;
+			top: ( math.div( $height-masthead, 2 ) - math.div( $font-size-utility-nav, 2 ) ) + 60;
 		}
 	}
 
@@ -1219,7 +1221,7 @@ $no-nav-desktop:                    $nav-desktop !default;
 				display: block;
 				position: absolute;
 				right: 80px;
-				top: ( $height-masthead / 2 ) - ( $font-size-utility-nav / 2 ) - 5;
+				top: math.div( $height-masthead, 2 ) - math.div( $font-size-utility-nav, 2 ) - 5;
 			}
 		}
 	}
@@ -1372,13 +1374,13 @@ $mega-nav-desktop-layout:                      $md !default;
 
 			@include breakpoint( $mega-nav-show-full-menu ) {
 				border-left: 1px solid currentColor;
-				flex-basis: 100% / $mega-nav-columns;
+				flex-basis: math.div( 100%, $mega-nav-columns );
 				flex-grow: initial;
 				margin-bottom: $margin;
 			}
 
 			@include breakpoint( $mega-nav-desktop-layout ) {
-				flex-basis: 100% / $mega-nav-columns-desktop;
+				flex-basis: math.div( 100%, $mega-nav-columns-desktop );
 			}
 
 			&::after {

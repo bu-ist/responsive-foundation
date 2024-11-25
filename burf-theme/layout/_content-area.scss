@@ -2,6 +2,8 @@
 // Content Area Settings
 // =================================================================
 
+@use "sass:math";
+
 // Set Content Area Columns
 //
 // The number of columns you would like to use in your layout.
@@ -109,7 +111,7 @@ $column-padding-bottom-large-screen:         35px !default;
 //
 // Since: 1.0.0
 
-$_content-width: $grid-number-columns * ( ( $number-columns - 1 ) / $number-columns );
+$_content-width: $grid-number-columns * math.div( ( $number-columns - 1 ), $number-columns );
 
 // A helper variable to figure out the proper width for the sidebar
 // based on the desired number of columns in the design.
@@ -122,7 +124,7 @@ $_content-width: $grid-number-columns * ( ( $number-columns - 1 ) / $number-colu
 //
 // Since: 1.0.0
 
-$_sidebar-width: $grid-number-columns * ( 1 / $number-columns );
+$_sidebar-width: $grid-number-columns * math.div( 1, $number-columns );
 
 // Styles for the content area (formerly styled by article[role=main]).
 // Sits next to the sidebar.

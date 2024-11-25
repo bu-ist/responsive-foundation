@@ -2,6 +2,8 @@
 // Mini Profile Format Settings
 // =================================================================
 
+@use "sass:math";
+
 // Controls the color of the border on the mini profile format
 // in the profiles shortcode.
 //
@@ -31,7 +33,7 @@ $profiles-mini-cols-sm:			2 !default;
 //
 // Since: 2.0.0
 
-$_profile-mini-cols-sm: $grid-number-columns / $profiles-mini-cols-sm;
+$_profile-mini-cols-sm: math.div( $grid-number-columns, $profiles-mini-cols-sm );
 
 // =================================================================
 // Mini Profile Format Styles

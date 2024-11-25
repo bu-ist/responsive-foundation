@@ -2,6 +2,8 @@
 // Grid Mixins
 // =================================================================
 
+@use "sass:math";
+
 // Controls the base styles that get applied to grid items.
 // Not intended for use outside the grid system - use the `col`
 // mixin instead.
@@ -261,7 +263,7 @@
 			// Because CSS Grid factors grid gap values into the total width of
 			// the grid container, if we do not set this to a lower value on very
 			// small devices, content will be cut off on those devices.
-			grid-gap: 300px / $grid-number-columns;
+			grid-gap: math.div( 300px, $grid-number-columns );
 		}
 
 		@if ( $masonry == true ) {
