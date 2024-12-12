@@ -49,7 +49,7 @@ $margin-gallery: 													10px !default;
 	@extend %clearfix;
 	display: flex;
 	flex-wrap: wrap;
-	margin-right: -$margin-gallery;
+	margin-right: -var(--bu-spacing, #{$margin-gallery});
 
 	.gallery-icon {
 		height: 100%;
@@ -78,9 +78,9 @@ $margin-gallery: 													10px !default;
 // Since: 1.4.0
 
 .gallery-item {
-	border-right: $margin-gallery solid transparent;
+	border-right: var(--bu-border-color, #{$margin-gallery}) solid transparent;
 	float: left;
-	margin-bottom: $margin-gallery;
+	margin-bottom: var(--bu-spacing, #{$margin-gallery});
 	overflow: hidden;
 	position: relative;
 	width: 33.33%;
@@ -134,7 +134,7 @@ $margin-gallery: 													10px !default;
 		}
 
 		&::before {
-			color: $color-grayscale-f;
+			color: var(--color-neutral-0, #{$color-grayscale-f});
 			display: block;
 			font-size: 2em;
 			left: 0;
@@ -196,10 +196,10 @@ $margin-gallery: 													10px !default;
 .gallery-caption {
 	@include rgba-color( background-color, $color-gallery-overlay, $color-grayscale-0 );
 	bottom: 0;
-	color: $color-grayscale-f;
+	color: var(--color-neutral-0, #{$color-grayscale-f});
 	display: none;
 	left: 0;
-	margin-right: $margin-gallery;
+	margin-right: var(--bu-spacing, #{$margin-gallery});
 	padding: 1em;
 	position: absolute;
 	width: 100%;
@@ -247,7 +247,7 @@ $margin-gallery: 													10px !default;
 	&::before {
 		@extend %font-size-minimum;
 		content: "Show thumbnails";
-		font-family: $font-family-sans-serif;
+		font-family: var(--bu-text-font, #{$font-family-sans-serif});
 		margin-right: 5px;
 		position: relative;
 		top: -5px;
@@ -259,7 +259,7 @@ $margin-gallery: 													10px !default;
 
 	// Required to override plugin CSS
 	.lg-outer .lg-thumb-outer & {
-		padding: 5px $margin-gallery 0 14px;
+		padding: 5px var(--bu-spacing, #{$margin-gallery}) 0 14px;
 		width: auto;
 	}
 }
@@ -267,7 +267,7 @@ $margin-gallery: 													10px !default;
 .lg-thumb {
 	// Required to override plugin CSS
 	.lg-outer .lg-thumb-outer & {
-		padding: $padding-small 0;
+		padding: var(--bu-spacing, #{$padding-small}) 0;
 	}
 }
 
@@ -279,7 +279,7 @@ $margin-gallery: 													10px !default;
 
 		&.active,
 		&:hover {
-			border: 1px solid $color-grayscale-f;
+			border: 1px solid var(--color-neutral-0, #{$color-grayscale-f});
 			opacity: 1;
 		}
 	}
