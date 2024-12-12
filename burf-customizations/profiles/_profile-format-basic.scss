@@ -27,7 +27,7 @@ $profile-photo-basic-size:                  $profile-photo-default-size;
 // Since: 2.0.0
 
 .profile-format-basic {
-	border-top: $border-profiles;
+	border-top: var(--bu-border, #{$border-profiles});
 }
 
 // Styles a basic profile item.
@@ -39,7 +39,7 @@ $profile-photo-basic-size:                  $profile-photo-default-size;
 // Since: 2.0.0
 
 .profile-item-basic {
-	border-bottom: $border-profiles;
+	border-bottom: var(--bu-border, #{$border-profiles});
 	margin-bottom: 0;
 	min-height: 100px;
 	padding: $padding ( $profile-photo-basic-size + $margin-small ) $padding 0;

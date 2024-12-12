@@ -23,10 +23,10 @@ $border-coursefeed:							 $border !default;
 // Since: 1.0.0
 
 .cf-course {
-	border-top: $border-coursefeed;
+	border-top: var(--bu-border, #{$border-coursefeed});
 	clear: right;
-	margin-top: $margin;
-	padding-top: $padding;
+	margin-top: var(--bu-spacing, #{$margin});
+	padding-top: var(--bu-spacing-half, #{$padding});
 
 	&:first-child {
 		border: 0;
@@ -56,7 +56,7 @@ $border-coursefeed:							 $border !default;
 
 .cf-course-id {
 	display: block;
-	font-family: $font-family-sans-serif;
+	font-family: var(--bu-text-font, #{$font-family-sans-serif});
 	font-size: 0.5em;
 	margin-bottom: 0.5em;
 }
@@ -72,7 +72,7 @@ $border-coursefeed:							 $border !default;
 // Accessibility: AA
 
 .cf-course-id-color {
-	color: $color-grayscale-6;
+	color: var(--bu-label-color, #{$color-grayscale-6});
 }
 
 // Controls the styling for course credits, availability, and prerequisites.
@@ -196,7 +196,7 @@ $border-coursefeed:							 $border !default;
 	overflow: hidden;
 
 	&::before {
-		color: $color-grayscale-5;
+		color: var(--color-neutral-500, #{$color-grayscale-5});
 		display: block;
 		font-size: 65px;
 		height: 25px;
@@ -205,7 +205,7 @@ $border-coursefeed:							 $border !default;
 		width: 90px;
 
 		a:hover & {
-			color: $color-hub;
+			color: var(--bu-color-hub, #{$color-hub});
 		}
 	}
 
@@ -236,7 +236,7 @@ $border-coursefeed:							 $border !default;
 // Since: 2.0.1
 
 .cf-hub-offerings {
-	color: $color-hub;
+	color: var(--bu-color-hub, #{$color-hub});
 	// ! Regardless where this lives, always maintain consistent use of Benton.
 	font-family: "Benton-Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 12px;

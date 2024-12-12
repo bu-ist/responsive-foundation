@@ -53,7 +53,7 @@ $border-collapsible:               $border !default;
 	position: relative;
 
 	& + & {
-		border-top: $border-collapsible;
+		border-top: var(--bu-border, #{$border-collapsible});
 	}
 }
 
@@ -66,11 +66,11 @@ $border-collapsible:               $border !default;
 .bu_collapsible {
 	@extend %icon-plus;
 	margin-bottom: 0;
-	padding-right: $padding;
+	padding-right: var(--bu-spacing-half, #{$padding});
 	position: relative;
 
 	&::before {
-		color: $color-collapsible-icon;
+		color: var(--bu-link-color, #{$color-collapsible-icon});
 		font-size: 16px;
 		margin-top: -10px;
 		position: absolute;
@@ -81,7 +81,7 @@ $border-collapsible:               $border !default;
 	&:hover,
 	&:focus {
 		&::before {
-			color: $color-collapsible-icon-hover;
+			color: var(--bu-link-color--hover, #{$color-collapsible-icon-hover});
 		}
 	}
 

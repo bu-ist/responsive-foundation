@@ -9,7 +9,7 @@
 // Since: 1.0.0
 
 .bu-slideshow-container {
-	margin-bottom: $margin-large;
+	margin-bottom: var(--bu-spacing-double, #{$margin-large});
 	text-align: center;
 	z-index: 1;
 }

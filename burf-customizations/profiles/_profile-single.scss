@@ -105,7 +105,7 @@ $color-profile-info-item:					$color-grayscale-5 !default;
 .label {
 	@extend %font-size-minimum;
 	display: block;
-	font-family: $font-family-sans-serif;
+	font-family: var(--bu-label-font, #{$font-family-sans-serif});
 	font-weight: 700;
 	text-transform: uppercase;
 }
@@ -119,7 +119,7 @@ $color-profile-info-item:					$color-grayscale-5 !default;
 // Since: 2.0.0
 
 .profile-details-label {
-	color: $color-profile-info-label;
+	color: var(--bu-label-color, #{$color-profile-info-label});
 }
 
 // Styles the single profile details list.
@@ -144,8 +144,8 @@ $color-profile-info-item:					$color-grayscale-5 !default;
 // Since: 2.0.0
 
 .profile-details-item {
-	color: $color-profile-info-item;
+	color: var(--bu-color-accent, #{$color-profile-info-item});
 	list-style: none;
-	margin: 0 0 $margin;
+	margin: 0 0 var(--bu-spacing, #{$margin});
 	word-wrap: break-word;
 }

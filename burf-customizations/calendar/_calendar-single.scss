@@ -155,10 +155,10 @@ $color-single-event-label:               $color-grayscale-9 !default;
 // Since: 2.0.0
 
 %single-event-label {
-	color: $color-single-event-label;
+	color: var(--bu-label-color, #{$color-single-event-label});
 	display: block;
-	font-family: $font-family-single-event-label;
-	font-weight: $font-weight-calendar-label;
+	font-family: var(--bu-label-font, #{$font-family-single-event-label});
+	font-weight: var(--font-weight-bold, #{$font-weight-calendar-label});
 	text-transform: uppercase;
 }
 
@@ -207,7 +207,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 // Since: 2.0.0
 
 .single-event-time {
-	color: $color-grayscale-0;
+	color: var(--color-neutral-900, #{$color-grayscale-0});
 	display: block;
 	font-weight: bold;
 }
@@ -220,7 +220,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 // Since: 2.0.0
 
 .single-event-description {
-	margin: $font-margin-base;
+	margin: var(--bu-spacing-half, #{$font-margin-base});
 }
 
 // Handles styling for additional details in the single calendar

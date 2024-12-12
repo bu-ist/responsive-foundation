@@ -40,7 +40,7 @@ $border-profiles:                          $border !default;
 // Since: 2.0.0
 
 .profile-format-default {
-	border-top: $border-profiles;
+	border-top: var(--bu-border, #{$border-profiles});
 }
 
 // Styles a default profile item.
@@ -52,7 +52,7 @@ $border-profiles:                          $border !default;
 // Since: 2.0.0
 
 .profile-item-default {
-	border-bottom: $border-profiles;
+	border-bottom: var(--bu-border, #{$border-profiles});
 	margin-bottom: 0;
 	min-height: 100px;
 	padding: $padding ( $profile-photo-default-size + $margin-small ) $padding 0;
