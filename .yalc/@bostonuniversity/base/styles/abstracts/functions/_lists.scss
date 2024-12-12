@@ -1,0 +1,176 @@
+@use 'sass:math';
+@use 'sass:meta';
+@use 'sass:list';
+
+// Based on https://kittygiraudel.com/2013/08/08/advanced-sass-list-functions/
+
+/**
+ * Table of Contents
+ *
+ * first()
+ * last()
+ * prepend()
+ * slice()
+ * reverse()
+ * next-key()
+ * join-lists()
+ */
+
+/**
+ * @function first
+ *
+ * Returns the first item in a list.
+ * Since 1.0.0
+ *
+ * @param {list} $list - The list to get the first item from
+ *
+ * @return {*} - The first item in the list
+ */
+@function first($list) {
+    @return list.nth($list, 1);
+}
+
+/**
+ * @function last
+ *
+ * Returns the last item in a list.
+ * Since 1.0.0
+ *
+ * @param {list} $list - The list to get the last item from
+ *
+ * @return {*} - The last item in the list
+ */
+@function last($list) {
+    @return list.nth($list, list.length($list));
+}
+
+/**
+ * @function prepend
+ *
+ * By default list.join appends the new list.
+ * This function joins and reverses the order.
+ * Since 1.0.0
+ *
+ * @param {list} $list - The list to prepend to
+ * @param {*} $value - The value to prepend
+ *
+ * @return {list} - The list with the value prepended
+ */
+@function prepend($list, $value) {
+    @return list.join($value, $list);
+}
+
+/**
+ * @function slice
+ *
+ * Returns a slice of a list.
+ * Since 1.0.0
+ *
+ * @param {list} $list - The list to slice
+ * @param {number} $start [1] - The start index
+ * @param {number} $end [length($list)] - The end index
+ *
+ * @return {list} - The sliced list
+ */
+@function slice($list, $start: 1, $end: list.length($list)) {
+    $result: null;
+
+    @if meta.type-of($start) != number or meta.type-of($end) != number {
+        @warn "Either $start or $end are not a number for `slice`.";
+    }
+
+    @else if $start > $end {
+        @warn "The start index has to be lesser than or equals to the end index for `slice`.";
+    }
+
+    @else if $start < 1 or $end < 1 {
+        @warn "List indexes must be non-zero integers for `slice`.";
+    }
+
+    @else if $start > list.length($list) {
+        @warn "List index is #{$start} but list is only #{list.length($list)} item long for `slice`.";
+    }
+
+    @else if $end > list.length($list) {
+        @warn "List index is #{$end} but list is only #{list.length($list)} item long for `slice`.";
+    }
+
+    @else {
+        $result: ();
+
+        @for $i from $start through $end {
+            $result: list.append($result, list.nth($list, $i));
+        }
+    }
+
+    @return $result;
+}
+
+/**
+ * @function reverse
+ *
+ * Reverses a list.
+ * Since 1.0.0
+ *
+ * @param {list} $list - The list to reverse
+ * @param {boolean} $recursive [false] - Whether to reverse the nested list items as well
+ *
+ * @return {list} - The reversed list
+ */
+@function reverse($list, $recursive: false) {
+    $result: ();
+
+    @for $i from list.length($list) * -1 through -1 {
+        @if meta.type-of(list.nth($list, math.abs($i))) == list and $recursive {
+            $result: list.append($result, reverse(list.nth($list, math.abs($i)), $recursive));
+        } @else {
+            $result: list.append($result, list.nth($list, math.abs($i)), $separator: comma);
+        }
+    }
+
+    @return $result;
+}
+
+/**
+ * @function next-key
+ *
+ * Returns the next key in a list.
+ * Since 1.0.0
+ *
+ * @param {*} $current - The current key
+ * @param {list} $list - The list to get the next key from
+ *
+ * @return {*} - The next key in the list
+ */
+@function next-key($current, $list) {
+    $index: index($list, $current);
+
+    @if $index == list.length($list) {
+        @return null;
+    }
+    @if $index == null {
+        @return null;
+    }
+
+    $next: $index + 1;
+
+    @return list.nth($list, $next);
+}
+
+/**
+ * @function join-lists
+ *
+ * Allows multiple lists to be joined together.
+ * Since 1.0.0
+ *
+ * @param {list} $lists... - The lists to join together
+ *
+ * @return {list} - The joined list
+ */
+@function join-lists($lists...) {
+    $output: ();
+    @each $list in $lists {
+        $output: list.join($output, $list);
+    }
+    @return $output;
+}

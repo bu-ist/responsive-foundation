@@ -1,0 +1,95 @@
+@use 'sass:color';
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:math';
+@use 'sass:meta';
+@use 'sass:string';
+
+@use '../functions/math' as math-fn;
+@use '../functions/utitlity' as utils;
+
+/**
+ * Table of Contents
+ *
+ * color-channel()
+ * to-hsl()
+ * to-rgb()
+ * to-hex()
+ */
+
+/**
+ * @function color-channel
+ *
+ * Custom color.channel function that rounds the channel value to a fixed number of decimal places.
+ * @since 1.0.0
+ *
+ * @param {color} $color - The color to extract the channel value from.
+ * @param {string} $channel - The channel to extract the value from.
+ * @param {string} $space - The color space to extract the channel value from.
+ * @param {number} $places [2] - The number of decimal places to round the channel value to.
+ *
+ * @return {number} - The channel value of the color in the specified color space.
+ */
+@function color-channel($color, $channel, $space, $places: 2) {
+   @return math-fn.to-fixed(color.channel($color, $channel, $space), $places);
+}
+
+/**
+ * @function to-hsl
+ *
+ * Converts a color to HSL format.
+ * @since 1.0.0
+ *
+ * @param {color} $color - The color to convert.
+ * @param {boolean} $function [true] - Whether to include the function name in the output.
+ *
+ * @return {string} - The color in HSL format.
+ */
+@function to-hsl($color, $function: true) {
+   $fn: utils.fn-list(hsl, $function);
+
+   @return #{list.nth($fn, 1)}#{color-channel($color, "hue", hsl)} #{color-channel($color, "saturation", hsl)} #{color-channel($color, "lightness", hsl)}#{list.nth($fn, 2)};
+}
+
+/**
+ * @function to-rgb
+ *
+ * Converts a color to RGB format.
+ * @since 1.0.0
+ *
+ * @param {color} $color - The color to convert.
+ * @param {boolean} $function [true] - Whether to include the function name in the output.
+ *
+ * @return {string} - The color in RGB format.
+ */
+@function to-rgb($color, $function: true) {
+   $fn: utils.fn-list(rgb, $function);
+
+   @return #{list.nth($fn, 1)}#{color-channel($color, "red", rgb)} #{color-channel($color, "green", rgb)} #{color-channel($color, "blue", rgb)}#{list.nth($fn, 2)};
+}
+
+/**
+ * @function to-hex
+ *
+ * Converts a color to its hexadecimal representation.
+ * @since 1.0.0
+ *
+ * @param {color} $color - The color to convert.
+ *
+ * @return {string} - The hexadecimal representation of the color.
+ */
+@function to-hex($color) {
+   $rgb: (
+      "r": color.channel($color, "red"),
+      "g": color.channel($color, "green"),
+      "b": color.channel($color, "blue")
+   );
+
+   $hex: ();
+
+   @each $key, $value in $rgb {
+      $hex: list.append($hex, math-fn.decimal-to-hexadecimal($value));
+   }
+
+   @return "#" + #{list.nth($hex, 1)}#{list.nth($hex, 2)}#{list.nth($hex, 3)};
+}

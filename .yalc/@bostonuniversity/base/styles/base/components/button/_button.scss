@@ -1,0 +1,21 @@
+:where(html) {
+
+    //==========================================================================
+    //==[ Buttons ]==========================================================
+    //==========================================================================
+
+    --bu-button-background-color:          var(--color-info-500);
+    --bu-button-background-color--hover:   var(--color-info-900);
+    --bu-button-border-color:              transparent;
+    --bu-button-border-color--hover:       var(--color-info-900);
+    --bu-button-border-radius:             var(--border-radius-none);
+    --bu-button-text-color:                var(--color-neutral-0);
+    --bu-button-text-color--hover:         var(--color-neutral-0);
+    --bu-button-font-family:               var(--bu-base-text-font);
+    --bu-button-font-size:                 var(--bu-base-text-size);
+    --bu-button-icon-color:                var(--bu-button-text-color);
+    --bu-button-icon-color--hover:         var(--bu-button-text-color--hover);
+    --bu-button-icon-size:                 1.1em;
+    --bu-button-padding:                   1.25em 1.5em;
+
+}

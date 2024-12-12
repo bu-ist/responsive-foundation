@@ -1,0 +1,12 @@
+{
+	"name": "@bostonuniversity/base",
+	"version": "0.1.2",
+	"description": "Standardized set of CSS variables and other items for use across plugins and themes at Boston University",
+	"publishConfig": {
+		"access": "public"
+	},
+	"dependencies": {
+		"yalc": "^1.0.0-pre.53"
+	},
+	"yalcSig": "942f2a80c6c4551f1e4030e745226232"
+}

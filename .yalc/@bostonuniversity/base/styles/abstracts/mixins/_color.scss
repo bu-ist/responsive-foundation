@@ -1,0 +1,16 @@
+/**
+ * @mixin generate-color-variables
+ *
+ * Generates CSS variables for each color.
+ *
+ * @param {Map} $colors - Color map.
+ * @param {string} $prefix - CSS variable prefix.
+ *
+ * @example --color-primary: #007bff;
+ */
+ 
+@mixin generate-color-variables($colors, $prefix: 'color-') {
+    @each $color, $value in $colors {
+        --#{$prefix}#{$color}: #{$value};
+    }
+}
