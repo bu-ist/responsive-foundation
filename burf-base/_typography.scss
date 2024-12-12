@@ -15,10 +15,10 @@
 // Since: 1.0.0
 
 body {
-	color: $color-base;
-	font-family: $font-family-base;
-	font-size: $font-size-base;
-	line-height: $line-height-base;
+	color: var(--bu-text-color, #{$color-base});
+	font-family: var(--bu-text-font, #{$font-family-base});
+	font-size: var(--bu-text-size, #{$font-size-base});
+	line-height: var(--bu-line-height, #{$line-height-base});
 }
 
 // Links
@@ -31,10 +31,10 @@ body {
 // Since: 1.0.0
 
 a {
-	color: $color-link;
+	color: var(--bu-link-color, #{$color-link});
 
 	&:visited {
-		color: $color-link-visited;
+		color: var(--bu-link-color--visited, #{$color-link-visited});
 	}
 
 	// Improve readability when focused and also mouse hovered in all browsers.
@@ -141,7 +141,7 @@ abbr[title] {
 // Since: 1.0.0
 
 blockquote {
-	margin: $font-margin-blockquote;
+	margin: var(--bu-spacing, #{$font-margin-blockquote});
 }
 
 // Styles for all paragraphs and preformatted content.
@@ -152,7 +152,7 @@ blockquote {
 
 p,
 pre {
-	margin: $font-margin-base;
+	margin: var(--bu-spacing, #{$font-margin-base});
 }
 
 // Styles for all preformatted and code content.
@@ -165,8 +165,8 @@ code,
 kbd,
 pre,
 samp {
-	font-family: $font-family-monospace;
-	font-size: $font-size-base;
+	font-family: var(--bu-font-mono, #{$font-family-monospace});
+	font-size: var(--bu-text-size, #{$font-size-base});
 }
 
 // Always hide an element when it has the `hidden` HTML attribute.
@@ -244,9 +244,9 @@ ol ol {
 // Since: 1.0.0
 
 code {
-	background: $color-code-bg;
-	color: $color-code;
-	padding: $font-padding-code;
+	background: var(--color-neutral-200, #{$color-code-bg});
+	color: var(--color-neutral-900, #{$color-code});
+	padding: var(--bu-spacing-half, #{$font-padding-code});
 	white-space: nowrap;
 }
 
@@ -262,9 +262,9 @@ code {
 // Since: 1.0.0
 
 .code {
-	background: $color-code-bg;
-	border: $border-code;
-	margin: $font-margin-code;
+	background: var(--color-neutral-200, #{$color-code-bg});
+	border: var(--bu-border, #{$border-code});
+	margin: var(--bu-spacing-half, #{$font-margin-code});
 	-webkit-overflow-scrolling: touch;
 	overflow-x: auto;
 	padding: 20px;

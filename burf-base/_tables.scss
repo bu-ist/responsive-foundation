@@ -115,26 +115,26 @@ $table-stripes:                            $color-grayscale-f5 !default;
 
 table {
 	@extend %font-size-secondary;
-	border: $table-border;
+	border: var(--bu-border, #{$table-border});
 	border-collapse: collapse;
 	empty-cells: show;
-	margin: $table-margin;
+	margin: var(--bu-spacing, #{$table-margin});
 	width: 100%;
 
 	caption {
-		color: $color-table-caption;
+		color: var(--bu-text-color, #{$color-table-caption});
 		font-style: italic;
-		padding: $table-caption-padding;
+		padding: var(--bu-spacing, #{$table-caption-padding});
 		text-align: center;
 	}
 
 	td,
 	th {
-		border-left: $table-border;
+		border-left: var(--bu-border, #{$table-border});
 		font-size: inherit;
 		margin: 0;
 		overflow: visible; // to make ths where the title is really long work
-		padding: $table-padding;
+		padding: var(--bu-spacing, #{$table-padding});
 
 		&:first-child {
 			border-left-width: 0;
@@ -147,7 +147,7 @@ table {
 	}
 
 	th {
-		border-bottom: $table-border;
+		border-bottom: var(--bu-border, #{$table-border});
 	}
 
 	td {
@@ -156,8 +156,8 @@ table {
 	}
 
 	thead {
-		background: $table-head-bg;
-		color: $color-table-head;
+		background: var(--bu-neutral-200, #{$table-head-bg});
+		color: var(--bu-heading-color, #{$color-table-head});
 		text-align: left;
 		vertical-align: bottom;
 	}
@@ -181,7 +181,7 @@ table {
 .table-striped tr:nth-child(2n-1),
 .u-odd {
 	td {
-		background: $table-stripes;
+		background: var(--bu-neutral-150, #{$table-stripes});
 	}
 }
 
@@ -201,7 +201,7 @@ table {
 
 .table-bordered {
 	td {
-		border-bottom: $table-border;
+		border-bottom: var(--bu-border, #{$table-border});
 	}
 }
 
@@ -223,7 +223,7 @@ table {
 	td,
 	th {
 		border: 0;
-		border-bottom: $table-border;
+		border-bottom: var(--bu-border, #{$table-border});
 	}
 }
 
@@ -244,5 +244,5 @@ table {
 // BU Table Sorter override
 
 table.sortable thead tr th.header {
-	border: $table-border;
+	border: var(--bu-border, #{$table-border});
 }

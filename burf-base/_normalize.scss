@@ -35,7 +35,7 @@ html {
 // Since: 1.0.0
 
 section {
-	margin: $margin-section;
+	margin: var(--bu-spacing-double, #{$margin-section});
 }
 
 img,

@@ -2,6 +2,8 @@
 // Basic styling and resets which do not depend on WordPress
 // =================================================================
 
+@forward "../.yalc/@bostonuniversity/base/styles/base/primitive";
+
 // dependencies and resets
 @import 'node_modules/normalize-scss/sass/normalize/import-now';
 
