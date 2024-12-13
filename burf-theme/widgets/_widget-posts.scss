@@ -82,7 +82,7 @@ $color-widget-post-meta:                    $color-grayscale-6 !default;
 // Since: 2.0.0
 
 .widget-post-thumbnail {
-	margin-bottom: $margin-small;
+	margin-bottom: var(--bu-margin-half, #{$margin-small});
 }
 
 // Handles styling for the thumbnail in the
@@ -96,6 +96,6 @@ $color-widget-post-meta:                    $color-grayscale-6 !default;
 
 .widget-post-thumbnail-title-date {
 	float: right;
-	margin-bottom: $margin-small;
-	margin-left: $margin-small;
+	margin-bottom: var(--bu-margin-half, #{$margin-small});
+	margin-left: var(--bu-margin-half, #{$margin-small});
 }

@@ -220,15 +220,15 @@ $border-widget-list:                       $border !default;
 	h4,
 	h5,
 	h6 {
-		font-family: $font-family-widget-heading;
+		font-family: var(--bu-text-font, #{$font-family-widget-heading});
 	}
 
 	a {
-		color: $color-widget-link;
+		color: var(--bu-link-color, #{$color-widget-link});
 
 		&:hover,
 		&:focus {
-			color: $color-widget-link-hover;
+			color: var(--bu-link-color--hover, #{$color-widget-link-hover});
 		}
 
 		&.button,
@@ -261,8 +261,8 @@ $border-widget-list:                       $border !default;
 .widget-title {
 	border: $border-widget-title;
 	border-width: $border-width-widget-title;
-	color: $color-widget-title;
-	font-family: $font-family-widget-title;
+	color: var(--bu-heading-color, #{$color-widget-title});
+	font-family: var(--bu-heading-font, #{$font-family-widget-title});
 	padding: 0 0 4px;
 
 	a {
@@ -332,7 +332,7 @@ $border-widget-list:                       $border !default;
 // Since: 4.0.0
 
 #wp-calendar {
-	background: $color-grayscale-f;
+	background: var(--color-neutral-0, #{$color-grayscale-f});
 	font-size: 14px;
 	table-layout: fixed;
 

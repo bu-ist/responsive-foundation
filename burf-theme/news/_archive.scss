@@ -78,7 +78,7 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 
 %back-link-styles {
 	&::before {
-		color: $color-back-link-before;
+		color: var(--color-neutral-0, #{$color-back-link-before});
 		content: $back-link-before;
 	}
 }
@@ -111,9 +111,9 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 
 .paging-navigation {
 	@extend %clearfix;
-	border-top: $border-news-post;
-	margin-top: $margin;
-	padding-top: $margin;
+	border-top: var(--bu-border, #{$border-news-post});
+	margin-top: var(--bu-spacing, #{$margin});
+	padding-top: var(--bu-spacing, #{$margin});
 
 	a {
 		@extend %button-styles;
@@ -154,9 +154,9 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 // Since: 2.0.0
 
 .post-part {
-	border-top: $border-news-post;
-	margin-top: $margin;
-	padding-top: $margin;
+	border-top: var(--bu-border, #{$border-news-post});
+	margin-top: var(--bu-spacing, #{$margin});
+	padding-top: var(--bu-spacing, #{$margin});
 	position: relative;
 
 	&:first-child {
@@ -197,7 +197,7 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 .post-meta {
 	span {
 		&::before {
-			color: $color-news-meta-before;
+			color: var(--color-neutral-200, #{$color-news-meta-before});
 			content: "\a0\b7\a0";
 		}
 
