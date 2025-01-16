@@ -866,7 +866,7 @@ $nav-toggle-border: 4px !default;
 	text-decoration: none;
 
 	@include breakpoint( $nav-desktop ) {
-		color: color(--bu-link-color, #{$color-utility-nav-link});
+		color: var(--bu-link-color, #{$color-utility-nav-link});
 	}
 
 	li {
