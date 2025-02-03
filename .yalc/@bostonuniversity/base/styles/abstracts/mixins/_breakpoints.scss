@@ -1,5 +1,5 @@
 @use '../functions/lists' as list-fn;
-@use '../config/' as config;
+@use '../config/breakpoints' as mq;
 @use 'sass:map';
 
 /**
@@ -17,7 +17,7 @@
  * @include breakpoint($md) { ... };
  * @include breakpoint(992px) { ... };
  */
-@mixin breakpoint($bp: xs, $rule: min-width, $media: screen, $breakpoints: config.$breakpoints) {
+@mixin breakpoint($bp: xs, $rule: min-width, $media: screen, $breakpoints: mq.$breakpoints) {
     @if map.has-key($breakpoints, $bp, width) {
         $bp: map.get($breakpoints, $bp, width);
     }
@@ -46,7 +46,7 @@
  * @example --breakpoint-[name]: 768px;
  */
 @mixin generate-breakpoint-widths($breakpoints, $variable: breakpoint) {
-    @each $bp in map-keys($breakpoints) {
+    @each $bp in map.keys($breakpoints) {
         --#{$variable}-#{ $bp }: #{map.get($breakpoints, $bp, width)};
     }
 }
@@ -62,7 +62,7 @@
  * @example --breakpoint-[name]-gap: 2rem;
  */
 @mixin generate-breakpoint-gaps($breakpoints, $variable: breakpoint) {
-    @each $bp in map-keys($breakpoints) {
+    @each $bp in map.keys($breakpoints) {
         --#{$variable}-#{ $bp }-gap: #{map.get($breakpoints, $bp, gap)};
     }
 }
@@ -79,7 +79,7 @@
  * @example --breakpoint-gap: 2rem;
  */
 @mixin generate-active-breakpoint-variables($breakpoints) {
-    $keys: map-keys($breakpoints);
+    $keys: map.keys($breakpoints);
 
     @each $bp in $keys {
         $next: list-fn.next-key($bp, $keys);

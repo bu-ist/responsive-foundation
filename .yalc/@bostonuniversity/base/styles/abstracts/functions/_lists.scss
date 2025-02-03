@@ -143,7 +143,7 @@
  * @return {*} - The next key in the list
  */
 @function next-key($current, $list) {
-    $index: index($list, $current);
+    $index: list.index($list, $current);
 
     @if $index == list.length($list) {
         @return null;

@@ -730,7 +730,7 @@ $nav-toggle-border: 4px !default;
 
 .primary-nav {
 	@extend %clearfix;
-	background: var(--color-neutral-900, #{$color-primary-nav-bg});
+	background: var(--color-neutral-1000, #{$color-primary-nav-bg});
 	display: block;
 
 	@include breakpoint( $nav-desktop ) {
@@ -751,7 +751,7 @@ $nav-toggle-border: 4px !default;
 	clear: left;
 	margin: $nav-toggle-size $margin-small 0; // Keeps menu from overlapping nav toggle
 
-	@media screen and ( max-width: $sm - 1 ) {
+	@media screen and ( max-width: ( $sm - 1 ) ) {
 		.js & {
 			display: none;
 		}

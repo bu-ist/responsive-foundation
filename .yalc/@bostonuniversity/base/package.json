@@ -2,11 +2,28 @@
 	"name": "@bostonuniversity/base",
 	"version": "0.1.2",
 	"description": "Standardized set of CSS variables and other items for use across plugins and themes at Boston University",
+	"type": "module",
 	"publishConfig": {
 		"access": "public"
 	},
-	"dependencies": {
-		"yalc": "^1.0.0-pre.53"
+	"scripts": {
+		"vite:watch": "vite build --watch",
+		"vite:build": "vite build",
+		"yalc:watch": "npm-watch yalc:publish",
+		"yalc:publish": "yalc push --changed"
 	},
-	"yalcSig": "942f2a80c6c4551f1e4030e745226232"
+	"watch": {
+		"yalc:publish": {
+			"patterns": [
+				"scripts/",
+				"styles/"
+			],
+			"extensions": "js,scss"
+		}
+	},
+	"dependencies": {
+		"sass-embedded": "^1.83.1",
+		"vite": "^6.0.7"
+	},
+	"yalcSig": "622a100ff0b325039656f4ac5e261e72"
 }

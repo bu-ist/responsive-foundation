@@ -1,25 +1,50 @@
 /* ===================================================================
 CSS Custom Properties (Primitive) - [ Table of Contents ]
 
-1. Aspect Ratio
-2. Borders
-3. Breakpoints
-4. Colors
+1. Breakpoints
+2. Colors
+3. Aspect Ratio
+4. Borders
 5. Shadows
-6. Motion
-7. Spacing
-8. Typography
-9. Z-Index
+6. Spacing
+7. Typography
+8. Z-Index
+9. Motion
 
 =================================================================== */
 
-@use '../../styles/abstracts/config' as config;
-@use '../../styles/abstracts/mixins' as mix;
+@use './abstracts/config' as config;
+@use './abstracts/mixins' as mix;
+
+:where(html) {
+    //==========================================================================
+    //==[ 1. Breakpoints ]======================================================
+    //==========================================================================
+
+    /* Generate CSS Variables for all SASS breakpoint variables in five formats: */
+    /* Breakpoint Widths:            --breakpoint-[name]:          XXpx          */
+    /* Breakpoint Gaps:              --breakpoint-[name]-gap:      XXpx          */
+    /* Active Breakpoint Min-Width:  --breakpoint-min-width:       XXpx          */
+    /* Active Breakpoint Max-Width:  --breakpoint-max-width:       XXpx          */
+    /* Active Breakpoint Gap:        --breakpoint-gap:             XXpx          */
+    @include mix.generate-breakpoint-widths(config.$breakpoints);
+    @include mix.generate-breakpoint-gaps(config.$breakpoints);
+    @include mix.generate-active-breakpoint-variables(config.$breakpoints);
+
+
+    //==========================================================================
+    //==[ 2. Colors ]===========================================================
+    //==========================================================================
+
+    /* Generate CSS Variables for all colors */
+    /* Colors:            --color-[name]:          #RRGGBB          */
+    @include mix.generate-color-variables(config.$colors);
+}
 
 :where(html) {
 
     //==========================================================================
-    //==[ 1. Aspect Ratios ]====================================================
+    //==[ 3. Aspect Ratios ]====================================================
     //==========================================================================
 
     --ratio-square: 1; // 1
@@ -37,7 +62,7 @@ CSS Custom Properties (Primitive) - [ Table of Contents ]
 
 
     //==========================================================================
-    //==[ 2. Borders ]==========================================================
+    //==[ 4. Borders ]==========================================================
     //==========================================================================
 
     /* Border Widths ----------------------------------------------------- */
@@ -60,28 +85,6 @@ CSS Custom Properties (Primitive) - [ Table of Contents ]
     --radius-7:                 8rem;
     --radius-round:             1e5px;
 
-    //==========================================================================
-    //==[ 3. Breakpoints ]======================================================
-    //==========================================================================
-
-    /* Generate CSS Variables for all SASS breakpoint variables in five formats: */
-    /* Breakpoint Widths:            --breakpoint-[name]:          XXpx          */
-    /* Breakpoint Gaps:              --breakpoint-[name]-gap:      XXpx          */
-    /* Active Breakpoint Min-Width:  --breakpoint-min-width:       XXpx          */
-    /* Active Breakpoint Max-Width:  --breakpoint-max-width:       XXpx          */
-    /* Active Breakpoint Gap:        --breakpoint-gap:             XXpx          */
-    @include mix.generate-breakpoint-widths(config.$breakpoints);
-    @include mix.generate-breakpoint-gaps(config.$breakpoints);
-    @include mix.generate-active-breakpoint-variables(config.$breakpoints);
-
-
-    //==========================================================================
-    //==[ 4. Colors ]===========================================================
-    //==========================================================================
-
-    /* Generate CSS Variables for all colors */
-    /* Colors:            --color-[name]:          #RRGGBB          */
-    @include mix.generate-color-variables(config.$colors);
 
     //==========================================================================
     //==[ 5. Shadows ]=======================================================
@@ -96,71 +99,32 @@ CSS Custom Properties (Primitive) - [ Table of Contents ]
     --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 
     //==========================================================================
-    //==[ 6. Motion ]===========================================================
+    //==[ 6. Spacing ]==========================================================
     //==========================================================================
 
-    /* Transition Duration ------------------------------------------------------ */
+    /* Spacing Scale ---------------------- */
 
-    --duration-quick: 150ms;
-    --duration-fast: 300ms;
-    --duration-moderate: 500ms;
-    --duration-slow: 750ms;
-    --duration-gentle: 1200ms;
-    --duration-adagio: 1600ms;
-    --duration-largo: 2000ms;
-    --duration-grave: 2500ms;
+    --size-1:            1rem;       // 16px
+    --size-2:            1.5rem;     // 24px
+    --size-3:            2rem;       // 32px
+    --size-4:            2.5rem;     // 40px
+    --size-5:            3rem;       // 48px
+    --size-6:            3.5rem;     // 56px
+    --size-7:            4rem;       // 64px
+    --size-8:            4.5rem;     // 72px
+    --size-9:            5rem;       // 80px
+    --size-10:           6rem;       // 96px
 
-    @media (prefers-reduced-motion: reduce) {
-        --duration-quick: 0;
-        --duration-fast: 0;
-        --duration-moderate: 0;
-        --duration-slow: 0;
-        --duration-gentle: 0;
-        --duration-adagio: 0;
-        --duration-largo: 0;
-        --duration-grave: 0;
-    }
-
-    /* Easing Functions ------------------------------------------------------ */
-    /* Based on https://easings.net/ ------------------ */
-
-    --ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-    --ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    --ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
-    --ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    --ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
-    --ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335);
-    --ease-in-back: cubic-bezier(0.36, 0, 0.66, -0.56);
-    --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    --ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
-    --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
-    --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
-    --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
-    --ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1);
-    --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
-    --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    --ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
-    --ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
-    --ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
-    --ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
-    --ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    --ease-in-out-back: cubic-bezier(0.68, -0.6, 0.32, 1.6);
-
-    //==========================================================================
-    //==[ 7. Spacing ]==========================================================
-    //==========================================================================
-
-    --size-0: 0.5rem; // 8px
-    --size-1: 1rem; // 16px
-    --size-2: 1.5rem; // 24px
-    --size-3: 2rem; // 32px
-    --size-4: 2.5rem; // 40px
-    --size-5: 3rem; // 48px
-    --size-6: 3.5rem; // 56px
-    --size-7: 4rem; // 64px
-    --size-8: 4.5rem; // 72px
-    --size-9: 5rem; // 80px
-    --size-10: 6rem; // 96px
+    /* Shim Spacing Scale ---------------- */
+    
+    --shim-1:             0.0625rem; // 1px
+    --shim-2:             0.125rem; // 2px
+    --shim-3:             0.25rem;  // 4px
+    --shim-4:             0.375rem; // 6px
+    --shim-5:             0.5rem;   // 8px
+    --shim-6:             0.625rem; // 10px
+    --shim-7:             0.75rem;  // 12px
+    --shim-8:             0.875rem; // 14px
 
     /* Fluid Spacing Scale ------------------------------------------------------ */
     /* Sets clamp base on xs and xl breakpoints ---------- */
@@ -195,7 +159,7 @@ CSS Custom Properties (Primitive) - [ Table of Contents ]
     --grid-template-12: repeat(12, minmax(0, 1fr));
 
     //==========================================================================
-    //==[ 8. Typography ]=======================================================
+    //==[ 7. Typography ]=======================================================
     //==========================================================================
 
     /* Font Families  ------------------------------------------------------ */
@@ -266,7 +230,7 @@ CSS Custom Properties (Primitive) - [ Table of Contents ]
     --text-size-md: clamp(1rem, 0.9167rem + 0.3704vi, 1.25rem); // 16px - 20px
 
     //==========================================================================
-    //==[ 9. Z-Index ]==========================================================
+    //==[ 8. Z-Index ]==========================================================
     //==========================================================================
 
     --z-sticky: 4000;
@@ -276,4 +240,55 @@ CSS Custom Properties (Primitive) - [ Table of Contents ]
     --z-alert: 8000;
     --z-tooltip: 9000;
     --z-max: 9999;
+
+    //==========================================================================
+    //==[ 9. Motion ]===========================================================
+    //==========================================================================
+
+    /* Easing Functions ------------------------------------------------------ */
+    /* Based on https://easings.net/ ------------------ */
+
+    --ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    --ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    --ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    --ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    --ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    --ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    --ease-in-back: cubic-bezier(0.36, 0, 0.66, -0.56);
+    --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+    --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+    --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+    --ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1);
+    --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    --ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+    --ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+    --ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+    --ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+    --ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    --ease-in-out-back: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+    /* Transition Duration ------------------------------------------------------ */
+
+    --duration-quick: 150ms;
+    --duration-fast: 300ms;
+    --duration-moderate: 500ms;
+    --duration-slow: 750ms;
+    --duration-gentle: 1200ms;
+    --duration-adagio: 1600ms;
+    --duration-largo: 2000ms;
+    --duration-grave: 2500ms;
+
+    @media (prefers-reduced-motion: reduce) {
+        --duration-quick: 0;
+        --duration-fast: 0;
+        --duration-moderate: 0;
+        --duration-slow: 0;
+        --duration-gentle: 0;
+        --duration-adagio: 0;
+        --duration-largo: 0;
+        --duration-grave: 0;
+    }
 }

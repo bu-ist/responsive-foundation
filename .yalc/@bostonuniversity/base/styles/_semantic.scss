@@ -22,7 +22,7 @@ CSS Custom Properties (Semantic) - [ Table of Contents ]
 
     --bu-border-color:     var(--color-neutral-300);
     --bu-border-style:     solid;
-    --bu-border-width:     var(--radius-none);
+    --bu-border-width:     inherit;
     --bu-border:           var(--bu-border-width) var(--bu-border-style) var(--bu-border-color);
 
     --bu-border-radius:    var(--radius-none);
@@ -48,11 +48,11 @@ CSS Custom Properties (Semantic) - [ Table of Contents ]
 
     // Spacing can be used for both padding and margins.
 
-    --bu-spacing-sm: var(--size-2);
+    --bu-spacing-sm: var(--shim-8);
     --bu-spacing-md: var(--size-4);
-    --bu-spacing-lg: var(--size-6);
+    --bu-spacing-lg: var(--size-7);
 
-    --bu-spacing:        var(--bu-spacing-md);
+    --bu-spacing:        var(--size-3);
     --bu-spacing-half:   calc(var(--bu-spacing) * 0.5);
     --bu-spacing-double: calc(var(--bu-spacing) * 2);
 
@@ -122,6 +122,7 @@ CSS Custom Properties (Semantic) - [ Table of Contents ]
 
     --bu-link-color: inherit;
     --bu-link-color--hover: inherit;
+    --bu-link-color--visited: inherit;
     --bu-focus-color: inherit;
 
     //==========================================================================

@@ -244,8 +244,8 @@ ol ol {
 // Since: 1.0.0
 
 code {
-	background: var(--color-neutral-200, #{$color-code-bg});
-	color: var(--color-neutral-900, #{$color-code});
+	background: var(--color-neutral-100, #{$color-code-bg});
+	color: var(--color-neutral-800, #{$color-code});
 	padding: var(--bu-spacing-half, #{$font-padding-code});
 	white-space: nowrap;
 }

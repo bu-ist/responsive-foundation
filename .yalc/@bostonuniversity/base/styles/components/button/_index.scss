@@ -1,0 +1,30 @@
+:where(html) {
+
+    //==========================================================================
+    //==[ Buttons ]==========================================================
+    //==========================================================================
+
+    --bu-button-background-color:          var(--color-neutral-200);
+    --bu-button-background-color--hover:   var(--color-neutral-300);
+    --bu-button-border-color:              transparent;
+    --bu-button-border-color--hover:       transparent;
+    --bu-button-border-style:              solid;
+    --bu-button-border-width:              inherit;
+    --bu-button-border:                    var(--bu-button-border-width) var(--bu-button-border-style) var(--bu-button-border-color);
+    --bu-button-border-radius:             var(--border-radius-none);
+    --bu-button-text-color:                var(--color-neutral-900);
+    --bu-button-text-color--hover:         var(--color-neutral-900);
+    --bu-button-font-family:               var(--bu-text-font);
+    --bu-button-font-size:                 var(--bu-text-size);
+    --bu-button-icon-color:                var(--bu-button-text-color);
+    --bu-button-icon-color--hover:         var(--bu-button-text-color--hover);
+    --bu-button-icon-size:                 1.1em;
+    --bu-button-padding:                   0.5em 1em;
+    --bu-button-margin:                    0 15px 15px 0;
+
+    // primary colors
+    --bu-button-primary-background-color:          var(--color-info-500);
+    --bu-button-primary-background-color--hover:   var(--color-info-600);
+    --bu-button-primary-text-color:                var(--color-neutral-0);
+    --bu-button-primary-text-color--hover:         var(--color-neutral-0);
+}
