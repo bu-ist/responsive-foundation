@@ -12,6 +12,24 @@
 
 $use-default-icons:                  true !default;
 
+// Choose whether or not to load and process all 1400+ FontAwesome icons
+//
+// FontAwesome comes with a large amount of icons. This can significantly increase
+// the time it takes to build/compile your project. We've also seen crashes in
+// DartSass using the Sass-Embedded compiler. in 6.0 we've adjusted Foundation
+// so that all 1400+ icons are not included by default and Theme Developers instead
+// can opt-in to including them all. Instead of including all 1400+ icons theme
+// developers can instead add the `$icons-theme` Sass-Map variable to their theme
+// and add individual font-awesome icons they want to activate a limited subset. 
+//
+// Styleguide Utilities.Icons.Use All FontAwesome Icons
+//
+// Access: Public
+//
+// Since: 6.0
+
+$use-all-fontawesome-icons: 		false !default;
+
 // Controls which FontAwesome library loads.
 // Solid will load by default. Switch to 400 for regular.
 // Note that the regular library is much smaller than solid.
@@ -22,7 +40,7 @@ $use-default-icons:                  true !default;
 //
 // Since: 5.0.0
 
-$font-weight-icon: 									 900 !default;
+$font-weight-icon: 						900 !default;
 
 // Choose whether icons go before or after content by default
 //
@@ -44,6 +62,11 @@ $icons-positioning:                   'before' !default;
 // Generates the icon placeholders and classes
 // based off the $icons-responsive Sass map.
 //
+// Icon mixin changed to pass `false` for the 
+// $use-extend parameter in Foundation 6.0 due
+// to it causing long build times in dart-sass 
+// versions 1.77.5 and up. 
+//
 // Styleguide Utilities.Icons.Icon Class Generation
 //
 // Access: Private
@@ -52,7 +75,7 @@ $icons-positioning:                   'before' !default;
 
 @each $name, $content in $icons-responsive {
 	%icon-#{$name} {
-		@include icon( $name, $icons-positioning, true );
+		@include icon( $name, $icons-positioning, false );
 	}
 
 	@if $print-icon-classes {

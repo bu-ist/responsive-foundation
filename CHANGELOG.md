@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased (target: 6.0)
+- Reduce FontAwesome Icon List to essential icons and stop processing all 1400+ icons by default. This speeds up the build process and prevents crashes with `sass-embedded` @ 1.83. 
+- For `Icon generation` partial (burf-base\icons\_package.scss), set `$use-extend` to false to prevent slow downs and crashes with Dart Sass compiler in @wordpress/scripts@v27. Resulting CSS appears functionally the same just more verbose. 
 - Updates the build process to remove grunt
 - updates the KSS styleguide build process
 - Adds Yalc to handle local linking of Foundation to the Framework repo (or child-starter) to preview SASS changes

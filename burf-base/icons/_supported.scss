@@ -1491,6 +1491,105 @@ $icons-fontawesome: (
 
 $icons-responsive: (
 
+
+	bars: $fa-var-bars,
+	calendar: $fa-var-calendar,
+	calendar-alt: $fa-var-calendar-alt,
+	check: $fa-var-check,
+	check-circle: $fa-var-check-circle,
+	check-double: $fa-var-check-double,
+	check-square: $fa-var-check-square,
+	download: $fa-var-download,
+	dropbox: $fa-var-dropbox,
+	ellipsis-h: $fa-var-ellipsis-h,
+	ellipsis-v: $fa-var-ellipsis-v,
+	exclamation: $fa-var-exclamation,
+	exclamation-circle: $fa-var-exclamation-circle,
+	exclamation-triangle: $fa-var-exclamation-triangle,
+	external-link-alt: $fa-var-external-link-alt,
+	external-link-square-alt: $fa-var-external-link-square-alt,
+	facebook: $fa-var-facebook,
+	file: $fa-var-file,
+	file-alt: $fa-var-file-alt,
+	file-archive: $fa-var-file-archive,
+	file-audio: $fa-var-file-audio,
+	file-code: $fa-var-file-code,
+	file-contract: $fa-var-file-contract,
+	file-csv: $fa-var-file-csv,
+	file-download: $fa-var-file-download,
+	file-excel: $fa-var-file-excel,
+	file-export: $fa-var-file-export,
+	file-image: $fa-var-file-image,
+	file-import: $fa-var-file-import,
+	file-invoice: $fa-var-file-invoice,
+	file-invoice-dollar: $fa-var-file-invoice-dollar,
+	file-medical: $fa-var-file-medical,
+	file-medical-alt: $fa-var-file-medical-alt,
+	file-pdf: $fa-var-file-pdf,
+	file-powerpoint: $fa-var-file-powerpoint,
+	file-prescription: $fa-var-file-prescription,
+	file-signature: $fa-var-file-signature,
+	file-upload: $fa-var-file-upload,
+	file-video: $fa-var-file-video,
+	file-word: $fa-var-file-word,
+	flickr: $fa-var-flickr,
+	folder: $fa-var-folder,
+	folder-minus: $fa-var-folder-minus,
+	folder-open: $fa-var-folder-open,
+	folder-plus: $fa-var-folder-plus,
+	github: $fa-var-github,
+	grip-horizontal: $fa-var-grip-horizontal,
+	grip-lines: $fa-var-grip-lines,
+	grip-lines-vertical: $fa-var-grip-lines-vertical,
+	grip-vertical: $fa-var-grip-vertical,
+	info: $fa-var-info,
+	info-circle: $fa-var-info-circle,
+	instagram: $fa-var-instagram,
+	kickstarter: $fa-var-kickstarter,
+	link: $fa-var-link,
+	linkedin: $fa-var-linkedin,
+	lock: $fa-var-lock,
+	lock-open: $fa-var-lock-open,
+	map: $fa-var-map,
+	map-marked: $fa-var-map-marked,
+	map-marked-alt: $fa-var-map-marked-alt,
+	map-marker: $fa-var-map-marker,
+	map-marker-alt: $fa-var-map-marker-alt,
+	map-pin: $fa-var-map-pin,
+	medium: $fa-var-medium,
+	minus: $fa-var-minus,
+	minus-circle: $fa-var-minus-circle,
+	minus-square: $fa-var-minus-square,
+	pinterest: $fa-var-pinterest,
+	plus: $fa-var-plus,
+	plus-circle: $fa-var-plus-circle,
+	plus-square: $fa-var-plus-square,
+	reddit: $fa-var-reddit,
+	renren: $fa-var-renren,
+	search: $fa-var-search,
+	search-dollar: $fa-var-search-dollar,
+	search-location: $fa-var-search-location,
+	search-minus: $fa-var-search-minus,
+	search-plus: $fa-var-search-plus,
+	searchengin: $fa-var-searchengin,
+	share: $fa-var-share,
+	share-alt: $fa-var-share-alt,
+	share-alt-square: $fa-var-share-alt-square,
+	share-square: $fa-var-share-square,
+	snapchat: $fa-var-snapchat,
+	tiktok: $fa-var-tiktok,
+	times: $fa-var-times,
+	times-circle: $fa-var-times-circle,
+	tumblr: $fa-var-tumblr,
+	twitter: $fa-var-twitter,
+	unlink: $fa-var-unlink,
+	unlock: $fa-var-unlock,
+	unlock-alt: $fa-var-unlock-alt,
+	vimeo: $fa-var-vimeo,
+	weibo: $fa-var-weibo,
+	wordpress: $fa-var-wordpress,
+	youtube: $fa-var-youtube,
+
 	// BU Default Icons backwards compatibility mappings
 
 	menu: $fa-var-bars,
@@ -1518,10 +1617,24 @@ $icons-responsive: (
 	questionmark: '\2753',
 );
 
-$icons-responsive: map_merge( $icons-fontawesome, $icons-responsive );
+/// Merges essential responsive foundation icons with the full FontAwesome 
+/// supported icons map.
+/// $use-all-fontawesome-icons must be set true for this merge to happen.
+/// 
+/// @group global
+/// @access private
+/// @since 6.0.0
+
+@if $use-all-fontawesome-icons {
+	$icons-responsive: map_merge( $icons-fontawesome, $icons-responsive );
+}
 
 /// Merges custom icons and overrides with the default supported icons map.
-/// $icons-theme must be set BEFORE this is called.
+/// $icons-theme must be set BEFORE this is called. Add this sass map to a
+/// child theme BEFORE this icons partial is called. The $icons-theme map can
+/// contain any of the FontAwesome icons available that are not included above.
+/// Be sure to import the FontAwesome variables partial too. 
+/// 
 /// @group global
 /// @access private
 /// @since 2.0.0
