@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+- Add icons for X, X-alt, and bluesky to icons and social menus.
 - 3.2.3 version hotfix: #269 Layout issue for Profiles Advanced View.
 
 ## 3.2.2

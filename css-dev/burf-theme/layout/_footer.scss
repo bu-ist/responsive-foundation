@@ -274,6 +274,10 @@ body {
 /// @since 2.0.0
 
 .menu-item {
+	[href*="bsky.app"] {
+		@extend %icon-bluesky;
+	}
+
 	[href*="dropbox.com"] {
 		@extend %icon-dropbox;
 	}
@@ -332,6 +336,10 @@ body {
 
 	[href*="twitter.com"] {
 		@extend %icon-twitter;
+	}
+
+	[href*="x.com"] {
+		@extend %icon-x;
 	}
 
 	[href*="vimeo.com"] {
