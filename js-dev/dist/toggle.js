@@ -17,6 +17,8 @@ var _jquery = _interopRequireDefault(require("jquery"));
 function toggle() {
   var $body = (0, _jquery.default)('body');
   var $toggle = (0, _jquery.default)('.js-nav-toggle');
+  var $toggleAriaLabelWhenOpen = $toggle.children('.nav-toggle-label-open').text();
+  var $toggleAriaLabelWhenClosed = $toggle.children('.nav-toggle-label-closed').text();
   var $toggleitems = $toggle.add('nav');
   var $searchtoggle = (0, _jquery.default)('.js-search-toggle');
   var $searchitems = $searchtoggle.add('#quicksearch'); // Add aria attributes for control/expanded if JS is available
@@ -27,9 +29,9 @@ function toggle() {
     e.preventDefault();
 
     if ($toggle.attr('aria-expanded') === 'false') {
-      $toggle.attr('aria-expanded', 'true').attr('aria-label', 'Close menu');
+      $toggle.attr('aria-expanded', 'true').attr('aria-label', $toggleAriaLabelWhenOpen);
     } else {
-      $toggle.attr('aria-expanded', 'false').attr('aria-label', 'Open menu');
+      $toggle.attr('aria-expanded', 'false').attr('aria-label', $toggleAriaLabelWhenClosed);
     }
 
     $toggleitems.toggleClass('is-open');
