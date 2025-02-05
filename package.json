@@ -1,6 +1,6 @@
 {
   "name": "responsive-foundation",
-  "version": "3.2.2",
+  "version": "3.2.5",
   "homepage": "https://github.com/bu-ist/responsive-foundation",
   "description": "A front-end framework for developing responsive sites at Boston University.",
   "authors": [
@@ -14,7 +14,8 @@
     "Ashley Kolodziej <kolodz10@bu.edu>",
     "Jon Desroisers <jondes@bu.edu>",
     "Tom Dodson <tdodson@bu.edu>",
-    "Alana Martin <alanam@bu.edu>"
+    "Alana Martin <alanam@bu.edu>",
+    "Tim King <timking@bu.edu>"
   ],
   "keywords": [
     "responsive",
@@ -49,7 +50,7 @@
     "@wordpress/eslint-plugin": "^1.0.1",
     "autoprefixer": "^9.4.9",
     "babelify": "^10.0.0",
-    "browserify-shim": "^3.8.14",
+    "browserify-shim": "^3.8.16",
     "bs-html-injector": "^3.0.3",
     "eslint": "^5.12.0",
     "eslint-plugin-import": "^2.14.0",

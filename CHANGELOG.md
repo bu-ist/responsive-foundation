@@ -2,7 +2,9 @@
 
 ## Unreleased
 
-- test...
+- `npm audit fix`
+- Adds .nvmrc
+- Fixes [#276](https://github.com/bu-ist/responsive-foundation/issues/276) toggle menu aria-label
 
 ## 3.2.4
 
@@ -42,28 +44,28 @@
   text colors when given a background color and desired text color.
 - Adds es6 functionality via a variety of npm packages and Gruntfile
   modifications:
-    - `grunt-browserify`: Provides ability to use `require` for separating files into
+  - `grunt-browserify`: Provides ability to use `require` for separating files into
       modules. Polyfills `require` for the browser.
-    - `babelify`: Provides a transform for browserify so we can leverage
+  - `babelify`: Provides a transform for browserify so we can leverage
       `import` and `export` features that will transpile into something
       browserify can interpret for the browser.
-    - `@babel/core`: Required babel library for `babelify` package.
-    - `@babel/preset-env`: The recommended "smart" preset for configuring babel
+  - `@babel/core`: Required babel library for `babelify` package.
+  - `@babel/preset-env`: The recommended "smart" preset for configuring babel
       to take advantage of latest es6 features.
-    - `grunt-contrib-uglify`: For minifying the resulting es5 code from
+  - `grunt-contrib-uglify`: For minifying the resulting es5 code from
       browserify, and providing source maps.
-    - `browserify-shim`: makes CommonJS incompatible files browserifyable (files
+  - `browserify-shim`: makes CommonJS incompatible files browserifyable (files
       that don’t support `require` from the CommonJS module syntax). This
       includes things like our version of jQuery, but can be extended for any
       library that cannot be included using latest es6 sytax style `import`
       statements. Shims are specified in package.json
-    - `eslint`, `eslint-config-airbnb`, `eslint-plugin-import`,
+  - `eslint`, `eslint-config-airbnb`, `eslint-plugin-import`,
       `eslint-plugin-jsx-a11y`, `eslint-plugin-react`: For code climate and
       text editors to lint and autofix their code. Configured using the popular
       airbnb standard for starters, but with slight modifications to allow tabs
       over spaces and unresolved imports so that global version of jQuery can be
       imported.
-    - `grunt-contrib-clean`: Clears contents of directories for new compiled
+  - `grunt-contrib-clean`: Clears contents of directories for new compiled
       files to reside in, so that old irrelevant files don't stick around.
 - Adds `grunt-sass-lint` for separate `grunt sasslint` task.
 - Adds `browserslist` to package.json so front-end tooling packages like `babel`
