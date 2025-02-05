@@ -173,13 +173,13 @@ body {
 
 
 %content-root-container {
-	background: #e666;
+	background: #e661; //placeholder test color
 	flex-grow: 1;
 	padding: 0;
 
 	> {
 		* {
-			background: #e666;
+			background: #e661; //placeholder test color
 			margin-inline: auto;
 			max-width: var(--bu--content--width-default-clamped);
 		}
@@ -199,7 +199,7 @@ body {
 	.gallery,
 	.bu_collapsible_container,
 	.gform_legacy_markup_wrapper {
-		background: #e666;
+		background: #e661; //placeholder test color
 		margin-block: var(--bu--content--margin-block);
 	}
 
