@@ -2,7 +2,10 @@
 
 ## Unreleased
 
+## 3.2.5
+
 - `npm audit fix`
+- Add icons for X, X-alt, and bluesky to icons and social menus.
 - Adds .nvmrc
 - Fixes [#276](https://github.com/bu-ist/responsive-foundation/issues/276) toggle menu aria-label
 
