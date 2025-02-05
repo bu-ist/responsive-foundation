@@ -1,0 +1,436 @@
+// =================================================================
+// Content Area Settings
+// =================================================================
+
+@use "sass:math";
+
+// Set Content Area Columns
+//
+// The number of columns you would like to use in your layout.
+// This controls the width of the content area vs. the sidebar.
+// By default, setting this to 3 will make the sidebar take up 1 column,
+// and the content area 2 columns.
+//
+// If you were to set this to 4, the sidebar would take up 1/4 of the space,
+// while the content area would take up 3/4 of the space.
+// By default, the number of supported widgets in your footer will match this number.
+//
+// Styleguide Configuration.Content Area.Columns
+//
+// Access: Public
+//
+// Since: 1.2.0
+
+$number-columns: 									 3 !default;
+
+// Set Content Area Margin
+//
+// Sets the margin width for content and footbar widgets.
+//
+// Styleguide Configuration.Content Area.Margin Width
+//
+// Access: Public
+//
+// Since: 1.2.0
+
+$margin-width: 			  					    5.2% !default;
+
+// Content Area Background Color
+//
+// Controls the background color of the content.
+//
+// Styleguide Configuration.Content Area.Background Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+
+$color-content-bg:                         $color-grayscale-f !default;
+
+// Content Area Column Padding - Mobile
+//
+// The amount of padding to add to columns on mobile.
+//
+// Styleguide Configuration.Content Area.Mobile Column Padding
+//
+// Access: Public
+//
+// Since: 1.2.0
+
+$column-padding-bottom:                     10px !default;
+
+// Content Area Column Padding - Desktop
+//
+// The amount of padding to add to columns on desktop.
+//
+// Styleguide Configuration.Content Area.Desktop Column Padding
+//
+// Access: Public
+//
+// Since: 1.2.0
+
+$column-padding-bottom-large-screen:         35px !default;
+
+// =================================================================
+// Content Area Styles
+// =================================================================
+
+// Controls styling for all content, from the masthead to the site footer.
+//
+// Access: Public
+//
+// Since: 1.0.0
+
+.content {
+	background: $color-content-bg;
+}
+
+// A wrapper to contain content to a certain size. Sits just below the window
+// width banner and just above the footbar.
+//
+// Access: Public
+//
+// Since: 1.0.0
+
+.content-container {
+	display: flex;
+	flex-direction: column;
+
+	@include breakpoint( $sm ) {
+		flex-direction: row;
+	}
+}
+
+
+// Content Area
+// -----------------------------------------------------------------
+
+// A helper variable to figure out the proper width for the content
+// based on the desired number of columns in the design.
+// Note that this is different from the number of columns supported in
+// the grid.
+//
+// By default, the width is one less than the number of columns.
+//
+// Access: Private
+//
+// Since: 1.0.0
+
+$_content-width: $grid-number-columns * math.div( ( $number-columns - 1 ), $number-columns );
+
+// A helper variable to figure out the proper width for the sidebar
+// based on the desired number of columns in the design.
+// Note that this is different from the number of columns supported in
+// the grid.
+//
+// By default, the width is one column.
+//
+// Access: Private
+//
+// Since: 1.0.0
+
+$_sidebar-width: $grid-number-columns * math.div( 1, $number-columns );
+
+// Styles for the content area (formerly styled by article[role=main]).
+// Sits next to the sidebar.
+//
+// Access: Public
+//
+// Since: 1.0.0
+
+//TO-DO: place holders, replace with more formal variables
+:root {
+	--bu--content--padding-block: 1em;
+	--bu--content--padding-inline: 1rem;
+	--bu--content--margin-block: var(--bu--content--padding-block);
+	--bu--content--margin-inline: var(--bu--content--padding-inline);
+	--bu--content--column-gap: var(--bu--content--padding-inline);
+	--bu--content--row-gap: var(--bu--content--padding-block);
+
+	--bu--content--width-default-base: 600px;
+	--bu--content--width-default-clamped: clamp( 0%, var(--bu--content--width-default-base), calc(100% - ( var(--bu--content--margin-inline) * 2 ) ) );
+
+	--bu--content--width-float-base: calc( var(--bu--content--width-default-base) * 0.5 );
+	--bu--content--width-float-clamped: clamp( 0%, var(--bu--content--width-float-base), calc(100% - ( var(--bu--content--margin-inline) * 2 ) ) );
+
+	--bu--content--width-nested-float-base: 50%;
+	--bu--content--width-nested-float-clamped: clamp( 0%, var(--bu--content--width-nested-float-base), calc(100% - ( var(--bu--content--margin-inline) * 2 ) ) );
+
+	--bu--content--width-wide-base: 1000px;
+	--bu--content--width-wide-clamped: clamp( 0%, var(--bu--content--width-wide-base), calc(100% - ( var( --bu--content--margin-inline ) * 2 ) ) );
+
+	--bu--content--margin-offset: clamp(0%, 50% - ( var(--bu--content--width-default-clamped) * 0.5 ), 100%);
+
+}
+
+body {
+	padding: 0;
+}
+
+.wp-block-embed {
+	margin: 0;
+}
+
+
+%content-root-container {
+	background: #e666;
+	flex-grow: 1;
+	padding: 0;
+
+	> {
+		* {
+			background: #e666;
+			margin-inline: auto;
+			max-width: var(--bu--content--width-default-clamped);
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	ul,
+	ol,
+	.wp-block,
+	.bu-callout,
+	.gallery,
+	.bu_collapsible_container,
+	.gform_legacy_markup_wrapper {
+		background: #e666;
+		margin-block: var(--bu--content--margin-block);
+	}
+
+	:where(
+		.alignwide,
+		[data-align="wide"]
+	) {
+		box-sizing: border-box;
+		clear: both;
+		margin-inline: auto;
+		max-width: var(--bu--content--width-wide-clamped);
+	}
+
+	.alignfull,
+	[data-align="full"] {
+		clear: both;
+		max-width: none;
+		margin-inline: auto;
+	}
+
+	.alignleft,
+	.alignright,
+	[data-align="left"],
+	[data-align="right"] {
+		margin-block-start: 0;
+		margin-block-end: var(--bu--content--margin-block);
+		max-width: var(--bu--content--width-nested-float-clamped);
+	}
+
+	> .alignleft,
+	> .alignright,
+	> [data-align="left"],
+	> [data-align="right"] {
+		max-width: var( --bu--content--width-float-clamped );
+	}
+
+	.alignleft,
+	[data-align="left"] {
+		float: left;
+		margin-inline-end: var( --bu--content--margin-inline ) !important;
+	}
+
+	> .alignleft,
+	> [data-align="left"] {
+		margin-inline-start: var(--bu--content--margin-offset) !important;
+	}
+
+	.alignright,
+	[data-align="right"] {
+		float: right;
+		margin-inline-start: var( --bu--content--margin-inline ) !important;
+	}
+
+	> .alignright,
+	> [data-align="right"] {
+		margin-inline-end: var(--bu--content--margin-offset) !important;
+	}
+
+
+	* {
+		&.has-background {
+			padding-block: var(--bu--content--padding-block);
+			padding-inline: var( --bu--content--margin-inline );
+
+			> * {
+				&:first-child {
+					margin-block-start: 0;
+				}
+
+				&:last-child {
+					margin-block-end: 0;
+				}
+			}
+		}
+	}
+
+	// Column Block accomidations
+	.wp-block-columns {
+		column-gap: var(--bu--content--column-gap);
+		row-gap: var(--bu--content--row-gap);
+		margin-block: 0;
+	}
+
+	.wp-block-column {
+		margin: 0 !important;
+
+		> * {
+			&:first-child {
+				margin-block-start: 0;
+			}
+
+			&:last-child {
+				margin-block-end: 0;
+			}
+		}
+	}
+
+	// Image Block accomidations
+	.wp-block-image {
+		&:is(figure) {
+			margin: 0;
+		}
+
+		&:has( figure ) {
+			display: inline;
+		}
+
+		> figure {
+			margin-inline: auto;
+			max-width: var(--bu--content--width-float-clamped);
+		}
+		
+		.alignleft,
+		.alignright {
+			margin-block-start: 0;
+			margin-block-end: var(--bu--content--margin-block);
+			max-width: var(--bu--content--width-nested-float-clamped);
+		}
+		
+		.alignleft {
+			margin-inline-end: var(--bu--content--margin-inline) !important;
+		}
+		
+		.alignright {
+			margin-inline-start: var(--bu--content--margin-inline) !important;
+		}
+
+		img {
+			vertical-align: bottom;
+		}
+	}
+	
+	> .wp-block-image {
+		.alignleft,
+		.alignright {
+			max-width: var(--bu--content--width-float-clamped);
+		}
+
+		.alignleft {
+			margin-inline-start: var(--bu--content--margin-offset) !important;
+		}
+
+		.alignright {
+			margin-inline-end: var(--bu--content--margin-offset) !important;
+		}
+	}
+
+	// Embed Block accomidations
+	.wp-block {
+		&:has( > .wp-block-embed ) {
+			width: var(--bu--content--width-nested-float-clamped);
+
+			&[data-align="right"] {
+				width: var(--bu--content--width-float-clamped);
+			}
+		}
+
+		.wp-block-embed {
+			max-width: none;
+		}
+	}
+
+	.wp-block-embed {
+		.wp-block-embed__wrapper {
+			min-width: auto;
+		}
+	}
+}
+
+.content-area,
+.block-editor-block-list__layout.is-root-container {
+	@extend %content-root-container;
+}
+
+// Sidebar
+// -----------------------------------------------------------------
+
+// The amount of padding to add to the sidebar.
+// Calculated based on the number of columns by default.
+//
+// Access: Public
+//
+// Since: 1.2.0
+
+// $sidebar-padding:                          3.46667% !default; // $sidebar-padding:                          ( $margin-width - $margin-width * ( 1 / ( $number-widgets-footbar ) ) ) !default;
+
+// The default class for styling sidebars.
+//
+// Access: Public
+//
+// Since: 1.0.0
+
+.sidebar {
+	padding-block: var(--bu--content--padding-block);
+	padding-inline: var(--bu--content--padding-inline);
+
+	@include breakpoint( $sm ) {
+		max-width: clamp( 25%, 360px, 33.3333%);
+	}
+}
+
+// Layouts
+// -----------------------------------------------------------------
+
+// Styles for the left sidebar location.
+//
+// Access: Public
+//
+// Since: 1.2.0
+
+.sidebar-location-left {
+	.sidebar {
+		@extend %col-md-pull-#{$_content-width};
+	}
+}
+
+// Styles for narrow content.
+//
+// Access: Public
+//
+// Since: 1.4.0
+
+.content-container-narrow {
+	.sidebar {
+		@extend %clearfix;
+		@extend %col-sm-margin-parent;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.widget {
+		@extend %col-sm-margin-half;
+	}
+}
