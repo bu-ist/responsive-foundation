@@ -181,5 +181,16 @@ $color-icons:										 unset !default;
 		} @else {
 			@error "`#{$name}` is not a supported icon. See www.bu.edu/cdn/fonts/icons/bu-default-icons/specimen-icons.html for a list of supported icons. If this is a custom icon you meant to add for your own icon font, be sure you've added it to the `$icons-theme` map.";
 		}
+
+		// Icons in the $icons-budefaulticons map need a different font-family and weight.
+		@if map-has-key( $icons-budefaulticons, $name ) {
+			font-family: "BU-Default-Icons";
+			font-weight: 400;
+
+		// Icons in the $icons-fontawesomebrands map need a different font-family and weight.
+		} @else if map-has-key( $icons-fontawesomebrands, $name ) {
+			font-family: "Font Awesome 5 Brands";
+			font-weight: 400;
+		} 
 	}
 }
