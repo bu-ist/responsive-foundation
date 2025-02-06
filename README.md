@@ -1,6 +1,6 @@
 # Responsive Foundation
 
-Responsive Foundation is Boston University's front-end development framework. Built in Sass and JavaScript, Foundation powers the frontend of custom WordPress themes, longform editorial work, and special projects such as our Annual Report. 
+Responsive Foundation is Boston University's front-end development framework. Built in Sass and JavaScript, Foundation powers the frontend of custom WordPress themes, longform editorial work, and special projects such as our Annual Report.
 
 This framework is currently internal, and may not be used without permission.
 
@@ -53,8 +53,8 @@ You can get moving quickly by importing the full package in your Sass:
 
 You can also choose to import individual partials. Individual build tool setups vary, but if you
 are using [grunt-sass](https://github.com/sindresorhus/grunt-sass) to manage compiling your Sass,
-you can use the [`includePaths` option](https://github.com/sass/node-sass#includepaths) to simplify 
-your import paths by adding the folder path to Responsive Foundation in `node_modules`. 
+you can use the [`includePaths` option](https://github.com/sass/node-sass#includepaths) to simplify
+your import paths by adding the folder path to Responsive Foundation in `node_modules`.
 
 For a highly customizable implementation of Foundation that leans heavily on customization with
 Sass variables, see the [Responsive Child Starter package](https://github.com/bu-ist/responsive-child-starter).
@@ -65,7 +65,7 @@ Full usage documentation can be found in our [style guide](https://bu-ist.github
 
 After each major release, one version is maintained until everyone can be upgraded to the next major version. Currently, these versions are maintained for the purposes of hotfixes only:
 
-* 0.1.0.2
-* 1.0.4.2
-* 1.4.1
-* 1.4.2.2
+- 0.1.0.2
+- 1.0.4.2
+- 1.4.1
+- 1.4.2.2
