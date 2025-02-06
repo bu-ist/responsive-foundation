@@ -1,8 +1,10 @@
 # Changelog
 
 ## Unreleased
-- Add icons for X, X-alt, and bluesky to icons and social menus.
 
+## 4.0.2
+
+- Add icons for X, X-alt, and bluesky to icons and social menus.
 - `npm audit fix`
 - Adds .nvmrc
 - Fixes #276 toggle menu aria-label
