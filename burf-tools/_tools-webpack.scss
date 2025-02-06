@@ -40,15 +40,15 @@
 
 $burf-extras:								       false !default;
 
-@import '~@bu-ist/burf-base/config';
-@import '~@bu-ist/burf-base/mixins';
-@import '~@bu-ist/burf-base/accessibility';
-@import '~@bu-ist/burf-base/normalize-variables';
+@import '~@bostonuniversity/burf-base/config';
+@import '~@bostonuniversity/burf-base/mixins';
+@import '~@bostonuniversity/burf-base/accessibility';
+@import '~@bostonuniversity/burf-base/normalize-variables';
 
-@import '~@bu-ist/burf-base/grid/grid-variables';
-@import '~@bu-ist/burf-base/grid/grid-mixins';
-@import '~@bu-ist/burf-base/grid/grid-placeholders';
-@import '~@bu-ist/burf-base/grid/grid-friendly';
+@import '~@bostonuniversity/burf-base/grid/grid-variables';
+@import '~@bostonuniversity/burf-base/grid/grid-mixins';
+@import '~@bostonuniversity/burf-base/grid/grid-placeholders';
+@import '~@bostonuniversity/burf-base/grid/grid-friendly';
 
 // Use Default Icons
 //
@@ -76,7 +76,7 @@ $use-default-icons:                        false !default;
 
 $print-icon-classes:                       false !default;
 
-@import '~@bu-ist/burf-base/icons/package';
+@import '~@bostonuniversity/burf-base/icons/package';
 
-@import '~@bu-ist/burf-base/typography-variables';
-@import '~@bu-ist/burf-base/typography-tools';
+@import '~@bostonuniversity/burf-base/typography-variables';
+@import '~@bostonuniversity/burf-base/typography-tools';

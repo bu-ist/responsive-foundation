@@ -1,6 +1,6 @@
 {
-  "name": "@bu-ist/burf-theme",
-  "version": "5.0.0-alpha.0",
+  "name": "@bostonuniversity/burf-theme",
+  "version": "5.0.0-alpha.10",
   "homepage": "https://bu-ist.github.io/responsive-foundation/",
   "description": "A sensible boilerplate and library of styles for WordPress, intended to work with the Boston University Responsive Framework parent theme.",
   "authors": [
@@ -24,12 +24,10 @@
     "bootstrap",
     "framework"
   ],
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com/@bu-ist"
-  },
+  "main": "js/theme.js",
   "repository" : {
     "type" : "git",
-    "url": "ssh://git@github.com:bu-ist/responsive-foundation.git",
+    "url": "https://github.com:bu-ist/responsive-foundation.git",
     "directory": "burf-theme"
   },
   "browserslist": [
@@ -46,6 +44,6 @@
     ]
   },
   "dependencies": {
-    "@bu-ist/burf-base": "5.0.0"
+    "@bostonuniversity/burf-base": "^5.0.0-alpha.10"
   }
 }

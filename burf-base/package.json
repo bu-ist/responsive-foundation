@@ -1,6 +1,6 @@
 {
-  "name": "@bu-ist/burf-base",
-  "version": "5.0.0",
+  "name": "@bostonuniversity/burf-base",
+  "version": "5.0.0-alpha.10",
   "homepage": "https://bu-ist.github.io/responsive-foundation/",
   "description": "A sensible boilerplate and library of styles for responsive web design, based on the best ideas from Foundation and Bootstrap.",
   "authors": [
@@ -24,12 +24,9 @@
     "bootstrap",
     "framework"
   ],
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com/@bu-ist"
-  },
-  "repository" : {
-    "type" : "git",
-    "url": "ssh://git@github.com:bu-ist/responsive-foundation.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bu-ist/responsive-foundation.git",
     "directory": "burf-base"
   },
   "browserslist": [
@@ -47,9 +44,9 @@
   },
   "main": "js/theme.js",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "mathsass": "^0.10.1",
-    "normalize-scss": "^7.0.1",
-    "kss": "^3.0.0-beta.25"
+    "normalize-scss": "^7.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -78,7 +75,7 @@
     "grunt-postcss": "^0.9.0",
     "grunt-sass": "^3.0.2",
     "id-kss-builder": "git+ssh://git@github.com/bu-ist/id-kss-builder.git#1.1.0",
-    "node-sass": "^4.14.0",
+    "node-sass": "^7.0.1",
     "time-grunt": "^2.0.0"
   }
 }

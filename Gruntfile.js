@@ -17,18 +17,18 @@ module.exports = ( grunt ) => {
 	// Configure Grunt.
 	grunt.initConfig( {
 		pkg: grunt.file.readJSON( 'package.json' ),
+		kssDocsFilePath: kssDocsFilePath, 
+		kssDocsCustomCSSPath: kssDocsCustomCSSPath, 
 		babel: {
 			options: {
-				cwd: 'js-dev',
+				cwd: 'burf-theme/js-dev/modules/',
 				sourceMap: false,
+				presets: ['@babel/preset-env', "@wordpress/default"] // A temporary solution because the repo can't find babelrc.
 			},
 			dist: {
 				files: [
 					{
-						expand: true, // Enable dynamic expansion.
-						cwd: 'js-dev/modules/', // Src matches are relative to this path.
-						src: [ '*.js' ], // Actual pattern(s) to match.
-						dest: 'js-dev/dist/', // Destination path prefix.
+						'burf-theme/js-dev/dist/toggle.js': 'burf-theme/js-dev/modules/toggle.js'
 					},
 				],
 			},
@@ -38,22 +38,22 @@ module.exports = ( grunt ) => {
 				watch: true,
 				browserifyOptions: {
 					debug: false,
-					transform: [ [ 'babelify' ] ],
+					transform: [['babelify', { "presets": ["@babel/preset-env", "@wordpress/default"] }]]
 				},
 			},
 			dist: {
 				files: [
 					{
 						expand: true, // Enable dynamic expansion.
-						cwd: 'js-dev/', // Src matches are relative to this path.
+						cwd: 'burf-theme/js-dev/', // Src matches are relative to this path.
 						src: [ '*.js' ], // Actual pattern(s) to match.
-						dest: 'js/', // Destination path prefix.
+						dest: 'burf-theme/js/', // Destination path prefix.
 					},
 				],
 			},
 		},
 		clean: {
-			js: [ 'js/**/*.js', 'js/**/*.map' ],
+			js: [ 'burf-theme/js/**/*.js', 'burf-theme/js/**/*.map' ],
 		},
 		uglify: {
 			options: {
@@ -64,9 +64,9 @@ module.exports = ( grunt ) => {
 					{
 						// Note: Overwrites the un-uglified version.
 						expand: true, // Enable dynamic expansion.
-						cwd: 'js/', // Src matches are relative to this path.
+						cwd: 'burf-theme/js/', // Src matches are relative to this path.
 						src: [ '*.js' ], // Actual pattern(s) to match.
-						dest: 'js/', // Destination path prefix.
+						dest: 'burf-theme/js/', // Destination path prefix.
 					},
 				],
 			},
@@ -110,15 +110,16 @@ module.exports = ( grunt ) => {
 			options: {
 				implementation: sass,
 				sourceMap: true,
+				includePaths: [ 'burf-base', 'burf-theme', 'burf-customizations' ]
 			},
 			docs: {
 				options: {
 					style: 'compressed',
 				},
 				files: {
-					'docs/css/docs.css': '_docs/css-dev/docs.scss',
-					kssDocsFilePath: '_docs/css-dev/docs.scss',
-					kssDocsCustomCSSPath: '_docs/css-dev/kss-custom.scss'
+					'docs/css/docs.css' : '_docs/css-dev/docs.scss',
+					'<%= kssDocsFilePath %>' : '_docs/css-dev/docs.scss',
+					'<%= kssDocsCustomCSSPath %>' : '_docs/css-dev/kss-custom.scss'
 				},
 			},
 			build: {
@@ -126,8 +127,9 @@ module.exports = ( grunt ) => {
 					style: 'expanded',
 				},
 				files: {
-					'css/burf-base.css': 'css-dev/burf-base.scss',
-					'css/burf-theme.css': 'css-dev/burf-theme.scss',
+					'burf-base/dist/burf-base.css': 'burf-base/burf-base.scss',
+					'burf-base/dist/burf-theme.css': 'burf-theme/burf-theme.scss',
+					'burf-customizations/dist/burf-customizations.css': 'burf-customizations/burf-customizations.scss',
 				},
 			},
 		},
@@ -157,7 +159,7 @@ module.exports = ( grunt ) => {
 				tasks: [ 'copy' ],
 			},
 			scripts: {
-				files: [ 'js-dev/**/*.js' ],
+				files: [ 'burf-theme/js-dev/**/*.js' ],
 				tasks: [ 'js', 'concat' ],
 			},
 			styles: {
@@ -194,11 +196,62 @@ module.exports = ( grunt ) => {
 			},
 			dist: {
 				src: [
-					'css-dev'
+					'burf-base',
+					'burf-theme',
+					'burf-tools',
+					'burf-customizations'
 				],
 				dest: docsVersionFilePath
 			}
 		},
+		version: {
+			options: {
+				pkg: pkg,
+			},
+			bump: {
+				options: {
+			        prefix: 'version\\"\\:\\ \\"'
+			    },
+				src: [
+					'burf-base/package.json',
+					'burf-customizations/package.json',
+					'burf-theme/package.json',
+					'burf-tools/package.json'
+				]
+			},
+			base: {
+				options: {
+			        prefix: 'burf\\-base\\"\\:\\ \\"\\^'
+			    },
+				src: [
+					'package.json',
+					'burf-customizations/package.json',
+					'burf-theme/package.json',
+					'burf-tools/package.json'
+				]
+			},
+			customizations: {
+				options: {
+			        prefix: 'burf\\-customizations\\"\\:\\ \\"\\^'
+			    },
+				src: ['package.json']
+			},
+			theme: {
+				options: {
+			        prefix: 'burf\\-theme\\"\\:\\ \\"\\^'
+			    },
+				src: [
+					'package.json',
+					'burf-customizations/package.json',
+				]
+			},
+			tools: {
+				options: {
+			        prefix: 'burf\\-tools\\"\\:\\ \\"\\^'
+			    },
+				src: ['package.json']
+			}
+		}
 	});
 
 	// Load Plugins.
@@ -213,8 +266,9 @@ module.exports = ( grunt ) => {
 	grunt.loadNpmTasks( 'grunt-gh-pages' );
 	grunt.loadNpmTasks( 'grunt-sass' );
 	grunt.loadNpmTasks( 'grunt-kss' );
-	//grunt.registerTask( 'build', [ 'js', 'kss', 'copy' ] );
-	grunt.registerTask( 'build', [ 'js', 'copy' ] );
+	grunt.loadNpmTasks( 'grunt-version' );
+	grunt.registerTask( 'build', [ 'js', 'kss', 'copy' ] );
+	//grunt.registerTask( 'build', [ 'js', 'copy' ] );
 	grunt.registerTask( 'deploy', [ 'build', 'gh-pages' ] );
 	grunt.registerTask( 'js', [ 'clean:js', 'babel', 'browserify', 'uglify' ] );
 	grunt.registerTask( 'serve', [ 'build', 'browserSync:current', 'watch' ] );

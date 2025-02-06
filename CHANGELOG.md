@@ -1,5 +1,9 @@
 # Changelog
 
+## 5.0.0-alpha.7
+* Officially publishes to npm under the @bostonuniversity account!
+* Removes support for the tripadvisor icon in FontAwesome
+
 ## 5.0.0-alpha
 
 * Fixes #235
@@ -29,6 +33,9 @@
     - `bulp/bulp-base`;
 * Migrates the following partials from `burf-base` to `burf-customizations`:
     - `fonts`;
+* Migrates the following folders from `responsive-foundation` to `burf-theme`:
+    - `js`;
+    - `js-dev`;
 
 ## 4.0.1
 

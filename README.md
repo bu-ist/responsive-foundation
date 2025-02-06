@@ -23,37 +23,24 @@ Note that this repository does not include any production-ready assets (e.g. min
 We recommend installing Foundation using Node Package Manager (npm). You can learn more about how to install npm
 here: https://www.npmjs.com/get-npm
 
-### Generate your access token
-
-This repository uses Github Packages to manage packages. To install it, you'll need to create a [Github Personal Access Token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token) with the `read:packages` scope only. This only needs to happen once!
-
-### Add your access token to the global NPM settings (npmrc)
-
-After you've generated your personal access token, you can update your global `.npmrc` so that anytime you want to use a package from Responsive Foundation, you can just install and go. You'll only need to do this once. In a new Terminal window, run the following commands, replacing `YOURTOKENHERE` with the Personal Access Token you generated above:
-
-`npm config set "@bu-ist:registry" https://npm.pkg.github.com`
-
-Then run:
-
-`npm config set "//npm.pkg.github.com/:_authToken" YOURTOKENHERE`
-
-### Install and go!
+## Choose your package and go!
 
 Once you're set up, you can install Foundation in your project directory like so (be sure to `cd` first!). You can choose from any of the following setups depending on your project's needs:
 
 - **WordPress Themes**
-	- We recommend using both `burf-base` and `burf-theme` when working with WordPress themes.
-	- To install, run `npm install --save-dev @bu-ist/burf-base@latest @bu-ist/burf-theme@latest`.
-	- **Boston University themes only:** Please also run `npm install --save-dev @bu-ist/burf-customizations@latest` to install BU-specific styles.
+	- We recommend using  the `burf-theme` package when working with WordPress themes.
+	- To install, run `npm install --save-dev @bostonuniversity/burf-theme@latest`.
+	- **Boston University themes only:** See below for instructions on how to install BU-specific styles.
 - **Websites Outside of WordPress** 
 	- If you are building a website outside of WordPress and don't already have your own CSS reset and basic styles for HTML elements, `burf-base` is probably the best match for you.
-	- To install, run `npm install --save-dev @bu-ist/burf-base@latest @bu-ist/burf-base@latest`.
+	- To install, run `npm install --save-dev @bostonuniversity/burf-base@latest`.
 - **Plugins and Code Inside Existing Websites** 
 	- If you already have a CSS reset, or plan to use this code in an environment where you only want the absolute minimum amount of CSS to print (such as a WordPress plugin or code for a single page inside of an existing website), `burf-tools` gives you access to all of the mixins, extends, and functionality of Responsive Foundation without any of the fluff whatsoever.
-	- To install, run `npm install --save-dev @bu-ist/burf-tools@latest`.
-- **Official Boston University Websites** 
+	- To install, run `npm install --save-dev @bostonuniversity/burf-tools@latest`.
+- **Official Boston University WordPress Themes** 
 	- Official Boston University websites which reside on our servers should also install `burf-customizations`. These additional styles are meant to work with our customized WordPress environment, including our university-specific plugins.
-	- To install, run `npm install --save-dev @bu-ist/burf-customizations@latest`.
+	- Please note that only employees of Boston University Interactive Design or IS&T are authorized to use or grant access to this package. 
+	- To install everything you need for an official Boston University website, run `npm install --save-dev @bostonuniversity/burf-customizations@latest`.
 
 ## Sass Usage
 
@@ -98,15 +85,14 @@ Full usage documentation can be found in our [style guide](https://bu-ist.github
 
 After each major release, one version is maintained until everyone can be upgraded to the next major version. Currently, these versions are maintained for the purposes of hotfixes only:
 
-* 0.1.0.2
-* 1.0.4.2
-* 1.4.1
-* 1.4.2.2
+* 0.1.0.2 (Migrate to 0.1.021 if you need to move off Bower and Ruby Sass)
+* 1.0.4.2 (Migrate to 1.0.44 if you need to move off Bower and Ruby Sass)
+* 1.4.1 (Migrate to 1.4.3 if you need to move off Bower and Ruby Sass)
+* 1.4.2.2 (Migrate to 1.4.3 if you need to move off Bower and Ruby Sass)
 
 ## Upgrading to 5.0.0
 
-Version `5.0.0` is a major update that will require you to reconfigure some of your settings in order for your builds to run correctly. Here's what you'll need to do:
+Version `5.0.0` is a major update that will require you to reconfigure some of your settings in order for your builds to run correctly. Head to [UPGRADING.md](/UPGRADING.md) to find out what you'll need to do.
 
-- `css-dev` is now split into `burf-base`, `burf-theme`, and `burf-tools` folders. Be sure to update your `includePaths` in your Sass compilation settings.
-- All pacakges are now scoped to `@bu-ist`. In your settings, you may have referenced `responsive-foundation` inside the `node_modules` folder. You'll now find all packages inside of `@bu-ist`.
-- `tools-cgb` has been renamed to `tools-webpack` to better describe the type of build process that set of tools is compatible with.
+## Contributing
+Follow the instructions in [Framework Development and Release Workflows](https://github.com/bu-ist/responsive-framework/wiki/Framework-Development-and-Release-Workflows) to test your Foundation changes.
