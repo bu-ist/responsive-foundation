@@ -8,7 +8,68 @@ of our functionality.
 
 ## Updating to 5x
 
-Add a step by step process for upgrades here.
+### Uninstall older versions of Foundation
+
+`cd` to your project folder, and run the following commands in Terminal
+to remove old versions of Responsive Foundation:
+
+`npm uninstall responsive-foundation --save-dev`
+
+#### Boston University IS&T and Interactive Design themes only
+
+This release separated out BU-specific styles so that we could open source everything
+else. Run the following command to install everything you need, including BU-specific stuff:
+
+`npm install @bu-ist/burf-customizations@latest --save-dev`
+
+### All other projects
+
+`cd` to your project folder, and run the following commands to install the
+latest version of the components you need from Responsive Foundation. Most
+likely, this is `burf-base` and `burf-theme`. [See recommended configurations here.](https://github.com/bu-ist/responsive-foundation#install-and-go)
+
+`npm install @bu-ist/burf-base@latest @bu-ist/burf-theme@latest --save-dev`
+
+### Update Gruntfile.js
+
+Do a find and replace in the `Gruntfile.js` file for the following text:
+
+| Text to find                                 | Replace with                              |
+| -------------------------------------------- | ----------------------------------------- |
+| `node_modules/responsive-foundation/css-dev` | `node_modules/@bu-ist`                    |
+| `node_modules/responsive-foundation/js-dev/` | `node_modules/@bu-ist/burf-theme/js-dev/` |
+
+### Update scripts
+
+Do a find and replace in the `js-dev` folder for the following text:
+
+| Text to find                      | Replace with                               |
+| --------------------------------- | ------------------------------------------ |
+| `responsive-foundation/`          | `@bu-ist/burf-theme/`                      |
+
+### Update import paths
+
+Do a find and replace in the `css-dev` folder for the following text:
+
+| Text to find                      | Replace with                               |
+| --------------------------------- | ------------------------------------------ |
+| `burf-base/fonts`                 | `burf-customizations/fonts`                |
+| `burf-theme/bulp`                 | `burf-customizations/bulp`                 |
+| `burf-theme/calendar`             | `burf-customizations/calendar`             |
+| `burf-theme/content/collapsibles` | `burf-customizations/content/collapsibles` |
+| `burf-theme/content/courses`      | `burf-customizations/content/courses`      |
+| `burf-theme/content/slideshows`   | `burf-customizations/content/slideshows`   |
+| `burf-theme/layout/branding`      | `burf-customizations/layout/branding`      |
+| `burf-theme/profiles`             | `burf-customizations/profiles`             |
+
+### Update import order
+
+In `css-dev/style.scss`, reverse the order of the navigation and branding imports,
+like so:
+
+| Old                                                     | New                                                     |
+| ------------------------------------------------------- | ------------------------------------------------------- |
+| `@import "layout/branding" @import "layout/navigation"` | `@import "layout/navigation" @import "layout/branding"` |
 
 More details on the exact changes are here: https://github.com/bu-ist/responsive-foundation/releases/tag/5.0.0
 

@@ -40,10 +40,10 @@
   },
   "main": "js/theme.js",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.1",
-    "kss": "^3.0.0-beta.25",
-    "mathsass": "^0.10.1",
-    "normalize-scss": "^7.0.1"
+    "@bostonuniversity/burf-base": "^5.0.0-alpha.10",
+    "@bostonuniversity/burf-customizations": "^5.0.0-alpha.10",
+    "@bostonuniversity/burf-theme": "^5.0.0-alpha.10",
+    "@bostonuniversity/burf-tools": "^5.0.0-alpha.10"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -70,9 +70,43 @@
     "grunt-gh-pages": "^4.0.0",
     "grunt-kss": "^5.0.1",
     "grunt-postcss": "^0.9.0",
-    "grunt-sass": "^3.0.2",
+    "grunt-sass": "^3.1.0",
+    "grunt-version": "^2.0.0",
     "id-kss-builder": "git+ssh://git@github.com/bu-ist/id-kss-builder.git#1.1.0",
-    "node-sass": "^4.14.0",
-    "time-grunt": "^2.0.0"
+    "kss": "3.0.0-beta.23",
+    "node-sass": "^7.0.1",
+    "time-grunt": "^2.0.0",
+    "npm-watch": "^0.11.0",
+    "yalc": "^1.0.0-pre.53"
+  },
+  "scripts": {
+    "__Linking__": "=========================================================================",
+    "yalc:all": "(cd burf-customizations && yalc publish) && (cd burf-base && yalc publish) && (cd burf-tools && yalc publish) && (cd burf-theme && yalc publish)",
+    "yalc:push": "(cd burf-customizations && yalc publish --push) && (cd burf-base && yalc publish --push) && (cd burf-tools && yalc publish --push) && (cd burf-theme && yalc publish --push)",
+    "yalc:changed": "(cd burf-customizations && yalc push --changed) && (cd burf-base && yalc push --changed) && (cd burf-tools && yalc push --changed) && (cd burf-theme && yalc push --changed)",
+    "yalc:watch": "npm-watch yalc:changed"
+  },
+  "watch": {
+    "yalc:changed": {
+      "patterns": [
+        "burf-base",
+        "burf-theme",
+        "burf-customizations",
+        "burf-tools"
+      ],
+      "extensions": "js,scss",
+      "quiet": false
+    },
+    "build": {
+      "patterns": [
+        "burf-base",
+        "burf-theme",
+        "burf-customizations",
+        "burf-tools",
+        "_docs"
+      ],
+      "extensions": "js,scss,html",
+      "quiet": false
+    }
   }
 }
