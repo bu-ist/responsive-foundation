@@ -73,7 +73,39 @@
     "grunt-version": "^2.0.0",
     "id-kss-builder": "git+ssh://git@github.com/bu-ist/id-kss-builder.git#1.1.0",
     "kss": "3.0.0-beta.23",
-    "node-sass": "^4.14.0",
-    "time-grunt": "^2.0.0"
+    "node-sass": "^7.0.1",
+    "time-grunt": "^2.0.0",
+    "npm-watch": "^0.11.0",
+    "yalc": "^1.0.0-pre.53"
+  },
+  "scripts": {
+    "__Linking__": "=========================================================================",
+    "yalc:all": "(cd burf-customizations && yalc publish) && (cd burf-base && yalc publish) && (cd burf-tools && yalc publish) && (cd burf-theme && yalc publish)",
+    "yalc:push": "(cd burf-customizations && yalc publish --push) && (cd burf-base && yalc publish --push) && (cd burf-tools && yalc publish --push) && (cd burf-theme && yalc publish --push)",
+    "yalc:changed": "(cd burf-customizations && yalc push --changed) && (cd burf-base && yalc push --changed) && (cd burf-tools && yalc push --changed) && (cd burf-theme && yalc push --changed)",
+    "yalc:watch": "npm-watch yalc:changed"
+  },
+  "watch": {
+    "yalc:changed": {
+      "patterns": [
+        "burf-base",
+        "burf-theme",
+        "burf-customizations",
+        "burf-tools"
+      ],
+      "extensions": "js,scss",
+      "quiet": false
+    },
+    "build": {
+      "patterns": [
+        "burf-base",
+        "burf-theme",
+        "burf-customizations",
+        "burf-tools",
+        "_docs"
+      ],
+      "extensions": "js,scss,html",
+      "quiet": false
+    }
   }
 }
