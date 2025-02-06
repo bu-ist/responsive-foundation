@@ -75,19 +75,17 @@ $_profile-adv-cols-md: $grid-number-columns / $profiles-advanced-cols-md;
 	@extend %col-xs-#{$_profile-adv-cols-xs};
 	@extend %col-md-#{$_profile-adv-cols-md};
 
-
+	@include breakpoint( $md ) {
+		&:nth-child( #{$profiles-advanced-cols-md}n+1 ) {
+			clear: left;
+		}
+	}
 
 	&:nth-child( #{$profiles-advanced-cols-xs}n+1 ) {
 		clear: left;
 
 		@include breakpoint( $md ) {
 			clear: none;
-		}
-	}
-
-	@include breakpoint( $md ) {
-		&:nth-child( #{$profiles-advanced-cols-md}n+1 ) {
-			clear: left;
 		}
 	}
 }
