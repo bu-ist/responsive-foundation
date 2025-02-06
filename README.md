@@ -1,4 +1,4 @@
-[![Welcome to Boston University Responsive Foundation 5.0. Install now](https://user-images.githubusercontent.com/1828613/103576393-11302080-4ea1-11eb-8ed8-a1d08a1cdb67.jpg)](#installation) 
+[![Welcome to Boston University Responsive Foundation 5.0. Install now](https://user-images.githubusercontent.com/1828613/103576393-11302080-4ea1-11eb-8ed8-a1d08a1cdb67.jpg)](#installation)
 
 # What is Responsive Foundation?
 
@@ -42,18 +42,18 @@ Then run:
 Once you're set up, you can install Foundation in your project directory like so (be sure to `cd` first!). You can choose from any of the following setups depending on your project's needs:
 
 - **WordPress Themes**
-	- We recommend using both `burf-base` and `burf-theme` when working with WordPress themes.
-	- To install, run `npm install --save-dev @bu-ist/burf-base@latest @bu-ist/burf-theme@latest`.
-	- **Boston University themes only:** Please also run `npm install --save-dev @bu-ist/burf-customizations@latest` to install BU-specific styles.
-- **Websites Outside of WordPress** 
-	- If you are building a website outside of WordPress and don't already have your own CSS reset and basic styles for HTML elements, `burf-base` is probably the best match for you.
-	- To install, run `npm install --save-dev @bu-ist/burf-base@latest @bu-ist/burf-base@latest`.
-- **Plugins and Code Inside Existing Websites** 
-	- If you already have a CSS reset, or plan to use this code in an environment where you only want the absolute minimum amount of CSS to print (such as a WordPress plugin or code for a single page inside of an existing website), `burf-tools` gives you access to all of the mixins, extends, and functionality of Responsive Foundation without any of the fluff whatsoever.
-	- To install, run `npm install --save-dev @bu-ist/burf-tools@latest`.
-- **Official Boston University Websites** 
-	- Official Boston University websites which reside on our servers should also install `burf-customizations`. These additional styles are meant to work with our customized WordPress environment, including our university-specific plugins.
-	- To install, run `npm install --save-dev @bu-ist/burf-customizations@latest`.
+  - We recommend using both `burf-base` and `burf-theme` when working with WordPress themes.
+  - To install, run `npm install --save-dev @bu-ist/burf-base@latest @bu-ist/burf-theme@latest`.
+  - **Boston University themes only:** Please also run `npm install --save-dev @bu-ist/burf-customizations@latest` to install BU-specific styles.
+- **Websites Outside of WordPress**
+  - If you are building a website outside of WordPress and don't already have your own CSS reset and basic styles for HTML elements, `burf-base` is probably the best match for you.
+  - To install, run `npm install --save-dev @bu-ist/burf-base@latest @bu-ist/burf-base@latest`.
+- **Plugins and Code Inside Existing Websites**
+  - If you already have a CSS reset, or plan to use this code in an environment where you only want the absolute minimum amount of CSS to print (such as a WordPress plugin or code for a single page inside of an existing website), `burf-tools` gives you access to all of the mixins, extends, and functionality of Responsive Foundation without any of the fluff whatsoever.
+  - To install, run `npm install --save-dev @bu-ist/burf-tools@latest`.
+- **Official Boston University Websites**
+  - Official Boston University websites which reside on our servers should also install `burf-customizations`. These additional styles are meant to work with our customized WordPress environment, including our university-specific plugins.
+  - To install, run `npm install --save-dev @bu-ist/burf-customizations@latest`.
 
 ## Sass Usage
 
@@ -67,7 +67,7 @@ you are adding to a pre-existing reset or stylesheet. It is set up to not print 
 and includes support for variables, mixins, the grid, icons, and typography only - in other words,
 all the "tools" you might want to use, without the bloat.
 - **burf-customizations** contains styles specific to Boston University websites, and should only be used
-for websites which reside in Boston University's official WordPress environment. These are not available 
+for websites which reside in Boston University's official WordPress environment. These are not available
 for public or open source use.
 
 ## Get moving quickly
@@ -86,8 +86,8 @@ You can get moving quickly by importing the full package in your Sass:
 
 You can also choose to import individual partials. Individual build tool setups vary, but if you
 are using [grunt-sass](https://github.com/sindresorhus/grunt-sass) to manage compiling your Sass,
-you can use the [`includePaths` option](https://github.com/sass/node-sass#includepaths) to simplify 
-your import paths by adding the folder path to Responsive Foundation in `node_modules`. 
+you can use the [`includePaths` option](https://github.com/sass/node-sass#includepaths) to simplify
+your import paths by adding the folder path to Responsive Foundation in `node_modules`.
 
 For a highly customizable implementation of Foundation that leans heavily on customization with
 Sass variables, see the [Responsive Child Starter package](https://github.com/bu-ist/responsive-child-starter).
@@ -98,10 +98,10 @@ Full usage documentation can be found in our [style guide](https://bu-ist.github
 
 After each major release, one version is maintained until everyone can be upgraded to the next major version. Currently, these versions are maintained for the purposes of hotfixes only:
 
-* 0.1.0.2
-* 1.0.4.2
-* 1.4.1
-* 1.4.2.2
+- 0.1.0.2
+- 1.0.4.2
+- 1.4.1
+- 1.4.2.2
 
 ## Upgrading to 5.0.0
 
