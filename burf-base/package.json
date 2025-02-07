@@ -1,6 +1,6 @@
 {
   "name": "@bostonuniversity/burf-base",
-  "version": "5.0.0-alpha.10",
+  "version": "5.0.1",
   "homepage": "https://bu-ist.github.io/responsive-foundation/",
   "description": "A sensible boilerplate and library of styles for responsive web design, based on the best ideas from Foundation and Bootstrap.",
   "authors": [
@@ -43,12 +43,10 @@
     ]
   },
   "main": "js/theme.js",
-  "dependencies": {
+  "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
     "mathsass": "^0.10.1",
-    "normalize-scss": "^7.0.1"
-  },
-  "devDependencies": {
+    "normalize-scss": "^7.0.1",
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@wordpress/babel-preset-default": "^3.0.2",
