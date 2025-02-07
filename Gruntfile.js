@@ -17,8 +17,8 @@ module.exports = ( grunt ) => {
 	// Configure Grunt.
 	grunt.initConfig( {
 		pkg: grunt.file.readJSON( 'package.json' ),
-		kssDocsFilePath: kssDocsFilePath, 
-		kssDocsCustomCSSPath: kssDocsCustomCSSPath, 
+		kssDocsFilePath: kssDocsFilePath,
+		kssDocsCustomCSSPath: kssDocsCustomCSSPath,
 		babel: {
 			options: {
 				cwd: 'burf-theme/js-dev/modules/',
@@ -268,7 +268,6 @@ module.exports = ( grunt ) => {
 	grunt.loadNpmTasks( 'grunt-kss' );
 	grunt.loadNpmTasks( 'grunt-version' );
 	grunt.registerTask( 'build', [ 'js', 'kss', 'copy' ] );
-	//grunt.registerTask( 'build', [ 'js', 'copy' ] );
 	grunt.registerTask( 'deploy', [ 'build', 'gh-pages' ] );
 	grunt.registerTask( 'js', [ 'clean:js', 'babel', 'browserify', 'uglify' ] );
 	grunt.registerTask( 'serve', [ 'build', 'browserSync:current', 'watch' ] );
