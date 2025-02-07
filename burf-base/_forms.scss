@@ -832,7 +832,7 @@ $border-radius-button:                     2px !default;
 
 form {
 	@extend %font-size-secondary;
-	font-family: var(--bu-text-font, #{$font-family-form});
+	font-family: var(--form-font-family, var(--bu-text-font, #{$font-family-form}));
 }
 
 // The general styles for the fieldset element.
@@ -844,8 +844,8 @@ form {
 
 fieldset {
 	border: var(--bu-border, #{$form-fieldset-border});
-	margin: var(--bu-spacing-half, #{$form-fieldset-margin});
-	padding: var(--bu-spacing, #{$form-fieldset-padding});
+	margin: var(--form-fieldset-margin, #{$form-fieldset-margin});
+	padding: var(--form-fieldset-padding, #{$form-fieldset-padding});
 }
 
 // The general styles for the legend element, which holds a caption for the
@@ -860,8 +860,8 @@ legend {
 	display: block;
 	font-size: 1.5em;
 	font-weight: 700;
-	margin: var(--bu-spacing-half, #{$form-legend-margin});
-	padding: var(--bu-spacing, #{$form-legend-padding});
+	margin: var(--form-legend-margin, #{$form-legend-margin});
+	padding: var(--form-legend-padding, #{$form-legend-padding});
 	width: 100%;
 }
 
@@ -879,7 +879,7 @@ textarea {
 label {
 	display: block;
 	font-weight: bold;
-	margin: var(--bu-spacing-half, #{$form-label-margin}) 0;
+	margin: var(--form-label-margin, #{$form-label-margin}) 0;
 }
 
 // The general styles for inputs which should look like buttons.
@@ -940,11 +940,11 @@ select,
 textarea {
 	@include	box-shadow( $form-input-shadow );
 	@include border-radius( $form-input-border-radius );
-	border: $form-input-border;
+	border: var(--form-input-border, var(--bu-border, #{$form-input-border}));
 	display: inline-block;
 	line-height: 1;
-	margin: $form-input-margin;
-	padding: $form-input-padding;
+	margin: var(--form-input-margin, #{$form-input-margin});
+	padding: var(--form-input-padding, #{$form-input-padding});
 
 	&:focus {
 		@extend %_form-input-focus-shadow;
@@ -1040,8 +1040,8 @@ input,
 textarea,
 select {
 	&:focus:invalid {
-		border-color: var(--color-error-500, #{$_invalid-border-color});
-		color: var(--color-error-500, #{$_invalid-text-color});
+		border-color: var(--border-color-invalid, #{$_invalid-border-color});
+		color: var(--text-color-invalid, #{$_invalid-text-color});
 	}
 }
 
@@ -1058,7 +1058,7 @@ select {
 [type="radio"],
 [type="checkbox"] {
 	&:focus:invalid {
-		outline-color: var(--color-error-500, #{$_invalid-border-color});
+		outline-color: var(--border-color-invalid, #{$_invalid-border-color});
 	}
 }
 
@@ -1070,8 +1070,8 @@ select {
 // Since: 1.0.0
 
 select {
-	background-color: var(--color-neutral-0, #{$color-grayscale-f});
-	border: 1px solid var(--color-neutral-300, #{$color-grayscale-c});
+	background-color: $color-grayscale-f;
+	border: 1px solid $color-grayscale-c;
 
 	&[multiple] {
 		height: auto;
@@ -1090,7 +1090,7 @@ select {
 // Since: 1.0.0
 
 .form-row {
-	margin: var(--bu-spacing-half, #{$form-row-margin});
+	margin: var(--form-row-margin, #{$form-row-margin});
 }
 
 // Styles form controls, if you are not using Gravity Forms.
@@ -1101,7 +1101,7 @@ select {
 // Since: 1.0.0
 
 .form-controls {
-	margin: var(--bu-spacing-half, #{$margin}) 0 0;
+	margin: var(--form-margin, #{$margin}) 0 0;
 }
 
 // Required Styles
@@ -1148,7 +1148,7 @@ textarea {
 	.form-aligned & {
 		// Aligned forms should stack on small screens
 		display: block;
-		margin: var(--bu-spacing-half, #{$form-input-margin});
+		margin: var(--form-input-margin, #{$form-input-margin});
 	}
 }
 
@@ -1185,7 +1185,7 @@ textarea {
 
 		.form-row-checkbox,
 		.form-row-radio {
-			margin: var(--bu-spacing-half, #{$form-row-margin});
+			margin: var(--form-row-margin, #{$form-row-margin});
 			margin-left: 220px;
 		}
 

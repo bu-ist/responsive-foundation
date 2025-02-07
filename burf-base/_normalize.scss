@@ -35,7 +35,7 @@ html {
 // Since: 1.0.0
 
 section {
-	margin: var(--bu-spacing-double, #{$margin-large}) 0 0;
+	margin: var(--margin-large, #{$margin-large}) 0 0;
 }
 
 img,

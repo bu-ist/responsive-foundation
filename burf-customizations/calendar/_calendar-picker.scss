@@ -211,14 +211,14 @@ $color-calendar-month-link-today:        $color-grayscale-0 !default;
 	th,
 	td {
 		font-family: var(--bu-text-font, #{$font-family-calendar-month-cell});
-		padding: var(--bu-spacing-half, #{$padding-calendar-month-cell});
+		padding: var(--calendar-padding, #{$padding-calendar-month-cell});
 		text-align: center;
 		width: math.div( 100%, 7 ); // To accomodate seven days in a week
 	}
 
 	th {
-		background: var(--bu-color-accent, #{$color-calendar-month-th-bg});
-		color: var(--color-neutral-0, #{$color-calendar-month-th});
+		background: var(--calendar-month-background, var(--bu-color-accent, #{$color-calendar-month-th-bg}));
+		color: var(--calendar-month-color, #{$color-calendar-month-th});
 	}
 
 	a {
@@ -227,18 +227,18 @@ $color-calendar-month-link-today:        $color-grayscale-0 !default;
 
 		&:hover,
 		&::focus {
-			color: var(--bu-link-color, #{$color-calendar-month-link-hover});
+			color: var(--bu-link-color--hover, #{$color-calendar-month-link-hover});
 		}
 	}
 
 	.out {
-		background: var(--color-neutral-200, #{$color-calendar-month-link-out-bg});
-		color: var(--color-neutral-700, #{$color-calendar-month-link-out});
+		background: var(--calendar-out-background, #{$color-calendar-month-link-out-bg});
+		color: var(--calendar-out-color, #{$color-calendar-month-link-out});
 	}
 
 	.today {
-		background: var(--bu-color-accent, #{$color-calendar-month-link-today-bg});
-		color: var(--color-neutral-0, #{$color-calendar-month-link-today});
+		background: var(--calendar-today-background, #{$color-calendar-month-link-today-bg});
+		color: var(--calendar-today-color, #{$color-calendar-month-link-today});
 	}
 }
 
