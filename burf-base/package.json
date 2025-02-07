@@ -43,12 +43,10 @@
     ]
   },
   "main": "js/theme.js",
-  "dependencies": {
+  "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
     "mathsass": "^0.10.1",
-    "normalize-scss": "^7.0.1"
-  },
-  "devDependencies": {
+    "normalize-scss": "^7.0.1",
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@wordpress/babel-preset-default": "^3.0.2",

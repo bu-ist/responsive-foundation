@@ -19,7 +19,7 @@
     "url": "https://github.com:bu-ist/responsive-foundation.git",
     "directory": "burf-tools"
   },
-  "dependencies": {
+  "devDependencies": {
     "@bostonuniversity/burf-base": "^5.0.1"
   }
 }

@@ -41,7 +41,7 @@
       "browserify-shim"
     ]
   },
-  "dependencies": {
+  "devDependencies": {
     "@bostonuniversity/burf-base": "^5.0.1",
     "@bostonuniversity/burf-theme": "^5.0.1"
   }

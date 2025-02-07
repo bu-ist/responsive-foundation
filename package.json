@@ -39,12 +39,6 @@
     ]
   },
   "main": "js/theme.js",
-  "dependencies": {
-    "@bostonuniversity/burf-base": "^5.0.1",
-    "@bostonuniversity/burf-customizations": "^5.0.1",
-    "@bostonuniversity/burf-theme": "^5.0.1",
-    "@bostonuniversity/burf-tools": "^5.0.1"
-  },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
