@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+- Fix name of `icon-link` from the incorrect `icon-link-alt` to `link-alt` in icons\supported.scss.
 - Fix #247 - BU Profiles Post title not centered.
 
 ## 5.0.0-alpha.7
