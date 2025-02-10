@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+## 5.0.3
+- Restore dependencies needed for compiling in themes. 
+
 ## 5.0.2
 
 - Fix version typo.
