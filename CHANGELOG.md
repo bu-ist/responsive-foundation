@@ -2,8 +2,14 @@
 
 ## Unreleased
 
+## 5.0.4
+- Icon Changes: 
+  - Move Twitter icon from FontAwsome list to BU Default Icons list so the updated X icon is used from BU Default Icons vs the Bird icon from FontAwesome for `icon-twitter`.
+  - Add BU Hub Wide icon `icon-buhub-wide`. Use by calling `@extend %icon-buhub-wide;` This icon is the same as `icon-buhub` but has additional style overrides to scale it up.
+  - Add BU Hub Alt icon `icon-buhub-alt`.  Use by calling `@extend %icon-buhub-alt;`
+
 ## 5.0.3
-- Restore dependencies needed for compiling in themes. 
+- Bug fix: Restore dependencies needed for compiling in themes. 
 
 ## 5.0.2
 
@@ -13,6 +19,9 @@
 
 - Fix name of `icon-link` from the incorrect `icon-link-alt` to `link-alt` in icons\supported.scss.
 - Fix #247 - BU Profiles Post title not centered.
+- Add Blusky and X icons via BU Default Icons font.
+- Change how FontAwesome Brand icons are handled so the Fontawesome brands font is applied automatically via the icon mixin
+- Change how BU Default Icons are handled so the BU Default Icons font is applied automatically via the icon mixin
 
 ## 5.0.0-alpha.7
 
