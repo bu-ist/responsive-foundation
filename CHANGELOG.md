@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+## 3.2.6
+- Add medium.com, renren.com, and weibo.com support to social menu icon styles
+
 ## 3.2.5
 
 - `npm audit fix`
