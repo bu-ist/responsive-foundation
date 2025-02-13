@@ -1533,6 +1533,18 @@ $icons-budefaulticons: (
 	x-alt: '\F62B',
 );
 
+/*
+* These icons are centered to match FontAwesome icon positioning.
+*/
+$icons-budefaulticons-fontawesome-centered: (
+	twitter: '\F618',
+	x: '\F618',
+	bluesky: '\F655'
+);
+
+// Merge BU Default font icons and BU Default Icons FontAwesome Centered Icons.
+$icons-budefaulticons: map_merge( $icons-budefaulticons, $icons-budefaulticons-fontawesome-centered );
+
 // Merge Responsive Icons and BU Default font icons.
 $icons-responsive: map_merge( $icons-responsive, $icons-budefaulticons );
 
