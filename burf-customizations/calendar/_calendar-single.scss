@@ -60,7 +60,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 	@include breakpoint( $sm ) {
 		float: right;
-		margin-left: $grid-margin-width#{"%"};
+		margin-left: $grid-margin-width * 1%;
 	}
 }
 
@@ -155,7 +155,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 // Since: 2.0.0
 
 %single-event-label {
-	color: var(--bu-label-color, #{$color-single-event-label});
+	color: var(--calendar-label-color, var(--bu-label-color, #{$color-single-event-label}));
 	display: block;
 	font-family: var(--bu-label-font, #{$font-family-single-event-label});
 	font-weight: $font-weight-calendar-label;
@@ -220,7 +220,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 // Since: 2.0.0
 
 .single-event-description {
-	margin: var(--text-margin, #{$font-margin-base});
+	margin: var(--paragraph-margin, #{$font-margin-base});
 }
 
 // Handles styling for additional details in the single calendar

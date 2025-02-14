@@ -105,12 +105,12 @@ $_width-calendar-date: 48px;
 // Since: 2.0.0
 
 .widget-calendar-event {
-	border-top: var(--bu-border, #{$border-widget-list});
-	padding: var(--bu-spacing-half, #{$padding-small}) 0;
+	border-top: var(--calendar-widget-border, var(--bu-border, #{$border-widget-list}));
+	padding: var(--padding-small, #{$padding-small}) 0;
 
 	&:first-child {
 		border: 0;
-		padding: 0 0 var(--bu-spacing-half, #{$padding-small});
+		padding: 0 0 var(--padding-small, #{$padding-small});
 	}
 }
 
@@ -190,7 +190,7 @@ $_width-calendar-date: 48px;
 // Since: 2.0.0
 
 .widget-calendar-date-graphic {
-	color: var(--bu-color-accent, #{$color-widget-calendar-date});
+	color: var(--calendar-date-color, #{$color-widget-calendar-date});
 	display: table-cell;
 	line-height: 1.1;
 	text-align: center;
@@ -206,7 +206,7 @@ $_width-calendar-date: 48px;
 .widget-calendar-day-graphic {
 	color: var(--bu-color-accent, #{$color-widget-calendar-date-day});
 	display: block;
-	font-size: var(--bu-text-size, #{$font-size-widget-calendar-date-day});
+	font-size: var(--calendar-day-size, #{$font-size-widget-calendar-date-day});
 }
 
 // Styles the month in the calendar widget graphic format.
@@ -217,7 +217,7 @@ $_width-calendar-date: 48px;
 
 .widget-calendar-month-graphic {
 	color: var(--bu-color-accent, #{$color-widget-calendar-date-month});
-	font-size: var(--bu-label-size, #{$font-size-widget-calendar-date-month});
+	font-size: var(--calendar-month-size, #{$font-size-widget-calendar-date-month});
 	text-transform: uppercase;
 }
 
@@ -229,7 +229,7 @@ $_width-calendar-date: 48px;
 
 .widget-calendar-title-graphic {
 	display: table-cell;
-	padding-left: var(--bu-spacing-half, #{$padding-small});
+	padding-left: var(--padding-small, #{$padding-small});
 	text-decoration: underline;
 	vertical-align: middle;
 }

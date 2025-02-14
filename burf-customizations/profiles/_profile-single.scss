@@ -144,7 +144,7 @@ $color-profile-info-item:					$color-grayscale-5 !default;
 // Since: 2.0.0
 
 .profile-details-item {
-	color: var(--bu-color-accent, #{$color-profile-info-item});
+	color: var(--profile-details-color, var(--bu-text-color, #{$color-profile-info-item}));
 	list-style: none;
 	margin: 0 0 var(--bu-spacing, #{$margin});
 	word-wrap: break-word;

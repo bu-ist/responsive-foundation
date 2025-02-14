@@ -128,7 +128,7 @@ $border-calendar-list:                      $border !default;
 // @since 2.0.0
 
 .calendar-list-event-time {
-	color: var(--color-neutral-600, #{$color-grayscale-6});
+	color: $color-grayscale-6;
 	font-weight: 700;
 	position: absolute;
 }

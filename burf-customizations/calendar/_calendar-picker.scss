@@ -193,7 +193,7 @@ $color-calendar-month-link-today:        $color-grayscale-0 !default;
 // Since: 2.0.0
 
 .widget-calendar-picker {
-	color: var(--bu-link-color, #{$color-calendar-month-link});
+	color: var(--calendar-color, var(--bu-link-color, #{$color-calendar-month-link}));
 	line-height: 1.6;
 
 	.month {
@@ -202,15 +202,15 @@ $color-calendar-month-link-today:        $color-grayscale-0 !default;
 
 	caption {
 		@extend %font-size-5;
-		color: var(--bu-text-color, #{$color-calendar-month-caption});
-		font-family: var(--bu-text-font, #{$font-family-sans-serif});
+		color: var(--calendar-caption-color, var(--bu-text-color, #{$color-calendar-month-caption}));
+		font-family: var(--calendar-font, var(--bu-text-font, #{$font-family-sans-serif}));
 		font-style: normal;
 		font-weight: bold;
 	}
 
 	th,
 	td {
-		font-family: var(--bu-text-font, #{$font-family-calendar-month-cell});
+		font-family: var(--calendar-font, var(--bu-text-font, #{$font-family-calendar-month-cell}));
 		padding: var(--calendar-padding, #{$padding-calendar-month-cell});
 		text-align: center;
 		width: math.div( 100%, 7 ); // To accomodate seven days in a week

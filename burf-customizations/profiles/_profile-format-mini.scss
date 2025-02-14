@@ -84,7 +84,7 @@ $_profile-mini-cols-sm: math.div( $grid-number-columns, $profiles-mini-cols-sm )
 // Since: 2.0.0
 
 .profile-photo-mini {
-	@extend %col-3;
+	@extend %col-2;
 	height: 0;
 	padding-bottom: 16%;
 
