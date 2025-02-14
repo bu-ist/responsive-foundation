@@ -230,7 +230,7 @@ $border-width-comment-form:                  3px !default;
 // Since: 1.0.0
 
 .comments-area {
-	color: var(--bu-text-color, #{$color-comments});
+	color: var(--comment-color, var(--bu-text-color, #{$color-comments}));
 
 	// Remove defaults for all OL on this page
 
@@ -292,9 +292,9 @@ $border-width-comment-form:                  3px !default;
 
 .comment-body {
 	@extend %font-size-secondary;
-	border: var(--bu-border, #{$border-comment});
-	border-width: var(--bu-border-width, #{$border-width-comment});
-	font-family: var(--bu-text-font, #{$font-family-comment});
+	border: var(--comment-border, var(--bu-border, #{$border-comment}));
+	border-width: var(--comment-border-width, var(--bu-border-width, #{$border-width-comment}));
+	font-family: var(--comment-font, var(--bu-text-font, #{$font-family-comment}));
 	padding: $comment-padding-mobile;
 	position: relative;
 
@@ -320,7 +320,7 @@ $border-width-comment-form:                  3px !default;
 
 .comment-reply-link {
 	@extend %font-size-minimum;
-	color: var(--color-neutral-500, #{$color-comment-reply});
+	color: var(--comment-reply-color, #{$color-comment-reply});
 }
 
 // Controls styling for the comment author.
@@ -333,7 +333,7 @@ $border-width-comment-form:                  3px !default;
 
 .comment-author {
 	@extend %font-size-5;
-	color: var(--color-neutral-1000, #{$color-comment-author-name});
+	color: var(--comment-author-color, #{$color-comment-author-name});
 }
 
 // Controls styling for the "says" text after comment author.
@@ -345,7 +345,7 @@ $border-width-comment-form:                  3px !default;
 // Since: 2.0.0
 
 .says {
-	color: var(--color-neutral-700, #{$color-comment-author-says});
+	color: var(--comment-author-says-color, #{$color-comment-author-says});
 }
 
 // Controls styling for the date and time of comments.
@@ -398,11 +398,11 @@ $border-width-comment-form:                  3px !default;
 
 .comment-respond {
 	@include border-radius( 5px );
-	background: var(--color-neutral-50, #{$color-comment-form-bg});
-	border: var(--bu-border, #{$border-comment-form});
-	border-width: var(--bu-border-width, #{$border-width-comment-form});
+	background: var(--comment-background, #{$color-comment-form-bg});
+	border: var(--comment-border, var(--bu-border, #{$border-comment-form}));
+	border-width: var(--comment-border-width, var(--bu-border-width, #{$border-width-comment-form}));
 	margin: $margin-small 0 $margin;
-	padding: var(--bu-spacing, #{$padding});
+	padding: $padding;
 	position: relative;
 
 	fieldset {
@@ -412,7 +412,7 @@ $border-width-comment-form:                  3px !default;
 	}
 
 	p {
-		margin: 0 0 var(--bu-spacing, #{$padding});
+		margin: 0 0 $padding;
 	}
 
 	label {
@@ -464,7 +464,7 @@ $border-width-comment-form:                  3px !default;
 
 .form-tip {
 	@extend %font-size-minimum;
-	color: var(--color-neutral-600, #{$color-grayscale-6});
+	color: $color-grayscale-6;
 
 	@include breakpoint( $sm ) {
 		display: block;

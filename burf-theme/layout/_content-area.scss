@@ -82,7 +82,7 @@ $column-padding-bottom-large-screen:         35px !default;
 // Since: 1.0.0
 
 .content {
-	background: $color-content-bg;
+	background: var(--bu-content-background, #{$color-grayscale-f});
 }
 
 // A wrapper to contain content to a certain size. Sits just below the window

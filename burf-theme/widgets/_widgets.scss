@@ -220,27 +220,27 @@ $border-widget-list:                       $border !default;
 	h4,
 	h5,
 	h6 {
-		font-family: var(--bu-text-font, #{$font-family-widget-heading});
+		font-family: var(--widget-heading-font, var(--bu-text-font, #{$font-family-widget-heading}));
 	}
 
 	a {
-		color: var(--bu-link-color, #{$color-widget-link});
+		color: var(--widget-link-color, var(--bu-link-color, #{$color-widget-link}));
 
 		&:hover,
 		&:focus {
-			color: var(--bu-link-color--hover, #{$color-widget-link-hover});
+			color: var(--widget-link-color--hover, var(--bu-link-color--hover, #{$color-widget-link-hover}));
 		}
 
 		&.button,
 		&.button:hover,
 		&.button:focus {
-			color: $color-button-text;
+			color: var(--bu-button-text-color, #{$color-button-text});
 		}
 
 		&.button-primary,
 		&.button-primary:hover,
 		&.button-primary:focus {
-			color: $color-button-primary-text;
+			color: var(--bu-button-primary-text-color, #{$color-button-primary-text});
 		}
 	}
 
@@ -259,10 +259,10 @@ $border-widget-list:                       $border !default;
 // Since: 1.0.0
 
 .widget-title {
-	border: $border-widget-title;
-	border-width: $border-width-widget-title;
-	color: var(--bu-heading-color, #{$color-widget-title});
-	font-family: var(--bu-heading-font, #{$font-family-widget-title});
+	border: var(--widget-title-border, var(--bu-border, #{$border-widget-title}));
+	border-width: var(--widget-title-border-width, var(--bu-border-width, #{$border-width-widget-title}));
+	color: var(--widget-title-color, var(--bu-heading-color, #{$color-widget-title}));
+	font-family: var(--widget-title-font, var(--bu-heading-font, #{$font-family-widget-title}));
 	padding: 0 0 4px;
 
 	a {
@@ -271,11 +271,11 @@ $border-widget-list:                       $border !default;
 		text-decoration: none;
 
 		&::after {
-			color: $color-widget-title-link-icon;
+			color: var(--widget-title-icon-color, #{$color-widget-title-link-icon});
 		}
 
 		&:hover::after {
-			color: $color-widget-title-link-icon-hover;
+			color: var(--widget-tite-icon-color--hover, #{$color-widget-title-link-icon-hover});
 		}
 	}
 }
@@ -332,7 +332,7 @@ $border-widget-list:                       $border !default;
 // Since: 4.0.0
 
 #wp-calendar {
-	background: var(--color-neutral-0, #{$color-grayscale-f});
+	background: $color-grayscale-f;
 	font-size: 14px;
 	table-layout: fixed;
 

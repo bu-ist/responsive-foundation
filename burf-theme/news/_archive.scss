@@ -78,7 +78,7 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 
 %back-link-styles {
 	&::before {
-		color: var(--color-neutral-0, #{$color-back-link-before});
+		color: var(--back-link-color, #{$color-back-link-before});
 		content: $back-link-before;
 	}
 }
@@ -111,9 +111,9 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 
 .paging-navigation {
 	@extend %clearfix;
-	border-top: var(--bu-border, #{$border-news-post});
-	margin-top: var(--bu-spacing, #{$margin});
-	padding-top: var(--bu-spacing, #{$margin});
+	border-top: var(--news-border, var(--bu-border, #{$border-news-post}));
+	margin-top: $margin;
+	padding-top: $margin;
 
 	a {
 		@extend %button-styles;
@@ -154,9 +154,9 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 // Since: 2.0.0
 
 .post-part {
-	border-top: var(--bu-border, #{$border-news-post});
-	margin-top: var(--bu-spacing, #{$margin});
-	padding-top: var(--bu-spacing, #{$margin});
+	border-top: var(--news-border, var(--bu-border, #{$border-news-post}));
+	margin-top: $margin;
+	padding-top: $margin;
 	position: relative;
 
 	&:first-child {
@@ -197,7 +197,7 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 .post-meta {
 	span {
 		&::before {
-			color: var(--color-neutral-200, #{$color-news-meta-before});
+			color: var(--news-meta-color, #{$color-news-meta-before});
 			content: "\a0\b7\a0";
 		}
 
