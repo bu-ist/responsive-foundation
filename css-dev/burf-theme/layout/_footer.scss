@@ -310,6 +310,10 @@ body {
 		@extend %icon-linkedin;
 	}
 
+	[href*="medium.com"] {
+		@extend %icon-medium;
+	}
+
 	[href*="pinterest.com"] {
 		@extend %icon-pinterest;
 	}
@@ -326,6 +330,10 @@ body {
 		@extend %icon-reddit;
 	}
 
+	[href*="renren.com"] {
+		@extend %icon-renren;
+	}
+
 	[href*="snapchat.com"] {
 		@extend %icon-snapchat;
 	}
@@ -335,7 +343,11 @@ body {
 	}
 
 	[href*="twitter.com"] {
-		@extend %icon-twitter;
+		@extend %icon-x;
+	}
+
+	[href*="weibo.com"] {
+		@extend %icon-weibo;
 	}
 
 	[href*="x.com"] {
