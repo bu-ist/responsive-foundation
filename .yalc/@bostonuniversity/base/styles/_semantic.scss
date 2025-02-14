@@ -1,0 +1,179 @@
+/* ===================================================================
+CSS Custom Properties (Semantic) - [ Table of Contents ]
+
+1. Borders
+2. Shadows
+3. Motion & Duration
+4. Spacing
+5. Typography
+6. Colors
+7. Layout
+8. Surface
+
+=================================================================== */
+
+@use "sass:math";
+
+:where(html) {
+
+    //==========================================================================
+    //==[ 1. Border ]===========================================================
+    //==========================================================================
+
+    --bu-border-color:     var(--color-neutral-300);
+    --bu-border-style:     solid;
+    --bu-border-width:     inherit;
+    --bu-border:           var(--bu-border-width) var(--bu-border-style) var(--bu-border-color);
+
+    --bu-border-radius:    var(--radius-none);
+
+    //==========================================================================
+    //==[ 2. Shadow ]===========================================================
+    //==========================================================================
+
+    --bu-shadow: var(--shadow-md);
+
+    //==========================================================================
+    //==[ 3. Motion & Duration ]================================================
+    //==========================================================================
+
+    --bu-duration: var(--duration-quick);
+    --bu-ease-in: var(--ease-in-cubic);
+    --bu-ease-out: var(--ease-out-cubic);
+    --bu-ease-in-out: var(--ease-in-out-cubic);
+
+    //==========================================================================
+    //==[ 4. Spacing ]==========================================================
+    //==========================================================================
+
+    // Spacing can be used for both padding and margins.
+
+    --bu-spacing-sm: var(--shim-8);
+    --bu-spacing-md: var(--size-4);
+    --bu-spacing-lg: var(--size-7);
+
+    --bu-spacing:        var(--size-3);
+    --bu-spacing-half:   calc(var(--bu-spacing) * 0.5);
+    --bu-spacing-double: calc(var(--bu-spacing) * 2);
+
+    // Spacing (Fluid)
+
+    --bu-spacing-fluid-sm: var(--size-fluid-2);
+    --bu-spacing-fluid-md: var(--size-fluid-4);
+    --bu-spacing-fluid-lg: var(--size-fluid-6);
+
+    --bu-spacing-fluid:        var(--bu-spacing-fluid-md);
+    --bu-spacing-fluid-half:   calc(var(--bu-spacing-fluid) * 0.5);
+    --bu-spacing-fluid-double: calc(var(--bu-spacing-fluid) * 2);
+
+    // Block margin spacing 
+
+    --bu-block-spacing:        var(--bu-spacing);
+
+
+    //==========================================================================
+    //==[ 5. Typography ]=======================================================
+    //==========================================================================
+
+    // Font families
+
+    --bu-font-serif: var(--font-transitional);
+    --bu-font-sans: var(--font-rounded-sans);
+    --bu-font-mono: var(--font-monospace-code);
+
+    // Global line height and letter spacing
+
+    --bu-line-height: var(--line-height-3);
+    --bu-letter-spacing: var(--letter-spacing-2);
+
+    // Headings
+
+    --bu-heading-color: var(--color-neutral-950);
+    --bu-heading-font: var(--bu-font-serif);
+    --bu-heading-size-1: var(--heading-size-1);
+    --bu-heading-size-2: var(--heading-size-2);
+    --bu-heading-size-3: var(--heading-size-3);
+    --bu-heading-size-4: var(--heading-size-4);
+    --bu-heading-size-5: var(--heading-size-5);
+    --bu-heading-size-6: var(--heading-size-6);
+
+    // Text (Paragraphs, body text, etc.)
+
+    --bu-text-color: var(--color-neutral-700);
+    --bu-text-font: var(--bu-font-serif);
+    --bu-text-size: var(--text-size-md);
+    
+    // Labels (Tags, eyebrow text, etc.)
+
+    --bu-label-color: var(--color-neutral-700);
+    --bu-label-font: var(--bu-font-serif);
+    --bu-label-size: var(--text-size-sm);
+
+    //==========================================================================
+    //==[ 6. Colors ]===========================================================
+    //==========================================================================
+
+    // Basic Palette
+
+    --bu-color-primary: inherit;
+    --bu-color-accent: inherit;
+
+    // Link & Focus Colors
+
+    --bu-link-color: inherit;
+    --bu-link-color--hover: inherit;
+    --bu-link-color--visited: inherit;
+    --bu-focus-color: inherit;
+
+    //==========================================================================
+    //==[ 7. Layout ]===========================================================
+    //==========================================================================
+
+    // TODO: Test all of this in use and see if we need to make any modifications.
+    // TODO: Decide consistent naming on container vs. content area vs. content.
+
+    // Container
+    // The gutter is the inline space between the content and the viewport edges.
+    --bu-gutter: var(--size-fluid-2);
+
+    // Sections
+    --bu-section-inline-size: 100%;
+    --bu-section-block-margin: var(--bu-base-margin);
+
+    // Content Area + Sidebar
+    --bu-sidebar-inline-size: 33.333%;
+    --bu-contentarea-inline-size: 66.66667%;
+    // 12 column grid container system alternative
+    --bu-sidebar-grid-span: 4;
+    --bu-contentarea-grid-span: 8;
+
+    // Content
+    --bu-content-inline-size-full: 100vi;
+    --bu-content-inline-size-wide: calc(var(--bu-content-inline-size-full) - (var(--bu-gutter) * 2));
+    --bu-content-inline-size: min(1200px, var(--bu-content-inline-size-wide));
+
+    // Block Alignment
+
+    --bu-block-align-left: min(100%, max(18.75rem, 40%));
+    --bu-block-align-right: min(100%, max(18.75rem, 40%));
+    --bu-block-align-center: min(100%, max(37.5rem, 60%)); 
+    
+    // Masthead
+    --bu-masthead-block-size: 120px;
+
+    // WP
+    --bu-wp-admin-bar-block-size: 32px;
+
+    //==========================================================================
+    //==[ 8. Surface ]==========================================================
+    //==========================================================================
+
+    // Refers to the different surfaces of components such as a BULP landing page row.
+    // The surface foreground may apply to the background color of the cards, 
+    // while the surface background applies to the background of the BULP row.
+
+    --bu-surface-foreground: inherit;
+    --bu-surface-foreground-text: inherit;
+    --bu-surface-background: inherit;
+    --bu-surface-background-text: inherit;
+}

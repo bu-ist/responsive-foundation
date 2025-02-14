@@ -102,7 +102,7 @@ $_profile-adv-cols-md: math.div( $grid-number-columns, $profiles-advanced-cols-m
 
 .profile-link-advanced {
 	display: block;
-	padding: 0 $padding-small;
+	padding: 0 var(--bu-spacing-sm, #{$padding-small});
 	text-align: center;
 }
 
@@ -116,7 +116,7 @@ $_profile-adv-cols-md: math.div( $grid-number-columns, $profiles-advanced-cols-m
 
 .profile-photo-advanced {
 	height: 150px;
-	margin: 0 auto $margin-small;
+	margin: 0 auto var(--bu-spacing-sm, #{$margin-small});
 	overflow: hidden;
 	width: 150px;
 }

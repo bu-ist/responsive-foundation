@@ -1,0 +1,34 @@
+// Hide Text
+//
+// Hides text in an element visually, but preserves width and height
+// and screen reader visibility. Use this placeholder to hide text when
+// you need a visual representation of the screen reader text,
+// but the text itself isn't desirable to have in your design,
+// such as in a logo. For example, this placeholder is used to
+// hide the text on the BU masterplate and BUMC logo in the footer.
+// In cases where there is no visual component to worry about,
+// %visually-hidden is preferred because it supports right-to-left
+// languages and will be safer if a site is ever translated.
+//
+// More info on this technique: <http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/>
+//
+// #### Examples
+//
+// ##### Hide text on a logo using a background image.
+//
+// ```
+// 			.custom-logo {
+//				@extend %hide-text;
+//				background-image: url( "images/your-image.jpg" );
+//			}
+// ```
+//
+// Access: Public
+//
+// Since: 1.0.0
+
+%hide-text {
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+}

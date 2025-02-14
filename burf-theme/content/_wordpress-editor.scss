@@ -70,7 +70,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 	@include border-radius( 2px );
 	background: $color-grayscale-f;
 	border: 1px solid currentColor;
-	color: $color-link;
+	color: var(--bu-link-color, #{$color-link});
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 15px;
 	line-height: 1;
@@ -89,7 +89,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 	&:visited,
 	&:active,
 	&:hover {
-		color: $color-link;
+		color: var(--bu-link-color, #{$color-link});
 	}
 
 	&:hover {
@@ -113,7 +113,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 // Since: 3.2.0
 
 .post-edit-hint {
-	border: 1px dashed $color-link;
+	border: 1px dashed var(--bu-link-color, #{$color-link});
 	box-sizing: content-box;
 	height: 0;
 	left: -10px;
@@ -286,8 +286,8 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 .wp-caption-text {
 	@extend %font-size-minimum;
 	clear: both;
-	color: $color-caption;
-	font-family: $font-family-caption;
+	color: var(--caption-text-color, var(--bu-text-color, #{$color-caption}));
+	font-family: var(--caption-text-font, var(--bu-text-font, #{$font-family-caption}));
 	line-height: 1.4;
 }
 

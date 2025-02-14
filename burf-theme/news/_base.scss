@@ -20,6 +20,25 @@
 	max-width: $container-sm;
 }
 
+// Add padding to sidebar on the news and blog templates
+// TODO: we should test this more thoroughly, I was kind of surprised this is broken in the current version??
+// Seems like something that should be fixed... I did this as a temporary solution 
+// Not sure if this could be related to the sidebar changes? These pages don't have the class for sidebar location left or right, 
+// which would be nice to have as right now it's only styled for right sidebars.
+
+.page-template-news,
+.blog,
+.single,
+.archive,
+.category {
+	.sidebar {
+		@include breakpoint( $md ) {
+			padding-left: $sidebar-padding;
+		}
+	}
+}
+
+
 // Handles styling for the 404 page.
 //
 // Styleguide Components.WordPress.error-404

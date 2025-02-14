@@ -35,7 +35,7 @@ html {
 // Since: 1.0.0
 
 section {
-	margin: $margin-section;
+	margin: var(--section-margin, #{$margin-large}) 0 0;
 }
 
 img,

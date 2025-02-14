@@ -78,7 +78,7 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 
 %back-link-styles {
 	&::before {
-		color: $color-back-link-before;
+		color: var(--back-link-color, #{$color-back-link-before});
 		content: $back-link-before;
 	}
 }
@@ -111,7 +111,7 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 
 .paging-navigation {
 	@extend %clearfix;
-	border-top: $border-news-post;
+	border-top: var(--news-border, var(--bu-border, #{$border-news-post}));
 	margin-top: $margin;
 	padding-top: $margin;
 
@@ -154,7 +154,7 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 // Since: 2.0.0
 
 .post-part {
-	border-top: $border-news-post;
+	border-top: var(--news-border, var(--bu-border, #{$border-news-post}));
 	margin-top: $margin;
 	padding-top: $margin;
 	position: relative;
@@ -197,7 +197,7 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 .post-meta {
 	span {
 		&::before {
-			color: $color-news-meta-before;
+			color: var(--news-meta-color, #{$color-news-meta-before});
 			content: "\a0\b7\a0";
 		}
 

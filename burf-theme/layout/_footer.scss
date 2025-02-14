@@ -145,17 +145,17 @@ $number-widgets-footbar: 						 $number-columns !default;
 
 .footbar {
 	@extend %clearfix;
-	background: $color-footbar-bg;
-	border-top: $border-footbar;
-	padding-bottom: $footbar-padding-bottom;
+	background: var(--footbar-background, #{$color-footbar-bg});
+	border-top: var(--bu-border, #{$border-footbar});
+	padding-bottom: var(--bu-spacing, #{$footbar-padding-bottom});
 	width: 100%;
 
 	a {
-		color: $color-footbar-widget-link;
+		color: var(--footbar-link-color, var(--bu-link-color, #{$color-footbar-widget-link}));
 
 		&:hover,
 		&:focus {
-			color: $color-footbar-widget-link-hover;
+			color: var(--footbar-link-color--hover, var(--bu-link-color--hover, #{$color-footbar-widget-link-hover}));
 		}
 	}
 }
@@ -177,7 +177,7 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 
 .footbar-container {
 	@extend %container-styles;
-	background: $color-footbar-container-bg;
+	background: var(--footbar-container-background, #{$color-footbar-container-bg});
 
 	.widget {
 		@extend %col-md-margin-#{$_footbar-widget-width};
@@ -200,7 +200,7 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 $color-body-bg:                            $color-grayscale-0 !default;
 
 body {
-	background-color: $color-body-bg;
+	background-color: var(--body-background, #{$color-body-bg});
 }
 
 // Controls styling for the site footer - branding, address, and social links.
@@ -212,12 +212,12 @@ body {
 .site-footer {
 	@extend %font-size-secondary;
 	@extend %clearfix;
-	background: $color-site-footer-bg;
+	background: var(--footer-background, #{$color-site-footer-bg});
 	clear: both;
-	color: $color-grayscale-8;
+	color: var(--footer-text-color, #{$color-grayscale-8});
 	display: block;
-	font-family: $font-family-sans-serif;
-	padding: $padding-site-footer;
+	font-family: var(--footer-text-font, var(--bu-text-font, #{$font-family-sans-serif}));
+	padding: var(--footer-padding, #{$padding-site-footer});
 	position: relative;
 	width: 100%;
 
@@ -226,10 +226,10 @@ body {
 	}
 
 	a {
-		color: $color-site-footer-link;
+		color: var(--footer-link-color, var(--bu-link-color, #{$color-site-footer-link}));
 
 		&:hover {
-			color: $color-site-footer-link-hover;
+			color: var(--footer-link-color--hover, var(--bu-link-color--hover, #{$color-site-footer-link-hover}));
 		}
 	}
 
@@ -249,8 +249,8 @@ body {
 	h5,
 	h6 {
 		@extend %font-size-secondary;
-		color: $color-site-footer;
-		font-family: $font-family-sans-serif;
+		color: var(--footer-text-color, #{$color-site-footer});
+		font-family: var(--bu-text-font, #{$font-family-sans-serif});
 		margin: 0 0 0.3em;
 	}
 }

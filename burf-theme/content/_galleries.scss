@@ -49,7 +49,7 @@ $margin-gallery: 													10px !default;
 	@extend %clearfix;
 	display: flex;
 	flex-wrap: wrap;
-	margin-right: -$margin-gallery;
+	margin-right: $margin-gallery;
 
 	.gallery-icon {
 		height: 100%;
@@ -88,7 +88,7 @@ $margin-gallery: 													10px !default;
 	@for $i from 1 through $_wp-supported-gallery-columns {
 		.gallery-columns-#{$i} & {
 			@include breakpoint( $xs ) {
-				width: math.div( 100, $i )#{"%"};
+				width: math.div( 100, $i ) * 1%;
 
 				&:nth-child(#{$i}n + 1) {
 					clear: left;
@@ -247,7 +247,7 @@ $margin-gallery: 													10px !default;
 	&::before {
 		@extend %font-size-minimum;
 		content: "Show thumbnails";
-		font-family: $font-family-sans-serif;
+		font-family: var(--bu-text-font, #{$font-family-sans-serif});
 		margin-right: 5px;
 		position: relative;
 		top: -5px;
@@ -267,7 +267,7 @@ $margin-gallery: 													10px !default;
 .lg-thumb {
 	// Required to override plugin CSS
 	.lg-outer .lg-thumb-outer & {
-		padding: $padding-small 0;
+		padding: var(--bu-spacing, #{$padding-small}) 0;
 	}
 }
 

@@ -89,7 +89,7 @@ $border-calendar-list:                      $border !default;
 // @since 2.0.0
 
 .calendar-list-events {
-	margin-bottom: $margin-large;
+	margin-bottom: var(--bu-spacing, #{$margin-large});
 	padding: 0;
 }
 
@@ -115,7 +115,7 @@ $border-calendar-list:                      $border !default;
 // @since 2.0.0
 
 .calendar-list-event-first-at-time {
-	border-top: $border-calendar-list;
+	border-top: var(--bu-border, #{$border-calendar-list});
 	margin-bottom: 0.75em;
 	padding-top: 0.75em;
 }
@@ -141,12 +141,12 @@ $border-calendar-list:                      $border !default;
 // @since 2.0.0
 
 .calendar-list-event-link {
-	color: $color-calendar-event-link;
+	color: var(--bu-link-color, #{$color-calendar-event-link});
 	display: block;
 	margin-left: 5.1em; // Accounts for the 5-ish characters that time can take up.
 
 	&:hover,
 	&:focus {
-		color: $color-calendar-event-link-hover;
+		color: var(--bu-link-color--hover, #{$color-calendar-event-link-hover});
 	}
 }

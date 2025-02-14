@@ -69,8 +69,8 @@ $padding-banner-window-width:                    $padding-small !default;
 
 .banner-container-window-width {
 	@include breakpoint( $lg ) {
-		background: $color-banner-container;
-		padding: $padding-banner-window-width;
+		background: var(--banner-background, #{$color-banner-container});
+		padding: var(--banner-padding, #{$padding-banner-window-width});
 	}
 }
 
@@ -92,7 +92,7 @@ $padding-banner-window-width:                    $padding-small !default;
 
 	img {
 		@include breakpoint( $md ) {
-			background: $color-banner-container;
+			background: var(--banner-background, #{$color-banner-container});
 			width: 100%;
 		}
 	}

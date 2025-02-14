@@ -720,29 +720,35 @@ $border-radius-button:                     2px !default;
 // Since: 1.2.0
 
 %button-styles {
-	background-color: $color-button-bg;
-	border: $border-button;
-	border-radius: $border-radius-button;
-	color: $color-button-text;
+	background-color: var(--bu-button-background-color, #{$color-button-bg});
+	border: var(--bu-button-border, #{$border-button});
+	border-radius: var(--bu-button-border-radius, #{$border-radius-button});
+	color: var(--bu-button-text-color, #{$color-button-text});
 	display: inline-block;
-	font-family: $font-family-button;
-	font-size: $font-size-button;
+	font-family: var(--bu-button-font-family, #{$font-family-button});
+	font-size: var(--bu-button-font-size, #{$font-size-button});
 	line-height: normal;
-	margin: $margin-button;
-	padding: $padding-button;
+	margin: var(--bu-button-margin, #{$margin-button});
+	padding: var(--bu-button-padding, #{$padding-button});
 	text-align: center;
 	text-decoration: none;
 	vertical-align: baseline;
 
-	&:hover {
-		@include linear-gradient( transparent, rgba( $color-grayscale-0, 0.10 ) );
+	&:hover,
+	&:focus {
+		background-color: var(--bu-button-background-color--hover, #{darken($color-button-bg, 10%)});
+		color: var(--bu-button-text-color--hover);
+	}
+
+	&:visited {
+		color: var(--bu-button-text-color, #{$color-button-text});
 	}
 
 	&:active {
 		@include box-shadow(
 			0 0 0 1px rgba( $color-grayscale-0, 0.15 ) inset,
 			0 0 6px rgba( $color-grayscale-0, 0.20 ) inset
-		);
+	    );
 	}
 }
 
@@ -761,9 +767,6 @@ $border-radius-button:                     2px !default;
 
 %button-styles-input {
 	cursor: pointer;
-	*display: inline; // IE 6/7
-	*font-size: 90%; // IE 6/7 - To reduce IE's oversized button text
-	*overflow: visible; // IE 6/7 - Because of IE's overly large left/right padding on buttons
 	user-select: none;
 	-ms-user-select: none;
 	-moz-user-select: none;
@@ -777,8 +780,8 @@ $border-radius-button:                     2px !default;
 	&-disabled:hover,
 	&-disabled:active {
 		@include box-shadow( none );
-		background: $color-grayscale-d;
-		color: $color-grayscale-7;
+		background: var(--button-disabled-background, #{$color-grayscale-d});
+		color: var(--button-disabled-text-color, #{$color-grayscale-7});
 		cursor: not-allowed;
 	}
 
@@ -814,13 +817,17 @@ $border-radius-button:                     2px !default;
 // Since: 1.2.0
 
 %button-styles-primary {
-	background-color: $color-button-primary-bg;
-	color: $color-button-primary-text;
+	background-color: var(--bu-button-primary-background-color, #{$color-button-primary-bg});
+	color: var(--bu-button-primary-text-color, #{$color-button-primary-text});
 
 	&:hover,
-	&:active,
+	&:focus {
+		background-color: var(--bu-button-primary-background-color--hover, #{darken($color-button-primary-bg, 10%)});
+		color: var(--bu-button-primary-text-color--hover, #{$color-button-primary-text});
+	}
+
 	&:visited {
-		color: $color-button-primary-text;
+		color: var(--bu-button-primary-text-color, #{$color-button-primary-text});
 	}
 }
 
@@ -834,7 +841,7 @@ $border-radius-button:                     2px !default;
 
 form {
 	@extend %font-size-secondary;
-	font-family: $font-family-form;
+	font-family: var(--form-font-family, var(--bu-text-font, #{$font-family-form}));
 }
 
 // The general styles for the fieldset element.
@@ -845,9 +852,9 @@ form {
 // Since: 1.0.0
 
 fieldset {
-	border: $form-fieldset-border;
-	margin: $form-fieldset-margin;
-	padding: $form-fieldset-padding;
+	border: var(--form-border, var(--bu-border, #{$form-fieldset-border}));
+	margin: var(--form-fieldset-margin, #{$form-fieldset-margin});
+	padding: var(--form-fieldset-padding, #{$form-fieldset-padding});
 }
 
 // The general styles for the legend element, which holds a caption for the
@@ -858,12 +865,12 @@ fieldset {
 // Since: 1.0.0
 
 legend {
-	border-bottom: $form-legend-border;
+	border-bottom: var(--form-border, var(--bu-border, #{$form-legend-border}));
 	display: block;
 	font-size: 1.5em;
 	font-weight: 700;
-	margin: $form-legend-margin;
-	padding: $form-legend-padding;
+	margin: var(--form-legend-margin, #{$form-legend-margin});
+	padding: var(--form-legend-padding, #{$form-legend-padding});
 	width: 100%;
 }
 
@@ -881,7 +888,7 @@ textarea {
 label {
 	display: block;
 	font-weight: bold;
-	margin: $form-label-margin;
+	margin: var(--form-label-margin, #{$form-label-margin}) 0;
 }
 
 // The general styles for inputs which should look like buttons.
@@ -942,18 +949,18 @@ select,
 textarea {
 	@include	box-shadow( $form-input-shadow );
 	@include border-radius( $form-input-border-radius );
-	border: $form-input-border;
+	border: var(--form-border, var(--bu-border, #{$form-input-border}));
 	display: inline-block;
 	line-height: 1;
-	margin: $form-input-margin;
-	padding: $form-input-padding;
+	margin: var(--form-input-margin, #{$form-input-margin});
+	padding: var(--form-input-padding, #{$form-input-padding});
 
 	&:focus {
 		@extend %_form-input-focus-shadow;
-		border-color: $color-input-focus-border;
+		border-color: var(--bu-focus-color, #{$color-input-focus-border});
 		outline: 0;
 		outline: thin dotted \9; // IE6-9
-		outline: 1px auto $color-input-focus-border;
+		outline: 1px auto var(--bu-focus-color, #{$color-input-focus-border});
 	}
 }
 
@@ -970,7 +977,7 @@ textarea {
 	&:focus {
 		@extend %_form-input-focus-shadow;
 		outline: thin dotted $color-grayscale-3;
-		outline: 1px auto $color-input-focus-border;
+		outline: 1px auto var(--bu-focus-color, #{$color-input-focus-border});
 	}
 }
 
@@ -1042,8 +1049,8 @@ input,
 textarea,
 select {
 	&:focus:invalid {
-		border-color: $_invalid-border-color;
-		color: $_invalid-text-color;
+		border-color: var(--invalid-border-color, #{$_invalid-border-color});
+		color: var(--invalid-text-color, #{$_invalid-text-color});
 	}
 }
 
@@ -1060,7 +1067,7 @@ select {
 [type="radio"],
 [type="checkbox"] {
 	&:focus:invalid {
-		outline-color: $_invalid-border-color;
+		outline-color: var(--invalid-border-color, #{$_invalid-border-color});
 	}
 }
 
@@ -1092,7 +1099,7 @@ select {
 // Since: 1.0.0
 
 .form-row {
-	margin: $form-row-margin;
+	margin: var(--form-row-margin, #{$form-row-margin});
 }
 
 // Styles form controls, if you are not using Gravity Forms.
@@ -1103,7 +1110,7 @@ select {
 // Since: 1.0.0
 
 .form-controls {
-	margin: $margin 0 0;
+	margin: var(--form-margin, #{$margin}) 0 0;
 }
 
 // Required Styles
@@ -1150,7 +1157,7 @@ textarea {
 	.form-aligned & {
 		// Aligned forms should stack on small screens
 		display: block;
-		margin: $form-input-margin;
+		margin: var(--form-input-margin, #{$form-input-margin});
 	}
 }
 
@@ -1187,7 +1194,7 @@ textarea {
 
 		.form-row-checkbox,
 		.form-row-radio {
-			margin: $form-row-margin;
+			margin: var(--form-row-margin, #{$form-row-margin});
 			margin-left: 220px;
 		}
 

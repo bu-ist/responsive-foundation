@@ -1,0 +1,41 @@
+@use 'sass:math';
+
+/**
+ * Table of Contents
+ *
+ * strip-units()
+ * fn-list()
+ */
+
+/**
+ * @function strip-units
+ *
+ * Strips the units from a number.
+ * @since 1.0.0
+ *
+ * @param {number} $number - The number to strip the units from.
+ *
+ * @return {number} - The number with the units stripped.
+ */
+@function strip-units($number) {
+    @return math.div($number, $number * 0 + 1);
+}
+
+/**
+ * @function fn-list
+ *
+ * Creates a list of start and end wrappers for a function.
+ * @since 1.0.0
+ *
+ * @param {string} $fn - The function name.
+ * @param {boolean} $state [true] - Whether to return the start and end wrappers or just the start wrapper.
+ *
+ * @return {list} - A list of start and end wrappers for the function.
+ */
+ @function fn-list($fn, $state: true) {
+   @if $state {
+      @return ('#{$fn}(', ')');
+   } @else {
+      @return ('','');
+   }
+}

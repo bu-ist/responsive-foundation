@@ -1,0 +1,294 @@
+/* ===================================================================
+CSS Custom Properties (Primitive) - [ Table of Contents ]
+
+1. Breakpoints
+2. Colors
+3. Aspect Ratio
+4. Borders
+5. Shadows
+6. Spacing
+7. Typography
+8. Z-Index
+9. Motion
+
+=================================================================== */
+
+@use './abstracts/config' as config;
+@use './abstracts/mixins' as mix;
+
+:where(html) {
+    //==========================================================================
+    //==[ 1. Breakpoints ]======================================================
+    //==========================================================================
+
+    /* Generate CSS Variables for all SASS breakpoint variables in five formats: */
+    /* Breakpoint Widths:            --breakpoint-[name]:          XXpx          */
+    /* Breakpoint Gaps:              --breakpoint-[name]-gap:      XXpx          */
+    /* Active Breakpoint Min-Width:  --breakpoint-min-width:       XXpx          */
+    /* Active Breakpoint Max-Width:  --breakpoint-max-width:       XXpx          */
+    /* Active Breakpoint Gap:        --breakpoint-gap:             XXpx          */
+    @include mix.generate-breakpoint-widths(config.$breakpoints);
+    @include mix.generate-breakpoint-gaps(config.$breakpoints);
+    @include mix.generate-active-breakpoint-variables(config.$breakpoints);
+
+
+    //==========================================================================
+    //==[ 2. Colors ]===========================================================
+    //==========================================================================
+
+    /* Generate CSS Variables for all colors */
+    /* Colors:            --color-[name]:          #RRGGBB          */
+    @include mix.generate-color-variables(config.$colors);
+}
+
+:where(html) {
+
+    //==========================================================================
+    //==[ 3. Aspect Ratios ]====================================================
+    //==========================================================================
+
+    --ratio-square: 1; // 1
+    --ratio-photo: 1.333; // 4/3
+    --ratio-film: 1.5; // 3/2
+    --ratio-widescreen: 1.778; // 16/9
+    --ratio-univisum: 2; // 2/1
+    --ratio-panorama: 4; // 4/1
+
+    --ratio-photo-y: 0.75; // 3/4
+    --ratio-film-y: 0.667; // 2/3
+    --ratio-widescreen-y: 0.5625; // 9/16
+    --ratio-univisum-y: 0.5; // 1/2
+    --ratio-panorama-y: 0.25; // 1/4
+
+
+    //==========================================================================
+    //==[ 4. Borders ]==========================================================
+    //==========================================================================
+
+    /* Border Widths ----------------------------------------------------- */
+
+    --border-size-1:            1px;
+    --border-size-2:            2px;
+    --border-size-3:            5px;
+    --border-size-4:            10px;
+    --border-size-5:            25px;
+
+    /* Border Radii ------------------------------------------------------ */
+
+    --radius-none:              0;
+    --radius-1:                 0.125rem;
+    --radius-2:                 0.25rem;
+    --radius-3:                 0.5rem;
+    --radius-4:                 1rem;
+    --radius-5:                 2rem;
+    --radius-6:                 4rem;
+    --radius-7:                 8rem;
+    --radius-round:             1e5px;
+
+
+    //==========================================================================
+    //==[ 5. Shadows ]=======================================================
+    //==========================================================================
+
+    /* Box Shadows  ------------------------------------------------------ */
+
+    --shadow-xs: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+    //==========================================================================
+    //==[ 6. Spacing ]==========================================================
+    //==========================================================================
+
+    /* Spacing Scale ---------------------- */
+
+    --size-1:            1rem;       // 16px
+    --size-2:            1.5rem;     // 24px
+    --size-3:            2rem;       // 32px
+    --size-4:            2.5rem;     // 40px
+    --size-5:            3rem;       // 48px
+    --size-6:            3.5rem;     // 56px
+    --size-7:            4rem;       // 64px
+    --size-8:            4.5rem;     // 72px
+    --size-9:            5rem;       // 80px
+    --size-10:           6rem;       // 96px
+
+    /* Shim Spacing Scale ---------------- */
+    
+    --shim-1:             0.0625rem; // 1px
+    --shim-2:             0.125rem; // 2px
+    --shim-3:             0.25rem;  // 4px
+    --shim-4:             0.375rem; // 6px
+    --shim-5:             0.5rem;   // 8px
+    --shim-6:             0.625rem; // 10px
+    --shim-7:             0.75rem;  // 12px
+    --shim-8:             0.875rem; // 14px
+
+    /* Fluid Spacing Scale ------------------------------------------------------ */
+    /* Sets clamp base on xs and xl breakpoints ---------- */
+
+    --size-fluid-1:      clamp(.5rem, 1vw, 1rem);        // 8px - 16px
+    --size-fluid-2:      clamp(1rem, 2vw, 1.5rem);       // 16px - 24px
+    --size-fluid-3:      clamp(1.5rem, 3vw, 2rem);       // 24px - 32px
+    --size-fluid-4:      clamp(2rem, 4vw, 3rem);         // 32px - 48px
+	--size-fluid-5:      clamp(3rem, 4.5vw, 4rem);       // 48px - 64px
+    --size-fluid-6:      clamp(4rem, 5vw, 5rem);         // 64px - 80px
+    --size-fluid-7:      clamp(5rem, 7vw, 7.5rem);       // 80px - 120px
+    --size-fluid-8:      clamp(7.5rem, 10vw, 10rem);     // 120px - 160px
+    --size-fluid-9:      clamp(10rem, 20vw, 15rem);      // 160px - 240px
+    --size-fluid-10:      clamp(15rem, 30vw, 20rem);     // 240px - 320px
+    --size-fluid-11:     clamp(20rem, 40vw, 30rem);      // 320px - 480px
+	--size-fluid-12:     clamp(30rem, 50vw, 40rem);      // 480px - 640px
+
+	--size-fluid-gap:    clamp(1.875rem, 4.5vw, 3.75rem); // 30px - 60px
+
+    /* Basic Grid  ------------------------------------------------------ */
+
+    --grid-template-2: repeat(2, minmax(0, 1fr));
+    --grid-template-3: repeat(3, minmax(0, 1fr));
+    --grid-template-4: repeat(4, minmax(0, 1fr));
+    --grid-template-5: repeat(5, minmax(0, 1fr));
+    --grid-template-6: repeat(6, minmax(0, 1fr));
+    --grid-template-7: repeat(7, minmax(0, 1fr));
+    --grid-template-8: repeat(8, minmax(0, 1fr));
+    --grid-template-9: repeat(9, minmax(0, 1fr));
+    --grid-template-10: repeat(10, minmax(0, 1fr));
+    --grid-template-11: repeat(11, minmax(0, 1fr));
+    --grid-template-12: repeat(12, minmax(0, 1fr));
+
+    //==========================================================================
+    //==[ 7. Typography ]=======================================================
+    //==========================================================================
+
+    /* Font Families  ------------------------------------------------------ */
+
+    // Modern font stacks
+
+    --font-system-ui: system-ui, sans-serif;
+    --font-transitional: Charter, Bitstream Charter, Sitka Text, Cambria, serif;
+    --font-old-style: Iowan Old Style, Palatino Linotype, URW Palladio L, P052, serif;
+    --font-humanist: Seravek, Gill Sans Nova, Ubuntu, Calibri, DejaVu Sans, source-sans-pro, sans-serif;
+    --font-geometric-humanist: Avenir, Montserrat, Corbel, URW Gothic, source-sans-pro, sans-serif;
+    --font-classical-humanist: Optima, Candara, Noto Sans, source-sans-pro, sans-serif;
+    --font-neo-grotesque: Inter, Roboto, Helvetica Neue, Arial Nova, Nimbus Sans, Arial, sans-serif;
+    --font-monospace-slab-serif: Nimbus Mono PS, Courier New, monospace;
+    --font-monospace-code: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace, SF Mono,Monaco, Droid Sans Mono, Source Code Pro, Cascadia Code,Menlo, Consolas, DejaVu Sans Mono, monospace;
+    --font-industrial: Bahnschrift, DIN Alternate, Franklin Gothic Medium, Nimbus Sans Narrow, sans-serif-condensed, sans-serif;
+    --font-rounded-sans: ui-rounded, Hiragino Maru Gothic ProN, Quicksand, Comfortaa, Manjari, Arial Rounded MT, Arial Rounded MT Bold, Calibri, source-sans-pro, sans-serif;
+    --font-slab-serif: Rockwell, Rockwell Nova, Roboto Slab, DejaVu Serif, Sitka Small, serif;
+    --font-antique: Superclarendon, Bookman Old Style, URW Bookman, URW Bookman L, Georgia Pro, Georgia, serif;
+    --font-didone: Didot, Bodoni MT, Noto Serif Display, URW Palladio L, P052, Sylfaen, serif;
+    --font-handwritten: Segoe Print, Bradley Hand, Chilanka, TSCu_Comic, casual, cursive;
+
+    /* Font Weights  ------------------------------------------------------ */
+
+    --font-weight-thin: 100;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
+
+    /* Line Heights  ------------------------------------------------------ */
+    // On a scale of 0-5, with 0 being the tightest and 5 being the loosest
+
+    --line-height-0:              1;
+    --line-height-1:              1.125;
+    --line-height-2:              1.375;
+    --line-height-3:              1.5;
+    --line-height-4:              1.625;
+    --line-height-5:              2;
+
+    /* Letter Spacing / Tracking ---------------------------------------------------- */
+    // On a scale of 00-4, with 00 being the tightest and 4 being the loosest
+
+    --letter-spacing-00: -0.05em;
+    --letter-spacing-0: -0.025em;
+    --letter-spacing-1: 0em;
+    --letter-spacing-2: 0.025em;
+    --letter-spacing-3: 0.05em;
+    --letter-spacing-4: 0.1em;
+
+    /* Header Font Sizes ------------------------------------------------- */
+    /* Fluid function scales from [xs]360px to [xl]1440px ---------- */
+    // https://utopia.fyi/type/calculator?c=360,16,1.2,1440,20,1.333,5,2,&s=0.75%7C0.5%7C0.25,1.5%7C2%7C3%7C4%7C6,s-l&g=s,l,xl,12
+
+    --heading-size-1: clamp(2.4883rem, 1.5641rem + 4.1075vi, 5.2609rem); // 39.81px - 84.17px
+    --heading-size-2: clamp(2.0736rem, 1.4492rem + 2.7749vi, 3.9467rem); // 33.18px - 63.15px
+    --heading-size-3: clamp(1.728rem, 1.3171rem + 1.8263vi, 2.9607rem); // 27.65px - 47.37px
+    --heading-size-4: clamp(1.44rem, 1.1796rem + 1.1572vi, 2.2211rem); // 23.04px - 35.54px
+    --heading-size-5: clamp(1.2rem, 1.0446rem + 0.6907vi, 1.6663rem); // 19.2px - 26.66px
+
+    /* Text Font Sizes ----------------------------------------------- */
+
+    --text-size-xs: clamp(0.6944rem, 0.6914rem + 0.0134vi, 0.7035rem); // 11.11px - 11.26px
+    --text-size-sm: clamp(0.8333rem, 0.7985rem + 0.1547vi, 0.9377rem); // 13.33px - 15px
+    --text-size-md: clamp(1rem, 0.9167rem + 0.3704vi, 1.25rem); // 16px - 20px
+
+    //==========================================================================
+    //==[ 8. Z-Index ]==========================================================
+    //==========================================================================
+
+    --z-sticky: 4000;
+    --z-drawer: 5000;
+    --z-dialog: 6000;
+    --z-dropdown: 7000;
+    --z-alert: 8000;
+    --z-tooltip: 9000;
+    --z-max: 9999;
+
+    //==========================================================================
+    //==[ 9. Motion ]===========================================================
+    //==========================================================================
+
+    /* Easing Functions ------------------------------------------------------ */
+    /* Based on https://easings.net/ ------------------ */
+
+    --ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    --ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    --ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    --ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    --ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    --ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    --ease-in-back: cubic-bezier(0.36, 0, 0.66, -0.56);
+    --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+    --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+    --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+    --ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1);
+    --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    --ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+    --ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+    --ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+    --ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+    --ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    --ease-in-out-back: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+    /* Transition Duration ------------------------------------------------------ */
+
+    --duration-quick: 150ms;
+    --duration-fast: 300ms;
+    --duration-moderate: 500ms;
+    --duration-slow: 750ms;
+    --duration-gentle: 1200ms;
+    --duration-adagio: 1600ms;
+    --duration-largo: 2000ms;
+    --duration-grave: 2500ms;
+
+    @media (prefers-reduced-motion: reduce) {
+        --duration-quick: 0;
+        --duration-fast: 0;
+        --duration-moderate: 0;
+        --duration-slow: 0;
+        --duration-gentle: 0;
+        --duration-adagio: 0;
+        --duration-largo: 0;
+        --duration-grave: 0;
+    }
+}

@@ -461,8 +461,8 @@ $width-side-nav:                            240px !default;
 
 .masthead {
 	@extend %clearfix;
-	background: $color-masthead-bg;
-	border-bottom: $border-masthead;
+	background: var(--masthead-background, #{$color-masthead-bg});
+	border-bottom: var(--masthead-border, var(--bu-border, #{$border-masthead}));
 	position: relative;
 }
 
@@ -496,7 +496,7 @@ $width-side-nav:                            240px !default;
 $nav-desktop:                    $sm !default;
 
 nav {
-	font-family: $font-family-navigation;
+	font-family: var(--nav-text-font, var(--bu-text-font, #{$font-family-navigation}));
 
 	a {
 		text-decoration: none;
@@ -520,7 +520,7 @@ nav {
 // quicksearch (use WordPress plugin class name)
 
 #quicksearch {
-	background: $color-search-bg;
+	background: var(--search-background, #{$color-search-bg});
 	margin: 0;
 	padding: $padding $padding-small;
 	position: relative;
@@ -530,7 +530,7 @@ nav {
 	}
 
 	&.is-open {
-		border-bottom: $border-search;
+		border-bottom: var(--search-border, var(--bu-border, #{$border-search}));
 		display: block;
 	}
 
@@ -563,7 +563,7 @@ $search-field-height:                          40px !default;
 
 .search-field {
 	@include border-radius( $border-radius-quicksearch-input );
-	color: $color-search-text;
+	color: var(--search-text-color, var(--bu-text-color, #{$color-search-text}));
 	height: $search-field-height;
 	padding-left: $padding-small;
 	padding-right: $padding-small;
@@ -607,7 +607,7 @@ $nav-toggle-size: 60px !default;
 	@extend %icon-search;
 	@include transition( color 200ms ease-in-out 0s );
 	background: transparent;
-	color: $color-nav-toggle;
+	color: var(--nav-toggle-color, #{$color-nav-toggle});
 	float: right;
 	font-size: math.div( $nav-toggle-size, 2 );
 	height: $nav-toggle-size;
@@ -618,11 +618,11 @@ $nav-toggle-size: 60px !default;
 	width: $nav-toggle-size;
 
 	&:visited {
-		color: $color-nav-toggle;
+		color: var(--nav-toggle-color, #{$color-nav-toggle});
 	}
 
 	&:hover {
-		color: $color-nav-toggle-hover;
+		color: var(--nav-toggle-color--hover, #{$color-nav-toggle-hover});
 	}
 
 	&:focus {
@@ -672,7 +672,7 @@ $nav-toggle-border: 4px !default;
 
 	span {
 		@include transition( all, 250ms, ease-in-out, 0s );
-		background: $color-nav-toggle;
+		background: var(--nav-toggle-color, #{$color-nav-toggle});
 		content: "";
 		cursor: pointer;
 		display: block;
@@ -686,7 +686,7 @@ $nav-toggle-border: 4px !default;
 		&::before,
 		&::after {
 			@include transition( all, 250ms, ease-in-out, 0s );
-			background: $color-nav-toggle;
+			background: var(--nav-toggle-color, #{$color-nav-toggle});
 			content: "";
 			cursor: pointer;
 			display: block;
@@ -730,7 +730,7 @@ $nav-toggle-border: 4px !default;
 
 .primary-nav {
 	@extend %clearfix;
-	background: $color-primary-nav-bg;
+	background: var(--primary-nav-background, #{$color-primary-nav-bg});
 	display: block;
 
 	@include breakpoint( $nav-desktop ) {
@@ -751,7 +751,7 @@ $nav-toggle-border: 4px !default;
 	clear: left;
 	margin: $nav-toggle-size $margin-small 0; // Keeps menu from overlapping nav toggle
 
-	@media screen and ( max-width: $sm - 1 ) {
+	@media screen and ( max-width: ( $sm - 1 ) ) {
 		.js & {
 			display: none;
 		}
@@ -794,35 +794,35 @@ $nav-toggle-border: 4px !default;
 			padding: 0 $padding-small;
 
 			a {
-				color: $color-primary-nav-dropdown-link;
-				line-height: $line-height-base;
+				color: var(--bu-link-color, #{$color-primary-nav-dropdown-link});
+				line-height: var(--bu-line-height, #{$line-height-base});
 				padding: $padding-small 0;
 
 				&:hover,
 				&:focus {
-					color: $color-primary-nav-dropdown-link-hover;
+					color: var(--bu-link-color--hover, #{$color-primary-nav-dropdown-link-hover});
 				}
 			}
 		}
 	}
 
 	a {
-		border: 1px solid $color-primary-nav-border;
-		border-width: $border-width-primary-nav;
-		color: $color-primary-nav-link;
+		border: 1px solid var(--bu-border-color, #{$color-primary-nav-border});
+		border-width: var(--bu-border-width, #{$border-width-primary-nav});
+		color: var(--bu-link-color, #{$color-primary-nav-link});
 		display: block;
 		padding: $padding-small 0;
 		text-decoration: none;
 
 		@include breakpoint( $nav-desktop ) {
-			border: $border-primary-nav-desktop;
+			border: var(--primary-nav-desktop-border, #{$border-primary-nav-desktop});
 			line-height: $nav-toggle-size;
 			padding: 0 $padding-small;
 		}
 
 		&:hover,
 		&:focus {
-			color: $color-primary-nav-link-hover;
+			color: var(--bu-link-color--hover, #{$color-primary-nav-link-hover});
 		}
 
 		&.active,
@@ -835,7 +835,7 @@ $nav-toggle-border: 4px !default;
 		display: none;
 
 		@include breakpoint( $nav-desktop ) {
-			background: $color-primary-nav-dropdown-bg;
+			background: var(--primary-nav-dropdown-background, #{$color-primary-nav-dropdown-bg});
 			display: block;
 			left: -9999px;
 			position: absolute;
@@ -855,10 +855,10 @@ $nav-toggle-border: 4px !default;
 // utility navigation
 
 .utility-nav {
-	border: 1px solid $color-primary-nav-border;
-	border-width: $border-width-utility-nav;
+	border: 1px solid var(--bu-border-color, #{$color-primary-nav-border});
+	border-width: var(--bu-border-width, #{$border-width-utility-nav});
 	clear: left;
-	color: $color-utility-nav-mobile-link;
+	color: var(--bu-link-color, #{$color-utility-nav-mobile-link});
 	display: none;
 	font-size: $font-size-utility-nav;
 	margin: 0 $padding-small;
@@ -866,7 +866,7 @@ $nav-toggle-border: 4px !default;
 	text-decoration: none;
 
 	@include breakpoint( $nav-desktop ) {
-		color: $color-utility-nav-link;
+		color: var(--bu-link-color, #{$color-utility-nav-link});
 	}
 
 	li {
@@ -885,10 +885,10 @@ $nav-toggle-border: 4px !default;
 		text-decoration: none;
 
 		&:hover {
-			color: $color-utility-nav-mobile-link-hover;
+			color: var(--bu-link-color--hover, #{$color-utility-nav-mobile-link-hover});
 
 			@include breakpoint( $nav-desktop ) {
-				color: $color-utility-nav-link-hover;
+				color: var(--bu-link-color--hover, #{$color-utility-nav-link-hover});
 			}
 		}
 	}
@@ -1000,9 +1000,9 @@ $left-nav-desktop:                    $nav-desktop !default;
 		}
 
 		a {
-			border: 1px solid $color-primary-nav-border;
-			border-width: $border-width-primary-nav;
-			line-height: $line-height-base;
+			border: 1px solid var(--primary-nav-color, var(--bu-border-color, #{$color-primary-nav-border}));
+			border-width: var(--primary-nav-border-width, var(--bu-border-width, #{$border-width-primary-nav}));
+			line-height: var(--primary-nav-line-height, var(--bu-line-height, #{$line-height-base}));
 			padding: $padding-small 0;
 		}
 
@@ -1014,13 +1014,13 @@ $left-nav-desktop:                    $nav-desktop !default;
 
 .l-side-nav .search-toggle {
 	//top: $height-masthead + 30px;
-	color: $color-grayscale-f;
+	color: var(--search-toggle-color, #{$color-grayscale-f});
 	position: absolute;
 	right: 0;
 
 	@include breakpoint( $left-nav-desktop ) {
 		@include vertical-center-ie9;
-		color: $color-nav-toggle-alt;
+		color: var(--search-toggle-alt-color, #{$color-nav-toggle-alt});
 		display: block;
 		position: relative;
 		right: $padding-small;
@@ -1035,7 +1035,7 @@ $left-nav-desktop:                    $nav-desktop !default;
 		color: currentColor;
 
 		@include breakpoint( $left-nav-desktop ) {
-			color: $color-nav-toggle-alt-hover;
+			color: var(--nav-toggle-alt-color--hover, #{$color-nav-toggle-alt-hover});
 		}
 	}
 }
@@ -1061,8 +1061,8 @@ $_search-height: 115px;
 .l-side-nav {
 	#quicksearch {
 		@include breakpoint( $left-nav-desktop ) {
-			border: 1px solid $color-quicksearch-border;
-			border-width: $border-width-quicksearch;
+			border: 1px solid var(--bu-border-color, #{$color-quicksearch-border});
+			border-width: var(--bu-border-width, #{$border-width-quicksearch});
 			position: absolute;
 			width: 100%;
 		}
@@ -1188,7 +1188,7 @@ $no-nav-desktop:                    $nav-desktop !default;
 		padding-right: 60px;
 
 		.search-toggle {
-			color: $color-nav-toggle-alt;
+			color: var(--nav-toggle-alt-color, #{$color-nav-toggle-alt});
 			display: block;
 			font-size: 24px;
 			margin: 0 -60px 0 0;
@@ -1200,17 +1200,17 @@ $no-nav-desktop:                    $nav-desktop !default;
 			}
 
 			&:visited {
-				color: $color-nav-toggle-alt;
+				color: var(--nav-toggle-alt-color, #{$color-nav-toggle-alt});
 			}
 
 			&:hover {
-				color: $color-nav-toggle-alt-hover;
+				color: var(--nav-toggle-alt-color--hover, #{$color-nav-toggle-alt-hover});
 			}
 		}
 	}
 
 	#quicksearch {
-		border-top: 1px solid $color-grayscale-d;
+		border-top: 1px solid var(--search-border-color, #{$color-grayscale-d});
 	}
 
 	.masthead-container {
@@ -1431,14 +1431,14 @@ $mega-nav-desktop-layout:                      $md !default;
 		}
 
 		a {
-			color: $color-primary-nav-link;
+			color: var(--primary-nav-link-color, #{$color-primary-nav-link});
 		}
 	}
 }
 
 .mega-nav-toggle {
-	background: $color-mega-nav-toggle-bg;
-	color: $color-mega-nav-toggle-text;
+	background: var(--mega-nav-toggle-background, var(--bu-button-background-color, #{$color-mega-nav-toggle-bg}));
+	color: var(--mega-nav-toggle-text-color, var(--bu-button-text-color, #{$color-mega-nav-toggle-text}));
 	display: block;
 	height: auto;
 	overflow: visible;

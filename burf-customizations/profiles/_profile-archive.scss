@@ -74,7 +74,7 @@ $color-profile-title:                      $color-base !default;
 
 .profile-item {
 	list-style: none;
-	margin-bottom: $margin;
+	margin-bottom: var(--margin, #{$margin});
 	position: relative;
 }
 
@@ -106,7 +106,7 @@ $color-profile-title:                      $color-base !default;
 // Since: 2.0.0
 
 .profile-name {
-	color: $color-profile-name;
+	color: var(--profile-name-color, var(--bu-link-color, #{$color-profile-name}));
 	margin-bottom: 0;
 	text-decoration: underline;
 }
@@ -120,7 +120,7 @@ $color-profile-title:                      $color-base !default;
 // Since: 2.0.0
 
 .profile-title {
-	color: $color-profile-title;
+	color: var(--profile-title-color, var(--bu-heading-color, #{$color-profile-title}));
 	display: block;
 }
 

@@ -1,0 +1,98 @@
+@use '../functions/lists' as list-fn;
+@use '../config/breakpoints' as mq;
+@use 'sass:map';
+
+/**
+ * @mixin breakpoint
+ *
+ * Generates a CSS media query for the given breakpoint.
+ *
+ * @param {string} $bp - Breakpoint name - Accepts a scss variable, scss map key or a string.
+ * @param {string} $rule - Media query rule - 'min-width', 'max-width', etc.
+ * @param {string} $media - Media type - 'screen', 'print', 'any', 'not all', etc.
+ * @param {Map} $breakpoints - Breakpoint map.
+ *
+ * @example
+ * @include breakpoint(md) { ... };
+ * @include breakpoint($md) { ... };
+ * @include breakpoint(992px) { ... };
+ */
+@mixin breakpoint($bp: xs, $rule: min-width, $media: screen, $breakpoints: mq.$breakpoints) {
+    @if map.has-key($breakpoints, $bp, width) {
+        $bp: map.get($breakpoints, $bp, width);
+    }
+    @if $rule == max-width {
+        $bp: $bp - 1;
+    }
+    @if $media != null {
+        @media #{$media} and (#{$rule}: $bp) {
+            @content;
+        }
+    } @else {
+        @media (#{$rule}: $bp) {
+            @content;
+        }
+    }
+}
+
+/**
+ * @mixin generate-breakpoint-widths
+ *
+ * Generates CSS variables for each breakpoint width.
+ *
+ * @param {Map} $breakpoints - Breakpoint map.
+ * @param {string} $variable - CSS variable name.
+ *
+ * @example --breakpoint-[name]: 768px;
+ */
+@mixin generate-breakpoint-widths($breakpoints, $variable: breakpoint) {
+    @each $bp in map.keys($breakpoints) {
+        --#{$variable}-#{ $bp }: #{map.get($breakpoints, $bp, width)};
+    }
+}
+
+/**
+ * @mixin generate-breakpoint-gaps
+ *
+ * Generates CSS variables for each breakpoint gap.
+ *
+ * @param {Map} $breakpoints - Breakpoint map.
+ * @param {string} $variable - CSS variable name.
+ *
+ * @example --breakpoint-[name]-gap: 2rem;
+ */
+@mixin generate-breakpoint-gaps($breakpoints, $variable: breakpoint) {
+    @each $bp in map.keys($breakpoints) {
+        --#{$variable}-#{ $bp }-gap: #{map.get($breakpoints, $bp, gap)};
+    }
+}
+
+/**
+ * @mixin generate-active-breakpoint-variables
+ *
+ * Generates CSS variables for each active breakpoint.
+ *
+ * @param {Map} $breakpoints - Breakpoint map.
+ *
+ * @example --breakpoint-min-width: 768px;
+ * @example --breakpoint-max-width: 1023px;
+ * @example --breakpoint-gap: 2rem;
+ */
+@mixin generate-active-breakpoint-variables($breakpoints) {
+    $keys: map.keys($breakpoints);
+
+    @each $bp in $keys {
+        $next: list-fn.next-key($bp, $keys);
+
+        @include breakpoint($bp) {
+            --breakpoint-min-width: #{map.get($breakpoints, $bp, width)};
+
+            @if $next {
+                --breakpoint-max-width: #{map.get($breakpoints, $next, width) - 1};
+            } @else {
+                --breakpoint-max-width: none;
+            }
+            --breakpoint-gap: #{map.get($breakpoints, $bp, gap)};
+        }
+    }
+}
