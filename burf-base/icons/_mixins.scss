@@ -100,6 +100,27 @@ $color-icons:										 unset !default;
 	white-space: nowrap;
 }
 
+// BU Hub Wide Icon Mixin
+//
+// Provides alternate icon-content override styles 
+// for the icon-buhub-wide icon to render it at
+// a readable size. This was added as a variant so as
+// to not break the existing icon-buhub icon. 
+//
+//
+// Access: Public
+//
+// Since: 5.0.4
+@mixin icon-buhub-wide-content {
+	--icon-buhub-wide-scalefactor: 4.6;
+	--icon-buhub-wide-fontsize: calc( 1em / (var(--icon-buhub-wide-scalefactor))); // Original font size.
+	line-height: calc(var(--icon-buhub-wide-fontsize) * 0.2);
+    margin-right: calc(var(--icon-buhub-wide-fontsize) * 0.5); 
+    padding-bottom: 0;
+    font-size: calc( 1em * (var(--icon-buhub-wide-scalefactor)));
+    height: calc(var(--icon-buhub-wide-fontsize) * 1.2);
+}
+
 // Icon content placeholder - before
 //
 // Provides base icon styles normalized across browsers and optimized
@@ -191,6 +212,10 @@ $color-icons:										 unset !default;
 		} @else if map-has-key( $icons-fontawesomebrands, $name ) {
 			font-family: "Font Awesome 5 Brands";
 			font-weight: 400;
-		} 
+		}
+		// Special fix for this specific buhub icon variant so it renders at a larger size making it readable.
+		@if $name == 'buhub-wide' {
+			@include icon-buhub-wide-content;
+		}
 	}
 }
