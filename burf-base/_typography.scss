@@ -244,7 +244,7 @@ ol ol {
 // Since: 1.0.0
 
 code {
-	background: var(--code-background-color, #{$color-code-bg});
+	background: var(--code-background, #{$color-code-bg});
 	color: var(--code-color, #{$color-code});
 	padding: var(--code-padding, #{$font-padding-code});
 	white-space: nowrap;
@@ -263,7 +263,7 @@ code {
 // Since: 1.0.0
 
 .code {
-	background: var(--code-background-color, #{$color-code-bg});
+	background: var(--code-background, #{$color-code-bg});
 	border: var(--code-border, #{$border-code});
 	margin: var(--code-margin, #{$font-margin-code});
 	-webkit-overflow-scrolling: touch;

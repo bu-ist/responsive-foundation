@@ -737,6 +737,11 @@ $border-radius-button:                     2px !default;
 	&:hover,
 	&:focus {
 		background-color: var(--bu-button-background-color--hover, #{darken($color-button-bg, 10%)});
+		color: var(--bu-button-text-color--hover);
+	}
+
+	&:visited {
+		color: var(--bu-button-text-color, #{$color-button-text});
 	}
 
 	&:active {
@@ -775,8 +780,8 @@ $border-radius-button:                     2px !default;
 	&-disabled:hover,
 	&-disabled:active {
 		@include box-shadow( none );
-		background: var(--bu-neutral-300, #{$color-grayscale-d});
-		color: var(--bu-neutral-900, #{$color-grayscale-7});
+		background: var(--button-disabled-background, #{$color-grayscale-d});
+		color: var(--button-disabled-text-color, #{$color-grayscale-7});
 		cursor: not-allowed;
 	}
 
@@ -818,6 +823,10 @@ $border-radius-button:                     2px !default;
 	&:hover,
 	&:focus {
 		background-color: var(--bu-button-primary-background-color--hover, #{darken($color-button-primary-bg, 10%)});
+		color: var(--bu-button-primary-text-color--hover, #{$color-button-primary-text});
+	}
+
+	&:visited {
 		color: var(--bu-button-primary-text-color, #{$color-button-primary-text});
 	}
 }
@@ -843,7 +852,7 @@ form {
 // Since: 1.0.0
 
 fieldset {
-	border: var(--bu-border, #{$form-fieldset-border});
+	border: var(--form-border, var(--bu-border, #{$form-fieldset-border}));
 	margin: var(--form-fieldset-margin, #{$form-fieldset-margin});
 	padding: var(--form-fieldset-padding, #{$form-fieldset-padding});
 }
@@ -856,7 +865,7 @@ fieldset {
 // Since: 1.0.0
 
 legend {
-	border-bottom: var(--bu-border, #{$form-legend-border});
+	border-bottom: var(--form-border, var(--bu-border, #{$form-legend-border}));
 	display: block;
 	font-size: 1.5em;
 	font-weight: 700;
@@ -940,7 +949,7 @@ select,
 textarea {
 	@include	box-shadow( $form-input-shadow );
 	@include border-radius( $form-input-border-radius );
-	border: var(--form-input-border, var(--bu-border, #{$form-input-border}));
+	border: var(--form-border, var(--bu-border, #{$form-input-border}));
 	display: inline-block;
 	line-height: 1;
 	margin: var(--form-input-margin, #{$form-input-margin});
@@ -1040,8 +1049,8 @@ input,
 textarea,
 select {
 	&:focus:invalid {
-		border-color: var(--border-color-invalid, #{$_invalid-border-color});
-		color: var(--text-color-invalid, #{$_invalid-text-color});
+		border-color: var(--invalid-border-color, #{$_invalid-border-color});
+		color: var(--invalid-text-color, #{$_invalid-text-color});
 	}
 }
 
@@ -1058,7 +1067,7 @@ select {
 [type="radio"],
 [type="checkbox"] {
 	&:focus:invalid {
-		outline-color: var(--border-color-invalid, #{$_invalid-border-color});
+		outline-color: var(--invalid-border-color, #{$_invalid-border-color});
 	}
 }
 
