@@ -7,6 +7,8 @@
   - Move Twitter icon from FontAwsome list to BU Default Icons list so the updated X icon is used from BU Default Icons vs the Bird icon from FontAwesome for `icon-twitter`.
   - Add BU Hub Wide icon `icon-buhub-wide`. Use by calling `@extend %icon-buhub-wide;` This icon is the same as `icon-buhub` but has additional style overrides to scale it up.
   - Add BU Hub Alt icon `icon-buhub-alt`.  Use by calling `@extend %icon-buhub-alt;`
+- Bug fix: Restore dependency needed for compiling burf-tools in projects that use it. 
+
 
 ## 5.0.3
 - Bug fix: Restore dependencies needed for compiling in themes. 
