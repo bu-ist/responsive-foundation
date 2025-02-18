@@ -222,8 +222,10 @@ body {
 
 	.alignleft,
 	.alignright,
+	.aligncenter,
 	[data-align="left"],
-	[data-align="right"] {
+	[data-align="right"],
+	[data-align="center"] {
 		margin-block-start: 0;
 		margin-block-end: var(--bu--content--margin-block);
 		max-width: var(--bu--content--width-nested-float-clamped);
@@ -231,8 +233,10 @@ body {
 
 	> .alignleft,
 	> .alignright,
+	> .aligncenter,
 	> [data-align="left"],
-	> [data-align="right"] {
+	> [data-align="right"],
+	> [data-align="center"] {
 		max-width: var( --bu--content--width-float-clamped );
 	}
 
@@ -313,7 +317,8 @@ body {
 		}
 		
 		.alignleft,
-		.alignright {
+		.alignright,
+		.aligncenter {
 			margin-block-start: 0;
 			margin-block-end: var(--bu--content--margin-block);
 			max-width: var(--bu--content--width-nested-float-clamped);
@@ -334,7 +339,8 @@ body {
 	
 	> .wp-block-image {
 		.alignleft,
-		.alignright {
+		.alignright,
+		.aligncenter {
 			max-width: var(--bu--content--width-float-clamped);
 		}
 
@@ -352,8 +358,18 @@ body {
 		&:has( > .wp-block-embed ) {
 			width: var(--bu--content--width-nested-float-clamped);
 
-			&[data-align="right"] {
+			&[data-align="left"],
+			&[data-align="right"],
+			&[data-align="center"] {
 				width: var(--bu--content--width-float-clamped);
+			}
+
+			&[data-align="wide"] {
+				width: var(--bu--content--width-wide-clamped);
+			}
+
+			&[data-align="full"] {
+				width: 100%;
 			}
 		}
 
