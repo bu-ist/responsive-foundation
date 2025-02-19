@@ -140,7 +140,7 @@ abbr[title] {
 //
 // Since: 1.0.0
 
-blockquote {
+:where(blockquote) {
 	margin: $font-margin-blockquote;
 }
 
@@ -150,8 +150,8 @@ blockquote {
 //
 // Since: 1.0.0
 
-p,
-pre {
+:where(p),
+:where(pre) {
 	margin: $font-margin-base;
 }
 
