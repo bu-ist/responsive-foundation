@@ -46,6 +46,6 @@
     ]
   },
   "dependencies": {
-    "@bostonuniversity/burf-base": "^5.0.4"
+    "@bostonuniversity/burf-base": "^5.0.4-rc.1"
   }
 }
