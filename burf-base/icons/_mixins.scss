@@ -113,12 +113,13 @@ $color-icons:										 unset !default;
 // Since: 5.0.4
 @mixin icon-buhub-wide-content {
 	--icon-buhub-wide-scalefactor: 4.6;
-	--icon-buhub-wide-fontsize: calc( 1em / (var(--icon-buhub-wide-scalefactor))); // Original font size.
-	line-height: calc(var(--icon-buhub-wide-fontsize) * 0.2);
-	margin-right: calc(var(--icon-buhub-wide-fontsize) * 0.5); 
+	--icon-buhub-wide-fontsize: calc( 1em * (var(--icon-buhub-wide-scalefactor)));
+	--icon-buhub-wide-fontsize-original: calc( 1em / (var(--icon-buhub-wide-scalefactor))); // Original font size.
+	line-height: calc(var(--icon-buhub-wide-fontsize-original) * 0.2);
+	margin-right: calc(var(--icon-buhub-wide-fontsize-original) * 0.5); 
 	padding-bottom: 0;
-	font-size: calc( 1em * (var(--icon-buhub-wide-scalefactor)));
-	height: calc(var(--icon-buhub-wide-fontsize) * 1.2);
+	font-size: var(--icon-buhub-wide-fontsize);
+	height: calc(var(--icon-buhub-wide-fontsize-original) * 1.2);
 }
 
 // Icon content placeholder - before
