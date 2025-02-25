@@ -115,10 +115,10 @@ $color-icons:										 unset !default;
 	--icon-buhub-wide-scalefactor: 4.6;
 	--icon-buhub-wide-fontsize: calc( 1em / (var(--icon-buhub-wide-scalefactor))); // Original font size.
 	line-height: calc(var(--icon-buhub-wide-fontsize) * 0.2);
-    margin-right: calc(var(--icon-buhub-wide-fontsize) * 0.5); 
-    padding-bottom: 0;
-    font-size: calc( 1em * (var(--icon-buhub-wide-scalefactor)));
-    height: calc(var(--icon-buhub-wide-fontsize) * 1.2);
+	margin-right: calc(var(--icon-buhub-wide-fontsize) * 0.5); 
+	padding-bottom: 0;
+	font-size: calc( 1em * (var(--icon-buhub-wide-scalefactor)));
+	height: calc(var(--icon-buhub-wide-fontsize) * 1.2);
 }
 
 // Icon content placeholder - before
