@@ -1523,13 +1523,27 @@ $icons-budefaulticons: (
 	// BU Hub Indicator
 	buhub: '\F700',
 	buhub-alt: '\F702',
+	buhub-wide: '\F700',
 	questionmark: '\2753',
 
 	rhett: '\F701',
 	bluesky: '\F652',
+	twitter: '\F611',
 	x: '\F615',
 	x-alt: '\F62B',
 );
+
+/*
+* These icons are centered to match FontAwesome icon positioning.
+*/
+$icons-budefaulticons-fontawesome-centered: (
+	twitter: '\F703',
+	x: '\F703',
+	bluesky: '\F704'
+);
+
+// Merge BU Default font icons and BU Default Icons FontAwesome Centered Icons.
+$icons-budefaulticons: map_merge( $icons-budefaulticons, $icons-budefaulticons-fontawesome-centered );
 
 // Merge Responsive Icons and BU Default font icons.
 $icons-responsive: map_merge( $icons-responsive, $icons-budefaulticons );

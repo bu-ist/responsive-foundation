@@ -1,6 +1,6 @@
 {
   "name": "@bostonuniversity/burf-theme",
-  "version": "5.0.3",
+  "version": "5.0.4-rc.1",
   "homepage": "https://bu-ist.github.io/responsive-foundation/",
   "description": "A sensible boilerplate and library of styles for WordPress, intended to work with the Boston University Responsive Framework parent theme.",
   "authors": [
@@ -46,6 +46,6 @@
     ]
   },
   "dependencies": {
-    "@bostonuniversity/burf-base": "^5.0.3"
+    "@bostonuniversity/burf-base": "^5.0.4-rc.1"
   }
 }
