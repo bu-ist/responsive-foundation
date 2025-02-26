@@ -62,14 +62,11 @@
     "kss:watch": "npm-watch build",
     "build": "npm run kss:builddocs && npm run kss:buildcss && npm run kss:copy",
     "start": "npm run kss:builddocs && npm run kss:buildcss && npm run kss:copy && (npm run kss:serve) && (npm run kss:startcss)",
-    
-    
     "__Linking__": "=========================================================================",
     "yalc:all": "(cd burf-customizations && yalc publish) && (cd burf-base && yalc publish) && (cd burf-tools && yalc publish) && (cd burf-theme && yalc publish)",
     "yalc:push": "(cd burf-customizations && yalc publish --push) && (cd burf-base && yalc publish --push) && (cd burf-tools && yalc publish --push) && (cd burf-theme && yalc publish --push)",
     "yalc:changed": "(cd burf-customizations && yalc push --changed) && (cd burf-base && yalc push --changed) && (cd burf-tools && yalc push --changed) && (cd burf-theme && yalc push --changed)",
     "yalc:watch": "npm-watch yalc:changed"
-    
   },
   "watch": {
     "yalc:changed": {
@@ -84,10 +81,6 @@
     },
     "build": {
       "patterns": [
-        "burf-base",
-        "burf-theme",
-        "burf-customizations",
-        "burf-tools",
         "_docs"
       ],
       "extensions": "js,scss,html",
