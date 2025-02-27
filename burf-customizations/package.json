@@ -1,6 +1,6 @@
 {
   "name": "@bostonuniversity/burf-customizations",
-  "version": "5.0.0-alpha.10",
+  "version": "6.0.0-alpha.1",
   "homepage": "https://bu-ist.github.io/responsive-foundation/",
   "description": "A sensible boilerplate and library of styles for WordPress, intended to work with the Boston University Responsive Framework parent theme.",
   "authors": [
@@ -15,6 +15,7 @@
     "Jon Desroisers <jondes@bu.edu>",
     "Tom Dodson <tdodson@bu.edu>",
     "Alana Martin <alanam@bu.edu>",
+    "Tim King <timking@bu.edu>",
     "Dakota Chichester <acketon@bu.edu>"
   ],
   "keywords": [
@@ -43,7 +44,7 @@
     ]
   },
   "dependencies": {
-    "@bostonuniversity/burf-base": "^5.0.0-alpha.10",
-    "@bostonuniversity/burf-theme": "^5.0.0-alpha.10"
+    "@bostonuniversity/burf-base": "^6.0.0-alpha.1",
+    "@bostonuniversity/burf-theme": "^6.0.0-alpha.1"
   }
 }

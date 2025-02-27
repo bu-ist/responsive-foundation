@@ -1,6 +1,6 @@
 {
   "name": "responsive-foundation",
-  "version": "6.0.0",
+  "version": "6.0.0-alpha.1",
   "homepage": "https://github.com/bu-ist/responsive-foundation",
   "description": "A front-end framework for developing responsive sites at Boston University.",
   "authors": [
@@ -15,6 +15,7 @@
     "Jon Desroisers <jondes@bu.edu>",
     "Tom Dodson <tdodson@bu.edu>",
     "Alana Martin <alanam@bu.edu>",
+    "Tim King <timking@bu.edu>",
     "Dakota Chichester <acketon@bu.edu>"
   ],
   "keywords": [
@@ -39,12 +40,6 @@
     ]
   },
   "main": "js/theme.js",
-  "dependencies": {
-    "@bostonuniversity/burf-base": "^5.0.0-alpha.10",
-    "@bostonuniversity/burf-customizations": "^5.0.0-alpha.10",
-    "@bostonuniversity/burf-theme": "^5.0.0-alpha.10",
-    "@bostonuniversity/burf-tools": "^5.0.0-alpha.10"
-  },
   "devDependencies": {
     "@wordpress/scripts": "^27.4.0",
     "browser-sync": "^3.0.2",
@@ -67,14 +62,11 @@
     "kss:watch": "npm-watch build",
     "build": "npm run kss:builddocs && npm run kss:buildcss && npm run kss:copy",
     "start": "npm run kss:builddocs && npm run kss:buildcss && npm run kss:copy && (npm run kss:serve) && (npm run kss:startcss)",
-    
-    
     "__Linking__": "=========================================================================",
     "yalc:all": "(cd burf-customizations && yalc publish) && (cd burf-base && yalc publish) && (cd burf-tools && yalc publish) && (cd burf-theme && yalc publish)",
     "yalc:push": "(cd burf-customizations && yalc publish --push) && (cd burf-base && yalc publish --push) && (cd burf-tools && yalc publish --push) && (cd burf-theme && yalc publish --push)",
     "yalc:changed": "(cd burf-customizations && yalc push --changed) && (cd burf-base && yalc push --changed) && (cd burf-tools && yalc push --changed) && (cd burf-theme && yalc push --changed)",
     "yalc:watch": "npm-watch yalc:changed"
-    
   },
   "watch": {
     "yalc:changed": {
