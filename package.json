@@ -81,6 +81,10 @@
     },
     "build": {
       "patterns": [
+        "burf-base",
+        "burf-theme",
+        "burf-customizations",
+        "burf-tools",
         "_docs"
       ],
       "extensions": "js,scss,html",
