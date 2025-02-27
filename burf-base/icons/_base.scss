@@ -45,22 +45,23 @@
 			url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.ttf") format("truetype"),
 			url("https://www.bu.edu/cdn/fonts/FontAwesome-Free/webfonts/fa-brands-400.svg#fontawesome") format("svg");
 	}
-}
 
-/*
-* Load BU Default Icons font which is needed for a handful of icons not available
-* in FontAwesome 5.
-*/
 
-@font-face {
-	font-family: "BU-Default-Icons";
-	src: url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot");
-	src: url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot?#iefix") format("embedded-opentype"),
-		 url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.woff") format("woff"),
-		 url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.ttf") format("truetype"),
-		 url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.svg#bu-default-icons") format("svg");
-	font-style: normal;
-	font-weight: 400;
+	/*
+	* Load BU Default Icons font which is needed for a handful of icons not available
+	* in FontAwesome 5.
+	*/
+
+	@font-face {
+		font-family: "BU-Default-Icons";
+		src: url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot");
+		src: url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot?#iefix") format("embedded-opentype"),
+			url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.woff") format("woff"),
+			url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.ttf") format("truetype"),
+			url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.svg#bu-default-icons") format("svg");
+		font-style: normal;
+		font-weight: 400;
+	}
 }
 
 

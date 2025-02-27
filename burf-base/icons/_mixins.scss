@@ -210,7 +210,7 @@ $color-icons:										 unset !default;
 			font-weight: 400;
 
 		// Icons in the $icons-fontawesomebrands map need a different font-family and weight.
-		} @else if map-has-key( $icons-fontawesomebrands, $name ) {
+		} @else if map-has-key( $icons-fontawesome-brands, $name ) {
 			font-family: "Font Awesome 5 Brands";
 			font-weight: 400;
 		}
