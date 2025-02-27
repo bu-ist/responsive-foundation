@@ -5,6 +5,14 @@ $icons-fontawesome: ();
 // This map contains the essential Fontawesome v5 icons that
 // will be compiled on every build.
 $icons-fontawesome-essential: (
+    angle-double-down: $fa-var-angle-double-down,
+	angle-double-left: $fa-var-angle-double-left,
+	angle-double-right: $fa-var-angle-double-right,
+	angle-double-up: $fa-var-angle-double-up,
+	angle-down: $fa-var-angle-down,
+	angle-left: $fa-var-angle-left,
+	angle-right: $fa-var-angle-right,
+	angle-up: $fa-var-angle-up,
 	bars: $fa-var-bars,
 	calendar: $fa-var-calendar,
 	calendar-alt: $fa-var-calendar-alt,
