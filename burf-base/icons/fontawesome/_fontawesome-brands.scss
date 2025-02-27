@@ -531,7 +531,7 @@ $icons-fontawesome-brands-all: (
 /// @since 6.0.0
 
 @if $use-all-fontawesome-brands-icons {
-	$icons-fontawesome-brands: map_merge( $icons-fontawesome-brands-all, $icons-fontawesome-brands-essential );
+    $icons-fontawesome-brands: map_merge( $icons-fontawesome-brands-all, $icons-fontawesome-brands-essential );
 } @else {
     $icons-fontawesome-brands: map_merge( $icons-fontawesome-brands, $icons-fontawesome-brands-essential );
 }

@@ -2,6 +2,8 @@
 
 ## Unreleased (target: 6.0)
 - Reduce FontAwesome Icon List to essential icons and stop processing all 1400+ icons by default. This speeds up the build process.
+- Only output @font-face for BU Default Icons if $use-default-icons is true. This prevents it from outputing via burf-tools.
+- Refactor the burf-base/icons/_supported.scss file into multiple partials to better organize the large lists of icons.
 - Updates the build process to remove grunt
 - updates the KSS styleguide build process
 - Adds Yalc to handle local linking of Foundation to the Framework repo (or child-starter) to preview SASS changes

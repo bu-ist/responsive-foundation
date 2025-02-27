@@ -1107,7 +1107,7 @@ $icons-fontawesome-all: (
 /// @since 6.0.0
 
 @if $use-all-fontawesome-icons {
-	$icons-fontawesome: map_merge( $icons-fontawesome-all, $icons-fontawesome-essential );
+    $icons-fontawesome: map_merge( $icons-fontawesome-all, $icons-fontawesome-essential );
 } @else {
     $icons-fontawesome: map_merge( $icons-fontawesome, $icons-fontawesome-essential );
 }
