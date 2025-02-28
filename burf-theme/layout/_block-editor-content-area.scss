@@ -381,11 +381,6 @@ $_sidebar-width: $grid-number-columns * math.div( 1, $number-columns );
 	}
 }
 
-.content-area,
-.block-editor-block-list__layout.is-root-container {
-	@extend %content-root-container;
-}
-
 // Sidebar
 // -----------------------------------------------------------------
 
