@@ -25,6 +25,18 @@
 - Change how FontAwesome Brand icons are handled so the Fontawesome brands font is applied automatically via the icon mixin
 - Change how BU Default Icons are handled so the BU Default Icons font is applied automatically via the icon mixin
 
+## 5.0.0-alpha.10
+
+-  Move js to burf-theme by @ashleykolodziej in #242
+-  Get KSS back in by @ashleykolodziej in #243
+-  Update node-sass by @jdub233 in #248
+-  Switch publish action by @jdub233 in #249
+-  Switch package references to npm by @jdub233 in #246
+-  Remove deprecated icon by @ashleykolodziej in #250
+-  Bump minimist from 1.2.5 to 1.2.6 in /burf-base by @dependabot in #254
+-  Bump follow-redirects from 1.14.7 to 1.14.8 in /burf-base by @dependabot in #251
+-  Bump grunt from 1.4.1 to 1.5.3 in /burf-base by @dependabot in #258
+
 ## 5.0.0-alpha.7
 
 * Officially publishes to npm under the @bostonuniversity account!
