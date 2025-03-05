@@ -1,0 +1,70 @@
+// =================================================================
+// Image Block Settings
+// =================================================================
+// Preliminary layout styles for the image block
+
+@use "sass:map";
+
+// Shared image block mixin
+// -----------------------------------------------------------------
+// These styles are meant to apply to the image block across the front-end as well as editor.
+// Mostly zeroing out spacing inconsistent between front-end and editor, and utilizing CSS variables.
+
+@mixin image-block-shared-styles( $selectors: $frontend-selectors ) {
+	.wp-block-image {
+		&:is(figure) {
+			margin: 0;
+		}
+
+		&:has( figure ) {
+			display: inline;
+		}
+
+		> figure {
+			margin-inline: auto;
+			max-width: var( --bu--content--width-float-clamped );
+		}
+		
+		.alignleft,
+		.alignright,
+		.aligncenter {
+			margin-block-start: 0;
+			margin-block-end: var( --bu--content--margin-block );
+			max-width: var( --bu--content--width-nested-float-clamped );
+		}
+		
+		.alignleft {
+			margin-inline-end: var( --bu--content--margin-inline ) !important;
+		}
+		
+		.alignright {
+			margin-inline-start: var( --bu--content--margin-inline ) !important;
+		}
+
+		img {
+			vertical-align: bottom;
+		}
+	}
+
+	// Top level content styles
+	// -----------------------------------------------------------------
+	// These styles use a child combinator so as to only target unnested blocks and page elements.
+	
+	> {
+		.wp-block-image {
+			.alignleft,
+			.alignright,
+			.aligncenter {
+				max-width: var( --bu--content--width-float-clamped );
+			}
+
+			.alignleft {
+				margin-inline-start: var( --bu--content--margin-offset ) !important;
+			}
+
+			.alignright {
+				margin-inline-end: var( --bu--content--margin-offset ) !important;
+			}
+		}	
+	}
+}

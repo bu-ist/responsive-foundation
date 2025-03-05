@@ -1,0 +1,35 @@
+// =================================================================
+// Column Block Settings
+// =================================================================
+// Preliminary layout styles for the column block
+
+@use "sass:map";
+
+// Shared column block mixin
+// -----------------------------------------------------------------
+
+// These styles are meant to apply to the column bloc across the front-end as well as editor.
+// Mostly zeroing out spacing inconsistent between front-end and editor, and utilizing CSS variables.
+// A selector map can be passed thru, by default it is set to pass in $frontend-selectors
+
+@mixin column-block-shared-styles( $selectors: $frontend-selectors ) {
+	.wp-block-columns {
+		column-gap: var( --bu--content--column-gap );
+		row-gap: var( --bu--content--row-gap );
+		margin-block: 0;
+	}
+
+	.wp-block-column {
+		margin: 0 !important;
+
+		> * {
+			&:first-child {
+				margin-block-start: 0;
+			}
+
+			&:last-child {
+				margin-block-end: 0;
+			}
+		}
+	}
+}

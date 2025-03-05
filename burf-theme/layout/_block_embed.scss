@@ -1,0 +1,51 @@
+// =================================================================
+// Embed Block Settings
+// =================================================================
+// Preliminary layout styles for the embed block
+
+@use "sass:map";
+
+// Shared embed block mixin
+// -----------------------------------------------------------------
+// These styles are meant to apply to the embed block across the front-end as well as editor. 
+// Mostly zeroing out spacing inconsistent between front-end and editor, and utilizing CSS variables.
+
+@mixin embed-block-shared-styles( $selectors: $frontend-selectors ) {
+	.wp-block-embed {
+			margin: 0;
+
+		.wp-block-embed__wrapper {
+			min-width: auto;
+		}
+	}
+}
+
+// Editor only embed block mixin
+// -----------------------------------------------------------------
+// Additional styles to override styles applied to the embed block by wordpress only on the back end.
+
+@mixin embed-block-editor-styles( $selectors: $editor-selectors ) {
+	.wp-block {
+		&:has( > .wp-block-embed ) {
+			width: var( --bu--content--width-nested-float-clamped );
+
+			&#{map.get($selectors, 'alignleft')},
+			&#{map.get($selectors, 'alignright')},
+			&#{map.get($selectors, 'aligncenter')} {
+				width: var( --bu--content--width-float-clamped );
+			}
+
+			&#{map.get($selectors, 'alignwide')} {
+				width: var( --bu--content--width-wide-clamped );
+			}
+
+			&#{map.get($selectors, 'alignfull')} {
+				width: 100%;
+			}
+		}
+
+		.wp-block-embed {
+			max-width: none;
+		}
+	}
+}
