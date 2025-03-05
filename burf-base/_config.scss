@@ -988,6 +988,57 @@ $color-hub:                        			 #767676;
 // -----------------------------------------------------------------
 // Content
 // -----------------------------------------------------------------
+// CSS Variables (custom properties)
+// -----------------------------------------------------------------
+// These CSS variables are used throught out the content area to assure all block start of with consistent sizes and spacings.
+// Base values are defined and them are plugged into clamp functions that scale based on browser widths
+// --bu--content--width-default-clamped and --bu--content--width-wide-clamped are also used in a themese settings.mjs (theme.json).
+
+:root {
+	--bu--content--padding-block: 1em;
+	--bu--content--padding-inline: 1rem;
+	--bu--content--margin-block: var(--bu--content--padding-block);
+	--bu--content--margin-inline: var(--bu--content--padding-inline);
+	--bu--content--column-gap: var(--bu--content--padding-inline);
+	--bu--content--row-gap: var(--bu--content--padding-block);
+
+	--bu--content--width-default-base: 800px;
+	--bu--content--width-default-clamped: clamp( 0%, var(--bu--content--width-default-base), calc(100% - ( var(--bu--content--margin-inline) * 2 ) ) );
+
+	--bu--content--width-float-base: calc( var(--bu--content--width-default-base) * 0.5 );
+	--bu--content--width-float-clamped: clamp( 0%, var(--bu--content--width-float-base), calc(100% - ( var(--bu--content--margin-inline) * 2 ) ) );
+
+	--bu--content--width-nested-float-base: 50%;
+	--bu--content--width-nested-float-clamped: clamp( 0%, var(--bu--content--width-nested-float-base), calc(100% - ( var(--bu--content--margin-inline) * 2 ) ) );
+
+	--bu--content--width-wide-base: 1000px;
+	--bu--content--width-wide-clamped: clamp( 0%, var(--bu--content--width-wide-base), calc(100% - ( var( --bu--content--margin-inline ) * 2 ) ) );
+
+	--bu--content--margin-offset: clamp(0%, 50% - ( var(--bu--content--width-default-clamped) * 0.5 ), 100%);
+
+}
+
+// Selector maps
+// -----------------------------------------------------------------
+// Map used to plug in selector values that vary between front end and the block editor. 
+// For example the frontend markup witll use .alignleft where as the editor will use [data-align='left'].
+
+$frontend-selectors: (
+	"alignleft": ".alignleft",
+	"alignright": ".alignright",
+	"aligncenter": ".aligncenter",
+	"alignwide": ".alignwide",
+	"alignfull": ".alignfull",
+);
+
+$editor-selectors: (
+	"alignleft": "[data-align='left']",
+	"alignright": "[data-align='right']",
+	"aligncenter": "[data-align='center']",
+	"alignwide": "[data-align='wide']",
+	"alignfull": "[data-align='full']",
+);
+
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
