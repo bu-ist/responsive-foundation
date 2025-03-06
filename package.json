@@ -1,6 +1,6 @@
 {
   "name": "responsive-foundation",
-  "version": "6.0.0",
+  "version": "6.0.0-alpha.3",
   "homepage": "https://github.com/bu-ist/responsive-foundation",
   "description": "A front-end framework for developing responsive sites at Boston University.",
   "authors": [
@@ -15,6 +15,7 @@
     "Jon Desroisers <jondes@bu.edu>",
     "Tom Dodson <tdodson@bu.edu>",
     "Alana Martin <alanam@bu.edu>",
+    "Tim King <timking@bu.edu>",
     "Dakota Chichester <acketon@bu.edu>"
   ],
   "keywords": [
@@ -39,13 +40,6 @@
     ]
   },
   "main": "js/theme.js",
-  "dependencies": {
-    "@bostonuniversity/base": "file:.yalc/@bostonuniversity/base",
-    "@bostonuniversity/burf-base": "^5.0.0-alpha.10",
-    "@bostonuniversity/burf-customizations": "^5.0.0-alpha.10",
-    "@bostonuniversity/burf-theme": "^5.0.0-alpha.10",
-    "@bostonuniversity/burf-tools": "^5.0.0-alpha.10"
-  },
   "devDependencies": {
     "@wordpress/scripts": "^27.4.0",
     "browser-sync": "^3.0.2",
@@ -55,7 +49,8 @@
     "id-kss-builder": "git+ssh://git@github.com/bu-ist/id-kss-builder.git#1.1.0",
     "kss": "3.0.0-beta.23",
     "npm-watch": "^0.11.0",
-    "yalc": "^1.0.0-pre.53"
+    "yalc": "^1.0.0-pre.53",
+    "@bostonuniversity/base": "file:.yalc/@bostonuniversity/base"
   },
   "scripts": {
     "__Docs__": "=========================================================================",

@@ -11,6 +11,10 @@ export function toggle() {
 
 	const $toggle = $( '.js-nav-toggle' );
 
+	const $toggleAriaLabelWhenOpen = $toggle.children('.nav-toggle-label-open').text();
+
+	const $toggleAriaLabelWhenClosed = $toggle.children('.nav-toggle-label-closed').text();
+
 	const $toggleitems = $toggle.add( 'nav' );
 
 	const $searchtoggle = $( '.js-search-toggle' );
@@ -29,9 +33,9 @@ export function toggle() {
 		e.preventDefault();
 
 		if ( $toggle.attr( 'aria-expanded' ) === 'false' ) {
-			$toggle.attr( 'aria-expanded', 'true' ).attr( 'aria-label', 'Close menu' );
+			$toggle.attr( 'aria-expanded', 'true' ).attr( 'aria-label', $toggleAriaLabelWhenOpen );
 		} else {
-			$toggle.attr( 'aria-expanded', 'false' ).attr( 'aria-label', 'Open menu' );
+			$toggle.attr( 'aria-expanded', 'false' ).attr( 'aria-label', $toggleAriaLabelWhenClosed );
 		}
 
 		$toggleitems.toggleClass( 'is-open' );
