@@ -7,6 +7,6 @@
 	padding-inline: var(--bu--content--padding-inline);
 
 	@include breakpoint( $sm ) {
-		max-width: clamp( 25%, 360px, 33.3333%);
+		max-width: clamp( 20%, 360px, 33.3333%);
 	}
 }
