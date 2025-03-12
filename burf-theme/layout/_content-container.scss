@@ -15,7 +15,6 @@
 
 $color-content-bg:                         $color-grayscale-f !default;
 
-
 :where( .content-container ) {
 	background: $color-content-bg;
 	display: flex; // TO-DO: currently this breaks BULP because BULP assumes display:block
