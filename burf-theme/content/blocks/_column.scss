@@ -11,21 +11,21 @@
 // A selector map can be passed thru, by default it is set to pass in $frontend-selectors
 
 .wp-block-columns {
-    column-gap: var( --bu--content--column-gap );
-    row-gap: var( --bu--content--row-gap );
-    margin-block: 0;
+	column-gap: var( --bu--content--column-gap );
+	row-gap: var( --bu--content--row-gap );
+	margin-block: 0;
 }
 
 .wp-block-column {
-    margin: 0 !important;
+	margin: 0 !important; //!important needed to override .wp-block-column:not(:first-child) style applied by wordpress. Spacing is handled thru gaps on .wp-block-columns instead.
 
-    > * {
-        &:first-child {
-            margin-block-start: 0;
-        }
+	> * {
+		&:first-child {
+			margin-block-start: 0;
+		}
 
-        &:last-child {
-            margin-block-end: 0;
-        }
-    }
+		&:last-child {
+			margin-block-end: 0;
+		}
+	}
 }
