@@ -1,0 +1,17 @@
+//Remove redudant gap caused by defualt vertial-alignment:baseline on the the img element
+:where( .wp-block-image ) {
+    figure > *, 
+    img,
+    > div {
+        vertical-align: middle;
+    }
+}
+
+// These rule help the image behave more like other blocks despite markup diffrences incured on the frontend when floated to the left or right
+:where( .wp-block-image:is( div ) ) {
+    display: inline;
+}
+
+.content-area > :where( .wp-block-image:is( div ) ) {
+    display: block;
+}

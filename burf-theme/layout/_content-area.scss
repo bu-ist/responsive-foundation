@@ -5,112 +5,31 @@
 
 @use "sass:map";
 
-// CSS Variables (custom properties)
+// Content area elements
 // -----------------------------------------------------------------
-// These CSS variables are used throught out the content area to assure all block start of with consistent sizes and spacings.
-// Base values are defined and them are plugged into clamp functions that scale based on browser widths
-// --bu--content--width-default-clamped and --bu--content--width-wide-clamped are also used in a themese settings.mjs (theme.json).
+// List of page elements and blocks that would be extended into @mixin contentarea-base-styles
 
-// Share global content area mixin
-// -----------------------------------------------------------------
-// These styles are meant to apply to any content blocks in the content area of of block editor pages, on the front end as well as in the back end blockeditor.
-// These styles are also meant to apply to the content area of classic edtior pages.
-// A selector map can be passed thru, by default it is set to pass in $frontend-selectors
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+.wp-block,
+div[class^=".wp-block-"],
+.bu-callout,
+.gallery,
+.bu_collapsible_container,
+.gform_legacy_markup_wrapper {
+	@extend %contentarea-elements;
+}
 
-@mixin contentarea-shared-styles( $selectors: $frontend-selectors ) {
-	background: #e661; //placeholder test color - To be removed before merging
-	flex-grow: 1;
-	padding: 0;
 
-	* {
-		&.has-background {
-			padding-block: var( --bu--content--padding-block );
-			padding-inline: var( --bu--content--margin-inline );
 
-			> * {
-				&:first-child {
-					margin-block-start: 0;
-				}
-
-				&:last-child {
-					margin-block-end: 0;
-				}
-			}
-		}
-	}
-
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	p,
-	ul,
-	ol,
-	.wp-block,
-	.bu-callout,
-	.gallery,
-	.bu_collapsible_container,
-	.gform_legacy_markup_wrapper {
-		background: #e661; //placeholder test color - To be removed before merging
-		margin-block: var( --bu--content--margin-block );
-	}
-
-	 #{map.get($selectors, 'alignwide')}  {
-		box-sizing: border-box;
-		clear: both;
-		margin-inline: auto;
-		max-width: var( --bu--content--width-wide-clamped );
-	}
-
-	#{map.get( $selectors, 'alignfull' )} {
-		clear: both;
-		max-width: none;
-		margin-inline: auto;
-	}
-
-	#{map.get( $selectors, 'alignleft' )},
-	#{map.get( $selectors, 'alignright' )},
-	#{map.get( $selectors, 'aligncenter' )} {
-		margin-block-start: 0;
-		margin-block-end: var( --bu--content--margin-block );
-		max-width: var( --bu--content--width-nested-float-clamped );
-	}
-
-	#{map.get( $selectors, 'alignleft' )} {
-		float: left;
-		margin-inline-end: var( --bu--content--margin-inline ) !important;
-	}
-
-	#{map.get( $selectors, 'alignright' )} {
-		float: right;
-		margin-inline-start: var( --bu--content--margin-inline ) !important;
-	}
-
-	// Top level content styles
-	// -----------------------------------------------------------------
-	// These styles use a child combinator so as to only target unnested blocks and page elements.
-
-	> {
-		* {
-			background: #e661; //placeholder test color - To be removed before merging
-			margin-inline: auto;
-			max-width: var( --bu--content--width-default-clamped );
-		}
-
-		#{map.get( $selectors, 'alignleft' )},
-		#{map.get( $selectors, 'alignright' )},
-		#{map.get( $selectors, 'aligncenter' )} {
-			max-width: var( --bu--content--width-float-clamped );
-		}
-
-		#{map.get( $selectors, 'alignleft' )} {
-			margin-inline-start: var( --bu--content--margin-offset ) !important;
-		}
-
-		#{map.get( $selectors, 'alignright' )} {
-			margin-inline-end: var( --bu--content--margin-offset ) !important;
-		}
-	}
+.content-area {
+    @include contentarea-base-styles;
+    @include contentarea-alignment-styles;
 }
