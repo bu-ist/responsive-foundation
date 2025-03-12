@@ -3,32 +3,13 @@
 // =================================================================
 // Styles for the content area.
 
-@use "sass:map";
-
 // Content area elements
 // -----------------------------------------------------------------
 // List of page elements and blocks that would be extended into @mixin contentarea-base-styles
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-.wp-block,
-div[class^=".wp-block-"],
-.bu-callout,
-.gallery,
-.bu_collapsible_container,
-.gform_legacy_markup_wrapper {
-	@extend %contentarea-elements;
+:where( .content-area ) {
+    @include contentarea-vertical-spacings;
 }
-
-
-
 .content-area {
     @include contentarea-base-styles;
     @include contentarea-alignment-styles;
