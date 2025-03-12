@@ -998,8 +998,8 @@ $color-hub:                        			 #767676;
 :root {
 	--bu--content--padding-block: 1em;
 	--bu--content--padding-inline: 1rem;
-	--bu--content--margin-block: var(--bu--content--padding-block);
-	--bu--content--margin-inline: var(--bu--content--padding-inline);
+	--bu--content--margin-block: 1em;
+	--bu--content--margin-inline: 1rem;
 	--bu--content--column-gap: var(--bu--content--padding-inline);
 	--bu--content--row-gap: var(--bu--content--padding-block);
 
@@ -1041,6 +1041,29 @@ $editor-selectors: (
 	"alignwide": "[data-align='wide']",
 	"alignfull": "[data-align='full']",
 );
+
+// Content area elements list
+// -----------------------------------------------------------------
+// Listof any elementsexpectedtolivein the content-area including guttenburg blocks or classic editor page content.
+// These are passed into %contentarea-elements inside of @mixin contentarea-base-styles, so aso apply consistent styles to all blocks of content.
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+.wp-block,
+div[class^=".wp-block-"],
+.bu-callout,
+.gallery,
+.bu_collapsible_container,
+.gform_legacy_markup_wrapper {
+	@extend %contentarea-elements !optional;
+}
 
 // -----------------------------------------------------------------
 // -----------------------------------------------------------------
