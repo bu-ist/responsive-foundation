@@ -49,8 +49,7 @@
     "id-kss-builder": "git+ssh://git@github.com/bu-ist/id-kss-builder.git#1.1.0",
     "kss": "3.0.0-beta.23",
     "npm-watch": "^0.11.0",
-    "yalc": "^1.0.0-pre.53",
-    "@bostonuniversity/base": "file:.yalc/@bostonuniversity/base"
+    "yalc": "^1.0.0-pre.53"
   },
   "scripts": {
     "__Docs__": "=========================================================================",
