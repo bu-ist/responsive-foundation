@@ -70,12 +70,12 @@
 
 	#{map.get( $selectors, 'alignleft' )} {
 		float: left;
-		margin-inline-end: var( --bu--content--margin-inline ) !important;
+		margin-inline-end: var( --bu--content--margin-inline ) !important; // !important needed to toverride margin-left: auto !important set on the block editor
 	}
 
 	#{map.get( $selectors, 'alignright' )} {
 		float: right;
-		margin-inline-start: var( --bu--content--margin-inline ) !important;
+		margin-inline-start: var( --bu--content--margin-inline ) !important; // !important needed to toverride margin-left: auto !important set on the block editor
 	}
 
 	// Top level content styles
@@ -94,11 +94,11 @@
 		}
 
 		#{map.get( $selectors, 'alignleft' )} {
-			margin-inline-start: var( --bu--content--margin-offset ) !important;
+			margin-inline-start: var( --bu--content--margin-offset ) !important; // !important needed to toverride margin-left: auto !important set on the block editor
 		}
 
 		#{map.get( $selectors, 'alignright' )} {
-			margin-inline-end: var( --bu--content--margin-offset ) !important;
+			margin-inline-end: var( --bu--content--margin-offset ) !important; // !important needed to toverride margin-left: auto !important set on the block editor
 		}
 	}
 }
