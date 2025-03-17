@@ -193,7 +193,7 @@ $sidebar-padding:                          3.46667% !default; // $sidebar-paddin
 	// This level of specificity is necessary to prevent interfering with the narrow template.
 	.sidebar-location-right .content-container & {
 		@include breakpoint( $md ) {
-			padding-left: $sidebar-padding;
+			padding-left: var(--sidebar-padding, #{$sidebar-padding});
 
 			@if ( $enable-css-grid ) {
 				@supports ( display: grid ) {
@@ -210,7 +210,7 @@ $sidebar-padding:                          3.46667% !default; // $sidebar-paddin
 		position: relative;
 
 		@include breakpoint( $md ) {
-			padding-right: $sidebar-padding;
+			padding-right: var(--sidebar-padding, #{$sidebar-padding});
 
 			@if ( $enable-css-grid ) {
 				@supports ( display: grid ) {
@@ -247,7 +247,7 @@ $sidebar-padding:                          3.46667% !default; // $sidebar-paddin
 	.sidebar {
 		@extend %clearfix;
 		@extend %col-sm-margin-parent;
-		margin-bottom: $widget-margin-bottom;
+		margin-bottom: var(--widget-margin-bottom, #{$widget-margin-bottom});
 		padding-left: 0;
 		padding-right: 0;
 	}

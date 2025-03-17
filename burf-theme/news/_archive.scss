@@ -112,8 +112,8 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 .paging-navigation {
 	@extend %clearfix;
 	border-top: var(--news-border, var(--bu-border, #{$border-news-post}));
-	margin-top: $margin;
-	padding-top: $margin;
+	margin-top: var(--margin, #{$margin});
+	padding-top: var(--margin, #{$margin});
 
 	a {
 		@extend %button-styles;
@@ -155,8 +155,8 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 
 .post-part {
 	border-top: var(--news-border, var(--bu-border, #{$border-news-post}));
-	margin-top: $margin;
-	padding-top: $margin;
+	margin-top: var(--margin, #{$margin});
+	padding-top: var(--margin, #{$margin});
 	position: relative;
 
 	&:first-child {

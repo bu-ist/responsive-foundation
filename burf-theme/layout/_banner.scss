@@ -87,7 +87,7 @@ $padding-banner-window-width:                    $padding-small !default;
 	margin-bottom: $grid-container-padding;
 
 	@include breakpoint( $sm ) {
-		margin: 0 0 $margin-large;
+		margin: 0 0 var(--margin-large, #{$margin-large});
 	}
 
 	img {

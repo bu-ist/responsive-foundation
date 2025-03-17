@@ -67,9 +67,9 @@ $border-profiles:                          $border !default;
 // Since: 2.0.0
 
 .profile-photo-default {
-	height: $profile-photo-default-size;
+	height: var(--profile-photo-default-size, #{$profile-photo-default-size});
 	overflow: hidden;
 	position: absolute;
 	right: 0;
-	width: $profile-photo-default-size;
+	width: var(--profile-photo-default-size, #{$profile-photo-default-size});
 }

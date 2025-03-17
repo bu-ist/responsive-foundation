@@ -1061,8 +1061,8 @@ $_search-height: 115px;
 .l-side-nav {
 	#quicksearch {
 		@include breakpoint( $left-nav-desktop ) {
-			border: 1px solid var(--bu-border-color, #{$color-quicksearch-border});
-			border-width: var(--bu-border-width, #{$border-width-quicksearch});
+			border: 1px solid var(--quicksearch-border-color, var(--bu-border-color, #{$color-quicksearch-border}));
+			border-width: var(--quicksearch-border-width, var(--bu-border-width, #{$border-width-quicksearch}));
 			position: absolute;
 			width: 100%;
 		}

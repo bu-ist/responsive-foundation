@@ -314,7 +314,7 @@ $border-widget-list:                       $border !default;
 .widget_links,
 .widget_archive {
 	li {
-		border-top: $border-widget-list;
+		border-top: var(--widget-list-border, #{$border-widget-list});
 		padding: $padding-small 0;
 
 		&:first-child {

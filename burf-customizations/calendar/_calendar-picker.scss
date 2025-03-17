@@ -227,7 +227,7 @@ $color-calendar-month-link-today:        $color-grayscale-0 !default;
 
 		&:hover,
 		&::focus {
-			color: var(--bu-link-color--hover, #{$color-calendar-month-link-hover});
+			color: var(--calendar-month-link-hover, var(--bu-link-color--hover, #{$color-calendar-month-link-hover}));
 		}
 	}
 

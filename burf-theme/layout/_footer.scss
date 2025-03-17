@@ -146,8 +146,8 @@ $number-widgets-footbar: 						 $number-columns !default;
 .footbar {
 	@extend %clearfix;
 	background: var(--footbar-background, #{$color-footbar-bg});
-	border-top: var(--bu-border, #{$border-footbar});
-	padding-bottom: var(--bu-spacing, #{$footbar-padding-bottom});
+	border-top: var(--footbar-border, var(--bu-border, #{$border-footbar}));
+	padding-bottom: var(--footbar-padding-bottom, var(--bu-spacing, #{$footbar-padding-bottom}));
 	width: 100%;
 
 	a {
@@ -300,7 +300,7 @@ body {
 
 	a {
 		@include transition( color 200ms ease-in-out 0s );
-		font-size: $font-size-icon;
+		font-size: var(--icon-font-size, #{$font-size-icon});
 	}
 }
 
@@ -417,12 +417,12 @@ body {
 
 	a {
 		display: block;
-		margin: 0 auto $margin;
+		margin: 0 auto var(--margin, #{$margin});
 
 		@include breakpoint( $xs ) {
 			display: inline-block;
 			height: 50px;
-			margin-right: $margin;
+			margin-right: var(--margin, #{$margin});
 			vertical-align: middle;
 		}
 
@@ -482,7 +482,7 @@ body {
 
 .site-footer-links {
 	@extend %col-sm-half;
-	margin-bottom: $margin;
+	margin-bottom: var(--margin, #{$margin});
 	text-align: center;
 
 	@include breakpoint( $sm ) {
@@ -510,10 +510,10 @@ body {
 .site-footer-info {
 	clear: both;
 	display: block;
-	margin-bottom: $margin;
+	margin-bottom: var(--margin, #{$margin});
 
 	@include breakpoint( $sm ) {
-		padding-right: $padding;
+		padding-right: var(--padding, #{$padding});
 	}
 
 	.brand-masterplate + & {

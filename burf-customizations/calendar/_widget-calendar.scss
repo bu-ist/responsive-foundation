@@ -131,9 +131,9 @@ $_width-calendar-date: 48px;
 // Since: 2.0.0
 
 .widget-calendar-date {
-	color: var(--bu-label-color, #{$color-widget-calendar-date});
+	color: var(--calendar-widget-date-color, var(--bu-label-color, #{$color-widget-calendar-date}));
 	display: block;
-	font-family: var(--bu-label-font, #{$font-family-widget-calendar-date});
+	font-family: var(--calendar-widget-date-font, var(--bu-label-font, #{$font-family-widget-calendar-date}));
 	font-weight: 700;
 	margin-bottom: 0.5em;
 }
@@ -190,7 +190,7 @@ $_width-calendar-date: 48px;
 // Since: 2.0.0
 
 .widget-calendar-date-graphic {
-	color: var(--calendar-date-color, #{$color-widget-calendar-date});
+	color: var(--calendar-widget-date-color, #{$color-widget-calendar-date});
 	display: table-cell;
 	line-height: 1.1;
 	text-align: center;
@@ -204,9 +204,9 @@ $_width-calendar-date: 48px;
 // Since: 2.0.0
 
 .widget-calendar-day-graphic {
-	color: var(--bu-color-accent, #{$color-widget-calendar-date-day});
+	color: var(--calendar-widget-day-color, var(--bu-color-accent, #{$color-widget-calendar-date-day}));
 	display: block;
-	font-size: var(--calendar-day-size, #{$font-size-widget-calendar-date-day});
+	font-size: var(--calendar-widget-day-size, #{$font-size-widget-calendar-date-day});
 }
 
 // Styles the month in the calendar widget graphic format.
@@ -216,8 +216,8 @@ $_width-calendar-date: 48px;
 // Since: 2.0.0
 
 .widget-calendar-month-graphic {
-	color: var(--bu-color-accent, #{$color-widget-calendar-date-month});
-	font-size: var(--calendar-month-size, #{$font-size-widget-calendar-date-month});
+	color: var(--calendar-widget-month-color, var(--bu-color-accent, #{$color-widget-calendar-date-month}));
+	font-size: var(--calendar-widget-month-size, #{$font-size-widget-calendar-date-month});
 	text-transform: uppercase;
 }
 

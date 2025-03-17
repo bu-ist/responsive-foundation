@@ -145,14 +145,14 @@ $color-widget-contentnav-active:           $color-link-active !default;
 			padding: 0 0 0 $padding-small;
 
 			a {
-				font-size: $font-size-widget-contentnav-nested-link;
+				font-size: var(--widget-link-nested-size, #{$font-size-widget-contentnav-nested-link});
 			}
 		}
 
 		a {
 			color: var(--widget-link-color, var(--bu-link-color, #{$color-widget-contentnav}));
 			display: block;
-			font-size: $font-size-widget-contentnav-link;
+			font-size: var(--widget-link-size, #{$font-size-widget-contentnav-link});
 			padding: $padding-small 0;
 
 			&:hover,
@@ -165,6 +165,6 @@ $color-widget-contentnav-active:           $color-link-active !default;
 
 	.active,
 	.current_page_item a {
-		color: $color-widget-contentnav-active;
+		color: var(--widget-link-color--active, #{$color-widget-contentnav-active});
 	}
 }

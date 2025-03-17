@@ -54,9 +54,9 @@ $profile-photo-basic-size:                  $profile-photo-default-size;
 // Since: 2.0.0
 
 .profile-photo-basic {
-	height: $profile-photo-basic-size;
+	height: var(--profile-photo-basic-size, #{$profile-photo-basic-size});
 	overflow: hidden;
 	position: absolute;
 	right: 0;
-	width: $profile-photo-basic-size;
+	width: var(--profile-photo-basic-size, #{$profile-photo-basic-size});
 }

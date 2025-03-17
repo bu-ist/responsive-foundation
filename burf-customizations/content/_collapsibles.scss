@@ -66,7 +66,7 @@ $border-collapsible:               $border !default;
 .bu_collapsible {
 	@extend %icon-plus;
 	margin-bottom: 0;
-	padding-right: var(--bu-spacing, #{$padding});
+	padding-right: var(--padding, var(--bu-spacing, #{$padding}));
 	position: relative;
 
 	&::before {

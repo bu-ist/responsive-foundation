@@ -204,12 +204,12 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 	@extend %_vertical-center-child;
 	font-family: $font-family-brand;
 	font-size: 18px;
-	height: $height-brand;
+	height: var(--brand-height, #{$height-brand});
 	line-height: 1.3;
-	padding: 0 $padding-small;
+	padding: 0 var(--padding-small, #{$padding-small});
 
 	@include breakpoint( $sm ) {
-		padding: 0 $padding;
+		padding: 0 var(--padding, #{$padding});
 	}
 
 	> .has-parent {
@@ -229,14 +229,14 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 
 .brand-container {
 	@extend %_vertical-center;
-	color: $color-brand;
+	color: var(--brand-color, #{$color-brand});
 	display: block;
 	float: left;
 	font-weight: 400;
 	text-decoration: none;
 
 	&:visited {
-		color: $color-brand;
+		color: var(--brand-color, #{$color-brand});
 	}
 }
 
@@ -282,12 +282,12 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 
 .brand-unbranded {
 	@extend %_brand-strong;
-	color: $color-unbranded;
-	font-family: $font-family-brand-unbranded;
+	color: var(--color-unbranded, #{$color-unbranded});
+	font-family: var(--unbranded-font-family, #{$font-family-brand-unbranded});
 	font-size: 20px;
 
 	&:visited {
-		color: $color-unbranded;
+		color: var(--color-unbranded, #{$color-unbranded});
 	}
 }
 
