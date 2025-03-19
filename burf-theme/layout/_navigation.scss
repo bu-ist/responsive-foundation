@@ -794,13 +794,13 @@ $nav-toggle-border: 4px !default;
 			padding: 0 $padding-small;
 
 			a {
-				color: var(--bu-link-color, #{$color-primary-nav-dropdown-link});
+				color: var(--primary-nav-link-color, var(--bu-link-color, #{$color-primary-nav-dropdown-link}));
 				line-height: var(--bu-line-height, #{$line-height-base});
 				padding: $padding-small 0;
 
 				&:hover,
 				&:focus {
-					color: var(--bu-link-color--hover, #{$color-primary-nav-dropdown-link-hover});
+					color: var(--primary-nav-link-color--hover, var(--bu-link-color--hover, #{$color-primary-nav-dropdown-link-hover}));
 				}
 			}
 		}
@@ -809,7 +809,7 @@ $nav-toggle-border: 4px !default;
 	a {
 		border: 1px solid var(--bu-border-color, #{$color-primary-nav-border});
 		border-width: var(--bu-border-width, #{$border-width-primary-nav});
-		color: var(--bu-link-color, #{$color-primary-nav-link});
+		color: var(--primary-nav-link-color, var(--bu-link-color, #{$color-primary-nav-link}));
 		display: block;
 		padding: $padding-small 0;
 		text-decoration: none;
@@ -822,12 +822,12 @@ $nav-toggle-border: 4px !default;
 
 		&:hover,
 		&:focus {
-			color: var(--bu-link-color--hover, #{$color-primary-nav-link-hover});
+			color: var(--primary-nav-link-color--hover, var(--bu-link-color--hover, #{$color-primary-nav-link-hover}));
 		}
 
 		&.active,
 		&.active_section {
-			color: $color-primary-nav-link-current;
+			color: var(--primary-nav-link-color--active, #{$color-primary-nav-link-current});
 		}
 	}
 
@@ -858,7 +858,7 @@ $nav-toggle-border: 4px !default;
 	border: 1px solid var(--bu-border-color, #{$color-primary-nav-border});
 	border-width: var(--bu-border-width, #{$border-width-utility-nav});
 	clear: left;
-	color: var(--bu-link-color, #{$color-utility-nav-mobile-link});
+	color: var(--utility-nav-link-color, var(--bu-link-color, #{$color-utility-nav-mobile-link}));
 	display: none;
 	font-size: $font-size-utility-nav;
 	margin: 0 $padding-small;
@@ -866,7 +866,7 @@ $nav-toggle-border: 4px !default;
 	text-decoration: none;
 
 	@include breakpoint( $nav-desktop ) {
-		color: var(--bu-link-color, #{$color-utility-nav-link});
+		color: var(--utility-nav-link-color, var(--bu-link-color, #{$color-utility-nav-link}));
 	}
 
 	li {
@@ -885,10 +885,10 @@ $nav-toggle-border: 4px !default;
 		text-decoration: none;
 
 		&:hover {
-			color: var(--bu-link-color--hover, #{$color-utility-nav-mobile-link-hover});
+			color: var(--utility-nav-link-color, var(--bu-link-color--hover, #{$color-utility-nav-mobile-link-hover}));
 
 			@include breakpoint( $nav-desktop ) {
-				color: var(--bu-link-color--hover, #{$color-utility-nav-link-hover});
+				color: var(--utility-nav-link-color--hover, var(--bu-link-color--hover, #{$color-utility-nav-link-hover}));
 			}
 		}
 	}
@@ -939,7 +939,7 @@ $left-nav-desktop:                    $nav-desktop !default;
 	}
 
 	.wrapper {
-		background: $color-primary-nav-bg;
+		background: var(--primary-nav-background, #{$color-primary-nav-bg});
 	}
 
 	.primary-nav {
