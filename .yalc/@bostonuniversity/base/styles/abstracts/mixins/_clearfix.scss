@@ -1,0 +1,13 @@
+// Clearfix
+//
+// Access: Public
+//
+// Since: 1.0.0
+
+%clearfix {
+	&::after {
+		display: table;
+		clear: both;
+		content: "";
+	}
+}

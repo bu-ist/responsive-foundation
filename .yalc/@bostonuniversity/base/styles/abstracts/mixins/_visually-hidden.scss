@@ -1,0 +1,64 @@
+// Visually Hidden (Screen Reader Text)
+//
+// Hides entire elements visually, but preserves visibility for
+// screen readers. Use this placeholder when an element is only
+// for screen readers and needs no visual representation on the site.
+// This is the preferred method of hiding items visually as it works
+// with right-to-left languages, making it a safer choice if a site is
+// ever translated.
+//
+// More info on this technique: <http://a11yproject.com/posts/how-to-hide-content/>
+//
+// #### Examples
+//
+// ##### Hide a label in a button.
+//
+// ```
+// 			.fancy-button-label {
+//				@extend %visually-hidden;
+//			}
+// ```
+//
+//
+// Access: Public
+//
+// Since: 1.0.0
+
+%visually-hidden {
+	border: 0;
+	clip-path: inset( 50% );
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+// Remove visually hidden styles
+//
+// Reverses `%visually-hidden`. Helpful if you want to
+// unhide a previously hidden label.
+//
+// #### Examples
+//
+// ##### Show a previously hidden label for all users.
+//
+// ```
+// 			.fancy-button-label {
+//				@extend %remove-visually-hidden;
+//			}
+// ```
+//
+// Access: Public
+//
+// Since: 1.0.0
+
+%remove-visually-hidden {
+	clip-path: none;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}

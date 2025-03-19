@@ -1,0 +1,56 @@
+@use "sass:math";
+
+// Strip Units
+//
+// Helper function to strip units from values.
+//
+// Access: Public
+//
+// Since: 1.0.0
+
+@function strip-units($number) {
+    @return math.div($number, $number * 0 + 1);
+}
+
+// The root element font-size (html element).
+//
+// Access: Public
+//
+// Since: 1.0.0
+
+$root-font-size: 16 !default;
+
+// em Conversion
+//
+// Helper function to output 'em' value based on supplied px value.
+//
+// Styleguide Utilities.Mixins.em Conversion
+//
+// @param integer $pixels The value in pixels (without px unit)
+// @param integer $context The parent container font-size context.
+//
+// Access: Public
+//
+// Since: 1.0.0
+
+
+@function em( $pixels, $context: 16 ) {
+	@return #{ math.div( $pixels, $context ) }em;
+}
+
+// rem Conversion
+//
+// Helper function to output 'rem' value based on supplied px value.
+//
+// Styleguide Utilities.Mixins.rem Conversion
+//
+// Access: Public
+//
+// Since: 3.2.3
+//
+// @param integer $pixels The value in pixels (without px unit)
+// @param integer $root-font-size The html element font-size.
+
+@function rem($pixels, $root: $root-font-size) {
+    @return #{ math.div( strip-units($pixels), $root) }rem;
+}

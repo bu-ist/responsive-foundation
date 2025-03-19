@@ -1,0 +1,361 @@
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:math';
+@use 'sass:meta';
+
+@use '../config' as config;
+@use '../functions/lists' as list-fn;
+
+/**
+ * Table of Contents
+ *
+ * is-number()
+ * is-string()
+ * is-time()
+ * is-duration()
+ * is-angle()
+ * is-frequency()
+ * is-integer()
+ * is-relative-length()
+ * is-absolute-length()
+ * is-percentage()
+ * is-length()
+ * is-resolution()
+ * is-position()
+ * is-breakpoint()
+ * is-color()
+ * is-hex()
+ * is-hexa()
+ * is-rgb()
+ * is-rgba()
+ * is-hsl()
+ * is-hsla()
+ * is-transparent()
+ */
+
+$units: (
+    "absolute-length": ("cm" "mm" "in" "px" "pt" "pc"),
+    "angle": ("deg" "rad" "grad" "turn"),
+    "breakpoint": map.keys(config.$breakpoints)
+    "frequency": ("Hz" "kHz"),
+    "position": ("top" "right" "bottom" "left" "center" "block-start" "block-end" "inline-start" "inline-end"),
+    "relative-length": (
+        "typography": ("em" "ex" "ch" "rem"),
+        "viewport": ("vw" "vh" "vi" "vb" "vmin" "vmax" "dvh" "lvh" "svh" "dvw" "lvw" "svw" "dvi" "lvi" "svi" "dvb" "lvb" "svb" "dvmin" "lvmin" "svmin" "dvmax" "lvmax" "svmax"),
+        "container": ("cqw" "cqh" "cqi" "cqb" "cqmin" "cqmax")
+        ),
+    "resolution": ("dpi" "dpcm" "dppx"),
+    "time": ("ms" "s"),
+);
+
+/**
+ * @function is-number
+ *
+ * Check if a value is a number
+ * Since 1.0.0
+ *
+ * @param {*} $value - The value to check
+ * @return {boolean} - True if the value is a number, false otherwise
+ */
+@function is-number($value) {
+    @return meta.type-of($value) == 'number';
+}
+
+/**
+ * @function is-string
+ *
+ * Check if a value is a string
+ * Since 1.0.0
+ *
+ * @param {*} $value - The value to check
+ * @return {boolean} - True if the value is a string, false otherwise
+ */
+@function is-string($value) {
+    @return meta.type-of($value) == 'string';
+}
+
+/**
+ * @function is-time
+ *
+ * Check if a value is a time
+ * Since 1.0.0
+ *
+ * @param {*} $value - The value to check
+ * @return {boolean} - True if the value is a time, false otherwise
+ */
+@function is-time($value) {
+    @return is-number($value)
+        and list.index(map.get($units, 'time'), math.unit($value)) != null;
+}
+
+/**
+ * @function is-duration
+ *
+ * Check if a value is a duration
+ * Since 1.0.0
+ *
+ * @param {*} $value - The value to check
+ * @return {boolean} - True if the value is a duration, false otherwise
+ */
+@function is-duration($value) {
+    @return is-time($value);
+}
+
+/**
+ * @function is-angle
+ *
+ * Check if a value is an angle
+ * Since 1.0.0
+ *
+ * @param {*} $value - The value to check
+ * @return {boolean} - True if the value is an angle, false otherwise
+ */
+@function is-angle($value) {
+    @return is-number($value)
+        and list.index(map.get($units, 'angle'), math.unit($value)) != null;
+}
+
+/**
+ * @function is-frequency
+ *
+ * Check if a value is a frequency
+ * Since 1.0.0
+ *
+ * @param {*} $value - The value to check
+ * @return {boolean} - True if the value is a frequency, false otherwise
+ */
+@function is-frequency($value) {
+    @return is-number($value)
+        and list.index(map.get($units, 'frequency'), math.unit($value)) != null;
+}
+
+/**
+ * @function is-integer
+ *
+ * Check if a value is an integer
+ * Since 1.0.0
+ *
+ * @param {*} $value - The value to check
+ * @return {boolean} - True if the value is an integer, false otherwise
+ */
+@function is-integer($value) {
+    @return is-number($value)
+        and math.round($value) == $value;
+}
+
+/**
+ * @function is-relative-length
+ *
+ * Check if a value is a relative length
+ * Since 1.0.0
+ *
+ * @param {*} $value - The value to check
+ * @return {boolean} - True if the value is a relative length, false otherwise
+ */
+@function is-relative-length($value) {
+    $relative: lists-fn.join-lists(
+        map.get($units, 'relative-length', 'typography'),
+        map.get($units, 'relative-length', 'viewport'),
+        map.get($units, 'relative-length', 'container'),
+    );
+
+    @return is-number($value)
+        and list.index($relative, math.unit($value)) != null;
+}
+
+/**
+ * @function is-absolute-length
+ *
+ * Check if a value is an absolute length
+ * Since 1.0.0
+ *
+ * @param {*} $value - The value to check
+ * @return {boolean} - True if the value is an absolute length, false otherwise
+ */
+@function is-absolute-length($value) {
+    @return is-number($value)
+        and list.index(map.get($units, 'absolute-length'), math.unit($value)) != null;
+}
+
+/**
+ * @function is-percentage
+ *
+ * Check if a value is a percentage.
+ * Since 1.0.0
+ *
+ * @param {*} $value - The value to check
+ * @return {boolean} - True if the value is a percentage, false otherwise
+ */
+@function is-percentage($value) {
+    @return is-number($value)
+        and math.unit($value) == '%';
+}
+
+/**
+ * @function is-length
+ *
+ * Check if a value is a length
+ * Since 1.0.0
+ *
+ * @param {*} $value - The value to check
+ * @return {boolean} - True if the value is a length, false otherwise
+ */
+@function is-length($value) {
+    @return is-relative-length($value)
+        or is-absolute-length($value);
+}
+
+/**
+ * @function is-resolution
+ *
+ * Check if a value is a resolution
+ * Since 1.0.0
+ *
+ * @param {*} $value - The value to check
+ * @return {boolean} - True if the value is a resolution, false otherwise
+ */
+@function is-resolution($value) {
+    @return is-number($value)
+        and list.index(map.get($units, 'resolution'), math.unit($value)) != null;
+}
+
+/**
+ * @function is-position
+ *
+ * Check if a value is a position
+ * Since 1.0.0
+ *
+ * @param {*} $value - The value to check
+ * @return {boolean} - True if the value is a position, false otherwise
+ */
+@function is-position($value) {
+    @return is-length($value)
+        or is-percentage($value)
+        or list.index(map.get($units, 'position'), $value) != null;
+}
+
+/**
+ * @function is-breakpoint
+ *
+ * Check if a value is a breakpoint
+ * Since 1.0.0
+ *
+ * @param {*} $value - The value to check
+ * @return {boolean} - True if the value is a breakpoint, false otherwise
+ */
+@function is-breakpoint($value) {
+    @return is-string($value)
+        and map.has-key(map.get($units, 'breakpoint'), $value);
+}
+
+/**
+ * @function is-color
+ *
+ * Checks if a value is a color.
+ * @since 1.0.0
+ *
+ * @param {*} $color - The value to check.
+ *
+ * @return {boolean} - True if the value is a color, false otherwise.
+ */
+@function is-color($color) {
+    @return meta.type-of($color) == "color";
+}
+
+/**
+* @function is-hex
+*
+* Checks if a value is a hexadecimal color.
+* @since 1.0.0
+*
+* @param {*} $color - The value to check.
+*
+* @return {boolean} - True if the value is a hexadecimal color, false otherwise.
+*/
+@function is-hex($color) {
+    @return is-color($color) and string.index($color, "#") == 1;
+}
+
+/**
+* @function is-hexa
+*
+* Checks if a value is a hexadecimal color with alpha channel.
+* @since 1.0.0
+*
+* @param {*} $color - The value to check.
+*
+* @return {boolean} - True if the value is a hexadecimal color with alpha channel, false otherwise.
+*/
+@function is-hexa($color) {
+    @return is-color($color) and string.length($color) == 7;
+}
+
+/**
+* @function is-rgb
+*
+* Checks if a value is a RGB color.
+* @since 1.0.0
+*
+* @param {*} $color - The value to check.
+*
+* @return {boolean} - True if the value is a RGB color, false otherwise.
+*/
+@function is-rgb($color) {
+    @return is-color($color) and string.index("#{$color}", "rgb") == 1;
+}
+
+/**
+* @function is-rgba
+*
+* Checks if a value is a RGBA color with alpha channel.
+* @since 1.0.0
+*
+* @param {*} $color - The value to check.
+*
+* @return {boolean} - True if the value is a RGBA color with alpha channel, false otherwise.
+*/
+@function is-rgba($color) {
+    @return is-color($color) and string.index($color, "rgba") == 1;
+}
+
+/**
+* @function is-hsl
+*
+* Checks if a value is a HSL color.
+* @since 1.0.0
+*
+* @param {*} $color - The value to check.
+*
+* @return {boolean} - True if the value is a HSL color, false otherwise.
+*/
+@function is-hsl($color) {
+    @return is-color($color) and string.index($color, "hsl") == 1;
+}
+
+/**
+* @function is-hsla
+*
+* Checks if a value is a HSLA color with alpha channel.
+* @since 1.0.0
+*
+* @param {*} $color - The value to check.
+*
+* @return {boolean} - True if the value is a HSLA color with alpha channel, false otherwise.
+*/
+@function is-hsla($color) {
+    @return is-color($color) and string.index($color, "hsla") == 1;
+}
+
+/**
+* @function is-transparent
+*
+* Checks if a value is transparent.
+* @since 1.0.0
+*
+* @param {*} $color - The value to check.
+*
+* @return {boolean} - True if the value is transparent, false otherwise.
+*/
+@function is-transparent($color) {
+    @return is-color($color) and $color == transparent;
+}

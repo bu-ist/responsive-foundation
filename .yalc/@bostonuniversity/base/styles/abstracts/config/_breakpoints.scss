@@ -1,0 +1,48 @@
+//=================================
+// Breakpoints
+//=================================
+
+// Breakpoints ---------------------
+$xxs: 360px; // 22.5rem
+$xs: 500px; // 30rem
+$sm: 768px; // 48rem
+$md: 992px; // 62rem
+$lg: 1200px; // 75rem
+$xl: 1500px; // 90rem
+$xxl: 1920px; // 110rem
+
+// Gutters --------------------------
+$gutter-sm: 1rem;
+$gutter-md: 1.5rem;
+$gutter-lg: 2rem;
+$gutter-xl: 3rem;
+
+// Map of breakpoints --------------
+$breakpoints: (
+    base: (width:    0px, gap: $gutter-sm),
+    xxs:  (width:  $xxs, gap: $gutter-sm),
+    xs:   (width:  $xs, gap: $gutter-sm),
+    sm:   (width:  $sm, gap: $gutter-md),
+    md:   (width:  $md, gap: $gutter-md),
+    lg:   (width:  $lg, gap: $gutter-lg),
+    xl:   (width:  $xl, gap: $gutter-lg),
+    xxl:  (width:  $xxl, gap: $gutter-xl),
+) !default;
+
+// Legacy BU Breakpoints -----------
+//xs 500px
+//sm 768px
+//md 992px
+//lg 1200px
+//xl 1500px
+
+// Modern Breakpoints --------------
+// $breakpoints: (
+//     base: (width:    0px, gap: 16px),
+//     xs:   (width:  360px, gap: 16px),
+//     sm:   (width:  480px, gap: 16px),
+//     md:   (width:  768px, gap: 24px),
+//     lg:   (width: 1024px, gap: 32px),
+//     xl:   (width: 1440px, gap: 32px),
+//     xxl:  (width: 1920px, gap: 48px),
+// ) !default;
