@@ -78,7 +78,7 @@ CSS Custom Properties (Semantic) - [ Table of Contents ]
     // Font families
 
     --bu-font-serif: var(--font-transitional);
-    --bu-font-sans: var(--font-rounded-sans);
+    --bu-font-sans: "Benton-Sans","Helvetica",sans-serif;
     --bu-font-mono: var(--font-monospace-code);
 
     // Global line height and letter spacing
@@ -89,7 +89,7 @@ CSS Custom Properties (Semantic) - [ Table of Contents ]
     // Headings
 
     --bu-heading-color: var(--color-neutral-950);
-    --bu-heading-font: var(--bu-font-serif);
+    --bu-heading-font: var(--bu-font-sans);
     --bu-heading-size-1: var(--heading-size-1);
     --bu-heading-size-2: var(--heading-size-2);
     --bu-heading-size-3: var(--heading-size-3);
@@ -100,13 +100,13 @@ CSS Custom Properties (Semantic) - [ Table of Contents ]
     // Text (Paragraphs, body text, etc.)
 
     --bu-text-color: var(--color-neutral-700);
-    --bu-text-font: var(--bu-font-serif);
+    --bu-text-font: var(--bu-font-sans);
     --bu-text-size: var(--text-size-md);
     
     // Labels (Tags, eyebrow text, etc.)
 
     --bu-label-color: var(--color-neutral-700);
-    --bu-label-font: var(--bu-font-serif);
+    --bu-label-font: var(--bu-font-sans);
     --bu-label-size: var(--text-size-sm);
 
     //==========================================================================
@@ -124,6 +124,12 @@ CSS Custom Properties (Semantic) - [ Table of Contents ]
     --bu-link-color--hover: #0a4b9a;
     --bu-link-color--visited: #7337af;
     --bu-focus-color: #0f69d7;
+
+    // Icon Colors
+
+    --bu-icon-color: #fff;
+    --bu-icon-color--hover: #fff;
+
 
     //==========================================================================
     //==[ 7. Layout ]===========================================================
