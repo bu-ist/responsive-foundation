@@ -106,7 +106,7 @@ $color-profile-title:                      $color-base !default;
 // Since: 2.0.0
 
 .profile-name {
-	color: var(--profile-name-color, var(--bu-link-color, #{$color-profile-name}));
+	color: var(--profile-name-color, #{$color-profile-name});
 	margin-bottom: 0;
 	text-decoration: underline;
 }

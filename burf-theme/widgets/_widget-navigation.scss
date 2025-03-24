@@ -134,7 +134,7 @@ $color-widget-contentnav-active:           $color-link-active !default;
 
 	li {
 		border-top: var(--widget-border, var(--bu-border, #{$border-widget-contentnav}));
-		font-family: var(--widget-font, var(--bu-text-font, #{$font-family-widget-contentnav}));
+		font-family: var(--widget-font, #{$font-family-widget-contentnav});
 
 		&:first-child {
 			border: 0;
@@ -150,14 +150,14 @@ $color-widget-contentnav-active:           $color-link-active !default;
 		}
 
 		a {
-			color: var(--widget-link-color, var(--bu-link-color, #{$color-widget-contentnav}));
+			color: var(--widget-link-color, #{$color-widget-contentnav});
 			display: block;
 			font-size: var(--widget-link-size, #{$font-size-widget-contentnav-link});
 			padding: $padding-small 0;
 
 			&:hover,
 			&:focus {
-				color: var(--widget-link-color--hover, var(--bu-link-color--hover, #{$color-widget-contentnav-hover}));
+				color: var(--widget-link-color--hover, #{$color-widget-contentnav-hover});
 				text-decoration: none;
 			}
 		}

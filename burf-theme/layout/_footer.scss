@@ -151,11 +151,11 @@ $number-widgets-footbar: 						 $number-columns !default;
 	width: 100%;
 
 	a {
-		color: var(--footbar-link-color, var(--bu-link-color, #{$color-footbar-widget-link}));
+		color: var(--footbar-link-color, #{$color-footbar-widget-link});
 
 		&:hover,
 		&:focus {
-			color: var(--footbar-link-color--hover, var(--bu-link-color--hover, #{$color-footbar-widget-link-hover}));
+			color: var(--footbar-link-color--hover, #{$color-footbar-widget-link-hover});
 		}
 	}
 }
@@ -226,10 +226,10 @@ body {
 	}
 
 	a {
-		color: var(--footer-link-color, var(--bu-link-color, #{$color-site-footer-link}));
+		color: var(--footer-link-color, #{$color-site-footer-link});
 
 		&:hover {
-			color: var(--footer-link-color--hover, var(--bu-link-color--hover, #{$color-site-footer-link-hover}));
+			color: var(--footer-link-color--hover, #{$color-site-footer-link-hover});
 		}
 	}
 

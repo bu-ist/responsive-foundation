@@ -400,7 +400,7 @@ $border-width-comment-form:                  3px !default;
 	@include border-radius( 5px );
 	background: var(--comment-background, #{$color-comment-form-bg});
 	border: var(--comment-border, var(--bu-border, #{$border-comment-form}));
-	border-width: var(--comment-border-width, var(--bu-border-width, #{$border-width-comment-form}));
+	border-width: var(--comment-border-width, #{$border-width-comment-form});
 	margin: $margin-small 0 $margin;
 	padding: $padding;
 	position: relative;

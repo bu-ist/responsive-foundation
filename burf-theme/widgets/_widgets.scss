@@ -220,7 +220,7 @@ $border-widget-list:                       $border !default;
 	h4,
 	h5,
 	h6 {
-		font-family: var(--widget-heading-font, var(--bu-text-font, #{$font-family-widget-heading}));
+		font-family: var(--widget-heading-font, var(--bu-heading-font, #{$font-family-widget-heading}));
 	}
 
 	a {
@@ -260,7 +260,7 @@ $border-widget-list:                       $border !default;
 
 .widget-title {
 	border: var(--widget-title-border, var(--bu-border, #{$border-widget-title}));
-	border-width: var(--widget-title-border-width, var(--bu-border-width, #{$border-width-widget-title}));
+	border-width: var(--widget-title-border-width, #{$border-width-widget-title});
 	color: var(--widget-title-color, var(--bu-heading-color, #{$color-widget-title}));
 	font-family: var(--widget-title-font, var(--bu-heading-font, #{$font-family-widget-title}));
 	padding: 0 0 4px;
@@ -275,7 +275,7 @@ $border-widget-list:                       $border !default;
 		}
 
 		&:hover::after {
-			color: var(--widget-tite-icon-color--hover, #{$color-widget-title-link-icon-hover});
+			color: var(--widget-title-icon-color--hover, #{$color-widget-title-link-icon-hover});
 		}
 	}
 }
@@ -314,7 +314,7 @@ $border-widget-list:                       $border !default;
 .widget_links,
 .widget_archive {
 	li {
-		border-top: var(--widget-list-border, #{$border-widget-list});
+		border-top: var(--widget-list-border, var(--bu-border, #{$border-widget-list}));
 		padding: $padding-small 0;
 
 		&:first-child {

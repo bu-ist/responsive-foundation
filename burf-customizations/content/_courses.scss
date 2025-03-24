@@ -23,7 +23,7 @@ $border-coursefeed:							 $border !default;
 // Since: 1.0.0
 
 .cf-course {
-	border-top: var(--bu-border, #{$border-coursefeed});
+	border-top: var(--course-border, var(--bu-border, #{$border-coursefeed}));
 	clear: right;
 	margin-top: var(--margin, #{$margin});
 	padding-top: var(--padding, #{$padding});
