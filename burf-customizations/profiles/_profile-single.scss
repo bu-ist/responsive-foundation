@@ -120,7 +120,7 @@ $color-profile-info-item:					$color-grayscale-5 !default;
 // Since: 2.0.0
 
 .profile-details-label {
-	color: var(--bu-label-color, #{$color-profile-info-label});
+	color: var(--profile-label-color, var(--bu-label-color, #{$color-profile-info-label}));
 }
 
 // Styles the single profile details list.
