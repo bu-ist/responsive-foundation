@@ -36,35 +36,8 @@ $table-padding:                            0.5em 1em !default;
 //
 // Since: 1.0.0
 
-$table-border:                             $border !default;
+$table-border:                             1px solid !default;
 
-// Table Heading Color
-//
-// Default color for table headings.
-//
-// Styleguide Content.Tables.Table Heading Color
-//
-// Access: Public
-//
-// Since: 1.0.0
-//
-// Accessibility: AA
-
-$color-table-head:                         $color-heading !default;
-
-// Table Heading Background Color
-//
-// Default background for table headings.
-//
-// Styleguide Content.Tables.Table Heading Background Color
-//
-// Access: Public
-//
-// Since: 1.0.0
-//
-// Accessibility: AA
-
-$table-head-bg:                            $color-grayscale-e !default;
 
 // Table Caption Padding
 //
@@ -78,19 +51,6 @@ $table-head-bg:                            $color-grayscale-e !default;
 
 $table-caption-padding:                    0 0 10px !default;
 
-// Table Caption Color
-//
-// Default color for table captions.
-//
-// Styleguide Content.Tables.Caption Color
-//
-// Access: Public
-//
-// Since: 1.0.0
-//
-// Accessibility: AA
-
-$color-table-caption:                      $color-grayscale-6 !default;
 
 // Table Striped Background Color
 // Default background for striped table backgrounds.
@@ -122,7 +82,6 @@ table {
 	width: 100%;
 
 	caption {
-		color: $color-table-caption;
 		font-style: italic;
 		padding: $table-caption-padding;
 		text-align: center;
@@ -156,8 +115,6 @@ table {
 	}
 
 	thead {
-		background: $table-head-bg;
-		color: $color-table-head;
 		text-align: left;
 		vertical-align: bottom;
 	}
