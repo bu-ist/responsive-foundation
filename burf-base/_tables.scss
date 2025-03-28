@@ -2,18 +2,6 @@
 // Tables Settings
 // =================================================================
 
-// Table Margin
-//
-// Base margin for the table tag.
-//
-// Styleguide Content.Tables.Margin
-//
-// Access: Public
-//
-// Since: 1.0.0
-
-$table-margin:                             $margin 0 !default;
-
 // Table Padding
 //
 // Base padding for the table.
@@ -78,7 +66,6 @@ table {
 	border: $table-border;
 	border-collapse: collapse;
 	empty-cells: show;
-	margin: $table-margin;
 	width: 100%;
 
 	caption {
