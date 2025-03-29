@@ -1,14 +1,17 @@
 .wp-block-post-template,
 .wp-block-query-loop {
+	column-gap: 1em;
+	row-gap: 1em;
+
 	&.is-flex-container.is-flex-container {
 		display: grid;
+		align-items: start;
+
 		&.columns-3 {
 			grid-template-columns: 1fr 1fr 1fr;
-			column-gap: 1em;
-			row-gap: 1em;
 
 			> li {
-				margin: auto;
+				margin: 0;
 				width: auto;
 			}
 		}
