@@ -190,7 +190,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 // Since: 1.0.0
 
 .responsive-video {
-	@extend %responsive-video-styles;
+	// @extend %responsive-video-styles;
 }
 
 // WordPress accessibility classes for screen readers.

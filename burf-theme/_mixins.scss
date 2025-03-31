@@ -1,0 +1,138 @@
+@use "sass:map";
+
+// Share global content area mixin
+// -----------------------------------------------------------------
+// These styles are meant to apply to any content blocks in the content area of of block editor pages, on the front end as well as in the back end blockeditor.
+// These styles are also meant to apply to the content area of classic edtior pages.
+// A selector map can be passed thru, by default it is set to pass in $frontend-selectors
+
+@mixin contentarea-vertical-spacings {
+	%contentarea-elements {
+		margin-block: var( --bu--content--margin-block );
+	}
+}
+@mixin contentarea-base-styles {
+	background: #e661; //placeholder test color - To be removed before merging
+	flex-grow: 1;
+	padding: 0;
+
+	* {
+		background: #e661; //placeholder test color - To be removed before merging
+
+		&.has-background {
+			padding-block: var( --bu--content--padding-block );
+			padding-inline: var( --bu--content--margin-inline );
+
+			> * {
+				&:first-child {
+					margin-block-start: 0;
+				}
+
+				&:last-child {
+					margin-block-end: 0;
+				}
+			}
+		}
+	}
+	// Top level content styles
+	// -----------------------------------------------------------------
+	// These styles use a child combinator so as to only target unnested blocks and page elements.
+
+	> {
+		* {
+			margin-inline: auto;
+			max-width: var( --bu--content--width-default-clamped );
+		}
+	}
+}
+
+@mixin contentarea-alignment-styles( $selectors: $frontend-selectors ) {
+	#{map.get($selectors, 'alignwide')}  {
+		box-sizing: border-box;
+		clear: both;
+		margin-inline: auto;
+		max-width: var( --bu--content--width-wide-clamped );
+	}
+
+	#{map.get( $selectors, 'alignfull' )} {
+		clear: both;
+		max-width: none;
+		margin-inline: auto;
+	}
+
+	#{map.get( $selectors, 'alignleft' )},
+	#{map.get( $selectors, 'alignright' )},
+	#{map.get( $selectors, 'aligncenter' )} {
+		margin-block-start: 0;
+		margin-block-end: var( --bu--content--margin-block );
+		max-width: var( --bu--content--width-nested-float-clamped );
+	}
+
+	#{map.get( $selectors, 'alignleft' )} {
+		float: left;
+		margin-inline-end: var( --bu--content--margin-inline ) !important; // !important needed to toverride margin-left: auto !important set on the block editor
+	}
+
+	#{map.get( $selectors, 'alignright' )} {
+		float: right;
+		margin-inline-start: var( --bu--content--margin-inline ) !important; // !important needed to toverride margin-left: auto !important set on the block editor
+	}
+
+	// Top level content styles
+	// -----------------------------------------------------------------
+	// These styles use a child combinator so as to only target unnested blocks and page elements.
+	> {
+		* {
+			margin-inline: auto;
+			max-width: var( --bu--content--width-default-clamped );
+		}
+
+		#{map.get( $selectors, 'alignleft' )},
+		#{map.get( $selectors, 'alignright' )},
+		#{map.get( $selectors, 'aligncenter' )} {
+			max-width: var( --bu--content--width-float-clamped );
+		}
+
+		#{map.get( $selectors, 'alignleft' )} {
+			margin-inline-start: var( --bu--content--margin-offset ) !important; // !important needed to toverride margin-left: auto !important set on the block editor
+		}
+
+		#{map.get( $selectors, 'alignright' )} {
+			margin-inline-end: var( --bu--content--margin-offset ) !important; // !important needed to toverride margin-left: auto !important set on the block editor
+		}
+	}
+}
+
+// mixin for addressing image-block inconsistencies introduced by the block editor
+@mixin image-block-editor-styles( $selectors: $frontend-selectors ) {
+	// Suppresses margins given to floated .wp-block-image in the editor exclusively
+	.wp-block {
+		&#{map.get($selectors, 'alignleft')},
+		&#{map.get($selectors, 'alignright')} {
+			> {
+				.wp-block-image {
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+// mixin for addressing embed-block inconsistencies introduced by the block editor
+@mixin embed-block-editor-styles( $selectors: $frontend-selectors ) {
+	:where( .wp-block ) {
+		&#{map.get($selectors, 'alignleft')},
+		&#{map.get($selectors, 'alignright')},
+		&#{map.get($selectors, 'aligncenter')} {
+
+			&:has( > .wp-block-embed ) {
+				width: 100%;
+			}
+
+			:where( .wp-block-embed ) {
+				margin: 0;
+				max-width: none;
+			}
+		}
+	}
+}
