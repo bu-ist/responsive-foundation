@@ -10,7 +10,7 @@
 	}
 
 	img {
-		aspect-ratio: 16 / 9;
+		aspect-ratio: var( --wp-block-post-featured-image-aspect-ratio, 16 / 9 );
 		object-fit: cover;
 		width: 100%;
 	}
