@@ -3,11 +3,6 @@
 // =================================================================
 // Preliminary layout styles for the Image block
 
-// Shared image block mixin
-// -----------------------------------------------------------------
-
-// 
-
 //Remove redudant gap caused by defualt vertial-alignment:baseline on the the img element
 :where( .wp-block-image ) {
     figure > *, 

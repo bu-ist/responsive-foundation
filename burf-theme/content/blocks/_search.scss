@@ -1,0 +1,10 @@
+// =================================================================
+// Search Block Settings
+// =================================================================
+// Preliminary layout styles for the Search block
+
+.wp-block-search__inside-wrapper {
+    > * {
+        margin: 0;
+    }
+}
