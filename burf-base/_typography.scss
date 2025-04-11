@@ -281,3 +281,33 @@ code {
 		word-wrap: normal;
 	}
 }
+
+
+// Parent Block Color inheritese
+:where( .has-text-color ) {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: inherit;
+	}
+}
+
+:where( .has-text-color ) {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: inherit;
+	}
+}
+
+:where( .has-link-color ) {
+	a {
+		color: inherit;
+	}
+}
