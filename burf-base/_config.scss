@@ -1003,6 +1003,9 @@ $color-hub:                        			 #767676;
 	--bu--content--column-gap: var( --bu--content--margin-inline );
 	--bu--content--row-gap: var( --bu--content--margin-block );
 
+	--bu--content--button-padding-block: 0.5em;
+	--bu--content--button-padding-inline: 1.25em;
+
 	--bu--content--width-default-base: 800px;
 	--bu--content--width-default-clamped: clamp( 0%, var(--bu--content--width-default-base), calc(100% - ( var(--bu--content--margin-inline) * 2 ) ) );
 

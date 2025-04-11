@@ -1,0 +1,15 @@
+// =================================================================
+// Button Block Settings
+// =================================================================
+// Preliminary layout styles for the button block
+
+.wp-block-button {
+    &.is-style-outline {
+        border: 0;
+        padding: 0;
+    }
+
+    .wp-block-button__link {
+        padding: var( --bu--content--button-padding-block ) var( --bu--content--button-padding-inline );
+    }
+}
