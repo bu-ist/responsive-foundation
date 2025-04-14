@@ -2,6 +2,18 @@
 // Tables Settings
 // =================================================================
 
+// Table Margin
+//
+// Base margin for the table tag.
+//
+// Styleguide Content.Tables.Margin
+//
+// Access: Public
+//
+// Since: 1.0.0
+
+$table-margin:                             $margin 0 !default;
+
 // Table Padding
 //
 // Base padding for the table.
@@ -24,8 +36,36 @@ $table-padding:                            0.5em 1em !default;
 //
 // Since: 1.0.0
 
-$table-border:                             1px solid !default;
+// $table-border:                             1px solid !default;
+$table-border:                             $border !default;
 
+// Table Heading Color
+//
+// Default color for table headings.
+//
+// Styleguide Content.Tables.Table Heading Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
+
+$color-table-head:                         $color-heading !default;
+
+// Table Heading Background Color
+//
+// Default background for table headings.
+//
+// Styleguide Content.Tables.Table Heading Background Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
+
+$table-head-bg:                            $color-grayscale-e !default;
 
 // Table Caption Padding
 //
@@ -39,6 +79,19 @@ $table-border:                             1px solid !default;
 
 $table-caption-padding:                    0 0 10px !default;
 
+// Table Caption Color
+//
+// Default color for table captions.
+//
+// Styleguide Content.Tables.Caption Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
+
+$color-table-caption:                      $color-grayscale-6 !default;
 
 // Table Striped Background Color
 // Default background for striped table backgrounds.
@@ -66,9 +119,11 @@ table {
 	border: $table-border;
 	border-collapse: collapse;
 	empty-cells: show;
+	margin: $table-margin; //
 	width: 100%;
 
 	caption {
+		color: $color-table-caption; //
 		font-style: italic;
 		padding: $table-caption-padding;
 		text-align: center;
@@ -76,7 +131,7 @@ table {
 
 	td,
 	th {
-		border-left: $table-border;
+		border-left: $table-border; //
 		font-size: inherit;
 		margin: 0;
 		overflow: visible; // to make ths where the title is really long work
@@ -102,6 +157,7 @@ table {
 	}
 
 	thead {
+		background: $table-head-bg; //
 		text-align: left;
 		vertical-align: bottom;
 	}
