@@ -165,7 +165,6 @@ table {
 	}
 
 	thead {
-		// background: $table-head-bg; //
 		position: relative;
 		text-align: left;
 		vertical-align: bottom;
@@ -175,7 +174,7 @@ table {
 			border-left: 100vw solid;
 			content: '';
 			display: block;
-			opacity: 0.1;
+			opacity: 0.15;
 			position: absolute;
 			top: 0;
 			left: auto;
