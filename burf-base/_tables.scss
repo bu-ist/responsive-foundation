@@ -174,7 +174,7 @@ table {
 			border-left: 100vw solid;
 			content: '';
 			display: block;
-			opacity: 0.15;
+			opacity: 0.1;
 			position: absolute;
 			top: 0;
 			left: auto;
@@ -307,31 +307,28 @@ table.sortable {
 // Responsive Tables
 
 .responsive-table {
+	.table-striped {
+		thead {
+			&::before {
+				@media screen and (max-width: 970px)  {
+					border-bottom: 10em solid;
+					border-left: 0;
+					top: auto;
+					left: 0;
+				}
+			}
+		}
+	}
+
 	.table-striped tr:nth-child(2n-1),
 	.u-odd {
-		// background: $table-stripes;
 		td {
-			
-			position: relative;
-			z-index: 0;
-			overflow: hidden;
-
 			&::after {
-				border-left: 100vw solid;
-				border-top: 0;
-				content: '';
-				top: 0;
-				left: auto;
-				bottom: 0;
-				right: 0;
-
 				@media screen and (max-width: 970px)  {
 					border-left: 0;
 					border-top: 3em solid;
-					top: 0;
 					left: 0;
 					bottom: auto;
-					right: 0;
 				}
 			}
 		}
