@@ -3,6 +3,7 @@
 // =================================================================
 
 .sidebar {
+	background-color: var( --sidebar-background-color, #f7f7f7 );
 	padding-block: var(--bu--content--padding-block);
 	padding-inline: var(--bu--content--padding-inline);
 
