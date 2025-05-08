@@ -91,7 +91,5 @@
       "quiet": false
     }
   },
-  "dependencies": {
-    "@bostonuniversity/base": "file:.yalc/@bostonuniversity/base"
-  }
+  "dependencies": {}
 }

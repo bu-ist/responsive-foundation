@@ -1,9 +1,0 @@
-{
-  "version": "v1",
-  "packages": {
-    "@bostonuniversity/base": {
-      "signature": "a5c8f2f4d7ed80472c4a6b76890eb691",
-      "file": true
-    }
-  }
-}
