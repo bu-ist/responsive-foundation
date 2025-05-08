@@ -89,7 +89,7 @@ $border-calendar-list:                      $border !default;
 // @since 2.0.0
 
 .calendar-list-events {
-	margin-bottom: var(--bu-spacing, #{$margin-large});
+	margin-bottom: var(--margin-large, #{$margin-large});
 	padding: 0;
 }
 
@@ -101,7 +101,7 @@ $border-calendar-list:                      $border !default;
 // @since 2.0.0
 
 .calendar-list-event {
-	font-size: 0.9em;
+	font-size: var(--calendar-listing-size, 0.9em);
 	line-height: 1.3;
 	list-style: none;
 	margin-bottom: 0.5em;

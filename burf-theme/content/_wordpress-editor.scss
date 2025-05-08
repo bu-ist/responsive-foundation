@@ -69,7 +69,7 @@ $box-shadow-table:                          inset -20px 0 20px -10px $color-gray
 .post-edit-link {
 	@include border-radius( 2px );
 	background: $color-grayscale-f;
-	border: 1px solid currentColor;
+	border: 1px solid var(--bu-link-color, #{$color-link});
 	color: var(--bu-link-color, #{$color-link});
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 15px;

@@ -148,18 +148,18 @@ $color-widget-contentnav-active:           $color-link-active !default;
 				font-size: var(--widget-link-nested-size, #{$font-size-widget-contentnav-nested-link});
 			}
 		}
+	}
 
-		a {
-			color: var(--widget-link-color, #{$color-widget-contentnav});
-			display: block;
-			font-size: var(--widget-link-size, #{$font-size-widget-contentnav-link});
-			padding: $padding-small 0;
+	a {
+		color: var(--widget-link-color, #{$color-widget-contentnav});
+		display: block;
+		font-size: var(--widget-link-size, #{$font-size-widget-contentnav-link});
+		padding: $padding-small 0;
 
-			&:hover,
-			&:focus {
-				color: var(--widget-link-color--hover, #{$color-widget-contentnav-hover});
-				text-decoration: none;
-			}
+		&:hover,
+		&:focus {
+			color: var(--widget-link-color--hover, #{$color-widget-contentnav-hover});
+			text-decoration: none;
 		}
 	}
 

@@ -193,7 +193,7 @@ $color-calendar-month-link-today:        $color-grayscale-0 !default;
 // Since: 2.0.0
 
 .widget-calendar-picker {
-	color: var(--calendar-color, var(--bu-link-color, #{$color-calendar-month-link}));
+	color: var(--calendar-month-link-color, #{$color-calendar-month-link});
 	line-height: 1.6;
 
 	.month {
@@ -217,7 +217,7 @@ $color-calendar-month-link-today:        $color-grayscale-0 !default;
 	}
 
 	th {
-		background: var(--calendar-month-background, var(--bu-color-accent, #{$color-calendar-month-th-bg}));
+		background: var(--calendar-month-background, #{$color-calendar-month-th-bg});
 		color: var(--calendar-month-color, #{$color-calendar-month-th});
 	}
 
@@ -227,7 +227,7 @@ $color-calendar-month-link-today:        $color-grayscale-0 !default;
 
 		&:hover,
 		&::focus {
-			color: var(--calendar-month-link-hover, var(--bu-link-color--hover, #{$color-calendar-month-link-hover}));
+			color: var(--calendar-month-link-hover, #{$color-calendar-month-link-hover});
 		}
 	}
 

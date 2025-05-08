@@ -195,6 +195,8 @@ $color-news-meta-before:                    $color-grayscale-a !default;
 // Since: 1.0.0
 
 .post-meta {
+	color: var(--news-meta-color, #{$color-news-meta-before});
+	
 	span {
 		&::before {
 			color: var(--news-meta-color, #{$color-news-meta-before});

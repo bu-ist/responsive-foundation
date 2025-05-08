@@ -204,7 +204,7 @@ $_width-calendar-date: 48px;
 // Since: 2.0.0
 
 .widget-calendar-day-graphic {
-	color: var(--calendar-widget-day-color, var(--bu-color-accent, #{$color-widget-calendar-date-day}));
+	color: var(--calendar-widget-day-color, #{$color-widget-calendar-date-day});
 	display: block;
 	font-size: var(--calendar-widget-day-size, #{$font-size-widget-calendar-date-day});
 }
@@ -216,7 +216,7 @@ $_width-calendar-date: 48px;
 // Since: 2.0.0
 
 .widget-calendar-month-graphic {
-	color: var(--calendar-widget-month-color, var(--bu-color-accent, #{$color-widget-calendar-date-month}));
+	color: var(--calendar-widget-month-color, #{$color-widget-calendar-date-month});
 	font-size: var(--calendar-widget-month-size, #{$font-size-widget-calendar-date-month});
 	text-transform: uppercase;
 }

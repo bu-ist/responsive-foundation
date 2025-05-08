@@ -49,12 +49,9 @@ $border-collapsible:               $border !default;
 // Since: 1.0.0
 
 .bu_collapsible_container {
-	padding: 0.5em 0;
+	border: var(--collapsible-border, var(--bu-border, #{$border-collapsible}));
+	padding: var(--collapsible-padding, 0.5em 0);
 	position: relative;
-
-	& + & {
-		border-top: var(--collapsible-border, #{$border-collapsible});
-	}
 }
 
 // Styles the header on a collapsible item.
@@ -66,11 +63,11 @@ $border-collapsible:               $border !default;
 .bu_collapsible {
 	@extend %icon-plus;
 	margin-bottom: 0;
-	padding-right: var(--padding, #{$padding});
+	padding-right: var(--collapsible-padding, var(--bu-spacing, #{$padding}));
 	position: relative;
 
 	&::before {
-		color: var(--collapsible-icon-color, #{$color-collapsible-icon});
+		color: var(--collapsible-icon-color, var(--bu-icon-color, #{$color-collapsible-icon}));
 		font-size: 16px;
 		margin-top: -10px;
 		position: absolute;

@@ -577,6 +577,8 @@ $search-field-height:                          40px !default;
 .search-submit {
 	@extend %button-styles-primary;
 	@include border-radius( $border-radius-quicksearch-button );
+	background: var(--search-button-background, var(--bu-button-primary-background-color, #0074E0));
+	color: var(--search-button-color, var(--bu-button-primary-text-color, #fff));
 	float: right;
 	height: $search-field-height;
 	margin: 0;
@@ -584,6 +586,12 @@ $search-field-height:                          40px !default;
 
 	@include breakpoint( $nav-desktop ) {
 		width: 20%;
+	}
+
+	&:focus,
+	&:hover {
+		background: var(--search-button-background--hover, var(--bu-button-primary-background-color--hover, rgb(0, 89.5892857143, 173)));
+		color: var(--search-button-color--hover, var(--bu-button-primary-text-color--hover, #fff));
 	}
 }
 
@@ -882,10 +890,11 @@ $nav-toggle-border: 4px !default;
 	}
 
 	a {
+		color: var(--utility-nav-link-color, #{$color-utility-nav-mobile-link});
 		text-decoration: none;
 
 		&:hover {
-			color: var(--utility-nav-link-color, #{$color-utility-nav-mobile-link-hover});
+			color: var(--utility-nav-link-color--hover, #{$color-utility-nav-mobile-link-hover});
 
 			@include breakpoint( $nav-desktop ) {
 				color: var(--utility-nav-link-color--hover, #{$color-utility-nav-link-hover});
@@ -1014,13 +1023,13 @@ $left-nav-desktop:                    $nav-desktop !default;
 
 .l-side-nav .search-toggle {
 	//top: $height-masthead + 30px;
-	color: var(--search-toggle-color, #{$color-grayscale-f});
+	color: var(--nav-toggle-color, #{$color-grayscale-f});
 	position: absolute;
 	right: 0;
 
 	@include breakpoint( $left-nav-desktop ) {
 		@include vertical-center-ie9;
-		color: var(--search-toggle-alt-color, #{$color-nav-toggle-alt});
+		color: var(--nav-toggle-alt-color, #{$color-nav-toggle-alt});
 		display: block;
 		position: relative;
 		right: $padding-small;
@@ -1028,11 +1037,11 @@ $left-nav-desktop:                    $nav-desktop !default;
 
 	&:active,
 	&:visited {
-		color: currentColor;
+		color: var(--nav-toggle-color, #{$color-nav-toggle});
 	}
 
 	&:hover {
-		color: currentColor;
+		color: var(--nav-toggle-color--hover, #{$color-nav-toggle-hover});
 
 		@include breakpoint( $left-nav-desktop ) {
 			color: var(--nav-toggle-alt-color--hover, #{$color-nav-toggle-alt-hover});
@@ -1061,8 +1070,8 @@ $_search-height: 115px;
 .l-side-nav {
 	#quicksearch {
 		@include breakpoint( $left-nav-desktop ) {
-			border: 1px solid var(--quicksearch-border-color, #{$color-quicksearch-border});
-			border-width: var(--quicksearch-border-width, #{$border-width-quicksearch});
+			border: 1px solid var(--search-border-color, #{$color-quicksearch-border});
+			border-width: var(--search-border-width, #{$border-width-quicksearch});
 			position: absolute;
 			width: 100%;
 		}
@@ -1115,7 +1124,11 @@ $_search-height: 115px;
 
 		.nav-toggle {
 			float: left;
-			margin-left: -$margin-small;
+
+			@include breakpoint( $sm ) {
+				margin-left: -$margin-small;
+			}
+			
 		}
 
 		.primary-nav-menu,
@@ -1438,6 +1451,7 @@ $mega-nav-desktop-layout:                      $md !default;
 
 .mega-nav-toggle {
 	background: var(--mega-nav-toggle-background, var(--bu-button-background-color, #{$color-mega-nav-toggle-bg}));
+	border: var(--mega-nav-toggle-border, var(--bu-button-border), none);
 	color: var(--mega-nav-toggle-text-color, var(--bu-button-text-color, #{$color-mega-nav-toggle-text}));
 	display: block;
 	height: auto;
@@ -1446,6 +1460,13 @@ $mega-nav-desktop-layout:                      $md !default;
 
 	@include breakpoint( $mega-nav-show-full-menu ) {
 		width: auto;
+	}
+
+	&:hover,
+	&:focus {
+		background: var(--mega-nav-toggle-background--hover, var(--bu-button-background-color--hover, #{$color-mega-nav-toggle-bg}));
+		border: var(--mega-nav-toggle-border--hover, var(--bu-button-border--hover), none);
+		color: var(--mega-nav-toggle-text-color--hover, var(--bu-button-text-color--hover, #{$color-mega-nav-toggle-text}));
 	}
 
 	.nav-toggle-label-closed,

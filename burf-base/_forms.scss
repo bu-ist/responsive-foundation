@@ -208,7 +208,7 @@ $form-fieldset-padding:                    0 !default;
 //
 // Since: 1.0.0
 
-$form-label-margin:                        0.5em 0 !default;
+$form-label-margin:                        0.5em !default;
 
 // Row Margin
 //
@@ -720,7 +720,7 @@ $border-radius-button:                     2px !default;
 // Since: 1.2.0
 
 %button-styles {
-	background-color: var(--bu-button-background-color, #{$color-button-bg});
+	background: var(--bu-button-background-color, #{$color-button-bg});
 	border: var(--bu-button-border, #{$border-button});
 	border-radius: var(--bu-button-border-radius, #{$border-radius-button});
 	color: var(--bu-button-text-color, #{$color-button-text});
@@ -736,7 +736,7 @@ $border-radius-button:                     2px !default;
 
 	&:hover,
 	&:focus {
-		background-color: var(--bu-button-background-color--hover, #{darken($color-button-bg, 10%)});
+		background: var(--bu-button-background-color--hover, #{darken($color-button-bg, 10%)});
 		color: var(--bu-button-text-color--hover);
 	}
 
@@ -817,12 +817,12 @@ $border-radius-button:                     2px !default;
 // Since: 1.2.0
 
 %button-styles-primary {
-	background-color: var(--bu-button-primary-background-color, #{$color-button-primary-bg});
+	background: var(--bu-button-primary-background-color, #{$color-button-primary-bg});
 	color: var(--bu-button-primary-text-color, #{$color-button-primary-text});
 
 	&:hover,
 	&:focus {
-		background-color: var(--bu-button-primary-background-color--hover, #{darken($color-button-primary-bg, 10%)});
+		background: var(--bu-button-primary-background-color--hover, #{darken($color-button-primary-bg, 10%)});
 		color: var(--bu-button-primary-text-color--hover, #{$color-button-primary-text});
 	}
 
@@ -852,9 +852,9 @@ form {
 // Since: 1.0.0
 
 fieldset {
-	border: var(--form-border, var(--bu-border, #{$form-fieldset-border}));
-	margin: var(--form-fieldset-margin, #{$form-fieldset-margin});
-	padding: var(--form-fieldset-padding, #{$form-fieldset-padding});
+	border: 0;
+	margin: $form-fieldset-margin;
+	padding: $form-fieldset-padding;
 }
 
 // The general styles for the legend element, which holds a caption for the
@@ -865,12 +865,12 @@ fieldset {
 // Since: 1.0.0
 
 legend {
-	border-bottom: var(--form-border, var(--bu-border, #{$form-legend-border}));
+	border-bottom: $form-legend-border;
 	display: block;
 	font-size: 1.5em;
 	font-weight: 700;
-	margin: var(--form-legend-margin, #{$form-legend-margin});
-	padding: var(--form-legend-padding, #{$form-legend-padding});
+	margin: $form-legend-margin;
+	padding: $form-legend-padding;
 	width: 100%;
 }
 
@@ -888,7 +888,7 @@ textarea {
 label {
 	display: block;
 	font-weight: bold;
-	margin: var(--form-label-margin, #{$form-label-margin}) 0;
+	margin-block: var(--form-label-margin, #{$form-label-margin});
 }
 
 // The general styles for inputs which should look like buttons.
@@ -947,12 +947,12 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 [type="color"],
 select,
 textarea {
-	@include	box-shadow( $form-input-shadow );
-	@include border-radius( $form-input-border-radius );
+	border-radius: $form-input-border-radius;
 	border: var(--form-border, var(--bu-border, #{$form-input-border}));
+	box-shadow: $form-input-shadow;
 	display: inline-block;
 	line-height: 1;
-	margin: var(--form-input-margin, #{$form-input-margin});
+	margin-block-end: var(--form-input-margin, #{$margin-small});
 	padding: var(--form-input-padding, #{$form-input-padding});
 
 	&:focus {
@@ -1001,7 +1001,7 @@ textarea {
 // Since: 1.0.0
 
 [disabled] {
-	background-color: $color-grayscale-e;
+	background: $color-grayscale-e;
 	color: $color-grayscale-c;
 	cursor: not-allowed;
 }
@@ -1049,8 +1049,8 @@ input,
 textarea,
 select {
 	&:focus:invalid {
-		border-color: var(--invalid-border-color, #{$_invalid-border-color});
-		color: var(--invalid-text-color, #{$_invalid-text-color});
+		border-color: $_invalid-border-color;
+		color: $_invalid-text-color;
 	}
 }
 
@@ -1067,7 +1067,7 @@ select {
 [type="radio"],
 [type="checkbox"] {
 	&:focus:invalid {
-		outline-color: var(--invalid-border-color, #{$_invalid-border-color});
+		outline-color: $_invalid-border-color;
 	}
 }
 
@@ -1080,7 +1080,7 @@ select {
 
 select {
 	background-color: $color-grayscale-f;
-	border: 1px solid $color-grayscale-c;
+	border: var(--form-border, 1px solid #{$color-grayscale-c});
 
 	&[multiple] {
 		height: auto;
@@ -1099,7 +1099,7 @@ select {
 // Since: 1.0.0
 
 .form-row {
-	margin: var(--form-row-margin, #{$form-row-margin});
+	margin: $form-row-margin;
 }
 
 // Styles form controls, if you are not using Gravity Forms.
@@ -1110,7 +1110,7 @@ select {
 // Since: 1.0.0
 
 .form-controls {
-	margin: var(--form-margin, #{$margin}) 0 0;
+	margin-block-start: $margin;
 }
 
 // Required Styles

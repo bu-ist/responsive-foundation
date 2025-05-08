@@ -208,7 +208,7 @@ $border-widget-list:                       $border !default;
 .widget {
 	@extend %col-full;
 	@extend %font-size-secondary;
-	margin-bottom: $widget-margin-bottom;
+	margin-bottom: var(--widget-margin-bottom, #{$widget-margin-bottom});
 
 	&:last-child {
 		margin-bottom: 0;
