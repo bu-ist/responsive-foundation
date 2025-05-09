@@ -1,0 +1,27 @@
+// =================================================================
+// Content Contaner Settings
+// =================================================================
+// Styles for content-container which houses the content-area, and sidebar for legacy pages.
+
+// Content Area Background Color
+//
+// Controls the background color of the content.
+//
+// Styleguide Configuration.Content Area.Background Color
+//
+// Access: Public
+//
+// Since: 1.0.0
+
+$color-content-bg:                         $color-grayscale-f !default;
+
+:where( .content-container ) {
+	background: $color-content-bg;
+	display: flex; // TO-DO: currently this breaks BULP because BULP assumes display:block
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+	@include breakpoint( $md ) {
+        flex-direction: row;
+    }
+}

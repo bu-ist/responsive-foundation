@@ -507,10 +507,6 @@ $_h: $_depth-headings;
 	margin-bottom: 0.6em;
 	margin-top: 1em;
 
-	&:first-child {
-		margin-top: 0;
-	}
-
 	small {
 		color:  var(--bu-heading-color, #{$color-heading-small});
 		font-size: 0.75em;

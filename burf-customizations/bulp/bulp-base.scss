@@ -9,7 +9,8 @@
 
 .page-template-bu-landing {
 	.content-container {
-		max-width: 100%;
+		max-width: none;
+		flex-direction: column;
 	}
 
 	.content-area {
