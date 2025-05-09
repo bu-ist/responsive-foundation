@@ -201,7 +201,6 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 // Since: 1.0.0
 
 .brand {
-	@extend %_vertical-center-child;
 	font-family: $font-family-brand;
 	font-size: 18px;
 	height: var(--brand-height, #{$height-brand});
