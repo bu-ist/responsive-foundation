@@ -1,0 +1,45 @@
+// Handles styling for the WordPress calendar widget.
+//
+// Styleguide Components.Widgets.wp-calendar
+//
+// Access: Public
+//
+// Since: 4.0.0
+
+.wp-calendar-table {
+	background: $color-grayscale-f;
+	border:  0;
+	color: unset;
+	font-size: var( --bu-font-size-xs,  clamp( 0.8rem, 0.17vw + 0.76rem, 0.89rem ) );
+	table-layout: fixed;
+
+	table {
+	}
+
+	thead {
+		th {
+			background-color: #ddd;
+			border:  var( --bu-base-border, 1px solid #ccc );
+			color: var( --bu-base-text-color, #555 );
+			padding: 0.75em 0.5em;
+			text-align: center;
+			vertical-align: middle;
+		}
+	}
+
+	tbody {
+		color: var( --bu-base-text-color );
+
+		td {
+			border:  var( --bu-base-border, 1px solid #ccc );
+			color: var( --bu-base-text-color, #555 );
+			padding: 0.75em 0.5em;
+			text-align: center;
+			vertical-align: middle;
+		}
+	}
+
+	a {
+		display: block;
+	}
+}
