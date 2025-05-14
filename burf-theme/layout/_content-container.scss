@@ -17,11 +17,18 @@ $color-content-bg:                         $color-grayscale-f !default;
 
 :where( .content-container ) {
 	background: $color-content-bg;
-	display: flex; // TO-DO: currently this breaks BULP because BULP assumes display:block
-    flex-direction: column;
-    flex-wrap: nowrap;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-areas:
+		"breadcrumbs"
+		"content"
+		"sidebar";
 
-	@include breakpoint( $md ) {
-        flex-direction: row;
+	@include breakpoint( $sm ) {
+		grid-template-columns: auto 1fr;
+		grid-template-rows: auto 1fr auto;
+		grid-template-areas:
+			"breadcrumbs	sidebar"
+			"content		sidebar";
     }
 }

@@ -284,6 +284,8 @@ code {
 
 
 // Parent Block Color inheritese
+// -----------------------------------------------------------------
+
 :where( .has-text-color ) {
 	h1,
 	h2,
