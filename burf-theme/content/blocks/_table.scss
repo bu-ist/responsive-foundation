@@ -1,0 +1,27 @@
+// =================================================================
+// Table Block Settings
+// =================================================================
+// Preliminary layout styles for the table block
+
+.wp-block-table {
+    table {
+        border: 1px solid ;
+        border-top: 0;
+
+        thead {
+            &::before {
+                bottom: -3px;
+            }
+        }
+
+        td,
+        th {
+            padding: $table-padding;
+        }
+    }
+
+    figcaption {
+        color: inherit;
+        margin-top: 0.5em;
+    }
+}

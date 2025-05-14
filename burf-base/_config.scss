@@ -996,12 +996,15 @@ $color-hub:                        			 #767676;
 // --bu--content--width-default-clamped and --bu--content--width-wide-clamped are also used in a themese settings.mjs (theme.json).
 
 :root {
-	--bu--content--padding-block: 1em;
+	--bu--content--padding-block: 1rem;
 	--bu--content--padding-inline: 1rem;
-	--bu--content--margin-block: 1em;
+	--bu--content--margin-block: 1rem;
 	--bu--content--margin-inline: 1rem;
-	--bu--content--column-gap: var(--bu--content--padding-inline);
-	--bu--content--row-gap: var(--bu--content--padding-block);
+	--bu--content--column-gap: var( --bu--content--margin-inline );
+	--bu--content--row-gap: var( --bu--content--margin-block );
+
+	--bu--content--button-padding-block: 0.5em;
+	--bu--content--button-padding-inline: 1.25em;
 
 	--bu--content--width-default-base: 800px;
 	--bu--content--width-default-clamped: clamp( 0%, var(--bu--content--width-default-base), calc(100% - ( var(--bu--content--margin-inline) * 2 ) ) );

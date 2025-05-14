@@ -1,0 +1,87 @@
+// =================================================================
+// Query Loops Post Template Block Block Settings
+// =================================================================
+// Preliminary layout styles for the Query Loops Post Template Block block
+
+.wp-block-post-template {
+	column-gap: var( --bu--content--column-gap );
+	row-gap: var( --bu--content--row-gap );
+	
+
+	&.is-flex-container.is-flex-container {		
+		align-items: start;
+		display: grid;
+		gap: var(--gap);
+		grid-template-columns: repeat(
+			auto-fit, 
+			minmax(
+				min(max(var(--column-size), (100% - var(--breakpoint)) * -999 ), 100%), 
+				1fr
+			)
+		);
+
+		/* setting */
+		--min-column-size: 20ch;
+		--column-count: 1;
+		--gap: var( --bu--content--column-gap );
+		
+		/* calculations */
+		--breakpoint: calc(var(--min-column-size) * var(--column-count) + (var(--gap) * (var(--column-count) - 1)) );
+		--column-size: calc((100% / var(--column-count)) - var(--gap));
+
+		&.columns-2 {
+			/* user setting */
+			--column-count: 2;
+		}
+
+		&.columns-3 {
+			/* user setting */
+			--column-count: 3;
+		}
+
+		&.columns-4 {
+			/* user setting */
+			--min-column-size: 14ch;
+			--column-count: 4;
+		}
+
+		&.columns-5 {
+			/* user setting */
+			--min-column-size: 12ch;
+			--column-count: 5;
+		}
+
+		&.columns-6 {
+			/* user setting */
+			--min-column-size: 10ch;
+			--column-count: 6;
+		}
+
+		&.wp-block-post-template {
+			> li {
+				margin: 0;
+				width: auto;
+			}
+		}
+	}
+
+	.wp-block-post-featured-image,
+	.wp-block-post-date,
+	.wp-block-post-title,
+	.wp-block-post-excerpt,
+	.wp-block-post-excerpt__excerpt {
+		&:first-child {
+			margin-block-start: 0;
+		}
+
+		&:last-child {
+			margin-block-end: 0;
+		}
+	}
+
+	p {
+		&:empty {
+			display: none;
+		}
+	}
+}

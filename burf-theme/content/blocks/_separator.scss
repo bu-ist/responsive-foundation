@@ -1,0 +1,23 @@
+// =================================================================
+// Seperator Block Settings
+// =================================================================
+// Preliminary layout styles for the seperator block
+
+.wp-block-separator {
+	&.is-style-wide {
+		border-bottom-width: 2px;
+	}
+
+	&.is-style-dots {
+		height: 1px;
+		&::before {
+			display: block;
+			translate: 0 -50%;
+		}
+	}
+
+	&.has-background {
+		--bu--content--padding-block: 0; 
+		--bu--content--padding-inline: 0;
+	}
+}

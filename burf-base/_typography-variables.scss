@@ -145,7 +145,7 @@ $font-margin-base:                          0 0 1.5em 0 !default;
 //
 // Accessibility: AA
 
-$color-link:                                #0f69d7 !default;
+$color-link:                                var( --bu-base-link-color, #0f69d7 ) !default;
 
 // Link Color - Visited
 //
@@ -161,7 +161,7 @@ $color-link:                                #0f69d7 !default;
 //
 // Accessibility: AA
 
-$color-link-visited:                        #7337af !default;
+$color-link-visited:                        var( --bu-base-link-color-visited ,#7337af ) !default;
 
 // Link Color - Active
 //

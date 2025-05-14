@@ -12,7 +12,7 @@
 //
 // Since: 1.0.0
 
-$table-margin:                             $margin 0 !default;
+$table-margin:                             0 !default;
 
 // Table Padding
 //
@@ -24,7 +24,13 @@ $table-margin:                             $margin 0 !default;
 //
 // Since: 1.0.0
 
-$table-padding:                            0.5em 1em !default;
+$table-padding:                           1em 1em !default;
+
+// Table Line Height
+//
+// Base line height for the table.
+
+$table-line-height:                            1.5em !default;
 
 // Border
 //
@@ -36,7 +42,8 @@ $table-padding:                            0.5em 1em !default;
 //
 // Since: 1.0.0
 
-$table-border:                             $border !default;
+$table-border:                             1px solid !default;
+// $table-border:                             $border !default;
 
 // Table Heading Color
 //
@@ -118,11 +125,13 @@ table {
 	border: $table-border;
 	border-collapse: collapse;
 	empty-cells: show;
+	line-height: $table-line-height;
 	margin: $table-margin;
+	overflow: hidden;
 	width: 100%;
 
 	caption {
-		color: $color-table-caption;
+		color: $color-table-caption; //
 		font-style: italic;
 		padding: $table-caption-padding;
 		text-align: center;
@@ -130,7 +139,7 @@ table {
 
 	td,
 	th {
-		border-left: $table-border;
+		border-left: $table-border; //
 		font-size: inherit;
 		margin: 0;
 		overflow: visible; // to make ths where the title is really long work
@@ -156,10 +165,23 @@ table {
 	}
 
 	thead {
-		background: $table-head-bg;
-		color: $color-table-head;
+		position: relative;
 		text-align: left;
 		vertical-align: bottom;
+		z-index: 0;
+
+		&::before {
+			border-left: 100vw solid;
+			content: '';
+			display: block;
+			opacity: 0.1;
+			position: absolute;
+			top: 0;
+			left: auto;
+			bottom: 0;
+			right: 0;
+			z-index: -1;
+		}
 	}
 
 	col[class*="col-"] { // Despite what CodeClimate says this is necessary.
@@ -180,8 +202,29 @@ table {
 
 .table-striped tr:nth-child(2n-1),
 .u-odd {
+	// background: $table-stripes;
 	td {
-		background: $table-stripes;
+		
+		position: relative;
+		z-index: 0;
+		overflow: hidden;
+
+		&::after {
+			border-left: 100vw solid;
+			border-top: 0;
+			content: '';
+			display: block;
+			opacity: 0.05;
+			position: absolute;
+			top: 0;
+			left: auto;
+			bottom: 0;
+			right: 0;
+			z-index: -1;
+
+
+
+		}
 	}
 }
 
@@ -243,6 +286,51 @@ table {
 
 // BU Table Sorter override
 
-table.sortable thead tr th.header {
-	border: $table-border;
+table.sortable {
+	thead {
+		tr {
+			th {
+				&.header {
+					border: $table-border;
+				}
+			}
+		}
+	}
+
+	td,
+	th {
+		padding: $table-padding;
+	}
+}
+
+
+// Responsive Tables
+
+.responsive-table {
+	.table-striped {
+		thead {
+			&::before {
+				@media screen and (max-width: 970px)  {
+					border-bottom: 10em solid;
+					border-left: 0;
+					top: auto;
+					left: 0;
+				}
+			}
+		}
+	}
+
+	.table-striped tr:nth-child(2n-1),
+	.u-odd {
+		td {
+			&::after {
+				@media screen and (max-width: 970px)  {
+					border-left: 0;
+					border-top: 3em solid;
+					left: 0;
+					bottom: auto;
+				}
+			}
+		}
+	}
 }
