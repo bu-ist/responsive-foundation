@@ -8,9 +8,11 @@
 // List of page elements and blocks that would be extended into @mixin contentarea-base-styles
 
 :where( .content-area ) {
-    @include contentarea-vertical-spacings;
+	@include contentarea-vertical-spacings;
 }
 .content-area {
-    @include contentarea-base-styles;
-    @include contentarea-alignment-styles;
+	grid-area: content;
+
+	@include contentarea-base-styles;
+	@include contentarea-alignment-styles;
 }

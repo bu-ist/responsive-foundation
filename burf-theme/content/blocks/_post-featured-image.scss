@@ -1,0 +1,19 @@
+// =================================================================
+// Query Loops Post Image  Block Settings
+// =================================================================
+// Preliminary layout styles for the query loops Post image block
+
+.wp-block-post-featured-image {
+	margin-block: var( --bu--content--margin-block );
+
+	a {
+		width: 100%;
+	}
+
+	img {
+		aspect-ratio: var( --wp-block-post-featured-image-aspect-ratio, 16 / 9 );
+		object-fit: cover;
+		vertical-align: middle;
+		width: 100%;
+	}
+}

@@ -1,3 +1,8 @@
+// =================================================================
+// Image Block Settings
+// =================================================================
+// Preliminary layout styles for the Image block
+
 //Remove redudant gap caused by defualt vertial-alignment:baseline on the the img element
 :where( .wp-block-image ) {
     figure > *, 

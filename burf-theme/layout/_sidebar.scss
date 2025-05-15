@@ -3,10 +3,30 @@
 // =================================================================
 
 .sidebar {
+	background-color: var( --sidebar-background-color, #fafafa );
+	grid-area: sidebar;
 	padding-block: var(--bu--content--padding-block);
 	padding-inline: var(--bu--content--padding-inline);
 
+	// max-width: clamp( 20vw, 360px, 33.3333vw);
+
 	@include breakpoint( $sm ) {
-		max-width: clamp( 20%, 360px, 33.3333%);
+		max-width: clamp( 20vw, 360px, 34vw);
 	}
+
+	// @include breakpoint( $sm ) {
+	// 	max-width: 250px;
+	// }
+
+	// @include breakpoint( $md ) {
+	// 	max-width: 300px;
+	// }
+
+	// @include breakpoint( $lg ) {
+	// 	max-width: 350px;
+	// }
+
+	// @include breakpoint( $xl ) {
+	// 	max-width: 400px;
+	// }
 }
