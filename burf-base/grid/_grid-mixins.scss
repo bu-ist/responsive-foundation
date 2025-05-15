@@ -39,8 +39,8 @@
 
 @mixin col-margin-base {
 	float: left;
-	margin-bottom: $grid-margin-width#{"%"};
-	margin-left: $grid-margin-width#{"%"};
+	margin-bottom: $grid-margin-width * 1%;
+	margin-left: $grid-margin-width * 1%;
 	margin-top: 0;
 	padding: $grid-margin-padding;
 
@@ -64,7 +64,7 @@
 
 @mixin grid-build( $cssproperty, $amount ) {
 	@if ( type_of( $amount ) == "number" ) {
-		#{$cssproperty}: #{$amount}#{"%"};
+		#{$cssproperty}: #{$amount * 1%};
 	} @else {
 		#{$cssproperty}: #{$amount};
 	}

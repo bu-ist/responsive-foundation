@@ -56,7 +56,7 @@ $color-widget-post-meta:                    $color-grayscale-6 !default;
 
 .widget-post-meta {
 	@extend %font-size-minimum;
-	color: $color-widget-post-meta;
+	color: var(--widget-post-meta-color, #{$color-widget-post-meta});
 }
 
 // Handles styling for the excerpt in the

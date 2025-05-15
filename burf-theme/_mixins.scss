@@ -12,12 +12,12 @@
 	}
 }
 @mixin contentarea-base-styles {
-	// background: #e661; //placeholder test color - To be removed before merging
+	//background: #e661; //placeholder test color - To be removed before merging
 	flex-grow: 1;
 	padding: 0;
 
 	* {
-		// background: #e661; //placeholder test color - To be removed before merging
+		//background: #e661; //placeholder test color - To be removed before merging
 
 		&.has-background {
 			padding-block: var( --bu--content--padding-block );

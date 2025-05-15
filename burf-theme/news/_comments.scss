@@ -230,7 +230,7 @@ $border-width-comment-form:                  3px !default;
 // Since: 1.0.0
 
 .comments-area {
-	color: $color-comments;
+	color: var(--comment-color, var(--bu-text-color, #{$color-comments}));
 
 	// Remove defaults for all OL on this page
 
@@ -249,8 +249,8 @@ $border-width-comment-form:                  3px !default;
 // Since: 1.0.0
 
 .comments-list {
-	margin-left: -$margin-small;
-	margin-right: -$margin-small;
+	margin-inline-start: calc(var(--margin-small, #{$margin-small}) * -1);
+	margin-inline-end: calc(var(--margin-small, #{$margin-small}) * -1);
 
 	@include breakpoint( $sm ) {
 		margin: 0;
@@ -266,18 +266,18 @@ $border-width-comment-form:                  3px !default;
 // Since: 1.0.0
 
 .comment {
-	margin-left: $comment-reply-depth-mobile;
+	margin-inline-start: var(--comment-reply-depth-mobile, #{$comment-reply-depth-mobile});
 
 	@include breakpoint( $sm ) {
-		margin-left: $comment-reply-depth;
+		margin-inline-start: var(--comment-reply-depth, #{$comment-reply-depth});
 	}
 
 	&.depth-1 {
-		margin: $comment-margin-mobile 0;
+		margin-block: var(--comment-margin, #{$comment-margin-mobile});
 		padding: 0;
 
 		@include breakpoint( $sm ) {
-			margin: $comment-margin 0;
+			margin-block: var(--comment-margin, #{$comment-margin});
 		}
 	}
 }
@@ -292,15 +292,16 @@ $border-width-comment-form:                  3px !default;
 
 .comment-body {
 	@extend %font-size-secondary;
-	border: $border-comment;
-	border-width: $border-width-comment;
-	font-family: $font-family-comment;
-	padding: $comment-padding-mobile;
+	background: var(--comment-background);
+	border: var(--comment-border, var(--bu-border, #{$border-comment}));
+	border-width: var(--comment-border-width, var(--bu-border-width, #{$border-width-comment}));
+	font-family: var(--comment-font, var(--bu-text-font, #{$font-family-comment}));
+	padding: var(--comment-padding, #{$comment-padding-mobile});
 	position: relative;
 
 	@include breakpoint( $sm ) {
-		margin: $comment-reply-margin 0;
-		padding: $comment-padding;
+		margin-block: var(--comment-reply-margin, #{$comment-reply-margin});
+		padding: var(--comment-padding, #{$comment-padding});
 	}
 
 	.children & {
@@ -320,7 +321,7 @@ $border-width-comment-form:                  3px !default;
 
 .comment-reply-link {
 	@extend %font-size-minimum;
-	color: $color-comment-reply;
+	color: var(--comment-link-color, var(--bu-link-color, #{$color-comment-reply}));
 }
 
 // Controls styling for the comment author.
@@ -333,7 +334,11 @@ $border-width-comment-form:                  3px !default;
 
 .comment-author {
 	@extend %font-size-5;
-	color: $color-comment-author-name;
+	color: var(--comment-author-color, #{$color-comment-author-name});
+
+	a {
+		color: var(--comment-author-color, #{$color-comment-author-name});
+	}
 }
 
 // Controls styling for the "says" text after comment author.
@@ -345,7 +350,7 @@ $border-width-comment-form:                  3px !default;
 // Since: 2.0.0
 
 .says {
-	color: $color-comment-author-says;
+	color: var(--comment-author-says-color, #{$color-comment-author-says});
 }
 
 // Controls styling for the date and time of comments.
@@ -363,12 +368,16 @@ $border-width-comment-form:                  3px !default;
 .comment-metadata {
 	@extend %font-size-minimum;
 	position: absolute;
-	right: $comment-padding-mobile;
-	top: $comment-padding-mobile;
+	right: var(--comment-padding, #{$comment-padding});
+	top: var(--comment-padding, #{$comment-padding});
 
 	@include breakpoint( $sm ) {
-		right: $comment-padding;
-		top: $comment-padding;
+		right: var(--comment-padding, #{$comment-padding});
+		top: var(--comment-padding, #{$comment-padding});
+	}
+
+	a {
+		color: var(--comment-link-color, var(--bu-link-color));
 	}
 }
 
@@ -386,6 +395,10 @@ $border-width-comment-form:                  3px !default;
 	p:last-child {
 		margin-bottom: 0;
 	}
+
+	a {
+		color: var(--comment-link-color, var(--bu-link-color));
+	}
 }
 
 // Styles the comment form container.
@@ -397,10 +410,9 @@ $border-width-comment-form:                  3px !default;
 // Since: 1.0.0
 
 .comment-respond {
-	@include border-radius( 5px );
-	background: $color-comment-form-bg;
-	border: $border-comment-form;
-	border-width: $border-width-comment-form;
+	background: var(--comment-background, #{$color-comment-form-bg});
+	border: var(--comment-border, var(--bu-border, #{$border-comment-form}));
+	border-width: var(--comment-border-width, #{$border-width-comment-form});
 	margin: $margin-small 0 $margin;
 	padding: $padding;
 	position: relative;
@@ -425,6 +437,10 @@ $border-width-comment-form:                  3px !default;
 			padding-right: $padding-small;
 			width: 25%;
 		}
+	}
+
+	a {
+		color: var(--comment-link-color, var(--bu-link-color));
 	}
 }
 
@@ -471,7 +487,7 @@ $border-width-comment-form:                  3px !default;
 	}
 
 	a {
-		color: inherit;
+		color: var(--comment-link-color, var(--bu-link-color));
 	}
 }
 
@@ -509,7 +525,7 @@ $border-width-comment-form:                  3px !default;
 
 .comment-submit {
 	@include breakpoint( $sm ) {
-		margin-left: 25%;
+		margin-inline-start: 25%;
 	}
 }
 

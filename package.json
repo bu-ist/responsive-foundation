@@ -90,5 +90,6 @@
       "extensions": "js,scss,html",
       "quiet": false
     }
-  }
+  },
+  "dependencies": {}
 }

@@ -37,7 +37,7 @@
 		border: 0;
 		display: block;
 		font-size: 16.5px;
-		margin: $margin-large 0;
+		margin: var(--margin-large, #{$margin-large}) 0;
 		max-width: 500px;
 		padding: 0;
 		position: static;

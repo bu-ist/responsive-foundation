@@ -502,13 +502,13 @@ $_h: $_depth-headings;
 // Since: 1.0.0
 
 %heading-base {
-	color: $color-heading;
-	font-family: $font-family-heading;
+	color: var(--bu-heading-color, #{$color-heading});
+	font-family: var(--bu-heading-font, #{$font-family-heading});
 	margin-bottom: 0.6em;
 	margin-top: 1em;
 
 	small {
-		color: $color-heading-small;
+		color:  var(--bu-heading-color, #{$color-heading-small});
 		font-size: 0.75em;
 		font-weight: normal;
 	}

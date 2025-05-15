@@ -173,11 +173,11 @@ $color-single-meta-border-left:             $color-message-border-left !default;
 %card-styles {
 	@extend %font-size-secondary;
 	@include border-radius( $border-radius-message );
-	background-color: $color-message-bg;
-	border: $border-message;
-	border-left-color: $color-message-border-left;
-	border-width: $border-width-message;
-	padding: $padding-message;
+	background-color: var(--message-background, #{$color-message-bg});
+	border: var(--message-border, #{$border-message});
+	border-left-color: var(--message-border-color, #{$color-message-border-left});
+	border-width: var(--message-border-width, #{$border-width-message});
+	padding: var(--message-padding, #{$padding-message});
 }
 
 // Controls the styling for messages.
@@ -202,12 +202,12 @@ $color-single-meta-border-left:             $color-message-border-left !default;
 .single-meta {
 	@extend %card-styles;
 	@include border-radius( $border-radius-single-meta );
-	background-color: $color-single-meta-bg;
-	border: $border-single-meta;
-	border-left-color: $color-single-meta-border-left;
-	border-width: $border-width-single-meta;
+	background-color: var(--single-meta-background-color, #{$color-single-meta-bg});
+	border: var(--single-meta-border, #{$border-single-meta});
+	border-left-color: var(--single-meta-border-color, #{$color-single-meta-border-left});
+	border-width: var(--single-meta-border-width, #{$border-width-single-meta});
 	margin-bottom: $margin;
-	padding: $padding-single-meta;
+	padding: var(--single-meta-padding, #{$padding-single-meta});
 }
 
 // Handles styling for the title in the metadata card at the bottom of posts.

@@ -198,7 +198,7 @@
 // Since: 2.0.0
 
 %col-margin-parent {
-	margin-left: -$grid-margin-width#{"%"};
+	margin-left: -$grid-margin-width * 1%;
 	margin-right: 0;
 
 	@if ( $enable-css-grid ) {
@@ -353,7 +353,7 @@ $grid-widths-margins: ();
 		}
 
 		%col-#{$breakpoint}-margin-parent {
-			margin-left: -$grid-margin-width#{"%"};
+			margin-left: -$grid-margin-width * 1%;
 
 			@if ( $enable-css-grid ) {
 				@supports ( display: grid ) {

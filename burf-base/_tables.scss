@@ -122,28 +122,28 @@ $table-stripes:                            $color-grayscale-f5 !default;
 
 table {
 	@extend %font-size-secondary;
-	border: $table-border;
+	border: var(--table-border, var(--bu-border, #{$table-border}));
 	border-collapse: collapse;
 	empty-cells: show;
 	line-height: $table-line-height;
-	margin: $table-margin;
+	margin: var(--table-margin, #{$table-margin});
 	overflow: hidden;
 	width: 100%;
 
 	caption {
-		color: $color-table-caption; //
+		color: var(--table-caption-color, #{$color-table-caption});
 		font-style: italic;
-		padding: $table-caption-padding;
+		padding: var(--table-caption-padding, #{$table-caption-padding});
 		text-align: center;
 	}
 
 	td,
 	th {
-		border-left: $table-border; //
+		border-left: var(--table-border, var(--bu-border, #{$table-border}));
 		font-size: inherit;
 		margin: 0;
 		overflow: visible; // to make ths where the title is really long work
-		padding: $table-padding;
+		padding: var(--table-padding, #{$table-padding});
 
 		&:first-child {
 			border-left-width: 0;
@@ -156,7 +156,7 @@ table {
 	}
 
 	th {
-		border-bottom: $table-border;
+		border-bottom: var(--table-border, var(--bu-border, #{$table-border}));
 	}
 
 	td {
@@ -165,7 +165,8 @@ table {
 	}
 
 	thead {
-		position: relative;
+		background: var(--table-head-background, #{$table-head-bg});
+		color: var(--table-head-color, #{$color-table-head});
 		text-align: left;
 		vertical-align: bottom;
 		z-index: 0;
@@ -204,7 +205,7 @@ table {
 .u-odd {
 	// background: $table-stripes;
 	td {
-		
+		background: var(--table-stripes, #{$table-stripes});
 		position: relative;
 		z-index: 0;
 		overflow: hidden;
@@ -244,7 +245,7 @@ table {
 
 .table-bordered {
 	td {
-		border-bottom: $table-border;
+		border-bottom: var(--table-border, var(--bu-border, #{$table-border}));
 	}
 }
 
@@ -266,7 +267,7 @@ table {
 	td,
 	th {
 		border: 0;
-		border-bottom: $table-border;
+		border-bottom: var(--table-border, var(--bu-border, #{$table-border}));
 	}
 }
 
@@ -291,7 +292,7 @@ table.sortable {
 		tr {
 			th {
 				&.header {
-					border: $table-border;
+	border: var(--table-border, var(--bu-border, #{$table-border}));
 				}
 			}
 		}
