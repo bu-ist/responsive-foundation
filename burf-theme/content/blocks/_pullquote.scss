@@ -5,7 +5,7 @@
 
 .wp-block-pullquote {
 	padding-block: var( --pullquote-padding-block, 2em );
-	padding-inline: var( --pullquote-padding-block, var( --bu--content--margin-inline ) );
+	padding-inline: var( --pullquote-padding-block, var( --bu-container-spacing ) );
 
 	:where( blockquote ) {
 		margin: 0;

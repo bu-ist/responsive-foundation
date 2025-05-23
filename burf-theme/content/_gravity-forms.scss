@@ -4,6 +4,6 @@
 
 .gform_legacy_markup_wrapper {
     .content-area > & {
-        max-width: var( --gform-legacy-width-default, var( --bu--content--width-default-clamped ) );
+        max-width: var( --gform-legacy-width-default, var( --bu-container-size--content ) );
     }
 }

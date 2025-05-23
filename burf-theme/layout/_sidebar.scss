@@ -5,8 +5,8 @@
 .sidebar {
 	background-color: var( --sidebar-background-color, #fafafa );
 	grid-area: sidebar;
-	padding-block: var(--bu--content--padding-block);
-	padding-inline: var(--bu--content--padding-inline);
+	padding-block: var( --bu-container-padding-vertical );
+	padding-inline: var( --bu-container-padding-horizontal );
 
 	// max-width: clamp( 20vw, 360px, 33.3333vw);
 

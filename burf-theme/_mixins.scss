@@ -8,7 +8,7 @@
 
 @mixin contentarea-vertical-spacings {
 	%contentarea-elements {
-		margin-block: var( --bu--content--margin-block );
+		margin-block: var( --bu-container-spacing );
 	}
 }
 @mixin contentarea-base-styles {
@@ -20,8 +20,8 @@
 		//background: #e661; //placeholder test color - To be removed before merging
 
 		&.has-background {
-			padding-block: var( --bu--content--padding-block );
-			padding-inline: var( --bu--content--padding-inline );
+			padding-block: var( --bu-container-padding-vertical );
+			padding-inline: var( --bu-container-padding-horizontal );
 
 			> * {
 				&:first-child {
@@ -41,7 +41,7 @@
 	> {
 		* {
 			margin-inline: auto;
-			max-width: var( --bu--content--width-default-clamped );
+			max-width: var( --bu-container-size--content );
 		}
 	}
 }
@@ -51,7 +51,7 @@
 		box-sizing: border-box;
 		clear: both;
 		margin-inline: auto;
-		max-width: var( --bu--content--width-wide-clamped );
+		max-width: var( --bu-container-size--wide );
 	}
 
 	#{map.get( $selectors, 'alignfull' )} {
@@ -64,18 +64,18 @@
 	#{map.get( $selectors, 'alignright' )},
 	#{map.get( $selectors, 'aligncenter' )} {
 		margin-block-start: 0;
-		margin-block-end: var( --bu--content--margin-block );
-		max-width: var( --bu--content--width-nested-float-clamped );
+		margin-block-end: var( --bu-container-spacing );
+		max-width: 50%;
 	}
 
 	#{map.get( $selectors, 'alignleft' )} {
 		float: left;
-		margin-inline-end: var( --bu--content--margin-inline ) !important; // !important needed to toverride margin-left: auto !important set on the block editor
+		margin-inline-end: var( --bu-container-gutter ) !important; // !important needed to toverride margin-left: auto !important set on the block editor
 	}
 
 	#{map.get( $selectors, 'alignright' )} {
 		float: right;
-		margin-inline-start: var( --bu--content--margin-inline ) !important; // !important needed to toverride margin-left: auto !important set on the block editor
+		margin-inline-start: var( --bu-container-gutter ) !important; // !important needed to toverride margin-left: auto !important set on the block editor
 	}
 
 	// Top level content styles
@@ -83,22 +83,24 @@
 	// These styles use a child combinator so as to only target unnested blocks and page elements.
 	> {
 		* {
+
+			--bu-container-min-inline-size--float: 300px;
 			margin-inline: auto;
-			max-width: var( --bu--content--width-default-clamped );
+			max-width: var( --bu-container-size--content );
 		}
 
 		#{map.get( $selectors, 'alignleft' )},
 		#{map.get( $selectors, 'alignright' )},
 		#{map.get( $selectors, 'aligncenter' )} {
-			max-width: var( --bu--content--width-float-clamped );
+			max-width: var( --bu-container-size--float );
 		}
 
 		#{map.get( $selectors, 'alignleft' )} {
-			margin-inline-start: var( --bu--content--margin-offset ) !important; // !important needed to toverride margin-left: auto !important set on the block editor
+			margin-inline-start: var( --bu-container-offset--content ) !important; // !important needed to toverride margin-left: auto !important set on the block editor
 		}
 
 		#{map.get( $selectors, 'alignright' )} {
-			margin-inline-end: var( --bu--content--margin-offset ) !important; // !important needed to toverride margin-left: auto !important set on the block editor
+			margin-inline-end: var( --bu-container-offset--content ) !important; // !important needed to toverride margin-left: auto !important set on the block editor
 		}
 	}
 }

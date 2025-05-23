@@ -4,8 +4,8 @@
 // Preliminary layout styles for the Query Loops Post Template Block block
 
 .wp-block-post-template {
-	column-gap: var( --bu--content--column-gap );
-	row-gap: var( --bu--content--row-gap );
+	column-gap: var( --bu-container-column-gap );
+	row-gap: var( --bu-container-row-gap );
 	
 
 	&.is-flex-container.is-flex-container {		
@@ -23,7 +23,7 @@
 		/* setting */
 		--min-column-size: 20ch;
 		--column-count: 1;
-		--gap: var( --bu--content--column-gap );
+		--gap: var( --bu-container-column-gap );
 		
 		/* calculations */
 		--breakpoint: calc(var(--min-column-size) * var(--column-count) + (var(--gap) * (var(--column-count) - 1)) );
