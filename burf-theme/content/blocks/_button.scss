@@ -10,6 +10,6 @@
     }
 
     .wp-block-button__link {
-        padding: var( --bu--content--button-padding-block ) var( --bu--content--button-padding-inline );
+        padding: var( --wp-block-button-padding-block, 0.5em ) var( --wp-block-button-padding-inline, 1.25em );
     }
 }
