@@ -8,7 +8,9 @@
 
 @mixin contentarea-vertical-spacings {
 	%contentarea-elements {
+		max-width: var( --bu-container-max-inline-size--guttered );
 		margin-block: var( --bu-container-spacing );
+		margin-inline: auto;
 	}
 }
 @mixin contentarea-base-styles {
@@ -22,6 +24,7 @@
 		&.has-background {
 			padding-block: var( --bu-container-padding-vertical );
 			padding-inline: var( --bu-container-padding-horizontal );
+			padding-inline: unset;
 
 			> * {
 				&:first-child {
@@ -70,6 +73,7 @@
 
 	#{map.get( $selectors, 'alignleft' )} {
 		float: left;
+		margin-inline-start: var( --bu-container-gutter );
 		margin-inline-end: var( --bu-container-gutter ) !important; // !important needed to toverride margin-left: auto !important set on the block editor
 	}
 

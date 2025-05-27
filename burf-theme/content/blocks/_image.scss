@@ -5,18 +5,29 @@
 
 //Remove redudant gap caused by defualt vertial-alignment:baseline on the the img element
 :where( .wp-block-image ) {
-    figure > *, 
-    img,
-    > div {
-        vertical-align: middle;
-    }
+	figure > *, 
+	img,
+	> div {
+		vertical-align: middle;
+	}
 }
 
 // These rule help the image behave more like other blocks despite markup diffrences incured on the frontend when floated to the left or right
 :where( .wp-block-image:is( div ) ) {
-    display: inline;
+	display: inline;
 }
 
 .content-area > :where( .wp-block-image:is( div ) ) {
-    display: block;
+	display: block;
+}
+
+// Remove double gutter  on lefrright aligned maimges due to image block wrapper
+.wp-block-image {
+	.alignleft {
+		margin-inline-start: unset;
+	}
+
+	.alignright {
+		margin-inline-end: unset;
+	}
 }
