@@ -1015,12 +1015,12 @@ $color-hub:                        			 #767676;
 	--bu-container-max-inline-size--content: 800px;
 	--bu-container-max-inline-size--wide: 1200px;
 	--bu-container-max-inline-size--full: 100%;
-	--bu-container-max-inline-size--float: calc(var(--bu-container-size--content) * 0.5);
+	--bu-container-max-inline-size--float: calc( var(--bu-container-size--content) * 0.5 );
 
 	--bu-container-size--content: min( var( --bu-container-max-inline-size--content ), var( --bu-container-max-inline-size--guttered ) );
 	--bu-container-size--wide: min( var( --bu-container-max-inline-size--wide ), var( --bu-container-max-inline-size--guttered ) );
 	--bu-container-size--full: var( --bu-container-max-inline-size--full );
-	--bu-container-size--float: clamp( var( --bu-container-min-inline-size--float, 50% ), var( --bu-container-max-inline-size--float ), calc( 100% - ( var( --bu-container-gutter ) * 2 ) ) );
+	--bu-container-size--float: clamp( var( --bu-container-max-inline-size--float ), var( --bu-container-max-inline-size--float ), calc( 100% - ( var( --bu-container-gutter ) * 2 ) ) );
 
 
 	// Offsets - an offset is the distance from the edge of the viewport to the start of the named container size.
