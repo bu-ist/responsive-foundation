@@ -22,9 +22,8 @@
 		//background: #e661; //placeholder test color - To be removed before merging
 
 		&.has-background {
-			padding-block: var( --bu-container-padding-vertical );
-			padding-inline: var( --bu-container-padding-horizontal );
-			padding-inline: unset;
+			padding-block: var( --has-background-padding-block, var( --bu-container-padding-vertical ) );
+			padding-inline: var( --has-background-padding-inline, unset );
 
 			> * {
 				&:first-child {
