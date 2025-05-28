@@ -45,6 +45,20 @@
 	}
 }
 
+@mixin contentarea-base-styles-editor-only {
+	> * {
+		max-width: var(--bu-container-size--content) !important;
+
+		&[ data-align= "wide" ] {
+			max-width: var(--bu-container-size--wide) !important;
+		}
+
+		&[ data-align= "full" ] {
+			max-width: var(--bu-container-size--full) !important;
+		}
+	}
+}
+
 @mixin contentarea-alignment-styles( $selectors: $frontend-selectors ) {
 	#{map.get($selectors, 'alignwide')}  {
 		box-sizing: border-box;
