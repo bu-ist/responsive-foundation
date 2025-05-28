@@ -8,22 +8,19 @@
 
 @mixin contentarea-vertical-spacings {
 	%contentarea-elements {
-		max-width: var( --bu-container-max-inline-size--guttered );
+		max-width: var( --bu-container-max-inline-size--content );
 		margin-block: var( --bu-container-spacing );
 		margin-inline: auto;
 	}
 }
 @mixin contentarea-base-styles {
-	//background: #e661; //placeholder test color - To be removed before merging
 	flex-grow: 1;
 	padding: 0;
 
 	* {
-		//background: #e661; //placeholder test color - To be removed before merging
-
 		&.has-background {
-			padding-block: var( --has-background-padding-block, var( --bu-container-padding-vertical ) );
-			padding-inline: var( --has-background-padding-inline, unset );
+			padding-block: var( --bu-container-padding-vertical );
+			padding-inline: var( --bu-container-padding-horizontal );
 
 			> * {
 				&:first-child {
@@ -54,6 +51,7 @@
 		clear: both;
 		margin-inline: auto;
 		max-width: var( --bu-container-size--wide );
+		max-width: var( --bu-container-max-inline-size--wide );
 	}
 
 	#{map.get( $selectors, 'alignfull' )} {
@@ -72,7 +70,6 @@
 
 	#{map.get( $selectors, 'alignleft' )} {
 		float: left;
-		margin-inline-start: var( --bu-container-gutter );
 		margin-inline-end: var( --bu-container-gutter ) !important; // !important needed to toverride margin-left: auto !important set on the block editor
 	}
 
@@ -90,6 +87,10 @@
 			--bu-container-min-inline-size--float: 300px;
 			margin-inline: auto;
 			max-width: var( --bu-container-size--content );
+		}
+
+		#{map.get($selectors, 'alignwide')}  {
+			max-width: var( --bu-container-size--wide );
 		}
 
 		#{map.get( $selectors, 'alignleft' )},

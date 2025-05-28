@@ -20,14 +20,3 @@
 .content-area > :where( .wp-block-image:is( div ) ) {
 	display: block;
 }
-
-// Remove double gutter  on lefrright aligned maimges due to image block wrapper
-.wp-block-image {
-	.alignleft {
-		margin-inline-start: unset;
-	}
-
-	.alignright {
-		margin-inline-end: unset;
-	}
-}

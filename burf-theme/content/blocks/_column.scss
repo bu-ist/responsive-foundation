@@ -11,6 +11,7 @@
 // A selector map can be passed thru, by default it is set to pass in $frontend-selectors
 
 .wp-block-columns {
+	column-gap: var( --bu-container-column-gap );
 	row-gap: var( --bu-container-row-gap );
 	margin-block: 0;
 }
