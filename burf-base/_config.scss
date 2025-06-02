@@ -989,6 +989,23 @@ $color-hub:                        			 #767676;
 // Content
 // -----------------------------------------------------------------
 
+// Text Color
+//
+// Controls the default color used for text across the site.
+// Affects body text and anything else that isn't
+// specifically overridden.
+//
+// Styleguide Typography.Variables.$color-base
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
+
+$color-base:                                $color-grayscale-5 !default;
+
+
 // CSS Variables (custom properties)
 // -----------------------------------------------------------------
 // These CSS variables are used throught out the content area to assure all block start of with consistent sizes and spacings.
