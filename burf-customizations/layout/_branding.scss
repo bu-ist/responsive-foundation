@@ -168,17 +168,7 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 // Since: 1.4.0
 
 %_vertical-center-child {
-	@include vertical-center-child-ie8;
-}
-
-// A placeholder for vertical centering in the branding partial.
-//
-// Access: Private
-//
-// Since: 1.4.0
-
-%_vertical-center {
-	@include vertical-center-ie9;
+	@include center-children;
 }
 
 // A placeholder for ensuring background images print.
@@ -227,7 +217,7 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 // Since: 1.0.0
 
 .brand-container {
-	@extend %_vertical-center;
+	@extend %_vertical-center-child;
 	color: var(--brand-color, #{$color-brand});
 	display: block;
 	float: left;
@@ -346,7 +336,7 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 
 .brand-site-description {
 	@extend %font-size-secondary;
-	@extend %_vertical-center;
+	//@extend %_vertical-center;
 	display: none;
 
 	@include breakpoint( $md ) {
