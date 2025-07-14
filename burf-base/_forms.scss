@@ -745,10 +745,9 @@ $border-radius-button:                     2px !default;
 	}
 
 	&:active {
-		@include box-shadow(
+		box-shadow:
 			0 0 0 1px rgba( $color-grayscale-0, 0.15 ) inset,
-			0 0 6px rgba( $color-grayscale-0, 0.20 ) inset
-	    );
+			0 0 6px rgba( $color-grayscale-0, 0.20 ) inset;
 	}
 }
 
@@ -779,7 +778,7 @@ $border-radius-button:                     2px !default;
 	&-disabled,
 	&-disabled:hover,
 	&-disabled:active {
-		@include box-shadow( none );
+		box-shadow: none;
 		background: var(--button-disabled-background, #{$color-grayscale-d});
 		color: var(--button-disabled-text-color, #{$color-grayscale-7});
 		cursor: not-allowed;
@@ -921,7 +920,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 // Since: 1.0.0
 
 %_form-input-focus-shadow {
-	@include box-shadow( $form-input-focus-shadow );
+	box-shadow: $form-input-focus-shadow;
 }
 
 // Styles user inputs in forms.

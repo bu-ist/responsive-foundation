@@ -273,7 +273,7 @@ $margin-gallery: 													10px !default;
 
 .lg-thumb-item {
 	.lg-outer .lg-thumb-outer & {
-		@include border-radius( 0 );
+		border-radius: 0;
 		border: 0;
 		opacity: 0.45;
 
