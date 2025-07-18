@@ -577,6 +577,7 @@ $search-field-height:                          40px !default;
 .search-submit {
 	@extend %button-styles-primary;
 	border-radius: $border-radius-quicksearch-button;
+	//@include border-radius( $border-radius-quicksearch-button );
 	background: var(--search-button-background, var(--bu-button-primary-background-color, #0074E0));
 	color: var(--search-button-color, var(--bu-button-primary-text-color, #fff));
 	float: right;
@@ -778,6 +779,7 @@ $nav-toggle-border: 4px !default;
 		@include breakpoint( $nav-desktop ) {
 			border: 0;
 			display: inline-block;
+		}
 
 		&:focus {
 			outline-color: invert( $color-primary-nav-bg );
@@ -1023,11 +1025,11 @@ $left-nav-desktop:                    $nav-desktop !default;
 	right: 0;
 
 	@include breakpoint( $left-nav-desktop ) {
-		@include vertical-center-ie9;
+		//@include center-children( center, center, wrap, space-between );
 		color: var(--nav-toggle-alt-color, #{$color-nav-toggle-alt});
 		display: block;
 		position: relative;
-		right: $padding-small;
+		//right: $padding-small;
 	}
 
 	&:active,
@@ -1193,6 +1195,7 @@ $no-nav-desktop:                    $nav-desktop !default;
 	}
 
 	.brand {
+		@include center-children( center, center, wrap, space-between );
 		padding-right: 60px;
 
 		.search-toggle {
@@ -1202,7 +1205,6 @@ $no-nav-desktop:                    $nav-desktop !default;
 			margin: 0 -60px 0 0;
 
 			@include breakpoint( $no-nav-desktop ) {
-				@include vertical-center-ie9;
 				display: block;
 				right: 10px;
 			}
@@ -1321,8 +1323,8 @@ $mega-nav-desktop-layout:                      $md !default;
 
 .l-mega-nav {
 	.brand {
-		display: flex;
-		align-items: center;
+		//display: flex;
+		//align-items: center;
 	}
 
 	.brand-container {
