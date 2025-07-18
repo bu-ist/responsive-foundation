@@ -837,7 +837,7 @@
 //
 // Since: 1.0.0
 
-@mixin breakpoint( $point, $skip-mqs-for-ie: true ) {
+@mixin breakpoint( $point ) {
 	// Error handling for anyone upgrading to 2.0
 	@if ( type-of( $point ) == string ) {
 		@error 'The breakpoint shortcut "#{$point}" is no longer supported as of Responsive 2.0. \a Use the direct breakpoint variable ($#{$point}) instead. \a If want to use max-width, write a plain @media query.';
@@ -847,11 +847,7 @@
 			@content;
 		}
 	} @else {
-		@if ( $point >= $lte-ie8-target-width and $skip-mqs-for-ie ) {
-			// Do not output very large desktop styles for IE8
-		} @else {
 			@content;
-		}
 	}
 }
 

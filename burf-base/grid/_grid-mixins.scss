@@ -222,7 +222,7 @@
 	}
 
 	@if ( $breakpoint != "" ) {
-		@include breakpoint( $breakpoint, false ) {
+		@include breakpoint( $breakpoint ) {
 			@include grid-styles( $option, $col, $use-css-grid, $force );
 		}
 	} @else {
