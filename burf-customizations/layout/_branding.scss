@@ -191,6 +191,7 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 // Since: 1.0.0
 
 .brand {
+	@include center-children( center, center, nowrap, space-between );
 	font-family: $font-family-brand;
 	font-size: 18px;
 	height: var(--brand-height, #{$height-brand});
@@ -217,7 +218,6 @@ $image-bumclogo-retina:  "https://www.bu.edu/cdn/images/logos/bumclogo96x40-reti
 // Since: 1.0.0
 
 .brand-container {
-	@extend %_vertical-center-child;
 	color: var(--brand-color, #{$color-brand});
 	display: block;
 	float: left;
