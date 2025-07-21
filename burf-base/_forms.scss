@@ -727,6 +727,7 @@ $border-radius-button:                     2px !default;
 	display: inline-block;
 	font-family: var(--bu-button-font-family, #{$font-family-button});
 	font-size: var(--bu-button-font-size, #{$font-size-button});
+	font-weight: var(--bu-button-font-weight, 700);
 	line-height: normal;
 	margin: var(--bu-button-margin, #{$margin-button});
 	padding: var(--bu-button-padding, #{$padding-button});
