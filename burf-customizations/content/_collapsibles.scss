@@ -49,7 +49,7 @@ $border-collapsible:               $border !default;
 // Since: 1.0.0
 
 .bu_collapsible_container {
-	border: var(--collapsible-border, var(--bu-border, #{$border-collapsible}));
+	// border: var(--collapsible-border, var(--bu-border, #{$border-collapsible})); // removing since this is probably too opinionated
 	padding: var(--collapsible-padding, 0.5em 0);
 	position: relative;
 }
