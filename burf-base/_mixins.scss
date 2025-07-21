@@ -785,17 +785,12 @@
 
 // Breakpoints Mixin
 //
-// A safe way to including responsive styles on old browers which
-// do not fully support media queries, such as IE8.
+// A safe way to including responsive styles.
 //
 // All media queries using this mixin are mobile-first (`min-width`).
 // This mixin will take all reponsive styles up to a certain point and print
-// them in the order they're written in the ie.css stylesheet, up until
-// the default screen width you set to support in IE8 and below.
+// them in the order they're written in the ie.css stylesheet.
 //
-// In most cases, you won't have to change this from `$lg`, but you
-// can always check Google Analytics to see what the most used screen
-// size is for your site's older IE users if you like, and set it to that.
 //
 // This mixin no longer supports custom media queries like `max-width` as of 2.0,
 // because those styles do not generally need to be included for old IE
