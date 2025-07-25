@@ -347,7 +347,7 @@ $grid-widths-margins: ();
 		}
 	}
 
-	@include breakpoint( $value, false ) {
+	@include breakpoint( $value ) {
 		%col-#{$breakpoint}-margin-base {
 			@include col-margin-base;
 		}

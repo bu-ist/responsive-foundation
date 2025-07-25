@@ -87,7 +87,7 @@ $color-profile-title:                      $color-base !default;
 // Since: 2.0.0
 
 .profile-photo {
-	@include border-radius( $border-radius-profile-figure );
+	border-radius: $border-radius-profile-figure;
 	overflow: hidden;
 
 	img {
