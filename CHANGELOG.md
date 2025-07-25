@@ -11,7 +11,7 @@
 - Update font-awesome and normalize-scss dev dependecies
 - Update math functions for Dart-Sass compatibility
 
-## 5.0.0-alpha.8
+## 6.0.0-alpha.8
 - Removes IE-specific styles/mixins in Foundation and then uses the new more modern mixin instead.
 - Misc. fixes to Foundation styles
 
