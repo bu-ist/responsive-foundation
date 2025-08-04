@@ -11,15 +11,18 @@
 - Update font-awesome and normalize-scss dev dependecies
 - Update math functions for Dart-Sass compatibility
 
+## 6.0.0-alpha.9
+- Update version of BU Base to work in block editor styles.
+
 ## 6.0.0-alpha.8
 - Removes IE-specific styles/mixins in Foundation and then uses the new more modern mixin instead.
 - Misc. fixes to Foundation styles
 
-## 5.0.0-alpha.7
+## 6.0.0-alpha.7
 * Officially publishes to npm under the @bostonuniversity account!
 * Removes support for the tripadvisor icon in FontAwesome
 
-## 5.0.0-alpha
+## 6.0.0-alpha
 
 * Fixes #235
 * Removes BU Default Icons
