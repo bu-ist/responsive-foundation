@@ -29,7 +29,6 @@ $burf-extras:                                       true !default;
 // order they are declared so that desktop styles will always
 // override mobile styles, regardless of screen size.
 // This is mostly useful for browsers which do not support media queries.
-// By default, an older IE stylesheet is generated using this variable.
 //
 // Styleguide Configuration.Media Queries.Enable media queries
 //
@@ -113,22 +112,6 @@ $lg:                                       1200px !default;
 // Since: 2.0.0
 
 $xl:                                       1500px !default;
-
-// IE8 Target Width
-//
-// The window width to target for IE8 and below.
-// Because older versions of IE don't support media queries,
-// we use this width to target the most likely browser width
-// an older IE user will be viewing the site in.
-//
-// Styleguide Configuration.Media Queries.g: IE8 Target Width
-//
-// Access: Public
-//
-// Since: 2.0.0
-
-$lte-ie8-target-width:                     $lg !default;
-
 
 /// @group 08-layout
 /// @access public
@@ -989,47 +972,22 @@ $color-hub:                        			 #767676;
 // Content
 // -----------------------------------------------------------------
 
-// CSS Variables (custom properties)
-// -----------------------------------------------------------------
-// These CSS variables are used throught out the content area to assure all block start of with consistent sizes and spacings.
-// Base values are defined and them are plugged into clamp functions that scale based on browser widths
-// --bu--content--width-default-clamped and --bu--content--width-wide-clamped are also used in a themese settings.mjs (theme.json).
+// Text Color
+//
+// Controls the default color used for text across the site.
+// Affects body text and anything else that isn't
+// specifically overridden.
+//
+// Styleguide Typography.Variables.$color-base
+//
+// Access: Public
+//
+// Since: 1.0.0
+//
+// Accessibility: AA
 
-:root {
-	//
+$color-base:                                $color-grayscale-5 !default;
 
-	// Primitives 
-	--size-fluid-spacing: clamp(1rem, 1.7vw + 0.47rem, 2rem); // 1rem - 2rem
-	--size-fluid-spacing-lg: clamp(2rem, 2.612vw + 1.388rem, 4rem); // 2rem - 4rem
-
-	// Spacing.
-	--bu-container-spacing: var(--size-fluid-spacing); // Spacing is the block spacing between elements.
-	--bu-container-gutter: var(--size-fluid-spacing); // Gutter is the inline space between the viewport and the container.
-	--bu-container-column-gap: var(--size-fluid-spacing); // Inline spacing between internal elements of a parent element.
-	--bu-container-row-gap: var(--size-fluid-spacing-lg); // Block spacing between internal elements of a parent element.
-	--bu-container-padding-vertical: var(--size-fluid-spacing); 
-	--bu-container-padding-horizontal: var(--size-fluid-spacing);
-
-	// Sizing.
-	--bu-container-max-inline-size--guttered: calc( 100% - ( var( --bu-container-gutter ) * 2 ) );
-	--bu-container-max-inline-size--content: 800px;
-	--bu-container-max-inline-size--wide: 1200px;
-	--bu-container-max-inline-size--full: 100%;
-	--bu-container-max-inline-size--float: calc( var(--bu-container-size--content) * 0.5 );
-
-	--bu-container-size--content: min( var( --bu-container-max-inline-size--content ), var( --bu-container-max-inline-size--guttered ) );
-	--bu-container-size--wide: min( var( --bu-container-max-inline-size--wide ), var( --bu-container-max-inline-size--guttered ) );
-	--bu-container-size--full: var( --bu-container-max-inline-size--full );
-	--bu-container-size--float: clamp( var( --bu-container-max-inline-size--float ), var( --bu-container-max-inline-size--float ), calc( 100% - ( var( --bu-container-gutter ) * 2 ) ) );
-
-
-	// Offsets - an offset is the distance from the edge of the viewport to the start of the named container size.
-	--bu-container-offset--wide:  min( 50% - ( var( --bu-container-size--wide ) * 0.5 ), 100% );
-	--bu-container-offset--content:  min( 50% - ( var( --bu-container-size--content ) * 0.5 ), 100% );
-
-	// Pulls - a pull is the distance from the edge of the content container to the start of the named container size.
-	--bu-container-pull--wide: calc((var(--bu-container-size--wide) - var(--bu-container-size--content)) * 0.5);
-}
 
 // Selector maps
 // -----------------------------------------------------------------

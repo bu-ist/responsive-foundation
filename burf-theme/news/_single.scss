@@ -172,7 +172,7 @@ $color-single-meta-border-left:             $color-message-border-left !default;
 
 %card-styles {
 	@extend %font-size-secondary;
-	@include border-radius( $border-radius-message );
+	border-radius: $border-radius-message;
 	background-color: var(--message-background, #{$color-message-bg});
 	border: var(--message-border, #{$border-message});
 	border-left-color: var(--message-border-color, #{$color-message-border-left});
@@ -201,7 +201,7 @@ $color-single-meta-border-left:             $color-message-border-left !default;
 
 .single-meta {
 	@extend %card-styles;
-	@include border-radius( $border-radius-single-meta );
+	border-radius: $border-radius-single-meta;
 	background-color: var(--single-meta-background-color, #{$color-single-meta-bg});
 	border: var(--single-meta-border, #{$border-single-meta});
 	border-left-color: var(--single-meta-border-color, #{$color-single-meta-border-left});

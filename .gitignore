@@ -10,3 +10,4 @@ node_modules
 .eslintrc
 .scss-lint.yml
 markdown.rb
+/.vscode/sftp.json
