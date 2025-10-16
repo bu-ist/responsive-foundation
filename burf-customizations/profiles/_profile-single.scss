@@ -106,7 +106,7 @@ $color-profile-info-item:					$color-grayscale-5 !default;
 .label {
 	@extend %font-size-minimum;
 	display: block;
-	font-family: var(--bu-label-font, #{$font-family-sans-serif});
+	font-family: var(--profile-label-font, var(--bu-label-font, #{$font-family-sans-serif}));
 	font-weight: 700;
 	text-transform: uppercase;
 }

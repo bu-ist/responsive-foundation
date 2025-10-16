@@ -55,7 +55,8 @@ $border-profiles:                          $border !default;
 	border-bottom: var(--profile-border, var(--bu-border, #{$border-profiles}));
 	margin-bottom: 0;
 	min-height: 100px;
-	padding: $padding ( $profile-photo-default-size + $margin-small ) $padding 0;
+	padding: $padding calc( var(--profile-default-photo-size, var(--bu-thumbnail-sm, #{$profile-photo-default-size})) + #{$margin-small}) $padding 0;
+
 }
 
 // Styles a default profile photo.
@@ -67,9 +68,9 @@ $border-profiles:                          $border !default;
 // Since: 2.0.0
 
 .profile-photo-default {
-	height: var(--profile-photo-default-size, #{$profile-photo-default-size});
+	height: var(--profile-default-photo-size, var(--bu-thumbnail-sm, #{$profile-photo-default-size}));
 	overflow: hidden;
 	position: absolute;
 	right: 0;
-	width: var(--profile-photo-default-size, #{$profile-photo-default-size});
+	width: var(--profile-default-photo-size, var(--bu-thumbnail-sm, #{$profile-photo-default-size}));
 }

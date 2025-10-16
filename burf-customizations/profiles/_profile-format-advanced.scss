@@ -115,9 +115,9 @@ $_profile-adv-cols-md: math.div( $grid-number-columns, $profiles-advanced-cols-m
 // Since: 2.0.0
 
 .profile-photo-advanced {
-	height: 150px;
+	height: var(--profile-advanced-photo-size, var(--bu-thumbnail-lg, 150px));
 	margin: 0 auto var(--margin-small, var(--bu-spacing-sm, #{$margin-small}));
 	overflow: hidden;
-	width: 150px;
+	width: var(--profile-advanced-photo-size, var(--bu-thumbnail-lg, 150px));
 }
 
