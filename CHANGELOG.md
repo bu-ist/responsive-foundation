@@ -11,6 +11,11 @@
 - Update font-awesome and normalize-scss dev dependecies
 - Update math functions for Dart-Sass compatibility
 
+## 6.0.0-alpha.10
+- Separate button styles out into its own partial.
+- Add profile specific variable.
+- Update variables to use --bu-thumbnail size.
+
 ## 6.0.0-alpha.9
 - Update version of BU Base to work in block editor styles.
 
