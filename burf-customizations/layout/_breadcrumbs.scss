@@ -91,7 +91,7 @@
 		margin: var( --nav-crumb-margin, 0.5  );
 		max-width: var( --nav-crumb-char-count, 15ch );
 		overflow: hidden;
-		padding: var( --nav-crumb-padding, 0.75em 0 );
+		padding: var( --nav-crumb-padding, 0.75em ) 0;
 		text-decoration: none;
 		text-overflow: ellipsis;
 		vertical-align: middle;
@@ -120,7 +120,7 @@
 			font-variant: normal;
 			font-weight: 900;
 			line-height: 1;
-			padding: var( --nav-crumb-padding, 0.75em 0 );
+			padding: var( --nav-crumb-padding, 0.75em ) 0;
 			text-decoration: none;
 			text-rendering: optimizeLegibility;
 			text-transform: none;
@@ -174,7 +174,7 @@
 			font-weight: 900;
 			line-height: 1;
 			position: absolute;
-			right: var(--nav-crumb-padding, 0.75em);
+			right: var(--nav-crumb-padding, 0.75em );
 			top: 50%;
 			text-decoration: none;
 			text-rendering: optimizeLegibility;
@@ -223,7 +223,7 @@
 		border-inline-start: var( --nav-crumbs-border, var( --bu-base-border, 1px solid #ddd ) );
 		list-style: none;
 		margin: 0;
-		padding: var(--nav-crumb-padding, 0.75em);
+		padding: var(--nav-crumb-padding, 0.75em );
 	}
 
 	li {
