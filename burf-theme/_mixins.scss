@@ -9,8 +9,10 @@
 @mixin contentarea-vertical-spacings {
 	%contentarea-elements {
 		max-width: var( --bu-container-max-inline-size--content );
-		margin-block: var( --bu-container-spacing );
 		margin-inline: auto;
+	}
+	* + %contentarea-elements {
+		margin-block: var( --bu-container-spacing ) 0;
 	}
 }
 @mixin contentarea-base-styles {
@@ -57,6 +59,11 @@
 			max-width: var(--bu-container-size--full) !important;
 		}
 	}
+
+	// .block-list-appender,
+	// .block-editor-inserter {
+	// 	margin-block: 0;
+	// }
 }
 
 @mixin contentarea-alignment-styles( $selectors: $frontend-selectors ) {

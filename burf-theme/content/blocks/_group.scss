@@ -1,0 +1,40 @@
+// =================================================================
+// Audio Block Settings
+// =================================================================
+
+.wp-block-group {
+	&:where(&.has-background) {
+		* + & {
+			margin-block: var( --bu-container-spacing ) 0;
+		}
+		
+	}
+
+	&:where(
+		:not( 
+			[class^="wp-container-"]
+		)
+	) {
+		> * {
+			max-width: none;
+		}
+	}
+	
+}
+			
+.wp-block-group {
+	&[class~="wp-container-"] {
+		> * {
+			max-width: none;
+		}
+	}
+}
+
+// block-editor-block-list__block 
+// wp-container-4 
+// has-theme-color-black-color 
+// has-theme-color-light-background-color 
+// has-text-color 
+// has-background 
+// wp-block-group 
+// block-editor-block-list__layout
