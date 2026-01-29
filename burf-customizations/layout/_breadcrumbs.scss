@@ -31,7 +31,7 @@
 		font-size: var( --nav-crumb-font-size, 1rem );
 		line-height: var( --nav-crumb-height, 1em );
 		margin: 0;
-		padding: var( --nav-crumb-padding, 0.75em );
+		padding: var( --nav-crumb-button-padding, 0.75em 0.75em );
 
 		&:hover {
 			background: var( --nav-crumbs-color-buttons-background-hover, var( --nav-crumbs-color-buttons-background, var( --bu-base-button-bg-color, #eee ) ) );
@@ -39,81 +39,106 @@
 	}
 
 
-	// Styles for when breadcrumb dropdown menu is open
-	&[ data-open="true" ] {
+	&[ data-expandable="false" ] {
+		.nav-crumb-expander-wrapper {
+			display: none;
+		}	
+	}
 
-		.nav-crumbs-menu-wrapper {
-			min-width: clamp( 0px, 300px, 90vw );
+	// Styles for when breadcrumbs are expanded
+	&[ data-crumbs-expanded="true" ] {
+		display: block;
+		
+		.nav-crumb-expander-wrapper {
+			display: none;
 		}
 
-		.nav-crumbs-current {
+		.nav-crumb-list {
+			display: inline;
+			height: auto;
+
+			// &::before {
+			// 	display: none;
+			// }
+
+			&::before {
+				display: none;
+			}
+		}
+
+		.nav-crumb {
+			a {
+				max-width: none;
+			}
+		}
+	}
+
+
+	// Styles for when breadcrumb dropdown menu is open
+	&[ data-menu-open="true" ] {
+
+		.nav-crumb-menu-wrapper {
+			min-width: clamp( 0px, var( --nav-crumb-char-count-current, 27ch ), 90vw );
+		}
+
+		.nav-crumb-current {
 			border-radius: var( --nav-crumbs-color-buttons-radius-d, var( --bu-base-button-border-radius, 4px ) var( --bu-base-button-border-radius, 4px ) 0 0 );
-			max-width: 300px;
+			max-width: var( --nav-crumb-char-count-current, 27ch );
 
 			&::after {
 				content: "\f106";
 			}
 		}
 		
-		.nav-crumbs-menu {
+		.nav-crumb-menu {
 			border-radius: var( --bu-base-button-border-radius-menu-open, 0 0 var( --bu-base-button-border-radius, 4px ) var( --bu-base-button-border-radius, 4px ));
-		}
-
-		// Styles for when breadcrumb dropdown menu is open while breadcrumbs are not expanded
-		&[ data-expanded="false" ] {
-			position: relative;
-
-			.nav-crumbs-menu-wrapper {
-				position: absolute;
-				right: var( --nav-crumbs-padding-inline,  0.75em );
-			}
-
-			@container content-container ( min-width: 500px ) {
-				position: static;
-
-				.nav-crumbs-menu-wrapper {
-					position: relative;
-					right: auto;
-				} 
-			}
-		}
-		
+		}		
 	}
 }
 
 .nav-crumb-list {
-	display: inline-block;
 	display: inline-flex;
 	flex-wrap: wrap;
 	height: calc( var( --nav-crumb-height, 1em ) + (var( --nav-crumb-padding, 0.75em ) * 2 ) );
-	justify-content: space-around;
 	list-style: none;
 	margin: 0;
+	max-width: var( --nav-crumblist-max-width );
 	overflow: hidden;
 	padding: 0;
 	vertical-align: middle;
+
+	// &:has(*:nth-child(3)) {
+	// 	--nav-crumb-max-width: 33%;
+	// }
+
+	&::before {
+		content: '';
+		display: inline;
+		height: 100%;
+	}
 }
 	
 .nav-crumb,
-.nav-crumbs-expander-wrapper {
+.nav-crumb-expander-wrapper {
 
 	&::after {
 		content:'/';
 		display: inline-block;
-		margin-inline: var( --nav-crumb-padding, 0.75em );
+		padding: var( --nav-crumb-spacer-padding, 0.75em 0.75em );
 	}
 }
 	
 .nav-crumb {
-	display: inline-block;
+	display: inline-flex;
+	// max-width: var( --nav-crumb-max-width );
 
 	a {
 		color:  var( --nav-crumb-color-text, var( --bu-base-link-color, #0f69d7 ) );
 		display: inline-block;
 		margin: var( --nav-crumb-margin, 0.5  );
-		max-width: var( --nav-crumb-char-count, 15ch );
+		max-width: var( --nav-crumb-max-width );
 		overflow: hidden;
-		padding: var( --nav-crumb-padding, 0.75em );
+		padding: var( --nav-crumb-padding, 0.75em ) 0;
 		text-decoration: none;
 		text-overflow: ellipsis;
 		vertical-align: middle;
@@ -142,7 +167,7 @@
 			font-variant: normal;
 			font-weight: 900;
 			line-height: 1;
-			padding: var( --nav-crumb-padding, 0.75em );
+			padding: var( --nav-crumb-padding, 0.75em ) 0;
 			text-decoration: none;
 			text-rendering: optimizeLegibility;
 			text-transform: none;
@@ -153,64 +178,66 @@
 	
 }
 
-.nav-crumbs-expander-wrapper,
-.nav-crumbs-menu-wrapper {
+.nav-crumb-expander-wrapper,
+.nav-crumb-menu-wrapper {
 	flex-shrink: 0;
 }
 
-.nav-crumbs-current,
-.nav-crumbs-menu {
-	padding: var( --nav-crumb-padding, 0.75em );
+.nav-crumb-menu {
+	padding: var( --nav-crumb-menu-padding, 0.75em );
 }
 
-.nav-crumbs-expander-wrapper {
-	&:is( :not( .visible) ) {
-		display: none;
-	}
-}
 
-.nav-crumbs-current {
-	display: block;
-	max-width: var( --nav-crumb-char-count-current, 22ch );
+.nav-crumb-current {
+	display: inline-block;
+	max-width: var( --nav-crumb-char-count-current, 27ch );
 	overflow: hidden;
-	padding-right: calc( var( --nav-crumb-padding, 0.75em ) * 2 + 1em);
 	text-align: left;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	width: 100%;
-	
-	&::after {
-		content: "\f107";
-		display: block;
-		font-family: "Font Awesome 5 Free";
-		-moz-osx-font-smoothing: grayscale;
-		-webkit-font-smoothing: antialiased;
-		float: right;
-		font-style: normal;
-		font-variant: normal;
-		font-weight: 900;
-		line-height: 1;
-		position: absolute;
-		right: var(--nav-crumb-padding, 0.75em);
-		top: 50%;
-		text-decoration: none;
-		text-rendering: optimizeLegibility;
-		text-transform: none;
-		translate: 0 -50%;
-		white-space: nowrap;
+
+	&:is( span ) {
+		padding: var( --nav-crumb-padding, 0.75em ) 0;
 	}
+
+	&:is( button ) {
+		padding-right: calc( var( --nav-crumb-padding, 0.75em ) * 2 + 1em);
+
+		&::after {
+			content: "\f107";
+			display: block;
+			font-family: "Font Awesome 5 Free";
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			float: right;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: 900;
+			line-height: 1;
+			position: absolute;
+			right: var(--nav-crumb-padding, 0.75em );
+			top: 50%;
+			text-decoration: none;
+			text-rendering: optimizeLegibility;
+			text-transform: none;
+			translate: 0 -50%;
+			white-space: nowrap;
+		}
+	}
+	
 }
 
-.nav-crumbs-menu-wrapper {
+.nav-crumb-menu-wrapper {
 	display: inline-block;
 	min-width: 0;
 	position: relative;
 	transition: min-width 250ms;
 	
-	&:has( .nav-crumbs-menu[open] ) {
-		min-width: clamp( 0px, 300px, 90vw );
+	&:has( .nav-crumb-menu[open] ) {
+		min-width: clamp( 0px, var( --nav-crumb-char-count-current, 27ch ), 90vw );
 		
-		.nav-crumbs-current {
+		.nav-crumb-current {
 			border-radius: var( --nav-crumbs-color-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) var( --nav-crumbs-color-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) 0 0;
 
 			&::after {
@@ -218,17 +245,16 @@
 			}
 		}
 		
-		.nav-crumbs-menu {
+		.nav-crumb-menu {
 			border-radius: 0 0 var( --nav-crumbs-color-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) var( --nav-crumbs-color-buttons-radius, var( --bu-base-button-border-radius, 4px ) );
 		}
 	}
 }
 
-.nav-crumbs-menu {
+.nav-crumb-menu {
 	background:  var( --nav-crumbs-color-menu-background, var( --bu-base-button-bg-color, #eee ) );
 	border: 0;
 	box-sizing: border-box;
-	// display: none;
 	padding: var( --nav-crumb-padding, 0.75em );
 	position: absolute;
 	width: 100%;
@@ -239,7 +265,7 @@
 		border-inline-start: var( --nav-crumbs-border, var( --bu-base-border, 1px solid #ddd ) );
 		list-style: none;
 		margin: 0;
-		padding: var(--nav-crumb-padding, 0.75em);
+		padding: var(--nav-crumb-padding, 0.75em );
 	}
 
 	li {
@@ -259,23 +285,6 @@
 
 		&:hover {
 			text-decoration: underline;
-		}
-	}
-}
-
-
-// Styles for when breadcrumbs are expanded
-.nav-crumbs-expanded {
-	display: block;
-
-	.nav-crumb-list {
-		display: inline;
-		height: auto;
-	}
-
-	.nav-crumb {
-		a {
-			max-width: none;
 		}
 	}
 }
