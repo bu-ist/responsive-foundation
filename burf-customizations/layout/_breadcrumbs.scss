@@ -78,12 +78,12 @@
 	&[ data-menu-open="true" ] {
 
 		.nav-crumb-menu-wrapper {
-			min-width: clamp( 0px, 300px, 90vw );
+			min-width: clamp( 0px, var( --nav-crumb-char-count-current, 27ch ), 90vw );
 		}
 
 		.nav-crumb-current {
 			border-radius: var( --nav-crumbs-color-buttons-radius-d, var( --bu-base-button-border-radius, 4px ) var( --bu-base-button-border-radius, 4px ) 0 0 );
-			max-width: 300px;
+			max-width: var( --nav-crumb-char-count-current, 27ch );
 
 			&::after {
 				content: "\f106";
@@ -190,7 +190,7 @@
 
 .nav-crumb-current {
 	display: inline-block;
-	max-width: var( --nav-crumb-char-count-current, 22ch );
+	max-width: var( --nav-crumb-char-count-current, 27ch );
 	overflow: hidden;
 	text-align: left;
 	text-overflow: ellipsis;
@@ -235,7 +235,7 @@
 	transition: min-width 250ms;
 	
 	&:has( .nav-crumb-menu[open] ) {
-		min-width: clamp( 0px, 300px, 90vw );
+		min-width: clamp( 0px, var( --nav-crumb-char-count-current, 27ch ), 90vw );
 		
 		.nav-crumb-current {
 			border-radius: var( --nav-crumbs-color-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) var( --nav-crumbs-color-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) 0 0;
