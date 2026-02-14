@@ -22,11 +22,10 @@
 		vertical-align: middle;
 	}
 	
-	button {
+	.nav-crumb-button {
 		background: var( --nav-crumbs-color-buttons-background, var( --bu-base-button-bg-color, #eee ) );
 		border: 0;
 		border-radius: var( --nav-crumbs-color-buttons-radius, var( --bu-base-button-border-radius, 4px ) );
-		cursor: pointer;
 		font-family: var( --nav-crumb-font-family );
 		font-size: var( --nav-crumb-font-size, 1rem );
 		line-height: var( --nav-crumb-height, 1em );
@@ -75,7 +74,7 @@
 
 
 	// Styles for when breadcrumb dropdown menu is open
-	&[ data-menu-open="true" ] {
+	&:has( .nav-crumb-menu[open] ) {
 
 		.nav-crumb-menu-wrapper {
 			min-width: clamp( 0px, var( --nav-crumb-char-count-current, 27ch ), 90vw );
@@ -197,11 +196,11 @@
 	white-space: nowrap;
 	width: 100%;
 
-	&:is( span ) {
+	&:not( :has( button ) ) {
 		padding: var( --nav-crumb-padding, 0.75em ) 0;
 	}
 
-	&:is( button ) {
+	&:has( button ) {
 		padding-right: calc( var( --nav-crumb-padding, 0.75em ) * 2 + 1em);
 
 		&::after {
@@ -228,6 +227,23 @@
 	
 }
 
+.nav-crumb-menu-open,
+.nav-crumb-menu-close {
+	display: none;
+	bottom: 0;
+	font-size: 0;
+	left: 0;
+	margin: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	opacity: 0;
+}
+
+.nav-crumb-menu-open {
+	display: block;
+}
+
 .nav-crumb-menu-wrapper {
 	display: inline-block;
 	min-width: 0;
@@ -243,6 +259,14 @@
 			&::after {
 				content: "\f106";
 			}
+		}
+
+		.nav-crumb-menu-open {
+			display: none;
+		}
+
+		.nav-crumb-menu-close {
+			display: block;
 		}
 		
 		.nav-crumb-menu {
