@@ -147,7 +147,7 @@ $number-widgets-footbar: 						 3 !default;
 	@extend %clearfix;
 	background: var(--footbar-background, #{$color-footbar-bg});
 	border-top: var(--footbar-border, var(--bu-border, #{$border-footbar}));
-	padding-bottom: var(--footbar-padding-bottom, #{$footbar-padding-bottom});
+	padding-block: var( --bu-spacing );
 	width: 100%;
 
 	a {
@@ -176,11 +176,9 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 // Since: 1.0.0
 
 :where( .footbar-container ) {
-	// @extend %container-styles;
 	background: var( --footbar-container-background, #{ $color-footbar-container-bg } );
 	display: grid;
 	gap: var( --bu-spacing );
-	margin-block: var( --bu-spacing );
 	margin-inline: auto;
 	max-width: var( --bu-container-size--wide );
 
@@ -190,11 +188,6 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 
 	@include breakpoint( $md ) {
 		grid-template-columns: repeat( var( --footbar-column-count-md, 3 ), 1fr );
-	}
-
-	:where( .widget ) {
-		// @extend %col-md-margin-#{$_footbar-widget-width};
-		// padding: 0;
 	}
 }
 
