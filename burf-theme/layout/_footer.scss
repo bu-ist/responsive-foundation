@@ -143,7 +143,7 @@ $number-widgets-footbar: 						 3 !default;
 //
 // Since: 1.0.0
 
-.footbar {
+:where( .footbar ) {
 	@extend %clearfix;
 	background: var(--footbar-background, #{$color-footbar-bg});
 	border-top: var(--footbar-border, var(--bu-border, #{$border-footbar}));
@@ -175,13 +175,26 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 //
 // Since: 1.0.0
 
-.footbar-container {
-	@extend %container-styles;
-	background: var(--footbar-container-background, #{$color-footbar-container-bg});
+:where( .footbar-container ) {
+	// @extend %container-styles;
+	background: var( --footbar-container-background, #{ $color-footbar-container-bg } );
+	display: grid;
+	gap: var( --bu-spacing );
+	margin-block: var( --bu-spacing );
+	margin-inline: auto;
+	max-width: var( --bu-container-size--wide );
 
-	.widget {
-		@extend %col-md-margin-#{$_footbar-widget-width};
-		padding: 0;
+	@include breakpoint( $sm ) {
+		grid-template-columns: repeat( var( --footbar-column-count-sm, 2 ), 1fr );
+	}
+
+	@include breakpoint( $md ) {
+		grid-template-columns: repeat( var( --footbar-column-count-md, 3 ), 1fr );
+	}
+
+	:where( .widget ) {
+		// @extend %col-md-margin-#{$_footbar-widget-width};
+		// padding: 0;
 	}
 }
 
@@ -197,11 +210,11 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 //
 // Since: 1.0.0
 
-$color-body-bg:                            $color-grayscale-0 !default;
+// $color-body-bg:                            $color-grayscale-0 !default;
 
-body {
-	background-color: var(--body-background, #{$color-body-bg});
-}
+// body {
+	// background-color: var(--body-background, #{$color-body-bg});
+// }
 
 // Controls styling for the site footer - branding, address, and social links.
 //
