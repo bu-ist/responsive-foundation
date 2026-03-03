@@ -258,25 +258,30 @@ $border-widget-list:                       $border !default;
 //
 // Since: 1.0.0
 
-.widget-title {
-	border: var(--widget-title-border, var(--bu-border, #{$border-widget-title}));
-	border-width: var(--widget-title-border-width, #{$border-width-widget-title});
-	color: var(--widget-title-color, var(--bu-heading-color, #{$color-widget-title}));
-	font-family: var(--widget-title-font, var(--bu-heading-font, #{$font-family-widget-title}));
-	padding: 0 0 4px;
+ .widget-title  {
+	border: var( --widget-title-border, var( --bu-border, #{ $border-widget-title } )) ;
+	border-width: var( --widget-title-border-width, #{ $border-width-widget-title});
+	color: var( --widget-title-color, var( --bu-heading-color, #{ $color-widget-title } ) );
+	font-family: var( --widget-title-font, var( --bu-heading-font, #{ $font-family-widget-title } ) );
+	padding-block-end: 0.5em;
+	margin-block: 1em;
 
 	a {
-		@include icon($widget-title-link-icon, $widget-title-link-icon-placement);
 		color: inherit;
 		text-decoration: none;
 
-		&::after {
-			color: var(--widget-title-icon-color, #{$color-widget-title-link-icon});
+		&:last-child {
+			@include icon($widget-title-link-icon, $widget-title-link-icon-placement);
+
+			&::after {
+				color: var(--widget-title-icon-color, #{$color-widget-title-link-icon});
+			}
+
+			&:hover::after {
+				color: var(--widget-title-icon-color--hover, #{$color-widget-title-link-icon-hover});
+			}
 		}
 
-		&:hover::after {
-			color: var(--widget-title-icon-color--hover, #{$color-widget-title-link-icon-hover});
-		}
 	}
 }
 
