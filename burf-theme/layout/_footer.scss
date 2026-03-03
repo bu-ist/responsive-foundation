@@ -184,7 +184,7 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 	margin-inline: auto;
 	max-width: var( --bu-container-size--wide );
 
-	@include breakpoint( $sm ) {
+	@include breakpoint( $xs ) {
 		grid-template-columns: repeat( var( --footbar-column-count-sm, 2 ), 1fr );
 	}
 
