@@ -4,6 +4,9 @@
 
 .sidebar {
 	background-color: var( --sidebar-background-color, #fafafa );
+	display: flex;
+	flex-direction: column;
+	gap: var( --bu-spacing );
 	grid-area: sidebar;
 	padding-block: var( --bu-container-padding-vertical );
 	padding-inline: var( --bu-container-padding-horizontal );

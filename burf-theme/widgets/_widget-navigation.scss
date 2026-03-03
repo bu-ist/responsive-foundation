@@ -125,6 +125,7 @@ $color-widget-contentnav-active:           $color-link-active !default;
 
 	ul {
 		border-bottom: var( --widget-border, var( --bu-border, #{ $border-widget-contentnav } ) );
+		margin: 0;
 		padding: 0;
 
 		ul {
