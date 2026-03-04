@@ -179,16 +179,9 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 	background: var( --footbar-container-background, #{ $color-footbar-container-bg } );
 	display: grid;
 	gap: var( --bu-spacing );
+	grid-template-columns: repeat( auto-fit, minmax( min( var( --footer-widget-width, 320px ), 100% ), 1fr) );
 	margin-inline: auto;
-	max-width: var( --bu-container-size--wide );
-
-	@include breakpoint( $xs ) {
-		grid-template-columns: repeat( var( --footbar-column-count-sm, 2 ), 1fr );
-	}
-
-	@include breakpoint( $md ) {
-		grid-template-columns: repeat( var( --footbar-column-count-md, 3 ), 1fr );
-	}
+	max-width: var( --bu-container-max-inline-size--guttered );
 }
 
 // Footer
