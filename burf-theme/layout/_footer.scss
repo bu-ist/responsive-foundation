@@ -76,7 +76,7 @@ $color-footbar-widget-link-hover:          $color-link !default;
 //
 // Since: 1.0.0
 
-$padding-site-footer:                       $padding $padding $padding-small !default;
+$padding-site-footer:                       var( --size-fluid-spacing ) !default;
 
 // Controls the background color of the site footer.
 //
@@ -208,49 +208,29 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 //
 // Since: 1.0.0
 
-.site-footer {
-	@extend %font-size-secondary;
-	@extend %clearfix;
-	background: var(--footer-background, #{$color-site-footer-bg});
-	clear: both;
-	color: var(--footer-text-color, #{$color-grayscale-8});
-	display: block;
-	font-family: var(--footer-text-font, var(--bu-text-font, #{$font-family-sans-serif}));
-	padding: var(--footer-padding, #{$padding-site-footer});
-	position: relative;
-	width: 100%;
+:where( .site-footer ) {
+	background: var( --footer-background, #{ $color-site-footer-bg } );
+	color: var( --footer-text-color, #{ $color-grayscale-a } );
+	font-family: var( --footer-text-font, var( --bu-text-font, #{ $font-family-sans-serif } ) );
+	padding: var( --footer-padding, #{ $padding-site-footer } );
 
-	@if ( $enable-css-grid ) {
-		@include css-grid-base;
-	}
+	display: grid;
+	gap: var( --bu-spacing );
+	grid-template-columns: repeat( auto-fit, minmax( min( var( --footer-widget-width, 320px ), 100% ), 1fr) );
+	
+}
 
-	a {
-		color: var(--footer-link-color, #{$color-site-footer-link});
-
-		&:hover {
-			color: var(--footer-link-color--hover, #{$color-site-footer-link-hover});
-		}
+:where( .site-footer-menus ) {
+	ul {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
 
 	li {
-		line-height: 1.4;
-		margin: 0 0 0.3em;
-
-		&:last-child {
-			margin: 0;
-		}
-	}
-
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		@extend %font-size-secondary;
-		color: var(--footer-text-color, #{$color-site-footer});
-		font-family: var(--footer-text-font, #{$font-family-sans-serif});
-		margin: 0 0 0.3em;
+		list-style: none;
+		margin: 0;
+		padding: 0;
 	}
 }
 
@@ -278,29 +258,29 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 // Since: 1.0.0
 
 .site-footer-social {
-	@extend %col-sm-half;
-	text-align: center;
+	// @extend %col-sm-half;
+	// text-align: center;
 
-	@include breakpoint( $sm ) {
-		float: right;
-		text-align: right;
-	}
+	// @include breakpoint( $sm ) {
+	// 	float: right;
+	// 	text-align: right;
+	// }
 
-	.has-branding &,
-	.has-footer-info & {
-		@include breakpoint( $sm ) {
-			text-align: left;
-		}
-	}
+	// .has-branding &,
+	// .has-footer-info & {
+	// 	@include breakpoint( $sm ) {
+	// 		text-align: left;
+	// 	}
+	// }
 
-	li {
-		@extend %_u-list-inlineLinks;
-	}
+	// li {
+	// 	@extend %_u-list-inlineLinks;
+	// }
 
-	a {
-		@include transition( color 200ms ease-in-out 0s );
-		font-size: var(--social-icon-size, #{$font-size-icon});
-	}
+	// a {
+	// 	@include transition( color 200ms ease-in-out 0s );
+	// 	font-size: var(--social-icon-size, #{$font-size-icon});
+	// }
 }
 
 // Styles social links in menus.
@@ -403,33 +383,33 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 // Since: 2.0.0
 
 .site-footer-brand-assets {
-	@extend %col-sm-half;
-	text-align: center;
+	// @extend %col-sm-half;
+	// text-align: center;
 
-	@include breakpoint( $sm ) {
-		text-align: left;
-	}
+	// @include breakpoint( $sm ) {
+	// 	text-align: left;
+	// }
 
-	.has-branding & {
-		@extend %col-md-two-third;
-	}
+	// .has-branding & {
+	// 	@extend %col-md-two-third;
+	// }
 
-	a {
-		display: block;
-		margin: 0 auto var(--margin, #{$margin});
+	// a {
+	// 	display: block;
+	// 	margin: 0 auto var(--margin, #{$margin});
 
-		@include breakpoint( $xs ) {
-			display: inline-block;
-			height: 50px;
-			margin-right: var(--margin, #{$margin});
-			vertical-align: middle;
-		}
+	// 	@include breakpoint( $xs ) {
+	// 		display: inline-block;
+	// 		height: 50px;
+	// 		margin-right: var(--margin, #{$margin});
+	// 		vertical-align: middle;
+	// 	}
 
-		@include breakpoint( $sm ) {
-			float: left;
-			text-align: left;
-		}
-	}
+	// 	@include breakpoint( $sm ) {
+	// 		float: left;
+	// 		text-align: left;
+	// 	}
+	// }
 }
 
 // Styles the disclaimer, which shows in the site footer.
@@ -439,7 +419,7 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 // Since: 1.0.0
 
 .disclaimer {
-	line-height: 50px;
+	// line-height: 50px;
 }
 
 // Styles the container which holds menus (footer links and social) in the site footer
@@ -450,26 +430,26 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 // Since: 2.0.0
 
 .site-footer-menus {
-	clear: both;
+	// clear: both;
 
-	.has-footer-info & {
-		@extend %col-sm-half;
-		clear: none;
+	// .has-footer-info & {
+	// 	@extend %col-sm-half;
+	// 	clear: none;
 
-		@include breakpoint( $sm ) {
-			float: right;
-		}
-	}
+	// 	@include breakpoint( $sm ) {
+	// 		float: right;
+	// 	}
+	// }
 
-	.has-branding & {
-		@extend %col-sm-half;
-		@extend %col-md-third;
-		clear: none;
+	// .has-branding & {
+	// 	@extend %col-sm-half;
+	// 	@extend %col-md-third;
+	// 	clear: none;
 
-		@include breakpoint( $sm ) {
-			float: right;
-		}
-	}
+	// 	@include breakpoint( $sm ) {
+	// 		float: right;
+	// 	}
+	// }
 }
 
 // Styles the container which holds footer links
@@ -480,21 +460,21 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 // Since: 1.0.0
 
 .site-footer-links {
-	@extend %col-sm-half;
-	margin-bottom: var(--margin, #{$margin});
-	text-align: center;
+	// @extend %col-sm-half;
+	// margin-bottom: var(--margin, #{$margin});
+	// text-align: center;
 
-	@include breakpoint( $sm ) {
-		text-align: left;
-	}
+	// @include breakpoint( $sm ) {
+	// 	text-align: left;
+	// }
 
-	li {
-		@extend %_u-list-inlineLinks;
+	// li {
+	// 	@extend %_u-list-inlineLinks;
 
-		.has-branding & {
-			display: block;
-		}
-	}
+	// 	.has-branding & {
+	// 		display: block;
+	// 	}
+	// }
 }
 
 // Styles the container which holds footer information
@@ -507,49 +487,49 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 // Since: 1.0.0
 
 .site-footer-info {
-	clear: both;
-	display: block;
-	margin-bottom: var(--margin, #{$margin});
+	// clear: both;
+	// display: block;
+	// margin-bottom: var(--margin, #{$margin});
 
-	@include breakpoint( $sm ) {
-		padding-right: var(--padding, #{$padding});
-	}
+	// @include breakpoint( $sm ) {
+	// 	padding-right: var(--padding, #{$padding});
+	// }
 
-	.brand-masterplate + & {
-		@include breakpoint( $sm ) {
-			clear: none;
-			float: left;
-			max-width: 60%;
-		}
+	// .brand-masterplate + & {
+	// 	@include breakpoint( $sm ) {
+	// 		clear: none;
+	// 		float: left;
+	// 		max-width: 60%;
+	// 	}
 
-		@include breakpoint( $md ) {
-			max-width: 75%;
-		}
-	}
+	// 	@include breakpoint( $md ) {
+	// 		max-width: 75%;
+	// 	}
+	// }
 
-	.brand-bumclogo + & {
-		@include breakpoint( $md ) {
-			clear: none;
-			float: left;
-			max-width: 50%;
-		}
+	// .brand-bumclogo + & {
+	// 	@include breakpoint( $md ) {
+	// 		clear: none;
+	// 		float: left;
+	// 		max-width: 50%;
+	// 	}
 
-		@include breakpoint( $lg ) {
-			max-width: 65%;
-		}
-	}
+	// 	@include breakpoint( $lg ) {
+	// 		max-width: 65%;
+	// 	}
+	// }
 
-	.site-footer-disclaimer + & {
-		@include breakpoint( $md ) {
-			clear: none;
-			float: left;
-			max-width: 33%;
-		}
+	// .site-footer-disclaimer + & {
+	// 	@include breakpoint( $md ) {
+	// 		clear: none;
+	// 		float: left;
+	// 		max-width: 33%;
+	// 	}
 
-		@include breakpoint( $lg ) {
-			max-width: 50%;
-		}
-	}
+	// 	@include breakpoint( $lg ) {
+	// 		max-width: 50%;
+	// 	}
+	// }
 }
 
 // Copyright styles - only for print
