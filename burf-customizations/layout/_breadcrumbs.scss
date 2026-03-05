@@ -222,6 +222,7 @@
 			text-transform: none;
 			translate: 0 -50%;
 			white-space: nowrap;
+			z-index: 0;
 		}
 	}
 	
@@ -238,6 +239,7 @@
 	right: 0;
 	top: 0;
 	opacity: 0;
+	z-index: 1;
 }
 
 .nav-crumb-menu-open {
