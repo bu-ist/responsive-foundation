@@ -76,7 +76,7 @@ $color-footbar-widget-link-hover:          $color-link !default;
 //
 // Since: 1.0.0
 
-$padding-site-footer:                       var( --size-fluid-spacing ) !default;
+$padding-site-footer:                       calc( var( --size-fluid-spacing ) * 2 ) var( --size-fluid-spacing ) !default;
 
 // Controls the background color of the site footer.
 //
@@ -108,7 +108,7 @@ $color-site-footer:								 $color-grayscale-f !default;
 //
 // Accessibility: AA
 
-$color-site-footer-link:							 $color-grayscale-8 !default;
+$color-site-footer-link:							 $color-grayscale-f !default;
 
 // Controls the color of links when you hover in the site footer.
 //
@@ -211,20 +211,36 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 :where( .site-footer ) {
 	background: var( --footer-background, #{ $color-site-footer-bg } );
 	color: var( --footer-text-color, #{ $color-grayscale-a } );
+	display: flex;
+	flex-direction: column-reverse;
 	font-family: var( --footer-text-font, var( --bu-text-font, #{ $font-family-sans-serif } ) );
+	gap: calc( var( --size-fluid-spacing ) * 2 );
 	padding: var( --footer-padding, #{ $padding-site-footer } );
+	position: relative;
+	text-align: center;
 
-	display: grid;
-	gap: var( --bu-spacing );
-	grid-template-columns: repeat( auto-fit, minmax( min( var( --footer-widget-width, 320px ), 100% ), 1fr) );
-	
+	a {
+		color: var(--footer-link-color, #{$color-site-footer-link});
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			color: var(--footer-link-color--hover, #{$color-site-footer-link-hover});
+			text-decoration: underline;
+		}
+	}
 }
 
 :where( .site-footer-menus ) {
+	display: flex;
+	flex-direction: column;
+	gap: var( --size-fluid-spacing );
+
 	ul {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
+		justify-content: center;
 	}
 
 	li {
@@ -257,30 +273,8 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 //
 // Since: 1.0.0
 
-.site-footer-social {
-	// @extend %col-sm-half;
-	// text-align: center;
-
-	// @include breakpoint( $sm ) {
-	// 	float: right;
-	// 	text-align: right;
-	// }
-
-	// .has-branding &,
-	// .has-footer-info & {
-	// 	@include breakpoint( $sm ) {
-	// 		text-align: left;
-	// 	}
-	// }
-
-	// li {
-	// 	@extend %_u-list-inlineLinks;
-	// }
-
-	// a {
-	// 	@include transition( color 200ms ease-in-out 0s );
-	// 	font-size: var(--social-icon-size, #{$font-size-icon});
-	// }
+:where( .site-footer-social-menu ) {
+	gap: 1em;
 }
 
 // Styles social links in menus.
@@ -290,6 +284,12 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 // Since: 2.0.0
 
 .menu-item {
+	[href] {
+		&::before {
+			margin: 0;
+		}
+	}
+
 	[href*="bsky.app"] {
 		@extend %icon-bluesky;
 	}
@@ -382,34 +382,11 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 //
 // Since: 2.0.0
 
-.site-footer-brand-assets {
-	// @extend %col-sm-half;
-	// text-align: center;
-
-	// @include breakpoint( $sm ) {
-	// 	text-align: left;
-	// }
-
-	// .has-branding & {
-	// 	@extend %col-md-two-third;
-	// }
-
-	// a {
-	// 	display: block;
-	// 	margin: 0 auto var(--margin, #{$margin});
-
-	// 	@include breakpoint( $xs ) {
-	// 		display: inline-block;
-	// 		height: 50px;
-	// 		margin-right: var(--margin, #{$margin});
-	// 		vertical-align: middle;
-	// 	}
-
-	// 	@include breakpoint( $sm ) {
-	// 		float: left;
-	// 		text-align: left;
-	// 	}
-	// }
+:where( .site-footer-brand-assets ) {
+	.brand-masterplate {
+		margin-block-end: 1em;
+		margin-inline: auto;
+	}
 }
 
 // Styles the disclaimer, which shows in the site footer.
@@ -429,27 +406,8 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 //
 // Since: 2.0.0
 
-.site-footer-menus {
-	// clear: both;
-
-	// .has-footer-info & {
-	// 	@extend %col-sm-half;
-	// 	clear: none;
-
-	// 	@include breakpoint( $sm ) {
-	// 		float: right;
-	// 	}
-	// }
-
-	// .has-branding & {
-	// 	@extend %col-sm-half;
-	// 	@extend %col-md-third;
-	// 	clear: none;
-
-	// 	@include breakpoint( $sm ) {
-	// 		float: right;
-	// 	}
-	// }
+:where( .site-footer-menus ) {
+	@extend %font-size-4;
 }
 
 // Styles the container which holds footer links
@@ -461,20 +419,10 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 
 .site-footer-links {
 	// @extend %col-sm-half;
-	// margin-bottom: var(--margin, #{$margin});
-	// text-align: center;
+}
 
-	// @include breakpoint( $sm ) {
-	// 	text-align: left;
-	// }
-
-	// li {
-	// 	@extend %_u-list-inlineLinks;
-
-	// 	.has-branding & {
-	// 		display: block;
-	// 	}
-	// }
+:where( .site-footer-links-menu ) {
+	gap: 1rem;
 }
 
 // Styles the container which holds footer information
@@ -486,50 +434,8 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 //
 // Since: 1.0.0
 
-.site-footer-info {
+:where( .site-footer-info ) {
 	// clear: both;
-	// display: block;
-	// margin-bottom: var(--margin, #{$margin});
-
-	// @include breakpoint( $sm ) {
-	// 	padding-right: var(--padding, #{$padding});
-	// }
-
-	// .brand-masterplate + & {
-	// 	@include breakpoint( $sm ) {
-	// 		clear: none;
-	// 		float: left;
-	// 		max-width: 60%;
-	// 	}
-
-	// 	@include breakpoint( $md ) {
-	// 		max-width: 75%;
-	// 	}
-	// }
-
-	// .brand-bumclogo + & {
-	// 	@include breakpoint( $md ) {
-	// 		clear: none;
-	// 		float: left;
-	// 		max-width: 50%;
-	// 	}
-
-	// 	@include breakpoint( $lg ) {
-	// 		max-width: 65%;
-	// 	}
-	// }
-
-	// .site-footer-disclaimer + & {
-	// 	@include breakpoint( $md ) {
-	// 		clear: none;
-	// 		float: left;
-	// 		max-width: 33%;
-	// 	}
-
-	// 	@include breakpoint( $lg ) {
-	// 		max-width: 50%;
-	// 	}
-	// }
 }
 
 // Copyright styles - only for print
