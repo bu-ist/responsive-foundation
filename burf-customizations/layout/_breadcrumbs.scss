@@ -228,8 +228,7 @@
 	
 }
 
-.nav-crumb-menu-open,
-.nav-crumb-menu-close {
+.nav-crumb-menu-open {
 	display: none;
 	bottom: 0;
 	font-size: 0;
@@ -261,14 +260,6 @@
 			&::after {
 				content: "\f106";
 			}
-		}
-
-		.nav-crumb-menu-open {
-			display: none;
-		}
-
-		.nav-crumb-menu-close {
-			display: block;
 		}
 		
 		.nav-crumb-menu {
