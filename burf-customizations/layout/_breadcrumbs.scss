@@ -231,7 +231,7 @@
 	
 }
 
-.nav-crumb-menu-open {
+.nav-crumb-menu-toggle {
 	display: block;
 	bottom: 0;
 	font-size: 0;
@@ -270,10 +270,17 @@
 .nav-crumb-menu {
 	background:  var( --nav-crumbs-color-menu-background, var( --bu-base-button-bg-color, #eee ) );
 	border: 0;
+
 	box-sizing: border-box;
+	margin: 0;
 	padding: var( --nav-crumb-padding, 0.75em );
 	position: absolute;
-	width: 100%;
+
+	width: auto;
+
+	left: anchor( left );
+	right: anchor( right );
+	top: calc( anchor( bottom ) - 1px );
 	
 	ul,
 	menu {
