@@ -229,7 +229,7 @@
 }
 
 .nav-crumb-menu-open {
-	display: none;
+	display: block;
 	bottom: 0;
 	font-size: 0;
 	left: 0;
@@ -239,10 +239,6 @@
 	top: 0;
 	opacity: 0;
 	z-index: 1;
-}
-
-.nav-crumb-menu-open {
-	display: block;
 }
 
 .nav-crumb-menu-wrapper {
