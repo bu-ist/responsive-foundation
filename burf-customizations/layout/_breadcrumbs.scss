@@ -27,7 +27,7 @@
 		border: 0;
 		border-radius: var( --nav-crumbs-color-buttons-radius, var( --bu-base-button-border-radius, 4px ) );
 		font-family: var( --nav-crumb-font-family );
-		font-size: var( --nav-crumb-font-size, 1rem );
+		font-size: var( --nav-crumb-font-size, 1em );
 		line-height: var( --nav-crumb-height, 1em );
 		margin: 0;
 		padding: var( --nav-crumb-button-padding, 0.75em 0.75em );
@@ -151,14 +151,13 @@
 
 .nav-crumb-home {
 	a{
-		font-size: 0;
+		// font-size: 0;
 		max-width: none;
 
 		&::before {
 			content: "\f015";
 			display: block;
 			font-family: "Font Awesome 5 Free";
-			font-size: var( --nav-crumb-font-size, 1rem );
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
 			float: right;
@@ -166,13 +165,17 @@
 			font-variant: normal;
 			font-weight: 900;
 			line-height: 1;
-			padding: var( --nav-crumb-padding, 0.75em ) 0;
+			// padding: var( --nav-crumb-padding, 0.75em ) 0;
 			text-decoration: none;
 			text-rendering: optimizeLegibility;
 			text-transform: none;
 			translate: 0 -0.1em;
 			white-space: nowrap;
 		}	
+
+		span {
+			display: none;
+		}
 	}
 	
 }
