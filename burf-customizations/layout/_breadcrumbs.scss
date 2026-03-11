@@ -52,7 +52,7 @@
 			display: none;
 		}
 
-		.nav-crumb-list {
+		.nav-crumb-trail {
 			display: inline;
 			height: auto;
 
@@ -74,7 +74,7 @@
 
 
 	// Styles for when breadcrumb dropdown menu is open
-	&:has( .nav-crumb-menu[open] ) {
+	&:has( .nav-crumb-menu:popover-open ) {
 
 		.nav-crumb-menu-wrapper {
 			min-width: clamp( 0px, var( --nav-crumb-char-count-current, 27ch ), 90vw );
@@ -95,13 +95,13 @@
 	}
 }
 
-.nav-crumb-list {
+.nav-crumb-trail {
 	display: inline-flex;
 	flex-wrap: wrap;
 	height: calc( var( --nav-crumb-height, 1em ) + (var( --nav-crumb-padding, 0.75em ) * 2 ) );
 	list-style: none;
 	margin: 0;
-	max-width: var( --nav-crumblist-max-width );
+	max-width: var( --nav-crumb-trail-max-width );
 	overflow: hidden;
 	padding: 0;
 	vertical-align: middle;
@@ -250,7 +250,7 @@
 	position: relative;
 	transition: min-width 250ms;
 	
-	&:has( .nav-crumb-menu[open] ) {
+	&:has( .nav-crumb-menu:popover-open ) {
 		min-width: clamp( 0px, var( --nav-crumb-char-count-current, 27ch ), 90vw );
 		
 		.nav-crumb-current {
