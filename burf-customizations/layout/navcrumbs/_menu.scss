@@ -5,11 +5,14 @@
 	position: relative;
 	transition: min-width 250ms;
 	
+	// Styles for when breadcrumb dropdown menu is open
 	&:has( .navcrumbs-menu:popover-open ) {
 		min-width: clamp( 0px, var( --navcrumbs-crumb-char-count-current, 27ch ), 90vw );
 		
 		.navcrumbs-current {
-			border-radius: var( --navcrumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) var( --navcrumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) 0 0;
+			border-radius: var( --navcrumbs-button-radius ) var( --navcrumbs-button-radius ) 0 0;
+			max-width: var( --navcrumbs-crumb-char-count-current, 27ch );
+			max-width: 100%;
 
 			&::after {
 				content: "\f106";
@@ -17,7 +20,7 @@
 		}
 		
 		.navcrumbs-menu {
-			border-radius: 0 0 var( --navcrumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) var( --navcrumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) );
+			border-radius: 0 0 var( --navcrumbs-button-radius ) var( --navcrumbs-button-radius );
 		}
 	}
 }
@@ -32,11 +35,11 @@
 	width: 100%;
 
 	&:not( :has( button ) ) {
-		padding: var( --navcrumbs-crumb-padding, 0.75em ) 0;
+		padding: var( --navcrumbs-crumb-padding ) 0;
 	}
 
 	&:has( button ) {
-		padding-right: calc( var( --navcrumbs-crumb-padding, 0.75em ) * 2 + 1em);
+		padding-right: calc( var( --navcrumbs-crumb-padding ) * 2 + 1em);
 
 		&::after {
 			content: "\f107";
@@ -50,7 +53,7 @@
 			font-weight: 900;
 			line-height: 1;
 			position: absolute;
-			right: var(--navcrumbs-crumb-padding, 0.75em );
+			right: var(--navcrumbs-crumb-padding );
 			top: 50%;
 			text-decoration: none;
 			text-rendering: optimizeLegibility;
@@ -77,12 +80,12 @@
 }
 
 .navcrumbs-menu {
-	background:  var( --navcrumbs-menu-bg-color, var( --bu-base-button-bg-color, #eee ) );
+	background:  var( --navcrumbs-menu-bg-color );
 	border: 0;
 
 	box-sizing: border-box;
 	margin: 0;
-	padding: var( --navcrumbs-crumb-padding, 0.75em );
+	padding: var( --navcrumbs-crumb-padding );
 	position: absolute;
 
 	width: auto;
@@ -92,11 +95,10 @@
 	top: calc( anchor( bottom ) - 1px );
 
 	menu {
-		border-inline-start: 2px solid var( --navcrumbs-buttons-text-color, var( --bu-base-button-text-color, #333 ) );
-		border-inline-start: var( --navcrumbs-menu-list-border, var( --navcrumbs-border, var( --bu-base-border, 1px solid #ddd ) ) );
+		border-inline-start: var( --navcrumbs-menu-list-border );
 		list-style: none;
 		margin: 0;
-		padding: var(--navcrumbs-crumb-padding, 0.75em );
+		padding: var(--navcrumbs-crumb-padding );
 	}
 
 	li {
@@ -112,7 +114,7 @@
 	}
 	
 	a {
-		color:  var( --navcrumbs-menu-text-color, var( --bu-base-button-text-color, #333 ) );
+		color:  var( --navcrumbs-menu-text-color );
 
 		&:hover {
 			text-decoration: underline;
