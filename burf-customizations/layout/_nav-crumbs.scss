@@ -1,0 +1,188 @@
+@use 'nav-crumbs/trail';
+@use 'nav-crumbs/menu';
+
+// =================================================================
+// Breadcrumb Navigation Styles
+// =================================================================
+
+:where( .nav-crumbs ) {
+	background: var( --nav-crumbs-background, #fff );
+	border-block: var( --nav-crumbs-border, var( --bu-base-border, 1px solid #ddd ) );
+	display: flex;
+	font-family: var( --nav-crumb-font-family, var( --bu-base-font-family, sans-serif ) );
+	font-size: var( --nav-crumb-font-size, 1rem );
+	margin-block: var(--bu--content--margin-block, 1em);
+	margin-inline: auto;
+	padding: var( --nav-crumbs-padding-block, 0.75em ) var( --nav-crumbs-padding-inline, 0 );
+
+	grid-area: breadcrumbs;
+
+	width: var( --bu-container-size--content );
+
+	* {
+		line-height: 1em;
+		vertical-align: middle;
+	}
+	
+	.nav-crumb-button {
+		background: var( --nav-crumbs-color-buttons-background, var( --bu-base-button-bg-color, #eee ) );
+		border: 0;
+		border-radius: var( --nav-crumbs-color-buttons-radius, var( --bu-base-button-border-radius, 4px ) );
+		font-family: var( --nav-crumb-font-family );
+		font-size: var( --nav-crumb-font-size, 1em );
+		line-height: var( --nav-crumb-height, 1em );
+		margin: 0;
+		padding: var( --nav-crumb-button-padding, 0.75em 0.75em );
+
+		&:hover {
+			background: var( --nav-crumbs-color-buttons-background-hover, var( --nav-crumbs-color-buttons-background, var( --bu-base-button-bg-color, #eee ) ) );
+		}
+	}
+
+
+	&[ data-expandable="false" ] {
+		.nav-crumb-expander-wrapper {
+			display: none;
+		}	
+	}
+
+	// Styles for when breadcrumbs are expanded
+	&[ data-crumbs-expanded="true" ] {
+		display: block;
+		
+		.nav-crumb-expander-wrapper {
+			display: none;
+		}
+
+		.nav-crumb-trail {
+			display: inline;
+			height: auto;
+
+			// &::before {
+			// 	display: none;
+			// }
+
+			&::before {
+				display: none;
+			}
+		}
+
+		.nav-crumb {
+			a {
+				max-width: none;
+			}
+		}
+	}
+
+
+	// Styles for when breadcrumb dropdown menu is open
+	&:has( .nav-crumb-menu:popover-open ) {
+
+		.nav-crumb-menu-wrapper {
+			min-width: clamp( 0px, var( --nav-crumb-char-count-current, 27ch ), 90vw );
+		}
+
+		.nav-crumb-current {
+			border-radius: var( --nav-crumbs-color-buttons-radius-d, var( --bu-base-button-border-radius, 4px ) var( --bu-base-button-border-radius, 4px ) 0 0 );
+			max-width: var( --nav-crumb-char-count-current, 27ch );
+
+			&::after {
+				content: "\f106";
+			}
+		}
+		
+		.nav-crumb-menu {
+			border-radius: var( --bu-base-button-border-radius-menu-open, 0 0 var( --bu-base-button-border-radius, 4px ) var( --bu-base-button-border-radius, 4px ));
+		}		
+	}
+}
+
+.nav-crumb-trail {
+	display: inline-flex;
+	flex-wrap: wrap;
+	height: calc( var( --nav-crumb-height, 1em ) + (var( --nav-crumb-padding, 0.75em ) * 2 ) );
+	list-style: none;
+	margin: 0;
+	max-width: var( --nav-crumb-trail-max-width );
+	overflow: hidden;
+	padding: 0;
+	vertical-align: middle;
+
+	// &:has(*:nth-child(3)) {
+	// 	--nav-crumb-max-width: 33%;
+	// }
+
+	&::before {
+		content: '';
+		display: inline;
+		height: 100%;
+	}
+}
+	
+.nav-crumb,
+.nav-crumb-expander-wrapper {
+
+	&::after {
+		content:'/';
+		display: inline-block;
+		padding: var( --nav-crumb-spacer-padding, 0.75em 0.75em );
+	}
+}
+	
+.nav-crumb {
+	display: inline-flex;
+	// max-width: var( --nav-crumb-max-width );
+
+	a {
+		color:  var( --nav-crumb-color-text, var( --bu-base-link-color, #0f69d7 ) );
+		display: inline-block;
+		margin: var( --nav-crumb-margin, 0.5  );
+		max-width: var( --nav-crumb-max-width );
+		overflow: hidden;
+		padding: var( --nav-crumb-padding, 0.75em ) 0;
+		text-decoration: none;
+		text-overflow: ellipsis;
+		vertical-align: middle;
+		white-space: nowrap;
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.nav-crumb-home {
+	a{
+		// font-size: 0;
+		max-width: none;
+
+		&::before {
+			content: "\f015";
+			display: block;
+			font-family: "Font Awesome 5 Free";
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			float: right;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: 900;
+			line-height: 1;
+			// padding: var( --nav-crumb-padding, 0.75em ) 0;
+			text-decoration: none;
+			text-rendering: optimizeLegibility;
+			text-transform: none;
+			translate: 0 -0.1em;
+			white-space: nowrap;
+		}	
+
+		span {
+			display: none;
+		}
+	}
+	
+}
+
+.nav-crumb-expander-wrapper,
+.nav-crumb-menu-wrapper {
+	flex-shrink: 0;
+}
