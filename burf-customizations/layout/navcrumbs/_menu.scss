@@ -1,11 +1,6 @@
-.nav-crumb-menu {
-	padding: var( --nav-crumb-menu-padding, 0.75em );
-}
-
-
-.nav-crumb-current {
+.navcrumbs-current {
 	display: inline-block;
-	max-width: var( --nav-crumb-char-count-current, 27ch );
+	max-width: var( --navcrumbs-crumb-char-count-current, 27ch );
 	overflow: hidden;
 	text-align: left;
 	text-overflow: ellipsis;
@@ -13,11 +8,11 @@
 	width: 100%;
 
 	&:not( :has( button ) ) {
-		padding: var( --nav-crumb-padding, 0.75em ) 0;
+		padding: var( --navcrumbs-crumb-padding, 0.75em ) 0;
 	}
 
 	&:has( button ) {
-		padding-right: calc( var( --nav-crumb-padding, 0.75em ) * 2 + 1em);
+		padding-right: calc( var( --navcrumbs-crumb-padding, 0.75em ) * 2 + 1em);
 
 		&::after {
 			content: "\f107";
@@ -31,7 +26,7 @@
 			font-weight: 900;
 			line-height: 1;
 			position: absolute;
-			right: var(--nav-crumb-padding, 0.75em );
+			right: var(--navcrumbs-crumb-padding, 0.75em );
 			top: 50%;
 			text-decoration: none;
 			text-rendering: optimizeLegibility;
@@ -44,7 +39,7 @@
 	
 }
 
-.nav-crumb-menu-toggle {
+.navcrumbs-menu-toggle {
 	display: block;
 	bottom: 0;
 	font-size: 0;
@@ -57,36 +52,36 @@
 	z-index: 1;
 }
 
-.nav-crumb-menu-wrapper {
+.navcrumbs-menu-wrapper {
 	display: inline-block;
 	min-width: 0;
 	position: relative;
 	transition: min-width 250ms;
 	
-	&:has( .nav-crumb-menu:popover-open ) {
-		min-width: clamp( 0px, var( --nav-crumb-char-count-current, 27ch ), 90vw );
+	&:has( .navcrumbs-menu:popover-open ) {
+		min-width: clamp( 0px, var( --navcrumbs-crumb-char-count-current, 27ch ), 90vw );
 		
-		.nav-crumb-current {
-			border-radius: var( --nav-crumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) var( --nav-crumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) 0 0;
+		.navcrumbs-current {
+			border-radius: var( --navcrumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) var( --navcrumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) 0 0;
 
 			&::after {
 				content: "\f106";
 			}
 		}
 		
-		.nav-crumb-menu {
-			border-radius: 0 0 var( --nav-crumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) var( --nav-crumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) );
+		.navcrumbs-menu {
+			border-radius: 0 0 var( --navcrumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) var( --navcrumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) );
 		}
 	}
 }
 
-.nav-crumb-menu {
-	background:  var( --nav-crumbs-menu-bg-color, var( --bu-base-button-bg-color, #eee ) );
+.navcrumbs-menu {
+	background:  var( --navcrumbs-menu-bg-color, var( --bu-base-button-bg-color, #eee ) );
 	border: 0;
 
 	box-sizing: border-box;
 	margin: 0;
-	padding: var( --nav-crumb-padding, 0.75em );
+	padding: var( --navcrumbs-crumb-padding, 0.75em );
 	position: absolute;
 
 	width: auto;
@@ -97,11 +92,11 @@
 	
 	ul,
 	menu {
-		border-inline-start: 2px solid var( --nav-crumbs-buttons-text-color, var( --bu-base-button-text-color, #333 ) );
-		border-inline-start: var( --nav-crumbs-menu-list-border, var( --nav-crumbs-border, var( --bu-base-border, 1px solid #ddd ) ) );
+		border-inline-start: 2px solid var( --navcrumbs-buttons-text-color, var( --bu-base-button-text-color, #333 ) );
+		border-inline-start: var( --navcrumbs-menu-list-border, var( --navcrumbs-border, var( --bu-base-border, 1px solid #ddd ) ) );
 		list-style: none;
 		margin: 0;
-		padding: var(--nav-crumb-padding, 0.75em );
+		padding: var(--navcrumbs-crumb-padding, 0.75em );
 	}
 
 	li {
@@ -117,7 +112,7 @@
 	}
 	
 	a {
-		color:  var( --nav-crumbs-menu-text-color, var( --bu-base-button-text-color, #333 ) );
+		color:  var( --navcrumbs-menu-text-color, var( --bu-base-button-text-color, #333 ) );
 
 		&:hover {
 			text-decoration: underline;
