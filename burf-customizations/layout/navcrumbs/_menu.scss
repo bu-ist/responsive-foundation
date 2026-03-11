@@ -1,3 +1,27 @@
+.navcrumbs-menu-wrapper {
+	display: inline-block;
+	flex-shrink: 0;
+	min-width: 0;
+	position: relative;
+	transition: min-width 250ms;
+	
+	&:has( .navcrumbs-menu:popover-open ) {
+		min-width: clamp( 0px, var( --navcrumbs-crumb-char-count-current, 27ch ), 90vw );
+		
+		.navcrumbs-current {
+			border-radius: var( --navcrumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) var( --navcrumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) 0 0;
+
+			&::after {
+				content: "\f106";
+			}
+		}
+		
+		.navcrumbs-menu {
+			border-radius: 0 0 var( --navcrumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) var( --navcrumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) );
+		}
+	}
+}
+
 .navcrumbs-current {
 	display: inline-block;
 	max-width: var( --navcrumbs-crumb-char-count-current, 27ch );
@@ -52,29 +76,6 @@
 	z-index: 1;
 }
 
-.navcrumbs-menu-wrapper {
-	display: inline-block;
-	min-width: 0;
-	position: relative;
-	transition: min-width 250ms;
-	
-	&:has( .navcrumbs-menu:popover-open ) {
-		min-width: clamp( 0px, var( --navcrumbs-crumb-char-count-current, 27ch ), 90vw );
-		
-		.navcrumbs-current {
-			border-radius: var( --navcrumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) var( --navcrumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) 0 0;
-
-			&::after {
-				content: "\f106";
-			}
-		}
-		
-		.navcrumbs-menu {
-			border-radius: 0 0 var( --navcrumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) var( --navcrumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) );
-		}
-	}
-}
-
 .navcrumbs-menu {
 	background:  var( --navcrumbs-menu-bg-color, var( --bu-base-button-bg-color, #eee ) );
 	border: 0;
@@ -89,8 +90,7 @@
 	left: anchor( left );
 	right: anchor( right );
 	top: calc( anchor( bottom ) - 1px );
-	
-	ul,
+
 	menu {
 		border-inline-start: 2px solid var( --navcrumbs-buttons-text-color, var( --bu-base-button-text-color, #333 ) );
 		border-inline-start: var( --navcrumbs-menu-list-border, var( --navcrumbs-border, var( --bu-base-border, 1px solid #ddd ) ) );
