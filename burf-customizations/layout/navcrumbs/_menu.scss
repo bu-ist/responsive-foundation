@@ -67,7 +67,7 @@
 		min-width: clamp( 0px, var( --nav-crumb-char-count-current, 27ch ), 90vw );
 		
 		.nav-crumb-current {
-			border-radius: var( --nav-crumbs-color-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) var( --nav-crumbs-color-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) 0 0;
+			border-radius: var( --nav-crumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) var( --nav-crumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) 0 0;
 
 			&::after {
 				content: "\f106";
@@ -75,13 +75,13 @@
 		}
 		
 		.nav-crumb-menu {
-			border-radius: 0 0 var( --nav-crumbs-color-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) var( --nav-crumbs-color-buttons-radius, var( --bu-base-button-border-radius, 4px ) );
+			border-radius: 0 0 var( --nav-crumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) ) var( --nav-crumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) );
 		}
 	}
 }
 
 .nav-crumb-menu {
-	background:  var( --nav-crumbs-color-menu-background, var( --bu-base-button-bg-color, #eee ) );
+	background:  var( --nav-crumbs-menu-bg-color, var( --bu-base-button-bg-color, #eee ) );
 	border: 0;
 
 	box-sizing: border-box;
@@ -97,8 +97,8 @@
 	
 	ul,
 	menu {
-		border-inline-start: 2px solid var( --nav-crumbs-color-buttons-text, var( --bu-base-button-text-color, #333 ) );
-		border-inline-start: var( --nav-crumbs-border, var( --bu-base-border, 1px solid #ddd ) );
+		border-inline-start: 2px solid var( --nav-crumbs-buttons-text-color, var( --bu-base-button-text-color, #333 ) );
+		border-inline-start: var( --nav-crumbs-menu-list-border, var( --nav-crumbs-border, var( --bu-base-border, 1px solid #ddd ) ) );
 		list-style: none;
 		margin: 0;
 		padding: var(--nav-crumb-padding, 0.75em );
@@ -117,7 +117,7 @@
 	}
 	
 	a {
-		color:  var( --nav-crumbs-color-menu-text, var( --bu-base-button-text-color, #333 ) );
+		color:  var( --nav-crumbs-menu-text-color, var( --bu-base-button-text-color, #333 ) );
 
 		&:hover {
 			text-decoration: underline;

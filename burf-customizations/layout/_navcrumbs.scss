@@ -1,5 +1,35 @@
-@use 'nav-crumbs/trail';
-@use 'nav-crumbs/menu';
+@use 'navcrumbs/trail';
+@use 'navcrumbs/menu';
+
+
+
+
+// --nav-crumbs-padding-block
+// --nav-crumbs-padding-inline
+
+// --nav-crumb-trail-max-width
+
+// --nav-crumb-char-count-current
+// --nav-crumb-font-family
+// --nav-crumb-font-size
+// --nav-crumb-height
+// --nav-crumb-margin
+// --nav-crumb-max-width
+// --nav-crumb-padding
+// --nav-crumb-text-color
+
+// --nav-crumb-button-padding
+
+// --nav-crumb-spacer-padding
+
+// --nav-crumbs-buttons-bg-color
+// --nav-crumbs-buttons-bg-color-hover
+// --nav-crumbs-buttons-radius
+// --nav-crumbs-buttons-radius-open
+
+// --nav-crumbs-menu-bg-color
+// --nav-crumbs-menu-list-border
+// --nav-crumbs-menu-text-color
 
 // =================================================================
 // Breadcrumb Navigation Styles
@@ -25,9 +55,9 @@
 	}
 	
 	.nav-crumb-button {
-		background: var( --nav-crumbs-color-buttons-background, var( --bu-base-button-bg-color, #eee ) );
+		background: var( --nav-crumbs-buttons-bg-color, var( --bu-base-button-bg-color, #eee ) );
 		border: 0;
-		border-radius: var( --nav-crumbs-color-buttons-radius, var( --bu-base-button-border-radius, 4px ) );
+		border-radius: var( --nav-crumbs-buttons-radius, var( --bu-base-button-border-radius, 4px ) );
 		font-family: var( --nav-crumb-font-family );
 		font-size: var( --nav-crumb-font-size, 1em );
 		line-height: var( --nav-crumb-height, 1em );
@@ -35,7 +65,7 @@
 		padding: var( --nav-crumb-button-padding, 0.75em 0.75em );
 
 		&:hover {
-			background: var( --nav-crumbs-color-buttons-background-hover, var( --nav-crumbs-color-buttons-background, var( --bu-base-button-bg-color, #eee ) ) );
+			background: var( --nav-crumbs-buttons-bg-color-hover, var( --nav-crumbs-buttons-bg-color, var( --bu-base-button-bg-color, #eee ) ) );
 		}
 	}
 
@@ -58,10 +88,6 @@
 			display: inline;
 			height: auto;
 
-			// &::before {
-			// 	display: none;
-			// }
-
 			&::before {
 				display: none;
 			}
@@ -83,7 +109,7 @@
 		}
 
 		.nav-crumb-current {
-			border-radius: var( --nav-crumbs-color-buttons-radius-d, var( --bu-base-button-border-radius, 4px ) var( --bu-base-button-border-radius, 4px ) 0 0 );
+			border-radius: var( --nav-crumbs-buttons-radius-open, var( --bu-base-button-border-radius, 4px ) var( --bu-base-button-border-radius, 4px ) 0 0 );
 			max-width: var( --nav-crumb-char-count-current, 27ch );
 
 			&::after {
@@ -108,10 +134,6 @@
 	padding: 0;
 	vertical-align: middle;
 
-	// &:has(*:nth-child(3)) {
-	// 	--nav-crumb-max-width: 33%;
-	// }
-
 	&::before {
 		content: '';
 		display: inline;
@@ -131,7 +153,6 @@
 	
 .nav-crumb {
 	display: inline-flex;
-	// max-width: var( --nav-crumb-max-width );
 
 	a {
 		color:  var( --nav-crumb-color-text, var( --bu-base-link-color, #0f69d7 ) );
@@ -167,7 +188,6 @@
 			font-variant: normal;
 			font-weight: 900;
 			line-height: 1;
-			// padding: var( --nav-crumb-padding, 0.75em ) 0;
 			text-decoration: none;
 			text-rendering: optimizeLegibility;
 			text-transform: none;
