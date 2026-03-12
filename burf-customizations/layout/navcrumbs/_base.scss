@@ -1,0 +1,72 @@
+// =================================================================
+// Navigation Breadcrumb Base Styles
+// =================================================================
+
+:where( .navcrumbs ) {
+	--navcrumbs-background: #fff ;
+	--navcrumbs-border: var( --bu-base-border, 1px solid #ddd );
+	--navcrumbs-font-family: var( --bu-base-font-family, sans-serif );
+	--navcrumbs-font-size: 1rem;
+	--navcrumbs-height: 1em;
+	--navcrumbs-margin-block: var(--bu--content--margin-block, 1em);
+	--navcrumbs-padding-block: 0.75em;
+	--navcrumbs-width: var( --bu-container-size--content );
+
+	--navcrumbs-crumb-color-text: var( --bu-base-link-color, #0f69d7 );
+	--navcrumbs-crumb-max-width-factor: 0.04;
+	--navcrumbs-crumb-max-width-offset: 2ch;
+	--navcrumbs-crumb-max-width: calc( ( var( --navcrumbs-crumb-max-width-factor ) * var( --navcrumbs-available-width ) ) + var( --navcrumbs-crumb-max-width-offset ) );
+	--navcrumbs-crumb-padding: 0.75em;
+
+	--navcrumbs-crumb-separator: '/';
+
+	--navcrumbs-button-bg-color: var( --bu-base-button-bg-color, #eee );
+	--navcrumbs-button-bg-color-hover: var( --navcrumbs-button-bg-color );
+	--navcrumbs-button-radius: var( --bu-base-button-border-radius, 4px );
+
+	--navcrumbs-current-char-count: 27ch ;
+	--navcrumbs-menu-max-width: 320px;
+	--navcrumbs-menu-bg-color: var( --bu-base-button-bg-color, #eee );
+	--navcrumbs-menu-text-color: var( --bu-base-button-text-color, #333 );
+	--navcrumbs-menu-list-border: var( --navcrumbs-border );
+
+	--navcrumbs-home-icon: "\f015";
+	--navcrumbs-menu-icon-expander: "\f141";
+	--navcrumbs-menu-icon-hidden: "\f107";
+	--navcrumbs-menu-icon-shown: "\f106";
+}
+
+.navcrumbs {
+	background: var( --navcrumbs-background );
+	border-block: var( --navcrumbs-border );
+	display: flex;
+	font-family: var( --navcrumbs-font-family );
+	font-size: var( --navcrumbs-font-size );
+	margin-block: var( --navcrumbs-margin-block );
+	margin-inline: auto;
+	padding-block: var( --navcrumbs-padding-block );
+	padding-inline: 0;
+
+	width: var( --navcrumbs-width );
+
+	* {
+		box-sizing: border-box;
+		line-height: 1em;
+		vertical-align: middle;
+	}
+}
+	
+.navcrumbs-button {
+	background: var( --navcrumbs-button-bg-color );
+	border: 0;
+	border-radius: var( --navcrumbs-button-radius );
+	font-family: var( --navcrumbs-font-family );
+	font-size: var( --navcrumbs-font-size );
+	line-height: var( --navcrumbs-height );
+	margin: 0;
+	padding: var( --navcrumbs-crumb-padding );
+
+	&:hover {
+		background: var( --navcrumbs-button-bg-color-hover );
+	}
+}

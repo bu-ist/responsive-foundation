@@ -1,0 +1,128 @@
+// =================================================================
+// Navigation Breadcrumb Child Nav Menu Styles
+// =================================================================
+
+.navcrumbs-menu-wrapper {
+	display: inline-block;
+	flex-shrink: 0;
+	min-width: 0;
+	position: relative;
+	max-width: clamp( 0px, var( --navcrumbs-current-char-count ), 90vw );
+}
+
+.navcrumbs-current {
+	display: inline-block;
+	overflow: hidden;
+	text-align: left;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+
+	&:not( :has( button ) ) {
+		padding: var( --navcrumbs-crumb-padding ) 0;
+		width: auto;
+	}
+
+	&:has( button ) {
+		padding-right: calc( var( --navcrumbs-crumb-padding ) * 2 + 1em);
+
+		&::after {
+			content: var( --navcrumbs-menu-icon-hidden );
+			display: block;
+			font-family: "Font Awesome 5 Free";
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: 900;
+			line-height: 1;
+			position: absolute;
+			right: var(--navcrumbs-crumb-padding );
+			top: 50%;
+			text-decoration: none;
+			text-rendering: optimizeLegibility;
+			text-transform: none;
+			translate: 0 -50%;
+			white-space: nowrap;
+			z-index: 0;
+		}
+	}
+	
+}
+
+.navcrumbs-menu-toggle {
+	display: block;
+	border: 0;
+	bottom: 0;
+	font-size: 0;
+	left: 0;
+	margin: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	opacity: 0;
+	padding: 0;
+	z-index: 1;
+}
+
+.navcrumbs-menu {
+	background:  var( --navcrumbs-menu-bg-color );
+	border: 0;
+
+	box-sizing: border-box;
+	margin: 0;
+	padding: var( --navcrumbs-crumb-padding );
+	position: absolute;
+
+	width: auto;
+
+	left: anchor( left );
+	right: anchor( right );
+	top: calc( anchor( bottom ) - 1px );
+
+	menu {
+		border-inline-start: var( --navcrumbs-menu-list-border );
+		list-style: none;
+		margin: 0;
+		padding: var(--navcrumbs-crumb-padding );
+	}
+
+	li {
+		margin-block: 1em;
+
+		&:first-child {
+			margin-block-start: 0;
+		}
+
+		&:last-child {
+			margin-block-end: 0;
+		}
+	}
+	
+	a {
+		color:  var( --navcrumbs-menu-text-color );
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+// Conditional styles for when the menu is or is not open
+
+.navcrumbs-menu-wrapper:has( .navcrumbs-menu:popover-open ) {
+	min-width: clamp( 0px, var( --navcrumbs-current-char-count ), 90vw );
+	max-width: var( --navcrumbs-current-char-count )320px;
+	
+	.navcrumbs-current {
+		border-radius: var( --navcrumbs-button-radius ) var( --navcrumbs-button-radius ) 0 0;
+
+		&::after {
+			content: var( --navcrumbs-menu-icon-shown );
+		}
+	}
+	
+	.navcrumbs-menu {
+		border-radius: 0 0 var( --navcrumbs-button-radius ) var( --navcrumbs-button-radius );
+	}
+}
