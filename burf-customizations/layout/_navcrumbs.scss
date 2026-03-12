@@ -1,29 +1,29 @@
 @use 'navcrumbs/trail';
 @use 'navcrumbs/menu';
 
-// --navcrumbs-background: 
-// --navcrumbs-border: 
-// --navcrumbs-font-family: 
-// --navcrumbs-font-size: 
-// --navcrumbs-height: 
-// --navcrumbs-margin-block: 
-// --navcrumbs-padding-block: 
-// --navcrumbs-width: 
+// --navcrumbs-background: background color for the breadcrumb container
+// --navcrumbs-border: border for the breadcrumb container
+// --navcrumbs-font-family: font family for the breadcrumb text
+// --navcrumbs-font-size: font size for the breadcrumb text
+// --navcrumbs-height: height of the breadcrumb container
+// --navcrumbs-margin-block: vertical margin for the breadcrumb container
+// --navcrumbs-padding-block: vertical padding for the breadcrumb container
+// --navcrumbs-width: width of the breadcrumb container
 
-// --navcrumbs-current-char-count: 
-// --navcrumbs-crumb-color-text: 
-// --navcrumbs-crumb-max-width-factor: 
-// --navcrumbs-crumb-max-width-offset: 
-// --navcrumbs-crumb-max-width: 
-// --navcrumbs-crumb-padding: 
+// --navcrumbs-current-char-count: number of characters to display for the current breadcrumb
+// --navcrumbs-crumb-color-text: text color for the breadcrumb
+// --navcrumbs-crumb-max-width-factor: factor for calculating the maximum width of a breadcrumb
+// --navcrumbs-crumb-max-width-offset: offset for calculating the maximum width of a breadcrumb
+// --navcrumbs-crumb-max-width: maximum width of a breadcrumb
+// --navcrumbs-crumb-padding: padding for the breadcrumb
 
-// --navcrumbs-button-bg-color: 
-// --navcrumbs-button-bg-color-hover: 
-// --navcrumbs-button-radius: 
+// --navcrumbs-button-bg-color: background color for the breadcrumb button
+// --navcrumbs-button-bg-color-hover: background color for the breadcrumb button on hover
+// --navcrumbs-button-radius: border radius for the breadcrumb button
 
-// --navcrumbs-menu-bg-color: 
-// --navcrumbs-menu-text-color: 
-// --navcrumbs-menu-list-border:
+// --navcrumbs-menu-bg-color: background color for the breadcrumb menu
+// --navcrumbs-menu-text-color: text color for the breadcrumb menu
+// --navcrumbs-menu-list-border: border for the breadcrumb menu list
 
 // =================================================================
 // Breadcrumb Navigation Styles
@@ -87,7 +87,6 @@
 			background: var( --navcrumbs-button-bg-color-hover );
 		}
 	}
-
 
 	&[ data-expandable="false" ] {
 		.navcrumbs-expander-wrapper {
@@ -166,11 +165,6 @@
 	}
 }
 
-.navcrumbs-expander-wrapper {
-	display: flex;
-	flex-shrink: 0;
-}
-
 .navcrumbs-home {
 	a{
 		max-width: none;
@@ -196,4 +190,9 @@
 		}
 	}
 	
+}
+
+.navcrumbs-expander-wrapper {
+	display: flex;
+	flex-shrink: 0;
 }
