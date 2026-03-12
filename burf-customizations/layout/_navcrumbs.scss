@@ -1,33 +1,28 @@
 @use 'navcrumbs/trail';
 @use 'navcrumbs/menu';
 
+// --navcrumbs-background: 
+// --navcrumbs-border: 
+// --navcrumbs-font-family: 
+// --navcrumbs-font-size: 
+// --navcrumbs-height: 
+// --navcrumbs-margin-block: 
+// --navcrumbs-padding-block: 
+// --navcrumbs-width: 
 
+// --navcrumbs-crumb-color-text: 
+// --navcrumbs-crumb-max-width-factor: 
+// --navcrumbs-crumb-max-width-offset: 
+// --navcrumbs-crumb-max-width: 
+// --navcrumbs-crumb-padding: 
 
-// --navcrumbs-font-family
-// --navcrumbs-padding-block
-// --navcrumbs-padding-inline
+// --navcrumbs-button-bg-color: 
+// --navcrumbs-button-bg-color-hover: 
+// --navcrumbs-button-radius: 
 
-// --navcrumbs-trail-max-width
-
-// --navcrumbs-crumb-char-count-current
-// --navcrumbs-crumb-font-size
-// --navcrumbs-crumb-height
-// --navcrumbs-crumb-margin
-// --navcrumbs-crumb-padding
-// --navcrumbs-crumb-text-color
-
-// --navcrumbs-crumb-button-padding
-
-// --navcrumbs-crumb-spacer-padding
-
-// --navcrumbs-buttons-bg-color
-// --navcrumbs-buttons-bg-color-hover
-// --navcrumbs-buttons-radius
-// --navcrumbs-buttons-radius-open
-
-// --navcrumbs-menu-bg-color
-// --navcrumbs-menu-list-border
-// --navcrumbs-menu-text-color
+// --navcrumbs-menu-bg-color: 
+// --navcrumbs-menu-text-color: 
+// --navcrumbs-menu-list-border:
 
 // =================================================================
 // Breadcrumb Navigation Styles
@@ -71,6 +66,7 @@
 	width: var( --navcrumbs-width );
 
 	* {
+		box-sizing: border-box;
 		line-height: 1em;
 		vertical-align: middle;
 	}
@@ -144,7 +140,6 @@
 .navcrumbs-expander-wrapper {
 	&::after {
 		content:'/';
-		display: inline-block;
 		padding: var( --navcrumbs-crumb-padding );
 	}
 }
@@ -170,6 +165,7 @@
 }
 
 .navcrumbs-expander-wrapper {
+	display: flex;
 	flex-shrink: 0;
 }
 
@@ -183,7 +179,6 @@
 			font-family: "Font Awesome 5 Free";
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			float: right;
 			font-style: normal;
 			font-variant: normal;
 			font-weight: 900;
