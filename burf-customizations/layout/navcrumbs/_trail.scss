@@ -80,6 +80,29 @@
 	flex-shrink: 0;
 }
 
+.navcrumbs-expander {
+	&::after {
+		content: var( --navcrumbs-menu-icon-expander );
+		display: block;
+		font-family: "Font Awesome 5 Free";
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 900;
+		line-height: 1;
+		text-decoration: none;
+		text-rendering: optimizeLegibility;
+		text-transform: none;
+		white-space: nowrap;
+	}
+
+	span {
+		font-size: 0;
+		position: absolute;
+	}
+}
+
 // Conditional styles for when breadcrumb trail is or is not expanded
 .navcrumbs {
 	&[ data-expandable="false" ] {
