@@ -10,6 +10,7 @@
 // --navcrumbs-padding-block: 
 // --navcrumbs-width: 
 
+// --navcrumbs-current-char-count: 
 // --navcrumbs-crumb-color-text: 
 // --navcrumbs-crumb-max-width-factor: 
 // --navcrumbs-crumb-max-width-offset: 
@@ -38,6 +39,7 @@
 	--navcrumbs-padding-block: 0.75em;
 	--navcrumbs-width: var( --bu-container-size--content );
 
+	--navcrumbs-current-char-count: 27ch ;
 	--navcrumbs-crumb-color-text: var( --bu-base-link-color, #0f69d7 );
 	--navcrumbs-crumb-max-width-factor: 0.04;
 	--navcrumbs-crumb-max-width-offset: 2ch;

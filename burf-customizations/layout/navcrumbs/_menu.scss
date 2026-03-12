@@ -3,16 +3,14 @@
 	flex-shrink: 0;
 	min-width: 0;
 	position: relative;
-	transition: min-width 250ms;
+	max-width: clamp( 0px, var( --navcrumbs-current-char-count ), 90vw );
 	
 	// Styles for when breadcrumb dropdown menu is open
 	&:has( .navcrumbs-menu:popover-open ) {
-		min-width: clamp( 0px, var( --navcrumbs-crumb-char-count-current, 27ch ), 90vw );
+		min-width: clamp( 0px, var( --navcrumbs-current-char-count ), 90vw );
 		
 		.navcrumbs-current {
 			border-radius: var( --navcrumbs-button-radius ) var( --navcrumbs-button-radius ) 0 0;
-			max-width: var( --navcrumbs-crumb-char-count-current, 27ch );
-			max-width: 100%;
 
 			&::after {
 				content: "\f106";
@@ -27,7 +25,6 @@
 
 .navcrumbs-current {
 	display: inline-block;
-	max-width: var( --navcrumbs-crumb-char-count-current, 27ch );
 	overflow: hidden;
 	text-align: left;
 	text-overflow: ellipsis;
