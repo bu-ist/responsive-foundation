@@ -20,6 +20,7 @@
 
 	&:not( :has( button ) ) {
 		padding: var( --navcrumbs-crumb-padding ) 0;
+		width: auto;
 	}
 
 	&:has( button ) {
