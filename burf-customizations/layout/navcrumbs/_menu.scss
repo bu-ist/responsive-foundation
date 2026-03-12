@@ -8,6 +8,7 @@
 	// Styles for when breadcrumb dropdown menu is open
 	&:has( .navcrumbs-menu:popover-open ) {
 		min-width: clamp( 0px, var( --navcrumbs-current-char-count ), 90vw );
+		max-width: var( --navcrumbs-menu-max-width );
 		
 		.navcrumbs-current {
 			border-radius: var( --navcrumbs-button-radius ) var( --navcrumbs-button-radius ) 0 0;
