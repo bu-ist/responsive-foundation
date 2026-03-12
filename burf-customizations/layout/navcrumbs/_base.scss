@@ -1,3 +1,7 @@
+// =================================================================
+// Navigation Breadcrumb Base Styles
+// =================================================================
+
 :where( .navcrumbs ) {
 	--navcrumbs-background: #fff ;
 	--navcrumbs-border: var( --bu-base-border, 1px solid #ddd );
@@ -21,13 +25,14 @@
 	--navcrumbs-button-radius: var( --bu-base-button-border-radius, 4px );
 
 	--navcrumbs-current-char-count: 27ch ;
-
-	--navcrumbs-menu-icon-hidden: "\f107";
-	--navcrumbs-menu-icon-shown: "\f106";
-    --navcrumbs-menu-max-width: 320px;
+	--navcrumbs-menu-max-width: 320px;
 	--navcrumbs-menu-bg-color: var( --bu-base-button-bg-color, #eee );
 	--navcrumbs-menu-text-color: var( --bu-base-button-text-color, #333 );
 	--navcrumbs-menu-list-border: var( --navcrumbs-border );
+
+	--navcrumbs-home-icon: "\f015";
+	--navcrumbs-menu-icon-hidden: "\f107";
+	--navcrumbs-menu-icon-shown: "\f106";
 }
 
 .navcrumbs {

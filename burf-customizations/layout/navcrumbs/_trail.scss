@@ -1,3 +1,7 @@
+// =================================================================
+// Navigation Breadcrumb Crumb Trail Styles
+// =================================================================
+
 .navcrumbs-trail {
 	display: inline-flex;
 	flex-wrap: wrap;
@@ -49,7 +53,7 @@
 		max-width: none;
 
 		&::before {
-			content: "\f015";
+			content: var( --navcrumbs-home-icon);
 			display: block;
 			font-family: "Font Awesome 5 Free";
 			-moz-osx-font-smoothing: grayscale;
