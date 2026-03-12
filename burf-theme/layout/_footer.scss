@@ -143,11 +143,11 @@ $number-widgets-footbar: 						 3 !default;
 //
 // Since: 1.0.0
 
-.footbar {
+:where( .footbar ) {
 	@extend %clearfix;
 	background: var(--footbar-background, #{$color-footbar-bg});
 	border-top: var(--footbar-border, var(--bu-border, #{$border-footbar}));
-	padding-bottom: var(--footbar-padding-bottom, #{$footbar-padding-bottom});
+	padding-block: var( --bu-spacing );
 	width: 100%;
 
 	a {
@@ -175,14 +175,13 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 //
 // Since: 1.0.0
 
-.footbar-container {
-	@extend %container-styles;
-	background: var(--footbar-container-background, #{$color-footbar-container-bg});
-
-	.widget {
-		@extend %col-md-margin-#{$_footbar-widget-width};
-		padding: 0;
-	}
+:where( .footbar-container ) {
+	background: var( --footbar-container-background, #{ $color-footbar-container-bg } );
+	display: grid;
+	gap: var( --bu-spacing );
+	grid-template-columns: repeat( auto-fit, minmax( min( var( --footer-widget-width, 320px ), 100% ), 1fr) );
+	margin-inline: auto;
+	max-width: var( --bu-container-max-inline-size--guttered );
 }
 
 // Footer
@@ -197,11 +196,11 @@ $_footbar-widget-width: math.div( $grid-number-columns, $number-widgets-footbar 
 //
 // Since: 1.0.0
 
-$color-body-bg:                            $color-grayscale-0 !default;
+// $color-body-bg:                            $color-grayscale-0 !default;
 
-body {
-	background-color: var(--body-background, #{$color-body-bg});
-}
+// body {
+	// background-color: var(--body-background, #{$color-body-bg});
+// }
 
 // Controls styling for the site footer - branding, address, and social links.
 //
