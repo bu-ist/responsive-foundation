@@ -1,0 +1,136 @@
+// =================================================================
+// Navigation Breadcrumb Crumb Trail Styles
+// =================================================================
+
+.navcrumbs-trail {
+	display: inline-flex;
+	flex-wrap: wrap;
+	height: calc( var( --navcrumbs-height ) + ( var( --navcrumbs-crumb-padding ) * 2 ) );
+	list-style: none;
+	margin: 0;
+	max-width: var( --navcrumbs-trail-max-width );
+	overflow: hidden;
+	padding: 0;
+	vertical-align: middle;
+
+	&::before {
+		content: '';
+		display: inline;
+		height: 100%;
+	}
+}
+	
+.navcrumbs-crumb,
+.navcrumbs-expander-wrapper {
+	&::after {
+		content: var( --navcrumbs-crumb-separator );
+		padding: var( --navcrumbs-crumb-padding );
+	}
+}
+	
+.navcrumbs-crumb {
+	display: inline-flex;
+
+	a {
+		color:  var( --navcrumbs-crumb-color-text );
+		display: inline-block;
+		max-width: var( --navcrumbs-crumb-max-width );
+		overflow: hidden;
+		padding: var( --navcrumbs-crumb-padding ) 0;
+		text-decoration: none;
+		text-overflow: ellipsis;
+		vertical-align: middle;
+		white-space: nowrap;
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.navcrumbs-home {
+	a{
+		max-width: none;
+
+		&::before {
+			content: var( --navcrumbs-home-icon);
+			display: block;
+			font-family: "Font Awesome 5 Free";
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: 900;
+			line-height: 1;
+			text-decoration: none;
+			text-rendering: optimizeLegibility;
+			text-transform: none;
+			white-space: nowrap;
+		}	
+
+		span {
+			display: none;
+		}
+	}
+	
+}
+
+.navcrumbs-expander-wrapper {
+	display: flex;
+	flex-shrink: 0;
+}
+
+.navcrumbs-expander {
+	&::after {
+		content: var( --navcrumbs-menu-icon-expander );
+		display: block;
+		font-family: "Font Awesome 5 Free";
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 900;
+		line-height: 1;
+		text-decoration: none;
+		text-rendering: optimizeLegibility;
+		text-transform: none;
+		white-space: nowrap;
+	}
+
+	span {
+		font-size: 0;
+		position: absolute;
+	}
+}
+
+// Conditional styles for when breadcrumb trail is or is not expanded
+.navcrumbs {
+	&[ data-expandable="false" ] {
+		.navcrumbs-expander-wrapper {
+			display: none;
+		}	
+	}
+
+	&[ data-crumbs-expanded="true" ] {
+		display: block;
+		
+		.navcrumbs-expander-wrapper {
+			display: none;
+		}
+
+		.navcrumbs-trail {
+			display: inline;
+			height: auto;
+
+			&::before {
+				display: none;
+			}
+		}
+
+		.navcrumbs-crumb {
+			a {
+				max-width: none;
+			}
+		}
+	}
+}
