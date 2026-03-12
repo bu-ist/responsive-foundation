@@ -4,24 +4,6 @@
 	min-width: 0;
 	position: relative;
 	max-width: clamp( 0px, var( --navcrumbs-current-char-count ), 90vw );
-	
-	// Styles for when breadcrumb dropdown menu is open
-	&:has( .navcrumbs-menu:popover-open ) {
-		min-width: clamp( 0px, var( --navcrumbs-current-char-count ), 90vw );
-		max-width: var( --navcrumbs-menu-max-width );
-		
-		.navcrumbs-current {
-			border-radius: var( --navcrumbs-button-radius ) var( --navcrumbs-button-radius ) 0 0;
-
-			&::after {
-				content: "\f106";
-			}
-		}
-		
-		.navcrumbs-menu {
-			border-radius: 0 0 var( --navcrumbs-button-radius ) var( --navcrumbs-button-radius );
-		}
-	}
 }
 
 .navcrumbs-current {
@@ -40,7 +22,7 @@
 		padding-right: calc( var( --navcrumbs-crumb-padding ) * 2 + 1em);
 
 		&::after {
-			content: "\f107";
+			content: var( --navcrumbs-menu-icon-hidden );
 			display: block;
 			font-family: "Font Awesome 5 Free";
 			-moz-osx-font-smoothing: grayscale;
@@ -118,5 +100,24 @@
 		&:hover {
 			text-decoration: underline;
 		}
+	}
+}
+
+// Conditional styles for when the menu is or is not open
+
+.navcrumbs-menu-wrapper:has( .navcrumbs-menu:popover-open ) {
+	min-width: clamp( 0px, var( --navcrumbs-current-char-count ), 90vw );
+	max-width: var( --navcrumbs-current-char-count )320px;
+	
+	.navcrumbs-current {
+		border-radius: var( --navcrumbs-button-radius ) var( --navcrumbs-button-radius ) 0 0;
+
+		&::after {
+			content: var( --navcrumbs-menu-icon-shown );
+		}
+	}
+	
+	.navcrumbs-menu {
+		border-radius: 0 0 var( --navcrumbs-button-radius ) var( --navcrumbs-button-radius );
 	}
 }

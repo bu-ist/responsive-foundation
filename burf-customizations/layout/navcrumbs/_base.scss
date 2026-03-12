@@ -8,7 +8,6 @@
 	--navcrumbs-padding-block: 0.75em;
 	--navcrumbs-width: var( --bu-container-size--content );
 
-	--navcrumbs-current-char-count: 27ch ;
 	--navcrumbs-crumb-color-text: var( --bu-base-link-color, #0f69d7 );
 	--navcrumbs-crumb-max-width-factor: 0.04;
 	--navcrumbs-crumb-max-width-offset: 2ch;
@@ -21,6 +20,10 @@
 	--navcrumbs-button-bg-color-hover: var( --navcrumbs-button-bg-color );
 	--navcrumbs-button-radius: var( --bu-base-button-border-radius, 4px );
 
+	--navcrumbs-current-char-count: 27ch ;
+
+	--navcrumbs-menu-icon-hidden: "\f107";
+	--navcrumbs-menu-icon-shown: "\f106";
     --navcrumbs-menu-max-width: 320px;
 	--navcrumbs-menu-bg-color: var( --bu-base-button-bg-color, #eee );
 	--navcrumbs-menu-text-color: var( --bu-base-button-text-color, #333 );
