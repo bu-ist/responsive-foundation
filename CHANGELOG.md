@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 4.0.3
+
+- Dart Sass fix: grid/gallery percentages were written as `$number#{"%"}`, which Dart Sass renders with an invalid space (`2.5641025641 %`) that browsers drop (collapsing `.col-margin-*` gutters); node-sass was unaffected. Changed to `* 1%` in `grid/_grid-mixins.scss`, `grid/_grid-placeholders.scss`, `content/_galleries.scss`, and `calendar/_calendar-single.scss`. Output is byte-identical under node-sass and valid under Dart Sass. (Backports the v6 fix to the v4 line.)
+
 ## 4.0.2
 
 - Add icons for X, X-alt, and bluesky to icons and social menus.
