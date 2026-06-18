@@ -139,7 +139,7 @@
 /// @since 2.0.0
 
 %col-margin-parent {
-	margin-left: -$grid-margin-width#{"%"};
+	margin-left: -$grid-margin-width * 1%;
 	margin-right: 0;
 }
 
@@ -214,7 +214,7 @@ $grid-widths-margins: ();
 		}
 
 		%col-#{$breakpoint}-margin-parent {
-			margin-left: -$grid-margin-width#{"%"};
+			margin-left: -$grid-margin-width * 1%;
 		}
 
 		@if $burf-extras {

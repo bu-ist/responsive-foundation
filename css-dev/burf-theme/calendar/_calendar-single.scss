@@ -43,7 +43,7 @@ $color-single-event-label:               $color-grayscale-9 !default;
 
 	@include breakpoint( $sm ) {
 		float: right;
-		margin-left: $grid-margin-width#{"%"};
+		margin-left: $grid-margin-width * 1%;
 	}
 }
 
