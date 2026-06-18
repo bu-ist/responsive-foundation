@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+## 5.0.5
+- Dart Sass fix: grid/gallery percentages were written as `$number#{"%"}`, which Dart Sass renders with an invalid space (`2.0833333333 %`) that browsers drop (collapsing `.col-margin-*` gutters); node-sass was unaffected. Changed to `* 1%` in `grid/_grid-mixins.scss`, `grid/_grid-placeholders.scss`, `content/_galleries.scss`, and `calendar/_calendar-single.scss`. Output is byte-identical under node-sass and valid under Dart Sass. (Backports the v6 fix.)
+
 ## 5.0.4
 - Icon Changes: 
   - Move Twitter icon from FontAwsome list to BU Default Icons list so the updated X icon is used from BU Default Icons vs the Bird icon from FontAwesome for `icon-twitter`.
