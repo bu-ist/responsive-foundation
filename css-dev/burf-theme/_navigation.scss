@@ -1,3 +1,5 @@
+@use "sass:math";
+
 /* common
 ----------------------------------------------------------------- */
 
@@ -292,7 +294,7 @@ nav a {
 .l-default .utilityNav {
 	@include breakpoint(sm) {
 		position: absolute;
-		top: ($height-brand / 2) - ($fontSize-utilityNav / 2);
+		top: (math.div($height-brand, 2)) - (math.div($fontSize-utilityNav, 2));
 		right: 20px;
 		line-height: 1;
 	}
@@ -430,7 +432,7 @@ nav a {
 .l-topNav .utilityNav {
 	@include breakpoint(sm) {
 		position: absolute;
-		top: (($height-brand / 2) - ($fontSize-utilityNav / 2)) + 60;
+		top: ((math.div($height-brand, 2)) - (math.div($fontSize-utilityNav, 2))) + 60;
 		right: 20px;
 		line-height: 1;
 	}
@@ -461,7 +463,7 @@ nav a {
 	display: none;
 	@include breakpoint(sm) {
 		position: absolute;
-		top: ($height-brand / 2) - ($fontSize-utilityNav / 2) - 5;
+		top: (math.div($height-brand, 2)) - (math.div($fontSize-utilityNav, 2)) - 5;
 		right: 80px;
 		display: block;
 	}

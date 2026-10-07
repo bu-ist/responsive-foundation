@@ -1,3 +1,4 @@
+@use "sass:meta";
 /* mixins
 ----------------------------------------------------------------- */
 
@@ -39,8 +40,8 @@
 @mixin linear-gradient( $fromColor: NULL, $toColor: NULL ) {
 	// Both variables must be defined colors
 	@if (
-			type_of( $fromColor ) == color and
-			type_of( $toColor ) == color
+			meta.type-of( $fromColor ) == color and
+			meta.type-of( $toColor ) == color
 		) {
 		background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
 		background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
@@ -82,10 +83,10 @@
 // Usage: @include transition(all, 250ms, ease-in-out, 0s)
 @mixin transition($transition-property: NULL, $transition-time: NULL, $method: NULL, $transition-delays: NULL) {
 	@if (
-		type_of( $transition-property ) == string and
-		type_of( $transition-time ) == number and
-		type_of( $method ) == string and
-		type_of( $transition-delays ) == number
+		meta.type-of( $transition-property ) == string and
+		meta.type-of( $transition-time ) == number and
+		meta.type-of( $method ) == string and
+		meta.type-of( $transition-delays ) == number
 	) {
 		-webkit-transition: $transition-property $transition-time $method $transition-delays;
 	   -moz-transition: $transition-property $transition-time $method $transition-delays;
@@ -277,9 +278,9 @@
 // Usage: @include rgba-color('background-color', rgba(black, 0.5), white);
 @mixin rgba-color( $attribute: NULL, $color: NULL, $background: NULL ) {
 	@if (
-		type_of($attribute) == string and
-		type_of($color) == color and
-		type_of($background) == color
+		meta.type-of($attribute) == string and
+		meta.type-of($color) == color and
+		meta.type-of($background) == color
 	) {
 		$percent: alpha($color) * 100%;
 		$opaque: opacify($color, 1);

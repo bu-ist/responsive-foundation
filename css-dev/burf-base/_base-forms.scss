@@ -49,7 +49,7 @@
 	*overflow: visible; /*IE 6/7 - Because of IE's overly large left/right padding on buttons */
 	&:focus {
 		outline: 0;
-		@extend %button-styles:hover;
+		@extend %button-styles, :hover;
 	}
 	/* Firefox: Get rid of the inner focus border */
 	&:-moz-focus-inner {

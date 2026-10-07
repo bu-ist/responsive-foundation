@@ -1,3 +1,5 @@
+@use "sass:math";
+
 body {
 	background: $color-body-bg;
 }
@@ -65,7 +67,7 @@ body {
 
 article[role=main],
 .content-area {
-	@extend %col-md-#{$grid-number-columns*((($number-columns)-1)/$number-columns)};
+	@extend %col-md-#{$grid-number-columns*calc((($number-columns) - 1)/$number-columns)};
 	padding-bottom: $column-paddingBottom;
 	@include breakpoint(sm) {
 		padding-bottom: $column-paddingBottom-largeScreen;
@@ -73,7 +75,7 @@ article[role=main],
 
 	// Left layout
 	.sidebarLocation-left & {
-		@extend %col-md-push-#{$grid-number-columns*(1/$number-columns)};
+		@extend %col-md-push-#{$grid-number-columns*calc(1 / $number-columns)};
 	}
 	.page-template-no-sidebars & {
 		left: 0;
@@ -105,7 +107,7 @@ article[role=main],
 ----------------------------------------------------------------- */
 
 %sidebar-styles {
-	@extend %col-md-#{$grid-number-columns*(1/$number-columns)};
+	@extend %col-md-#{$grid-number-columns*calc(1 / $number-columns)};
 	font-size: $fontSize-small;
 	clear: none;
 
@@ -116,7 +118,7 @@ article[role=main],
 
 	// Left layout
 	.sidebarLocation-left & {
-		@extend %col-md-pull-#{$grid-number-columns*(1-(1/$number-columns))};
+		@extend %col-md-pull-#{$grid-number-columns * (1 - math.div(1, $number-columns))};
 
 		@include breakpoint(md) {
 			// TODO: sunset in a future release
@@ -136,7 +138,7 @@ article[role=main],
 // Left layout
 .sidebarLocation-left {
 	.sidebar {
-		@extend %col-md-pull-#{$grid-number-columns*(1-(1/$number-columns))};
+		@extend %col-md-pull-#{$grid-number-columns * (1 - math.div(1, $number-columns))};
 
 		@include breakpoint(md) {
 			// TODO: sunset in a future release
@@ -181,7 +183,7 @@ article[role=main],
 		// So if there are 3 widgets in the footbar, you only need to account for margin on two:
 		// width - (margin * 2/3)
 		// See? Totally fine.
-		width: (100%/$number-widgets-footbar) - $margin-width * ((($number-widgets-footbar)-1)/$number-widgets-footbar);
+		width: (math.div(100%, $number-widgets-footbar)) - $margin-width * (math.div(($number-widgets-footbar) - 1, $number-widgets-footbar));
 		float: left;
 		margin-left: $margin-width;
 		margin-top: 0;
