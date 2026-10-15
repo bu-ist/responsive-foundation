@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Styles for WordPress gallery shortcode.
 
 $wp-supported-gallery-columns: 9;
@@ -23,7 +25,7 @@ $wp-supported-gallery-columns: 9;
 			width: 33.33%;
 
 			@include breakpoint(xs) {
-				width: (100/$i)#{"%"};
+				width: (math.div(100, $i))#{"%"};
 
 				&:nth-child(#{$i + 1}) {
 					clear: left;

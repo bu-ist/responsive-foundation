@@ -1,3 +1,5 @@
+@use "sass:math";
+
 /* components
 ----------------------------------------------------------------- */
 
@@ -93,7 +95,7 @@ h6.bu_collapsible {
 		margin-bottom: 0;
 	}
 	img {
-		margin-bottom: $margin-floatedContent / 2;
+		margin-bottom: math.div($margin-floatedContent, 2);
 	}
 	@include breakpoint(xs) {
 		max-width: 50%;
