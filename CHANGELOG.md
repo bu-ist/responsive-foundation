@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+- Adding TikTok icon to the list of icons supported in social media menu
 
 ## 5.0.4
 - Icon Changes: 
