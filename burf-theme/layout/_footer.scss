@@ -393,6 +393,10 @@ body {
 	[href*="bu.edu/buniverse"] {
 		@extend %icon-youtube;
 	}
+
+	[href*="tiktok.com"] {
+		@extend %icon-tiktok;
+	}
 }
 
 // Styles the container which holds branding assets in the site footer.
