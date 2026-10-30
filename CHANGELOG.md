@@ -1,7 +1,10 @@
 # Changelog
 
 ## Unreleased
+
+## 5.0.5
 - Adding TikTok icon to the list of icons supported in social media menu
+- Bumped .nvmrc from 14 to 16 - The package-lock.json was already generated with a newer version anyway, and node 14 was having issues installing some dependencies.
 
 ## 5.0.4
 - Icon Changes: 
