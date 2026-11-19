@@ -24,9 +24,9 @@ Each version is maintained in a separate branch. To learn more about each versio
 - [5.0.5](https://github.com/bu-ist/responsive-foundation/tree/v5) `"responsive-foundation": "git+ssh://git@github.com:bu-ist/responsive-foundation#5.0.5"`
 - [4.0.2](https://github.com/bu-ist/responsive-foundation/tree/v4) `"responsive-foundation": "git+ssh://git@github.com:bu-ist/responsive-foundation#4.0.2"`
 - [3.2.6](https://github.com/bu-ist/responsive-foundation/tree/v3) `"responsive-foundation": "git+ssh://git@github.com:bu-ist/responsive-foundation#3.2.6"`
-- [2.1.12](https://github.com/bu-ist/responsive-foundation/tree/v2) `"responsive-foundation": "git+ssh://git@github.com:bu-ist/responsive-foundation#2.1.12"`
+- ~[2.1.12](https://github.com/bu-ist/responsive-foundation/tree/v2) `"responsive-foundation": "git+ssh://git@github.com:bu-ist/responsive-foundation#2.1.12"`~ deprecated
 - [1.5.1](https://github.com/bu-ist/responsive-foundation/tree/v1) `"responsive-foundation": "git+ssh://git@github.com:bu-ist/responsive-foundation#1.5.1"`
-- [0.1.021](https://github.com/bu-ist/responsive-foundation/tree/v1) `"responsive-foundation": "git+ssh://git@github.com:bu-ist/responsive-foundation#0.1.021"`
+- ~0.1.021 `"responsive-foundation": "git+ssh://git@github.com:bu-ist/responsive-foundation#0.1.021"`~ deprecated
 
 ## Contributing
 
